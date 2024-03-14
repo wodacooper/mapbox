@@ -1,0 +1,61 @@
+{
+  "score":{
+    "name": "2024 Score",
+    "source_id":"dsm_test",
+    "url": "mapbox://ewright81.ia_24",
+    "source_layer": "hello_world",
+    "layout": {"visibility":"visible"},
+    "visible": true,
+    "fill": {
+      "fill-color": [
+        "match",
+        ["get", "score"],
+        8,
+        "#00ffff",
+        7,
+        "#00ffff",
+        6,
+        "#00ff00",
+        5,
+        "#ff00ff",
+        4,
+        "#ffff00",
+        "#ffffff"
+      ],
+      "fill-opacity": 0.5
+        },
+    "cat_filters": ["set_aside", "city", "county"],
+    "num_filters":["score"],
+    "legend": [
+        ["7 - 8","#00ffff"],
+        ["6","#00ff00"],
+        ["5","#ff00ff"],
+        ["4","#ffff00"]
+    ],
+    "hover":[
+        ["set_aside", false],
+        ["county", false],
+        ["city", true],
+        ["location_boost", true],
+        ["score", false]
+    ],
+    "click": ["set_aside", "county", "city", "score","underserved_pts", "rent_burden_pts", "active_dev_pts","jobs_pts", "vulnerability_pts", "thriving_pts","qct_boost","rural_boost"]
+  },
+  "cities":{
+    "name": "Cities",
+    "source_id":"places",
+    "url": "mapbox://ewright81.ia_places_24",
+    "source_layer": "hello_world",
+    "layout": {"visibility":"visible"},
+    "visible": false,
+    "line": {"line-color": "#FFFFFF"},
+    "fill":{"fill-opacity": 0.4},
+    "cat_filters": ["CLASSFP", "city", "underserved_pts"],
+    "legend": [["City Limits","#ffffff"]],
+    "hover":[
+        ["city", false],
+        ["CLASSFP", true]
+    ],
+    "click":["burden_pts"]
+  }
+}
