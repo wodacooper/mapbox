@@ -47,7 +47,7 @@
             ]
         },
         "legend":{
-            "Urbana": "#000000",
+            "Urban": "#000000",
             "Rural": "#ffffff"
         },
         "num_filters": {
@@ -100,9 +100,9 @@
         },
         "cat_filters": {
             "pool": "",
-            "region": "",
+            "Region": "",
             "city": "",
-            "county": "",
+            "County": "",
             "pts_oi": "Opportunity Index"
         },
         "num_filters": {
@@ -120,19 +120,22 @@
             "7":"#aa00aa",
             "6":"#aaaa00",
             "0-5":"#ffffff"
-        },  
+        },
+        
+                
+          
         "hover": {
-            "region": true,
+            "Region": true,
             "pool": false,
-            "county": false,
+            "County": false,
             "city": false,
             "score": false,
             "i_ua_tp": false
         },
         "click": [
-            "region",
+            "Region",
             "pool",
-            "county",
+            "County",
             "city",
             "score",
             "pts_oi",
@@ -140,8 +143,8 @@
             "pts_otm",
             "ua_cde",
             "recent",
-            "geoid",
-            "placefp",
+            "GEOID",
+            "PLACEFP",
             "pts_otm_t",
             "score_t"
         ],
