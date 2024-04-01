@@ -47,7 +47,7 @@
             ]
         },
         "legend":{
-            "Urban": "#000000",
+            "Urbana": "#000000",
             "Rural": "#ffffff"
         },
         "num_filters": {
