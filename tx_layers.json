@@ -11,12 +11,9 @@
             "circle-stroke-color": "#ffffff",
             "circle-color": "#FF6600"
         },
-        "legend": [
-            [
-                "Elementary Schools",
-                "#FF6600"
-            ]
-        ],
+        "legend": {
+            "Elementary Schools":"#FF6600"
+        },
         "click": [
             "School Name",
             "Instruction Type",
@@ -49,16 +46,10 @@
                 "#ffffff"
             ]
         },
-        "legend": [
-            [
-                "Urban",
-                "#000000"
-            ],
-            [
-                "Rural",
-                "#ffffff"
-            ]
-        ],
+        "legend":{
+            "Urban": "#000000",
+            "Rural": "#ffffff"
+        },
         "num_filters": {
             "populatio": "Population"
         },
@@ -118,48 +109,18 @@
             "score": "",
             "score_t": "Score w/ Transit"
         },
-        "legend": [
-            [
-                "16",
-                "#00ffff"
-            ],
-            [
-                "15",
-                "#00ff00"
-            ],
-            [
-                "14",
-                "#ff00ff"
-            ],
-            [
-                "13",
-                "#ffff00"
-            ],
-            [
-                "10-12",
-                "#9e9e9e"
-            ],
-            [
-                "9",
-                "#00aaaa"
-            ],
-            [
-                "8",
-                "#00aa00"
-            ],
-            [
-                "7",
-                "#aa00aa"
-            ],
-            [
-                "6",
-                "#aaaa00"
-            ],
-            [
-                "0-5",
-                "#ffffff"
-            ]
-        ],
+        "legend":{
+            "16":"#00ffff",
+            "15":"#00ff00",
+            "14":"#ff00ff",
+            "13":"#ffff00",
+            "10-12":"#9e9e9e",
+            "9":"#00aaaa",
+            "8":"#00aa00",
+            "7":"#aa00aa",
+            "6":"#aaaa00",
+            "0-5":"#ffffff"
+        },  
         "hover": {
             "region": true,
             "pool": false,
