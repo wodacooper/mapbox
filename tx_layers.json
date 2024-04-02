@@ -4,7 +4,7 @@
         "source_id": "schools_source",
         "url": "mapbox://wodacooper.tx_el_schools_24",
         "source_layer": "hello_world",
-        "layout": {},
+        "layout": {"visibility":"none"},
         "visible": false,
         "circle": {
             "circle-radius": 7,
@@ -36,7 +36,7 @@
         "source_id": "places",
         "url": "mapbox://wodacooper.tx_places_24",
         "source_layer": "hello_world",
-        "layout": {},
+        "layout": {"visibility":"none"},
         "visible": false,
         "line": {
             "line-color": [
