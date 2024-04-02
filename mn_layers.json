@@ -408,7 +408,7 @@
     },
     "rur_score": {
         "name": "Balance Score",
-        "source_id": "urb_score_source",
+        "source_id": "rur_score_source",
         "url": "mapbox://wodacooper.mn_rur_24",
         "source_layer": "hello_world",
         "layout": {
