@@ -130,7 +130,7 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "total_pts"
                 ],
                 "#ffffff",
                 17,
@@ -420,7 +420,7 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "total_pts"
                 ],
                 "#ffffff",
                 20,
