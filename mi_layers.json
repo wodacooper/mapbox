@@ -183,7 +183,7 @@
         ]
     },
     "score_geocode": {
-        "name": "2024 Score",
+        "name": "2024 Score w/ Amenities",
         "source_id": "score_geocode_source",
         "url": "mapbox://wodacooper.mi_24_geocode",
         "source_layer": "hello_world",
@@ -374,9 +374,9 @@
         }
     },
     "score_no_geocode": {
-        "name": "2024 Score w/ Childcare/Schools",
+        "name": "2024 Score",
         "source_id": "score_no_geocode_source",
-        "url": "mapbox://wodacooper.mi_no_24_geocode",
+        "url": "mapbox://wodacooper.mi_24_no_geocode",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
