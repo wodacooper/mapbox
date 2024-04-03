@@ -1,0 +1,555 @@
+{
+    "counties": {
+        "name": "Tribe Counties",
+        "source_id": "counties",
+        "url": "mapbox://wodacooper.mn_tribe_counties",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "a"
+                ],
+                1,
+                "#ffee58",
+                2,
+                "#ff9800",
+                3,
+                "#f44336",
+                "#000000"
+            ]
+        },
+        "legend": [
+            [
+                "no tribes",
+                "#000000"
+            ],
+            [
+                "1 tribe",
+                "#ffee58"
+            ],
+            [
+                "2 tribes",
+                "#ff9800"
+            ],
+            [
+                "3 tribes",
+                "#f44336"
+            ]
+        ],
+        "click": [
+            "county",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m"
+        ]
+    },
+    "cities": {
+        "name": "Cities",
+        "source_id": "places",
+        "url": "mapbox://wodacooper.mi_places",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-width": 2,
+            "line-color": "#ffffff"
+        },
+        "legend": [
+            [
+                "City Limits",
+                "#ffffff"
+            ]
+        ],
+        "hover": {
+            "NAMELSAD": false
+        },
+        "click": [
+            "NAMELSAD"
+        ]
+    },
+    "has": {
+        "name": "Housing Authorities",
+        "source_id": "mi_has_source",
+        "url": "mapbox://wodacooper.mi_has",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Low-Rent",
+                "#ff9800",
+                "#ffeb3b"
+            ]
+        },
+        "legend": [
+            [
+                "Low Rent",
+                "#ff9800"
+            ],
+            [
+                "Section 8/ Combined",
+                "#ffeb3b"
+            ]
+        ],
+        "click": [
+            "Name",
+            "Type",
+            "address",
+            "Phone",
+            "Email",
+            "PHA Code"
+        ]
+    },
+    "childcare": {
+        "name": "Childcare Centers",
+        "source_id": "mi_childcare_source",
+        "url": "mapbox://wodacooper.mi_childcare",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-color": "#ffffff"
+        },
+        "legend": [
+            [
+                "childcare",
+                "#ffffff"
+            ]
+        ],
+        "click": [
+            "name",
+            "address"
+        ]
+    },
+    "school": {
+        "name": "Schools",
+        "source_id": "mi_schools_source",
+        "url": "mapbox://wodacooper.mi_schools",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#2196f3"
+        },
+        "legend": [
+            [
+                "school",
+                "#2196f3"
+            ]
+        ],
+        "click": [
+            "School",
+            "County",
+            "City",
+            "District",
+            "Grade Span",
+            "Student Count"
+        ]
+    },
+    "score_geocode": {
+        "name": "2024 Score",
+        "source_id": "score_geocode_source",
+        "url": "mapbox://wodacooper.mi_24_geocode",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "total_pts"
+                ],
+                "#ff0000",
+                9,
+                "#ffff00",
+                10,
+                "#ff00ff",
+                11,
+                "#00ff00",
+                12,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "total_pts"
+                ],
+                0,
+                8,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "pool": "",
+            "NAMELSAD": "County",
+            "promise_pt": ""
+        },
+        "num_filters": {
+            "total_pts": "",
+            "no_amenities": "Score w/o Amenities"
+        },
+        "legend": [
+            [
+                "12",
+                "#00ffff"
+            ],
+            [
+                "11",
+                "#00ff00"
+            ],
+            [
+                "10",
+                "#ff00ff"
+            ],
+            [
+                "9",
+                "#ffff00"
+            ],
+            [
+                "8",
+                "#ff0000"
+            ]
+        ],
+        "hover": {
+            "pool": false,
+            "NAMELSAD": false,
+            "total_pts": false
+        },
+        "click": [
+            "pool",
+            "NAMELSAD",
+            "total_pts",
+            "no_amenities",
+            "awards_pts",
+            "burden_pts",
+            "promise_pt",
+            "childcare",
+            "school_pts",
+            "district"
+        ],
+        "cat_filter_vals": {
+            "pool": [
+                "rural",
+                "urban"
+            ],
+            "NAMELSAD": [
+                "Alcona County",
+                "Alger County",
+                "Allegan County",
+                "Alpena County",
+                "Antrim County",
+                "Arenac County",
+                "Baraga County",
+                "Barry County",
+                "Bay County",
+                "Benzie County",
+                "Berrien County",
+                "Branch County",
+                "Calhoun County",
+                "Cass County",
+                "Charlevoix County",
+                "Cheboygan County",
+                "Chippewa County",
+                "Clare County",
+                "Clinton County",
+                "Crawford County",
+                "Delta County",
+                "Dickinson County",
+                "Eaton County",
+                "Emmet County",
+                "Genesee County",
+                "Gladwin County",
+                "Gogebic County",
+                "Grand Traverse County",
+                "Gratiot County",
+                "Hillsdale County",
+                "Houghton County",
+                "Huron County",
+                "Ingham County",
+                "Ionia County",
+                "Iosco County",
+                "Iron County",
+                "Isabella County",
+                "Jackson County",
+                "Kalamazoo County",
+                "Kalkaska County",
+                "Kent County",
+                "Keweenaw County",
+                "Lake County",
+                "Lapeer County",
+                "Leelanau County",
+                "Lenawee County",
+                "Livingston County",
+                "Luce County",
+                "Mackinac County",
+                "Macomb County",
+                "Manistee County",
+                "Marquette County",
+                "Mason County",
+                "Mecosta County",
+                "Menominee County",
+                "Midland County",
+                "Missaukee County",
+                "Monroe County",
+                "Montcalm County",
+                "Montmorency County",
+                "Muskegon County",
+                "Newaygo County",
+                "Oakland County",
+                "Oceana County",
+                "Ogemaw County",
+                "Ontonagon County",
+                "Osceola County",
+                "Oscoda County",
+                "Otsego County",
+                "Ottawa County",
+                "Presque Isle County",
+                "Roscommon County",
+                "Saginaw County",
+                "Sanilac County",
+                "Schoolcraft County",
+                "Shiawassee County",
+                "St. Clair County",
+                "St. Joseph County",
+                "Tuscola County",
+                "Van Buren County",
+                "Washtenaw County",
+                "Wayne County",
+                "Wexford County"
+            ],
+            "promise_pt": [
+                "0",
+                "1"
+            ]
+        },
+        "num_filter_vals": {
+            "total_pts": [
+                0.0,
+                12.0
+            ],
+            "no_amenities": [
+                0.0,
+                5.0
+            ]
+        }
+    },
+    "score_no_geocode": {
+        "name": "2024 Score w/ Childcare/Schools",
+        "source_id": "score_no_geocode_source",
+        "url": "mapbox://wodacooper.mi_no_24_geocode",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "total_pts"
+                ],
+                "#0000ff",
+                3,
+                "#ff00ff",
+                4,
+                "#00ff00",
+                5,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "total_pts"
+                ],
+                0,
+                2,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "pool": "",
+            "NAMELSAD": "County",
+            "promise_pt": "",
+            "total_pts": ""
+        },
+        "legend": [
+            [
+                "5",
+                "#00ffff"
+            ],
+            [
+                "4",
+                "#00ff00"
+            ],
+            [
+                "3",
+                "#ff00ff"
+            ],
+            [
+                "2",
+                "#0000ff"
+            ]
+        ],
+        "hover": {
+            "pool": false,
+            "NAMELSAD": false,
+            "total_pts": false
+        },
+        "click": [
+            "pool",
+            "NAMELSAD",
+            "total_pts",
+            "awards_pts",
+            "burden_pts",
+            "promise_pt",
+            "district"
+        ],
+        "cat_filter_vals": {
+            "pool": [
+                "rural",
+                "urban"
+            ],
+            "NAMELSAD": [
+                "Alcona County",
+                "Alger County",
+                "Allegan County",
+                "Alpena County",
+                "Antrim County",
+                "Arenac County",
+                "Baraga County",
+                "Barry County",
+                "Bay County",
+                "Benzie County",
+                "Berrien County",
+                "Branch County",
+                "Calhoun County",
+                "Cass County",
+                "Charlevoix County",
+                "Cheboygan County",
+                "Chippewa County",
+                "Clare County",
+                "Clinton County",
+                "Crawford County",
+                "Delta County",
+                "Dickinson County",
+                "Eaton County",
+                "Emmet County",
+                "Genesee County",
+                "Gladwin County",
+                "Gogebic County",
+                "Grand Traverse County",
+                "Gratiot County",
+                "Hillsdale County",
+                "Houghton County",
+                "Huron County",
+                "Ingham County",
+                "Ionia County",
+                "Iosco County",
+                "Iron County",
+                "Isabella County",
+                "Jackson County",
+                "Kalamazoo County",
+                "Kalkaska County",
+                "Kent County",
+                "Keweenaw County",
+                "Lake County",
+                "Lapeer County",
+                "Leelanau County",
+                "Lenawee County",
+                "Livingston County",
+                "Luce County",
+                "Mackinac County",
+                "Macomb County",
+                "Manistee County",
+                "Marquette County",
+                "Mason County",
+                "Mecosta County",
+                "Menominee County",
+                "Midland County",
+                "Missaukee County",
+                "Monroe County",
+                "Montcalm County",
+                "Montmorency County",
+                "Muskegon County",
+                "N/A",
+                "Newaygo County",
+                "Oakland County",
+                "Oceana County",
+                "Ogemaw County",
+                "Ontonagon County",
+                "Osceola County",
+                "Oscoda County",
+                "Otsego County",
+                "Ottawa County",
+                "Presque Isle County",
+                "Roscommon County",
+                "Saginaw County",
+                "Sanilac County",
+                "Schoolcraft County",
+                "Shiawassee County",
+                "St. Clair County",
+                "St. Joseph County",
+                "Tuscola County",
+                "Van Buren County",
+                "Washtenaw County",
+                "Wayne County",
+                "Wexford County"
+            ],
+            "promise_pt": [
+                "0",
+                "1",
+                "N/A"
+            ],
+            "total_pts": [
+                "0.0",
+                "1.0",
+                "2.0",
+                "3.0",
+                "4.0",
+                "5.0"
+            ]
+        }
+    }
+}
