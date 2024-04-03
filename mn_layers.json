@@ -220,7 +220,7 @@
         "hover": {
             "county": false,
             "NAMELSAD": false,
-            "score": false
+            "total_pts": false
         },
         "click": [
             "county",
@@ -510,7 +510,7 @@
         "hover": {
             "county": false,
             "NAMELSAD": false,
-            "score": false
+            "total_pts": false
         },
         "click": [
             "county",
