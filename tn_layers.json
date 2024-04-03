@@ -1,0 +1,29 @@
+{
+    "tracts": {
+        "name": "Top 10 Tracts",
+        "source_id": "tn_22",
+        "url": "mapbox://wodacooper.tn_22",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-width": 2,
+            "line-color": "#ffffff"
+        },
+        "fill": {
+            "fill-opacity":0.5,
+            "fill-color": "#ffffff"
+        },
+        "legend": [
+            [
+                "tracts",
+                "#ffffff"
+            ]
+        ],
+        "click": [
+            "pool","rank","qct","geoid"
+        ]
+    }
+}    
