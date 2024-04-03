@@ -1,7 +1,7 @@
 {
     "past_projects": {
         "name": "Past Projects 4.13.23",
-        "source_id": "ky_past_projects",
+        "source_id": "mi_past_projects",
         "url": "mapbox://wodacooper.ky_past_projects",
         "source_layer": "hello_world",
         "layout": {
@@ -59,6 +59,9 @@
         "line": {
             "line-width": 3,
             "line-color": "#000000"
+        },
+        "fill": {
+            "fill-opacity":0
         },
         "legend": [
             [
