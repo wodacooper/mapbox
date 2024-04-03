@@ -97,14 +97,14 @@
         },
         "visible": false,
         "circle": {
-            "circle-radius": 7,
+            "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
+            "circle-stroke-width": 1,
             "circle-color": [
                 "match",
                 [
                     "get",
-                    "type"
+                    "Type"
                 ],
                 "Low-Rent",
                 "#ff9800",
