@@ -2,7 +2,7 @@
     "counties": {
         "name": "Tribe Counties",
         "source_id": "counties",
-        "url": "mapbox://wodacooper.mn_tribe_counties",
+        "url": "mapbox://wodacooper.mi_tribe_counties",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -25,6 +25,7 @@
                 "#000000"
             ]
         },
+        "fill": {"fill-opacity":0},
         "legend": [
             [
                 "no tribes",
@@ -72,6 +73,7 @@
             "line-width": 2,
             "line-color": "#ffffff"
         },
+        "fill": {"fill-opacity":0},
         "legend": [
             [
                 "City Limits",
