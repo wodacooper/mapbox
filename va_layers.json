@@ -126,7 +126,7 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "poverty_points"
                 ],
                 0,
                 20,
