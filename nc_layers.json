@@ -1,0 +1,477 @@
+{
+    "pharmacies": {
+        "name": "Pharmacy",
+        "source_id": "nc_pharmacy_23",
+        "url": "mapbox://wodacooper.nc_pharmacy_23",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#FFFF00"
+        },
+        "legend": [
+            [
+                "Pharmacies",
+                "#FFFF00"
+            ]
+        ],
+        "hover": {
+            "name": false
+        },
+        "click": [
+            "name",
+            "vicinity"
+        ]
+    },
+    "grocery": {
+        "name": "Grocery",
+        "source_id": "nc_grocery_23",
+        "url": "mapbox://wodacooper.nc_grocery_23",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#FF00FF"
+        },
+        "legend": [
+            [
+                "Grocery",
+                "#FF00FF"
+            ]
+        ],
+        "hover": {
+            "name": false
+        },
+        "click": [
+            "name",
+            "vicinity"
+        ]
+    },
+    "shopping": {
+        "name": "Shopping",
+        "source_id": "nc_shopping_23",
+        "url": "mapbox://wodacooper.nc_shopping_23",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#00FFFF"
+        },
+        "legend": [
+            [
+                "Shopping",
+                "#00FFFF"
+            ]
+        ],
+        "hover": {
+            "name": false
+        },
+        "click": [
+            "name",
+            "vicinity"
+        ]
+    },
+    "amenities": {
+        "name": "Secondary Amenities",
+        "source_id": "nc_secondary_amenities_23",
+        "url": "mapbox://wodacooper.nc_secondary_amenities_23",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "category"
+                ],
+                "hospital",
+                "FFAE00",
+                "school",
+                "A600FF",
+                "007951"
+            ]
+        },
+        "cat_filters": {
+            "category": ""
+        },
+        "legend": [
+            [
+                "Hospital",
+                "#FFAE00"
+            ],
+            [
+                "School",
+                "#A600FF"
+            ],
+            [
+                "Community Center",
+                "#007951"
+            ]
+        ],
+        "hover": {
+            "name": false
+        },
+        "click": [
+            "name",
+            "vicinity"
+        ],
+        "cat_filter_vals": {
+            "category": [
+                "hospital",
+                "school",
+                "civic/community centre"
+            ]
+        }
+    },
+    "cities": {
+        "name": "Cities",
+        "source_id": "nc_cities_21",
+        "url": "mapbox://wodacooper.in_cities_21",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": false,
+        "line": {
+            "line-color": "#FFFFFF"
+        },
+        "fill": {
+            "fill-opacity": 0.4
+        },
+        "legend": [
+            [
+                "City Limits",
+                "#ffffff"
+            ]
+        ],
+        "hover": {
+            "NAME": false
+        }
+    },
+    "score": {
+        "name": "2024 County Pool Rank",
+        "source_id": "nc_basemap_4_4_24",
+        "url": "mapbox://wodacooper.nc_basemap_4_4_24",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "dhhs"
+                ],
+                1,
+                "#000000",
+                "#FFFFFF"
+            ],
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "dhhs"
+                ],
+                1,
+                4,
+                1
+            ]
+        },
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "county"
+                ],
+                "New Hanover",
+                "#00FFFF",
+                "Henderson",
+                "#00FFFF",
+                "Alamance",
+                "#00FFFF",
+                "Durham",
+                "#00FFFF",
+                "Pitt",
+                "#11FF00",
+                "Gaston",
+                "#11FF00",
+                "Orange",
+                "#11FF00",
+                "Mecklenberg",
+                "#11FF00",
+                "Wilson",
+                "#FF10B7",
+                "Burke",
+                "#FF10B7",
+                "Cabarrus",
+                "#FF10B7",
+                "Wake",
+                "#FF10B7",
+                "Wayne",
+                "#FFEB3B",
+                "Watauga",
+                "#FFEB3B",
+                "Guilford",
+                "#FFEB3B",
+                "Iredell",
+                "#FFEB3B",
+                "Robeson",
+                "#FF9800",
+                "Lincoln",
+                "#FF9800",
+                "Franklin",
+                "#FF9800",
+                "Cumberland",
+                "#FF9800",
+                "Forsyth",
+                "#8A00AD",
+                "Buncombe",
+                "#FFFFFF",
+                "000000"
+            ],
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "county"
+                ],
+                "New Hanover",
+                0.4,
+                "Henderson",
+                0.4,
+                "Alamance",
+                0.4,
+                "Durham",
+                0.4,
+                "Pitt",
+                0.4,
+                "Gaston",
+                0.4,
+                "Orange",
+                0.4,
+                "Mecklenberg",
+                0.4,
+                "Wilson",
+                0.4,
+                "Burke",
+                0.4,
+                "Cabarrus",
+                0.4,
+                "Wake",
+                0.4,
+                "Wayne",
+                0.4,
+                "Watauga",
+                0.4,
+                "Guilford",
+                0.4,
+                "Iredell",
+                0.4,
+                "Robeson",
+                0.4,
+                "Lincoln",
+                0.4,
+                "Franklin",
+                0.4,
+                "Cumberland",
+                0.4,
+                "Forsyth",
+                0.4,
+                "Buncombe",
+                0.4,
+                0
+            ]
+        },
+        "cat_filters": {
+            "county": "",
+            "dhhs": "",
+            "golden_leaf": "",
+            "income_designation": "",
+            "pool": ""
+        },
+        "legend": [
+            [
+                "1",
+                "#00FFFF"
+            ],
+            [
+                "2",
+                "#11FF00"
+            ],
+            [
+                "3",
+                "#FF10B7"
+            ],
+            [
+                "4",
+                "#FFEB3B"
+            ],
+            [
+                "5",
+                "#FF9800"
+            ],
+            [
+                "6 (Metro)",
+                "#8A00AD"
+            ],
+            [
+                "7 (Metro)",
+                "#FFFFFF"
+            ],
+            [
+                "DHHS (Outline)",
+                "#000000"
+            ]
+        ],
+        "hover": {
+            "pool": true,
+            "county": true
+        },
+        "click": [
+            "pool",
+            "county",
+            "golden_leaf",
+            "income_designation",
+            "dhhs"
+        ],
+        "cat_filter_vals": {
+            "county": [
+                "Alamance",
+                "Alexander",
+                "Alleghany",
+                "Anson",
+                "Ashe",
+                "Avery",
+                "Beaufort",
+                "Bertie",
+                "Bladen",
+                "Brunswick",
+                "Buncombe",
+                "Burke",
+                "Cabarrus",
+                "Caldwell",
+                "Camden",
+                "Carteret",
+                "Caswell",
+                "Catawba",
+                "Chatham",
+                "Cherokee",
+                "Chowan",
+                "Clay",
+                "Cleveland",
+                "Columbus",
+                "Craven",
+                "Cumberland",
+                "Currituck",
+                "Dare",
+                "Davidson",
+                "Davie",
+                "Duplin",
+                "Durham",
+                "Edgecombe",
+                "Forsyth",
+                "Franklin",
+                "Gaston",
+                "Gates",
+                "Graham",
+                "Granville",
+                "Greene",
+                "Guilford",
+                "Halifax",
+                "Harnett",
+                "Haywood",
+                "Henderson",
+                "Hertford",
+                "Hoke",
+                "Hyde",
+                "Iredell",
+                "Jackson",
+                "Johnston",
+                "Jones",
+                "Lee",
+                "Lenoir",
+                "Lincoln",
+                "Macon",
+                "Madison",
+                "Martin",
+                "McDowell",
+                "Mecklenburg",
+                "Mitchell",
+                "Montgomery",
+                "Moore",
+                "Nash",
+                "New Hanover",
+                "Northampton",
+                "Onslow",
+                "Orange",
+                "Pamlico",
+                "Pasquotank",
+                "Pender",
+                "Perquimans",
+                "Person",
+                "Pitt",
+                "Polk",
+                "Randolph",
+                "Richmond",
+                "Robeson",
+                "Rockingham",
+                "Rowan",
+                "Rutherford",
+                "Sampson",
+                "Scotland",
+                "Stanly",
+                "Stokes",
+                "Surry",
+                "Swain",
+                "Transylvania",
+                "Tyrrell",
+                "Union",
+                "Vance",
+                "Wake",
+                "Warren",
+                "Washington",
+                "Watauga",
+                "Wayne",
+                "Wilkes",
+                "Wilson",
+                "Yadkin",
+                "Yancey"
+            ],
+            "dhhs": [
+                "0",
+                "1"
+            ],
+            "golden_leaf": [
+                "False",
+                "True"
+            ],
+            "income_designation": [
+                "High",
+                "Low",
+                "Moderate"
+            ],
+            "pool": [
+                "Central",
+                "East",
+                "Metro",
+                "West"
+            ]
+        }
+    }
+}
