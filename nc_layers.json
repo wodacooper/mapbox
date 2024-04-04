@@ -82,8 +82,8 @@
     },
     "amenities": {
         "name": "Secondary Amenities",
-        "source_id": "nc_secondary_amenities_23",
-        "url": "mapbox://wodacooper.nc_secondary_amenities_23",
+        "source_id": "nc_secondary_amenities_23_1",
+        "url": "mapbox://wodacooper.nc_secondary_amenities_23_1",
         "source_layer": "hello_world",
         "layout": {},
         "visible": false,
@@ -132,7 +132,7 @@
             "category": [
                 "hospital",
                 "school",
-                "civic/community centre"
+                "community center"
             ]
         }
     },
