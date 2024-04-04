@@ -98,10 +98,10 @@
                     "category"
                 ],
                 "hospital",
-                "FFAE00",
+                "#FFAE00",
                 "school",
-                "A600FF",
-                "007951"
+                "#A600FF",
+                "#007951"
             ]
         },
         "cat_filters": {
