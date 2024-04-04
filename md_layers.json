@@ -1,0 +1,263 @@
+{
+    "eligibility": {
+        "name": "Eligibility",
+        "source_id": "md_eligibility",
+        "url": "mapbox://wodacooper.md_eligibility",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "label"
+                ],
+                "No Basis Boost",
+                "#ff0000",
+                "#ffffff"
+            ],
+            "line-opacity": 1,
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "label"
+                ],
+                "No Basis Boost",
+                2,
+                1
+            ]
+        },
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "label"
+                ],
+                "No Basis Boost",
+                "#ff0000",
+                "#000000"
+            ],
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "label"
+                ],
+                "Basis Boost",
+                0,
+                "No Basis Boost",
+                0.2,
+                0.8
+            ]
+        },
+        "legend": [
+            [
+                "Ineligible",
+                "#000000"
+            ],
+            [
+                "No Basis Boost",
+                "#ff0000"
+            ]
+        ]
+    },
+    "transit": {
+        "name": "Transit Points",
+        "source_id": "md_transit",
+        "url": "mapbox://wodacooper.md_transit",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-color": "#ffffff",
+            "line-opacity": 0.2
+        },
+        "fill": {
+            "fill-color": "#616161",
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "transit"
+                ],
+                "no",
+                0.8,
+                0
+            ]
+        },
+        "legend": [
+            [
+                "No Transit",
+                "#616161"
+            ]
+        ],
+        "click": [
+            "transit",
+            "concatted"
+        ]
+    },
+    "transit_stops": {
+        "name": "Transit Stops",
+        "source_id": "md_stops",
+        "url": "mapbox://wodacooper.md_transit_stops",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 4,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Bus",
+                "#ff9800",
+                "Train",
+                "#ffeb3b",
+                "#999999"
+            ]
+        },
+        "legend": [
+            [
+                "Bus",
+                "#ff9800"
+            ],
+            [
+                "Train",
+                "#ffeb3b"
+            ]
+        ],
+        "click": [
+            "source",
+            "type"
+        ],
+        "cat_filters": {
+            "type": "",
+            "source": ""
+        },
+        "cat_filter_vals": {
+            "type": [
+                "Bus",
+                "Train"
+            ],
+            "source": [
+                "Allegany_County",
+                "BWI_Shuttle",
+                "Calvert_County",
+                "Carroll_County",
+                "Cecil_County",
+                "Charles_County",
+                "Charm_City_Circulator",
+                "Delmarva",
+                "Frederick_County",
+                "Light_RailLink",
+                "MARC",
+                "MTA_Bus",
+                "Metro_SubwayLink",
+                "Montgomery_County",
+                "Ocean_City",
+                "Prince_Georges_County",
+                "Purple_Line",
+                "Queen_Annes_County",
+                "RTA",
+                "Shore_Transit",
+                "St_Marys_County",
+                "VRE",
+                "WMATA_Bus",
+                "WMATA_Metro",
+                "Washington_County"
+            ]
+        }
+    },
+    "cities": {
+        "name": "Cities",
+        "source_id": "md_places",
+        "url": "mapbox://wodacooper.md_places",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#2196f3"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+        "legend": [
+            [
+                "city limits",
+                "#2196f3"
+            ]
+        ],
+        "click": [
+            "NAMELSAD"
+        ],
+        "hover": {
+            "NAMELSAD": false
+        }
+    },
+    "score": {
+        "name": "Comunity Impact",
+        "source_id": "score_source",
+        "url": "mapbox://wodacooper.md_scores",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                12,
+                "#00ff00",
+                16,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "pts"
+                ],
+                0,
+                12,
+                0.6
+            ]
+        },
+        "legend": [
+            [
+                "16",
+                "#00ffff"
+            ],
+            [
+                "12",
+                "#00ff00"
+            ]
+        ],
+        "click": [
+            "merge_auth",
+            "merge_oppo",
+            "opportunity_zone",
+            "planning_areas"
+        ]
+    }
+}
