@@ -32,6 +32,16 @@
         "cat_filters": {
             "less_than_": "Population < 35k",
             "CLASSFP": "C1=town, C7=city"
+        },
+        "cat_filter_vals": {
+            "less_than_": [
+                "Greater",
+                "Less Than 35k"
+            ],
+            "CLASSFP": [
+                "C1",
+                "C7"
+            ]
         }
     },
     "counties": {
