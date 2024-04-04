@@ -111,17 +111,17 @@
             ]
         ],
         "hover": {
-            "Pool": "",
-            "County": "",
-            "City": "",
-            "score": "Score"
+            "Pool": true,
+            "County": true,
+            "City": true,
+            "score": true
         },
-        "click": {
-            "Pool": "",
-            "County": "",
-            "City": "",
-            "score": "Score"
-        },
+        "click": [
+            "Pool"
+            "County"
+            "City"
+            "score"
+        }],
         "cat_filter_vals": {
             "Pool": [
                 "Large City",
