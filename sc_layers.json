@@ -10,7 +10,7 @@
         "visible": true,
         "fill": {
             "fill-color": "#000000",
-            "fill_opacity": 0.5
+            "fill-opacity": 0.5
         },
         "legend": [
             [
@@ -84,7 +84,7 @@
         "visible": false,
         "line": {
             "line-width": 2,
-            "line-color": "#000000"
+            "line-color": "#ffffff"
         },
         "fill": {
             "fill-opacity": 0
@@ -92,7 +92,7 @@
         "legend": [
             [
                 "city limits",
-                "#000000"
+                "#ffffff"
             ]
         ],
         "click": [
