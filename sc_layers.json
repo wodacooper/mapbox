@@ -1,0 +1,283 @@
+{
+    "past_projects": {
+        "name": "Past Projects 21/22",
+        "source_id": "sc_past_buf",
+        "url": "mapbox://wodacooper.sc_past_buf",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": "#000000",
+            "fill_opacity": 0.5
+        },
+        "legend": [
+            [
+                "1 mile radius",
+                "#000000"
+            ]
+        ],
+        "click": [
+            "property",
+            "award_year",
+            "address",
+            "market",
+            "type",
+            "app_type"
+        ]
+    },
+    "amenities": {
+        "name": "Primary Amenities",
+        "source_id": "sc_amenities",
+        "url": "mapbox://wodacooper.sc_amenities",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "category"
+                ],
+                "grocery store",
+                "#ff9800",
+                "pharmacy",
+                "#ffeb3b",
+                "#999999"
+            ]
+        },
+        "legend": [
+            [
+                "Grocery",
+                "#ff9800"
+            ],
+            [
+                "Pharmacy",
+                "#ffeb3b"
+            ],
+            [
+                "Department Store",
+                "#999999"
+            ]
+        ],
+        "click": [
+            "name",
+            "types",
+            "vicinity"
+        ]
+    },
+    "cities": {
+        "name": "Cities",
+        "source_id": "sc_places",
+        "url": "mapbox://wodacooper.sc_places",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#000000"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+        "legend": [
+            [
+                "city limits",
+                "#000000"
+            ]
+        ],
+        "click": [
+            "namelsad"
+        ],
+        "hover": {
+            "namelsad": false
+        }
+    },
+    "score": {
+        "name": "2024 Score",
+        "source_id": "score_source",
+        "url": "mapbox://wodacooper.sc_24",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                9,
+                "#9e9e9e",
+                11,
+                "#70534e",
+                13,
+                "#346b36",
+                14,
+                "#0000ff",
+                15,
+                "#ff0000",
+                16,
+                "#fe8103",
+                17,
+                "#ffff00",
+                18,
+                "#ff00ff",
+                19,
+                "#00ff00",
+                20,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                0,
+                7,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "pool": "pool",
+            "COUNTY_NAM": "County"
+        },
+        "num_filters": {
+            "score": "Score"
+        },
+        "legend": [
+            [
+                "20-25",
+                "#00ffff"
+            ],
+            [
+                "19",
+                "#00ff00"
+            ],
+            [
+                "18",
+                "#ff00ff"
+            ],
+            [
+                "17",
+                "#ffff00"
+            ],
+            [
+                "16",
+                "#fe8103"
+            ],
+            [
+                "15",
+                "#ff0000"
+            ],
+            [
+                "14",
+                "#0000ff"
+            ],
+            [
+                "13",
+                "#346b36"
+            ],
+            [
+                "11-12",
+                "#70534e"
+            ],
+            [
+                "9-10",
+                "#9e9e9e"
+            ],
+            [
+                "7-8",
+                "#ffffff"
+            ]
+        ],
+        "hover": {
+            "pool": false,
+            "COUNTY_NAM": false,
+            "score": false
+        },
+        "click": [
+            "pool",
+            "COUNTY_NAM",
+            "score",
+            "otm_pts",
+            "OZ_pts",
+            "aff_pts",
+            "recent_nc",
+            "GEOID"
+        ],
+        "cat_filter_vals": {
+            "pool": [
+                "Group A",
+                "Group B"
+            ],
+            "COUNTY_NAM": [
+                "Abbeville",
+                "Aiken",
+                "Allendale",
+                "Anderson",
+                "Bamberg",
+                "Barnwell",
+                "Beaufort",
+                "Berkeley",
+                "Calhoun",
+                "Charleston",
+                "Cherokee",
+                "Chester",
+                "Chesterfield",
+                "Clarendon",
+                "Colleton",
+                "Darlington",
+                "Dillon",
+                "Dorchester",
+                "Edgefield",
+                "Fairfield",
+                "Florence",
+                "Georgetown",
+                "Greenville",
+                "Greenwood",
+                "Hampton",
+                "Horry",
+                "Jasper",
+                "Kershaw",
+                "Lancaster",
+                "Laurens",
+                "Lee",
+                "Lexington",
+                "Marion",
+                "Marlboro",
+                "McCormick",
+                "Newberry",
+                "Oconee",
+                "Orangeburg",
+                "Pickens",
+                "Richland",
+                "Saluda",
+                "Spartanburg",
+                "Sumter",
+                "Union",
+                "Williamsburg",
+                "York"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                25.0
+            ]
+        }
+    }
+}
