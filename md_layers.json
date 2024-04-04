@@ -48,7 +48,7 @@
                     "get",
                     "label"
                 ],
-                "Basis Boost",
+                "Basis_Boost",
                 0,
                 "No Basis Boost",
                 0.2,
@@ -224,7 +224,7 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "pts"
                 ],
                 "#ffffff",
                 12,
