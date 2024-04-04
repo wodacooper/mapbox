@@ -139,7 +139,7 @@
     "cities": {
         "name": "Cities",
         "source_id": "nc_cities_21",
-        "url": "mapbox://wodacooper.in_cities_21",
+        "url": "mapbox://wodacooper.nc_cities_21",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
