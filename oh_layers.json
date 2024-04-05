@@ -59,6 +59,55 @@
             ]
         ]
     },
+    "roads": {
+        "name": "Transit Corridors",
+        "source_id": "cbus_roads",
+        "url": "mapbox://wodacooper.cbus_roads",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 3,
+            "line-color": [
+                "match",
+                ["get","tier"],
+                1,"#ff9800",
+                "#0d47a1"
+            ]
+        },
+        "legend": [
+            [
+                "Tier 1",
+                "#ff9800"
+            ],
+            [
+                "Tier 2",
+                "#0d47a1"
+            ]
+        ]
+    },
+    "transit_corridors": {
+        "name": "Transit Corridor Buffer",
+        "source_id": "cbus_transit_corridors",
+        "url": "mapbox://wodacooper.cbus_transit_corridors",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": "#000000",
+            "fill-opacity": 0.5
+        },
+        "legend": [
+            [
+                "1 mile buffer",
+                "#000000"
+            ]
+        ]
+    },
     "amenities": {
         "name": "Amenities",
         "source_id": "oh_amenities_buf",
@@ -201,6 +250,140 @@
                 "5"
             ]
         }
+    },
+    "cle_zoning": {
+        "name": "Cleveland Zoning",
+        "source_id": "cle_zoning",
+        "url": "mapbox://wodacooper.cle_zoning",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-opacity": 0.6,
+            "fill-color":[
+                "match",
+                ["get", "zone_use"],
+                "Local Retail Business","#f44336",
+                "General Retail Business","#f44336",
+                "Limited Retail Business","#f44336",
+                "Shopping Center","#f44336",
+                "University (College) Retail","#f44336",
+                "Multi-Family","#896f52",
+                "Limited Multi-Family","#896f52",
+                "Downtown Residential","#896f52",
+                "Townhouse","#a68941",
+                "Residence-Industry","#a68941",
+                "Residence Office","#a68941",
+                "Two Family","#dcc386",
+                "One Family","#dcc386",
+                "Limited One Family","#dcc386",
+                "Semi-Industry","#9e9e9e",
+                "General Industry","#9e9e9e",
+                "Unrestricted Industry","#9e9e9e",
+                "Institutional-Research District","#03a9f4",
+                "Open Space Recreation","#388e3c",
+                "#e91e63"
+            ]
+        },
+        "legend": [
+            ["Business","#f44336"],
+            ["Multi-Family","#896f52"],
+            ["Townhouse/similar","#a68941"],
+            ["Single-Family","#dcc386"],
+            ["Industry","#9e9e9e"],
+            ["Institutional-Research","#03a9f4"],
+            ["Open Space Recreation","#388e3c"],
+            ["Other","#e91e63"]
+        ],
+        "hover":{
+            "zone_use":false,
+            "zone_code":false,
+            "zone_hgt":true
+        },
+        "click":["zone_use","zone_code","zone_hgt","ord_no_1"]
+    },
+    "cbus_zoning": {
+        "name": "Columbus Zoning",
+        "source_id": "cbus_zoning",
+        "url": "mapbox://wodacooper.cbus_zoning",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-opacity": 0.6,
+            "fill-color":[
+                "match",
+                ["get", "general_zo"],
+                "Commercial","#f44336",
+                "Multi-family","#896f52",
+                "Manufactured Home","#a68941",
+                "Residential","#dcc386",
+                "Manufacturing","#9e9e9e",
+                "Excavation/Quarrying","#9e9e9e",
+                "Unrestricted Industry","#9e9e9e",
+                "Institutional","#03a9f4",
+                "Research Park","#03a9f4",
+                "Town Center","#ffeb3b",
+                "Downtown District","#ffeb3b",
+                "Neighborhood General","#388e3c",
+                "Neighborhood Edge","#388e3c",
+                "Neighborhood Center","#388e3c",
+                "#e91e63"
+            ]
+        },
+        "legend": [
+            ["Business","#f44336"],
+            ["Multi-Family","#896f52"],
+            ["Manufactured Home","#a68941"],
+            ["Single-Family","#dcc386"],
+            ["Industry","#9e9e9e"],
+            ["Institutional-Research","#03a9f4"],
+            ["Neighborhood","#388e3c"],
+            ["Downtown District","#ffeb3b"],
+            ["Other","#e91e63"]
+        ],
+        "hover":{
+            "general_zo":false,
+            "classifica":false,
+            "height_dis":true
+        },
+        "click":["general_zo","classifica","height_dis","web_link"]
+    },
+    "cbus_cra": {
+        "name": "CRA Areas 2.17.23",
+        "source_id": "cbus_cra",
+        "url": "mapbox://wodacooper.cbus_cra",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-opacity": 0.6,
+            "fill-color":[
+                "match",
+                ["get", "cra_catego"],
+                "Ready for Revitalization","#f44336",
+                "Market Ready","#8bc34a",
+                "Ready for Opportunity","#29b6f6",
+                "N/A","#9e9e9e",
+                "#ffffff"
+            ]
+        },
+        "legend": [
+            ["Ready for Revitalization","#f44336"],
+            ["Market Ready","#8bc34a"],
+            ["Ready for Opportunity","#29b6f6"],
+            ["N/A","#9e9e9e"]
+        ],
+        "hover":{
+            "cra_catego":false
+        },
+        "click":["geoid20"]
     },
     "score": {
         "name": "2024 New Affordability",
