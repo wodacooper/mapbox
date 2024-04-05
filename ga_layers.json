@@ -277,12 +277,12 @@
             ]
         ],
         "hover": {
-            "school_name": false,
+            "school_nam": false,
             "level_str": false,
             "q_educ": true
         },
         "click": [
-            "school_name",
+            "school_nam",
             "level_str",
             "q_educ",
             "low_int",
@@ -1288,9 +1288,9 @@
         "url": "mapbox://wodacooper.ga_24",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
