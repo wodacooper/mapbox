@@ -1,0 +1,195 @@
+{
+    "tampa_cras": {
+        "name": "Tampa CRAs",
+        "source_id": "tampa_cras",
+        "url": "mapbox://wodacooper.tampa_cras",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#ffee58"
+        },
+        "legend": [
+            [
+                "CRAs",
+                "#ffee58"
+            ]
+        ]
+    },
+    "sunrail_radius": {
+        "name": "Sunrail Stations",
+        "source_id": "fl_sunrail_stations",
+        "url": "mapbox://wodacooper.fl_sunrail_stations",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 3,
+            "line-color": "#ff9800"
+        },
+        "legend": [
+            [
+                "1/2 mile radius",
+                "#ff9800"
+            ]
+        ]
+    },
+    "recaps": {
+        "name": "R/ECAPs",
+        "source_id": "fl_recaps",
+        "url": "mapbox://wodacooper.fl_recaps",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#ffffff"
+        },
+        "fill":{
+            "fill-opacity":0.7,
+            "fill-color":"#000000"
+        },
+        "legend": [
+            [
+                "R/ECAPs",
+                "#000000"
+            ]
+        ]
+    },
+    "gaos": {
+        "name": "Geographic Areas of Opportunity",
+        "source_id": "fl_gao",
+        "url": "mapbox://wodacooper.fl_gao",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#ffffff"
+        },
+        "fill":{
+            "fill-opacity":0.5,
+            "fill-color":"#ffffff"
+        },
+        "legend": [
+            [
+                "GAOs",
+                "#ffffff"
+            ]
+        ]
+    },
+    "past_projects": {
+        "name": "Past Projects 2.18.24",
+        "source_id": "fl_past_projects",
+        "url": "mapbox://wodacooper.fl_past_projects",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#ffffff"
+        },
+        "fill":{
+            "fill-opacity":0.7,
+            "fill-color":"#000000"
+        },
+        "legend": [
+            [
+                "1 mile radius",
+                "#000000"
+            ]
+        ],
+        "hover":{
+            "development":false,
+            "demo":true,
+            "file__":false
+        },
+        "click":["development","demo","file__","_30_units_or_less","buffer","development_address","city","county","county_size"]
+    },
+    "cities": {
+        "name": "Cities",
+        "source_id": "fl_places",
+        "url": "mapbox://wodacooper.fl_places",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#0000ff"
+        },
+        "fill": {
+            "fill-opacity": 0.1,
+            "fill-color": "#0000ff"
+        },
+        "legend": [
+            [
+                "City Limits",
+                "#0000ff"
+            ]
+        ],
+        "hover":{"namelsad":false},
+        "click":["namelsad"]
+    },
+    "counties": {
+        "name": "Counties",
+        "source_id": "fl_counties",
+        "url": "mapbox://wodacooper.fl_counties",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-width": 3,
+            "line-color": [
+                "match",
+                ["get","recent_lgao"],
+                "2021","#ff0000",
+                "2022","#ff0000",
+                "#ffffff"
+            ]
+        },
+        "fill": {
+            "fill-color": [
+                "match",
+                ["get","pool"],
+                "Small","#ecc790",
+                "Medium","#90caf9",
+                "Big","#4caf50",
+                "Miami-Dade","#e91e63",
+                "#ffffff"
+            ],
+            "fill-opacity": 0.35
+        },
+        "legend": [
+            ["Small","#ecc790"],
+            ["Medium","#90caf9"],
+            ["Big","#4caf50"],
+            ["Miami-Dade","#e91e63"],
+            ["outline = LGAO"]
+        ],
+        "hover":{
+            "namelsad":false,
+            "recent_lgao":true
+        },
+        "click":[
+            "namelsad",
+            "recent_lgao",
+            "lgao_threshold",
+            "lgc_max_pts"
+        ]
+    }
+}
