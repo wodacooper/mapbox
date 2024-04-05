@@ -1,4 +1,134 @@
 {
+    "detroit_parcels": {
+        "name": "Detroit Zoning",
+        "source_id": "detroit_parcels",
+        "url": "mapbox://wodacooper.detroit_parcels",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#ffffff"
+        },
+        "fill": {
+            "fill-opacity":0.6,
+            "fill-color":[
+                "match",
+                ["get","zoning_init"],
+                "M","#7b634b",
+                "R","#f2d17e",
+                "S","#4A148C",
+                "P","#689F38",
+                "B","#f44336",
+                "N","#827717",
+                "#FF9800"
+            ]
+        },
+        "legend": [
+            ["M","#7b634b"],
+            ["R","#f2d17e"],
+            ["S","#4A148C"],
+            ["P","#689F38"],
+            ["B","#f44336"],
+            ["N","#827717"],
+            ["Other","#FF9800"]
+        ],
+        "hover":{
+            "zoning":true,
+            "owner1":true
+        },
+        "click": [
+            "zoning",
+            "parcelnum",
+            "address",
+            "total_acre",
+            "owner1",
+            "owner2",
+            "own_street",
+            "own_city"
+        ],
+        "cat_filters":{"zoning_init":"", "zoning":"","det_owned":"City Owned"},
+        "cat_filter_vals":{
+            "zoning_init":["R3", "R2", "R1", "R5", "M3", "SD2", "M4", "B4", "M2", "PD", "SD4", "N/A", "B2", "B3", "SD1", "B1", "R4", "B5", "PR", "R6", "TM", "M5", "B6", "PCA", "P1", "SD5", "M1", "PC", "W1"],
+            "zoning":["R", "M", "S", "B", "P", "N", "T", "W"],
+            "det_owned":["City Owned", "Not City Owned"]}
+    },
+    "detroit_preservation": {
+        "name": "Detroit Preservation",
+        "source_id": "detroit_preservation",
+        "url": "mapbox://wodacooper.detroit_preservation",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": [
+                "match",
+                ["get","size"],
+                "151+",9,
+                "81-150",7,
+                "61-80",6,
+                "30-60",5,
+                4
+            ],
+            "circle-stroke-color": [
+                "match",
+                ["get","market_rate_10plus"],
+                "10+ MR","#ff0000",
+                "#0000ff"
+            ],
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "Tcategory"
+                ],
+                "LIHTC",
+                "#ffA500",
+                "HUD Section 8",
+                "#689f38",
+                "#ffe500"
+            ]
+        },
+        "legend": [
+            [
+                "LIHTC (fill)",
+                "#ffA500"
+            ],
+            [
+                "HUD Section 8 (fill)",
+                "#689f38"
+            ],
+            [
+                "MSHDA PBV (fill)",
+                "#ffe500"
+            ],
+            [
+                "10+ MR (Outline)",
+                "#ff0000"
+            ],
+            [
+                "<10 MR (Outline)",
+                "#0000ff"
+            ],
+            [
+                "larger=more units",
+                "#ffffff"
+            ]
+        ],
+        "click": [
+            "project_name",
+            "total_units",
+            "affordable_units",
+            "full_address",
+            "program_or_subsidy_summary",
+            "lihtc_year_15_ends"
+        ]
+    },
     "counties": {
         "name": "Tribe Counties",
         "source_id": "counties",
