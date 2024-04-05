@@ -213,7 +213,7 @@
                 "#11FF00",
                 "Orange",
                 "#11FF00",
-                "Mecklenberg",
+                "Mecklenburg",
                 "#11FF00",
                 "Wilson",
                 "#FF10B7",
@@ -265,7 +265,7 @@
                 0.4,
                 "Orange",
                 0.4,
-                "Mecklenberg",
+                "Mecklenburg",
                 0.4,
                 "Wilson",
                 0.4,
@@ -300,8 +300,6 @@
         },
         "cat_filters": {
             "county": "",
-            "dhhs": "",
-            "golden_leaf": "",
             "income_designation": "",
             "pool": ""
         },
@@ -452,14 +450,6 @@
                 "Wilson",
                 "Yadkin",
                 "Yancey"
-            ],
-            "dhhs": [
-                "0",
-                "1"
-            ],
-            "golden_leaf": [
-                "False",
-                "True"
             ],
             "income_designation": [
                 "High",
