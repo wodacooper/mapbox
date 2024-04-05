@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script> 
+</script>
+<title>Map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.css" type="text/css">
+<!-- Load the `mapbox-gl-geocoder` plugin. -->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<script src="https://kit.fontawesome.com/9a358cbeb3.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<script>
+
+function updateNumericFilter(target) {
+    console.log(target)
+    const value = parseFloat(target.value)
+    const splits = target.id.split('@');
+    const cat = splits[1];
+    const layer = splits[0];
+    let p = 1;
+    if (splits[2] == 'to') p=2;
+    let j = Object.keys(layers[layer].num_filters).indexOf(cat)*2 + p;
+    if (layers[layer].cat_filters) j = j + Object.keys(layers[layer].cat_filters).length;
+    const clear_btn = document.getElementById(layer.concat('@',cat,'@clear'))
+    if (clear_btn.classList.contains('hide')) {clear_btn.classList.remove('hide')};
+    layers[layer].filters[j][2] = value
+    console.log(layers[layer].filters)
+    for (type of layer_types){
+        if (layers[layer][type]){
+            map.setFilter(layer.concat('@',type), layers[layer].filters);                  
+        }
+    };
+}
+
+function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#C6C6C6', '#128ed6', controlSlider);
+    if (from > to) {
+        fromSlider.value = to;
+        fromInput.value = to;
+    } else {
+        fromSlider.value = from;
+    }
+    updateNumericFilter(fromInput);
+}
+    
+function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#C6C6C6', '#128ed6', controlSlider);
+    setToggleAccessible(toInput);
+    if (from <= to) {
+        toSlider.value = to;
+        toInput.value = to;
+    } else {
+        toInput.value = from;
+    }
+    updateNumericFilter(toInput);
+}
+
+function controlFromSlider(fromSlider, toSlider, fromInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, '#C6C6C6', '#128ed6', toSlider);
+  if (from > to) {
+    fromSlider.value = to;
+    fromInput.value = to;
+  } else {
+    fromInput.value = from;
+  }
+  updateNumericFilter(fromSlider);
+}
+
+function controlToSlider(fromSlider, toSlider, toInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, '#C6C6C6', '#128ed6', toSlider);
+  setToggleAccessible(toSlider);
+  if (from <= to) {
+    toSlider.value = to;
+    toInput.value = to;
+  } else {
+    toInput.value = from;
+    toSlider.value = from;
+  }
+  updateNumericFilter(toSlider);
+}
+
+function getParsed(currentFrom, currentTo) {
+  const from = parseInt(currentFrom.value, 10);
+  const to = parseInt(currentTo.value, 10);
+  return [from, to];
+}
+
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+    const rangeDistance = to.max-to.min;
+    const fromPosition = from.value - to.min;
+    const toPosition = to.value - to.min;
+    controlSlider.style.background = `linear-gradient(
+      to right,
+      ${sliderColor} 0%,
+      ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+      ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+      ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+      ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+      ${sliderColor} 100%)`;
+}
+
+function setToggleAccessible(toSlider) {
+  if (Number(toSlider.value) <= Number(toSlider.min) ) {
+    toSlider.style.zIndex = 2;
+  } else {
+    toSlider.style.zIndex = 0;
+  }
+}    
+</script>
+<style>
+.range_container {
+    display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.slider_control {
+  position: relative;
+  min-height: 30px;
+  padding-top: 10px;
+}
+
+.form_control {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #635a5a;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #C6C6C6;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #C6C6C6;
+  cursor: pointer;  
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background: #f7f7f7;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+}
+
+input[type="number"] {
+  color: #8a8383;
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
+  border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; 
+  appearance: none;
+  height: 2px;
+  width: 100%;
+  position: relative;
+  background-color: #C6C6C6;
+  pointer-events: none;
+}
+
+#fromSlider {
+  height: 0;
+  z-index: 1;
+}  
+</style>
+<script>
+const bounds_dict = {
+    "fl":{
+        "bounds":[[-84.37526158463271, 26.255905741318735], [-78.81301050869402, 29.55055750061163]],
+        "geocoder_bounds":[-88.71461624270614, 23.921499535069774, -79.13453815251694, 30.93568899111583],
+        "url": 'https://wodacooper.github.io/mapbox/fl_layers.json'
+    },
+    "ga":{
+        "bounds":[[-85.43912683641372, 33.26118181948529], [-82.06632411429437, 34.456279633297356]],
+        "geocoder_bounds":[-85.84562097556167, 30.177882355149897, -80.16568935557564, 35.267583145126984],
+        "url": 'https://wodacooper.github.io/mapbox/ga_layers.json'
+    },
+    "ia":{
+        "bounds":[[-96.58859136144741, 40.343619780357525], [-89.95865987289943, 43.564125073484746]],
+        "geocoder_bounds":[-96.58859136144741, 40.343619780357525, -89.95865987289943, 43.564125073484746],
+        "url": 'https://wodacooper.github.io/mapbox/ia_layers.json'
+    },
+    "il":{
+        "bounds":[[-92.33696195567066, 39.418647809974566], [-86.21191743849026, 42.50919789328073]],
+        "geocoder_bounds":[-91.63330148894498, 36.904239278804766, -86.85160877187725, 42.709289768656845],
+        "url": 'https://wodacooper.github.io/mapbox/il_layers.json'
+    },
+    "in":{
+        "bounds":[[-88.179790, 37.727327], [-84.704993, 41.822297]],
+        "geocoder_bounds":[-88.179790, 37.727327, -84.704993, 41.822297],
+        "url": 'https://wodacooper.github.io/mapbox/in_layers.json'
+    },
+    "ky":{
+        "bounds":[[-86.29441748259278, 37.535686404222595], [-83.15232765026008, 39.35961014228036]],
+        "geocoder_bounds":[-89.79389490859442, 36.41331788111147, -81.57612150095505, 39.15646674651189],
+        "url": 'https://wodacooper.github.io/mapbox/ky_layers.json'
+    },
+    "md":{
+        "bounds":[[-77.40591238347997, 38.87473399727833], [-76.2231571782379, 39.43496350972831]],
+        "geocoder_bounds":[-79.6603182359571, 37.7528949706738, -75.02958094809614, 39.80809971869814],
+        "url": 'https://wodacooper.github.io/mapbox/md_layers.json'
+    },
+    "mi":{
+        "bounds":[[-86.90464804275261, 41.621276181568945], [-81.74040262067126, 44.072706594990784]],
+        "geocoder_bounds":[-91.6000050692998, 41.499222990135976, -80.72354026507124, 48.508329766238695],
+        "url": 'https://wodacooper.github.io/mapbox/mi_layers.json'
+    },
+    "mn":{
+        "bounds":[[-94.03085731819222, 44.59957784376794], [-92.63559365038905, 45.2896862973992]],
+        "geocoder_bounds":[-97.47317460324436, 43.15312378811857, -89.30070514530094, 49.27213785125212],
+        "url": 'https://wodacooper.github.io/mapbox/mn_layers.json'
+    },
+    "nc":{
+        "bounds":[[-85.06946472835623, 33.76174643768254], [-75.2145182382345, 36.62398238765238]],
+        "geocoder_bounds":[-85.06946472835623, 33.76174643768254, -75.2145182382345, 36.62398238765238],
+        "url": 'https://wodacooper.github.io/mapbox/nc_layers.json'
+    },
+    "oh":{
+        "bounds":[[-84.83129871846774, 38.923507292003464], [-80.13127384058429, 41.82213923170013]],
+        "geocoder_bounds":[-84.9920112412373, 38.13631316512096, -79.61938750293479, 42.666516193569436],
+        "url": 'https://wodacooper.github.io/mapbox/oh_layers.json'
+    },
+    "pa":{
+        "bounds":[[-80.9001017853645, 39.573387273853], [-74.2338017386523, 42.4821662783562873]],
+        "geocoder_bounds":[-80.9001017853645, 39.573387273853, -74.2338017386523, 42.4821662783562873],
+        "url": 'https://wodacooper.github.io/mapbox/pa_layers.json'
+    },
+    "sc":{
+        "bounds":[[-81.99646042127142, 32.98598312860454], [-79.21571288630456, 34.52971849799379]],
+        "geocoder_bounds":[-83.71394014665334, 32.07074914501098, -78.36143876212576, 35.301973670057464],
+        "url": 'https://wodacooper.github.io/mapbox/sc_layers.json'
+    },
+    "tn":{
+        "bounds":[[-90.3825280445324, 34.96887740860476], [-81.6010795602466, 36.669837673931525]],
+        "geocoder_bounds":[-90.3825280445324, 34.96887740860476, -81.6010795602466, 36.669837673931525],
+        "url": 'https://wodacooper.github.io/mapbox/tn_layers.json'
+    },
+    "tx":{
+        "bounds":[[-104.67600379049759, 29.299826272128293], [-93.48935358190582, 35.05542384021815]],
+        "geocoder_bounds":[-107.22683640991858, 25.657179541914736, -92.39529349506144, 36.558898240440655],
+        "url": 'https://wodacooper.github.io/mapbox/tx_layers.json'
+    },
+    "va":{
+        "bounds":[[-78.90103164743579, 36.619605614978745], [-75.18061674186872, 38.16481642066047]],
+        "geocoder_bounds":[-83.80881301222638, 36.55604636006495, -75.53117255363946, 39.625717232985615],
+        "url": 'https://wodacooper.github.io/mapbox/va_layers.json'
+    },
+    "wi":{
+        "bounds":[[-91.81516202544215, 42.4824468835611], [-86.99871447323014, 44.7495387545328]],
+        "geocoder_bounds":[-93.08914727732419, 42.41904924359892, -86.19111432679766, 47.426598853498625],
+        "url": 'https://wodacooper.github.io/mapbox/wi_layers.json'
+    },
+    
+}
+</script>
+<style>
+
+
+    .dropbtn {
+        background-color: #128ed6;
+        color: white;
+        padding: 10px;
+        width:220px;
+        border: none;
+        font-size: 16px;
+        
+        cursor: pointer;
+    }
+
+    .clearbtn {
+        background-color: #ddd;
+        color: #128ed6;
+        padding: 4px;
+        font-size: 10px;
+        position:absolute;
+        right: 5px;
+        top: 17px;
+        border: none;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    .dropdown-content input[type='text'] {
+        box-sizing: border-box;
+        background-position: 14px 12px;
+        background-repeat: no-repeat;
+        font-size: 16px;
+        padding: 10px 0px 10px 10px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .dropdown-content input[type='text']:focus {outline: 3px solid #ddd;}
+
+    .dropdown {
+        position: relative;
+        display: block;
+        width:220px;
+    }
+    .filters {
+        position: relative;
+        display: block;
+        width:220px;
+        display: none;
+        max-height: 0px;
+    }
+
+    .toggle_checkbox{
+        position:absolute;
+        right: 5px;
+        top: 17px;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        width:220px;
+        max-height: 0px;
+        background-color: #fff;
+    }
+
+    .dropdown-content input[type='checkbox'] {
+        display: none;
+    }
+    
+    .dropdown-content input[type='checkbox'] + label {
+        background-color: #fff;
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+    
+    .dropdown-content input[type='checkbox'] + label:hover,
+    .dropdown-content input[type='checkbox']:checked + label {
+        background-color: #fff;
+    }
+    
+    .dropdown-content input[type='checkbox']:checked + label:before {
+        content: '✔';
+        margin-right: 5px;
+    }
+
+    .dropdown a:hover {background-color: #ddd;}
+
+
+    .box {
+        float: left;
+        height: 20px;
+        width: 20px;
+        margin-bottom: 15px;
+        border: 1px solid black;
+        clear: both;
+    }
+
+    .calculation-box {
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+    }
+    
+    .legend-box {
+        position: absolute;
+        right: 5px;
+        bottom: 20px;
+        max-width: 200px;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    .legend {
+        overflow-wrap: anywhere;
+        display: none;
+        padding: 5px;
+        border: 1px solid #ddd;
+        max-height: 0px;
+        background-color: rgba(255, 255, 255, 0.9);
+        font-weight: bold;
+    }
+
+    .legend-list { list-style-type: none; margin: 0; padding: 0px;}
+    .legend-list li {padding: 0px; font-weight: normal; }
+    .legend-list span { border: 1px solid #000000; float: left; width: 12px; height: 12px; margin: 2px; }
+
+    .popup-box {
+        max-width: 300px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .popup-box p {
+        margin: 0;
+        padding: 0 0 5px;
+    }
+
+    .popup-box h3 {
+        margin: 0;
+        padding: 0 0 5px;
+    }
+
+    .popup-box h4 {
+        margin: 0;
+        padding: 0;
+        color: #aaaaaa    
+    }
+
+    .show {display: block; max-height: 200px;}
+
+    .show input[type='range'] {position: absolute;}
+    .show_filters {display: block;max-height: 800px;}
+    .hide {display: none;}
+
+    .gray {background-color: #aaaaaa;}
+
+
+</style>
+<div id="map"></div>
+<div id="layer_list"></div>
+<div id="legend_box" class = "legend-box"></div>
+<div class="calculation-box">
+    <div id="calculated-area"></div>
+    </div>
+<script>
+    const query_string = window.location.search;
+    const query_vals = query_string.split('?')
+    mapboxgl.accessToken = query_vals[1];
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/satellite-streets-v12',
+        bounds: bounds_dict[query_vals[2]]["bounds"]
+    });
+    const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
+    async function get_json() {
+            const query = await fetch(
+                bounds_dict[query_vals[2]]["url"],
+                { method: 'GET' }
+            );
+            const data = await query.json();
+            console.log(data);
+            return data;
+    }
+
+
+    const layer_list = document.getElementById('layer_list');
+    const legend_box = document.getElementById('legend_box');
+
+
+    var allow_click = true;
+    var circle_mode = false;
+    var drive_mode = false;
+    var init_filters = true;
+    const layer_types = ['fill','circle','icon','line']
+    var hover_layers = [];
+    var click_layers = [];
+    var layers;
+    
+    
+	
+
+    
+
+    map.on('load', () => {
+        get_json().then(data => {
+            layers = data;
+            var sources = []
+            for (const layer of Object.keys(layers).reverse()){
+                //if source has already been added for another layer, no need to add again
+                if (map.getSource(layers[layer].source_id) == undefined){
+                    map.addSource(layers[layer].source_id, {
+                        type: 'vector',
+                        url: layers[layer].url
+                    });
+                }
+                
+                for (type of layer_types){
+                    if (layers[layer][type]){
+                        map.addLayer(
+                            {
+                                'id': layer.concat('@',type),
+                                'type': type,
+                                'source': layers[layer].source_id,
+                                'source-layer': layers[layer].source_layer,
+                                'layout': layers[layer].layout,
+                                'paint': layers[layer][type]
+                            }
+                        );                   
+                    }
+                };
+
+                if (layers[layer].hover) {
+                    for (type of layer_types){
+                        if (layers[layer][type]){
+                            hover_layers.push(layer.concat('@',type));
+                            break;        
+                        }
+                    };
+                };
+
+                if (layers[layer].click) {
+                    for (type of layer_types){
+                        if (layers[layer][type]){
+                            click_layers.push(layer.concat('@',type));
+                            break;        
+                        }
+                    };
+                };
+
+                const leg_dict = layers[layer].legend;
+                if (leg_dict){
+                    console.log(leg_dict)
+                    const legend_div = document.createElement('div');
+                    legend_div.id = 'legend@'.concat(layer)
+                    legend_div.classList.add('legend');
+                    if (layers[layer].visible){legend_div.classList.add('show');};
+                    legend_div.innerText = layers[layer].name;
+                    legend_box.appendChild(legend_div);
+
+                    const legend = document.createElement('ul');
+                    legend.classList.add('legend-list');
+                    legend_div.appendChild(legend);
+                    for (const pair of leg_dict){
+                        const row = document.createElement('li');
+                        row. innerHTML = `<span style="background-color:${pair[1]}"></span> &nbsp;${pair[0]}`;
+                        legend.appendChild(row);
+                    };
+                };
+            };
+            const coordinatesGeocoder = function (query)  {
+                const matches = query.match(/^[ ]*(?:Lat: )?(-?\d+\.?\d*)[, ]+(?:Lng: )?(-?\d+\.?\d*)[ ]*$/i);
+                if (!matches) {
+                    return null;
+                }
+                const lat = Number(matches[1]);
+                const lng = Number(matches[2]);
+                const geocodes = {
+                    center: [lng, lat],
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [lng, lat]
+                    },
+                    place_name: lat + ', ' + lng,
+                    place_type: ['coordinate'],
+                    properties: {},
+                    type: 'Feature'
+                };
+                return [geocodes];
+            }
+
+            map.addControl(
+                new MapboxGeocoder({
+                    accessToken: mapboxgl.accessToken,
+                    bbox: geocoder_bounds,
+                    localGeocoder: coordinatesGeocoder,
+                    mapboxgl: mapboxgl
+                })
+            );
+            map.addControl(
+                new mapboxgl.NavigationControl({
+                    showCompass: false
+                })
+            );
+
+            const draw = new MapboxDraw({
+                displayControlsDefault: false,
+                // Select which mapbox-gl-draw control buttons to add to the map.
+                controls: {
+                polygon: true,
+                line_string: true,
+                trash: true,
+                },
+                // Set mapbox-gl-draw to draw by default.
+                // The user does not have to click the polygon control button first.
+                //defaultMode: 'draw_polygon'
+            });
+            map.addControl(draw, 'bottom-left');
+
+            const controls = document.getElementsByClassName('mapboxgl-ctrl-bottom-left')[0].firstElementChild;
+
+            const delete_btn = document.getElementsByClassName('mapbox-gl-draw_trash')[0]
+            delete_btn.classList.remove('mapbox-gl-draw_trash', 'mapbox-gl-draw_ctrl-draw-btn')
+            delete_btn.classList.add('fa-solid', 'fa-delete-left');
+
+            const trash_btn = document.createElement('button');
+            trash_btn.classList.add('fa-solid', 'fa-trash-can');
+            //delete_btn.innerText = "X";
+            trash_btn .addEventListener('click', () => {
+                draw.deleteAll();
+                updateArea();
+            });
+            controls.appendChild(trash_btn);
+
+            const circle_btn = document.createElement('button');
+            circle_btn.classList.add('fa-regular', 'fa-circle');
+            circle_btn .addEventListener('click', () => {
+                allow_click = false;
+                draw.changeMode('simple_select')
+                circle_mode = true;
+            });
+            controls.prepend(circle_btn);
+
+            map.on('click', (e) => {
+                if (circle_mode) {
+                    const feature = turf.circle([e.lngLat.lng, e.lngLat.lat], 1, {units:'miles'});
+                    console.log(feature);
+                    const id = draw.add(feature);
+                    console.log(draw.getAll());
+                    circle_mode = false;
+                }
+            });
+
+            const drive_btn = document.createElement('button');
+            drive_btn.classList.add('fa-solid', 'fa-car');
+            drive_btn .addEventListener('click', () => {
+                allow_click = false;
+                draw.changeMode('simple_select')
+                drive_mode = true;
+            });
+            controls.prepend(drive_btn);
+
+            async function getIso(e) {
+                if(drive_mode){
+                    const query = await fetch(
+                        `https://api.mapbox.com/isochrone/v1/mapbox/walking/${e.lngLat.lng},${e.lngLat.lat}?contours_meters=1609&polygons=true&access_token=${mapboxgl.accessToken}`,
+                        { method: 'GET' }
+                    );
+                    const data = await query.json();
+                    console.log(data)
+                    draw.add(data)
+                    drive_mode = false;}
+            }
+
+            map.on('click', getIso);
+
+            map.on('draw.create', updateArea);
+            map.on('draw.delete', updateArea);
+            map.on('draw.update', updateArea);
+
+
+            
+            function updateArea(e) {
+                const data = draw.getAll();
+                const answer = document.getElementById('calculated-area');
+                const num_features = data.features.length
+                if (num_features > 0) {
+                    const feature = data.features[num_features-1].geometry;
+                    if (feature.type == 'Polygon') {
+                        const area = turf.area(feature);
+                        const acres_area = Math.round(area/4046.86 * 100) / 100;
+                        let sqft_area = Math.round(area*10.793);
+                        if (sqft_area > 999999) sqft_area = `${Math.round(sqft_area / 1000).toLocaleString("en-US")}k`
+
+                        answer.innerHTML = `${acres_area} acres <br> ${sqft_area} square feet`;
+                    } else {
+                        const length_miles = Math.round(turf.length(feature,{units:'miles'}) * 100) / 100;
+                        const length_feet = Math.round(length_miles*5280);
+                        answer.innerHTML = `<div>${length_miles} miles</div><div>${length_feet} feet</div>`;
+                    };
+
+                    
+                } else {
+                    answer.innerHTML = '';
+                };
+            };
+
+            const tooltip = new mapboxgl.Popup({anchor: 'top-left', closeOnClick: false, closeButton: false}).trackPointer()
+                        
+            tooltip.addTo(map)
+
+
+            
+            map.on('mouseleave', hover_layers, (e) => {
+                tooltip.remove()
+            });
+        
+            map.on('mousemove', hover_layers, (e) => {
+                let table = ['<div style="line-height: 100%">']
+                for (layer_name of hover_layers) {
+                    layer = layer_name.split('@')[0];
+                    if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
+                        feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
+                        if (feature) {
+                            table.push(`<h3 style="margin:0; padding:0 0 5px">${layers[layer].name}</h3>`)
+                            const hover_cats = layers[layer]['hover'];
+                            for (const key in hover_cats){
+                                let value = feature.properties[key];
+                                if (value){
+                                    if (hover_cats[key]) table.push(`<h4 style="margin:0; padding:0;color: #aaaaaa;">${key}</h4>`);
+                                    table.push(`<p style="margin: 0; padding: 0 0 5px;">${value}</p>`);
+                                }
+                            };                        
+                        }
+                    }
+                };
+                table.push('</div>')
+                tooltip.setHTML(table.join(''));
+                if (!tooltip.isOpen()){tooltip.addTo(map)}
+            });
+
+            map.on('click', click_layers, (e) => {
+                console.log(draw.getMode());
+                if (draw.getMode() == 'simple_select') {
+                    if (allow_click){
+                        let table = ['<div style="line-height: 100%">']
+                        for (layer_name of click_layers) {
+                            layer = layer_name.split('@')[0];
+                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
+                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
+                                if (feature) {
+                                    console.log(feature)
+                                    table.push(`<h3>${layers[layer].name}</h3>`)
+                                    const click_cats = layers[layer]['click'];
+                                    for (cat of click_cats){
+                                        let value = feature.properties[cat];
+                                        if (value){
+                                            table.push(`<h4>${cat}</h4>`);
+                                            table.push(`<p>${value}</p>`);
+                                        }
+                                    };                        
+                                }
+                            }
+                        };
+                        table.push('</div>')
+                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
+                        .setLngLat(e.lngLat)
+                        .setHTML(table.join(''))
+                        .addTo(map);
+                        
+                    } else {
+                        allow_click = true;
+                    };
+                    
+                } else {
+                    allow_click = false;
+                };
+            });
+
+            
+
+            function updateLayerFilter(evt) {
+                // get an array of icon names that corresponds to the currently checked checkboxes
+                const splits = evt.currentTarget.id.split('@');
+                const cat = splits[1];
+                const layer = splits[0];
+                var checkedSymbols = [...evt.currentTarget.parentNode.querySelectorAll('input')]
+                .filter((el) => el.checked)
+                .map((el) => el.id.split('@')[2]);
+                const j = Object.keys(layers[layer].cat_filters).indexOf(cat) + 1;
+                var tempList = [];
+                for (sym of checkedSymbols){
+                    const tempNum = Number(sym);
+                    if (tempNum||tempNum==0){
+                        tempList.push(tempNum);
+                    }
+                }
+                const clear_btn = document.getElementById(layer.concat('@',cat,'@clear'));
+
+                if (checkedSymbols.length < 1) {
+                    //dummy filter that will match everything to clear previous filter
+                    layers[layer].filters[j] = ['!=', cat, '!!!'];
+                    clear_btn.classList.add('hide');
+                }
+                else {
+                    layers[layer].filters[j] = ['in', cat, ...checkedSymbols, ...tempList];
+                    //toggle on clear button, if not already
+                    if (clear_btn.classList.contains('hide')) {clear_btn.classList.remove('hide')};
+                }
+                console.log(layers[layer].filters)
+                for (type of layer_types){
+                    if (layers[layer][type]){
+                        map.setFilter(layer.concat('@',type), layers[layer].filters);                  
+                    }
+                };            
+                
+            };
+            
+            map.on('idle',function(){
+                console.log('idle')
+                if (init_filters) {
+                    console.log('through')
+                    init_filters = false;
+                    hover_layers.reverse();
+                    click_layers.reverse();
+                    for (const layer of Object.keys(layers)){
+                        console.log(layers[layer].source_id)
+
+                        const layer_div = document.createElement('div');
+                        layer_div.classList.add('dropdown');
+                        layer_list.appendChild(layer_div);
+
+                        const toggle_checkbox = document.createElement('input')
+                        toggle_checkbox.type = 'checkbox';
+                        toggle_checkbox.classList.add('toggle_checkbox');
+                        toggle_checkbox.id = layer.concat('@toggle');
+                        console.log(layers[layer].visible);
+                        if (layers[layer].visible){
+                            toggle_checkbox.checked = true;
+                        }else {
+                            for (type of layer_types){
+                                if (layers[layer][type]){
+                                    map.setLayoutProperty(layer.concat('@',type), 'visibility', 'none');                 
+                                }
+                            };
+                        };
+                        toggle_checkbox.addEventListener("change", function() {
+                            const layer_id = this.id.split('@')[0]
+                            const legend_div = document.getElementById('legend@'.concat(layer_id));
+                            console.log(this.checked)
+                            if (!this.checked){
+                                for (type of layer_types){
+                                    if (layers[layer][type]){
+                                        map.setLayoutProperty(layer_id.concat('@',type), 'visibility', 'none');                 
+                                    }
+                                };
+                                if (legend_div){legend_div.classList = 'legend';}
+                            } else{
+                                for (type of layer_types){
+                                    if (layers[layer][type]){
+                                        map.setLayoutProperty(layer_id.concat('@',type), 'visibility', 'visible');                 
+                                    }
+                                };
+                                if (legend_div){legend_div.classList = 'legend show_filters';}
+                            }
+                        });
+                        layer_div.appendChild(toggle_checkbox);
+
+                        const layer_button = document.createElement('button');
+                        layer_button.classList.add('dropbtn');
+                        layer_button.textContent = layers[layer].name;
+                        layer_button.addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            this.nextElementSibling.classList.toggle('show_filters');
+                        });
+                        layer_div.appendChild(layer_button);
+
+                        const layer_dropdown = document.createElement('div');
+                        layer_dropdown.classList.add('filters');
+                        layer_div.appendChild(layer_dropdown);
+
+                        layers[layer]['filters'] = ['all']
+                        if (layers[layer].cat_filters) {
+                            for (const cat in layers[layer].cat_filters){
+                                console.log(cat);
+                                const vals = layers[layer].cat_filter_vals[cat];
+                                layers[layer].filters.push(['!=', cat, '!!!']);
+
+                                //add div,button, dropdown_content, and search input
+                                const div = document.createElement('div');
+                                div.classList.add('dropdown');
+                                layer_dropdown.appendChild(div);
+
+                                const clear = document.createElement('button');
+                                clear.classList.add('clearbtn', 'hide');
+                                clear.id = layer.concat('@',cat,'@clear');
+                                clear.textContent = 'Clear';
+                                clear.addEventListener("click", function() {
+                                    for (checkbox of [...this.parentNode.querySelectorAll('input')].filter((el) => el.checked)) {
+                                        checkbox.click();
+                                    }
+                                });
+                                div.appendChild(clear);
+
+                                const button = document.createElement('button');
+                                button.classList.add('dropbtn', 'gray');
+                                var name = layers[layer].cat_filters[cat];
+                                if (name == "") name = cat;
+                                button.textContent = name;
+                                button.addEventListener("click", function() {
+                                    this.classList.toggle("active");
+                                    this.nextElementSibling.classList.toggle('show');
+                                });
+                                div.appendChild(button);
+
+                                const dropdown_content = document.createElement('div');
+                                dropdown_content.classList.add('dropdown-content');
+                                dropdown_content.id = layer.concat('@', cat);
+                                div.appendChild(dropdown_content);
+
+                                
+                                if (vals.length > 5) {
+                                    const search = document.createElement('input');
+                                    search.type = 'text'
+                                    search.placeholder = 'Search...'
+                                    search.addEventListener('keyup', function() {
+                                        var filter_str, a, i;
+                                        filter_str = this.value.toUpperCase();
+                                        console.log(filter_str)
+                                        a = this.parentElement.getElementsByTagName("label");
+                                        for (i = 0; i < a.length; i++) {
+                                            txtValue = a[i].textContent || a[i].innerText;
+                                            //|| this.parentElement.getElementById(txtValue).checked
+                                            if (txtValue.toUpperCase().indexOf(filter_str) == 0 || document.getElementById(this.parentElement.id.concat('@',txtValue)).checked == true) {
+                                                a[i].style.display = "";
+                                            } else {
+                                                a[i].style.display = "none";
+                                            }
+                                        }
+                                    });
+                                    dropdown_content.appendChild(search); 
+                                };
+                                    
+                                console.log(vals)
+                                for (const val of vals) {
+                                    const input = document.createElement('input');
+                                    input.type = 'checkbox';
+                                    input.id = layer.concat('@',cat,'@',val);
+                                    input.checked = false;
+                                    dropdown_content.appendChild(input);
+                                    
+                                    const label = document.createElement('label');
+                                    label.setAttribute('for', layer.concat('@',cat,'@',val));
+                                    label.textContent = val;
+                                    dropdown_content.appendChild(label);
+                                    
+                                    // When any checkbox changes, update the filter.
+                                    input.addEventListener('change', updateLayerFilter);
+                                };
+                            }
+                        }
+
+                        if (layers[layer].num_filters) {
+                            console.log(layers[layer].num_filters)
+                            for (const cat in layers[layer].num_filters){
+                                console.log(cat);
+                                const min = layers[layer].num_filter_vals[cat][0];
+                                const max = layers[layer].num_filter_vals[cat][1];
+                                layers[layer].filters.push(['>=', cat, min]);
+                                layers[layer].filters.push(['<=', cat, max]);
+                                console.log(layers[layer].filters)
+                                
+                                //add div,button, dropdown_content, and search input
+                                const div = document.createElement('div');
+                                div.classList.add('dropdown');
+                                layer_dropdown.appendChild(div);
+
+                                const clear = document.createElement('button');
+                                clear.classList.add('clearbtn', 'hide');
+                                clear.id = layer.concat('@',cat,'@clear');
+                                clear.textContent = 'Clear';
+                                
+                                clear.addEventListener("click", function() {
+                                    const splits = this.id.split('@');
+                                    const cat = splits[1];
+                                    const layer = splits[0];
+                                    var j = 1  + Object.keys(layers[layer].num_filters).indexOf(cat)*2;
+                                    if (layers[layer].cat_filters) j = j + Object.keys(layers[layer].cat_filters).length;
+                                    this.classList.add('hide');
+                                    layers[layer].filters[j][2] = min;
+                                    layers[layer].filters[j+1][2] = max;
+                                    const fromInput = document.getElementById(layer.concat('@',cat,'@from@input'))
+                                    fromInput.value = min;
+                                    document.getElementById(layer.concat('@',cat,'@from@slider')).value = min;
+                                    const toInput = document.getElementById(layer.concat('@',cat,'@to@input'));
+                                    toInput.value = max;
+                                    const toSlider = document.getElementById(layer.concat('@',cat,'@to@slider'));
+                                    toSlider.value = max;
+                                    fillSlider(fromInput, toInput, '#C6C6C6', '#128ed6', toSlider);
+                                    console.log(layers[layer].filters);
+                                    for (type of layer_types){
+                                        if (layers[layer][type]){
+                                            map.setFilter(layer.concat('@',type), layers[layer].filters);                  
+                                        }
+                                    };
+                                });
+                                
+                                div.appendChild(clear);
+
+                                const button = document.createElement('button');
+                                button.classList.add('dropbtn', 'gray');
+                                var name = layers[layer].num_filters[cat]
+                                if (name == "") name = cat;
+                                button.textContent = name;
+                                button.addEventListener("click", function() {
+                                    this.classList.toggle("active");
+                                    this.nextElementSibling.classList.toggle('show');
+                                });
+                                div.appendChild(button);
+
+                                const dropdown_content = document.createElement('div');
+                                dropdown_content.classList.add('dropdown-content');
+                                dropdown_content.id = layer.concat('@', cat);
+                                div.appendChild(dropdown_content);
+
+                                const range_container = document.createElement('div');
+                                range_container.classList.add('range_container');
+                                dropdown_content.appendChild(range_container); 
+                                
+                                const slider_div = document.createElement('div');
+                                slider_div.classList.add('slider_control');
+                                range_container.appendChild(slider_div); 
+
+                                const from_slider = document.createElement('input');
+                                from_slider.type = 'range';
+                                from_slider.id = layer.concat('@',cat,'@from@slider');
+                                from_slider.style.zIndex = 1;
+                                from_slider.style.height = 0;
+                                from_slider['min'] = min;
+                                from_slider['max'] = max;
+                                from_slider.value = min;
+                                slider_div.appendChild(from_slider); 
+
+                                
+
+                                const to_slider = document.createElement('input');
+                                to_slider.type = 'range';
+                                to_slider.id = layer.concat('@',cat,'@to@slider');
+                                to_slider['min'] = min;
+                                to_slider['max'] = max;
+                                to_slider.value = max;
+                                slider_div.appendChild(to_slider); 
+
+                                const form_control = document.createElement('div');
+                                form_control.classList.add('form_control');
+                                range_container.appendChild(form_control);
+
+                                const length = Math.max(min.toString().length, max.toString().length) + 2
+                                const width = Math.min(100, Math.round(length/9 * 100))
+                                const width_str = width + "px"
+
+                                const from = document.createElement('input');
+                                from.type = 'number';
+                                from.id = layer.concat('@',cat,'@from@input');
+                                from.style.width = width_str;
+                                from.value = min;
+                                from['min'] = min;
+                                from['max'] = max;
+                                form_control.appendChild(from); 
+
+                                const to = document.createElement('input');
+                                to.type = 'number';
+                                to.id = layer.concat('@',cat,'@to@input');
+                                to.style.width = width_str;
+                                to.value = max;
+                                to['min'] = min;
+                                to['max'] = max;
+                                form_control.appendChild(to); 
+
+                                fillSlider(from, to, '#C6C6C6', '#128ed6', to_slider);
+                                from_slider.oninput = () => controlFromSlider(from_slider, to_slider, from);
+                                to_slider.oninput = () => controlToSlider(from_slider, to_slider, to);
+                                from.oninput = () => controlFromInput(from_slider, from, to, to_slider);
+                                to.oninput = () => controlToInput(to_slider, from, to, to_slider);
+
+                                //from.addEventListener('change', updateNumericFilter);
+                                //to.addEventListener('change', updateNumericFilter);
+                                    
+                            }
+                        }
+                    }
+                }
+            });
+        });
+        
+        
+    });
+</script>
+
+</body>
+</html>
