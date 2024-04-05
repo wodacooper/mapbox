@@ -95,8 +95,8 @@
     },
     "score": {
         "name": "Family Score",
-        "source_id": "pa_family_basemap_4_5_24",
-        "url": "mapbox://wodacooper.pa_family_basemap_4_5_24",
+        "source_id": "pa_family_basemap_4_5_24_1",
+        "url": "mapbox://wodacooper.pa_family_basemap_4_5_24_1",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -301,8 +301,8 @@
     },
     "senior_score": {
         "name": "Senior Score",
-        "source_id": "pa_senior_basemap_4_5_24",
-        "url": "mapbox://wodacooper.pa_senior_basemap_4_5_24",
+        "source_id": "pa_senior_basemap_4_5_24_2",
+        "url": "mapbox://wodacooper.pa_senior_basemap_4_5_24_2",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
