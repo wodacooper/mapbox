@@ -34,9 +34,6 @@
             "city",
             "county"
         ],
-        "num_filters": [
-            "score"
-        ],
         "legend": [
             [
                 "7 - 8",
@@ -55,28 +52,18 @@
                 "#ffff00"
             ]
         ],
-        "hover": [
-            [
+        "hover": {
                 "set_aside",
-                false
-            ],
-            [
+                false,
                 "county",
                 false
-            ],
-            [
                 "city",
                 true
-            ],
-            [
                 "location_boost",
                 true
-            ],
-            [
                 "score",
                 false
-            ]
-        ],
+        },
         "click": [
             "set_aside",
             "county",
