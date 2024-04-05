@@ -1,4 +1,44 @@
 {
+    "pj_cities": {
+        "name": "PJ Cities",
+        "source_id": "oh_pj_cities",
+        "url": "mapbox://wodacooper.oh_pj_cities",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#ffffff"
+        },
+        "legend": [
+            [
+                "PJ",
+                "#ffffff"
+            ]
+        ]
+    },
+    "pj_counties": {
+        "name": "PJ Counties",
+        "source_id": "oh_pj_counties",
+        "url": "mapbox://wodacooper.oh_pj_counties",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#000000"
+        },
+        "legend": [
+            [
+                "PJ",
+                "#000000"
+            ]
+        ]
+    },
     "teds": {
         "name": "Transformative Economic Development",
         "source_id": "oh_teds",
@@ -1328,5 +1368,122 @@
                 100.0
             ]
         }
+    },
+    "bgf_score": {
+        "name": "2023 BGF Score",
+        "source_id": "oh_bgf_23",
+        "url": "mapbox://wodacooper.oh_bgf_23",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#9e9e9e",
+                15,
+                "#346b36",
+                17,
+                "#0000ff",
+                19,
+                "#ff0000",
+                21,
+                "#fe8103",
+                22,
+                "#ffff00",
+                23,
+                "#ff00ff",
+                24,
+                "#00ff00",
+                25,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                0,
+                13,
+                0.6
+            ]
+        },
+        "legend": [["25", "#00ffff"], ["24", "#00ff00"], ["23", "#ff00ff"], ["22", "#ffff00"], ["21", "#fe8103"], ["19-20", "#ff0000"], ["17-18", "#0000ff"], ["15-16", "#346b36"], ["13-14", "#9e9e9e"]],
+        "hover": {
+            "county_nam": false,
+            "boost": true,
+            "score": false
+        },
+        "click": [
+            "county_nam",
+            "boost",
+            "score",
+            "disc_pts",
+            "opp_pts",
+            "minority",
+            "Opportunit",
+            "GEOID_10",
+            "ZCTA5CE20"
+        ]
+    },
+    "bgf_discount": {
+        "name": "BGF - Only Discount pts",
+        "source_id": "oh_bgf_23",
+        "url": "mapbox://wodacooper.oh_bgf_23",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "disc_pts"
+                ],
+                "#9e9e9e",
+                5,
+                "#346b36",
+                7,
+                "#0000ff",
+                9,
+                "#ff0000",
+                11,
+                "#fe8103",
+                12,
+                "#ffff00",
+                13,
+                "#ff00ff",
+                14,
+                "#00ff00",
+                15,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "disc_pts"
+                ],
+                0,
+                3,
+                0.6
+            ]
+        },
+        "legend": [["15-25", "#00ffff"], ["14", "#00ff00"], ["13", "#ff00ff"], ["12", "#ffff00"], ["11", "#fe8103"], ["9-10", "#ff0000"], ["7-8", "#0000ff"], ["5-6", "#346b36"], ["3-4", "#9e9e9e"]],
+        "hover": {
+            "disc_pts": true,
+            "discount": true
+        },
+        "click": [
+            "GEOID", "fips", "GEOID_10", "ZCTA5CE20", "Opportunit", "opp_pts", "minority", "QCT", "hud_area_c", "hud_area_n", "County_Nam", "metro", "median2023", "max_lihtc_", "lim50_23p1", "lim50_23p2", "fmr_1br", "pj_county", "safmr_key", "SAFMR_1BR", "sadda", "boost", "final_fmr", "discount", "no_safmr", "disc_pts", "score"
+        ]
     }
 }
