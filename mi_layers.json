@@ -85,7 +85,7 @@
                 "match",
                 [
                     "get",
-                    "Tcategory"
+                    "category"
                 ],
                 "LIHTC",
                 "#ffA500",
