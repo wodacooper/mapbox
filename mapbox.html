@@ -760,7 +760,7 @@ const bounds_dict = {
                                     const click_cats = layers[layer]['click'];
                                     for (cat of click_cats){
                                         let value = feature.properties[cat];
-                                        if (value|value == 0){
+                                        if (value||value == 0){
                                             table.push(`<h4>${cat}</h4>`);
                                             table.push(`<p>${value}</p>`);
                                         }
