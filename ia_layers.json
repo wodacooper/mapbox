@@ -30,9 +30,9 @@
             "fill-opacity": 0.5
         },
         "cat_filters": [
-            "set_aside",
-            "city",
-            "county"
+            "set_aside":"",
+            "city":"",
+            "county":""
         ],
         "legend": [
             [
@@ -53,16 +53,16 @@
             ]
         ],
         "hover": {
-                "set_aside",
+                "set_aside":
                 false,
-                "county",
-                false
-                "city",
-                true
-                "location_boost",
-                true
-                "score",
-                false
+                "county":
+                false,
+                "city":
+                true,
+                "location_boost":
+                true,
+                "score":
+                false,
         },
         "click": [
             "set_aside",
@@ -1151,27 +1151,20 @@
         "fill": {
             "fill-opacity": 0.4
         },
-        "cat_filters": [
-            "CLASSFP",
-            "city",
-            "underserved_pts"
-        ],
+        "cat_filters": {
+            "CLASSFP":"",
+            "city":"",
+            "underserved_pts":""
+            },
         "legend": [
             [
                 "City Limits",
                 "#ffffff"
             ]
         ],
-        "hover": [
-            [
-                "city",
-                false
-            ],
-            [
-                "CLASSFP",
-                true
-            ]
-        ],
+        "hover": {
+            "city":false
+        },
         "click": [
             "burden_pts"
         ],
