@@ -62,7 +62,7 @@
                 "location_boost":
                 true,
                 "score":
-                false,
+                false
         },
         "click": [
             "set_aside",
