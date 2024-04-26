@@ -51,7 +51,7 @@
                 "Basis_Boost",
                 0,
                 "No Basis Boost",
-                0.2,
+                0,
                 0.8
             ]
         },
@@ -59,10 +59,6 @@
             [
                 "Ineligible",
                 "#000000"
-            ],
-            [
-                "No Basis Boost",
-                "#ff0000"
             ]
         ]
     },
@@ -72,9 +68,9 @@
         "url": "mapbox://wodacooper.md_transit",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "line": {
             "line-color": "#ffffff",
             "line-opacity": 0.2
@@ -216,9 +212,9 @@
         "url": "mapbox://wodacooper.md_scores",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "match",
@@ -261,5 +257,185 @@
             "opportunity_zone",
             "planning_areas"
         ]
+    },
+    "score_24": {
+        "name": "2024 Score",
+        "source_id": "score_source",
+        "url": "mapbox://wodacooper.md_24",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#600080",
+                4.5,
+                "#00aa00",
+                5,
+                "#aa0000",
+                5.5,
+                "#984d01",
+                6,
+                "#aaaa00",
+                6.5,
+                "#aa00aa",
+                7,
+                "#00aa00",
+                8,
+                "#00aaaa",
+                20,
+                "#cc33ff",
+                20.5,
+                "#00ff00",
+                21,
+                "#ff0000",
+                21.5,
+                "#fe8103",
+                22,
+                "#ffff00",
+                22.5,
+                "#ff00ff",
+                23,
+                "#00ff00",
+                24,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score_with_ccrp"
+                ],
+                0,
+                20,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "County": ""
+        },
+        "num_filters": {
+            "score": "",
+            "score_with_ccrp": "",
+            "VLIL_4_Person_21": ""
+        },
+        "legend": [
+            [
+                "24",
+                "#00ffff"
+            ],
+            [
+                "23",
+                "#00ff00"
+            ],
+            [
+                "22.5",
+                "#ff00ff"
+            ],
+            [
+                "22",
+                "#ffff00"
+            ],
+            [
+                "21.5",
+                "#fe8103"
+            ],
+            [
+                "21",
+                "#ff0000"
+            ],
+            [
+                "20.5",
+                "#00ff00"
+            ],
+            [
+                "20",
+                "#cc33ff"
+            ],
+            [
+                "Duller = Needs CCRP",
+                "aaaaaa"
+            ]
+        ],
+        "hover": {
+            "County": false,
+            "Boost": false,
+            "score": false
+        },
+        "click": [
+            "County",
+            "dda_24",
+            "qct_24",
+            "score",
+            "score_with_ccrp",
+            "coo_pts",
+            "coo_auth",
+            "pa_oz",
+            "Federal_Zone",
+            "Rural_Village",
+            "Enterprise_Zone",
+            "Sustainable_Community",
+            "Empowerment_Zone",
+            "Maple_Street",
+            "Main_Street",
+            "Opportunity_Zone",
+            "transit_pts",
+            "train_half_mile",
+            "2_bus_lines",
+            "2_bus_lines_system",
+            "rural_1_mile",
+            "coo_1_mile",
+            "ws_pts",
+            "GEOID",
+            "VLIL_4_Person_21"
+        ],
+        "cat_filter_vals": {
+            "County": [
+                "Allegany",
+                "Anne Arundel",
+                "Baltimore",
+                "Baltimore City",
+                "Calvert",
+                "Caroline",
+                "Carroll",
+                "Cecil",
+                "Charles",
+                "Dorchester",
+                "Frederick",
+                "Garrett",
+                "Harford",
+                "Howard",
+                "Kent",
+                "Montgomery",
+                "Prince George's",
+                "Queen Anne's",
+                "Somerset",
+                "St. Mary's",
+                "Talbot",
+                "Washington",
+                "Wicomico",
+                "Worcester"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                24.0
+            ],
+            "score_with_ccrp": [
+                0.0,
+                24.0
+            ],
+            "VLIL_4_Person_21": [
+                39785.0,
+                70305.0
+            ]
+        }
     }
 }
