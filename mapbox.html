@@ -732,7 +732,7 @@ const bounds_dict = {
                             const hover_cats = layers[layer]['hover'];
                             for (const key in hover_cats){
                                 let value = feature.properties[key];
-                                if (value){
+                                if (value||value == 0){
                                     if (hover_cats[key]) table.push(`<h4 style="margin:0; padding:0;color: #aaaaaa;">${key}</h4>`);
                                     table.push(`<p style="margin: 0; padding: 0 0 5px;">${value}</p>`);
                                 }
