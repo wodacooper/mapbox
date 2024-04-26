@@ -8,29 +8,6 @@
             "visibility": "visible"
         },
         "visible": true,
-        "line": {
-            "line-color": [
-                "match",
-                [
-                    "get",
-                    "label"
-                ],
-                "No Basis Boost",
-                "#ff0000",
-                "#ffffff"
-            ],
-            "line-opacity": 1,
-            "line-width": [
-                "match",
-                [
-                    "get",
-                    "label"
-                ],
-                "No Basis Boost",
-                2,
-                1
-            ]
-        },
         "fill": {
             "fill-color": [
                 "match",
