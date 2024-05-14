@@ -350,8 +350,14 @@ const bounds_dict = {
     .toggle_checkbox{
         position:absolute;
         right: 5px;
-        top: 17px;
+        top: 8px;
         cursor: pointer;
+    }
+    .dropdown_arrow{
+        position:absolute;
+        left: 10px;
+        top: 8px;
+        color:#fff;
     }
 
     .dropdown-content {
@@ -469,8 +475,13 @@ const bounds_dict = {
     <div id="calculated-area"></div>
     </div>
 <script>
+    
     const query_string = window.location.search;
     const query_vals = query_string.split('?')
+    if (query_vals[0]!='https://wodacooper.github.io/mapbox/mapbox.html'){
+        query_vals[1]='pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA'
+        query_vals[2]='ga'
+    }
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
         container: 'map',
@@ -871,6 +882,16 @@ const bounds_dict = {
                             }
                         });
                         layer_div.appendChild(toggle_checkbox);
+                        if (layers[layer].cat_filters ||layers[layer].num_filters ){
+
+
+                            const dropdown_arrow = document.createElement('div')
+                
+                            dropdown_arrow.classList.add('dropdown_arrow','fa-solid','fa-caret-down');
+                            //dropdown_arrow.type = 'checkbox';
+                            //dropdown_arrow.textContent = 'V';
+                            layer_div.appendChild(dropdown_arrow);
+                        }
 
                         const layer_button = document.createElement('button');
                         layer_button.classList.add('dropbtn');
