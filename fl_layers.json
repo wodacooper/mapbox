@@ -77,12 +77,7 @@
             "line-color": "#ffffff"
         },
         "fill":{
-            "fill-opacity":[
-                "match",
-                ["get","gao"],
-                "true",0.5,
-                0
-            ],
+            "fill-opacity":0.5,
             "fill-color":"#ffffff"
         },
         "legend": [
