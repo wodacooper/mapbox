@@ -1,0 +1,381 @@
+{
+    "cities": {
+        "name": "Cities and Towns",
+        "source_id": "va_cities",
+        "url": "mapbox://wodacooper.va_cities",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#ffffff"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+        "legend": [
+            [
+                "cities/towns",
+                "#ffffff"
+            ]
+        ],
+        "click": [
+            "NAMELSAD",
+            "less_than_",
+            "Population"
+        ],
+        "hover": {
+            "NAMELSAD": false
+        },
+        "cat_filters": {
+            "less_than_": "Population < 35k",
+            "CLASSFP": "C1=town, C7=city"
+        },
+        "cat_filter_vals": {
+            "less_than_": [
+                "Greater",
+                "Less Than 35k"
+            ],
+            "CLASSFP": [
+                "C1",
+                "C7"
+            ]
+        }
+    },
+    "counties": {
+        "name": "Pools and Counties",
+        "source_id": "va_counties",
+        "url": "mapbox://wodacooper.va_counties",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "pool"
+                ],
+                "Balance of State",
+                "#f50000",
+                "NW/NC",
+                "#1b5e20",
+                "Richmond MSA",
+                "#4a148c",
+                "Tidewater MSA",
+                "#ffe700",
+                "Northern Virginia",
+                "#0288d1",
+                "#000000"
+            ]
+        },
+        "legend": [
+            [
+                "counties",
+                "#ffffff"
+            ]
+        ],
+        "cat_filters": {
+            "merge_less_than_35k": "Population < 35k",
+            "pool": ""
+        },
+        "cat_filter_vals": {
+            "merge_less_than_35k": [
+                "Greater",
+                "Less than 35k"
+            ],
+            "pool": [
+                "Balance of State",
+                "NW/NC",
+                "Northern Virginia",
+                "Richmond MSA",
+                "Tidewater MSA"
+            ]
+        }
+    },
+    "poverty": {
+        "name": "Poverty",
+        "source_id": "va_24_source",
+        "url": "mapbox://wodacooper.va_24",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-width":  [
+                "match",
+                [
+                    "get",
+                    "qct_label"
+                ],
+                "QCT",
+                2,
+                1
+            ],
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "qct_label"
+                ],
+                "QCT",
+                "#ffffff",
+                "#000000"
+            ]
+        },
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "total_pts"
+                ],
+                "#ffffff",
+                5,
+                "#9e9e9e",
+                20,
+                "#ff0000",
+                25,
+                "#ff00ff",
+                30,
+                "#00ff00",
+                35,
+                "#00ffff"
+                
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "total_pts"
+                ],
+                0,
+                5,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "pool": "",
+            "County": "County/City",
+            "qct_24": "QCT",
+            "pop_under_35k": "Population < 35k"
+        },
+        "legend": [
+            [
+                "35",
+                "#00ffff"
+            ],
+            [
+                "30",
+                "#00ff00"
+            ],
+            [
+                "25",
+                "#ff00ff"
+            ],
+            [
+                "20",
+                "#ff0000"
+            ],
+            [
+                "5",
+                "#9e9e9e"
+            ]
+        ],
+        "hover": {
+            "pool": false,
+            "County": false,
+            "pov_pts": true,
+            "pdc_pts": true,
+            "qct_label": false
+        },
+        "hover_test": {
+            "pool": [false,""],
+            "County": [false,""],
+            "pov_pts": [true,"POV Points"],
+            "pdc_pts": [true,""],
+            "qct_label": [false,""]
+        },
+        "click": [
+            "pool",
+            "County",
+            "total_pts",
+            "pov_pts",
+            "pdc_pts",
+            "qct_24",
+            "pop_under_35k",
+            "GEOID"
+            
+        ],
+        "click_test": {
+            "pool":[false,""],
+            "County":[false,""],
+            "total_pts":[true,"Points"],
+            "pov_pts":[true,"Pov Points"],
+            "pdc_pts":[true,""],
+            "qct_24":[false,""],
+            "pop_under_35k":[true,""],
+            "GEOID":[true,""]
+        },
+            
+        "cat_filter_vals": {
+            "pool": [
+                "Balance of State",
+                "NW/NC",
+                "Northern Virginia",
+                "Richmond MSA",
+                "Tidewater MSA"
+            ],
+            "County": [
+                "Accomack County",
+                "Albemarle County",
+                "Alexandria city",
+                "Alleghany County",
+                "Amelia County",
+                "Amherst County",
+                "Appomattox County",
+                "Arlington County",
+                "Augusta County",
+                "Bath County",
+                "Bedford County",
+                "Bland County",
+                "Botetourt County",
+                "Bristol city",
+                "Brunswick County",
+                "Buchanan County",
+                "Buckingham County",
+                "Buena Vista city",
+                "Campbell County",
+                "Caroline County",
+                "Carroll County",
+                "Charles City County",
+                "Charlotte County",
+                "Charlottesville city",
+                "Chesapeake city",
+                "Chesterfield County",
+                "Clarke County",
+                "Colonial Heights city",
+                "Covington city",
+                "Craig County",
+                "Culpeper County",
+                "Cumberland County",
+                "Danville city",
+                "Dickenson County",
+                "Dinwiddie County",
+                "Emporia city",
+                "Essex County",
+                "Fairfax County",
+                "Fairfax city",
+                "Falls Church city",
+                "Fauquier County",
+                "Floyd County",
+                "Fluvanna County",
+                "Franklin County",
+                "Franklin city",
+                "Frederick County",
+                "Fredericksburg city",
+                "Galax city",
+                "Giles County",
+                "Gloucester County",
+                "Goochland County",
+                "Grayson County",
+                "Greene County",
+                "Greensville County",
+                "Halifax County",
+                "Hampton city",
+                "Hanover County",
+                "Harrisonburg city",
+                "Henrico County",
+                "Henry County",
+                "Highland County",
+                "Hopewell city",
+                "Isle of Wight County",
+                "James City County",
+                "King George County",
+                "King William County",
+                "King and Queen County",
+                "Lancaster County",
+                "Lee County",
+                "Lexington city",
+                "Loudoun County",
+                "Louisa County",
+                "Lunenburg County",
+                "Lynchburg city",
+                "Madison County",
+                "Manassas Park city",
+                "Manassas city",
+                "Martinsville city",
+                "Mathews County",
+                "Mecklenburg County",
+                "Middlesex County",
+                "Montgomery County",
+                "Nelson County",
+                "New Kent County",
+                "Newport News city",
+                "Norfolk city",
+                "Northampton County",
+                "Northumberland County",
+                "Norton city",
+                "Nottoway County",
+                "Orange County",
+                "Page County",
+                "Patrick County",
+                "Petersburg city",
+                "Pittsylvania County",
+                "Poquoson city",
+                "Portsmouth city",
+                "Powhatan County",
+                "Prince Edward County",
+                "Prince George County",
+                "Prince William County",
+                "Pulaski County",
+                "Radford city",
+                "Rappahannock County",
+                "Richmond County",
+                "Richmond city",
+                "Roanoke County",
+                "Roanoke city",
+                "Rockbridge County",
+                "Rockingham County",
+                "Russell County",
+                "Salem city",
+                "Scott County",
+                "Shenandoah County",
+                "Smyth County",
+                "Southampton County",
+                "Spotsylvania County",
+                "Stafford County",
+                "Staunton city",
+                "Suffolk city",
+                "Surry County",
+                "Sussex County",
+                "Tazewell County",
+                "Virginia Beach city",
+                "Warren County",
+                "Washington County",
+                "Waynesboro city",
+                "Westmoreland County",
+                "Williamsburg city",
+                "Winchester city",
+                "Wise County",
+                "Wythe County",
+                "York County"
+            ],
+            "qct_24": [
+                1,
+                0
+            ],
+            "pop_under_35k": [
+                "Greater",
+                "Less than 35k"
+            ]
+        }
+    }
+    
+}
