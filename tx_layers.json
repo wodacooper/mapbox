@@ -163,10 +163,10 @@
         ],
         "hover": {
             "Region": true,
-            "pool": false,
-            "County": false,
-            "city": false,
-            "score": false,
+            "pool": true,
+            "County": true,
+            "city": true,
+            "score": true,
             "i_ua_tp": false
         },
         "click": [
