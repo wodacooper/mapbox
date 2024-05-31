@@ -478,6 +478,10 @@ const bounds_dict = {
     
     const query_string = window.location.search;
     const query_vals = query_string.split('?')
+    if (query_vals[0]!='https://wodacooper.github.io/mapbox/mapbox.html'){
+        query_vals[1]='pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA'
+        query_vals[2]='ga'
+    }
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
         container: 'map',
@@ -737,10 +741,16 @@ const bounds_dict = {
                         if (feature) {
                             table.push(`<h3 style="margin:0; padding:0 0 5px">${layers[layer].name}</h3>`)
                             const hover_cats = layers[layer]['hover'];
-                            for (const key in hover_cats){
+                            for (let [key, args] of Object.entries(hover_cats)){
                                 let value = feature.properties[key];
                                 if (value||value == 0){
-                                    if (hover_cats[key]) table.push(`<h4 style="margin:0; padding:0;color: #aaaaaa;">${key}</h4>`);
+                                    if(args[0]){
+                                            if(args[1]==""){
+                                                    table.push(`<h4 style="margin:0; padding:0;color: #aaaaaa;">${key}</h4>`);
+                                                } else{
+                                                    table.push(`<h4 style="margin:0; padding:0;color: #aaaaaa;">${args[1]}</h4>`);
+                                                }
+                                            }
                                     table.push(`<p style="margin: 0; padding: 0 0 5px;">${value}</p>`);
                                 }
                             };                        
@@ -765,10 +775,16 @@ const bounds_dict = {
                                     console.log(feature)
                                     table.push(`<h3>${layers[layer].name}</h3>`)
                                     const click_cats = layers[layer]['click'];
-                                    for (cat of click_cats){
+                                    for (let [cat, args] of Object.entries(click_cats)){
                                         let value = feature.properties[cat];
                                         if (value||value == 0){
-                                            table.push(`<h4>${cat}</h4>`);
+                                            if(args[0]){
+                                                if(args[1]==""){
+                                                    table.push(`<h4>${cat}</h4>`);
+                                                } else{
+                                                    table.push(`<h4>${args[1]}</h4>`);
+                                                }
+                                            }
                                             table.push(`<p>${value}</p>`);
                                         }
                                     };                        
