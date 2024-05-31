@@ -39,13 +39,28 @@
                 "#999999"
             ]
         ],
-        "click": [
-            "Project Name",
-            "Target Population",
-            "Project Type",
-            "Street Address",
-            "Unit Count"
-        ]
+        "click": {
+            "Project Name": [
+                true,
+                ""
+            ],
+            "Target Population": [
+                true,
+                ""
+            ],
+            "Project Type": [
+                true,
+                ""
+            ],
+            "Street Address": [
+                true,
+                ""
+            ],
+            "Unit Count": [
+                true,
+                ""
+            ]
+        }
     },
     "con_districts": {
         "name": "Congressional Districts",
@@ -61,7 +76,7 @@
             "line-color": "#000000"
         },
         "fill": {
-            "fill-opacity":0
+            "fill-opacity": 0
         },
         "legend": [
             [
@@ -69,9 +84,12 @@
                 "#000000"
             ]
         ],
-        "click": [
-            "district"
-        ]
+        "click": {
+            "district": [
+                true,
+                ""
+            ]
+        }
     },
     "score": {
         "name": "2025 Draft Score",
@@ -178,30 +196,93 @@
             ]
         ],
         "hover": {
-            "pool": false,
-            "county": false,
-            "NAMELSAD": false,
-            "score": false
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "sub_pool",
-            "county",
-            "NAMELSAD",
-            "qct_label",
-            "score",
-            "burd_pts",
-            "inc_pts",
-            "job_pts",
-            "road_pts",
-            "ahs_pts",
-            "burd_pct",
-            "job_dnsty",
-            "road_dnsty",
-            "aff_units",
-            "cbg_10",
-            "tract_20",
-            "ZCTA5CE20"
-        ],
+        "click": {
+            "sub_pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "qct_label": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "burd_pts": [
+                true,
+                ""
+            ],
+            "inc_pts": [
+                true,
+                ""
+            ],
+            "job_pts": [
+                true,
+                ""
+            ],
+            "road_pts": [
+                true,
+                ""
+            ],
+            "ahs_pts": [
+                true,
+                ""
+            ],
+            "burd_pct": [
+                true,
+                ""
+            ],
+            "job_dnsty": [
+                true,
+                ""
+            ],
+            "road_dnsty": [
+                true,
+                ""
+            ],
+            "aff_units": [
+                true,
+                ""
+            ],
+            "cbg_10": [
+                true,
+                ""
+            ],
+            "tract_20": [
+                true,
+                ""
+            ],
+            "ZCTA5CE20": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "sub_pool": [
                 "Balance",

@@ -18,14 +18,32 @@
                 "#000000"
             ]
         ],
-        "click": [
-            "property",
-            "award_year",
-            "address",
-            "market",
-            "type",
-            "app_type"
-        ]
+        "click": {
+            "property": [
+                true,
+                ""
+            ],
+            "award_year": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "market": [
+                true,
+                ""
+            ],
+            "type": [
+                true,
+                ""
+            ],
+            "app_type": [
+                true,
+                ""
+            ]
+        }
     },
     "amenities": {
         "name": "Primary Amenities",
@@ -67,11 +85,20 @@
                 "#999999"
             ]
         ],
-        "click": [
-            "name",
-            "types",
-            "vicinity"
-        ]
+        "click": {
+            "name": [
+                true,
+                ""
+            ],
+            "types": [
+                true,
+                ""
+            ],
+            "vicinity": [
+                true,
+                ""
+            ]
+        }
     },
     "cities": {
         "name": "Cities",
@@ -95,11 +122,17 @@
                 "#ffffff"
             ]
         ],
-        "click": [
-            "namelsad"
-        ],
+        "click": {
+            "namelsad": [
+                true,
+                ""
+            ]
+        },
         "hover": {
-            "namelsad": false
+            "namelsad": [
+                true,
+                ""
+            ]
         }
     },
     "score": {
@@ -205,20 +238,53 @@
             ]
         ],
         "hover": {
-            "pool": false,
-            "COUNTY_NAM": false,
-            "score": false
+            "pool": [
+                true,
+                ""
+            ],
+            "COUNTY_NAM": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "pool",
-            "COUNTY_NAM",
-            "score",
-            "otm_pts",
-            "OZ_pts",
-            "aff_pts",
-            "recent_nc",
-            "GEOID"
-        ],
+        "click": {
+            "pool": [
+                true,
+                ""
+            ],
+            "COUNTY_NAM": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "otm_pts": [
+                true,
+                ""
+            ],
+            "OZ_pts": [
+                true,
+                ""
+            ],
+            "aff_pts": [
+                true,
+                ""
+            ],
+            "recent_nc": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "pool": [
                 "Group A",

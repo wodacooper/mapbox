@@ -100,29 +100,89 @@
             ]
         ],
         "hover": {
-            "pool4": false,
-            "county": false,
-            "NAMELSAD": false,
-            "qct_24": false,
-            "score": false
+            "pool4": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "pool4",
-            "pool9",
-            "county",
-            "NAMELSAD",
-            "qct_24",
-            "score",
-            "qct_pts",
-            "hn_buf_pts",
-            "burden_pts",
-            "inc_pts",
-            "netjob_pts",
-            "rcwa_pts",
-            "topjob_pts",
-            "sd_pts",
-            "sd_name"
-        ],
+        "click": {
+            "pool4": [
+                true,
+                ""
+            ],
+            "pool9": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "qct_pts": [
+                true,
+                ""
+            ],
+            "hn_buf_pts": [
+                true,
+                ""
+            ],
+            "burden_pts": [
+                true,
+                ""
+            ],
+            "inc_pts": [
+                true,
+                ""
+            ],
+            "netjob_pts": [
+                true,
+                ""
+            ],
+            "rcwa_pts": [
+                true,
+                ""
+            ],
+            "topjob_pts": [
+                true,
+                ""
+            ],
+            "sd_pts": [
+                true,
+                ""
+            ],
+            "sd_name": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "pool4": [
                 "General",

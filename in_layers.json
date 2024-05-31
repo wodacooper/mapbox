@@ -19,14 +19,29 @@
             ]
         ],
         "hover": {
-            "employer_name": false
+            "employer_name": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "employer_name",
-            "county_name",
-            "address",
-            "city"
-        ]
+        "click": {
+            "employer_name": [
+                true,
+                ""
+            ],
+            "county_name": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "city": [
+                true,
+                ""
+            ]
+        }
     },
     "score": {
         "name": "2025 Score",
@@ -111,17 +126,41 @@
             ]
         ],
         "hover": {
-            "Pool": true,
-            "County": true,
-            "City": true,
-            "score": true
+            "Pool": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "Pool",
-            "County",
-            "City",
-            "score"
-        ],
+        "click": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "Pool": [
                 "Large City",

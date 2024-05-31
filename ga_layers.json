@@ -14,7 +14,7 @@
         },
         "fill": {
             "fill-opacity": 0.2,
-            "fill-color":"#ff0000"
+            "fill-color": "#ff0000"
         },
         "legend": [
             [
@@ -45,7 +45,32 @@
                 "#ffffff"
             ]
         ],
-        "click":["parcelid","owner","address","owneraddr1","owneraddr2","landacres"]
+        "click": {
+            "parcelid": [
+                true,
+                ""
+            ],
+            "owner": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "owneraddr1": [
+                true,
+                ""
+            ],
+            "owneraddr2": [
+                true,
+                ""
+            ],
+            "landacres": [
+                true,
+                ""
+            ]
+        }
     },
     "atl_zoning": {
         "name": "ATL Zoning",
@@ -58,129 +83,565 @@
         "visible": false,
         "fill": {
             "fill-opacity": 0.6,
-            "fill-color":[
+            "fill-color": [
                 "match",
-                ["get", "ZONINGCODE"],
-                "Multi-Family Residential","#7b634b",
-                "Single Family Residential","#f2d17e",
-                "Special Public Interest","#4A148C",
-                "Planned Development","#689F38",
-                "Commercial","#f44336",
-                "Industrial","#9e9e9e",
-                "Office-Institutional","#2196f3",
-                "Neighborhood Commercial District","#827717",
+                [
+                    "get",
+                    "ZONINGCODE"
+                ],
+                "Multi-Family Residential",
+                "#7b634b",
+                "Single Family Residential",
+                "#f2d17e",
+                "Special Public Interest",
+                "#4A148C",
+                "Planned Development",
+                "#689F38",
+                "Commercial",
+                "#f44336",
+                "Industrial",
+                "#9e9e9e",
+                "Office-Institutional",
+                "#2196f3",
+                "Neighborhood Commercial District",
+                "#827717",
                 "#FF9800"
             ]
         },
         "legend": [
-            ["Multi-Family Residential","#7b634b"],
-            ["Single Family Residential","#f2d17e"],
-            ["Special Public Interest","#4A148C"],
-            ["Planned Development","#689F38"],
-            ["Commercial","#f44336"],
-            ["Industrial","#9e9e9e"],
-            ["Office-Institutional","#2196f3"],
-            ["Neighborhood Commercial District","#827717"],
-            ["Other","#FF9800"]
+            [
+                "Multi-Family Residential",
+                "#7b634b"
+            ],
+            [
+                "Single Family Residential",
+                "#f2d17e"
+            ],
+            [
+                "Special Public Interest",
+                "#4A148C"
+            ],
+            [
+                "Planned Development",
+                "#689F38"
+            ],
+            [
+                "Commercial",
+                "#f44336"
+            ],
+            [
+                "Industrial",
+                "#9e9e9e"
+            ],
+            [
+                "Office-Institutional",
+                "#2196f3"
+            ],
+            [
+                "Neighborhood Commercial District",
+                "#827717"
+            ],
+            [
+                "Other",
+                "#FF9800"
+            ]
         ],
-        "hover":{
-            "ZONINGCODE":false,
-            "ZONING_CLA":false
+        "hover": {
+            "ZONINGCODE": [
+                true,
+                ""
+            ],
+            "ZONING_CLA": [
+                true,
+                ""
+            ]
         },
-        "click":["ZONINGCODE","ZONING_CLA","ZONEDESC","BOOK","PAGE"],
-        "cat_filters":{
-            "ZONINGCODE":"Category",
-            "ZONING_CLA":"District"
+        "click": {
+            "ZONINGCODE": [
+                true,
+                ""
+            ],
+            "ZONING_CLA": [
+                true,
+                ""
+            ],
+            "ZONEDESC": [
+                true,
+                ""
+            ],
+            "BOOK": [
+                true,
+                ""
+            ],
+            "PAGE": [
+                true,
+                ""
+            ]
         },
-        "cat_filter_vals":{
-            "ZONINGCODE":["Single Family Residential", "Multi-Family Residential", "Industrial","Planned Development", "Commercial", "Neighborhood Commercial District","Office-Institutional", "Special Public Interest", "Historic","Landmark District", "Live Work", "Fulton County Residential"],
-            "ZONING_CLA":["R-4", "MR-3-C", "RG-2", "RG-2-C", "I-1-C", "PD-H", "I-2", "I-1", "C-2", "R-4B",
-            "RG-3-C", "C-2-C", "MR-3", "C-1", "MRC-1-C", "MRC-2-C", "PD-MU", "R-4A", "R-5",
-            "MRC-3-C", "MR-4A-C", "MRC-2", "MR-2-C", "MRC-1", "NC-2", "MR-5A-C", "C-1-C",
-            "R-5-C", "R-LC", "O-I", "R-4A-C", "NC-12 SA1", "Poncey-Highland SA1",
-            "SPI-5 SA3", "MR-4A", "Poncey-Highland SA4", "Poncey-Highland SA3", "NC-1",
-            "NC-13", "RG-3", "RG-1", "O-I-C", "SPI-5 SA1", "NC-12 SA2", "RG-5", "HC-20A SA3",
-            "SPI-5 SA2", "SPI-22 SA4", "LD Briarcliff Plaza", "I-2-C", "RG-4-C",
-            "HC-20C SA2", "HC-20A SA4-C", "Poncey-Highland SA5", "Poncey-Highland SA2",
-            "HC-20C SA4", "NC-7", "HC-20A SA4", "R-4B-C", "R-LC-C", "LW", "MRC-3",
-            "HC-20A SA5", "Poncey-Highland SA6", "C-3-C", "MR-4B-C", "MR-2", "RG-4",
-            "SPI-22 TSA", "SPI-22 SA2", "HC-20A SA2", "C-4", "HC-20E", "SPI-17 SA4",
-            "SPI-16 SA1", "HC-20C SA3", "MR-4B", "HC-20C SA1", "SPI-16 SA3", "SPI-1 SA1",
-            "SPI-1 SA3", "HC-20C SA3-C", "SPI-1 SA2", "MR-MU", "SPI-1 SA4", "SPI-22 SA1",
-            "SPI-22 SA3", "I-Mix-C", "MR-4-C", "SPI-18 SA4", "SPI-18 SA3", "SPI-18 SA1",
-            "SPI-18 SA5", "SPI-18 SA2", "SPI-1 SA6", "SPI-18 SA6", "SPI-18 SA8",
-            "SPI-18 SA7", "SPI-1 SA7", "SPI-1 SA5", "SPI-19 SA5", "SPI-19 SA6",
-            "SPI-19 SA11", "HC-20N SA1", "HC-20N SA2", "SPI-19 SA10", "SPI-18 SA9",
-            "SPI-19 SA4", "SPI-18 SA10", "C-5-C", "SPI-3 SA6", "SPI-3 SA7", "SPI-3 SA2",
-            "SPI-19 SA3", "I-MIX", "C-5", "C-3", "SPI-3 SA5", "NC-9", "LD Mean Street",
-            "I-MIX-C", "C-4-C", "NC-8", "SPI-21 SA4", "SPI-21 SA9", "SPI-21 SA3",
-            "SPI-21 SA5", "SPI-21 SA2", "SPI-11 SA4", "SPI-11 SA2", "SPI-11 SA8",
-            "SPI-19 SA8", "SPI-11 SA6", "SPI-21 SA1", "SPI-21 SA8", "SPI-11 SA3",
-            "SPI-21 SA10", "SPI-19 SA7", "SPI-3 SA4", "SPI-3 SA1", "SPI-3 SA3",
-            "SPI-3 SA8", "SPI-3 SA9", "SPI-19 SA1", "SPI-15 SA5", "SPI-11 SA5",
-            "SPI-3 SA5-C", "SPI-3 SA3-C", "SPI-19 SA2", "SPI-21 SA6", "HC-20D", "LW-C",
-            "SPI-11 SA9", "SPI-2 SA5", "NC-15", "SPI-21 SA7", "NC-14", "R-3", "NC-6", "R-2A",
-            "SPI-20 SA3", "SPI-20 SA2", "SPI-20 SA6", "SPI-20 SA4", "SPI-20 SA1", "R-3A",
-            "SPI-20 SA5", "R-4-C", "FCR-3", "NC-3", "SPI-7 SA3", "SPI-7 SA1", "SPI-7 SA2C",
-            "SPI-7 SA2B", "SPI-7 SA2A", "HC-20B", "NC-11", "SPI-12 SA2", "SPI-12 SA1",
-            "NC-4", "PD-H2", "SPI-15 SA1", "NC-5", "SPI-15 SA3", "SPI-15 SA9", "SPI-15 SA8",
-            "SPI-12 SA3", "SPI-15 SA7", "SPI-15 SA6", "SPI-15 SA2", "NC-5-C", "SPI-9 SA3",
-            "SPI-9 SA2", "SPI-9 SA1", "SPI-15 SA4", "SPI-9 SA4", "PD-OC", "SPI-9-C SA1",
-            "SPI-12 SA4", "RG-5-C", "SPI-9 SA2-C", "SPI-16 SA2", "SPI-16 SA2 JSTA",
-            "SPI-17 SA2", "SPI-17 SA3", "SPI-16 SA1C", "SPI-17 SA1", "R-2", "R-2B",
-            "C-3-C, R-4-C", "R-3-C", "PD-H1", "RG-1-C", "R-2A-C", "R-1", "RG-2, R-4",
-            "C-1-C, R-5", "I-1, SPI-2 SA3, SPI-2 SA4", "SPI-18 SA3, SPI-18 SA1",
-            "SPI-18 SA1, SPI-18 SA3", "SPI-18 SA1, R-5", "SPI-18 SA5, C-1-C",
-            "SPI-18 SA2. SPI-18 SA1", "MRC-2C", "MR-5A", "SPI-1 SA1,RG-3", "I-1,I-2",
-            "MR-2,R-4", "R-4, NC-2", "R4-A,R-4", "I-1,R-4", "R-LC-C,R-4", "NC-2, R-4",
-            "O-1", "C-1-C,MRC-2-C", "I-2,LW", "MRC-2-C,C-2-C", "MR-2-C,R-4B-C",
-            "MR-2-C,MR-2", "C-2,MRC-3-C", "MRC-2-C, C-5-C", "O-I, R-4", "NC-4,MRC-2-C",
-            "C-1,MRC-2-C", "I-1, R-5", "NC-7-C", "SPI-22 SA4, I-1", "C-2-C,R-5",
-            "C-1,C-1-C", "O-I-C,C-I", "R-4B-C,RG-3", "R-5-C, RG-3", "C-1-C, C-2",
-            "R-4A, R-4", "I-1-C, I-2-C, I-1", "I-2-C, I-1-C", "C-1,R-4", "R-5, C-2",
-            "HC-20A SA1", "R-4, R-5", "R-4, R-4A", "NC-14, R-4", "I-1-C, R-5-C",
-            "R-5-C, MR-4A-C", "R-5-C, MR-4A, I-1-C", "MR-4A-C,R-5-C", "R-4, I-2",
-            "MR-3, MRC-1", "MR-3-C. MR-3", "MRC-3-C,O-I", "C-1, R-4",
-            "C-2-C, C-2, MRC-2-C", "C-2,MRC-2-C", "C-2, MRC-2-C", "MRC-2-C, R-4",
-            "R-4, MRC-2-C", "C-1, MRC-2-C", "O-I,RG-3", "MR-4A, R-4", "C-1, C-2",
-            "RG-3-C, R-4", "R-5, R-4", "R-4, MRC-1-C", "R-LC, R-5", "C-1,I-1",
-            "PD-H, R-4A", "C-2,C-2-C", "NC-15,R-4", "C-2,R-4", "R-4, C-2", "RG-4-C, R-4",
-            "SPI-20 SA2,SPI-20 SA6", "PD-H,PD-H2", "C-2,R-5-C", "C-5-C,HC-20N SA1",
-            "HC-20N SA1, C-5-C", "I-2, C-5-C", "SPI-18 SA7, SPI-18 SA4", "R-3,R-4",
-            "MRC-1-C,R-4", "LD Pratt- Pullman", "RG-2,RG-2-C", "MRC-2,MRC-2-C",
-            "MRC-1-C,R-3", "MRC-1-C, R-4", "R-LC, C-1", "C-1-C, C-1", "R-4, C-1",
-            "O-I,O-I-C", "R-4A,RG-3", "PD-MU,R-4A", "C-1-C, MR-3-C, R-4", "R-4,C-2",
-            "I-2, I-1-C", "RG-2, R-4, I-2", "I-2, C-2", "HC-20 SA1", "I-1,R-5", "C-4,RG-4",
-            "R-4,SPI-9 SA2", "R-4,I-1,SPI-15 SA8", "R-4,SPI-15 SA8", "RG-2-C, R-4",
-            "R-4,C-1", "I-1-C, I-1", "R-5, R-4A", "I-2,R-2", "I-1,C-1", "R-4, RG-4-C",
-            "RG-2, C-1-C, PD-H", "RG-2, C-1-C", "R-5, C-1-C", "SPI-18 SA8, R-4B",
-            "I-2,R-4A", "SPI-18 SA4, SPI-18 SA1", "SPI-18 SA9, SPI-18 SA5",
-            "I-Mix-C, I-1", "R-4,SPI-9 SA3,R-4A", "RG-5-C,RG-5,R-3", "RG-3,RG-3-C",
-            "MR-5A-C. NC-2", "O-I,R-4A", "R-4A,R-4", "RG-3, MRC-1-C", "MRC-1-C, C-1",
-            "RG-3-C, O-I", "PD-H, R-4", "MRC--2-C", "R-4,RG-1,HC-20B", "HC-20B,R-4",
-            "C-1-C, MRC-1-C", "MR-1", "C-1,C-1-C,RG-4", "R-5,RG-4", "NC-10 SA1,NC-10 SA2",
-            "NC-10 SA1", "I-1,RG-3", "MR-3A-C", "R-4,RG-3", "R-3, R-4", "I-1-C,R-4",
-            "MR-2-C, PD-H", "R-4, I-2, C-1", "MR-5-C", "R-5,MR-3-C", "R-5, MR-3-C",
-            "SPI-22 SA4, R-5", "O-I, R-5", "M-2", "RG-3, R-4B-C", "R-4, NC-17",
-            "I-1,I-1-C", "SPI-16 SA3,SPI-17 SA3", "R-4, I-1", "R-4,MRC-2-C", "C-1,R-3",
-            "I-2,MRC-3", "I-2,MRC-3-C,RG-3", "SPI-11 SA2, SPI-11 SA6",
-            "SPI-16 SA3,SPI-17 SA4", "O-I-C,O-I", "I-2,R-5", "I-2,RG-2", "NC-1,R-5",
-            "C-3,R-4", "C-2-C,1-2,C-2", "RG-3, R-4A, C-2, I-1-C, MR-4A-C, MRC-2-C",
-            "SPI-21 SA2, SPI21 SA4, I-1, I-1-C", "SPI-18 SA4, SPI-18 SA3",
-            "SPI-21 SA3, SPI-21 SA4", "SPI-11 SA8, SPI-11 SA2",
-            "SPI-11 SA2, SPI-11 SA8", "SPI-11 SA3, SPI-11 SA2",
-            "SPI-19 SA5, SPI-19 SA5", "R-5,RG-2", "RG-3,R-3", "C-1,R-4A", "C-3,RG-3-C",
-            "RG-3-C, C-3", "C-1-C, R-4A", "R-4A, MRC-2-C", "R-4A, RG-3", "R-4A, C-2",
-            "NC-12 SA1,NC-12 SA2", "I-1,MRC-3-C,Poncey-Highland SA5", "C-2,R-5",
-            "C-2,I-1", "R-2A,R-3", "NC-3,MR-3-C", "MRC-2-C, C-2", "C-1-C,C-1,R-3",
-            "C-3-C,I-2", "C-2,MR-3-C", "O-I,R-LC,SPI-20", "MRC-2-C,RG-3",
-            "SPI-19 SA2, SPI-19 SA1", "R-4,R-5", "MRC-3-C, I-2, I-MIX", "MRC-3-C, MRC-3",
-            "MRC-3-C, MR-3-C", "MR-3-C,MRC-3-C,", "I-2, I-2-C", "I-2,R-4", "RG-2, C-1",
-            "R-4, R-4-C", "I-2SPI-2 SA1", "SPI-2 SA1,SPI-2 SA2", "SPI-2 SA1, SPI-2 SA2",
-            "RG-3-C, RG-3, RG-2", "MR-1-C", "R-4A,C-1,RG-3", "SPI-17 SA3,SPI-17 SA4",
-            "R-5,C-2", "C-3,O-I", "SPI-21 SA9, R-4A", "R-4A, I-1-C", "PD-H,I-2,R-4A",
-            "R-4,R-4A", "RG-2, RG-2-C", "R-5, MRC-1-C", "MRC-3-C,RG-4-C,RG-4",
-            "MRC-3-C,RG-4", "I-1,MRC-3"]
+        "cat_filters": {
+            "ZONINGCODE": "Category",
+            "ZONING_CLA": "District"
+        },
+        "cat_filter_vals": {
+            "ZONINGCODE": [
+                "Single Family Residential",
+                "Multi-Family Residential",
+                "Industrial",
+                "Planned Development",
+                "Commercial",
+                "Neighborhood Commercial District",
+                "Office-Institutional",
+                "Special Public Interest",
+                "Historic",
+                "Landmark District",
+                "Live Work",
+                "Fulton County Residential"
+            ],
+            "ZONING_CLA": [
+                "R-4",
+                "MR-3-C",
+                "RG-2",
+                "RG-2-C",
+                "I-1-C",
+                "PD-H",
+                "I-2",
+                "I-1",
+                "C-2",
+                "R-4B",
+                "RG-3-C",
+                "C-2-C",
+                "MR-3",
+                "C-1",
+                "MRC-1-C",
+                "MRC-2-C",
+                "PD-MU",
+                "R-4A",
+                "R-5",
+                "MRC-3-C",
+                "MR-4A-C",
+                "MRC-2",
+                "MR-2-C",
+                "MRC-1",
+                "NC-2",
+                "MR-5A-C",
+                "C-1-C",
+                "R-5-C",
+                "R-LC",
+                "O-I",
+                "R-4A-C",
+                "NC-12 SA1",
+                "Poncey-Highland SA1",
+                "SPI-5 SA3",
+                "MR-4A",
+                "Poncey-Highland SA4",
+                "Poncey-Highland SA3",
+                "NC-1",
+                "NC-13",
+                "RG-3",
+                "RG-1",
+                "O-I-C",
+                "SPI-5 SA1",
+                "NC-12 SA2",
+                "RG-5",
+                "HC-20A SA3",
+                "SPI-5 SA2",
+                "SPI-22 SA4",
+                "LD Briarcliff Plaza",
+                "I-2-C",
+                "RG-4-C",
+                "HC-20C SA2",
+                "HC-20A SA4-C",
+                "Poncey-Highland SA5",
+                "Poncey-Highland SA2",
+                "HC-20C SA4",
+                "NC-7",
+                "HC-20A SA4",
+                "R-4B-C",
+                "R-LC-C",
+                "LW",
+                "MRC-3",
+                "HC-20A SA5",
+                "Poncey-Highland SA6",
+                "C-3-C",
+                "MR-4B-C",
+                "MR-2",
+                "RG-4",
+                "SPI-22 TSA",
+                "SPI-22 SA2",
+                "HC-20A SA2",
+                "C-4",
+                "HC-20E",
+                "SPI-17 SA4",
+                "SPI-16 SA1",
+                "HC-20C SA3",
+                "MR-4B",
+                "HC-20C SA1",
+                "SPI-16 SA3",
+                "SPI-1 SA1",
+                "SPI-1 SA3",
+                "HC-20C SA3-C",
+                "SPI-1 SA2",
+                "MR-MU",
+                "SPI-1 SA4",
+                "SPI-22 SA1",
+                "SPI-22 SA3",
+                "I-Mix-C",
+                "MR-4-C",
+                "SPI-18 SA4",
+                "SPI-18 SA3",
+                "SPI-18 SA1",
+                "SPI-18 SA5",
+                "SPI-18 SA2",
+                "SPI-1 SA6",
+                "SPI-18 SA6",
+                "SPI-18 SA8",
+                "SPI-18 SA7",
+                "SPI-1 SA7",
+                "SPI-1 SA5",
+                "SPI-19 SA5",
+                "SPI-19 SA6",
+                "SPI-19 SA11",
+                "HC-20N SA1",
+                "HC-20N SA2",
+                "SPI-19 SA10",
+                "SPI-18 SA9",
+                "SPI-19 SA4",
+                "SPI-18 SA10",
+                "C-5-C",
+                "SPI-3 SA6",
+                "SPI-3 SA7",
+                "SPI-3 SA2",
+                "SPI-19 SA3",
+                "I-MIX",
+                "C-5",
+                "C-3",
+                "SPI-3 SA5",
+                "NC-9",
+                "LD Mean Street",
+                "I-MIX-C",
+                "C-4-C",
+                "NC-8",
+                "SPI-21 SA4",
+                "SPI-21 SA9",
+                "SPI-21 SA3",
+                "SPI-21 SA5",
+                "SPI-21 SA2",
+                "SPI-11 SA4",
+                "SPI-11 SA2",
+                "SPI-11 SA8",
+                "SPI-19 SA8",
+                "SPI-11 SA6",
+                "SPI-21 SA1",
+                "SPI-21 SA8",
+                "SPI-11 SA3",
+                "SPI-21 SA10",
+                "SPI-19 SA7",
+                "SPI-3 SA4",
+                "SPI-3 SA1",
+                "SPI-3 SA3",
+                "SPI-3 SA8",
+                "SPI-3 SA9",
+                "SPI-19 SA1",
+                "SPI-15 SA5",
+                "SPI-11 SA5",
+                "SPI-3 SA5-C",
+                "SPI-3 SA3-C",
+                "SPI-19 SA2",
+                "SPI-21 SA6",
+                "HC-20D",
+                "LW-C",
+                "SPI-11 SA9",
+                "SPI-2 SA5",
+                "NC-15",
+                "SPI-21 SA7",
+                "NC-14",
+                "R-3",
+                "NC-6",
+                "R-2A",
+                "SPI-20 SA3",
+                "SPI-20 SA2",
+                "SPI-20 SA6",
+                "SPI-20 SA4",
+                "SPI-20 SA1",
+                "R-3A",
+                "SPI-20 SA5",
+                "R-4-C",
+                "FCR-3",
+                "NC-3",
+                "SPI-7 SA3",
+                "SPI-7 SA1",
+                "SPI-7 SA2C",
+                "SPI-7 SA2B",
+                "SPI-7 SA2A",
+                "HC-20B",
+                "NC-11",
+                "SPI-12 SA2",
+                "SPI-12 SA1",
+                "NC-4",
+                "PD-H2",
+                "SPI-15 SA1",
+                "NC-5",
+                "SPI-15 SA3",
+                "SPI-15 SA9",
+                "SPI-15 SA8",
+                "SPI-12 SA3",
+                "SPI-15 SA7",
+                "SPI-15 SA6",
+                "SPI-15 SA2",
+                "NC-5-C",
+                "SPI-9 SA3",
+                "SPI-9 SA2",
+                "SPI-9 SA1",
+                "SPI-15 SA4",
+                "SPI-9 SA4",
+                "PD-OC",
+                "SPI-9-C SA1",
+                "SPI-12 SA4",
+                "RG-5-C",
+                "SPI-9 SA2-C",
+                "SPI-16 SA2",
+                "SPI-16 SA2 JSTA",
+                "SPI-17 SA2",
+                "SPI-17 SA3",
+                "SPI-16 SA1C",
+                "SPI-17 SA1",
+                "R-2",
+                "R-2B",
+                "C-3-C, R-4-C",
+                "R-3-C",
+                "PD-H1",
+                "RG-1-C",
+                "R-2A-C",
+                "R-1",
+                "RG-2, R-4",
+                "C-1-C, R-5",
+                "I-1, SPI-2 SA3, SPI-2 SA4",
+                "SPI-18 SA3, SPI-18 SA1",
+                "SPI-18 SA1, SPI-18 SA3",
+                "SPI-18 SA1, R-5",
+                "SPI-18 SA5, C-1-C",
+                "SPI-18 SA2. SPI-18 SA1",
+                "MRC-2C",
+                "MR-5A",
+                "SPI-1 SA1,RG-3",
+                "I-1,I-2",
+                "MR-2,R-4",
+                "R-4, NC-2",
+                "R4-A,R-4",
+                "I-1,R-4",
+                "R-LC-C,R-4",
+                "NC-2, R-4",
+                "O-1",
+                "C-1-C,MRC-2-C",
+                "I-2,LW",
+                "MRC-2-C,C-2-C",
+                "MR-2-C,R-4B-C",
+                "MR-2-C,MR-2",
+                "C-2,MRC-3-C",
+                "MRC-2-C, C-5-C",
+                "O-I, R-4",
+                "NC-4,MRC-2-C",
+                "C-1,MRC-2-C",
+                "I-1, R-5",
+                "NC-7-C",
+                "SPI-22 SA4, I-1",
+                "C-2-C,R-5",
+                "C-1,C-1-C",
+                "O-I-C,C-I",
+                "R-4B-C,RG-3",
+                "R-5-C, RG-3",
+                "C-1-C, C-2",
+                "R-4A, R-4",
+                "I-1-C, I-2-C, I-1",
+                "I-2-C, I-1-C",
+                "C-1,R-4",
+                "R-5, C-2",
+                "HC-20A SA1",
+                "R-4, R-5",
+                "R-4, R-4A",
+                "NC-14, R-4",
+                "I-1-C, R-5-C",
+                "R-5-C, MR-4A-C",
+                "R-5-C, MR-4A, I-1-C",
+                "MR-4A-C,R-5-C",
+                "R-4, I-2",
+                "MR-3, MRC-1",
+                "MR-3-C. MR-3",
+                "MRC-3-C,O-I",
+                "C-1, R-4",
+                "C-2-C, C-2, MRC-2-C",
+                "C-2,MRC-2-C",
+                "C-2, MRC-2-C",
+                "MRC-2-C, R-4",
+                "R-4, MRC-2-C",
+                "C-1, MRC-2-C",
+                "O-I,RG-3",
+                "MR-4A, R-4",
+                "C-1, C-2",
+                "RG-3-C, R-4",
+                "R-5, R-4",
+                "R-4, MRC-1-C",
+                "R-LC, R-5",
+                "C-1,I-1",
+                "PD-H, R-4A",
+                "C-2,C-2-C",
+                "NC-15,R-4",
+                "C-2,R-4",
+                "R-4, C-2",
+                "RG-4-C, R-4",
+                "SPI-20 SA2,SPI-20 SA6",
+                "PD-H,PD-H2",
+                "C-2,R-5-C",
+                "C-5-C,HC-20N SA1",
+                "HC-20N SA1, C-5-C",
+                "I-2, C-5-C",
+                "SPI-18 SA7, SPI-18 SA4",
+                "R-3,R-4",
+                "MRC-1-C,R-4",
+                "LD Pratt- Pullman",
+                "RG-2,RG-2-C",
+                "MRC-2,MRC-2-C",
+                "MRC-1-C,R-3",
+                "MRC-1-C, R-4",
+                "R-LC, C-1",
+                "C-1-C, C-1",
+                "R-4, C-1",
+                "O-I,O-I-C",
+                "R-4A,RG-3",
+                "PD-MU,R-4A",
+                "C-1-C, MR-3-C, R-4",
+                "R-4,C-2",
+                "I-2, I-1-C",
+                "RG-2, R-4, I-2",
+                "I-2, C-2",
+                "HC-20 SA1",
+                "I-1,R-5",
+                "C-4,RG-4",
+                "R-4,SPI-9 SA2",
+                "R-4,I-1,SPI-15 SA8",
+                "R-4,SPI-15 SA8",
+                "RG-2-C, R-4",
+                "R-4,C-1",
+                "I-1-C, I-1",
+                "R-5, R-4A",
+                "I-2,R-2",
+                "I-1,C-1",
+                "R-4, RG-4-C",
+                "RG-2, C-1-C, PD-H",
+                "RG-2, C-1-C",
+                "R-5, C-1-C",
+                "SPI-18 SA8, R-4B",
+                "I-2,R-4A",
+                "SPI-18 SA4, SPI-18 SA1",
+                "SPI-18 SA9, SPI-18 SA5",
+                "I-Mix-C, I-1",
+                "R-4,SPI-9 SA3,R-4A",
+                "RG-5-C,RG-5,R-3",
+                "RG-3,RG-3-C",
+                "MR-5A-C. NC-2",
+                "O-I,R-4A",
+                "R-4A,R-4",
+                "RG-3, MRC-1-C",
+                "MRC-1-C, C-1",
+                "RG-3-C, O-I",
+                "PD-H, R-4",
+                "MRC--2-C",
+                "R-4,RG-1,HC-20B",
+                "HC-20B,R-4",
+                "C-1-C, MRC-1-C",
+                "MR-1",
+                "C-1,C-1-C,RG-4",
+                "R-5,RG-4",
+                "NC-10 SA1,NC-10 SA2",
+                "NC-10 SA1",
+                "I-1,RG-3",
+                "MR-3A-C",
+                "R-4,RG-3",
+                "R-3, R-4",
+                "I-1-C,R-4",
+                "MR-2-C, PD-H",
+                "R-4, I-2, C-1",
+                "MR-5-C",
+                "R-5,MR-3-C",
+                "R-5, MR-3-C",
+                "SPI-22 SA4, R-5",
+                "O-I, R-5",
+                "M-2",
+                "RG-3, R-4B-C",
+                "R-4, NC-17",
+                "I-1,I-1-C",
+                "SPI-16 SA3,SPI-17 SA3",
+                "R-4, I-1",
+                "R-4,MRC-2-C",
+                "C-1,R-3",
+                "I-2,MRC-3",
+                "I-2,MRC-3-C,RG-3",
+                "SPI-11 SA2, SPI-11 SA6",
+                "SPI-16 SA3,SPI-17 SA4",
+                "O-I-C,O-I",
+                "I-2,R-5",
+                "I-2,RG-2",
+                "NC-1,R-5",
+                "C-3,R-4",
+                "C-2-C,1-2,C-2",
+                "RG-3, R-4A, C-2, I-1-C, MR-4A-C, MRC-2-C",
+                "SPI-21 SA2, SPI21 SA4, I-1, I-1-C",
+                "SPI-18 SA4, SPI-18 SA3",
+                "SPI-21 SA3, SPI-21 SA4",
+                "SPI-11 SA8, SPI-11 SA2",
+                "SPI-11 SA2, SPI-11 SA8",
+                "SPI-11 SA3, SPI-11 SA2",
+                "SPI-19 SA5, SPI-19 SA5",
+                "R-5,RG-2",
+                "RG-3,R-3",
+                "C-1,R-4A",
+                "C-3,RG-3-C",
+                "RG-3-C, C-3",
+                "C-1-C, R-4A",
+                "R-4A, MRC-2-C",
+                "R-4A, RG-3",
+                "R-4A, C-2",
+                "NC-12 SA1,NC-12 SA2",
+                "I-1,MRC-3-C,Poncey-Highland SA5",
+                "C-2,R-5",
+                "C-2,I-1",
+                "R-2A,R-3",
+                "NC-3,MR-3-C",
+                "MRC-2-C, C-2",
+                "C-1-C,C-1,R-3",
+                "C-3-C,I-2",
+                "C-2,MR-3-C",
+                "O-I,R-LC,SPI-20",
+                "MRC-2-C,RG-3",
+                "SPI-19 SA2, SPI-19 SA1",
+                "R-4,R-5",
+                "MRC-3-C, I-2, I-MIX",
+                "MRC-3-C, MRC-3",
+                "MRC-3-C, MR-3-C",
+                "MR-3-C,MRC-3-C,",
+                "I-2, I-2-C",
+                "I-2,R-4",
+                "RG-2, C-1",
+                "R-4, R-4-C",
+                "I-2SPI-2 SA1",
+                "SPI-2 SA1,SPI-2 SA2",
+                "SPI-2 SA1, SPI-2 SA2",
+                "RG-3-C, RG-3, RG-2",
+                "MR-1-C",
+                "R-4A,C-1,RG-3",
+                "SPI-17 SA3,SPI-17 SA4",
+                "R-5,C-2",
+                "C-3,O-I",
+                "SPI-21 SA9, R-4A",
+                "R-4A, I-1-C",
+                "PD-H,I-2,R-4A",
+                "R-4,R-4A",
+                "RG-2, RG-2-C",
+                "R-5, MRC-1-C",
+                "MRC-3-C,RG-4-C,RG-4",
+                "MRC-3-C,RG-4",
+                "I-1,MRC-3"
+            ]
         }
     },
     "school_zones": {
@@ -277,18 +738,45 @@
             ]
         ],
         "hover": {
-            "school_nam": false,
-            "level_str": false,
-            "q_educ": true
+            "school_nam": [
+                true,
+                ""
+            ],
+            "level_str": [
+                true,
+                ""
+            ],
+            "q_educ": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "school_nam",
-            "level_str",
-            "q_educ",
-            "low_int",
-            "high_int",
-            "ncessch"
-        ],
+        "click": {
+            "school_nam": [
+                true,
+                ""
+            ],
+            "level_str": [
+                true,
+                ""
+            ],
+            "q_educ": [
+                true,
+                ""
+            ],
+            "low_int": [
+                true,
+                ""
+            ],
+            "high_int": [
+                true,
+                ""
+            ],
+            "ncessch": [
+                true,
+                ""
+            ]
+        },
         "cat_filters": {
             "level_str": "School Type"
         },
@@ -383,14 +871,29 @@
             ]
         ],
         "hover": {
-            "school_name": false
+            "school_name": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "school_name",
-            "address",
-            "school_type",
-            "system_name"
-        ]
+        "click": {
+            "school_name": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "school_type": [
+                true,
+                ""
+            ],
+            "system_name": [
+                true,
+                ""
+            ]
+        }
     },
     "dept_stores": {
         "name": "Department Stores",
@@ -414,12 +917,21 @@
             ]
         ],
         "hover": {
-            "name": false
+            "name": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "name",
-            "vicinity"
-        ]
+        "click": {
+            "name": [
+                true,
+                ""
+            ],
+            "vicinity": [
+                true,
+                ""
+            ]
+        }
     },
     "stable": {
         "name": "Stable + Schools 2024",
@@ -499,49 +1011,169 @@
             ]
         ],
         "hover": {
-            "pool": false,
-            "city_x": false,
-            "cnty_x": false,
-            "gich_detai": true,
-            "missing_i": true,
-            "score": false,
-            "transit_bo": true
+            "pool": [
+                true,
+                ""
+            ],
+            "city_x": [
+                true,
+                ""
+            ],
+            "cnty_x": [
+                true,
+                ""
+            ],
+            "gich_detai": [
+                true,
+                ""
+            ],
+            "missing_i": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "transit_bo": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "pool",
-            "cnty_x",
-            "city_x",
-            "qct_24",
-            "score",
-            "stable_pts",
-            "missing_i",
-            "hnc_pts",
-            "prev_pts",
-            "sch_pts",
-            "gich_pts",
-            "gich_city",
-            "gich_cnty",
-            "primary na",
-            "primary ti",
-            "primary af",
-            "primary ph",
-            "primary em",
-            "secondary",
-            "secondar_1",
-            "secondar_2",
-            "secondar_3",
-            "secondar_4",
-            "buffer_rec",
-            "local_recent",
-            "past_A",
-            "past_B",
-            "trans_qual",
-            "pov_qual",
-            "jobs_qual",
-            "inc_qual",
-            "env_qual",
-            "GEOID20"
-        ],
+        "click": {
+            "pool": [
+                true,
+                ""
+            ],
+            "cnty_x": [
+                true,
+                ""
+            ],
+            "city_x": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "stable_pts": [
+                true,
+                ""
+            ],
+            "missing_i": [
+                true,
+                ""
+            ],
+            "hnc_pts": [
+                true,
+                ""
+            ],
+            "prev_pts": [
+                true,
+                ""
+            ],
+            "sch_pts": [
+                true,
+                ""
+            ],
+            "gich_pts": [
+                true,
+                ""
+            ],
+            "gich_city": [
+                true,
+                ""
+            ],
+            "gich_cnty": [
+                true,
+                ""
+            ],
+            "primary na": [
+                true,
+                ""
+            ],
+            "primary ti": [
+                true,
+                ""
+            ],
+            "primary af": [
+                true,
+                ""
+            ],
+            "primary ph": [
+                true,
+                ""
+            ],
+            "primary em": [
+                true,
+                ""
+            ],
+            "secondary": [
+                true,
+                ""
+            ],
+            "secondar_1": [
+                true,
+                ""
+            ],
+            "secondar_2": [
+                true,
+                ""
+            ],
+            "secondar_3": [
+                true,
+                ""
+            ],
+            "secondar_4": [
+                true,
+                ""
+            ],
+            "buffer_rec": [
+                true,
+                ""
+            ],
+            "local_recent": [
+                true,
+                ""
+            ],
+            "past_A": [
+                true,
+                ""
+            ],
+            "past_B": [
+                true,
+                ""
+            ],
+            "trans_qual": [
+                true,
+                ""
+            ],
+            "pov_qual": [
+                true,
+                ""
+            ],
+            "jobs_qual": [
+                true,
+                ""
+            ],
+            "inc_qual": [
+                true,
+                ""
+            ],
+            "env_qual": [
+                true,
+                ""
+            ],
+            "GEOID20": [
+                true,
+                ""
+            ]
+        },
         "cat_filters": {
             "pool": "",
             "cnty_x": "County",
@@ -1349,49 +1981,169 @@
             ]
         ],
         "hover": {
-            "pool": false,
-            "city_x": false,
-            "cnty_x": false,
-            "gich_detai": true,
-            "missing_i": true,
-            "revit_pts": false,
-            "transit_bo": true
+            "pool": [
+                true,
+                ""
+            ],
+            "city_x": [
+                true,
+                ""
+            ],
+            "cnty_x": [
+                true,
+                ""
+            ],
+            "gich_detai": [
+                true,
+                ""
+            ],
+            "missing_i": [
+                true,
+                ""
+            ],
+            "revit_pts": [
+                true,
+                ""
+            ],
+            "transit_bo": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "pool",
-            "cnty_x",
-            "city_x",
-            "qct_24",
-            "revit_pts",
-            "stable_pts",
-            "missing_i",
-            "hnc_pts",
-            "prev_pts",
-            "sch_pts",
-            "gich_pts",
-            "gich_city",
-            "gich_cnty",
-            "primary na",
-            "primary ti",
-            "primary af",
-            "primary ph",
-            "primary em",
-            "secondary",
-            "secondar_1",
-            "secondar_2",
-            "secondar_3",
-            "secondar_4",
-            "buffer_rec",
-            "local_recent",
-            "past_A",
-            "past_B",
-            "trans_qual",
-            "pov_qual",
-            "jobs_qual",
-            "inc_qual",
-            "env_qual",
-            "GEOID20"
-        ],
+        "click": {
+            "pool": [
+                true,
+                ""
+            ],
+            "cnty_x": [
+                true,
+                ""
+            ],
+            "city_x": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "revit_pts": [
+                true,
+                ""
+            ],
+            "stable_pts": [
+                true,
+                ""
+            ],
+            "missing_i": [
+                true,
+                ""
+            ],
+            "hnc_pts": [
+                true,
+                ""
+            ],
+            "prev_pts": [
+                true,
+                ""
+            ],
+            "sch_pts": [
+                true,
+                ""
+            ],
+            "gich_pts": [
+                true,
+                ""
+            ],
+            "gich_city": [
+                true,
+                ""
+            ],
+            "gich_cnty": [
+                true,
+                ""
+            ],
+            "primary na": [
+                true,
+                ""
+            ],
+            "primary ti": [
+                true,
+                ""
+            ],
+            "primary af": [
+                true,
+                ""
+            ],
+            "primary ph": [
+                true,
+                ""
+            ],
+            "primary em": [
+                true,
+                ""
+            ],
+            "secondary": [
+                true,
+                ""
+            ],
+            "secondar_1": [
+                true,
+                ""
+            ],
+            "secondar_2": [
+                true,
+                ""
+            ],
+            "secondar_3": [
+                true,
+                ""
+            ],
+            "secondar_4": [
+                true,
+                ""
+            ],
+            "buffer_rec": [
+                true,
+                ""
+            ],
+            "local_recent": [
+                true,
+                ""
+            ],
+            "past_A": [
+                true,
+                ""
+            ],
+            "past_B": [
+                true,
+                ""
+            ],
+            "trans_qual": [
+                true,
+                ""
+            ],
+            "pov_qual": [
+                true,
+                ""
+            ],
+            "jobs_qual": [
+                true,
+                ""
+            ],
+            "inc_qual": [
+                true,
+                ""
+            ],
+            "env_qual": [
+                true,
+                ""
+            ],
+            "GEOID20": [
+                true,
+                ""
+            ]
+        },
         "cat_filters": {
             "pool": "",
             "cnty_x": "County",

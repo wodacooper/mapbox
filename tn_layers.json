@@ -13,7 +13,7 @@
             "line-color": "#ffffff"
         },
         "fill": {
-            "fill-opacity":0.5,
+            "fill-opacity": 0.5,
             "fill-color": "#ffffff"
         },
         "legend": [
@@ -22,8 +22,23 @@
                 "#ffffff"
             ]
         ],
-        "click": [
-            "pool","rank","qct","geoid"
-        ]
+        "click": {
+            "pool": [
+                true,
+                ""
+            ],
+            "rank": [
+                true,
+                ""
+            ],
+            "qct": [
+                true,
+                ""
+            ],
+            "geoid": [
+                true,
+                ""
+            ]
+        }
     }
-}    
+}

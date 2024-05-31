@@ -52,9 +52,9 @@
             "line-width": 1,
             "line-color": "#ffffff"
         },
-        "fill":{
-            "fill-opacity":0.7,
-            "fill-color":"#000000"
+        "fill": {
+            "fill-opacity": 0.7,
+            "fill-color": "#000000"
         },
         "legend": [
             [
@@ -76,9 +76,18 @@
             "line-width": 1,
             "line-color": "#ffffff"
         },
-        "fill":{
-            "fill-opacity":0.5,
-            "fill-color":"#ffffff"
+        "fill": {
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "gao"
+                ],
+                "true",
+                0.5,
+                0
+            ],
+            "fill-color": "#ffffff"
         },
         "legend": [
             [
@@ -100,9 +109,9 @@
             "line-width": 1,
             "line-color": "#ffffff"
         },
-        "fill":{
-            "fill-opacity":0.7,
-            "fill-color":"#000000"
+        "fill": {
+            "fill-opacity": 0.7,
+            "fill-color": "#000000"
         },
         "legend": [
             [
@@ -110,12 +119,58 @@
                 "#000000"
             ]
         ],
-        "hover":{
-            "development":false,
-            "demo":true,
-            "file__":false
+        "hover": {
+            "development": [
+                true,
+                ""
+            ],
+            "demo": [
+                true,
+                ""
+            ],
+            "file__": [
+                true,
+                ""
+            ]
         },
-        "click":["development","demo","file__","_30_units_or_less","buffer","development_address","city","county","county_size"]
+        "click": {
+            "development": [
+                true,
+                ""
+            ],
+            "demo": [
+                true,
+                ""
+            ],
+            "file__": [
+                true,
+                ""
+            ],
+            "_30_units_or_less": [
+                true,
+                ""
+            ],
+            "buffer": [
+                true,
+                ""
+            ],
+            "development_address": [
+                true,
+                ""
+            ],
+            "city": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "county_size": [
+                true,
+                ""
+            ]
+        }
     },
     "cities": {
         "name": "Cities",
@@ -140,8 +195,18 @@
                 "#0000ff"
             ]
         ],
-        "hover":{"namelsad":false},
-        "click":["namelsad"]
+        "hover": {
+            "namelsad": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "namelsad": [
+                true,
+                ""
+            ]
+        }
     },
     "counties": {
         "name": "Counties",
@@ -153,44 +218,88 @@
         },
         "visible": true,
         "line": {
-            "line-opacity":0.6,
+            "line-opacity": 0.6,
             "line-width": 3,
             "line-color": [
                 "match",
-                ["get","recent_lgao"],
-                "2021","#ff0000",
-                "2022","#ff0000",
+                [
+                    "get",
+                    "recent_lgao"
+                ],
+                "2021",
+                "#ff0000",
+                "2022",
+                "#ff0000",
                 "#ffffff"
             ]
         },
         "fill": {
             "fill-color": [
                 "match",
-                ["get","pool"],
-                "Small","#ecc790",
-                "Medium","#90caf9",
-                "Big","#4caf50",
-                "Miami-Dade","#e91e63",
+                [
+                    "get",
+                    "pool"
+                ],
+                "Small",
+                "#ecc790",
+                "Medium",
+                "#90caf9",
+                "Big",
+                "#4caf50",
+                "Miami-Dade",
+                "#e91e63",
                 "#ffffff"
             ],
             "fill-opacity": 0.35
         },
         "legend": [
-            ["Small","#ecc790"],
-            ["Medium","#90caf9"],
-            ["Big","#4caf50"],
-            ["Miami-Dade","#e91e63"],
-            ["outline = LGAO"]
+            [
+                "Small",
+                "#ecc790"
+            ],
+            [
+                "Medium",
+                "#90caf9"
+            ],
+            [
+                "Big",
+                "#4caf50"
+            ],
+            [
+                "Miami-Dade",
+                "#e91e63"
+            ],
+            [
+                "outline = LGAO"
+            ]
         ],
-        "hover":{
-            "namelsad":false,
-            "recent_lgao":true
+        "hover": {
+            "namelsad": [
+                true,
+                ""
+            ],
+            "recent_lgao": [
+                true,
+                ""
+            ]
         },
-        "click":[
-            "namelsad",
-            "recent_lgao",
-            "lgao_threshold",
-            "lgc_max_pts"
-        ]
+        "click": {
+            "namelsad": [
+                true,
+                ""
+            ],
+            "recent_lgao": [
+                true,
+                ""
+            ],
+            "lgao_threshold": [
+                true,
+                ""
+            ],
+            "lgc_max_pts": [
+                true,
+                ""
+            ]
+        }
     }
 }

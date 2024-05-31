@@ -30,9 +30,9 @@
             "fill-opacity": 0.5
         },
         "cat_filters": {
-            "set_aside":"",
-            "city":"",
-            "county":""
+            "set_aside": "",
+            "city": "",
+            "county": ""
         },
         "legend": [
             [
@@ -53,31 +53,77 @@
             ]
         ],
         "hover": {
-                "set_aside":
-                false,
-                "county":
-                false,
-                "city":
+            "set_aside": [
                 true,
-                "location_boost":
+                ""
+            ],
+            "county": [
                 true,
-                "score":
-                false
+                ""
+            ],
+            "city": [
+                true,
+                ""
+            ],
+            "location_boost": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "set_aside",
-            "county",
-            "city",
-            "score",
-            "underserved_pts",
-            "rent_burden_pts",
-            "active_dev_pts",
-            "jobs_pts",
-            "vulnerability_pts",
-            "thriving_pts",
-            "qct_boost",
-            "rural_boost"
-        ],
+        "click": {
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "city": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "underserved_pts": [
+                true,
+                ""
+            ],
+            "rent_burden_pts": [
+                true,
+                ""
+            ],
+            "active_dev_pts": [
+                true,
+                ""
+            ],
+            "jobs_pts": [
+                true,
+                ""
+            ],
+            "vulnerability_pts": [
+                true,
+                ""
+            ],
+            "thriving_pts": [
+                true,
+                ""
+            ],
+            "qct_boost": [
+                true,
+                ""
+            ],
+            "rural_boost": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "set_aside": [
                 "Rural",
@@ -1152,10 +1198,10 @@
             "fill-opacity": 0.4
         },
         "cat_filters": {
-            "CLASSFP":"",
-            "city":"",
-            "underserved_pts":""
-            },
+            "CLASSFP": "",
+            "city": "",
+            "underserved_pts": ""
+        },
         "legend": [
             [
                 "City Limits",
@@ -1163,11 +1209,17 @@
             ]
         ],
         "hover": {
-            "city":false
+            "city": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "burden_pts"
-        ],
+        "click": {
+            "burden_pts": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "CLASSFP": [
                 "C1",

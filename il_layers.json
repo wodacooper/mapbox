@@ -104,38 +104,125 @@
             ]
         ],
         "hover": {
-            "set_aside": false,
-            "county": false,
-            "NAMELSAD": false,
-            "gen_score": false,
-            "need_srn_county": false
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "gen_score": [
+                true,
+                ""
+            ],
+            "need_srn_county": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "set_aside",
-            "county",
-            "NAMELSAD",
-            "qct_24",
-            "gen_score",
-            "ARI_pts",
-            "otm_pts",
-            "QOLI_pts",
-            "nelg18_pts",
-            "811_pts",
-            "county_811",
-            "city_811",
-            "srn_gen_pts",
-            "need_srn_county",
-            "city_srn",
-            "county_srn",
-            "city_plan",
-            "countyplan",
-            "recap",
-            "QOLI_Conn",
-            "QOLI_Educ",
-            "QOLI_Heal",
-            "QOLI_Prosp",
-            "QOLI_Hous"
-        ],
+        "click": {
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "gen_score": [
+                true,
+                ""
+            ],
+            "ARI_pts": [
+                true,
+                ""
+            ],
+            "otm_pts": [
+                true,
+                ""
+            ],
+            "QOLI_pts": [
+                true,
+                ""
+            ],
+            "nelg18_pts": [
+                true,
+                ""
+            ],
+            "811_pts": [
+                true,
+                ""
+            ],
+            "county_811": [
+                true,
+                ""
+            ],
+            "city_811": [
+                true,
+                ""
+            ],
+            "srn_gen_pts": [
+                true,
+                ""
+            ],
+            "need_srn_county": [
+                true,
+                ""
+            ],
+            "city_srn": [
+                true,
+                ""
+            ],
+            "county_srn": [
+                true,
+                ""
+            ],
+            "city_plan": [
+                true,
+                ""
+            ],
+            "countyplan": [
+                true,
+                ""
+            ],
+            "recap": [
+                true,
+                ""
+            ],
+            "QOLI_Conn": [
+                true,
+                ""
+            ],
+            "QOLI_Educ": [
+                true,
+                ""
+            ],
+            "QOLI_Heal": [
+                true,
+                ""
+            ],
+            "QOLI_Prosp": [
+                true,
+                ""
+            ],
+            "QOLI_Hous": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "set_aside": [
                 "0",
@@ -1826,38 +1913,125 @@
             ]
         ],
         "hover": {
-            "set_aside": false,
-            "county": false,
-            "NAMELSAD": false,
-            "psh_score": false,
-            "need_srn_county": false
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "psh_score": [
+                true,
+                ""
+            ],
+            "need_srn_county": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "set_aside",
-            "county",
-            "NAMELSAD",
-            "qct_24",
-            "psh_score",
-            "ARI_pts",
-            "otm_pts",
-            "QOLI_pts",
-            "nelg18_pts",
-            "811_pts",
-            "county_811",
-            "city_811",
-            "srn_psh_pts",
-            "need_srn_county",
-            "city_srn",
-            "county_srn",
-            "city_plan",
-            "countyplan",
-            "recap",
-            "QOLI_Conn",
-            "QOLI_Educ",
-            "QOLI_Heal",
-            "QOLI_Prosp",
-            "QOLI_Hous"
-        ],
+        "click": {
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "psh_score": [
+                true,
+                ""
+            ],
+            "ARI_pts": [
+                true,
+                ""
+            ],
+            "otm_pts": [
+                true,
+                ""
+            ],
+            "QOLI_pts": [
+                true,
+                ""
+            ],
+            "nelg18_pts": [
+                true,
+                ""
+            ],
+            "811_pts": [
+                true,
+                ""
+            ],
+            "county_811": [
+                true,
+                ""
+            ],
+            "city_811": [
+                true,
+                ""
+            ],
+            "srn_psh_pts": [
+                true,
+                ""
+            ],
+            "need_srn_county": [
+                true,
+                ""
+            ],
+            "city_srn": [
+                true,
+                ""
+            ],
+            "county_srn": [
+                true,
+                ""
+            ],
+            "city_plan": [
+                true,
+                ""
+            ],
+            "countyplan": [
+                true,
+                ""
+            ],
+            "recap": [
+                true,
+                ""
+            ],
+            "QOLI_Conn": [
+                true,
+                ""
+            ],
+            "QOLI_Educ": [
+                true,
+                ""
+            ],
+            "QOLI_Heal": [
+                true,
+                ""
+            ],
+            "QOLI_Prosp": [
+                true,
+                ""
+            ],
+            "QOLI_Hous": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "set_aside": [
                 "0",
@@ -3554,31 +3728,97 @@
             ]
         ],
         "hover": {
-            "set_aside": false,
-            "county": false,
-            "NAMELSAD": false,
-            "gen_revit": false,
-            "need_srn_county": false
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "gen_revit": [
+                true,
+                ""
+            ],
+            "need_srn_county": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "set_aside",
-            "county",
-            "NAMELSAD",
-            "qct_24",
-            "gen_score",
-            "ARI_pts",
-            "otm_pts",
-            "nelg18_pts",
-            "811_pts",
-            "county_811",
-            "city_811",
-            "srn_gen_pts",
-            "need_srn_county",
-            "city_srn",
-            "county_srn",
-            "city_plan",
-            "countyplan"
-        ],
+        "click": {
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "gen_score": [
+                true,
+                ""
+            ],
+            "ARI_pts": [
+                true,
+                ""
+            ],
+            "otm_pts": [
+                true,
+                ""
+            ],
+            "nelg18_pts": [
+                true,
+                ""
+            ],
+            "811_pts": [
+                true,
+                ""
+            ],
+            "county_811": [
+                true,
+                ""
+            ],
+            "city_811": [
+                true,
+                ""
+            ],
+            "srn_gen_pts": [
+                true,
+                ""
+            ],
+            "need_srn_county": [
+                true,
+                ""
+            ],
+            "city_srn": [
+                true,
+                ""
+            ],
+            "county_srn": [
+                true,
+                ""
+            ],
+            "city_plan": [
+                true,
+                ""
+            ],
+            "countyplan": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "set_aside": [
                 "0",
@@ -5269,32 +5509,101 @@
             ]
         ],
         "hover": {
-            "set_aside": false,
-            "county": false,
-            "NAMELSAD": false,
-            "psh_revit": false,
-            "need_srn_county": false
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "psh_revit": [
+                true,
+                ""
+            ],
+            "need_srn_county": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "set_aside",
-            "county",
-            "NAMELSAD",
-            "qct_24",
-            "psh_revit",
-            "ARI_pts",
-            "otm_pts",
-            "QOLI_pts",
-            "nelg18_pts",
-            "811_pts",
-            "county_811",
-            "city_811",
-            "srn_psh_pts",
-            "need_srn_county",
-            "city_srn",
-            "county_srn",
-            "city_plan",
-            "countyplan"
-        ],
+        "click": {
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "psh_revit": [
+                true,
+                ""
+            ],
+            "ARI_pts": [
+                true,
+                ""
+            ],
+            "otm_pts": [
+                true,
+                ""
+            ],
+            "QOLI_pts": [
+                true,
+                ""
+            ],
+            "nelg18_pts": [
+                true,
+                ""
+            ],
+            "811_pts": [
+                true,
+                ""
+            ],
+            "county_811": [
+                true,
+                ""
+            ],
+            "city_811": [
+                true,
+                ""
+            ],
+            "srn_psh_pts": [
+                true,
+                ""
+            ],
+            "need_srn_county": [
+                true,
+                ""
+            ],
+            "city_srn": [
+                true,
+                ""
+            ],
+            "county_srn": [
+                true,
+                ""
+            ],
+            "city_plan": [
+                true,
+                ""
+            ],
+            "countyplan": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "set_aside": [
                 "0",

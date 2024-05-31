@@ -4,7 +4,9 @@
         "source_id": "schools_source",
         "url": "mapbox://wodacooper.tx_el_schools_24",
         "source_layer": "hello_world",
-        "layout": {"visibility":"none"},
+        "layout": {
+            "visibility": "none"
+        },
         "visible": false,
         "circle": {
             "circle-radius": 7,
@@ -18,25 +20,57 @@
                 "#FF6600"
             ]
         ],
-        "click": [
-            "School Name",
-            "Instruction Type",
-            "District Name",
-            "School Site Street Address",
-            "School Site City",
-            "School Site Zip",
-            "Grade Range",
-            "School Web Page Address",
-            "School Email Address",
-            "School Phone"
-        ]
+        "click": {
+            "School Name": [
+                true,
+                ""
+            ],
+            "Instruction Type": [
+                true,
+                ""
+            ],
+            "District Name": [
+                true,
+                ""
+            ],
+            "School Site Street Address": [
+                true,
+                ""
+            ],
+            "School Site City": [
+                true,
+                ""
+            ],
+            "School Site Zip": [
+                true,
+                ""
+            ],
+            "Grade Range": [
+                true,
+                ""
+            ],
+            "School Web Page Address": [
+                true,
+                ""
+            ],
+            "School Email Address": [
+                true,
+                ""
+            ],
+            "School Phone": [
+                true,
+                ""
+            ]
+        }
     },
     "cities": {
         "name": "Cities",
         "source_id": "places",
         "url": "mapbox://wodacooper.tx_places_24",
         "source_layer": "hello_world",
-        "layout": {"visibility":"none"},
+        "layout": {
+            "visibility": "none"
+        },
         "visible": false,
         "line": {
             "line-color": [
@@ -162,29 +196,89 @@
             ]
         ],
         "hover": {
-            "Region": true,
-            "pool": true,
-            "County": true,
-            "city": true,
-            "score": true,
-            "i_ua_tp": false
+            "Region": [
+                true,
+                ""
+            ],
+            "pool": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "city": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "i_ua_tp": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "Region",
-            "pool",
-            "County",
-            "city",
-            "score",
-            "pts_oi",
-            "i_oi_1_pt",
-            "pts_otm",
-            "ua_cde",
-            "recent",
-            "GEOID",
-            "PLACEFP",
-            "pts_otm_t",
-            "score_t"
-        ],
+        "click": {
+            "Region": [
+                true,
+                ""
+            ],
+            "pool": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "city": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "pts_oi": [
+                true,
+                ""
+            ],
+            "i_oi_1_pt": [
+                true,
+                ""
+            ],
+            "pts_otm": [
+                true,
+                ""
+            ],
+            "ua_cde": [
+                true,
+                ""
+            ],
+            "recent": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "PLACEFP": [
+                true,
+                ""
+            ],
+            "pts_otm_t": [
+                true,
+                ""
+            ],
+            "score_t": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "pool": [
                 "None",

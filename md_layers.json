@@ -71,10 +71,16 @@
                 "#616161"
             ]
         ],
-        "click": [
-            "transit",
-            "concatted"
-        ]
+        "click": {
+            "transit": [
+                true,
+                ""
+            ],
+            "concatted": [
+                true,
+                ""
+            ]
+        }
     },
     "transit_stops": {
         "name": "Transit Stops",
@@ -112,10 +118,16 @@
                 "#ffeb3b"
             ]
         ],
-        "click": [
-            "source",
-            "type"
-        ],
+        "click": {
+            "source": [
+                true,
+                ""
+            ],
+            "type": [
+                true,
+                ""
+            ]
+        },
         "cat_filters": {
             "type": "",
             "source": ""
@@ -176,11 +188,17 @@
                 "#2196f3"
             ]
         ],
-        "click": [
-            "NAMELSAD"
-        ],
+        "click": {
+            "NAMELSAD": [
+                true,
+                ""
+            ]
+        },
         "hover": {
-            "NAMELSAD": false
+            "NAMELSAD": [
+                true,
+                ""
+            ]
         }
     },
     "score": {
@@ -228,12 +246,24 @@
                 "#00ff00"
             ]
         ],
-        "click": [
-            "merge_auth",
-            "merge_oppo",
-            "opportunity_zone",
-            "planning_areas"
-        ]
+        "click": {
+            "merge_auth": [
+                true,
+                ""
+            ],
+            "merge_oppo": [
+                true,
+                ""
+            ],
+            "opportunity_zone": [
+                true,
+                ""
+            ],
+            "planning_areas": [
+                true,
+                ""
+            ]
+        }
     },
     "score_24": {
         "name": "2024 Score",
@@ -349,37 +379,121 @@
             ]
         ],
         "hover": {
-            "County": false,
-            "Boost": false,
-            "score": false
+            "County": [
+                true,
+                ""
+            ],
+            "Boost": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "County",
-            "dda_24",
-            "qct_24",
-            "score",
-            "score_with_ccrp",
-            "coo_pts",
-            "coo_auth",
-            "pa_oz",
-            "Federal_Zone",
-            "Rural_Village",
-            "Enterprise_Zone",
-            "Sustainable_Community",
-            "Empowerment_Zone",
-            "Maple_Street",
-            "Main_Street",
-            "Opportunity_Zone",
-            "transit_pts",
-            "train_half_mile",
-            "2_bus_lines",
-            "2_bus_lines_system",
-            "rural_1_mile",
-            "coo_1_mile",
-            "ws_pts",
-            "GEOID",
-            "VLIL_4_Person_21"
-        ],
+        "click": {
+            "County": [
+                true,
+                ""
+            ],
+            "dda_24": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "score_with_ccrp": [
+                true,
+                ""
+            ],
+            "coo_pts": [
+                true,
+                ""
+            ],
+            "coo_auth": [
+                true,
+                ""
+            ],
+            "pa_oz": [
+                true,
+                ""
+            ],
+            "Federal_Zone": [
+                true,
+                ""
+            ],
+            "Rural_Village": [
+                true,
+                ""
+            ],
+            "Enterprise_Zone": [
+                true,
+                ""
+            ],
+            "Sustainable_Community": [
+                true,
+                ""
+            ],
+            "Empowerment_Zone": [
+                true,
+                ""
+            ],
+            "Maple_Street": [
+                true,
+                ""
+            ],
+            "Main_Street": [
+                true,
+                ""
+            ],
+            "Opportunity_Zone": [
+                true,
+                ""
+            ],
+            "transit_pts": [
+                true,
+                ""
+            ],
+            "train_half_mile": [
+                true,
+                ""
+            ],
+            "2_bus_lines": [
+                true,
+                ""
+            ],
+            "2_bus_lines_system": [
+                true,
+                ""
+            ],
+            "rural_1_mile": [
+                true,
+                ""
+            ],
+            "coo_1_mile": [
+                true,
+                ""
+            ],
+            "ws_pts": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "VLIL_4_Person_21": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "County": [
                 "Allegany",

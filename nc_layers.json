@@ -19,12 +19,21 @@
             ]
         ],
         "hover": {
-            "name": false
+            "name": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "name",
-            "vicinity"
-        ]
+        "click": {
+            "name": [
+                true,
+                ""
+            ],
+            "vicinity": [
+                true,
+                ""
+            ]
+        }
     },
     "grocery": {
         "name": "Grocery",
@@ -46,12 +55,21 @@
             ]
         ],
         "hover": {
-            "name": false
+            "name": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "name",
-            "vicinity"
-        ]
+        "click": {
+            "name": [
+                true,
+                ""
+            ],
+            "vicinity": [
+                true,
+                ""
+            ]
+        }
     },
     "shopping": {
         "name": "Shopping",
@@ -73,12 +91,21 @@
             ]
         ],
         "hover": {
-            "name": false
+            "name": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "name",
-            "vicinity"
-        ]
+        "click": {
+            "name": [
+                true,
+                ""
+            ],
+            "vicinity": [
+                true,
+                ""
+            ]
+        }
     },
     "amenities": {
         "name": "Secondary Amenities",
@@ -122,12 +149,21 @@
             ]
         ],
         "hover": {
-            "name": false
+            "name": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "name",
-            "vicinity"
-        ],
+        "click": {
+            "name": [
+                true,
+                ""
+            ],
+            "vicinity": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "category": [
                 "hospital",
@@ -158,7 +194,10 @@
             ]
         ],
         "hover": {
-            "namelsad": false
+            "namelsad": [
+                true,
+                ""
+            ]
         }
     },
     "score": {
@@ -338,16 +377,37 @@
             ]
         ],
         "hover": {
-            "pool": true,
-            "county": true
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "pool",
-            "county",
-            "golden_leaf",
-            "income_designation",
-            "dhhs"
-        ],
+        "click": {
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "golden_leaf": [
+                true,
+                ""
+            ],
+            "income_designation": [
+                true,
+                ""
+            ],
+            "dhhs": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "county": [
                 "Alamance",

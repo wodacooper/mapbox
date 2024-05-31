@@ -21,13 +21,25 @@
                 "#ffffff"
             ]
         ],
-        "click": [
-            "NAMELSAD",
-            "less_than_",
-            "Population"
-        ],
+        "click": {
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "less_than_": [
+                true,
+                ""
+            ],
+            "Population": [
+                true,
+                ""
+            ]
+        },
         "hover": {
-            "NAMELSAD": false
+            "NAMELSAD": [
+                true,
+                ""
+            ]
         },
         "cat_filters": {
             "less_than_": "Population < 35k",
@@ -108,7 +120,7 @@
         },
         "visible": true,
         "line": {
-            "line-width":  [
+            "line-width": [
                 "match",
                 [
                     "get",
@@ -147,7 +159,6 @@
                 "#00ff00",
                 35,
                 "#00ffff"
-                
             ],
             "fill-opacity": [
                 "step",
@@ -189,23 +200,61 @@
             ]
         ],
         "hover": {
-            "pool": false,
-            "County": false,
-            "pov_pts": true,
-            "pdc_pts": true,
-            "qct_label": false
+            "pool": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "pov_pts": [
+                true,
+                ""
+            ],
+            "pdc_pts": [
+                true,
+                ""
+            ],
+            "qct_label": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "pool",
-            "County",
-            "total_pts",
-            "pov_pts",
-            "pdc_pts",
-            "qct_24",
-            "pop_under_35k",
-            "GEOID"
-            
-        ],
+        "click": {
+            "pool": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "total_pts": [
+                true,
+                ""
+            ],
+            "pov_pts": [
+                true,
+                ""
+            ],
+            "pdc_pts": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "pop_under_35k": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "pool": [
                 "Balance of State",
@@ -359,5 +408,4 @@
             ]
         }
     }
-    
 }

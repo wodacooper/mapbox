@@ -67,7 +67,10 @@
             ]
         ],
         "hover": {
-            "score": false
+            "score": [
+                true,
+                ""
+            ]
         },
         "num_filter_vals": {
             "score": [
@@ -218,24 +221,69 @@
             ]
         ],
         "hover": {
-            "county": false,
-            "NAMELSAD": false,
-            "total_pts": false
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "total_pts": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "county",
-            "NAMELSAD",
-            "total_pts",
-            "pts_oi",
-            "ws_pts",
-            "Wkfce_Hsg",
-            "RURAL_PTS",
-            "Transit_Pt",
-            "NeedMoreAf",
-            "NO_AWARD_P",
-            "QCT_OZONE_",
-            "Composite_"
-        ],
+        "click": {
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "total_pts": [
+                true,
+                ""
+            ],
+            "pts_oi": [
+                true,
+                ""
+            ],
+            "ws_pts": [
+                true,
+                ""
+            ],
+            "Wkfce_Hsg": [
+                true,
+                ""
+            ],
+            "RURAL_PTS": [
+                true,
+                ""
+            ],
+            "Transit_Pt": [
+                true,
+                ""
+            ],
+            "NeedMoreAf": [
+                true,
+                ""
+            ],
+            "NO_AWARD_P": [
+                true,
+                ""
+            ],
+            "QCT_OZONE_": [
+                true,
+                ""
+            ],
+            "Composite_": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "NAMELSAD": [
                 "Afton city",
@@ -508,24 +556,69 @@
             ]
         ],
         "hover": {
-            "county": false,
-            "NAMELSAD": false,
-            "total_pts": false
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "total_pts": [
+                true,
+                ""
+            ]
         },
-        "click": [
-            "county",
-            "NAMELSAD",
-            "total_pts",
-            "pts_oi",
-            "ws_pts",
-            "Wkfce_Hsg",
-            "RURAL_PTS",
-            "Transit_Pt",
-            "NeedMoreAf",
-            "NO_AWARD_P",
-            "QCT_OZONE_",
-            "Composite_"
-        ],
+        "click": {
+            "county": [
+                true,
+                ""
+            ],
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "total_pts": [
+                true,
+                ""
+            ],
+            "pts_oi": [
+                true,
+                ""
+            ],
+            "ws_pts": [
+                true,
+                ""
+            ],
+            "Wkfce_Hsg": [
+                true,
+                ""
+            ],
+            "RURAL_PTS": [
+                true,
+                ""
+            ],
+            "Transit_Pt": [
+                true,
+                ""
+            ],
+            "NeedMoreAf": [
+                true,
+                ""
+            ],
+            "NO_AWARD_P": [
+                true,
+                ""
+            ],
+            "QCT_OZONE_": [
+                true,
+                ""
+            ],
+            "Composite_": [
+                true,
+                ""
+            ]
+        },
         "cat_filter_vals": {
             "NAMELSAD": [
                 "Ada city",
