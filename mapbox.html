@@ -478,10 +478,7 @@ const bounds_dict = {
     
     const query_string = window.location.search;
     const query_vals = query_string.split('?')
-    if (query_vals[0]!='https://wodacooper.github.io/mapbox/mapbox.html'){
-        query_vals[1]='pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA'
-        query_vals[2]='ga'
-    }
+    
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
         container: 'map',
