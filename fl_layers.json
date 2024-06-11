@@ -1,44 +1,4 @@
 {
-    "qct_dda": {
-        "name": "QCT/DDA",
-        "source_id": "qct/dda_source",
-        "url": "mapbox://wodacooper.qct_dda",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "fill": {
-            "fill-color": [
-                "match",
-                [
-                    "get",
-                    "qct"
-                ],
-                1,
-                "#ffffff",
-                "#808080"
-            ],
-            "fill-opacity": [
-                "match",
-                [
-                    "get",
-                    "qct"
-                ],
-                1,
-                0.5,
-                [
-                    "match",
-                    [
-                        "get",
-                        "dda_24"
-                    ],
-                    1,
-                    0.5,
-                    0
-                ]
-            ]
-        },
     "tampa_cras": {
         "name": "Tampa CRAs",
         "source_id": "tampa_cras",
