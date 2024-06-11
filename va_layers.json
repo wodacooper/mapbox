@@ -20,7 +20,7 @@
                 "#808080"
             ],
             "fill-opacity": [
-                "step",
+                "match",
                 [
                     "get",
                     "qct"
@@ -28,7 +28,7 @@
                 1,
                 0.2,
                 [
-                    "step",
+                    "match",
                     [
                         "get",
                         "dda"
