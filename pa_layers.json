@@ -1,4 +1,64 @@
 {
+    "qct_dda": {
+        "name": "QCT/DDA",
+        "source_id": "qct/dda_source",
+        "url": "mapbox://wodacooper.qct_dda",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "qct"
+                ],
+                1,
+                "#ffffff",
+                "#808080"
+            ],
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "qct"
+                ],
+                1,
+                0.5,
+                [
+                    "match",
+                    [
+                        "get",
+                        "dda_24"
+                    ],
+                    1,
+                    0.5,
+                    0
+                ]
+            ]
+        },
+        "click":{
+            "qct":[true,""], 
+            "dda_24":[true,""], 
+            "metro":[true,""], 
+            "areaname":[true,""], 
+            "2023 Final 40th Percentile 2-Bedroom FMR":[true,"2br FMR"],
+            "2023 4-PersonVLIL ": [true, "4-Person VLIL"],
+            "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[true,"60% AMI max rent"]
+        },
+        "num_filters":{
+            "2023 Final 40th Percentile 2-Bedroom FMR":"2br FMR",
+            "2023 4-PersonVLIL ":"4-Person VLIL",
+            "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":"60% AMI max rent"
+        },
+        "num_filter_vals":{
+            "2023 Final 40th Percentile 2-Bedroom FMR":[370.0,4080.0],
+            "2023 4-PersonVLIL ":[31100.0,75350.0],
+            "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[933.0,2260.5]
+        }
+    },
     "walkscore": {
         "name": "Walkscores",
         "source_id": "pa_walkscores_2_27_23",
