@@ -4,11 +4,11 @@
         "source_id": "qct/dda_source",
         "url": "mapbox://wodacooper.qct_dda",
         "source_layer": "hello_world",
+        "state_filter":["==",["get","state"],"va"],
         "layout": {
             "visibility": "none"
         },
         "visible": false,
-        "state_filter":["==",["get","state"],"va"],
         "fill": {
             "fill-color": [
                 "match",
