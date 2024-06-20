@@ -4,7 +4,7 @@
         "source_id": "qct/dda_source",
         "url": "mapbox://wodacooper.qct_dda",
         "source_layer": "hello_world",
-        "state_filter":["==",["get","state"],"va"],
+        "state_filter":["==",["get","stusps"],"VA"],
         "layout": {
             "visibility": "none"
         },
