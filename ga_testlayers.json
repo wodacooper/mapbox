@@ -421,8 +421,8 @@
             "vicinity"
         ]
     },
-    "stable_4%": {
-        "name": "Stable + Schools 4% 2024",
+    "score_4%": {
+        "name": "4% scoring 2024",
         "source_id": "ga_stable_source",
         "url": "mapbox://wodacooper.ga_stable_source",
         "source_layer": "hello_world",
