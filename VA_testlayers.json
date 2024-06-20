@@ -8,7 +8,14 @@
             "visibility": "none"
         },
         "visible": false,
-        "state_filter":["==",["get","stusps"],"VA"],
+        "state_filter":[
+            "match",
+            [
+                "get",
+                "stusps"
+            ],
+            "VA"
+        ],
         "fill": {
             "fill-color": [
                 "match",
