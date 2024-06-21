@@ -8,6 +8,7 @@
             "visibility": "none"
         },
         "visible": false,
+        "perm_filters":[["==","stusps","TX"]],
         "fill": {
             "fill-color": [
                 "match",
