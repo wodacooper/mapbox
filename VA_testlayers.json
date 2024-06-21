@@ -8,16 +8,7 @@
             "visibility": "none"
         },
         "visible": false,
-        "state_filter":[
-            "match",
-            [
-                "get",
-                "stusps"
-            ],
-            "VA",
-            true,
-            false
-        ],
+        "perm_filters":[["==","stusps","VA"]],
         "fill": {
             "fill-color": [
                 "match",
