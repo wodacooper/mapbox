@@ -1124,6 +1124,14 @@ const bounds_dict = {
                                     
                             }
                         }
+			if(layers[layer].perm_filters){
+                            layers[layer].filters=layers[layer].filters.concat(layers[layer].perm_filters); 
+                        } 
+                        for (type of layer_types){
+                            if (layers[layer][type]){
+                                map.setFilter(layer.concat('@',type), layers[layer].filters);                   
+                            }
+                         };  
                     }
                 }
             });
