@@ -20,18 +20,22 @@ body { margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; }
 .legend-box{
     position:absolute;
-    bottom: 20px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
     padding: 10px;
     font-size:12px;
+}
+@media only screen and(max-width:600px) {
+    .legend-box{
+        font-size: 10px;
+    }
+    
 }
 </style>
 </head>
 <body>
 <script>
-map.addControl(new mapboxgl.NavigationControl());
-window.addEventListener('resize',()=>{
-    map.resize();
-})
 
 function updateNumericFilter(target) {
     console.log(target)
@@ -1151,6 +1155,18 @@ const bounds_dict = {
                 }
             });
         });
+        map.addControl(new mapboxgl.NavigationControl(),'top-right');
+
+        map.addControl(
+            new MapboxGeocoder({
+                accessToken:mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+            }),
+            'top-left'
+        )
+        window.addEventListener('resize',()=>{
+        map.resize();
+        })
         
         
     });
