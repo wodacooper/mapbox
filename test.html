@@ -1155,15 +1155,7 @@ const bounds_dict = {
                 }
             });
         });
-        map.addControl(new mapboxgl.NavigationControl(),'top-right');
-
-        map.addControl(
-            new MapboxGeocoder({
-                accessToken:mapboxgl.accessToken,
-                mapboxgl: mapboxgl
-            }),
-            'top-left'
-        )
+        map.addControl(new mapboxgl.NavigationControl());
         window.addEventListener('resize',()=>{
         map.resize();
         })
