@@ -493,7 +493,7 @@ const bounds_dict = {
 
 </style>
 <div id="map"></div>
-<div id="layer_list"></div>
+<div id="layer_box"></div>
 <div id="legend_box" class = "legend-box"></div>
 <script>
     
@@ -519,7 +519,7 @@ const bounds_dict = {
     }
 
 
-    const layer_list = document.getElementById('layer_list');
+    const layer_box = document.getElementById('layer_box');
     const legend_box = document.getElementById('legend_box');
 
 
@@ -541,6 +541,22 @@ const bounds_dict = {
         get_json().then(data => {
             layers = data;
             var sources = []
+
+            const dropdown_btn = document.createElement('button');
+            dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
+            function myfunction(){
+                if(layer_list.display === 'none'){
+                    layer_list.display='block';
+                    }else{
+                    layer_list.style.display='none';
+                }
+            }
+            dropdown_btn.addEventListener('click',myfunction);
+            layer_box.appendChild(dropdown_btn);
+
+            const layer_list = document.createElement('div');
+            layer_box.appendChild(layer_list);
+
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
                 if (map.getSource(layers[layer].source_id) == undefined){
@@ -582,17 +598,7 @@ const bounds_dict = {
                         }
                     };
                 };
-                const dropdown_btn =document.createElement('button');
-                dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
-                function myfunction(){
-                    if(layer_list.display === 'none'){
-                        layer_list.display='block';
-                        }else{
-                        layer_list.style.display='none';
-                    }
-                }
-                dropdown_btn.addEventListener('click',myfunction);
-                layer_list.appendChild(dropdown_btn);
+                
 
                 const leg_dict = layers[layer].legend;
                 if (leg_dict){
