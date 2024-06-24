@@ -548,12 +548,12 @@ const bounds_dict = {
 
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
-            function myfunction(){
-                layer_list.classList.toggle('show');
-            }
             window.onclick = function(event){
-                if(layer_list.classList.contains('show')){
-                    layer_list.classList.remove('show')
+                for(let i=0;i<dropdown.length;i++){
+                    const opendrop = dropdown[i];
+                    if(layer_list.classList.contains('show')){
+                        layer_list.classList.remove('show')
+                    }
                 }
             }
             
