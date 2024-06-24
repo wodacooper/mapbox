@@ -549,6 +549,7 @@ const bounds_dict = {
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
             window.onclick = function(event){
+                const dropdown = document.getElementsByClassName('dropbtn');
                 for(let i=0;i<dropdown.length;i++){
                     const opendrop = dropdown[i];
                     if(layer_list.classList.contains('show')){
