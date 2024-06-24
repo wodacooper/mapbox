@@ -582,6 +582,17 @@ const bounds_dict = {
                         }
                     };
                 };
+                const dropdown_btn =document.createElement('button');
+                dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
+                function myfunction(){
+                    if(layer_list.display === 'none'){
+                        layers_list.display='block';
+                        }else{
+                        layers_list.style.display='none';
+                    }
+                }
+                dropdown_btn.addEventListener('click',myfunction);
+                layer_list.appendChild(dropdown_btn);
 
                 const leg_dict = layers[layer].legend;
                 if (leg_dict){
@@ -922,18 +933,7 @@ const bounds_dict = {
                             //dropdown_arrow.textContent = 'V';
                             layer_div.appendChild(dropdown_arrow);
                         }
-                        const dropdown_btn =document.createElement('button');
-                        dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
-                        function myfunction(){
-                            if(layer_list.display === 'none'){
-                                layers_list.display='block';
-                            }else{
-                                layers_list.style.display='none';
-                            }
-                        }
-                        dropdown_btn.addEventListener('click',myfunction);
-                        layer_list.prepend(dropdown_btn);
-
+            
                         const layer_button = document.createElement('button');
                         layer_button.classList.add('dropbtn');
                         layer_button.textContent = layers[layer].name;
