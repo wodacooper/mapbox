@@ -366,7 +366,7 @@ const bounds_dict = {
         color:#fff;
     }
     .dropdown_btn{
-        position: absolute;
+        position: relative;
         top: 8px;
         left: 10px;
         color: #000000;
@@ -545,7 +545,7 @@ const bounds_dict = {
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
             function myfunction(){
-                if(layer_list.display === 'none'){
+                if(layer_list.display = 'none'){
                     layer_list.display='block';
                     }else{
                     layer_list.style.display='none';
@@ -553,8 +553,8 @@ const bounds_dict = {
             }
             dropdown_btn.addEventListener('click',myfunction);
             layer_box.appendChild(dropdown_btn);
-		
-	    const layer_list = document.createElement('div');
+
+            const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
 
             for (const layer of Object.keys(layers).reverse()){
