@@ -481,14 +481,6 @@ const bounds_dict = {
         padding: 0;
         color: #aaaaaa    
     }
-    .toggle_btn{
-        position:absolute;
-        top: 10px;
-        left: 10px;
-        cursor: pointer;
-        color:#000000;
-        
-    }
 
     .show {display: block; max-height: 200px;}
 
@@ -982,19 +974,6 @@ const bounds_dict = {
                                 dropdown_content.classList.add('dropdown-content');
                                 dropdown_content.id = layer.concat('@', cat);
                                 div.appendChild(dropdown_content);
-
-                                const toggle_btn =document.createElement('button');
-                                toggle_btn.classList.add('fa-regular','fa-ellipsis-vertical');
-                                function myfunction(){
-                                    if(layer_div.display === 'none'){
-                                        layer_div.display='block';
-                                    }else{
-                                        controls.style.display='none';
-                                        }
-                                }
-                                layer_div.addEventListener('click',myfunction);
-                                layer_div.prepend(toggle_btn);
-
                                 
                                 if (vals.length > 5) {
                                     const search = document.createElement('input');
