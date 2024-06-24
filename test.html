@@ -336,9 +336,6 @@ const bounds_dict = {
         padding: 10px 0px 10px 10px;
         border: none;
         border-bottom: 1px solid #ddd;
-	width: 100%;
-	max-width: 300px;
-	height: 40px;
     }
 
     .dropdown-content input[type='text']:focus {outline: 3px solid #ddd;}
@@ -368,7 +365,7 @@ const bounds_dict = {
         top: 8px;
         color:#fff;
     }
-    .dropdown-btn{
+    .dropdown_btn{
         position: absolute;
         top: 8px;
         left: 10px;
@@ -585,6 +582,17 @@ const bounds_dict = {
                         }
                     };
                 };
+                const dropdown_btn =document.createElement('button');
+                dropdown_btn.classList.add('fa-solid','fa-caret-down');
+                function myfunction(){
+                    if(layer_list.display === 'none'){
+                        layers_list.display='block';
+                    }else{
+                        layers_list.style.display='none';
+                    }
+                }
+            dropdown_btn.addEventListener('click',myfunction);
+            layer_list.prepend(dropdown_btn);
 
                 const leg_dict = layers[layer].legend;
                 if (leg_dict){
