@@ -541,21 +541,21 @@ const bounds_dict = {
         get_json().then(data => {
             layers = data;
             var sources = []
-		
-	    const layer_list = document.createElement('div');
-            layer_box.appendChild(layer_list);
 
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
             function myfunction(){
-                if(layer_list.display === 'none'){
-                    layer_list.display='block';
+                if(layer_list.display === 'block'){
+                    layer_list.display='none';
                     }else{
-                    layer_list.style.display='none';
+                    layer_list.style.display='block';
                 }
             }
             dropdown_btn.addEventListener('click',myfunction);
             layer_box.appendChild(dropdown_btn);
+		
+	    const layer_list = document.createElement('div');
+            layer_box.appendChild(layer_list);
 
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
