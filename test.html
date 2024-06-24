@@ -366,7 +366,7 @@ const bounds_dict = {
         color:#fff;
     }
     .dropdown_btn{
-        position: relative;
+        position: absolute;
         top: 8px;
         left: 10px;
         color: #000000;
@@ -541,6 +541,9 @@ const bounds_dict = {
         get_json().then(data => {
             layers = data;
             var sources = []
+		
+	    const layer_list = document.createElement('div');
+            layer_box.appendChild(layer_list);
 
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
@@ -553,9 +556,6 @@ const bounds_dict = {
             }
             dropdown_btn.addEventListener('click',myfunction);
             layer_box.appendChild(dropdown_btn);
-
-            const layer_list = document.createElement('div');
-            layer_box.appendChild(layer_list);
 
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
