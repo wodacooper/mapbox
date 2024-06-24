@@ -583,6 +583,7 @@ const bounds_dict = {
                     };
                 };
                 const dropdown_btn =document.createElement('button');
+		dropdown_btn.addEventListener('click',myfunction);
                 dropdown_btn.classList.add('fa-solid','fa-caret-down');
                 function myfunction(){
                     if(layer_list.display === 'none'){
@@ -591,7 +592,6 @@ const bounds_dict = {
                         layers_list.style.display='none';
                     }
                 }
-                dropdown_btn.addEventListener('click',myfunction);
                 layer_list.prepend(dropdown_btn);
 
                 const leg_dict = layers[layer].legend;
