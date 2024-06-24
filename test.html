@@ -552,8 +552,8 @@ const bounds_dict = {
                 const dropdown = document.getElementsByClassName('dropbtn');
                 for(let i=0;i<dropdown.length;i++){
                     const opendrop = dropdown[i];
-                    if(layer_list.classList.contains('show')){
-                        layer_list.classList.remove('show')
+                    if(opendrop.classList.contains('show')){
+                        opendrop.classList.remove('show')
                     }
                 }
             }
