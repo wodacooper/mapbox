@@ -18,30 +18,7 @@
 <style>
 body { margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; }
-.legend-box{
-    position:absolute;
-    right: 10px;
-    bottom: 20px;
-    padding: 10px;
-    font-size:12px;
-    overflow-y: auto;
-}
-.legend-list li{
-    display: flex;
-    align-items: center;
-}
-.legend-list span{
-    display:inline-block;
-    width: 20px;
-    height: 20px;
-}
 
-@media only screen and(max-width:600px) {
-    .legend-box{
-        font-size: 10px;
-    }
-    
-}
 </style>
 </head>
 <body>
@@ -388,6 +365,12 @@ const bounds_dict = {
         top: 8px;
         color:#fff;
     }
+    .dropdown-btn{
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        color: #000000;
+    }
 
     .dropdown-content {
         overflow-y: auto;
@@ -438,13 +421,29 @@ const bounds_dict = {
         border: 1px solid black;
         clear: both;
     }
-    .legend-box {
-        position: absolute;
-        right: 5px;
+    .legend-box{
+        position:absolute;
+        right: 10px;
         bottom: 20px;
-        max-width: 200px;
-        max-height: 400px;
+        padding: 10px;
+        font-size:12px;
         overflow-y: auto;
+    }
+    .legend-list li{
+        display: flex;
+        align-items: center;
+    }
+    .legend-list span{
+        display:inline-block;
+        width: 20px;
+        height: 20px;
+    }
+
+    @media only screen and(max-width:600px) {
+        .legend-box{
+            font-size: 10px;
+        }
+        
     }
     .legend {
         overflow-wrap: anywhere;
@@ -481,6 +480,7 @@ const bounds_dict = {
         padding: 0;
         color: #aaaaaa    
     }
+    
 
     .show {display: block; max-height: 200px;}
 
@@ -974,7 +974,7 @@ const bounds_dict = {
                                 dropdown_content.classList.add('dropdown-content');
                                 dropdown_content.id = layer.concat('@', cat);
                                 div.appendChild(dropdown_content);
-                                
+
                                 if (vals.length > 5) {
                                     const search = document.createElement('input');
                                     search.type = 'text'
