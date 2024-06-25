@@ -366,8 +366,8 @@ const bounds_dict = {
         color:#fff;
     }
     .dropdown_btn{
-        position: absolute;
-        top: 8px;
+        position: relative;
+        top: 10px;
         left: 10px;
         color: #000000;
     }
@@ -543,8 +543,6 @@ const bounds_dict = {
             layers = data;
             var sources = []
 
-
-            
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
             dropdown_btn.addEventListener('click',() =>{
@@ -555,8 +553,11 @@ const bounds_dict = {
                 }
             });
             layer_box.appendChild(dropdown_btn);
+
             const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
+            
+            layer_list.style.display ='none';
 
            
 
