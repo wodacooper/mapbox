@@ -367,8 +367,8 @@ const bounds_dict = {
     }
     .dropdown_btn{
         position: relative;
-        top: 10px;
         left: 10px;
+	top: 8px;
         color: #000000;
     }
 
@@ -557,9 +557,7 @@ const bounds_dict = {
             const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
             
-            layer_list.style.display ='none';
 
-           
 
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
