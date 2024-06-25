@@ -656,6 +656,9 @@ const bounds_dict = {
                     showCompass: false
                 })
             );
+            window.addEventListener('resize',()=>{
+            map.resize();
+            })
 
             const draw = new MapboxDraw({
                 displayControlsDefault: false,
