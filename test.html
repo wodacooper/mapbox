@@ -370,7 +370,7 @@ const bounds_dict = {
         top: 8px;
         left: 10px;
         color: #000000;
-	z-index: 1001;
+        z-index: 1001;
     }
 
     .dropdown-content {
@@ -498,8 +498,9 @@ const bounds_dict = {
 <div id="legend_box" class = "legend-box"></div>
 <script>
     
-    const query_string = window.location.search;
-    const query_vals = query_string.split('?')
+    //const query_string = window.location.search;
+    //onst query_vals = query_string.split('?')
+    const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'ga']
     
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
@@ -543,20 +544,20 @@ const bounds_dict = {
             layers = data;
             var sources = []
 
-            const layer_list = document.createElement('div');
-            layer_box.appendChild(layer_list);
-	    layer_list.style.display='none';
 
+            
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-ellipsis-vertical','dropdown_btn');
             dropdown_btn.addEventListener('click',() =>{
-                if(layer_list.style.display == 'none'){
-                    layer_list.style.display='block';
+                if(layer_list.display == 'none'){
+                    layer_list.display='block';
                     }else{
                     layer_list.style.display='none';
                 }
             });
             layer_box.appendChild(dropdown_btn);
+            const layer_list = document.createElement('div');
+            layer_box.appendChild(layer_list);
 
            
 
@@ -602,7 +603,6 @@ const bounds_dict = {
                     };
                 };
                 
-
                 const leg_dict = layers[layer].legend;
                 if (leg_dict){
                     console.log(leg_dict)
