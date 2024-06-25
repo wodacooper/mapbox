@@ -368,7 +368,9 @@ const bounds_dict = {
     .dropdown_btn{
         position: relative;
         left: 10px;
-	top: 8px;
+        top: 8px;
+        padding: 10px;
+        bottom: 10px;
         color: #000000;
     }
 
@@ -534,9 +536,7 @@ const bounds_dict = {
     var layers;
     
     
-	
 
-    
 
     map.on('load', () => {
         get_json().then(data => {
@@ -556,7 +556,6 @@ const bounds_dict = {
 
             const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
-            
 
 
             for (const layer of Object.keys(layers).reverse()){
