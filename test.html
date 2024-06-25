@@ -483,15 +483,14 @@ const bounds_dict = {
         color: #aaaaaa    
     }
     .mapboxgl-ctrl-geocoder {
-        min-width: 200px;
+        min-width: 300px;
         max-width: 400px;
     }
-    @media only screen and(max-width:600px) {
+    @media (max-width:600px) {
         .mapboxgl-ctrl-geocoder{
-            min-width: 150px;
-            max-width: 200px; 
-        }
-        
+            min-width: 50px;
+            max-width: 150px; 
+        } 
     }
 
     .show {display: block; max-height: 200px;}
@@ -537,14 +536,12 @@ const bounds_dict = {
 
 
     var allow_click = true;
-    var allow_touch = true;
     var circle_mode = false;
     var drive_mode = false;
     var init_filters = true;
     const layer_types = ['fill','circle','icon','line']
     var hover_layers = [];
     var click_layers = [];
-    var touch_layers = [];
     var layers;
     
     
