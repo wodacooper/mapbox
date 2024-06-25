@@ -482,9 +482,6 @@ const bounds_dict = {
         padding: 0;
         color: #aaaaaa    
     }
-    .mapboxgl-ctrl-geocoder{
-        max-height: 300px;
-    }
     
 
     .show {display: block; max-height: 200px;}
@@ -656,7 +653,6 @@ const bounds_dict = {
             );
             map.addControl(
                 new mapboxgl.NavigationControl({
-		    position: top-left,
                     showCompass: false
                 })
             );
