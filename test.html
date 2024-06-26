@@ -805,13 +805,8 @@ const bounds_dict = {
                 tooltip.setHTML(table.join(''));
                 if (!tooltip.isOpen()){tooltip.addTo(map)}
             });
-            map.on('touchstart',(e) =>{
-                new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
-
-            })
            
-            //map.on('click', click_layers, (e) => {
-            function handleCLick(e){
+            map.on('click', click_layers, (e) => {
                 console.log(draw.getMode());
                 if (draw.getMode() == 'simple_select') {
                     if (allow_click){
@@ -853,9 +848,8 @@ const bounds_dict = {
                 } else {
                     allow_click = false;
                 };
-            };
-            map.on('click',handleClick);
-            map.on('touchstart',handleClick);
+            });
+            map.on('touchstart',click_layers);
             
             
 
