@@ -608,14 +608,6 @@ const bounds_dict = {
                         }
                     };
                 };
-		if (layers[layer].touchend) {
-                    for (type of layer_types){
-                        if (layers[layer][type]){
-                            click_layers.push(layer.concat('@',type));
-                            break;        
-                        }
-                    };
-                };
 		
                 const leg_dict = layers[layer].legend;
                 if (leg_dict){
@@ -858,7 +850,7 @@ const bounds_dict = {
                 };
             });
 
-            map.on('touchend', click_layers, (e) => {
+            map.on('touchmove', click_layers, (e) => {
                 console.log(draw.getMode());
                 if (draw.getMode() == 'simple_select') {
                     if (allow_click){
