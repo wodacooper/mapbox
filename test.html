@@ -850,7 +850,7 @@ const bounds_dict = {
                 };
             });
 
-            map.on('touchend', click_layers, (e) => {
+            map.on('touchcancel', click_layers, (e) => {
                 console.log(draw.getMode());
                 if (draw.getMode() == 'simple_select') {
                     if (allow_click){
