@@ -849,8 +849,7 @@ const bounds_dict = {
                     allow_click = false;
                 };
             });
-            
-            
+              
 
             function updateLayerFilter(evt) {
                 // get an array of icon names that corresponds to the currently checked checkboxes
@@ -896,7 +895,6 @@ const bounds_dict = {
                     init_filters = false;
                     hover_layers.reverse();
                     click_layers.reverse();
-                    touch_layers.reverse();
                     for (const layer of Object.keys(layers)){
                         console.log(layers[layer].source_id)
 
