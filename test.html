@@ -893,9 +893,9 @@ const bounds_dict = {
                 } else {
                     allow_click = false;
                 };
-                
+                map.addEventListener('touchcancel',click_layers) 
             });
-            map.addEventListener('touchcancel',click_layers)
+            
 
 
             function updateLayerFilter(evt) {
