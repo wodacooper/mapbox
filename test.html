@@ -370,6 +370,7 @@ const bounds_dict = {
         left: 0px;
         top: 8px;
         padding: 10px;
+        bottom: 10px;
         color: #000000;
     }
 
@@ -850,7 +851,7 @@ const bounds_dict = {
                 };
             });
 
-            map.on('touchend', click_layers, (e) => {
+            map.on('touchstart', click_layers, (e) => {
                 console.log(draw.getMode());
                 if (draw.getMode() == 'simple_select') {
                     if (allow_click){
@@ -892,6 +893,7 @@ const bounds_dict = {
                 } else {
                     allow_click = false;
                 };
+                map.on('touchcancel',click_layers)
             });
 
 
