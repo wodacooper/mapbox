@@ -883,12 +883,16 @@ const bounds_dict = {
                             }
                         };
                         table.push('</div>')
-                        const touch_screen = new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
+                        const touch_screen = new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'}).trackPointer()
                         touch_screen.addTo(map)
                         .setLngLat(e.lngLat)
                         .setHTML(table.join(''))
                         .addTo(map);
-                        
+
+                        map.on('touchmove', click_layers, (e) => {
+                            touch_screen.remove()
+                        });
+
                     } else {
                         allow_click = true;
                     };
@@ -896,9 +900,6 @@ const bounds_dict = {
                 } else {
                     allow_click = false;
                 };
-                map.on('touchstart', click_layers, (e) => {
-                    touch_screen.remove()
-                });
             });
 
             map.on('touchmove', click_layers, (e) => {
@@ -933,8 +934,10 @@ const bounds_dict = {
                         table.push('</div>')
                         new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
                         .setLngLat(e.lngLat)
-                        .setHTML(table.join(''))
                         .addTo(map);
+                        
+                        touch_screen.setHTML(table.join(''));
+                        if (!touch_screen.isOpen()){touch_screen.addTo(map)}
                         
                     } else {
                         allow_click = true;
@@ -943,7 +946,6 @@ const bounds_dict = {
                 } else {
                     allow_click = false;
                 };
-                if (!touch_screen.isOpen()){touch_screen.addTo(map)}
             });
 
 
