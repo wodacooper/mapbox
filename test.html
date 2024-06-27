@@ -608,6 +608,7 @@ const bounds_dict = {
                         }
                     };
                 };
+
                 
                 const leg_dict = layers[layer].legend;
                 if (leg_dict){
@@ -882,7 +883,8 @@ const bounds_dict = {
                             }
                         };
                         table.push('</div>')
-                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
+                        const touch_screen = new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
+                        touch_screen.addTo(map)
                         .setLngLat(e.lngLat)
                         .setHTML(table.join(''))
                         .addTo(map);
