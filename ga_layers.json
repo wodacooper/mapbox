@@ -1028,7 +1028,7 @@
             ]
         ]
     },
-    "4 scoring": {
+    "4% scoring": {
         "name": "4% Scoring 2024",
         "source_id": "ga_4_24_source",
         "url": "mapbox://wodacooper.ga_4_24",
@@ -1170,6 +1170,12 @@
         },
         "num_filters": {
             "score": "4% Score"
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                13.0
+            ]
         },
         "cat_filter_vals": {
             "county": [
