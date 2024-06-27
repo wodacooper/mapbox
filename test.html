@@ -896,7 +896,7 @@ const bounds_dict = {
                 } else {
                     allow_click = false;
                 };
-                map.on('touchmove', hover_layers, (e) => {
+                map.on('touchmove', click_layers, (e) => {
                     touch_screen.remove()
                 });
             });
