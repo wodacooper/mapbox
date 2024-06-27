@@ -608,6 +608,16 @@ const bounds_dict = {
                         }
                     };
                 };
+
+                if (layers[layer].touchstart) {
+                    for (type of layer_types){
+                        if (layers[layer][type]){
+                            click_layers.push(layer.concat('@',type));
+                            break;        
+                        }
+                    };
+                };
+
                 
                 const leg_dict = layers[layer].legend;
                 if (leg_dict){
@@ -851,49 +861,6 @@ const bounds_dict = {
                 };
             });
 
-            map.on('pitchstart', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
-                                }
-                            }
-                        };
-                        table.push('</div>')
-                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
-                        .setLngLat(e.lngLat)
-                        .setHTML(table.join(''))
-                        .addTo(map);
-                        
-                    } else {
-                        allow_click = true;
-                    };
-                    
-                } else {
-                    allow_click = false;
-                };
-            });
 
             map.on('touchstart', click_layers, (e) => {
                 console.log(draw.getMode());
