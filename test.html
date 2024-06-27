@@ -889,7 +889,7 @@ const bounds_dict = {
                         .setHTML(table.join(''))
                         .addTo(map);
 
-                        map.on('touchmove', click_layers, (e) => {
+                        map.on('touchstart', click_layers, (e) => {
                             touch_screen.remove()
                         });
 
