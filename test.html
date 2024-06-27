@@ -508,9 +508,9 @@ const bounds_dict = {
 <div id="legend_box" class = "legend-box"></div>
 <script>
     
-    //const query_string = window.location.search;
-    //onst query_vals = query_string.split('?')
-    const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'ga']
+    const query_string = window.location.search;
+    const query_vals = query_string.split('?')
+    //const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'ga']
     
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
