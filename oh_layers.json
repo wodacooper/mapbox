@@ -1391,7 +1391,7 @@
                 true,
                 ""
             ],
-            "appalachian_county": [
+            "appalachian": [
                 true,
                 ""
             ],
@@ -1438,7 +1438,7 @@
         },
         "cat_filters": {
             "usr_cat": "",
-            "appalachian_county": "",
+            "appalachian": "",
             "county": "",
             "city": "",
             "boost": ""
@@ -1454,7 +1454,7 @@
                 "Suburban",
                 "Urban"
             ],
-            "appalachian_county": [
+            "appalachian": [
                 "Appalachian",
                 "Not Appalachian"
             ],
@@ -2621,7 +2621,7 @@
                 true,
                 ""
             ],
-            "appalachian_county": [
+            "appalachian": [
                 true,
                 ""
             ],
@@ -2669,7 +2669,7 @@
         "cat_filters": {
             "pool_option1": "",
             "pool_option2": "",
-            "appalachian_county": "",
+            "appalachian": "",
             "county": "",
             "city": "",
             "boost": ""
@@ -2688,7 +2688,7 @@
                 "Rural",
                 "Metro"
             ],
-            "appalachian_county": [
+            "appalachian": [
                 "Appalachian",
                 "Not Appalachian"
             ],
