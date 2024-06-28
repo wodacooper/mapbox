@@ -678,9 +678,9 @@ const bounds_dict = {
                 //defaultMode: 'draw_polygon'
             });
 
-            map.addControl(draw, 'bottom-left');
+            map.addControl(draw, 'top-right');
 
-            const controls = document.getElementsByClassName('mapboxgl-ctrl-bottom-left')[0].firstElementChild;
+            const controls = document.getElementsByClassName('mapboxgl-ctrl-top-right')[0].firstElementChild;
 
             const delete_btn = document.getElementsByClassName('mapbox-gl-draw_trash')[0]
             delete_btn.classList.remove('mapbox-gl-draw_trash', 'mapbox-gl-draw_ctrl-draw-btn')
