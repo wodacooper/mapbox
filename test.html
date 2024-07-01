@@ -580,6 +580,17 @@ const bounds_dict = {
             const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
 
+            const legend_btn = document.createElement('button');
+            legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
+            legend_btn.addEventListener('click',() =>{
+                if(legend_box.style.display == 'none'){
+                    legend_box.style.display='block';
+                    }else{
+                    legend_box.style.display='none';
+                }
+            });
+            legend_box.appendChild(legend_btn);
+
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
                 if (map.getSource(layers[layer].source_id) == undefined){
@@ -641,16 +652,6 @@ const bounds_dict = {
                         row. innerHTML = `<span style="background-color:${pair[1]}"></span> &nbsp;${pair[0]}`;
                         legend.appendChild(row);
                     };
-                    const legend_btn = document.createElement('button');
-                    legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
-                    legend_btn.addEventListener('click',() =>{
-                        if(legend_box.style.display == 'none'){
-                            legend_box.style.display='block';
-                            }else{
-                            legend_box.style.display='none';
-                        }
-                    });
-                    legend_box.appendChild(legend_btn);
                 };
             };
 
