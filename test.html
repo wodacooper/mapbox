@@ -579,20 +579,21 @@ const bounds_dict = {
             const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
 
-            
             const legend_btn = document.createElement('button');
             legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
             legend_btn.addEventListener('click',() =>{
-                if(legend_list.style.display == 'none'){
-                    legend_list.style.display='block';
+                if(legend_div.style.display == 'none'){
+                    legend_div.style.display='block';
                 }else{
-                    legend_list.style.display ='none';
+                    legend_div.style.display ='none';
                 }
             });
             legend_box.appendChild(legend_btn);
             
             const legend_list = document.createElement('div');
-            legend_box.appendChild(legend_list);
+            legend_box.appendChild(legend_div);
+
+            
 
 
             for (const layer of Object.keys(layers).reverse()){
@@ -658,7 +659,7 @@ const bounds_dict = {
                     };
                 };
             };
-
+        
             const coordinatesGeocoder = function (query)  {
                 const matches = query.match(/^[ ]*(?:Lat: )?(-?\d+\.?\d*)[, ]+(?:Lng: )?(-?\d+\.?\d*)[ ]*$/i);
                 if (!matches) {
