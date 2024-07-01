@@ -501,7 +501,12 @@ const bounds_dict = {
         } 
     }
 
-   
+    .mapboxgl-ctrl-group{
+        display: flex;
+        flex-direction: row;
+    }
+
+
     .show {display: block; max-height: 200px;}
 
     .show input[type='range'] {position: absolute;}
@@ -680,7 +685,7 @@ const bounds_dict = {
                 controls: {
                 polygon: true,
                 line_string: true,
-                trash: true,
+                trash: true
                 },
                 // Set mapbox-gl-draw to draw by default.
                 // The user does not have to click the polygon control button first.
@@ -732,13 +737,13 @@ const bounds_dict = {
             });
             controls.prepend(drive_btn);
 
-            const toggle_btn =document.createElement('button');
-            toggle_btn.classList.add('fa-solid','fa-caret-down');
+            const toggle_btn = document.createElement('button');
+            toggle_btn.classList.add('fa-solid','fa-caret-down','toggle_btn');
             toggle_btn.addEventListener('click',() =>{
                 if(controls.style.display == 'none'){
-                    controls.style.display='block';
+                    controls.style.display = 'block';
                     }else{
-                    controls.style.display='none';
+                    controls.style.display = 'none';
                 }
             });
             controls.appendChild(toggle_btn);
