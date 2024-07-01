@@ -366,13 +366,11 @@ const bounds_dict = {
         color:#fff;
     }
     .dropdown_btn{
-	backgroud-color: none;
+        background-color: none;
         position: relative;
         left: 0px;
-	top: 10px;
-        bottom: 10px;
-	padding: 10px;
-        text-align: center;
+        top: 10px;
+        padding:10px;
         color: #000000;
     }
 
@@ -442,6 +440,14 @@ const bounds_dict = {
         width: 20px;
         height: 20px;
     }
+    .legend_btn{
+        background-color: none;
+        position: relative;
+        left: 0px;
+        top: 10px;
+        padding:10px;
+        color: #000000;
+    }
 
     @media only screen and(max-width:600px) {
         .legend-box{
@@ -499,11 +505,10 @@ const bounds_dict = {
         display: flex;
         flex-direction: row;
     }
-
     .mapboxgl-ctrl .mapboxgl-ctrl-logo{
         display: none;
     }
-    
+   
     .show {display: block; max-height: 200px;}
 
     .show input[type='range'] {position: absolute;}
@@ -641,6 +646,18 @@ const bounds_dict = {
                     };
                 };
             };
+
+            const legend_btn = document.createElement('button');
+            legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
+            dropdown_btn.addEventListener('click',() =>{
+                if(legend_box.style.display == 'none'){
+                    legend_box.style.display='block';
+                    }else{
+                    legend_box.style.display='none';
+                }
+            });
+            legend_box.appendChild(legend_btn);
+
             const coordinatesGeocoder = function (query)  {
                 const matches = query.match(/^[ ]*(?:Lat: )?(-?\d+\.?\d*)[, ]+(?:Lng: )?(-?\d+\.?\d*)[ ]*$/i);
                 if (!matches) {
