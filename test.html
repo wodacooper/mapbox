@@ -441,11 +441,9 @@ const bounds_dict = {
         height: 20px;
     }
     .legend_btn{
-        background-color: none;
         position: relative;
         left: 0px;
-        top: 10px;
-        padding:10px;
+        top: 0px;
         color: #000000;
     }
 
@@ -649,7 +647,7 @@ const bounds_dict = {
 
             const legend_btn = document.createElement('button');
             legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
-            dropdown_btn.addEventListener('click',() =>{
+            legend_btn.addEventListener('click',() =>{
                 if(legend_box.style.display == 'none'){
                     legend_box.style.display='block';
                     }else{
