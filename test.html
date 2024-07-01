@@ -590,12 +590,6 @@ const bounds_dict = {
             });
             legend_box.appendChild(legend_btn);
             
-            const legend_list = document.createElement('div');
-            legend_box.appendChild(legend_div);
-
-            
-
-
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
                 if (map.getSource(layers[layer].source_id) == undefined){
