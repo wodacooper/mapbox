@@ -492,6 +492,14 @@ const bounds_dict = {
             max-width: 250px; 
         } 
     }
+
+    .toggle_btn {
+        position:absolute;
+        left: 10px;
+        top: 8px;
+        cursor: pointer;
+        color:#000000;
+    }
    
     .show {display: block; max-height: 200px;}
 
@@ -722,6 +730,17 @@ const bounds_dict = {
                 drive_mode = true;
             });
             controls.prepend(drive_btn);
+
+            const toggle_btn =document.createElement('button');
+            toggle_btn.classList.add('fa-solid','fa-caret-down');
+            toggle_btn.addEventListener('click',() =>{
+                if(controls.style.display == 'none'){
+                    controls.style.display='block';
+                    }else{
+                    controls.style.display='none';
+                }
+            });
+            controls.appendChild(toggle_btn);
 
             async function getIso(e) {
                 if(drive_mode){
