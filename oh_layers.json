@@ -1234,7 +1234,7 @@
                 "step",
                 [
                     "get",
-                    "bgf_score"
+                    "discount_pts"
                 ],
                 "#9e9e9e",
                 2,
