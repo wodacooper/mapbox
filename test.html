@@ -368,18 +368,9 @@ const bounds_dict = {
     .dropdown_btn{
         position: relative;
         left: 0px;
-        top: 8px;
-        padding: 10px;
         bottom: 10px;
+        text-align: center;
         color: #000000;
-    }
-
-    .toggle_btn {
-        position:absolute;
-        left: 10px;
-        top: 8px;
-        cursor: pointer;
-        color:#000000;
     }
 
     .dropdown-content {
@@ -505,6 +496,9 @@ const bounds_dict = {
         display: flex;
         flex-direction: row;
     }
+    .mapboxgl-ctrl-logo{
+        display: none;
+    }
 
 
     .show {display: block; max-height: 200px;}
@@ -567,7 +561,7 @@ const bounds_dict = {
             var sources = []
 
             const dropdown_btn = document.createElement('button');
-            dropdown_btn.classList.add('fa-solid','fa-ellipsis','dropdown_btn');
+            dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn');
             dropdown_btn.addEventListener('click',() =>{
                 if(layer_list.style.display == 'none'){
                     layer_list.style.display='block';
