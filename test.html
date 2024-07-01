@@ -580,6 +580,17 @@ const bounds_dict = {
             const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
 
+            const legend_btn = document.createElement('button');
+            legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
+            legend_btn.addEventListener('click',() =>{
+                if(legend_box.style.display == 'none'){
+                    legend_box.style.display='block';
+                    }else{
+                    legend_box.style.display='none';
+                }
+            });
+            legend_box.appendChild(legend_btn);
+
 
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
@@ -644,17 +655,6 @@ const bounds_dict = {
                     };
                 };
             };
-
-            const legend_btn = document.createElement('button');
-            legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
-            legend_btn.addEventListener('click',() =>{
-                if(legend_box.style.display == 'none'){
-                    legend_box.style.display='block';
-                    }else{
-                    legend_box.style.display='none';
-                }
-            });
-            legend_box.appendChild(legend_btn);
 
             const coordinatesGeocoder = function (query)  {
                 const matches = query.match(/^[ ]*(?:Lat: )?(-?\d+\.?\d*)[, ]+(?:Lng: )?(-?\d+\.?\d*)[ ]*$/i);
