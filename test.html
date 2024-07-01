@@ -582,14 +582,20 @@ const bounds_dict = {
             const legend_btn = document.createElement('button');
             legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
             legend_btn.addEventListener('click',() =>{
-                if(legend_div.style.display == 'none'){
-                    legend_div.style.display='block';
+                if(legend.style.display == 'none'){
+                    legend.style.display='block';
                 }else{
-                    legend_div.style.display ='none';
+                    legend.style.display ='none';
                 }
             });
             legend_box.appendChild(legend_btn);
             
+            const legend = document.createElement('div');
+            legend_box.appendChild(legend);
+
+            
+
+
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
                 if (map.getSource(layers[layer].source_id) == undefined){
