@@ -5,7 +5,7 @@
 <script> 
 </script>
 <title>Map</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 <style>
 body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; }
+
 </style>
 </head>
 <body>
@@ -364,6 +365,12 @@ const bounds_dict = {
         top: 8px;
         color:#fff;
     }
+    .dropdown_btn{
+        position: relative;
+        left: 0px;
+        top: 0px;
+        color: #000000;
+    }
 
     .dropdown-content {
         overflow-y: auto;
@@ -385,7 +392,6 @@ const bounds_dict = {
         border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     }
 
-    
     .dropdown-content input[type='checkbox'] + label:hover,
     .dropdown-content input[type='checkbox']:checked + label {
         background-color: #fff;
@@ -394,6 +400,12 @@ const bounds_dict = {
     .dropdown-content input[type='checkbox']:checked + label:before {
         content: '✔';
         margin-right: 5px;
+    }
+    @media (max-width:600px){
+        .dropbtn{
+            font-size: 14px;
+            padding: 8px;
+        }
     }
 
     .dropdown a:hover {background-color: #ddd;}
@@ -407,25 +419,35 @@ const bounds_dict = {
         border: 1px solid black;
         clear: both;
     }
-
-    .calculation-box {
-    height: 40px;
-    width: 50px;
-    position: absolute;
-    bottom: 50px;
-    left: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    text-align: center;
-    }
-    
-    .legend-box {
-        position: absolute;
-        right: 5px;
+    .legend-box{
+        position:absolute;
+        right: 10px;
         bottom: 20px;
-        max-width: 200px;
-        max-height: 400px;
+        padding: 10px;
+        font-size:12px;
         overflow-y: auto;
+    }
+    .legend-list li{
+        display: flex;
+        align-items: center;
+    }
+    .legend-list span{
+        display:inline-block;
+        width: 20px;
+        height: 20px;
+    }
+    .legend_btn{
+        position: relative;
+        left: 0px;
+        top: 0px;
+        color: #000000;
+    }
+
+    @media only screen and(max-width:600px) {
+        .legend-box{
+            font-size: 10px;
+        }
+        
     }
     .legend {
         overflow-wrap: anywhere;
@@ -462,7 +484,22 @@ const bounds_dict = {
         padding: 0;
         color: #aaaaaa    
     }
+    .mapboxgl-ctrl-geocoder {
+        min-width: 300px;
+        max-width: 400px;
+    }
+    @media (max-width:600px) {
+        .mapboxgl-ctrl-geocoder{
+            min-width: 100px;
+            max-width: 250px; 
+        } 
+    }
 
+    .mapboxgl-ctrl-bottom-left .mapboxgl-ctrl-group{
+        display: flex;
+        flex-direction: row;
+    }
+   
     .show {display: block; max-height: 200px;}
 
     .show input[type='range'] {position: absolute;}
@@ -474,15 +511,13 @@ const bounds_dict = {
 
 </style>
 <div id="map"></div>
-<div id="layer_list"></div>
+<div id="layer_box"></div>
 <div id="legend_box" class = "legend-box"></div>
-<div class="calculation-box">
-    <div id="calculated-area"></div>
-    </div>
 <script>
     
-    const query_string = window.location.search;
-    const query_vals = query_string.split('?')
+    //const query_string = window.location.search;
+    //onst query_vals = query_string.split('?')
+    const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'ga']
     
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
@@ -503,7 +538,7 @@ const bounds_dict = {
     }
 
 
-    const layer_list = document.getElementById('layer_list');
+    const layer_box = document.getElementById('layer_box');
     const legend_box = document.getElementById('legend_box');
 
 
@@ -517,14 +552,58 @@ const bounds_dict = {
     var layers;
     
     
-	
 
-    
 
     map.on('load', () => {
         get_json().then(data => {
             layers = data;
             var sources = []
+
+            const dropdown_btn = document.createElement('button');
+            dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn');
+            dropdown_btn.addEventListener('click',() =>{
+                if(layer_list.style.display == 'none'){
+                    layer_list.style.display='block';
+                    dropdown_btn.classList.remove('fa-solid','fa-caret-down','dropdown_btn') 
+                    dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
+                    
+                
+                }else{
+                    layer_list.style.display='none';
+                    dropdown_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn') 
+                    dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn')
+                }
+            });
+            
+            const layer_list = document.createElement('div');
+            layer_box.appendChild(layer_list);
+
+            layer_box.appendChild(dropdown_btn);
+
+          
+
+            const legend_btn = document.createElement('button');
+            legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
+            legend_btn.addEventListener('click',() =>{
+                if(legend_inner.style.display == 'none'){
+                    legend_inner.style.display='block';
+                    legend_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn') 
+                    legend_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn')
+                    
+                }else{
+                    legend_inner.style.display ='none';
+                    legend_btn.classList.remove('fa-solid','fa-caret-down','dropdown_btn') 
+                    legend_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
+                }
+            });
+            legend_box.appendChild(legend_btn);
+            
+            const legend_inner = document.createElement('div');
+            legend_box.appendChild(legend_inner);
+            
+           
+
+            
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
                 if (map.getSource(layers[layer].source_id) == undefined){
@@ -567,6 +646,7 @@ const bounds_dict = {
                     };
                 };
 
+                
                 const leg_dict = layers[layer].legend;
                 if (leg_dict){
                     console.log(leg_dict)
@@ -575,7 +655,7 @@ const bounds_dict = {
                     legend_div.classList.add('legend');
                     if (layers[layer].visible){legend_div.classList.add('show');};
                     legend_div.innerText = layers[layer].name;
-                    legend_box.appendChild(legend_div);
+                    legend_inner.appendChild(legend_div);
 
                     const legend = document.createElement('ul');
                     legend.classList.add('legend-list');
@@ -587,6 +667,7 @@ const bounds_dict = {
                     };
                 };
             };
+        
             const coordinatesGeocoder = function (query)  {
                 const matches = query.match(/^[ ]*(?:Lat: )?(-?\d+\.?\d*)[, ]+(?:Lng: )?(-?\d+\.?\d*)[ ]*$/i);
                 if (!matches) {
@@ -628,12 +709,13 @@ const bounds_dict = {
                 controls: {
                 polygon: true,
                 line_string: true,
-                trash: true,
+                trash: true
                 },
                 // Set mapbox-gl-draw to draw by default.
                 // The user does not have to click the polygon control button first.
                 //defaultMode: 'draw_polygon'
             });
+
             map.addControl(draw, 'bottom-left');
 
             const controls = document.getElementsByClassName('mapboxgl-ctrl-bottom-left')[0].firstElementChild;
@@ -693,7 +775,7 @@ const bounds_dict = {
 
             map.on('click', getIso);
 
-            map.on('draw.create', updateArea);
+            /*map.on('draw.create', updateArea);
             map.on('draw.delete', updateArea);
             map.on('draw.update', updateArea);
 
@@ -722,7 +804,7 @@ const bounds_dict = {
                 } else {
                     answer.innerHTML = '';
                 };
-            };
+            };*/
 
             const tooltip = new mapboxgl.Popup({anchor: 'top-left', closeOnClick: false, closeButton: false}).trackPointer()
                         
@@ -763,7 +845,7 @@ const bounds_dict = {
                 tooltip.setHTML(table.join(''));
                 if (!tooltip.isOpen()){tooltip.addTo(map)}
             });
-
+           
             map.on('click', click_layers, (e) => {
                 console.log(draw.getMode());
                 if (draw.getMode() == 'simple_select') {
@@ -808,7 +890,103 @@ const bounds_dict = {
                 };
             });
 
-            
+
+            map.on('touchstart', click_layers, (e) => {
+                console.log(draw.getMode());
+                if (draw.getMode() == 'simple_select') {
+                    if (allow_click){
+                        let table = ['<div style="line-height: 100%">']
+                        for (layer_name of click_layers) {
+                            layer = layer_name.split('@')[0];
+                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
+                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
+                                if (feature) {
+                                    console.log(feature)
+                                    table.push(`<h3>${layers[layer].name}</h3>`)
+                                    const click_cats = layers[layer]['click'];
+                                    for (let [cat, args] of Object.entries(click_cats)){
+                                        let value = feature.properties[cat];
+                                        if (value||value == 0){
+                                            if(args[0]){
+                                                if(args[1]==""){
+                                                    table.push(`<h4>${cat}</h4>`);
+                                                } else{
+                                                    table.push(`<h4>${args[1]}</h4>`);
+                                                }
+                                            }
+                                            table.push(`<p>${value}</p>`);
+                                        }
+                                    };                        
+                                }
+                            }
+                        };
+                        table.push('</div>')
+                        const touch_screen = new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'}).trackPointer()
+                        touch_screen.addTo(map)
+                        .setLngLat(e.lngLat)
+                        .setHTML(table.join(''))
+                        .addTo(map);
+
+                        map.on('touchstart', click_layers, (e) => {
+                            touch_screen.remove()
+                        });
+
+                    } else {
+                        allow_click = true;
+                    };
+                    
+                } else {
+                    allow_click = false;
+                };
+            });
+
+            map.on('touchmove', click_layers, (e) => {
+                console.log(draw.getMode());
+                if (draw.getMode() == 'simple_select') {
+                    if (allow_click){
+                        let table = ['<div style="line-height: 100%">']
+                        for (layer_name of click_layers) {
+                            layer = layer_name.split('@')[0];
+                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
+                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
+                                if (feature) {
+                                    console.log(feature)
+                                    table.push(`<h3>${layers[layer].name}</h3>`)
+                                    const click_cats = layers[layer]['click'];
+                                    for (let [cat, args] of Object.entries(click_cats)){
+                                        let value = feature.properties[cat];
+                                        if (value||value == 0){
+                                            if(args[0]){
+                                                if(args[1]==""){
+                                                    table.push(`<h4>${cat}</h4>`);
+                                                } else{
+                                                    table.push(`<h4>${args[1]}</h4>`);
+                                                }
+                                            }
+                                            table.push(`<p>${value}</p>`);
+                                        }
+                                    };                        
+                                }
+                            }
+                        };
+                        table.push('</div>')
+                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
+                        .setLngLat(e.lngLat)
+                        .addTo(map);
+                        
+                        touch_screen.setHTML(table.join(''));
+                        if (!touch_screen.isOpen()){touch_screen.addTo(map)}
+                        
+                    } else {
+                        allow_click = true;
+                    };
+                    
+                } else {
+                    allow_click = false;
+                };
+            });
+
+
 
             function updateLayerFilter(evt) {
                 // get an array of icon names that corresponds to the currently checked checkboxes
@@ -906,7 +1084,7 @@ const bounds_dict = {
                             //dropdown_arrow.textContent = 'V';
                             layer_div.appendChild(dropdown_arrow);
                         }
-
+            
                         const layer_button = document.createElement('button');
                         layer_button.classList.add('dropbtn');
                         layer_button.textContent = layers[layer].name;
@@ -959,7 +1137,6 @@ const bounds_dict = {
                                 dropdown_content.id = layer.concat('@', cat);
                                 div.appendChild(dropdown_content);
 
-                                
                                 if (vals.length > 5) {
                                     const search = document.createElement('input');
                                     search.type = 'text'
@@ -1141,8 +1318,9 @@ const bounds_dict = {
                 }
             });
         });
-        
-        
+        window.addEventListener('resize',()=>{
+        map.resize();
+        })  
     });
 </script>
 
