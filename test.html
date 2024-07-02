@@ -571,10 +571,11 @@ const bounds_dict = {
                     layer_list.style.display='none';
                 }
             });
+            
+            const layer_list = document.createElement('div');
+            layer_box.appendChild(layer_list);
 
             layer_box.appendChild(dropdown_btn);
-	    const layer_list = document.createElement('div');
-            layer_box.appendChild(layer_list);
 
           
 
@@ -772,7 +773,7 @@ const bounds_dict = {
 
 
             
-            /*function updateArea(e) {
+            function updateArea(e) {
                 const data = draw.getAll();
                 const answer = document.getElementById('calculated-area');
                 const num_features = data.features.length
@@ -796,7 +797,6 @@ const bounds_dict = {
                     answer.innerHTML = '';
                 };
             };
-            */
 
             const tooltip = new mapboxgl.Popup({anchor: 'top-left', closeOnClick: false, closeButton: false}).trackPointer()
                         
