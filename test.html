@@ -369,7 +369,6 @@ const bounds_dict = {
         position: relative;
         left: 5px;
         top: 0px;
-        text-align: center;
         color: #000000;
     }
 
@@ -407,7 +406,6 @@ const bounds_dict = {
             font-size: 14px;
             padding: 8px;
         }
-        
     }
 
     .dropdown a:hover {background-color: #ddd;}
@@ -578,22 +576,7 @@ const bounds_dict = {
             const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
 
-            const legend_btn = document.createElement('button');
-            legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
-            legend_btn.addEventListener('click',() =>{
-                if(legend.style.display == 'none'){
-                    legend.style.display='block';
-                }else{
-                    legend.style.display ='none';
-                }
-            });
-            legend_box.appendChild(legend_btn);
             
-            const legend = document.createElement('div');
-            legend_box.appendChild(legend);
-
-            
-
 
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
@@ -647,6 +630,20 @@ const bounds_dict = {
                     if (layers[layer].visible){legend_div.classList.add('show');};
                     legend_div.innerText = layers[layer].name;
                     legend_box.appendChild(legend_div);
+
+                    const legend_btn = document.createElement('button');
+                    legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
+                    legend_btn.addEventListener('click',() =>{
+                        if(legend_list.style.display == 'none'){
+                            legend_list.style.display=='block';
+                        }else{
+                            legend_list.style.display =='none';
+                        }
+                    });
+                    legend_box.appendChild(legend_btn);
+            
+                    const legend_list = document.createElement('div');
+                    legend_box.appendChild(legend_list);
 
                     const legend = document.createElement('ul');
                     legend.classList.add('legend-list');
