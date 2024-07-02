@@ -571,24 +571,29 @@ const bounds_dict = {
                     layer_list.style.display='none';
                 }
             });
-            layer_box.appendChild(dropdown_btn);
-
+            
             const layer_list = document.createElement('div');
             layer_box.appendChild(layer_list);
+
+            layer_box.appendChild(dropdown_btn);
+
+          
 
             const legend_btn = document.createElement('button');
             legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
             legend_btn.addEventListener('click',() =>{
                 if(legend.style.display == 'none'){
-                    legend.style.display='block';
+                    legend_inner.style.display='block';
                 }else{
-                    legend.style.display ='none';
+                    legend_inner.style.display ='none';
                 }
             });
+            const legend_inner = document.createElement('div');
+            legend_box.appendChild(legend_inner);
+
             legend_box.appendChild(legend_btn);
             
-            const legend = document.createElement('div');
-            legend_box.appendChild(legend);
+           
 
             
             for (const layer of Object.keys(layers).reverse()){
@@ -642,7 +647,7 @@ const bounds_dict = {
                     legend_div.classList.add('legend');
                     if (layers[layer].visible){legend_div.classList.add('show');};
                     legend_div.innerText = layers[layer].name;
-                    legend_box.appendChild(legend_div);
+                    legend_inner.appendChild(legend_div);
 
                     const legend = document.createElement('ul');
                     legend.classList.add('legend-list');
@@ -768,7 +773,7 @@ const bounds_dict = {
 
 
             
-            function updateArea(e) {
+            /*function updateArea(e) {
                 const data = draw.getAll();
                 const answer = document.getElementById('calculated-area');
                 const num_features = data.features.length
@@ -792,6 +797,7 @@ const bounds_dict = {
                     answer.innerHTML = '';
                 };
             };
+            */
 
             const tooltip = new mapboxgl.Popup({anchor: 'top-left', closeOnClick: false, closeButton: false}).trackPointer()
                         
