@@ -367,7 +367,7 @@ const bounds_dict = {
     }
     .dropdown_btn{
         position: relative;
-        left: 5px;
+        left: 20px;
         top: 0px;
         color: #000000;
     }
@@ -499,9 +499,6 @@ const bounds_dict = {
         display: flex;
         flex-direction: row;
     }
-    .mapboxgl-ctrl .mapboxgl-ctrl-logo{
-        display: none;
-    }
    
     .show {display: block; max-height: 200px;}
 
@@ -563,12 +560,18 @@ const bounds_dict = {
             var sources = []
 
             const dropdown_btn = document.createElement('button');
-            dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn');
+            dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn');
             dropdown_btn.addEventListener('click',() =>{
                 if(layer_list.style.display == 'none'){
                     layer_list.style.display='block';
+                    dropdown_btn.classList.remove('fa-solid','fa-caret-down','dropdown_btn') 
+                    dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
+                    
+                
                 }else{
                     layer_list.style.display='none';
+                    dropdown_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn') 
+                    dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn')
                 }
             });
             
@@ -582,16 +585,21 @@ const bounds_dict = {
             const legend_btn = document.createElement('button');
             legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
             legend_btn.addEventListener('click',() =>{
-                if(legend.style.display == 'none'){
+                if(legend_inner.style.display == 'none'){
                     legend_inner.style.display='block';
+                    legend_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn') 
+                    legend_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn')
+                    
                 }else{
                     legend_inner.style.display ='none';
+                    legend_btn.classList.remove('fa-solid','fa-caret-down','dropdown_btn') 
+                    legend_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
                 }
             });
+            legend_box.appendChild(legend_btn);
+            
             const legend_inner = document.createElement('div');
             legend_box.appendChild(legend_inner);
-
-            legend_box.appendChild(legend_btn);
             
            
 
@@ -767,7 +775,7 @@ const bounds_dict = {
 
             map.on('click', getIso);
 
-            map.on('draw.create', updateArea);
+            /*map.on('draw.create', updateArea);
             map.on('draw.delete', updateArea);
             map.on('draw.update', updateArea);
 
@@ -796,7 +804,7 @@ const bounds_dict = {
                 } else {
                     answer.innerHTML = '';
                 };
-            };
+            };*/
 
             const tooltip = new mapboxgl.Popup({anchor: 'top-left', closeOnClick: false, closeButton: false}).trackPointer()
                         
