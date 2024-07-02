@@ -367,7 +367,7 @@ const bounds_dict = {
     }
     .dropdown_btn{
         position: relative;
-        left: 0px;
+        left: 5px;
         top: 0px;
         color: #000000;
     }
@@ -579,17 +579,16 @@ const bounds_dict = {
             const legend_btn = document.createElement('button');
             legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
             legend_btn.addEventListener('click',() =>{
-                if(legend.style.display == 'none'){
-                    legend.style.display='block';
+                if(show_filters.style.display == 'none'){
+                    show_filters.style.display='block';
                 }else{
-                    legend.style.display ='none';
+                    show_filters.style.display ='none';
                 }
             });
             legend_box.appendChild(legend_btn);
             
-            const legend = document.createElement('div');
-            legend_box.appendChild(legend);
-
+            const show_filters = document.createElement('div');
+            legend_box.appendChild(show_filters);
 
 
             for (const layer of Object.keys(layers).reverse()){
