@@ -60,6 +60,63 @@
             "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[933.0,2260.5]
         }
     },
+    "has": {
+        "name": "Housing Authorities",
+        "source_id": "md_has_source",
+        "url": "mapbox://wodacooper.md_has",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Low-Rent",
+                "#ff9800",
+                "#ffeb3b"
+            ]
+        },
+        "legend": [
+            [
+                "Low Rent",
+                "#ff9800"
+            ],
+            [
+                "Section 8/ Combined",
+                "#ffeb3b"
+            ]
+        ],
+        "click": {
+            "name": [
+                true,
+                ""
+            ],
+            "type": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "phone": [
+                true,
+                ""
+            ],
+            "email": [
+                true,
+                ""
+            ]
+        }
+    },
     "eligibility": {
         "name": "Eligibility",
         "source_id": "md_eligibility",
@@ -99,49 +156,6 @@
                 "#000000"
             ]
         ]
-    },
-    "transit": {
-        "name": "Transit Points",
-        "source_id": "md_transit",
-        "url": "mapbox://wodacooper.md_transit",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-color": "#ffffff",
-            "line-opacity": 0.2
-        },
-        "fill": {
-            "fill-color": "#616161",
-            "fill-opacity": [
-                "match",
-                [
-                    "get",
-                    "transit"
-                ],
-                "no",
-                0.8,
-                0
-            ]
-        },
-        "legend": [
-            [
-                "No Transit",
-                "#616161"
-            ]
-        ],
-        "click": {
-            "transit": [
-                true,
-                ""
-            ],
-            "concatted": [
-                true,
-                ""
-            ]
-        }
     },
     "transit_stops": {
         "name": "Transit Stops",
@@ -257,70 +271,6 @@
         },
         "hover": {
             "NAMELSAD": [
-                true,
-                ""
-            ]
-        }
-    },
-    "score": {
-        "name": "Comunity Impact",
-        "source_id": "score_source",
-        "url": "mapbox://wodacooper.md_scores",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "fill": {
-            "fill-color": [
-                "match",
-                [
-                    "get",
-                    "pts"
-                ],
-                "12",
-                "#00ff00",
-                "16",
-                "#00ffff",
-                "#ffffff"
-            ],
-            "fill-opacity": [
-                "match",
-                [
-                    "get",
-                    "pts"
-                ],
-                "12",
-                0.6,
-                "16",
-                0.6,
-                0
-            ]
-        },
-        "legend": [
-            [
-                "16",
-                "#00ffff"
-            ],
-            [
-                "12",
-                "#00ff00"
-            ]
-        ],
-        "click": {
-            "merge_auth": [
-                true,
-                ""
-            ],
-            "merge_oppo": [
-                true,
-                ""
-            ],
-            "opportunity_zone": [
-                true,
-                ""
-            ],
-            "planning_areas": [
                 true,
                 ""
             ]
