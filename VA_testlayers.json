@@ -1,8 +1,10 @@
 {
-    "vector":{
+    "sources":{
+        "type":"vector",
+        "url": "mapbox://mapbox.mapbox-terrain-v2"
+    "layer":{
         "id": "terrain-data",
         "source_id":"mapbox-terrain-v2",
-        "url": "mapbox://mapbox.mapbox-terrain-v2",
         "type": "line",
         "source": "mapbox-terrain",
         "source-layer": "contour",
@@ -14,6 +16,7 @@
             "line-color": "#ff69b4",
             "line-width": 1
         }
+    }
     }, 
     "qct_dda": {
         "name": "QCT/DDA",
