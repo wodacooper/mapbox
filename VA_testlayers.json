@@ -1,6 +1,7 @@
 {
     "vector":{
         "id": "terrain-data",
+        "url": "mapbox://mapbox.mapbox-terrain-v2",
         "type": "line",
         "source": "mapbox-terrain",
         "source-layer": "contour",
