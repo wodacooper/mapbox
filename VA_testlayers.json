@@ -2,7 +2,7 @@
     "vector":{
         "name": "terrain-data",
         "source_id":"mapbox-terrain-v2",
-        "url": "mapbox://mapbox.mapbox-terrain-v2",
+        "url": "mapbox://wodacooper.mapbox-terrain-v2",
         "type": "line",
         "source": "mapbox-terrain",
         "source-layer": "contour",
