@@ -3,6 +3,7 @@
         "type":"vector",
         "url": "mapbox://mapbox.mapbox-terrain-v2"
         "layer":{
+            "name":"vector",
             "id": "terrain-data",
             "source_id":"mapbox-terrain-v2",
             "type": "line",
