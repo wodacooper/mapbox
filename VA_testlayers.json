@@ -12,6 +12,7 @@
             "line-color": "#ff69b4",
             "line-width": 1
         }
+        'road-label-simple'
     },
     "qct_dda": {
         "name": "QCT/DDA",
