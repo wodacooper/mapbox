@@ -1,6 +1,6 @@
 {
     "vector":{
-        "name": "terrain-data",
+        "id": "terrain-data",
         "source_id":"mapbox-terrain-v2",
         "url": "mapbox://mapbox.mapbox-terrain-v2",
         "type": "line",
@@ -11,7 +11,7 @@
             "line-cap": "round"
         },
         "paint": {
-            "line-color": "#ff69b4",
+            "line-color": "#000000",
             "line-width": 1
         }
     }, 
