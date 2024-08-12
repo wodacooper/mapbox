@@ -1,5 +1,6 @@
 {
     "vector": {
+        "name:"vector tile",
         "id": "terrain-data",
         "type": "line",
         "source": "mapbox-terrain",
