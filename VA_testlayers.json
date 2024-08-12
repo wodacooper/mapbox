@@ -1,13 +1,14 @@
 {
-    "vector":{
-        "name": "vectore tile",
+    "vector": {
+        "name":"vector tile",
         "source_id": "mapbox-terrain",
         "source-layer": "contour",
+        "url": "mapbox://mapbox.mapbox-terrain-v2",
         "layout": {
             "line-join": "round",
             "line-cap": "round"
         },
-        "paint": {
+        "line": {
             "line-color": "#ff69b4",
             "line-width": 1
         }
