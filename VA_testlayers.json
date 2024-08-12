@@ -1,6 +1,5 @@
 {
     "vector":{
-        "name":"vector tile",
         "id":"terrain-data",
         "type":"vector",
         "source": "mapbox-terrain",
