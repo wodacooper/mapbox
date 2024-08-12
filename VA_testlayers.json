@@ -1,7 +1,8 @@
 {
     "vector": {
+        "name":"vector tile",
         "source_id": "mapbox-terrain",
-        "source-layer": "contour",
+        "source_layer": "contour",
         "url": "mapbox://mapbox.mapbox-terrain-v2",
         "layout": {
             "visibility":"none",
