@@ -1,6 +1,6 @@
 {
     "vector": {
-        "name:"vector tile",
+        "name: "vector tile",
         "id": "terrain-data",
         "type": "line",
         "source": "mapbox-terrain",
@@ -11,6 +11,7 @@
             "line-join": "round",
             "line-cap": "round"
         },
+        "visible": false,
         "line": {
             "line-color": "#ff69b4",
             "line-width": 1
