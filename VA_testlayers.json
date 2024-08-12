@@ -1,4 +1,24 @@
 {
+    "sources":{
+        "type":"vector",
+        "url": "mapbox://mapbox.mapbox-terrain-v2",
+        "layer":{
+            "name":"vector",
+            "id": "terrain-data",
+            "source_id":"mapbox-terrain-v2",
+            "type": "line",
+            "source": "mapbox-terrain",
+            "source-layer": "contour",
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+             },
+             "paint": {
+                "line-color": "#ff69b4",
+                "line-width": 1
+             }
+        }
+    }, 
     "qct_dda": {
         "name": "QCT/DDA",
         "source_id": "qct/dda_source",
@@ -47,8 +67,7 @@
             "areaname":[true,""], 
             "2023 Final 40th Percentile 2-Bedroom FMR":[true,"2br FMR"],
             "2023 4-PersonVLIL ": [true, "4-Person VLIL"],
-            "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[true,"60% AMI max rent"],
-            "state_filter" :["va"]
+            "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[true,"60% AMI max rent"]
         },
         "num_filters":{
             "2023 Final 40th Percentile 2-Bedroom FMR":"2br FMR",
@@ -208,8 +227,7 @@
                 30,
                 "#00ff00",
                 35,
-                "#00ffff"
-                
+                "#00ffff" 
             ],
             "fill-opacity": [
                 "step",
