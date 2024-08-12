@@ -53,7 +53,8 @@
             "appalachian": "Applachian County",
             "county": "",
             "NAMELSAD": "City",
-            "boost": "Basis Boost"
+            "boost": "Basis Boost",
+            "ted": "Transformative Economic Development"
         },
         "num_filters": {
             "score": "Score",
@@ -148,7 +149,7 @@
                 true,
                 ""
             ],
-            "opp_revit_pts": [
+            "opp_revit": [
                 true,
                 ""
             ],
@@ -1204,6 +1205,9 @@
             "boost": [
                 "No",
                 "Yes"
+            ],
+            "Transformative Economic Development":[
+                "Transformative Economic Development"
             ]
         },
         "num_filter_vals": {
@@ -3815,59 +3819,6 @@
             [
                 "PJ",
                 "#000000"
-            ]
-        ]
-    },
-    "teds": {
-        "name": "Transformative Economic Development",
-        "source_id": "oh_teds",
-        "url": "mapbox://wodacooper.oh_teds",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 3,
-            "line-color": "#000000"
-        },
-        "legend": [
-            [
-                "20-mile radius",
-                "#000000"
-            ]
-        ]
-    },
-    "roads": {
-        "name": "Transit Corridors",
-        "source_id": "cbus_roads",
-        "url": "mapbox://wodacooper.cbus_roads",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 3,
-            "line-color": [
-                "match",
-                [
-                    "get",
-                    "tier"
-                ],
-                1,
-                "#ff9800",
-                "#0d47a1"
-            ]
-        },
-        "legend": [
-            [
-                "Tier 1",
-                "#ff9800"
-            ],
-            [
-                "Tier 2",
-                "#0d47a1"
             ]
         ]
     },
