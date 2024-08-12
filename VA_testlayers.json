@@ -1,7 +1,7 @@
 {
     "sources":{
         "type":"vector",
-        "url": "mapbox://mapbox.mapbox-terrain-v2"
+        "url": "mapbox://mapbox.mapbox-terrain-v2",
         "layer":{
             "name":"vector",
             "id": "terrain-data",
