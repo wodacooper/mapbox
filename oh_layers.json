@@ -1,8 +1,8 @@
 {
     "score": {
-        "name": "2024 New Affordability",
+        "name": "2025 New Affordability",
         "source_id": "score_source",
-        "url": "mapbox://wodacooper.oh_24",
+        "url": "mapbox://wodacooper.oh_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -16,25 +16,25 @@
                     "score"
                 ],
                 "#ffffff",
-                6,
-                "#9e9e9e",
-                7,
-                "#70534e",
-                8,
-                "#346b36",
-                9,
-                "#0000ff",
-                10,
-                "#ff0000",
                 11,
-                "#fe8103",
+                "#9e9e9e",
                 12,
-                "#ffff00",
+                "#70534e",
                 13,
-                "#ff00ff",
+                "#346b36",
                 14,
-                "#00ff00",
+                "#0000ff",
                 15,
+                "#ff0000",
+                16,
+                "#fe8103",
+                17,
+                "#ffff00",
+                18,
+                "#ff00ff",
+                19,
+                "#00ff00",
+                20,
                 "#00ffff"
             ],
             "fill-opacity": [
@@ -44,13 +44,13 @@
                     "score"
                 ],
                 0,
-                6,
+                10,
                 0.6
             ]
         },
         "cat_filters": {
-            "pool": "",
-            "app_county": "Applachian County",
+            "usr_index": "Pool",
+            "appalachian": "Applachian County",
             "county": "",
             "NAMELSAD": "City",
             "boost": "Basis Boost"
@@ -61,48 +61,52 @@
         },
         "legend": [
             [
-                "15",
+                "20",
                 "#00ffff"
             ],
             [
-                "14",
+                "19",
                 "#00ff00"
             ],
             [
-                "13",
+                "18",
                 "#ff00ff"
             ],
             [
-                "12",
+                "17",
                 "#ffff00"
             ],
             [
-                "11",
+                "16",
                 "#fe8103"
             ],
             [
-                "10",
+                "15",
                 "#ff0000"
             ],
             [
-                "9",
+                "14",
                 "#0000ff"
             ],
             [
-                "8",
+                "13",
                 "#346b36"
             ],
             [
-                "7",
+                "12",
                 "#70534e"
             ],
             [
-                "6",
+                "11",
                 "#9e9e9e"
+            ],
+            [
+                "10",
+                "#ffffff"
             ]
         ],
         "hover": {
-            "pool": [
+            "usr_index": [
                 true,
                 ""
             ],
@@ -110,29 +114,17 @@
                 true,
                 ""
             ],
-            "NAMELSAD": [
+            "city": [
                 true,
                 ""
             ],
             "score": [
                 true,
                 ""
-            ],
-            "need_revit": [
-                true,
-                ""
             ]
         },
         "click": {
-            "pool": [
-                true,
-                ""
-            ],
             "usr_index": [
-                true,
-                ""
-            ],
-            "app_county": [
                 true,
                 ""
             ],
@@ -140,7 +132,15 @@
                 true,
                 ""
             ],
-            "NAMELSAD": [
+            "city": [
+                true,
+                ""
+            ],
+            "appalachian": [
+                true,
+                ""
+            ],
+            "ted": [
                 true,
                 ""
             ],
@@ -156,11 +156,7 @@
                 true,
                 ""
             ],
-            "need_revit": [
-                true,
-                ""
-            ],
-            "disc_pts": [
+            "discount_pts": [
                 true,
                 ""
             ],
@@ -172,14 +168,15 @@
                 true,
                 ""
             ],
-            "sadda": [
+            "dda_24": [
                 true,
                 ""
             ]
         },
         "cat_filter_vals": {
-            "pool": [
-                "Central City/Suburban",
+            "usr_index": [
+                "Urban",
+                "Suburban",
                 "Rural"
             ],
             "app_county": [
@@ -1205,14 +1202,14 @@
                 "Zoar village"
             ],
             "boost": [
-                "No0",
-                "Yes1"
+                "No",
+                "Yes"
             ]
         },
         "num_filter_vals": {
             "score": [
                 0.0,
-                15.0
+                20.0
             ],
             "opp_index": [
                 0.0,
