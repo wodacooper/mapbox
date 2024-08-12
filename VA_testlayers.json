@@ -5,10 +5,11 @@
         "source_layer": "contour",
         "url": "mapbox://mapbox.mapbox-terrain-v2",
         "layout": {
-            "visibility":"none",
+            "visibility":"visible",
             "line-join": "round",
             "line-cap": "round"
         },
+        "visible":true,
         "line": {
             "line-color": "#ff69b4",
             "line-width": 1
