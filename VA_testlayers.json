@@ -1,8 +1,7 @@
 {
     "vector":{
-        "id":"terrain-data",
-        "type":"vector",
-        "source": "mapbox-terrain",
+        "name": "vectore tile",
+        "source_id": "mapbox-terrain",
         "source-layer": "contour",
         "layout": {
             "line-join": "round",
