@@ -241,6 +241,36 @@
             ]
         }
     },
+    "bmore_tracts": {
+        "name": "Baltimore County RFP",
+        "source_id": "bmore_tracts",
+        "url": "mapbox://wodacooper.bmore_tracts",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#ffffff"
+        },
+        "fill": {
+            "fill-opacity": 0.3,
+            "fill-color": "#ffffff"
+        },
+        "legend": [
+            [
+                "Bonus Point Tracts",
+                "#ffffff"
+            ]
+        ],
+        "click": {
+            "TRACTCE": [
+                true,
+                "Census Tract"
+            ]
+        }
+    },
     "cities": {
         "name": "Cities",
         "source_id": "md_places",
