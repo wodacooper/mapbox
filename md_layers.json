@@ -241,6 +241,43 @@
             ]
         }
     },
+        "bmore_county_owned": {
+        "name": "Baltimore County Parcels",
+        "source_id": "bmore_county_owned",
+        "url": "mapbox://wodacooper.bmore_county_owned",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#cd7ef7"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+        "legend": [
+            [
+                "County Owned",
+                "#cd7ef7"
+            ]
+        ],
+        "click": {
+            "OWNER_NAME": [
+                true,
+                ""
+            ],
+            "SITE_NAME": [
+                true,
+                ""
+            ],
+            "URL": [
+                true,
+                ""
+            ]
+        }
+    },
     "bmore_tracts": {
         "name": "Baltimore County RFP",
         "source_id": "bmore_tracts",
