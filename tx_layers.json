@@ -148,6 +148,7 @@
                 "#FF0000",
                 "FFFF00"
             ],
+        },
         "legend": [
             [
                 "Elementary",
@@ -164,25 +165,24 @@
         ]
         },
         "parks": {
-        "name": "Parks",
-        "source_id": "tx_parks_source",
-        "url": "mapbox://wodacooper.tx_parks",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 2,
-            "line-color": "#246e28"
-        },
-        "legend": [
-            [
-                "Parks",
-                "#246e28"
+            "name": "Parks",
+            "source_id": "tx_parks_source",
+            "url": "mapbox://wodacooper.tx_parks",
+            "source_layer": "hello_world",
+            "layout": {
+                "visibility": "none"
+            },
+            "visible": false,
+            "line": {
+                "line-width": 2,
+                "line-color": "#246e28"
+            },
+            "legend": [
+                [
+                    "Parks",
+                    "#246e28"
+                ]
             ]
-        ]
-        }
     },
     "cities": {
         "name": "Cities",
