@@ -148,6 +148,20 @@
                 "#FF0000",
                 "FFFF00"
             ],
+        "legend": [
+            [
+                "Elementary",
+                "#FF6600"
+            ],
+            [
+                "Grocery",
+                "#FF0000"
+            ],
+            [
+                "Library",
+                "FFFF00"
+            ]
+        ]
         },
         "parks": {
         "name": "Parks",
