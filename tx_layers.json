@@ -123,6 +123,48 @@
             ]
         }
     },
+    "amenities": {
+        "name": "Amenities",
+        "source_id": "tx_amenities_source",
+        "url": "mapbox://wodacooper.tx_amenities",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 6,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Elementary,
+                "#FF6600",
+                "Grocery",
+                "#FF0000",
+                "FFFF00"
+            ],
+        },
+        "legend": [
+            [
+                "Elementary School",
+                "#FF6600"
+            ],
+            [
+                "Grocery Store",
+                "#FF0000"
+            ],
+            [
+                "Library",
+                "FFFF00"
+            ]
+        ]
+        }
+    },
     "cities": {
         "name": "Cities",
         "source_id": "places",
