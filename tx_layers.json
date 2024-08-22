@@ -149,18 +149,23 @@
                 "FFFF00"
             ],
         },
+        "parks": {
+        "name": "Parks",
+        "source_id": "tx_parks_source",
+        "url": "mapbox://wodacooper.tx_parks",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#246e28"
+        },
         "legend": [
             [
-                "Elementary School",
-                "#FF6600"
-            ],
-            [
-                "Grocery Store",
-                "#FF0000"
-            ],
-            [
-                "Library",
-                "FFFF00"
+                "Parks",
+                "#246e28"
             ]
         ]
         }
