@@ -36,8 +36,7 @@
                   "No Longer a QCT",
                   "#d92e41"
               ]
-          ]
-        },
+        ],
         "click":{
             "GEOID":[true,"Census Tract"], 
             "prediction":[true,"Prediction"]
