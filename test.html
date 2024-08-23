@@ -201,17 +201,14 @@ input[type="range"] {
   pointer-events: none;
 }
 
-#fromSlider {
-  height: 0;
-  z-index: 1;
-}  
+
 </style>
 <script>
 const bounds_dict = {
     "test":{
         "bounds":[[-85.43912683641372, 33.26118181948529], [-82.06632411429437, 34.456279633297356]],
         "geocoder_bounds":[-85.84562097556167, 30.177882355149897, -80.16568935557564, 35.267583145126984],
-        "url": 'https://wodacooper.github.io/mapbox/ga_layers.json'
+        "url": 'https://wodacooper.github.io/mapbox/qct_layers.json'
     },
     "fl":{
         "bounds":[[-84.37526158463271, 26.255905741318735], [-78.81301050869402, 29.55055750061163]],
@@ -452,7 +449,7 @@ const bounds_dict = {
     .legend {
         overflow-wrap: anywhere;
         display: none;
-        padding: 5px;
+        padding: 12px;
         border: 1px solid #ddd;
         max-height: 0px;
         background-color: rgba(255, 255, 255, 0.9);
@@ -499,6 +496,39 @@ const bounds_dict = {
         display: flex;
         flex-direction: row;
     }
+    .popup {
+        display: none;
+        position: absolute;
+        width: 100px;
+        background-color: white;
+        padding: 10px;
+        bottom: 95px;
+        left: 20px;
+    }
+    .googlemaps_link{
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+        color: white;
+        pointer-events: auto;
+    }
+    .area{
+        position: absolute;
+        width: 100px;
+        background-color: white;
+        bottom: 95px;
+        left: 150px;
+    }
+    .mapboxgl-popup-content h3{
+        padding-right: 15px;
+    }
+    .mapboxgl-popup-close-button{
+        position: sticky;
+        bottom: 90%;
+        left: 90%;
+        padding: 0%;
+        font-size: 17px;
+    }
    
     .show {display: block; max-height: 200px;}
 
@@ -513,11 +543,19 @@ const bounds_dict = {
 <div id="map"></div>
 <div id="layer_box"></div>
 <div id="legend_box" class = "legend-box"></div>
+<div id="popup_box" class="popup">
+    <div class="popup_content" id ="popup-caption">Radius</div>
+    <input type="number" step="0.01" id="popup_content" value="1" />
+    <div class="color_caption" id ="color-caption">Color</div>
+    <input type="color" id="color-picker"/> 
+</div>
+<div id="area_box" class="area"></div>
 <script>
     
-    //const query_string = window.location.search;
-    //onst query_vals = query_string.split('?')
-    const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'ga']
+    const query_string = window.location.search;
+    const query_vals = query_string.split('?')
+
+    //const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'oh']
     
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
@@ -526,6 +564,16 @@ const bounds_dict = {
         style: 'mapbox://styles/mapbox/satellite-streets-v12',
         bounds: bounds_dict[query_vals[2]]["bounds"]
     });
+    /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
+    async function get_json() {
+            const query = await fetch(
+                'https://wodacooper.github.io/mapbox/VA_testlayers.json',
+                { method: 'GET' }
+            );
+            const data = await query.json();
+            console.log(data);
+            return data;
+    }*/
     const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
             const query = await fetch(
@@ -536,7 +584,10 @@ const bounds_dict = {
             console.log(data);
             return data;
     }
-
+    document.addEventListener('DOMContentLoaded',()=>{
+        var colorPicker =document.getElementById('color-picker');
+        colorPicker.value ='#ffffff';
+    });
 
     const layer_box = document.getElementById('layer_box');
     const legend_box = document.getElementById('legend_box');
@@ -545,20 +596,36 @@ const bounds_dict = {
     var allow_click = true;
     var circle_mode = false;
     var drive_mode = false;
+    var walk_mode = false;
     var init_filters = true;
     const layer_types = ['fill','circle','icon','line']
     var hover_layers = [];
     var click_layers = [];
     var layers;
     
-    
-
 
     map.on('load', () => {
         get_json().then(data => {
             layers = data;
             var sources = []
 
+            //Code for linking Google maps to mapbox
+            var googleMaps_link = document.createElement('div');
+            googleMaps_link.className = 'googlemaps_link';
+            googleMaps_link.textContent = 'Google maps';
+
+            var logo = document.querySelector('.mapboxgl-ctrl').parentNode;
+            logo.appendChild(googleMaps_link);
+        
+            googleMaps_link.addEventListener('click', () => {
+                var center = map.getCenter();
+                var zoom = 2+Math.round(map.getZoom());
+                var googleMapsUrl = `https://www.google.com/maps/@?api=1&map_action=map&center=${center.lat}%2C${center.lng}&zoom=${zoom}&basemap=satellite&layer=transit`;
+                console.log(googleMapsUrl);
+                window.open(googleMapsUrl,'_blank');
+            });
+
+            //Dropdown button for the layerlist box in the top left
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn');
             dropdown_btn.addEventListener('click',() =>{
@@ -580,8 +647,7 @@ const bounds_dict = {
 
             layer_box.appendChild(dropdown_btn);
 
-          
-
+            //Dropdown button for the legend box in the bottom right
             const legend_btn = document.createElement('button');
             legend_btn.classList.add('fa-solid','fa-caret-down','legend_btn');
             legend_btn.addEventListener('click',() =>{
@@ -600,9 +666,6 @@ const bounds_dict = {
             
             const legend_inner = document.createElement('div');
             legend_box.appendChild(legend_inner);
-            
-           
-
             
             for (const layer of Object.keys(layers).reverse()){
                 //if source has already been added for another layer, no need to add again
@@ -702,34 +765,295 @@ const bounds_dict = {
                     showCompass: false
                 })
             );
+            var draw_circlemode ={};
+            draw_circlemode.onClick = function(state, e) {
+                const feature = turf.circle([e.lngLat.lng, e.lngLat.lat], popupContent.value, {units:'miles'});
+                console.log(feature);
+                feature.properties = { color: colorPicker.value };
+                const id = draw.add(feature);
+                console.log(draw.getAll());
+                this.changeMode('simple_select');
+                popup.style.display = 'none';
+            
+            };
+            var draw_drivemode ={};
+            draw_drivemode.onClick = function(state, e){   
+                getIso('driving',e);
+                this.changeMode('simple_select');
+                popup.style.display = 'none';
+            };
+            var draw_walkmode ={};
+            draw_walkmode.onClick = function(state, e){   
+                getIso('walking',e);
+                this.changeMode('simple_select');
+                popup.style.display = 'none';
+            };
 
             const draw = new MapboxDraw({
+                modes: Object.assign({
+                    draw_circle: draw_circlemode,
+                    draw_drive: draw_drivemode,
+                    draw_walk: draw_walkmode,
+                }, MapboxDraw.modes),
                 displayControlsDefault: false,
+                userProperties: true,
+                styles: [
+                    {
+                        'id': 'gl-draw-polygon-fill-inactive',
+                        'type': 'fill',
+                        'filter': ['all',
+                        ['==', 'active', 'false'],
+                        ['==', '$type', 'Polygon'],
+                        ['!=', 'mode', 'static']
+                        ],
+                        'paint': {
+                        'fill-color': ['get','user_color'],
+                        'fill-outline-color': ['get','user_color'],
+                        'fill-opacity': 0.1
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-polygon-fill-active',
+                        'type': 'fill',
+                        'filter': ['all', ['==', 'active', 'true'], ['==', '$type', 'Polygon']],
+                        'paint': {
+                        'fill-color': '#fbb03b',
+                        'fill-outline-color': '#ffffff',
+                        'fill-opacity': 0.1
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-polygon-midpoint',
+                        'type': 'circle',
+                        'filter': ['all',
+                        ['==', '$type', 'Point'],
+                        ['==', 'meta', 'midpoint']],
+                        'paint': {
+                        'circle-radius': 3,
+                        'circle-color': '#fbb03b'
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-polygon-stroke-inactive',
+                        'type': 'line',
+                        'filter': ['all',
+                        ['==', 'active', 'false'],
+                        ['==', '$type', 'Polygon'],
+                        ['!=', 'mode', 'static']
+                        ],
+                        'layout': {
+                        'line-cap': 'round',
+                        'line-join': 'round'
+                        },
+                        'paint': {
+                        'line-color': ['get','user_color'],
+                        'line-width': 2
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-polygon-stroke-active',
+                        'type': 'line',
+                        'filter': ['all', ['==', 'active', 'true'], ['==', '$type', 'Polygon']],
+                        'layout': {
+                        'line-cap': 'round',
+                        'line-join': 'round'
+                        },
+                        'paint': {
+                        'line-color': '#ffffff',
+                        'line-dasharray': [0.2, 2],
+                        'line-width': 2
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-line-inactive',
+                        'type': 'line',
+                        'filter': ['all',
+                        ['==', 'active', 'false'],
+                        ['==', '$type', 'LineString'],
+                        ['!=', 'mode', 'static']
+                        ],
+                        'layout': {
+                        'line-cap': 'round',
+                        'line-join': 'round'
+                        },
+                        'paint': {
+                        'line-color': ['get','user_color'],
+                        'line-width': 2
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-line-active',
+                        'type': 'line',
+                        'filter': ['all',
+                        ['==', '$type', 'LineString'],
+                        ['==', 'active', 'true']
+                        ],
+                        'layout': {
+                        'line-cap': 'round',
+                        'line-join': 'round'
+                        },
+                        'paint': {
+                        'line-color': '#ffffff',
+                        'line-dasharray': [0.2, 2],
+                        'line-width': 2
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-polygon-and-line-vertex-stroke-inactive',
+                        'type': 'circle',
+                        'filter': ['all',
+                        ['==', 'meta', 'vertex'],
+                        ['==', '$type', 'Point'],
+                        ['!=', 'mode', 'static']
+                        ],
+                        'paint': {
+                        'circle-radius': 5,
+                        'circle-color': '#ffffff'
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-polygon-and-line-vertex-inactive',
+                        'type': 'circle',
+                        'filter': ['all',
+                        ['==', 'meta', 'vertex'],
+                        ['==', '$type', 'Point'],
+                        ['!=', 'mode', 'static']
+                        ],
+                        'paint': {
+                        'circle-radius': 3,
+                        'circle-color': '#ffffff'
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-point-point-stroke-inactive',
+                        'type': 'circle',
+                        'filter': ['all',
+                        ['==', 'active', 'false'],
+                        ['==', '$type', 'Point'],
+                        ['==', 'meta', 'feature'],
+                        ['!=', 'mode', 'static']
+                        ],
+                        'paint': {
+                        'circle-radius': 5,
+                        'circle-opacity': 1,
+                        'circle-color': '#ffffff'
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-point-inactive',
+                        'type': 'circle',
+                        'filter': ['all',
+                        ['==', 'active', 'false'],
+                        ['==', '$type', 'Point'],
+                        ['==', 'meta', 'feature'],
+                        ['!=', 'mode', 'static']
+                        ],
+                        'paint': {
+                        'circle-radius': 3,
+                        'circle-color': '#ffffff'
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-point-stroke-active',
+                        'type': 'circle',
+                        'filter': ['all',
+                        ['==', '$type', 'Point'],
+                        ['==', 'active', 'true'],
+                        ['!=', 'meta', 'midpoint']
+                        ],
+                        'paint': {
+                        'circle-radius': 7,
+                        'circle-color': '#ffffff'
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-point-active',
+                        'type': 'circle',
+                        'filter': ['all',
+                        ['==', '$type', 'Point'],
+                        ['!=', 'meta', 'midpoint'],
+                        ['==', 'active', 'true']],
+                        'paint': {
+                        'circle-radius': 5,
+                        'circle-color': '#ffffff'
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-polygon-fill-static',
+                        'type': 'fill',
+                        'filter': ['all', ['==', 'mode', 'static'], ['==', '$type', 'Polygon']],
+                        'paint': {
+                        'fill-color': ['get','user_color'],
+                        'fill-outline-color': ['get','user_color'],
+                        'fill-opacity': 0.1
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-polygon-stroke-static',
+                        'type': 'line',
+                        'filter': ['all', ['==', 'mode', 'static'], ['==', '$type', 'Polygon']],
+                        'layout': {
+                        'line-cap': 'round',
+                        'line-join': 'round'
+                        },
+                        'paint': {
+                        'line-color': ['get','user_color'],
+                        'line-width': 2
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-line-static',
+                        'type': 'line',
+                        'filter': ['all', ['==', 'mode', 'static'], ['==', '$type', 'LineString']],
+                        'layout': {
+                        'line-cap': 'round',
+                        'line-join': 'round'
+                        },
+                        'paint': {
+                        'line-color': ['get','user_color'],
+                        'line-width': 2
+                        }
+                    },
+                    {
+                        'id': 'gl-draw-point-static',
+                        'type': 'circle',
+                        'filter': ['all', ['==', 'mode', 'static'], ['==', '$type', 'Point']],
+                        'paint': {
+                        'circle-radius': 5,
+                        'circle-color': ['get','user_color']
+                        }
+                    }
+                ],
                 // Select which mapbox-gl-draw control buttons to add to the map.
                 controls: {
                 polygon: true,
                 line_string: true,
-                trash: true
+                point: true,
+                trash: true,
                 },
                 // Set mapbox-gl-draw to draw by default.
                 // The user does not have to click the polygon control button first.
                 //defaultMode: 'draw_polygon'
             });
-
+            
             map.addControl(draw, 'bottom-left');
 
             const controls = document.getElementsByClassName('mapboxgl-ctrl-bottom-left')[0].firstElementChild;
-
+            const popup = document.getElementById('popup_box');
+            const popupContent = document.getElementById('popup_content');
+            const colorPicker = document.getElementById('color-picker');
+            const areaBox = document.getElementById('area_box');
+            
             const delete_btn = document.getElementsByClassName('mapbox-gl-draw_trash')[0]
             delete_btn.classList.remove('mapbox-gl-draw_trash', 'mapbox-gl-draw_ctrl-draw-btn')
             delete_btn.classList.add('fa-solid', 'fa-delete-left');
-
+          
             const trash_btn = document.createElement('button');
             trash_btn.classList.add('fa-solid', 'fa-trash-can');
             //delete_btn.innerText = "X";
             trash_btn .addEventListener('click', () => {
                 draw.deleteAll();
-                updateArea();
+                document.getElementById('area_box').style.display = 'none';
             });
             controls.appendChild(trash_btn);
 
@@ -737,74 +1061,105 @@ const bounds_dict = {
             circle_btn.classList.add('fa-regular', 'fa-circle');
             circle_btn .addEventListener('click', () => {
                 allow_click = false;
-                draw.changeMode('simple_select')
-                circle_mode = true;
+                draw.changeMode('draw_circle')
+                popup.style.display = 'block';
             });
             controls.prepend(circle_btn);
-
-            map.on('click', (e) => {
-                if (circle_mode) {
-                    const feature = turf.circle([e.lngLat.lng, e.lngLat.lat], 1, {units:'miles'});
-                    console.log(feature);
-                    const id = draw.add(feature);
-                    console.log(draw.getAll());
-                    circle_mode = false;
-                }
-            });
-
+            
             const drive_btn = document.createElement('button');
             drive_btn.classList.add('fa-solid', 'fa-car');
             drive_btn .addEventListener('click', () => {
                 allow_click = false;
-                draw.changeMode('simple_select')
-                drive_mode = true;
+                draw.changeMode('draw_drive')
+                popup.style.display = 'block';
             });
             controls.prepend(drive_btn);
 
-            async function getIso(e) {
-                if(drive_mode){
-                    const query = await fetch(
-                        `https://api.mapbox.com/isochrone/v1/mapbox/walking/${e.lngLat.lng},${e.lngLat.lat}?contours_meters=1609&polygons=true&access_token=${mapboxgl.accessToken}`,
-                        { method: 'GET' }
-                    );
-                    const data = await query.json();
-                    console.log(data)
-                    draw.add(data)
-                    drive_mode = false;}
+            const walk_btn = document.createElement('button');
+            walk_btn.classList.add('fa-solid', 'fa-person-walking');
+            walk_btn .addEventListener('click', () => {
+                allow_click = false;
+                draw.changeMode('draw_walk')
+                popup.style.display = 'block';
+            });
+            controls.prepend(walk_btn);
+
+            async function getIso(mode,e) {
+                
+                const query = await fetch(
+                    `https://api.mapbox.com/isochrone/v1/mapbox/${mode}/${e.lngLat.lng},${e.lngLat.lat}?contours_meters=${String(Math.round(popupContent.value*1609))}&polygons=true&access_token=${mapboxgl.accessToken}`,
+                    { method: 'GET' }
+                );
+                
+                const data = await query.json();
+                const feat=data.features[0];
+                console.log(feat)
+                feat.properties = { color: colorPicker.value };
+                draw.add(feat)
             }
-
-            map.on('click', getIso);
-
-            /*map.on('draw.create', updateArea);
-            map.on('draw.delete', updateArea);
-            map.on('draw.update', updateArea);
-
-
+        
             
+            map.on('draw.create', updateColor);
+            function updateColor(e) {
+                const data = draw.getAll();
+                const num_features = data.features.length
+                const feature = data.features[num_features-1].id;
+                draw.setFeatureProperty(feature,'color', colorPicker.value);
+                popup.style.display = 'none';
+                console.log('bing_bong')
+                console.log(feature)
+            };
+            //Code for having the popup appear for each mode
+            map.on('draw.modechange', () => {
+                const mode = draw.getMode()
+                const color_modes = ['draw_walk', 'draw_drive','draw_circle','draw_line_string','draw_point', 'draw_polygon']
+                if (color_modes.includes(mode)) {
+                    popup.style.display = 'block';
+                } else {
+                    popup.style.display = 'none'
+                }
+            });
+
+             //map.on('click', getIso);
+            
+
+            map.on('draw.create', updateArea);
+            map.on('draw.delete', updateArea);
+            map.on('draw.update', updateArea)
+        
+            //Displaying the distance and area for the line and polygon tools
             function updateArea(e) {
                 const data = draw.getAll();
-                const answer = document.getElementById('calculated-area');
+                const answer = document.getElementById('area_box');
                 const num_features = data.features.length
                 if (num_features > 0) {
                     const feature = data.features[num_features-1].geometry;
                     if (feature.type == 'Polygon') {
                         const area = turf.area(feature);
-                        const acres_area = Math.round(area/4046.86 * 100) / 100;
-                        let sqft_area = Math.round(area*10.793);
-                        if (sqft_area > 999999) sqft_area = `${Math.round(sqft_area / 1000).toLocaleString("en-US")}k`
+                        const acres = Math.round(area/4046.86 * 100) / 100;
+                        const square_feet = Math.round(area*10.793);
+                        if(acres < 1000000){
+                            answer.innerHTML= `${acres} acres <br> ${square_feet.toLocaleString()} sq ft`;
+                        }else{
+                            answer.innerHTML = `${acres} acres`;
+                        }
+                        areaBox.style.display = 'block';
 
-                        answer.innerHTML = `${acres_area} acres <br> ${sqft_area} square feet`;
-                    } else {
-                        const length_miles = Math.round(turf.length(feature,{units:'miles'}) * 100) / 100;
+                    } else if(feature.type == 'LineString')  {
+                        const length_miles = Math.round(turf.length(feature,{units:'miles'})* 100) / 100;
                         const length_feet = Math.round(length_miles*5280);
-                        answer.innerHTML = `<div>${length_miles} miles</div><div>${length_feet} feet</div>`;
-                    };
-
-                    
-                } else {
-                    answer.innerHTML = '';
-                };
-            };*/
+                        if(length_miles < 1){
+                            answer.innerHTML = `${length_miles} miles <br> ${length_feet.toLocaleString()} feet`;
+                        }
+                        else{
+                            answer.innerHTML = `${length_miles} miles`;
+                        }
+                        areaBox.style.display = 'block';
+                    }
+              
+                 }
+            }
+            
 
             const tooltip = new mapboxgl.Popup({anchor: 'top-left', closeOnClick: false, closeButton: false}).trackPointer()
                         
@@ -890,7 +1245,7 @@ const bounds_dict = {
                 };
             });
 
-
+            //Code for mobile optimization for enabling the touch and zoom functions
             map.on('touchstart', click_layers, (e) => {
                 console.log(draw.getMode());
                 if (draw.getMode() == 'simple_select') {
@@ -940,6 +1295,7 @@ const bounds_dict = {
                 };
             });
 
+            //Code for mobile optimization for enabling the touch and zoom functions
             map.on('touchmove', click_layers, (e) => {
                 console.log(draw.getMode());
                 if (draw.getMode() == 'simple_select') {
@@ -985,8 +1341,6 @@ const bounds_dict = {
                     allow_click = false;
                 };
             });
-
-
 
             function updateLayerFilter(evt) {
                 // get an array of icon names that corresponds to the currently checked checkboxes
@@ -1075,13 +1429,18 @@ const bounds_dict = {
                         });
                         layer_div.appendChild(toggle_checkbox);
                         if (layers[layer].cat_filters ||layers[layer].num_filters ){
-
-
                             const dropdown_arrow = document.createElement('div')
-                
-                            dropdown_arrow.classList.add('dropdown_arrow','fa-solid','fa-caret-down');
-                            //dropdown_arrow.type = 'checkbox';
-                            //dropdown_arrow.textContent = 'V';
+                            dropdown_arrow.classList.add('dropdown_arrow','fa-solid','fa-caret-right');
+                            dropdown_arrow.addEventListener('click',function(){
+                                this.nextElementSibling.click()
+                                if(dropdown_arrow.classList.contains('fa-caret-right')){
+                                    dropdown_arrow.classList.remove('fa-solid','fa-caret-right','dropdown_arrow') 
+                                    dropdown_arrow.classList.add('fa-solid','fa-caret-down','dropdown_arrow')
+                                }else{
+                                    dropdown_arrow.classList.remove('fa-solid','fa-caret-down','dropdown_arrow') 
+                                    dropdown_arrow.classList.add('fa-solid','fa-caret-right','dropdown_arrow')
+                                }
+                             });
                             layer_div.appendChild(dropdown_arrow);
                         }
             
@@ -1306,7 +1665,7 @@ const bounds_dict = {
                                     
                             }
                         }
-			if(layers[layer].perm_filters){
+			            if(layers[layer].perm_filters){
                             layers[layer].filters=layers[layer].filters.concat(layers[layer].perm_filters); 
                         } 
                         for (type of layer_types){
