@@ -1,0 +1,46 @@
+{
+    "qct_25_predictions": {
+        "name": "2025 QCT predictions",
+        "source_id": "qct_25_predictions_source",
+        "url": "mapbox://wodacooper.qct_dda",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "prediction"
+                ],
+                "Remains a QCT",
+                "#3c6bc9",
+                "No Longer a QCT",
+                "#d92e41",
+                "#2ed950"
+            ],
+            "fill-opacity": 0.6
+        },
+        "legend": [
+              [
+                  "Remains a QCT",
+                  "#3c6bc9"
+              ],
+              [
+                  "New QCT",
+                  "#2ed950"
+              ],
+              [
+                  "No Longer a QCT",
+                  "#d92e41"
+              ]
+          ]
+        },
+        "click":{
+            "GEOID":[true,"Census Tract"], 
+            "prediction":[true,"Prediction"]
+        }
+    }
+}
