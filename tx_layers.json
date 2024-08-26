@@ -143,7 +143,7 @@
                     "type"
                 ],
                 "Elementary",
-                "#FF6600",
+                "#246e28",
                 "Grocery",
                 "#FF0000",
                 "#FFFF00"
@@ -152,7 +152,7 @@
         "legend": [
             [
                 "Elementary",
-                "#FF6600"
+                "#246e28"
             ],
             [
                 "Grocery",
@@ -175,12 +175,12 @@
             "visible": false,
             "line": {
                 "line-width": 2,
-                "line-color": "#246e28"
+                "line-color": "#FF6600"
             },
             "legend": [
                 [
                     "Parks",
-                    "#246e28"
+                    "#FF6600"
                 ]
             ]
     },
