@@ -62,13 +62,13 @@
     },
     "gen_score": {
         "name": "2024 General Score",
-        "source_id": "score_source",
+        "source_id": "score_source_old",
         "url": "mapbox://wodacooper.il_24",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -1877,7 +1877,7 @@
     },
     "psh_score": {
         "name": "2024 PSH Score",
-        "source_id": "score_source",
+        "source_id": "score_source_old",
         "url": "mapbox://wodacooper.il_24",
         "source_layer": "hello_world",
         "layout": {
@@ -3686,7 +3686,7 @@
     },
     "gen_revit_score": {
         "name": "2024 Gen Revit Score",
-        "source_id": "score_source",
+        "source_id": "score_source_old",
         "url": "mapbox://wodacooper.il_24",
         "source_layer": "hello_world",
         "layout": {
@@ -5473,7 +5473,7 @@
     },
     "psh_revit_score": {
         "name": "2024 PSH Revit Score",
-        "source_id": "score_source",
+        "source_id": "score_source_old",
         "url": "mapbox://wodacooper.il_24",
         "source_layer": "hello_world",
         "layout": {
