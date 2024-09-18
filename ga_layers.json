@@ -1,8 +1,8 @@
 {
 "qct_dda": {
         "name": "QCT/DDA",
-        "source_id": "qct/dda_source",
-        "url": "mapbox://wodacooper.qct_dda",
+        "source_id": "qct_dda_25_source",
+        "url": "mapbox://wodacooper.qct_dda_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -14,7 +14,7 @@
                 "match",
                 [
                     "get",
-                    "qct"
+                    "qct_25"
                 ],
                 1,
                 "#ffffff",
@@ -24,40 +24,39 @@
                 "match",
                 [
                     "get",
-                    "qct"
+                    "boost_25"
                 ],
                 1,
                 0.5,
-                [
-                    "match",
-                    [
-                        "get",
-                        "dda_24"
-                    ],
-                    1,
-                    0.5,
-                    0
-                ]
+                0 
             ]
         },
         "click":{
-            "qct":[true,""], 
-            "dda_24":[true,""], 
+            "qct_25":[true,""], 
+            "sadda_25":[true,""],
+            "nmdda_25":[true,""],
+            "new_boost":[true,""],
             "metro":[true,""], 
-            "areaname":[true,""], 
-            "2023 Final 40th Percentile 2-Bedroom FMR":[true,"2br FMR"],
-            "2023 4-PersonVLIL ": [true, "4-Person VLIL"],
-            "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[true,"60% AMI max rent"]
+            "hud_area_name":[true,""], 
+            "fmr_24":[true,"2br FMR"],
+            "vlil_4_24": [true, "4-Person VLIL"],
+            "rent_limit_24":[true,"4-Person VLIL rent"]
         },
         "num_filters":{
             "2023 Final 40th Percentile 2-Bedroom FMR":"2br FMR",
             "2023 4-PersonVLIL ":"4-Person VLIL",
             "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":"60% AMI max rent"
         },
+        "cat_filters":{
+            "new_boost":"New QCT/DDA in 2025"
+        },
+        "cat_filter_vals":{
+            "new_boost":["New QCT/DDA in 2025"]
+        },
         "num_filter_vals":{
-            "2023 Final 40th Percentile 2-Bedroom FMR":[370.0,4080.0],
-            "2023 4-PersonVLIL ":[31100.0,75350.0],
-            "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[933.0,2260.5]
+            "fmr_24":[390.0,4780.0],
+            "vlil_4_24":[31150.0,77350.0],
+            "rent_limit_24":[934.5,2320.5]
         }
     },
     "atl_beltline": {
@@ -2315,7 +2314,7 @@
             ],
             "gich_filter": [
                 "Currently Eligible",
-                "Expiring",
+                "Expiring__010125",
                 "Formerly Certified",
                 "None"
             ]
@@ -3285,7 +3284,7 @@
             ],
             "gich_filter": [
                 "Currently Eligible",
-                "Expiring",
+                "Expiring_010125",
                 "Formerly Certified",
                 "None"
             ]
