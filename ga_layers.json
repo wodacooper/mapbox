@@ -83,6 +83,106 @@
             ]
         ]
     },
+    "atl_tads": {
+        "name": "ATL Tax Allocation Districts",
+        "source_id": "atl_tads_source",
+        "url": "mapbox://wodacooper.atl_tads",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "ZONEDESC"
+                ],
+                "Westside",
+                "#7b634b",
+                "Perry/Bolton",
+                "#f2d17e",
+                "Eastside",
+                "#4A148C",
+                "Atlantic Station",
+                "#689F38",
+                "Princeton Lakes",
+                "#f44336",
+                "Beltline",
+                "#9e9e9e",
+                "Metropolitan Pkwy",
+                "#2196f3",
+                "Stadium",
+                "#827717",
+                "Hollowell / Martin Luther King",
+                "#FF9800",
+                "Campbellton",
+                "#e2e60b",
+                "#FFFFFF"
+            ]
+        },
+        "fill": {
+            "fill-opacity": 0.2,
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "ZONEDESC"
+                ],
+                "Westside",
+                "#7b634b",
+                "Perry/Bolton",
+                "#f2d17e",
+                "Eastside",
+                "#4A148C",
+                "Atlantic Station",
+                "#689F38",
+                "Princeton Lakes",
+                "#f44336",
+                "Beltline",
+                "#9e9e9e",
+                "Metropolitan Pkwy",
+                "#2196f3",
+                "Stadium",
+                "#827717",
+                "Hollowell / Martin Luther King",
+                "#FF9800",
+                "Campbellton",
+                "#e2e60b",
+                "#FFFFFF"
+            ]
+        },
+        "legend": [
+                ["Westside",
+                "#7b634b"],
+                ["Perry/Bolton",
+                "#f2d17e"],
+                ["Eastside",
+                "#4A148C"],
+                ["Atlantic Station",
+                "#689F38"],
+                ["Princeton Lakes",
+                "#f44336"],
+                ["Beltline",
+                "#9e9e9e"],
+                ["Metropolitan Pkwy",
+                "#2196f3"],
+                ["Stadium",
+                "#827717"],
+                ["Hollowell / Martin Luther King",
+                "#FF9800"],
+                ["Campbellton",
+                "#e2e60b"]
+        ],
+        "hover": {
+            "ZONEDESC": [
+                true,
+                "TAD name"
+            ]
+        },
+    },
     "atl_parcels": {
         "name": "Fulton County Parcels",
         "source_id": "atl_parcels",
