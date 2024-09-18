@@ -1023,7 +1023,7 @@
         },
         "legend": [
             [
-                "Beltline TAD",
+                "Districts",
                 "#0000ff"
             ]
         ]
@@ -1439,7 +1439,7 @@
                 true,
                 ""
             ],
-            "gich_detai": [
+            "gich_detailed": [
                 true,
                 ""
             ],
@@ -1451,7 +1451,7 @@
                 true,
                 ""
             ],
-            "transit_bo": [
+            "transit_bonus": [
                 true,
                 ""
             ]
@@ -1509,43 +1509,43 @@
                 true,
                 ""
             ],
-            "primary na": [
+            "primary name": [
                 true,
                 ""
             ],
-            "primary ti": [
+            "primary title": [
                 true,
                 ""
             ],
-            "primary af": [
+            "primary affilliation": [
                 true,
                 ""
             ],
-            "primary ph": [
+            "primary phone": [
                 true,
                 ""
             ],
-            "primary em": [
+            "primary email": [
                 true,
                 ""
             ],
-            "secondary": [
+            "secondary name": [
                 true,
                 ""
             ],
-            "secondar_1": [
+            "secondary title": [
                 true,
                 ""
             ],
-            "secondar_2": [
+            "secondary affilliation": [
                 true,
                 ""
             ],
-            "secondar_3": [
+            "secondary phone": [
                 true,
                 ""
             ],
-            "secondar_4": [
+            "secondary email": [
                 true,
                 ""
             ],
@@ -1595,7 +1595,7 @@
             "cnty_x": "County",
             "city_x": "City",
             "qct_25": "",
-            "gich_filte": "GICH Filter"
+            "gich_filter": "GICH Filter"
         },
         "num_filters": {
             "score": "Stable Score",
@@ -2313,7 +2313,7 @@
                 "No0",
                 "Yes1"
             ],
-            "gich_filte": [
+            "gich_filter": [
                 "Currently Eligible",
                 "Expiring",
                 "Formerly Certified",
@@ -2409,7 +2409,7 @@
                 true,
                 ""
             ],
-            "gich_detai": [
+            "gich_detailed": [
                 true,
                 ""
             ],
@@ -2421,7 +2421,7 @@
                 true,
                 ""
             ],
-            "transit_bo": [
+            "transit_bonus": [
                 true,
                 ""
             ]
@@ -2479,43 +2479,43 @@
                 true,
                 ""
             ],
-            "primary na": [
+            "primary name": [
                 true,
                 ""
             ],
-            "primary ti": [
+            "primary title": [
                 true,
                 ""
             ],
-            "primary af": [
+            "primary affilliation": [
                 true,
                 ""
             ],
-            "primary ph": [
+            "primary phone": [
                 true,
                 ""
             ],
-            "primary em": [
+            "primary email": [
                 true,
                 ""
             ],
-            "secondary": [
+            "secondary name": [
                 true,
                 ""
             ],
-            "secondar_1": [
+            "secondary title": [
                 true,
                 ""
             ],
-            "secondar_2": [
+            "secondary affilliation": [
                 true,
                 ""
             ],
-            "secondar_3": [
+            "secondary phone": [
                 true,
                 ""
             ],
-            "secondar_4": [
+            "secondary email": [
                 true,
                 ""
             ],
@@ -2565,7 +2565,7 @@
             "cnty_x": "County",
             "city_x": "City",
             "qct_25": "",
-            "gich_filte": "GICH Filter"
+            "gich_filter": "GICH Filter"
         },
         "num_filters": {
             "score": "Stable Score",
@@ -3283,7 +3283,7 @@
                 "No0",
                 "Yes1"
             ],
-            "gich_filte": [
+            "gich_filter": [
                 "Currently Eligible",
                 "Expiring",
                 "Formerly Certified",
