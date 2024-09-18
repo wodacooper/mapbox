@@ -59,6 +59,78 @@
             "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[933.0,2260.5]
         }
     },
+    "jason_sites": {
+        "name": "Potential Sites",
+        "source_id": "jason_sites_source",
+        "url": "mapbox://wodacooper.jason_sites",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#038cfc"
+        },
+        "legend": [
+            [
+                "sites",
+                "#038cfc"
+            ]
+        ],
+        "click": {
+            "File": [
+                true,
+                ""
+            ],
+            "Site Number": [
+                true,
+                ""
+            ],
+            "ML #": [
+                true,
+                ""
+            ],
+            "Mls Status": [
+                true,
+                ""
+            ],
+            "Parcel Number": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+            "Subdivision Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "CDOM": [
+                true,
+                ""
+            ],
+            "Lot Size Area": [
+                true,
+                ""
+            ],
+            "Current Price": [
+                true,
+                ""
+            ],
+            "Special Listing Conditions": [
+                true,
+                ""
+            ]
+        }
+    },
     "schools": {
         "name": "Elementary Schools",
         "source_id": "schools_source",
