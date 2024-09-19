@@ -1,6 +1,6 @@
 {
 "qct_dda": {
-        "name": "QCT/DDA",
+        "name": "2025 QCT/DDAs",
         "source_id": "qct_dda_25_source",
         "url": "mapbox://wodacooper.qct_dda_25",
         "source_layer": "hello_world",
@@ -18,7 +18,7 @@
                 ],
                 1,
                 "#ffffff",
-                "#808080"
+                "#a0a0a0"
             ],
             "fill-opacity": [
                 "match",
@@ -31,6 +31,16 @@
                 0 
             ]
         },
+        "legend": [
+            [
+                "QCT",
+                "#ffffff"
+            ],
+           [
+                "DDA",
+                "#a0a0a0"
+            ]
+        ],
         "click":{
             "qct_25":[true,""], 
             "sadda_25":[true,""],
@@ -59,32 +69,8 @@
             "rent_limit_24":[934.5,2320.5]
         }
     },
-    "atl_beltline": {
-        "name": "Beltline TAD",
-        "source_id": "atl_beltline",
-        "url": "mapbox://wodacooper.atl_beltline",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 2,
-            "line-color": "#ff0000"
-        },
-        "fill": {
-            "fill-opacity": 0.2,
-            "fill-color": "#ff0000"
-        },
-        "legend": [
-            [
-                "Beltline TAD",
-                "#ff0000"
-            ]
-        ]
-    },
     "atl_tads": {
-        "name": "ATL Tax Allocation Districts",
+        "name": "Atlanta TADs",
         "source_id": "atl_tads_source",
         "url": "mapbox://wodacooper.atl_tads",
         "source_layer": "hello_world",
@@ -93,7 +79,7 @@
         },
         "visible": false,
         "line": {
-            "line-width": 2,
+            "line-width": 3,
             "line-color": [
                 "match",
                 [
@@ -111,11 +97,11 @@
                 "Princeton Lakes",
                 "#f44336",
                 "Beltline",
-                "#9e9e9e",
+                "#000000",
                 "Metropolitan Pkwy",
                 "#2196f3",
                 "Stadium",
-                "#827717",
+                "#fc03e3",
                 "Hollowell / Martin Luther King",
                 "#FF9800",
                 "Campbellton",
@@ -142,11 +128,11 @@
                 "Princeton Lakes",
                 "#f44336",
                 "Beltline",
-                "#9e9e9e",
+                "#000000",
                 "Metropolitan Pkwy",
                 "#2196f3",
                 "Stadium",
-                "#827717",
+                "#fc03e3",
                 "Hollowell / Martin Luther King",
                 "#FF9800",
                 "Campbellton",
@@ -166,11 +152,11 @@
                 ["Princeton Lakes",
                 "#f44336"],
                 ["Beltline",
-                "#9e9e9e"],
+                "#000000"],
                 ["Metropolitan Pkwy",
                 "#2196f3"],
                 ["Stadium",
-                "#827717"],
+                "#fc03e3"],
                 ["Hollowell / Martin Luther King",
                 "#FF9800"],
                 ["Campbellton",
@@ -1211,11 +1197,15 @@
                 true,
                 ""
             ],
-            "qct": [
+            "qct_25": [
                 true,
                 ""
             ],
-            "dda_24":[
+            "sadda_25":[
+                true,
+                ""
+            ],
+            "nmdda_25":[
                 true,
                 ""
             ],
@@ -1265,7 +1255,8 @@
             ]
         },
         "cat_filters": {
-            "county": "County"      
+            "county": "County",
+             "new_boost": "New QCT/DDA in 2025"
         },
         "num_filters": {
             "score": "4% Score"
@@ -1277,6 +1268,7 @@
             ]
         },
         "cat_filter_vals": {
+            "new_boost": ["New QCT/DDA in 2025"],
             "county": [
                 "Appling",
                 "Atkinson",
