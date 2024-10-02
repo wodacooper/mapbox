@@ -69,6 +69,74 @@
             "rent_limit_24":[934.5,2320.5]
         }
     },
+    "jason_sites_092524": {
+        "name": "Dallas Sites",
+        "source_id": "jason_sites_092524_source",
+        "url": "mapbox://wodacooper.jason_sites_092524",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#833fab"
+        },
+        "legend": [
+            [
+                "sites",
+                "#833fab"
+            ]
+        ],
+        "click": {
+            "File": [
+                true,
+                ""
+            ],
+            "Site Number": [
+                true,
+                ""
+            ],
+            "ML #": [
+                true,
+                ""
+            ],
+            "Mls Status": [
+                true,
+                ""
+            ],
+            "Parcel Number": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+            "Subdivision Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "CDOM": [
+                true,
+                ""
+            ],
+            "Lot Size Area": [
+                true,
+                ""
+            ],
+            "Current Price": [
+                true,
+                ""
+            ]
+        }
+    },
     "jason_sites": {
         "name": "Potential Sites",
         "source_id": "jason_sites_source",
