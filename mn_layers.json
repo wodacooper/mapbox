@@ -198,7 +198,6 @@
        "visibility": "visible"
    },
    "visible": true,
-     "perm_filters":[["==","Pool","Metro"]],
         "fill": {
             "fill-color": [
                 "step",
