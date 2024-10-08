@@ -344,7 +344,7 @@
    "url": "mapbox://wodacooper.mn_25",
    "source_layer": "hello_world",
    "layout": {
-       "visibility": "none"
+       "visibility": "visible"
    },
    "visible": true,
      "perm_filters":[["==","Pool","Greater Minnesota"]],
@@ -567,9 +567,9 @@
         "url": "mapbox://wodacooper.mn_urb_24",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
