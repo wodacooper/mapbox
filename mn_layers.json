@@ -1,4 +1,17 @@
 {
+     "test": {
+   "name": "Metro Score 2025",
+   "source_id": "blah_source",
+   "url": "mapbox://wodacooper.mn_25",
+   "source_layer": "hello_world",
+   "layout": {
+       "visibility": "visible"
+   },
+   "visible": true,
+        "fill": {
+            "fill-color": "#ffff00",
+            "fill-opacity": 0.6
+        }}
      "qct_dda": {
         "name": "2025 QCT/DDAs",
         "source_id": "qct_dda_25_source",
