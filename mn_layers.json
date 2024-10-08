@@ -198,7 +198,7 @@
        "visibility": "visible"
    },
    "visible": true,
-     "perm_filters":[["==","Pool","Metro"]]
+     "perm_filters":[["==","Pool","Metro"]],
         "fill": {
             "fill-color": [
                 "step",
@@ -347,7 +347,7 @@
        "visibility": "none"
    },
    "visible": true,
-     "perm_filters":[["==","Pool","Greater Minnesota"]]
+     "perm_filters":[["==","Pool","Greater Minnesota"]],
         "fill": {
             "fill-color": [
                 "step",
