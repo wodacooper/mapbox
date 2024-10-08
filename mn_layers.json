@@ -189,8 +189,382 @@
             ]
         ]
     },
+   "metro_25": {
+   "name": "Metro Score 2025",
+   "source_id": "mn_25_source",
+   "url": "mapbox://wodacooper.mn_25",
+   "source_layer": "hello_world",
+   "layout": {
+       "visibility": "visible"
+   },
+   "visible": true,
+     "perm_filters":[["==","Pool","Metro"]]
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                13,
+                "#9e9e9e",
+                15,
+                "#70534e",
+                17,
+                "#346b36",
+                19,
+                "#0000ff",
+                20,
+                "#9207fc",
+                21,
+                "#ff0000",
+                22,
+                "#fe8103",
+                23,
+                "#ffff00",
+                24,
+                "#ff00ff",
+                25,
+                "#00ff00",
+                26,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        "cat_filters": {
+            "city_name": "City",
+            "County": "",
+            "Walkscore Points": "",
+            "ws_cat": "Category"
+        },
+        "num_filters": {
+            "score": "Score"
+        },
+        "legend": [
+            [
+                "26-28",
+                "#00ffff"
+            ],
+            [
+                "25",
+                "#00ff00"
+            ],
+            [
+                "24",
+                "#ff00ff"
+            ],
+            [
+                "23",
+                "#ffff00"
+            ],
+            [
+                "22",
+                "#fe8103"
+            ],
+            [
+                "21",
+                "#ff0000"
+            ],
+            [
+                "20",
+                "#9207fc"
+            ],
+            [
+                "19",
+                "#0000ff"
+            ],
+            [
+                "17-18",
+                "#346b36"
+            ],
+            [
+                "15-16",
+                "#70534e"
+            ],
+            [
+                "13-14",
+                "#9e9e9e"
+            ],
+            [
+                "<13",
+                "#ffffff"
+            ]
+        ],
+        "hover": {
+            "County": [
+                true,
+                ""
+            ],
+            "city_name": [
+                true,
+                "City"
+            ],
+            "score": [
+                true,
+                "Score"
+            ]
+        },
+        "click": {
+            "County":[true,""],"city_name":[true,""],"score":[true,""],"Need for More Affordable Housing Points":[true,""],"Transit Points":[true,""],"Workforce Housing Points":[true,""],"Multifamily Award History":[true,""],"Walkscore Points":[true,""],"QCT Points":[true,""],"GEOID":[true,""]
+             },
+        "cat_filter_vals": {
+            "city_name": [
+                "Afton", "Andover", "Anoka", "Apple Valley", "Arden Hills", "Bayport", "Belle Plaine", "Bethel", "Birchwood Village", "Blaine", "Bloomington", "Brooklyn Center", "Brooklyn Park", "Burnsville", "Carver", "Centerville", "Champlin", "Chanhassen", "Chaska", "Circle Pines", "Coates", "Cologne", "Columbia Heights", "Columbus", "Coon Rapids", "Corcoran", "Cottage Grove", "Crystal", "Dayton", "Deephaven", "Dellwood", "Eagan", "East Bethel", "Eden Prairie", "Edina", "Elko New Market", "Excelsior", "Falcon Heights", "Farmington", "Forest Lake", "Fridley", "Gem Lake", "Golden Valley", "Grant", "Greenfield", "Greenwood", "Ham Lake", "Hamburg", "Hampton", "Hastings", "Hilltop", "Hopkins", "Hugo", "Independence", "Inver Grove Heights", "Jordan", "Lake Elmo", "Lake St. Croix Beach", "Lakeland", "Lakeland Shores", "Lakeville", "Landfall", "Lauderdale", "Lexington", "Lilydale", "Lino Lakes", "Little Canada", "Long Lake", "Loretto", "Mahtomedi", "Maple Grove", "Maple Plain", "Maplewood", "Marine on St. Croix", "Mayer", "Medicine Lake", "Medina", "Mendota", "Mendota Heights", "Miesville", "Minneapolis", "Minnetonka", "Minnetonka Beach", "Minnetrista", "Mound", "Mounds View", "New Brighton", "New Germany", "New Hope", "New Trier", "Newport", "North Oaks", "North St. Paul", "Norwood Young America", "Nowthen", "Oak Grove", "Oak Park Heights", "Oakdale", "Orono", "Osseo", "Pine Springs", "Plymouth", "Prior Lake", "Ramsey", "Randolph", "Richfield", "Robbinsdale", "Rogers", "Rosemount", "Roseville", "Savage", "Scandia", "Shakopee", "Shoreview", "Shorewood", "South St. Paul", "Spring Lake Park", "Spring Park", "St. Anthony", "St. Bonifacius", "St. Francis", "St. Louis Park", "St. Marys Point", "St. Paul", "St. Paul Park", "Stillwater", "Sunfish Lake", "Tonka Bay", "Vadnais Heights", "Vermillion", "Victoria", "Waconia", "Watertown", "Wayzata", "West St. Paul", "White Bear Lake", "Willernie", "Woodbury", "Woodland", "Unincorporated"
+            ],
+            "County": [
+                "Anoka",
+                "Carver",
+                "Dakota",
+                "Hennepin",
+                "Ramsey",
+                "Scott",
+                "Washington"
+            ],
+            "Walkscore Points": [
+                "0.0",
+                "1.0",
+                "2.0"
+            ],
+            "ws_cat": [
+                "Suburban",
+                "Twin Cities"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                6.0,
+                28.0
+            ]
+        }
+    },
+     "greater_25": {
+   "name": "Greater MN Score 2025",
+   "source_id": "mn_25_source",
+   "url": "mapbox://wodacooper.mn_25",
+   "source_layer": "hello_world",
+   "layout": {
+       "visibility": "none"
+   },
+   "visible": true,
+     "perm_filters":[["==","Pool","Greater Minnesota"]]
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                21,
+                "#9e9e9e",
+                23,
+                "#70534e",
+                25,
+                "#346b36",
+                27,
+                "#0000ff",
+                28,
+                "#9207fc",
+                29,
+                "#ff0000",
+                30,
+                "#fe8103",
+                31,
+                "#ffff00",
+                32,
+                "#ff00ff",
+                33,
+                "#00ff00",
+                34,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        "cat_filters": {
+            "city_name": "City",
+            "County": "",
+            "Walkscore Points": "",
+            "ws_cat": "Category"
+        },
+        "num_filters": {
+            "score": "Score"
+        },
+        "legend": [
+            [
+                "34-36",
+                "#00ffff"
+            ],
+            [
+                "33",
+                "#00ff00"
+            ],
+            [
+                "32",
+                "#ff00ff"
+            ],
+            [
+                "31",
+                "#ffff00"
+            ],
+            [
+                "30",
+                "#fe8103"
+            ],
+            [
+                "29",
+                "#ff0000"
+            ],
+            [
+                "28",
+                "#9207fc"
+            ],
+            [
+                "27",
+                "#0000ff"
+            ],
+            [
+                "25-26",
+                "#346b36"
+            ],
+            [
+                "23-24",
+                "#70534e"
+            ],
+            [
+                "21-22",
+                "#9e9e9e"
+            ],
+            [
+                "<21",
+                "#ffffff"
+            ]
+        ],
+        "hover": {
+            "County": [
+                true,
+                ""
+            ],
+            "city_name": [
+                true,
+                "City"
+            ],
+            "score": [
+                true,
+                "Score"
+            ]
+        },
+        "click": {
+            "County":[true,""],"city_name":[true,""],"score":[true,""],"Need for More Affordable Housing Points":[true,""],"Transit Points":[true,""],"Rural Points":[true,""],"Workforce Housing Points":[true,""],"Multifamily Award History":[true,""],"Walkscore Points":[true,""],"QCT Points":[true,""],"GEOID":[true,""]
+             },
+        "cat_filter_vals": {
+            "city_name": [
+                 "Ada", "Adams", "Adrian", "Aitkin", "Akeley", "Albany", "Albert Lea", "Alberta", "Albertville", "Alden", "Aldrich", "Alexandria", "Alpha", "Altura", "Alvarado", "Amboy", "Annandale", "Appleton", "Arco", "Argyle", "Arlington", "Ashby", "Askov", "Atwater", "Audubon", "Aurora", "Austin", "Avoca", "Avon", "Babbitt", "Backus", "Badger", "Bagley", "Balaton", "Barnesville", "Barnum", "Barrett", "Barry", "Battle Lake", "Baudette", "Baxter", "Beardsley", "Beaver Bay", "Beaver Creek", "Becker", "Bejou", "Belgrade", "Bellechester", "Bellingham", "Beltrami", "Belview", "Bemidji", "Bena", "Benson", "Bertha", "Big Falls", "Big Lake", "Bigelow", "Bigfork", "Bingham Lake", "Bird Island", "Biscay", "Biwabik", "Blackduck", "Blomkest", "Blooming Prairie", "Blue Earth", "Bluffton", "Bock", "Borup", "Bovey", "Bowlus", "Boy River", "Boyd", "Braham", "Brainerd", "Brandon", "Breckenridge", "Breezy Point", "Brewster", "Bricelyn", "Brook Park", "Brooks", "Brookston", "Brooten", "Browerville", "Browns Valley", "Brownsdale", "Brownsville", "Brownton", "Bruno", "Buckman", "Buffalo", "Buffalo Lake", "Buhl", "Burtrum", "Butterfield", "Byron", "Caledonia", "Callaway", "Calumet", "Cambridge", "Campbell", "Canby", "Cannon Falls", "Canton", "Carlos", "Carlton", "Cass Lake", "Cedar Mills", "Center City", "Ceylon", "Chandler", "Chatfield", "Chickamaw Beach", "Chisago City", "Chisholm", "Chokio", "Clara City", "Claremont", "Clarissa", "Clarkfield", "Clarks Grove", "Clear Lake", "Clearbrook", "Clearwater", "Clements", "Cleveland", "Climax", "Clinton", "Clitherall", "Clontarf", "Cloquet", "Cobden", "Cohasset", "Cokato", "Cold Spring", "Coleraine", "Comfrey", "Comstock", "Conger", "Cook", "Correll", "Cosmos", "Cottonwood", "Courtland", "Cromwell", "Crookston", "Crosby", "Crosslake", "Currie", "Cuyuna", "Cyrus", "Dakota", "Dalton", "Danube", "Danvers", "Darfur", "Darwin", "Dassel", "Dawson", "Dayton", "De Graff", "Deer Creek", "Deer River", "Deerwood", "Delano", "Delavan", "Delhi", "Denham", "Dennison", "Dent", "Detroit Lakes", "Dexter", "Dilworth", "Dodge Center", "Donaldson", "Donnelly", "Doran", "Dover", "Dovray", "Duluth", "Dumont", "Dundas", "Dundee", "Dunnell", "Eagle Bend", "Eagle Lake", "East Grand Forks", "East Gull Lake", "Easton", "Echo", "Eden Valley", "Edgerton", "Effie", "Eitzen", "Elba", "Elbow Lake", "Elgin", "Elizabeth", "Elk River", "Elkton", "Ellendale", "Ellsworth", "Elmdale", "Elmore", "Elrosa", "Ely", "Elysian", "Emily", "Emmons", "Erhard", "Erskine", "Evan", "Evansville", "Eveleth", "Eyota", "Fairfax", "Fairmont", "Faribault", "Farwell", "Federal Dam", "Felton", "Fergus Falls", "Fertile", "Fifty Lakes", "Finlayson", "Fisher", "Flensburg", "Floodwood", "Florence", "Foley", "Forada", "Foreston", "Fort Ripley", "Fosston", "Fountain", "Foxhome", "Franklin", "Frazee", "Freeborn", "Freeport", "Frost", "Fulda", "Funkley", "Garfield", "Garrison", "Garvin", "Gary", "Gaylord", "Geneva", "Genola", "Georgetown", "Ghent", "Gibbon", "Gilbert", "Gilman", "Glencoe", "Glenville", "Glenwood", "Glyndon", "Gonvick", "Good Thunder", "Goodhue", "Goodridge", "Goodview", "Graceville", "Granada", "Grand Marais", "Grand Meadow", "Grand Rapids", "Granite Falls", "Grasston", "Green Isle", "Greenbush", "Greenwald", "Grey Eagle", "Grove City", "Grygla", "Gully", "Hackensack", "Hadley", "Hallock", "Halma", "Halstad", "Hammond", "Hancock", "Hanley Falls", "Hanover", "Hanska", "Harding", "Hardwick", "Harmony", "Harris", "Hartland", "Hatfield", "Hawley", "Hayfield", "Hayward", "Hazel Run", "Hector", "Heidelberg", "Henderson", "Hendricks", "Hendrum", "Henning", "Henriette", "Herman", "Hermantown", "Heron Lake", "Hewitt", "Hibbing", "Hill City", "Hillman", "Hills", "Hinckley", "Hitterdal", "Hoffman", "Hokah", "Holdingford", "Holland", "Hollandale", "Holloway", "Holt", "Houston", "Howard Lake", "Hoyt Lakes", "Humboldt", "Hutchinson", "Ihlen", "International Falls", "Iona", "Iron Junction", "Ironton", "Isanti", "Isle", "Ivanhoe", "Jackson", "Janesville", "Jasper", "Jeffers", "Jenkins", "Kandiyohi", "Karlstad", "Kasota", "Kasson", "Keewatin", "Kelliher", "Kellogg", "Kennedy", "Kenneth", "Kensington", "Kent", "Kenyon", "Kerkhoven", "Kerrick", "Kettle River", "Kiester", "Kilkenny", "Kimball", "Kingston", "Kinney", "La Crescent", "La Prairie", "La Salle", "Lafayette", "Lake Benton", "Lake Bronson", "Lake City", "Lake Crystal", "Lake Henry", "Lake Lillian", "Lake Park", "Lake Shore", "Lake Wilson", "Lakefield", "Lamberton", "Lancaster", "Lanesboro", "Laporte", "Lastrup", "Le Center", "Le Roy", "Le Sueur", "Lengby", "Leonard", "Leonidas", "Lester Prairie", "Lewiston", "Lewisville", "Lindstrom", "Lismore", "Litchfield", "Little Falls", "Littlefork", "Long Beach", "Long Prairie", "Longville", "Lonsdale", "Louisburg", "Lowry", "Lucan", "Luverne", "Lyle", "Lynd", "Mabel", "Madelia", "Madison", "Madison Lake", "Magnolia", "Mahnomen", "Manchester", "Manhattan Beach", "Mankato", "Mantorville", "Maple Lake", "Mapleton", "Mapleview", "Marble", "Marietta", "Marshall", "Maynard", "Mazeppa", "McGrath", "McGregor", "McIntosh", "McKinley", "Meadowlands", "Medford", "Meire Grove", "Melrose", "Menahga", "Mentor", "Middle River", "Milaca", "Milan", "Millerville", "Millville", "Milroy", "Miltona", "Minneiska", "Minneota", "Minnesota City", "Minnesota Lake", "Mizpah", "Montevideo", "Montgomery", "Monticello", "Montrose", "Moorhead", "Moose Lake", "Mora", "Morgan", "Morris", "Morristown", "Morton", "Motley", "Mountain Iron", "Mountain Lake", "Murdock", "Myrtle", "Nashua", "Nashwauk", "Nassau", "Nelson", "Nerstrand", "Nevis", "New Auburn", "New London", "New Munich", "New Prague", "New Richland", "New Ulm", "New York Mills", "Newfolden", "Nicollet", "Nielsville", "Nimrod", "Nisswa", "Norcross", "North Branch", "North Mankato", "Northfield", "Northome", "Northrop", "Odessa", "Odin", "Ogema", "Ogilvie", "Okabena", "Oklee", "Olivia", "Onamia", "Ormsby", "Oronoco", "Orr", "Ortonville", "Osakis", "Oslo", "Ostrander", "Otsego", "Ottertail", "Owatonna", "Palisade", "Park Rapids", "Parkers Prairie", "Paynesville", "Pease", "Pelican Rapids", "Pemberton", "Pennock", "Pequot Lakes", "Perham", "Perley", "Peterson", "Pierz", "Pillager", "Pine City", "Pine Island", "Pine River", "Pipestone", "Plainview", "Plato", "Plummer", "Porter", "Preston", "Princeton", "Prinsburg", "Proctor", "Quamba", "Racine", "Randall", "Ranier", "Raymond", "Red Lake Falls", "Red Wing", "Redwood Falls", "Regal", "Remer", "Renville", "Revere", "Rice", "Rice Lake", "Richmond", "Richville", "Riverton", "Rochester", "Rock Creek", "Rockford", "Rockville", "Rollingstone", "Roosevelt", "Roscoe", "Rose Creek", "Roseau", "Rothsay", "Round Lake", "Royalton", "Rush City", "Rushford", "Rushford Village", "Rushmore", "Russell", "Ruthton", "Rutledge", "Sabin", "Sacred Heart", "Sanborn", "Sandstone", "Sargeant", "Sartell", "Sauk Centre", "Sauk Rapids", "Scanlon", "Seaforth", "Sebeka", "Sedan", "Shafer", "Shelly", "Sherburn", "Shevlin", "Silver Bay", "Silver Lake", "Skyline", "Slayton", "Sleepy Eye", "Sobieski", "Solway", "South Haven", "Spicer", "Spring Grove", "Spring Hill", "Spring Valley", "Springfield", "Squaw Lake", "St. Anthony", "St. Augusta", "St. Charles", "St. Clair", "St. Cloud", "St. Francis", "St. Hilaire", "St. James", "St. Joseph", "St. Leo", "St. Martin", "St. Michael", "St. Peter", "St. Rosa", "St. Stephen", "St. Vincent", "Stacy", "Staples", "Starbuck", "Steen", "Stephen", "Stewart", "Stewartville", "Stockton", "Storden", "Strandquist", "Strathcona", "Sturgeon Lake", "Sunburg", "Swanville", "Taconite", "Tamarack", "Taopi", "Taunton", "Taylors Falls", "Tenstrike", "Thief River Falls", "Tintah", "Tower", "Tracy", "Trail", "Trimont", "Trommald", "Trosky", "Truman", "Turtle River", "Twin Lakes", "Twin Valley", "Two Harbors", "Tyler", "Ulen", "Underwood", "Upsala", "Urbank", "Utica", "Vergas", "Verndale", "Vernon Center", "Vesta", "Viking", "Villard", "Vining", "Virginia", "Wabasha", "Wabasso", "Wadena", "Wahkon", "Waite Park", "Waldorf", "Walker", "Walnut Grove", "Walters", "Waltham", "Wanamingo", "Wanda", "Warba", "Warren", "Warroad", "Waseca", "Waterville", "Watkins", "Watson", "Waubun", "Waverly", "Welcome", "Wells", "Wendell", "West Concord", "West Union", "Westbrook", "Westport", "Whalan", "Wheaton", "Wilder", "Williams", "Willmar", "Willow River", "Wilmont", "Wilton", "Windom", "Winger", "Winnebago", "Winona", "Winsted", "Winthrop", "Winton", "Wolf Lake", "Wolverton", "Wood Lake", "Woodstock", "Worthington", "Wrenshall", "Wright", "Wykoff", "Wyoming", "Zemple", "Zimmerman", "Zumbro Falls", "Zumbrota", "Unincorporated
+               ],
+            "County": [
+                "Aitkin",
+                "Becker",
+                "Beltrami",
+                "Benton",
+                "Big Stone",
+                "Blue Earth",
+                "Brown",
+                "Carlton",
+                "Cass",
+                "Chippewa",
+                "Chisago",
+                "Clay",
+                "Clearwater",
+                "Cook",
+                "Cottonwood",
+                "Crow Wing",
+                "Dakota",
+                "Dodge",
+                "Douglas",
+                "Faribault",
+                "Fillmore",
+                "Freeborn",
+                "Goodhue",
+                "Grant",
+                "Hennepin",
+                "Houston",
+                "Hubbard",
+                "Isanti",
+                "Itasca",
+                "Jackson",
+                "Kanabec",
+                "Kandiyohi",
+                "Kittson",
+                "Koochiching",
+                "Lac qui Parle",
+                "Lake",
+                "Lake of the Woods",
+                "Le Sueur",
+                "Lincoln",
+                "Lyon",
+                "Mahnomen",
+                "Marshall",
+                "Martin",
+                "McLeod",
+                "Meeker",
+                "Mille Lacs",
+                "Morrison",
+                "Mower",
+                "Murray",
+                "Nicollet",
+                "Nobles",
+                "Norman",
+                "Olmsted",
+                "Otter Tail",
+                "Pennington",
+                "Pine",
+                "Pipestone",
+                "Polk",
+                "Pope",
+                "Red Lake",
+                "Redwood",
+                "Renville",
+                "Rice",
+                "Rock",
+                "Roseau",
+                "Scott",
+                "Sherburne",
+                "Sibley",
+                "St. Louis",
+                "Stearns",
+                "Steele",
+                "Stevens",
+                "Swift",
+                "Todd",
+                "Traverse",
+                "Wabasha",
+                "Wadena",
+                "Waseca",
+                "Watonwan",
+                "Wilkin",
+                "Winona",
+                "Wright",
+                "Yellow Medicine"
+            ],
+            "Walkscore Points": [
+                "0.0",
+                "1.0",
+                "2.0"
+            ],
+            "ws_cat": [
+                "Urbanized Area",
+                "Rural"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                10.0,
+                36.0
+            ]
+        }
+    },
     "urb_score": {
-        "name": "Metro Score",
+        "name": "Metro Score 2024",
         "source_id": "urb_score_source",
         "url": "mapbox://wodacooper.mn_urb_24",
         "source_layer": "hello_world",
