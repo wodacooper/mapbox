@@ -1256,7 +1256,9 @@
         },
         "cat_filters": {
             "county": "County",
-             "new_boost": "New QCT/DDA in 2025"
+            "new_boost": "New QCT/DDA in 2025",
+            "stable_pts": "Stable Communities",
+            "sch_pts":c"School Points"
         },
         "num_filters": {
             "score": "4% Score"
@@ -1269,6 +1271,8 @@
         },
         "cat_filter_vals": {
             "new_boost": ["New QCT/DDA in 2025"],
+            "stable_pts": ["0","6","8","10"],
+            "sch_pts": ["0","1","1.5","3"],
             "county": [
                 "Appling",
                 "Atkinson",
@@ -1686,7 +1690,9 @@
             "cnty_x": "County",
             "city_x": "City",
             "qct_25": "",
-            "gich_filter": "GICH Filter"
+            "gich_filter": "GICH Filter",
+            "stable_pts": "Stable Communities",
+            "sch_pts":c"School Points"
         },
         "num_filters": {
             "score": "Stable Score",
@@ -1698,6 +1704,8 @@
                 "Other Metro",
                 "Rural"
             ],
+            "stable_pts": ["0","6","8","10"],
+            "sch_pts": ["0","1","1.5","3"],
             "cnty_x": [
                 "Appling",
                 "Atkinson",
@@ -2656,7 +2664,9 @@
             "cnty_x": "County",
             "city_x": "City",
             "qct_25": "",
-            "gich_filter": "GICH Filter"
+            "gich_filter": "GICH Filter",
+            "stable_pts": "Stable Communities",
+            "sch_pts":c"School Points"
         },
         "num_filters": {
             "score": "Stable Score",
@@ -2668,6 +2678,8 @@
                 "Other Metro",
                 "Rural"
             ],
+            "stable_pts": ["0","6","8","10"],
+            "sch_pts": ["0","1","1.5","3"],
             "cnty_x": [
                 "Appling",
                 "Atkinson",
