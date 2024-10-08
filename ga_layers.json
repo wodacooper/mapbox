@@ -1258,7 +1258,7 @@
             "county": "County",
             "new_boost": "New QCT/DDA in 2025",
             "stable_pts": "Stable Communities",
-            "sch_pts":c"School Points"
+            "sch_pts":"School Points"
         },
         "num_filters": {
             "score": "4% Score"
@@ -1692,7 +1692,7 @@
             "qct_25": "",
             "gich_filter": "GICH Filter",
             "stable_pts": "Stable Communities",
-            "sch_pts":c"School Points"
+            "sch_pts":"School Points"
         },
         "num_filters": {
             "score": "Stable Score",
@@ -2666,7 +2666,7 @@
             "qct_25": "",
             "gich_filter": "GICH Filter",
             "stable_pts": "Stable Communities",
-            "sch_pts":c"School Points"
+            "sch_pts":"School Points"
         },
         "num_filters": {
             "score": "Stable Score",
