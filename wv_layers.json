@@ -69,6 +69,40 @@
             "rent_limit_24":[934.5,2320.5]
         }
     },
+    "build_wv": {
+        "name": "Build WV",
+        "source_id": "build_wv_source",
+        "url": "mapbox://wodacooper.build_wv",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#7dbff5"
+        },
+        "legend": [
+            [
+                "sites",
+                "#7dbff5"
+            ]
+        ],
+        "click": {
+            "District": [
+                true,
+                ""
+            ]
+        },
+        "hover": {
+            "District": [
+                true,
+                ""
+            ]
+        }
+    },
     "cities": {
         "name": "Cities",
         "source_id": "places",
@@ -88,8 +122,8 @@
                 "#000000"
             ]
         ],
-        "click": {"NAMELSAD": [true, "city"]},
-         "hover": {"NAMELSAD": [true, "city"]}
+        "click": {"NAMELSAD": [true, "City"]},
+        "hover": {"NAMELSAD": [true, "City"]}
     },
    "new_supply": {
    "name": "New Supply 2024",
