@@ -124,24 +124,15 @@
         },
         "visible": false,
         "line": {
-            "line-color": "#FFFFFF"
-        },
-        "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.4
+            "line-color": "#000000",
+            "line-width": 2
         },
         "legend": [
             [
                 "Cities",
                 "#000000"
             ]
-        ],
-        "hover": {
-            "municipa_1": [
-                true,
-                ""
-            ]
-        }
+        ]
     },
     "counties": {
         "name": "Counties",
@@ -153,7 +144,7 @@
         },
         "visible": false,
         "line": {
-            "line-color": "#000000",
+            "line-color": "#53b1f5",
             "line-width": 4
         },
         "fill": {
@@ -162,7 +153,7 @@
         "legend": [
             [
                 "Counties (Outline)",
-                "#000000"
+                "#53b1f5"
             ]
         ],
         "hover": {
@@ -213,16 +204,7 @@
             "fill-opacity": 0.6
         },
         "line": {
-            "line-color": [
-                "match",
-                [
-                    "get",
-                    "school_note"
-                ],
-                "0",
-                "#000000",
-                "#FFFFFF"
-            ],
+            "line-color": "#FFFFFF",
             "line-width": [
                 "match",
                 [
@@ -230,8 +212,8 @@
                     "school_note"
                 ],
                 "0",
-                0.5,
-                2
+                0.2,
+                1
             ]
         },
         "cat_filters": {
@@ -260,6 +242,10 @@
             "Max Score": [
                 true,
                 ""
+            ],
+            "school info": [
+                true,
+                "School Note"
             ]
         },
         "click": {
@@ -379,161 +365,113 @@
             ]
         }
     },
-    "score_old": {
-        "name": "Old Family Score",
-        "source_id": "pa_family_basemap_4_5_24_1",
-        "url": "mapbox://wodacooper.pa_family_basemap_4_5_24_1",
+    "score_family": {
+        "name": "General Occupancy Score",
+        "source_id": "pa_24",
+        "url": "mapbox://wodacooper.pa_24",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
         "visible": false,
-        "line": {
-            "line-color": [
-                "match",
+        "fill": {
+            "fill-color": [
+                "step",
                 [
                     "get",
-                    "school_exception"
+                    "General Occupancy Score"
                 ],
-                "None",
-                "#000000",
-                "#FFFFFF"
+                "#ffffff",
+                8,
+                "#70534e",
+                9,
+                "#346b36",
+                10,
+                "#0000ff",
+                11,
+                "#9207fc",
+                12,
+                "#ff0000",
+                13,
+                "#fe8103",
+                14,
+                "#ffff00",
+                15,
+                "#ff00ff",
+                16,
+                "#00ff00",
+                17,
+                "#00ffff"
             ],
+            "fill-opacity": 0.6
+        },
+        "line": {
+            "line-color": "#FFFFFF",
             "line-width": [
                 "match",
                 [
                     "get",
-                    "school_exception"
+                    "school_note"
                 ],
-                "None",
-                2,
-                0.3
+                "0",
+                0.2,
+                1
             ]
-        },
-        "fill": {
-            "fill-color": [
-                "match",
-                [
-                    "get",
-                    "total_general_occupancy_score"
-                ],
-                15,
-                "#00ff0e",
-                14,
-                "#00fff3",
-                13,
-                "#fc00ff",
-                12,
-                "#F1FF00",
-                11,
-                "#FF9800",
-                10,
-                "#FF0000",
-                9,
-                "#0022c9",
-                8,
-                "#7e00ab",
-                "#FFFFFF"
-            ],
-            "fill-opacity": 0.6
         },
         "cat_filters": {
             "county": "",
-            "qct1": ""
+            "Pool": ""
         },
         "num_filters": {
-            "total_general_occupancy_score": "Family Score"
+            "Max Score": "",
+            "General Occupancy Score": "",
+            "Senior Score": ""
         },
-        "legend": [
-            [
-                "15",
-                "#00ff0e"
-            ],
-            [
-                "14",
-                "#00fff3"
-            ],
-            [
-                "13",
-                "#fc00ff"
-            ],
-            [
-                "12",
-                "#F1FF00"
-            ],
-            [
-                "11",
-                "#FF9800"
-            ],
-            [
-                "10",
-                "#FF0000"
-            ],
-            [
-                "9",
-                "#0022c9"
-            ],
-            [
-                "8",
-                "#7e00ab"
-            ],
-            [
-                "0-7",
-                "#FFFFFF"
-            ],
-            [
-                "School Exception (Outline)",
-                "#000000"
-            ]
-        ],
+        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
         "hover": {
-            "total_general_occupancy_score": [
+            "Pool": [
                 true,
                 ""
             ],
-            "tract_full": [
+            "county": [
                 true,
                 ""
             ],
-            "school_district": [
+            "NAME": [
+                true,
+                "city"
+            ],
+            "General Occupancy Score": [
                 true,
                 ""
             ],
-            "zip_code": [
+            "school info": [
                 true,
-                ""
+                "School Note"
             ]
         },
         "click": {
-            "total_general_occupancy_score": [
+            "Pool": [
                 true,
                 ""
             ],
-            "senior_score": [
+            "county": [
                 true,
                 ""
             ],
-            "tract_full": [
+            "NAME": [
+                true,
+                "city"
+            ],
+            "General Occupancy Score": [
                 true,
                 ""
             ],
-            "qct": [
+            "Senior Score": [
                 true,
                 ""
             ],
-            "dda": [
-                true,
-                ""
-            ],
-            "school_district": [
-                true,
-                ""
-            ],
-            "school_exception": [
-                true,
-                ""
-            ],
-            "zip_code": [
+            "ws_pts":[true,""],"community impact score":[true,""],"community_impact_pts":[true,""],"oppurtunity_score":[true,""],"opportunity_pts":[true,""],"unsd_name":[true,""],"school_pts":[true,""],"school_note":[true,""],"Senior Occupancy (SO)":[true,""],"so_pts":[true,""],"Senior Rent Burden (SRB)":[true,""],"srb_pts":[true,""],"Senior Housing Stock (SHS)":[true,""],"shs_pts":[true,""],"Comm Heath Center (CHC)":[true,""],"chc_pts":[true,""],"ZCTA5CE20":[true,""],"GEOID": [
                 true,
                 ""
             ]
@@ -609,22 +547,30 @@
                 "juniata",
                 "philadelphia"
             ],
-            "qct1": [
-                "No1",
-                "Yes1"
+            "Pool": [
+                "Urban",
+                "Suburban/Rural"
             ]
         },
         "num_filter_vals": {
-            "total_general_occupancy_score": [
+            "Max Score": [
+                0.0,
+                17.0
+            ],
+            "General Occupancy Score": [
+                0.0,
+                17.0
+            ],
+            "Senior Score": [
                 0.0,
                 15.0
             ]
         }
     },
-    "senior_score_old": {
-        "name": "Old Senior Score",
-        "source_id": "pa_senior_basemap_4_5_24_2",
-        "url": "mapbox://wodacooper.pa_senior_basemap_4_5_24_2",
+    "score_senior": {
+        "name": "Senior Score",
+        "source_id": "pa_24",
+        "url": "mapbox://wodacooper.pa_24",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -632,98 +578,98 @@
         "visible": false,
         "fill": {
             "fill-color": [
-                "match",
+                "step",
                 [
                     "get",
-                    "senior_score"
+                    "Senior Score"
                 ],
-                14,
-                "#00f7ff",
-                13,
-                "#F7FF00",
-                12,
-                "#6600cc",
-                11,
-                "#FF0000",
+                "#ffffff",
+                8,
+                "#70534e",
+                9,
+                "#346b36",
                 10,
-                "#001493",
-                "#FFFFFF"
+                "#0000ff",
+                11,
+                "#9207fc",
+                12,
+                "#ff0000",
+                13,
+                "#fe8103",
+                14,
+                "#ffff00",
+                15,
+                "#ff00ff",
+                16,
+                "#00ff00",
+                17,
+                "#00ffff"
             ],
             "fill-opacity": 0.6
         },
+        "line": {
+            "line-color": "#FFFFFF",
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "school_note"
+                ],
+                "0",
+                0.2,
+                1
+            ]
+        },
         "cat_filters": {
             "county": "",
-            "qct1": ""
+            "Pool": ""
         },
         "num_filters": {
-            "senior_score": "Senior Score"
+            "Max Score": "",
+            "General Occupancy Score": "",
+            "Senior Score": ""
         },
-        "legend": [
-            [
-                "14",
-                "#00f7ff"
-            ],
-            [
-                "13",
-                "#F7FF00"
-            ],
-            [
-                "12",
-                "#6600cc"
-            ],
-            [
-                "11",
-                "#FF0000"
-            ],
-            [
-                "10",
-                "#001493"
-            ],
-            [
-                "0-9",
-                "#FFFFFF"
-            ]
-        ],
+        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
         "hover": {
-            "senior_score": [
+            "Pool": [
                 true,
                 ""
             ],
-            "tract_full": [
+            "county": [
                 true,
                 ""
             ],
-            "zip_code": [
+            "NAME": [
+                true,
+                "city"
+            ],
+            "Senior Score": [
                 true,
                 ""
             ]
         },
         "click": {
-            "senior_score": [
+            "Pool": [
                 true,
                 ""
             ],
-            "total_general_occupancy_score": [
+            "county": [
                 true,
                 ""
             ],
-            "tract_full": [
+            "NAME": [
+                true,
+                "city"
+            ],
+            "General Occupancy Score": [
                 true,
                 ""
             ],
-            "qct": [
+            "Senior Score": [
                 true,
                 ""
             ],
-            "dda": [
-                true,
-                ""
-            ],
-            "school_district": [
-                true,
-                ""
-            ],
-            "zip_code": [
+            "ws_pts":[true,""],"community impact score":[true,""],"community_impact_pts":[true,""],"oppurtunity_score":[true,""],"opportunity_pts":[true,""],"unsd_name":[true,""],"school_pts":[true,""],"school_note":[true,""],"Senior Occupancy (SO)":[true,""],"so_pts":[true,""],"Senior Rent Burden (SRB)":[true,""],"srb_pts":[true,""],"Senior Housing Stock (SHS)":[true,""],"shs_pts":[true,""],"Comm Heath Center (CHC)":[true,""],"chc_pts":[true,""],"ZCTA5CE20":[true,""],"GEOID": [
                 true,
                 ""
             ]
@@ -799,15 +745,23 @@
                 "juniata",
                 "philadelphia"
             ],
-            "qct1": [
-                "No1",
-                "Yes1"
+            "Pool": [
+                "Urban",
+                "Suburban/Rural"
             ]
         },
         "num_filter_vals": {
-            "senior_score": [
+            "Max Score": [
                 0.0,
-                14.0
+                17.0
+            ],
+            "General Occupancy Score": [
+                0.0,
+                17.0
+            ],
+            "Senior Score": [
+                0.0,
+                15.0
             ]
         }
     }
