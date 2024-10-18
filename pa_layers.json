@@ -120,7 +120,7 @@
         "url": "mapbox://wodacooper.pa_cities_21",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
         "visible": false,
         "line": {
@@ -140,7 +140,7 @@
         "url": "mapbox://wodacooper.pa_counties_10",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
         "visible": false,
         "line": {
@@ -212,8 +212,8 @@
                     "school_note"
                 ],
                 "0",
-                0.2,
-                1
+                0,
+                0.3
             ]
         },
         "cat_filters": {
@@ -243,7 +243,7 @@
                 true,
                 ""
             ],
-            "school info": [
+            "school_info": [
                 true,
                 "School Note"
             ]
@@ -414,8 +414,8 @@
                     "school_note"
                 ],
                 "0",
-                0.2,
-                1
+                0,
+                0.3
             ]
         },
         "cat_filters": {
@@ -445,7 +445,7 @@
                 true,
                 ""
             ],
-            "school info": [
+            "school_info": [
                 true,
                 "School Note"
             ]
@@ -606,19 +606,6 @@
                 "#00ffff"
             ],
             "fill-opacity": 0.6
-        },
-        "line": {
-            "line-color": "#FFFFFF",
-            "line-width": [
-                "match",
-                [
-                    "get",
-                    "school_note"
-                ],
-                "0",
-                0.2,
-                1
-            ]
         },
         "cat_filters": {
             "county": "",
