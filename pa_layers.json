@@ -212,13 +212,35 @@
             ],
             "fill-opacity": 0.6
         },
+        "line": {
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "school_note"
+                ],
+                "0",
+                "#000000",
+                "#FFFFFF"
+            ],
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "school_note"
+                ],
+                "0",
+                0.5,
+                2
+            ]
+        },
         "cat_filters": {
             "county": "",
             "Pool": ""
         },
         "num_filters": {
             "Max Score": "",
-            "Family Score": "",
+            "General Occupancy Score": "",
             "Senior Score": ""
         },
         "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
