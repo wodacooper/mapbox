@@ -173,14 +173,199 @@
         }
     },
     "score": {
-        "name": "Family Score",
-        "source_id": "pa_family_basemap_4_5_24_1",
-        "url": "mapbox://wodacooper.pa_family_basemap_4_5_24_1",
+        "name": "Score",
+        "source_id": "pa_24",
+        "url": "mapbox://wodacooper.pa_24",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
         },
         "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "Max Score"
+                ],
+                "#ffffff",
+                8,
+                "#70534e",
+                9,
+                "#346b36",
+                10,
+                "#0000ff",
+                11,
+                "#9207fc",
+                12,
+                "#ff0000",
+                13,
+                "#fe8103",
+                14,
+                "#ffff00",
+                15,
+                "#ff00ff",
+                16,
+                "#00ff00",
+                17,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        "cat_filters": {
+            "county": "",
+            "Pool": ""
+        },
+        "num_filters": {
+            "Max Score": "",
+            "Family Score": "",
+            "Senior Score": ""
+        },
+        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
+        "hover": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME": [
+                true,
+                "city"
+            ],
+            "Max Score": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME": [
+                true,
+                "city"
+            ],
+            "General Occupancy Score": [
+                true,
+                ""
+            ],
+            "Senior Score": [
+                true,
+                ""
+            ],
+            "ws_pts":[true,""],"community impact score":[true,""],"community_impact_pts":[true,""],"oppurtunity_score":[true,""],"opportunity_pts":[true,""],"unsd_name":[true,""],"school_pts":[true,""],"school_note":[true,""],"Senior Occupancy (SO)":[true,""],"so_pts":[true,""],"Senior Rent Burden (SRB)":[true,""],"srb_pts":[true,""],"Senior Housing Stock (SHS)":[true,""],"shs_pts":[true,""],"Comm Heath Center (CHC)":[true,""],"chc_pts":[true,""],"ZCTA5CE20":[true,""],"GEOID": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "county": [
+                "Adams",
+                "Allegheny",
+                "Armstrong",
+                "Beaver",
+                "Bedford",
+                "Berks",
+                "Blair",
+                "Bradford",
+                "Bucks",
+                "Butler",
+                "Cambria",
+                "Cameron",
+                "Carbon",
+                "Centre",
+                "Chester",
+                "Clarion",
+                "Clearfield",
+                "Clinton",
+                "Columbia",
+                "Crawford",
+                "Cumberland",
+                "Dauphin",
+                "Delaware",
+                "Elk",
+                "Erie",
+                "Fayette",
+                "Forest",
+                "Franklin",
+                "Fulton",
+                "Greene",
+                "Huntingdon",
+                "Indiana",
+                "Jefferson",
+                "Lackawanna",
+                "Lancaster",
+                "Lawrence",
+                "Lebanon",
+                "Lehigh",
+                "Luzerne",
+                "Lycoming",
+                "McKean",
+                "Mercer",
+                "Mifflin",
+                "Monroe",
+                "Montgomery",
+                "Montour",
+                "Northampton",
+                "Northumberland",
+                "Perry",
+                "Philadelphia",
+                "Pike",
+                "Potter",
+                "Schuylkill",
+                "Snyder",
+                "Somerset",
+                "Sullivan",
+                "Susquehanna",
+                "Tioga",
+                "Union",
+                "Venango",
+                "Warren",
+                "Washington",
+                "Wayne",
+                "Westmoreland",
+                "Wyoming",
+                "York",
+                "juniata",
+                "philadelphia"
+            ],
+            "Pool": [
+                "Urban",
+                "Suburban/Rural"
+            ]
+        },
+        "num_filter_vals": {
+            "Max Score": [
+                0.0,
+                17.0
+            ],
+            "General Occupancy Score": [
+                0.0,
+                17.0
+            ],
+            "Senior Score": [
+                0.0,
+                15.0
+            ]
+        }
+    },
+    "score_old": {
+        "name": "Old Family Score",
+        "source_id": "pa_family_basemap_4_5_24_1",
+        "url": "mapbox://wodacooper.pa_family_basemap_4_5_24_1",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
         "line": {
             "line-color": [
                 "match",
@@ -414,13 +599,13 @@
             ]
         }
     },
-    "senior_score": {
-        "name": "Senior Score",
+    "senior_score_old": {
+        "name": "Old Senior Score",
         "source_id": "pa_senior_basemap_4_5_24_2",
         "url": "mapbox://wodacooper.pa_senior_basemap_4_5_24_2",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
         "visible": false,
         "fill": {
