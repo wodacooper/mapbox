@@ -72,7 +72,7 @@
     "score": {
         "name": "2025 Score",
         "source_id": "score",
-        "url": "mapbox://ewright81.ia_25",
+        "url": "mapbox://wodacooper.ia_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
