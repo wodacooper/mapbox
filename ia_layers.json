@@ -159,6 +159,10 @@
                 true,
                 ""
             ],
+            "density_pts": [
+                true,
+                ""
+            ],
             "underserved_pts": [
                 true,
                 ""
