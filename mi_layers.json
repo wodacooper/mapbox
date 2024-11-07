@@ -855,7 +855,7 @@
                 "step",
                 [
                     "get",
-                    "total_pts"
+                    "pts_no_amenities"
                 ],
                 "#0000ff",
                 3,
@@ -869,7 +869,7 @@
                 "step",
                 [
                     "get",
-                    "total_pts"
+                    "pts_no_amenities"
                 ],
                 0,
                 2,
