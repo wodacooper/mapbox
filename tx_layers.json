@@ -480,9 +480,9 @@
                 true,
                 "County"
             ],
-            "city": [
+            "Place Name": [
                 true,
-                ""
+                "City"
             ],
             "score": [
                 true,
@@ -502,13 +502,13 @@
                 true,
                 ""
             ],
-            "County": [
+            "County_1": [
                 true,
-                ""
+                "County"
             ],
-            "city": [
+            "Place Name": [
                 true,
-                ""
+                "City"
             ],
             "score": [
                 true,
