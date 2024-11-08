@@ -554,6 +554,14 @@
                 true,
                 ""
             ],
+            "benchmark_10": [
+                true,
+                "10% Benchmark"
+            ],
+            "benchmark_20": [
+                true,
+                "20% Benchmark"
+            ],
             "GEOID": [
                 true,
                 ""
