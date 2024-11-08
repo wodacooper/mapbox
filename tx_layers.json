@@ -416,7 +416,7 @@
         "cat_filters": {
             "potential_16":"",
             "pool": "",
-            "Region": "",
+            "Region_1": "Region",
             "city": "",
             "County_1": "County",
             "pts_oi": "Opportunity Index"
@@ -468,9 +468,9 @@
             ]
         ],
         "hover": {
-            "Region": [
+            "Region_1": [
                 true,
-                ""
+                "Region"
             ],
             "pool": [
                 true,
@@ -494,9 +494,9 @@
             ]
         },
         "click": {
-            "Region": [
+            "Region_1": [
                 true,
-                ""
+                "Region"
             ],
             "pool": [
                 true,
@@ -578,7 +578,7 @@
                 "Rural",
                 "Urban"
             ],
-            "Region": [
+            "Region_1": [
                 "1",
                 "2",
                 "3",
