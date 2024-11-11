@@ -270,6 +270,41 @@
             ]
         }
     },
+    "nc_raleigh_nofa": {
+        "name": "Raleigh NOFA",
+        "source_id": "nc_raleigh_nofa_source",
+        "url": "mapbox://wodacooper.nc_raleigh_nofa",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "Opportunity Area"
+                ],
+                "Opportunity Area",
+                "#eb8934",
+                "Possible Exception",
+                "#34c0eb",
+                "#ffffff"
+            ],
+            "fill-opacity": 0.5
+        },
+        "legend": [
+            [
+                "Opportunity Area",
+                "#eb8934"
+            ],
+           [
+                "Possible Exception",
+                "#34c0eb"
+            ]
+        ]
+    },
     "score": {
         "name": "2025 Draft County Pool Rank",
         "source_id": "nc_basemap_4_4_24",
