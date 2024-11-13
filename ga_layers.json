@@ -1445,9 +1445,9 @@
         }
     },
     "stable": {
-        "name": "Stable + Schools 2024",
-        "source_id": "ga_24",
-        "url": "mapbox://wodacooper.ga_24",
+        "name": "Stable + Schools 2025",
+        "source_id": "ga_25",
+        "url": "mapbox://wodacooper.ga_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -2432,9 +2432,9 @@
         "url": "mapbox://wodacooper.ga_24",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
