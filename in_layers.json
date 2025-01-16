@@ -74,7 +74,7 @@
         "source_id": "in_employers_23",
         "url": "mapbox://wodacooper.in_employers_23",
         "source_layer": "hello_world",
-        "layout": {},
+        "layout": {"visibility":"none"},
         "visible": false,
         "circle": {
             "circle-radius": 7,
