@@ -115,8 +115,8 @@
     },
     "score": {
         "name": "2025 Score",
-        "source_id": "in_254",
-        "url": "mapbox://wodacooper.in_25",
+        "source_id": "in_basemap_25_source",
+        "url": "mapbox://wodacooper.in_25_predraft",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -127,7 +127,7 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "score 2025"
                 ],
                 "#ffffff",
                 15,
@@ -155,7 +155,7 @@
             "City": ""
         },
         "num_filters": {
-            "score": ""
+            "score 2025": ""
         },
         "legend": [
             [
@@ -208,7 +208,7 @@
                 true,
                 ""
             ],
-            "score": [
+            "score 2025": [
                 true,
                 ""
             ]
@@ -226,7 +226,7 @@
                 true,
                 ""
             ],
-            "score": [
+            "score 2025": [
                 true,
                 ""
             ]
@@ -903,9 +903,9 @@
             ]
         },
         "num_filter_vals": {
-            "score": [
+            "score 2025": [
                 2.5,
-                28.0
+                27.0
             ]
         }
     }
