@@ -338,6 +338,155 @@
             ]
         }
     },
+   "mn_25_test": {
+   "name": "Metro Score 2025 Test",
+   "source_id": "mn_25_test_source",
+   "url": "mapbox://wodacooper.mn_25_test",
+   "source_layer": "hello_world",
+   "layout": {
+       "visibility": "visible"
+   },
+   "visible": true,
+        "perm_filters":[["==","Pool","Metro"]],
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                13,
+                "#9e9e9e",
+                15,
+                "#70534e",
+                17,
+                "#346b36",
+                19,
+                "#0000ff",
+                20,
+                "#9207fc",
+                21,
+                "#ff0000",
+                22,
+                "#fe8103",
+                23,
+                "#ffff00",
+                24,
+                "#ff00ff",
+                25,
+                "#00ff00",
+                26,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        "cat_filters": {
+            "city_name": "City",
+            "County": "",
+            "Walkscore Points": "",
+            "ws_cat": "Category"
+        },
+        "num_filters": {
+            "score": "Score"
+        },
+        "legend": [
+            [
+                "26-28",
+                "#00ffff"
+            ],
+            [
+                "25",
+                "#00ff00"
+            ],
+            [
+                "24",
+                "#ff00ff"
+            ],
+            [
+                "23",
+                "#ffff00"
+            ],
+            [
+                "22",
+                "#fe8103"
+            ],
+            [
+                "21",
+                "#ff0000"
+            ],
+            [
+                "20",
+                "#9207fc"
+            ],
+            [
+                "19",
+                "#0000ff"
+            ],
+            [
+                "17-18",
+                "#346b36"
+            ],
+            [
+                "15-16",
+                "#70534e"
+            ],
+            [
+                "13-14",
+                "#9e9e9e"
+            ],
+            [
+                "<13",
+                "#ffffff"
+            ]
+        ],
+        "hover": {
+            "County": [
+                true,
+                ""
+            ],
+            "city_name": [
+                true,
+                "City"
+            ],
+            "score": [
+                true,
+                "Score"
+            ]
+        },
+        "click": {
+            "County":[true,""],"city_name":[true,""],"score":[true,""],"Need for More Affordable Housing Points":[true,""],"Transit Points":[true,""],"Workforce Housing Points":[true,""],"Multifamily Award History":[true,""],"Walkscore Points":[true,""],"QCT Points":[true,""],"GEOID":[true,""]
+             },
+        "cat_filter_vals": {
+            "city_name": [
+                "Afton", "Andover", "Anoka", "Apple Valley", "Arden Hills", "Bayport", "Belle Plaine", "Bethel", "Birchwood Village", "Blaine", "Bloomington", "Brooklyn Center", "Brooklyn Park", "Burnsville", "Carver", "Centerville", "Champlin", "Chanhassen", "Chaska", "Circle Pines", "Coates", "Cologne", "Columbia Heights", "Columbus", "Coon Rapids", "Corcoran", "Cottage Grove", "Crystal", "Dayton", "Deephaven", "Dellwood", "Eagan", "East Bethel", "Eden Prairie", "Edina", "Elko New Market", "Excelsior", "Falcon Heights", "Farmington", "Forest Lake", "Fridley", "Gem Lake", "Golden Valley", "Grant", "Greenfield", "Greenwood", "Ham Lake", "Hamburg", "Hampton", "Hastings", "Hilltop", "Hopkins", "Hugo", "Independence", "Inver Grove Heights", "Jordan", "Lake Elmo", "Lake St. Croix Beach", "Lakeland", "Lakeland Shores", "Lakeville", "Landfall", "Lauderdale", "Lexington", "Lilydale", "Lino Lakes", "Little Canada", "Long Lake", "Loretto", "Mahtomedi", "Maple Grove", "Maple Plain", "Maplewood", "Marine on St. Croix", "Mayer", "Medicine Lake", "Medina", "Mendota", "Mendota Heights", "Miesville", "Minneapolis", "Minnetonka", "Minnetonka Beach", "Minnetrista", "Mound", "Mounds View", "New Brighton", "New Germany", "New Hope", "New Trier", "Newport", "North Oaks", "North St. Paul", "Norwood Young America", "Nowthen", "Oak Grove", "Oak Park Heights", "Oakdale", "Orono", "Osseo", "Pine Springs", "Plymouth", "Prior Lake", "Ramsey", "Randolph", "Richfield", "Robbinsdale", "Rogers", "Rosemount", "Roseville", "Savage", "Scandia", "Shakopee", "Shoreview", "Shorewood", "South St. Paul", "Spring Lake Park", "Spring Park", "St. Anthony", "St. Bonifacius", "St. Francis", "St. Louis Park", "St. Marys Point", "St. Paul", "St. Paul Park", "Stillwater", "Sunfish Lake", "Tonka Bay", "Vadnais Heights", "Vermillion", "Victoria", "Waconia", "Watertown", "Wayzata", "West St. Paul", "White Bear Lake", "Willernie", "Woodbury", "Woodland", "Unincorporated"
+            ],
+            "County": [
+                "Anoka",
+                "Carver",
+                "Dakota",
+                "Hennepin",
+                "Ramsey",
+                "Scott",
+                "Washington"
+            ],
+            "Walkscore Points": [
+                "0.0",
+                "1.0",
+                "2.0"
+            ],
+            "ws_cat": [
+                "Suburban",
+                "Twin Cities"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                6.0,
+                28.0
+            ]
+        }
+    },
      "greater_25": {
    "name": "Greater MN Score 2025",
    "source_id": "mn_25_source",
