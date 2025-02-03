@@ -163,15 +163,605 @@
             ]
         }
     },
-    "score": {
-        "name": "Score",
-        "source_id": "pa_24",
-        "url": "mapbox://wodacooper.pa_24",
+    "score_25": {
+        "name": "Score 2025",
+        "source_id": "pa_25",
+        "url": "mapbox://wodacooper.pa_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
         },
         "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "Max Score"
+                ],
+                "#ffffff",
+                8,
+                "#70534e",
+                9,
+                "#346b36",
+                10,
+                "#0000ff",
+                11,
+                "#9207fc",
+                12,
+                "#ff0000",
+                13,
+                "#fe8103",
+                14,
+                "#ffff00",
+                15,
+                "#ff00ff",
+                16,
+                "#00ff00",
+                17,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        "line": {
+            "line-color": "#FFFFFF",
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "school_note"
+                ],
+                "0",
+                0,
+                0.3
+            ]
+        },
+        "cat_filters": {
+            "county": "",
+            "Pool": ""
+        },
+        "num_filters": {
+            "Max Score": "",
+            "General Occupancy Score": "",
+            "Senior Score": ""
+        },
+        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
+        "hover": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME": [
+                true,
+                "city"
+            ],
+            "Max Score": [
+                true,
+                ""
+            ],
+            "school_info": [
+                true,
+                "School Note"
+            ]
+        },
+        "click": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME": [
+                true,
+                "city"
+            ],
+            "General Occupancy Score": [
+                true,
+                ""
+            ],
+            "Senior Score": [
+                true,
+                ""
+            ],
+            "ws_pts":[true,""],"community_impact_pts_family":[true,""],"community_impact_pts_senior":[true,""],"unsd_name":[true,""],"school_pts":[true,""],"school_note":[true,""],"GEOID": [
+                true,
+                ""
+            ]
+
+        },
+        "cat_filter_vals": {
+            "county": [
+                "Adams",
+                "Allegheny",
+                "Armstrong",
+                "Beaver",
+                "Bedford",
+                "Berks",
+                "Blair",
+                "Bradford",
+                "Bucks",
+                "Butler",
+                "Cambria",
+                "Cameron",
+                "Carbon",
+                "Centre",
+                "Chester",
+                "Clarion",
+                "Clearfield",
+                "Clinton",
+                "Columbia",
+                "Crawford",
+                "Cumberland",
+                "Dauphin",
+                "Delaware",
+                "Elk",
+                "Erie",
+                "Fayette",
+                "Forest",
+                "Franklin",
+                "Fulton",
+                "Greene",
+                "Huntingdon",
+                "Indiana",
+                "Jefferson",
+                "Lackawanna",
+                "Lancaster",
+                "Lawrence",
+                "Lebanon",
+                "Lehigh",
+                "Luzerne",
+                "Lycoming",
+                "McKean",
+                "Mercer",
+                "Mifflin",
+                "Monroe",
+                "Montgomery",
+                "Montour",
+                "Northampton",
+                "Northumberland",
+                "Perry",
+                "Philadelphia",
+                "Pike",
+                "Potter",
+                "Schuylkill",
+                "Snyder",
+                "Somerset",
+                "Sullivan",
+                "Susquehanna",
+                "Tioga",
+                "Union",
+                "Venango",
+                "Warren",
+                "Washington",
+                "Wayne",
+                "Westmoreland",
+                "Wyoming",
+                "York",
+                "juniata",
+                "philadelphia"
+            ],
+            "Pool": [
+                "Urban",
+                "Suburban/Rural"
+            ]
+        },
+        "num_filter_vals": {
+            "Max Score": [
+                0.0,
+                17.0
+            ],
+            "General Occupancy Score": [
+                0.0,
+                16.0
+            ],
+            "Senior Score": [
+                0.0,
+                17.0
+            ]
+        }
+    },
+    "score_family_25": {
+        "name": "General Occupancy Score 2025",
+        "source_id": "pa_25",
+        "url": "mapbox://wodacooper.pa_25",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "General Occupancy Score"
+                ],
+                "#ffffff",
+                8,
+                "#70534e",
+                9,
+                "#346b36",
+                10,
+                "#0000ff",
+                11,
+                "#9207fc",
+                12,
+                "#ff0000",
+                13,
+                "#fe8103",
+                14,
+                "#ffff00",
+                15,
+                "#ff00ff",
+                16,
+                "#00ff00",
+                17,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        "line": {
+            "line-color": "#FFFFFF",
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "school_note"
+                ],
+                "0",
+                0,
+                0.3
+            ]
+        },
+        "cat_filters": {
+            "county": "",
+            "Pool": ""
+        },
+        "num_filters": {
+            "Max Score": "",
+            "General Occupancy Score": "",
+            "Senior Score": ""
+        },
+        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
+        "hover": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME": [
+                true,
+                "city"
+            ],
+            "General Occupancy Score": [
+                true,
+                ""
+            ],
+            "school_info": [
+                true,
+                "School Note"
+            ]
+        },
+        "click": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME": [
+                true,
+                "city"
+            ],
+            "General Occupancy Score": [
+                true,
+                ""
+            ],
+            "Senior Score": [
+                true,
+                ""
+            ],
+            "ws_pts":[true,""],"community_impact_pts_family":[true,""],"community_impact_pts_senior":[true,""],"unsd_name":[true,""],"school_pts":[true,""],"school_note":[true,""],"GEOID": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "county": [
+                "Adams",
+                "Allegheny",
+                "Armstrong",
+                "Beaver",
+                "Bedford",
+                "Berks",
+                "Blair",
+                "Bradford",
+                "Bucks",
+                "Butler",
+                "Cambria",
+                "Cameron",
+                "Carbon",
+                "Centre",
+                "Chester",
+                "Clarion",
+                "Clearfield",
+                "Clinton",
+                "Columbia",
+                "Crawford",
+                "Cumberland",
+                "Dauphin",
+                "Delaware",
+                "Elk",
+                "Erie",
+                "Fayette",
+                "Forest",
+                "Franklin",
+                "Fulton",
+                "Greene",
+                "Huntingdon",
+                "Indiana",
+                "Jefferson",
+                "Lackawanna",
+                "Lancaster",
+                "Lawrence",
+                "Lebanon",
+                "Lehigh",
+                "Luzerne",
+                "Lycoming",
+                "McKean",
+                "Mercer",
+                "Mifflin",
+                "Monroe",
+                "Montgomery",
+                "Montour",
+                "Northampton",
+                "Northumberland",
+                "Perry",
+                "Philadelphia",
+                "Pike",
+                "Potter",
+                "Schuylkill",
+                "Snyder",
+                "Somerset",
+                "Sullivan",
+                "Susquehanna",
+                "Tioga",
+                "Union",
+                "Venango",
+                "Warren",
+                "Washington",
+                "Wayne",
+                "Westmoreland",
+                "Wyoming",
+                "York",
+                "juniata",
+                "philadelphia"
+            ],
+            "Pool": [
+                "Urban",
+                "Suburban/Rural"
+            ]
+        },
+        "num_filter_vals": {
+            "Max Score": [
+                0.0,
+                17.0
+            ],
+            "General Occupancy Score": [
+                0.0,
+                16.0
+            ],
+            "Senior Score": [
+                0.0,
+                17.0
+            ]
+        }
+    },
+    "score_senior_25": {
+        "name": "Senior Score 2025",
+        "source_id": "pa_25",
+        "url": "mapbox://wodacooper.pa_25",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "Senior Score"
+                ],
+                "#ffffff",
+                8,
+                "#70534e",
+                9,
+                "#346b36",
+                10,
+                "#0000ff",
+                11,
+                "#9207fc",
+                12,
+                "#ff0000",
+                13,
+                "#fe8103",
+                14,
+                "#ffff00",
+                15,
+                "#ff00ff",
+                16,
+                "#00ff00",
+                17,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        "cat_filters": {
+            "county": "",
+            "Pool": ""
+        },
+        "num_filters": {
+            "Max Score": "",
+            "General Occupancy Score": "",
+            "Senior Score": ""
+        },
+        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
+        "hover": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME": [
+                true,
+                "city"
+            ],
+            "Senior Score": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME": [
+                true,
+                "city"
+            ],
+            "General Occupancy Score": [
+                true,
+                ""
+            ],
+            "Senior Score": [
+                true,
+                ""
+            ],
+            "ws_pts":[true,""],"community_impact_pts_family":[true,""],"community_impact_pts_senior":[true,""],"unsd_name":[true,""],"school_pts":[true,""],"school_note":[true,""],"GEOID": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "county": [
+                "Adams",
+                "Allegheny",
+                "Armstrong",
+                "Beaver",
+                "Bedford",
+                "Berks",
+                "Blair",
+                "Bradford",
+                "Bucks",
+                "Butler",
+                "Cambria",
+                "Cameron",
+                "Carbon",
+                "Centre",
+                "Chester",
+                "Clarion",
+                "Clearfield",
+                "Clinton",
+                "Columbia",
+                "Crawford",
+                "Cumberland",
+                "Dauphin",
+                "Delaware",
+                "Elk",
+                "Erie",
+                "Fayette",
+                "Forest",
+                "Franklin",
+                "Fulton",
+                "Greene",
+                "Huntingdon",
+                "Indiana",
+                "Jefferson",
+                "Lackawanna",
+                "Lancaster",
+                "Lawrence",
+                "Lebanon",
+                "Lehigh",
+                "Luzerne",
+                "Lycoming",
+                "McKean",
+                "Mercer",
+                "Mifflin",
+                "Monroe",
+                "Montgomery",
+                "Montour",
+                "Northampton",
+                "Northumberland",
+                "Perry",
+                "Philadelphia",
+                "Pike",
+                "Potter",
+                "Schuylkill",
+                "Snyder",
+                "Somerset",
+                "Sullivan",
+                "Susquehanna",
+                "Tioga",
+                "Union",
+                "Venango",
+                "Warren",
+                "Washington",
+                "Wayne",
+                "Westmoreland",
+                "Wyoming",
+                "York",
+                "juniata",
+                "philadelphia"
+            ],
+            "Pool": [
+                "Urban",
+                "Suburban/Rural"
+            ]
+        },
+        "num_filter_vals": {
+            "Max Score": [
+                0.0,
+                17.0
+            ],
+            "General Occupancy Score": [
+                0.0,
+                16.0
+            ],
+            "Senior Score": [
+                0.0,
+                17.0
+            ]
+        }
+    },
+    "score_24": {
+        "name": "Score 2024",
+        "source_id": "pa_24",
+        "url": "mapbox://wodacooper.pa_24",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -365,8 +955,8 @@
             ]
         }
     },
-    "score_family": {
-        "name": "General Occupancy Score",
+    "score_family_24": {
+        "name": "General Occupancy Score 2024",
         "source_id": "pa_24",
         "url": "mapbox://wodacooper.pa_24",
         "source_layer": "hello_world",
@@ -567,8 +1157,8 @@
             ]
         }
     },
-    "score_senior": {
-        "name": "Senior Score",
+    "score_senior_24": {
+        "name": "Senior Score 2024",
         "source_id": "pa_24",
         "url": "mapbox://wodacooper.pa_24",
         "source_layer": "hello_world",
