@@ -213,7 +213,7 @@
    "layout": {
        "visibility": "none"
    },
-   "visible": true,
+   "visible": false,
     "fill": {
         "fill-color": [
             "step",
