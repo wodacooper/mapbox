@@ -196,7 +196,7 @@
             },
     "cat_filter_vals": {
         "Pool": ["Non-Rural","Rural"],
-        "QCT": ["QCT", "Not a QCT"]
+        "QCT": ["1.0", "0.0"]
     },
     "num_filter_vals": {
         "Total New Supply Points": [
