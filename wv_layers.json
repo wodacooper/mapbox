@@ -167,7 +167,7 @@
     },
     "cat_filters": {
         "Pool": "",
-        "qct_25": "QCT"
+        "QCT": "QCT"
     },
     "num_filters": {
         "Total New Supply Points": ""
@@ -192,11 +192,11 @@
         ]
     },
     "click": {
-        "Pool":[true,""],"County":[true,""],"qct_25":[true,""],"Total New Supply Points":[true,""],"Score Note":[true,""],"Total Existing Low-Income Housing Points":[true,""],"LIHTCP Production Points":[true,""],"LIHTCP Unit Production Percent":[true,""],"Income Points":[true,""],"Median Income":[true,""],"Rent Burden Points":[true,""],"Rent Burden Percentage":[true,""],"Vacancy Points":[true,""],"Rental Vacancy Rate":[true,""],"Owner Occupied Points":[true,""],"Owner Occupied Percent":[true,""],"Overcrowded Points":[true,""],"Overcrowded Percent":[true,""],"Poverty Points":[true,""],"Poverty Rate":[true,""],"Food Stamps Points":[true,""],"Food Stamps Percent":[true,""],"Unemployment Points":[true,""],"Unemployment Rate":[true,""],"Bachelor Degree Points":[true,""],"Bachelor Degree Rate":[true,""],"Unmet GO Points":[true,""],"Unmet GO County Rank":[true,""],"Unmet GO Need":[true,""],"Unmet Senior Points":[true,""],"Unmet Senior County Rank":[true,""],"Unmet Senior Need":[true,""]
+        "Pool":[true,""],"County":[true,""],"QCT":[true,""],"Total New Supply Points":[true,""],"Score Note":[true,""],"Total Existing Low-Income Housing Points":[true,""],"LIHTCP Production Points":[true,""],"LIHTCP Unit Production Percent":[true,""],"Income Points":[true,""],"Median Income":[true,""],"Rent Burden Points":[true,""],"Rent Burden Percentage":[true,""],"Vacancy Points":[true,""],"Rental Vacancy Rate":[true,""],"Owner Occupied Points":[true,""],"Owner Occupied Percent":[true,""],"Overcrowded Points":[true,""],"Overcrowded Percent":[true,""],"Poverty Points":[true,""],"Poverty Rate":[true,""],"Food Stamps Points":[true,""],"Food Stamps Percent":[true,""],"Unemployment Points":[true,""],"Unemployment Rate":[true,""],"Bachelor Degree Points":[true,""],"Bachelor Degree Rate":[true,""],"Unmet GO Points":[true,""],"Unmet GO County Rank":[true,""],"Unmet GO Need":[true,""],"Unmet Senior Points":[true,""],"Unmet Senior County Rank":[true,""],"Unmet Senior Need":[true,""]
             },
     "cat_filter_vals": {
         "Pool": ["Non-Rural","Rural"],
-        "qct_25": ["QCT", "Not a QCT"]
+        "QCT": ["QCT", "Not a QCT"]
     },
     "num_filter_vals": {
         "Total New Supply Points": [
@@ -211,9 +211,9 @@
    "url": "mapbox://wodacooper.wv_24",
    "source_layer": "hello_world",
    "layout": {
-       "visibility": "none"
+       "visibility": "visible"
    },
-   "visible": false,
+   "visible": true,
     "fill": {
         "fill-color": [
             "step",
