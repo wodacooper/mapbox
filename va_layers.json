@@ -189,28 +189,6 @@
             "visibility": "visible"
         },
         "visible": true,
-        "line": {
-            "line-width": [
-                "match",
-                [
-                    "get",
-                    "qct_24"
-                ],
-                "QCT",
-                1,
-                0
-            ],
-            "line-color": [
-                "match",
-                [
-                    "get",
-                    "qct_24"
-                ],
-                "QCT",
-                "#ffffff",
-                "#000000"
-            ]
-        },
         "fill": {
             "fill-color": [
                 "step",
@@ -515,28 +493,6 @@
             "visibility": "none"
         },
         "visible": false,
-        "line": {
-            "line-width": [
-                "match",
-                [
-                    "get",
-                    "qct_24"
-                ],
-                "QCT",
-                1,
-                0
-            ],
-            "line-color": [
-                "match",
-                [
-                    "get",
-                    "qct_24"
-                ],
-                "QCT",
-                "#ffffff",
-                "#000000"
-            ]
-        },
         "fill": {
             "fill-color": [
                 "step",
@@ -841,28 +797,6 @@
             "visibility": "none"
         },
         "visible": false,
-        "line": {
-            "line-width": [
-                "match",
-                [
-                    "get",
-                    "qct_24"
-                ],
-                "QCT",
-                1,
-                0
-            ],
-            "line-color": [
-                "match",
-                [
-                    "get",
-                    "qct_24"
-                ],
-                "QCT",
-                "#ffffff",
-                "#000000"
-            ]
-        },
         "fill": {
             "fill-color": [
                 "step",
