@@ -242,7 +242,7 @@
                 "step",
                 [
                     "get",
-                    "Total Points"
+                    "Total_Points"
                 ],
                 0,
                 5,
