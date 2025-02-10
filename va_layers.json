@@ -180,15 +180,993 @@
             ]
         }
     },
+    "va_25": {
+        "name": "Virginia 2025",
+        "source_id": "va_25_source",
+        "url": "mapbox://wodacooper.va_25",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "qct_24"
+                ],
+                "QCT",
+                1,
+                0
+            ],
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "qct_24"
+                ],
+                "QCT",
+                "#ffffff",
+                "#000000"
+            ]
+        },
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "Total_Points"
+                ],
+                "#ffffff",
+                5,
+                "#9e9e9e",
+                20,
+                "#0000ff",
+                25,
+                "#9207fc",
+                30,
+                "#ff0000",
+                35,
+                "#fe8103",
+                40,
+                "#ffff00",
+                45,
+                "#ff00ff",
+                50,
+                "#00ff00",
+                55,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "Total Points"
+                ],
+                0,
+                5,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "pool": "",
+            "County": "County/City",
+            "qct_24": "QCT",
+            "pop_under_35k": "Population < 35k"
+        },
+        "legend": [
+            [
+                "55",
+                "#00ffff"
+            ],
+            [
+                "50",
+                "#00ff00"
+            ],
+            [
+                "45",
+                "#ff00ff"
+            ],
+            [
+                "40",
+                "#ffff00"
+            ],
+            [
+                "35",
+                "#fe8103"
+            ],
+            [
+                "30",
+                "#ff0000"
+            ],
+            [
+                "25",
+                "#9207fc"
+            ],
+            [
+                "20",
+                "#0000ff"
+            ],
+            [
+                "5",
+                "#9e9e9e"
+            ]
+        ],
+        "hover": {
+            "Total_Points": [
+                true,
+                "Total Points"
+            ],
+            "pool": [
+                true,
+                "Pool"
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "pov_pts": [
+                true,
+                "Povert Points"
+            ],
+            "qct_24": [
+                true,
+                "QCT"
+            ]
+        },
+        "click": {
+            "Total_Points": [
+                true,
+                "Total Points"
+            ],
+            "pool": [
+                true,
+                "Pool"
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "pov_pts": [
+                true,
+                "Povert Points"
+            ],
+            "qct_24": [
+                true,
+                "QCT"
+            ],
+            "pop_under_35k": [
+                true,
+                "Population Under 35k"
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "Whatif_Total_Points_avg": [
+                true,
+                "Total Points (Census Tract Rent Burden > or < than avg Rent Burden)"
+            ],
+            "Whatif_Total_Points_5ranks": [
+                true,
+                "Total Points (5 Census Tract Rent Burden Ranks)"
+            ]
+        },
+        "cat_filter_vals": {
+            "pool": [
+                "Balance of State",
+                "NW/NC",
+                "Northern Virginia",
+                "Richmond MSA",
+                "Tidewater MSA"
+            ],
+            "County": [
+                "Accomack County",
+                "Albemarle County",
+                "Alexandria city",
+                "Alleghany County",
+                "Amelia County",
+                "Amherst County",
+                "Appomattox County",
+                "Arlington County",
+                "Augusta County",
+                "Bath County",
+                "Bedford County",
+                "Bland County",
+                "Botetourt County",
+                "Bristol city",
+                "Brunswick County",
+                "Buchanan County",
+                "Buckingham County",
+                "Buena Vista city",
+                "Campbell County",
+                "Caroline County",
+                "Carroll County",
+                "Charles City County",
+                "Charlotte County",
+                "Charlottesville city",
+                "Chesapeake city",
+                "Chesterfield County",
+                "Clarke County",
+                "Colonial Heights city",
+                "Covington city",
+                "Craig County",
+                "Culpeper County",
+                "Cumberland County",
+                "Danville city",
+                "Dickenson County",
+                "Dinwiddie County",
+                "Emporia city",
+                "Essex County",
+                "Fairfax County",
+                "Fairfax city",
+                "Falls Church city",
+                "Fauquier County",
+                "Floyd County",
+                "Fluvanna County",
+                "Franklin County",
+                "Franklin city",
+                "Frederick County",
+                "Fredericksburg city",
+                "Galax city",
+                "Giles County",
+                "Gloucester County",
+                "Goochland County",
+                "Grayson County",
+                "Greene County",
+                "Greensville County",
+                "Halifax County",
+                "Hampton city",
+                "Hanover County",
+                "Harrisonburg city",
+                "Henrico County",
+                "Henry County",
+                "Highland County",
+                "Hopewell city",
+                "Isle of Wight County",
+                "James City County",
+                "King George County",
+                "King William County",
+                "King and Queen County",
+                "Lancaster County",
+                "Lee County",
+                "Lexington city",
+                "Loudoun County",
+                "Louisa County",
+                "Lunenburg County",
+                "Lynchburg city",
+                "Madison County",
+                "Manassas Park city",
+                "Manassas city",
+                "Martinsville city",
+                "Mathews County",
+                "Mecklenburg County",
+                "Middlesex County",
+                "Montgomery County",
+                "Nelson County",
+                "New Kent County",
+                "Newport News city",
+                "Norfolk city",
+                "Northampton County",
+                "Northumberland County",
+                "Norton city",
+                "Nottoway County",
+                "Orange County",
+                "Page County",
+                "Patrick County",
+                "Petersburg city",
+                "Pittsylvania County",
+                "Poquoson city",
+                "Portsmouth city",
+                "Powhatan County",
+                "Prince Edward County",
+                "Prince George County",
+                "Prince William County",
+                "Pulaski County",
+                "Radford city",
+                "Rappahannock County",
+                "Richmond County",
+                "Richmond city",
+                "Roanoke County",
+                "Roanoke city",
+                "Rockbridge County",
+                "Rockingham County",
+                "Russell County",
+                "Salem city",
+                "Scott County",
+                "Shenandoah County",
+                "Smyth County",
+                "Southampton County",
+                "Spotsylvania County",
+                "Stafford County",
+                "Staunton city",
+                "Suffolk city",
+                "Surry County",
+                "Sussex County",
+                "Tazewell County",
+                "Virginia Beach city",
+                "Warren County",
+                "Washington County",
+                "Waynesboro city",
+                "Westmoreland County",
+                "Williamsburg city",
+                "Winchester city",
+                "Wise County",
+                "Wythe County",
+                "York County"
+            ],
+            "qct_24": [
+                1,
+                0
+            ],
+            "pop_under_35k": [
+                "Greater",
+                "Less than 35k"
+            ]
+        }
+    },
+    "va_25_whatif_avg": {
+        "name": "Virginia 2025 What If Off Average Rent Burden",
+        "source_id": "va_25_source",
+        "url": "mapbox://wodacooper.va_25",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "qct_24"
+                ],
+                "QCT",
+                1,
+                0
+            ],
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "qct_24"
+                ],
+                "QCT",
+                "#ffffff",
+                "#000000"
+            ]
+        },
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "Whatif_Total_Points_avg"
+                ],
+                "#ffffff",
+                5,
+                "#9e9e9e",
+                20,
+                "#0000ff",
+                25,
+                "#9207fc",
+                30,
+                "#ff0000",
+                35,
+                "#fe8103",
+                40,
+                "#ffff00",
+                45,
+                "#ff00ff",
+                50,
+                "#00ff00",
+                55,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "Whatif_Total_Points_avg"
+                ],
+                0,
+                5,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "pool": "",
+            "County": "County/City",
+            "qct_24": "QCT",
+            "pop_under_35k": "Population < 35k"
+        },
+        "legend": [
+            [
+                "55",
+                "#00ffff"
+            ],
+            [
+                "50",
+                "#00ff00"
+            ],
+            [
+                "45",
+                "#ff00ff"
+            ],
+            [
+                "40",
+                "#ffff00"
+            ],
+            [
+                "35",
+                "#fe8103"
+            ],
+            [
+                "30",
+                "#ff0000"
+            ],
+            [
+                "25",
+                "#9207fc"
+            ],
+            [
+                "20",
+                "#0000ff"
+            ],
+            [
+                "5",
+                "#9e9e9e"
+            ]
+        ],
+        "hover": {
+            "Whatif_Total_Points_avg": [
+                true,
+                "Total Points (Census Tract Rent Burden > or < than avg Rent Burden)"
+            ],
+            "pool": [
+                true,
+                "Pool"
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "pov_pts": [
+                true,
+                "Povert Points"
+            ],
+            "qct_24": [
+                true,
+                "QCT"
+            ]
+        },
+        "click": {
+            "Whatif_Total_Points_avg": [
+                true,
+                "Total Points (Census Tract Rent Burden > or < than avg Rent Burden)"
+            ],
+            "pool": [
+                true,
+                "Pool"
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "pov_pts": [
+                true,
+                "Povert Points"
+            ],
+            "qct_24": [
+                true,
+                "QCT"
+            ],
+            "pop_under_35k": [
+                true,
+                "Population Under 35k"
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "Total_Points": [
+                true,
+                "Total Points"
+            ],
+            "Whatif_Total_Points_5ranks": [
+                true,
+                "Total Points (5 Census Tract Rent Burden Ranks)"
+            ]
+        },
+        "cat_filter_vals": {
+            "pool": [
+                "Balance of State",
+                "NW/NC",
+                "Northern Virginia",
+                "Richmond MSA",
+                "Tidewater MSA"
+            ],
+            "County": [
+                "Accomack County",
+                "Albemarle County",
+                "Alexandria city",
+                "Alleghany County",
+                "Amelia County",
+                "Amherst County",
+                "Appomattox County",
+                "Arlington County",
+                "Augusta County",
+                "Bath County",
+                "Bedford County",
+                "Bland County",
+                "Botetourt County",
+                "Bristol city",
+                "Brunswick County",
+                "Buchanan County",
+                "Buckingham County",
+                "Buena Vista city",
+                "Campbell County",
+                "Caroline County",
+                "Carroll County",
+                "Charles City County",
+                "Charlotte County",
+                "Charlottesville city",
+                "Chesapeake city",
+                "Chesterfield County",
+                "Clarke County",
+                "Colonial Heights city",
+                "Covington city",
+                "Craig County",
+                "Culpeper County",
+                "Cumberland County",
+                "Danville city",
+                "Dickenson County",
+                "Dinwiddie County",
+                "Emporia city",
+                "Essex County",
+                "Fairfax County",
+                "Fairfax city",
+                "Falls Church city",
+                "Fauquier County",
+                "Floyd County",
+                "Fluvanna County",
+                "Franklin County",
+                "Franklin city",
+                "Frederick County",
+                "Fredericksburg city",
+                "Galax city",
+                "Giles County",
+                "Gloucester County",
+                "Goochland County",
+                "Grayson County",
+                "Greene County",
+                "Greensville County",
+                "Halifax County",
+                "Hampton city",
+                "Hanover County",
+                "Harrisonburg city",
+                "Henrico County",
+                "Henry County",
+                "Highland County",
+                "Hopewell city",
+                "Isle of Wight County",
+                "James City County",
+                "King George County",
+                "King William County",
+                "King and Queen County",
+                "Lancaster County",
+                "Lee County",
+                "Lexington city",
+                "Loudoun County",
+                "Louisa County",
+                "Lunenburg County",
+                "Lynchburg city",
+                "Madison County",
+                "Manassas Park city",
+                "Manassas city",
+                "Martinsville city",
+                "Mathews County",
+                "Mecklenburg County",
+                "Middlesex County",
+                "Montgomery County",
+                "Nelson County",
+                "New Kent County",
+                "Newport News city",
+                "Norfolk city",
+                "Northampton County",
+                "Northumberland County",
+                "Norton city",
+                "Nottoway County",
+                "Orange County",
+                "Page County",
+                "Patrick County",
+                "Petersburg city",
+                "Pittsylvania County",
+                "Poquoson city",
+                "Portsmouth city",
+                "Powhatan County",
+                "Prince Edward County",
+                "Prince George County",
+                "Prince William County",
+                "Pulaski County",
+                "Radford city",
+                "Rappahannock County",
+                "Richmond County",
+                "Richmond city",
+                "Roanoke County",
+                "Roanoke city",
+                "Rockbridge County",
+                "Rockingham County",
+                "Russell County",
+                "Salem city",
+                "Scott County",
+                "Shenandoah County",
+                "Smyth County",
+                "Southampton County",
+                "Spotsylvania County",
+                "Stafford County",
+                "Staunton city",
+                "Suffolk city",
+                "Surry County",
+                "Sussex County",
+                "Tazewell County",
+                "Virginia Beach city",
+                "Warren County",
+                "Washington County",
+                "Waynesboro city",
+                "Westmoreland County",
+                "Williamsburg city",
+                "Winchester city",
+                "Wise County",
+                "Wythe County",
+                "York County"
+            ],
+            "qct_24": [
+                1,
+                0
+            ],
+            "pop_under_35k": [
+                "Greater",
+                "Less than 35k"
+            ]
+        }
+    },
+    "va_25_whatif_ranked": {
+        "name": "Virginia 2025 What If 5 Rent Burden Ranks",
+        "source_id": "va_25_source",
+        "url": "mapbox://wodacooper.va_25",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "qct_24"
+                ],
+                "QCT",
+                1,
+                0
+            ],
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "qct_24"
+                ],
+                "QCT",
+                "#ffffff",
+                "#000000"
+            ]
+        },
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "Whatif_Total_Points_5ranks"
+                ],
+                "#ffffff",
+                5,
+                "#9e9e9e",
+                20,
+                "#0000ff",
+                25,
+                "#9207fc",
+                30,
+                "#ff0000",
+                35,
+                "#fe8103",
+                40,
+                "#ffff00",
+                45,
+                "#ff00ff",
+                50,
+                "#00ff00",
+                55,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "Whatif_Total_Points_5ranks"
+                ],
+                0,
+                5,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "pool": "",
+            "County": "County/City",
+            "qct_24": "QCT",
+            "pop_under_35k": "Population < 35k"
+        },
+        "legend": [
+            [
+                "55",
+                "#00ffff"
+            ],
+            [
+                "50",
+                "#00ff00"
+            ],
+            [
+                "45",
+                "#ff00ff"
+            ],
+            [
+                "40",
+                "#ffff00"
+            ],
+            [
+                "35",
+                "#fe8103"
+            ],
+            [
+                "30",
+                "#ff0000"
+            ],
+            [
+                "25",
+                "#9207fc"
+            ],
+            [
+                "20",
+                "#0000ff"
+            ],
+            [
+                "5",
+                "#9e9e9e"
+            ]
+        ],
+        "hover": {
+            "Whatif_Total_Points_5ranks": [
+                true,
+                "Total Points (5 Census Tract Rent Burden Ranks)"
+            ],
+            "pool": [
+                true,
+                "Pool"
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "pov_pts": [
+                true,
+                "Povert Points"
+            ],
+            "qct_24": [
+                true,
+                "QCT"
+            ]
+        },
+        "click": {
+            "Whatif_Total_Points_5ranks": [
+                true,
+                "Total Points (5 Census Tract Rent Burden Ranks)"
+            ],
+            "pool": [
+                true,
+                "Pool"
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "pov_pts": [
+                true,
+                "Povert Points"
+            ],
+            "qct_24": [
+                true,
+                "QCT"
+            ],
+            "pop_under_35k": [
+                true,
+                "Population Under 35k"
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "Total_Points": [
+                true,
+                "Total Points"
+            ],
+            "Whatif_Total_Points_avg": [
+                true,
+                "Total Points (Census Tract Rent Burden > or < than avg Rent Burden)"
+            ]
+        },
+        "cat_filter_vals": {
+            "pool": [
+                "Balance of State",
+                "NW/NC",
+                "Northern Virginia",
+                "Richmond MSA",
+                "Tidewater MSA"
+            ],
+            "County": [
+                "Accomack County",
+                "Albemarle County",
+                "Alexandria city",
+                "Alleghany County",
+                "Amelia County",
+                "Amherst County",
+                "Appomattox County",
+                "Arlington County",
+                "Augusta County",
+                "Bath County",
+                "Bedford County",
+                "Bland County",
+                "Botetourt County",
+                "Bristol city",
+                "Brunswick County",
+                "Buchanan County",
+                "Buckingham County",
+                "Buena Vista city",
+                "Campbell County",
+                "Caroline County",
+                "Carroll County",
+                "Charles City County",
+                "Charlotte County",
+                "Charlottesville city",
+                "Chesapeake city",
+                "Chesterfield County",
+                "Clarke County",
+                "Colonial Heights city",
+                "Covington city",
+                "Craig County",
+                "Culpeper County",
+                "Cumberland County",
+                "Danville city",
+                "Dickenson County",
+                "Dinwiddie County",
+                "Emporia city",
+                "Essex County",
+                "Fairfax County",
+                "Fairfax city",
+                "Falls Church city",
+                "Fauquier County",
+                "Floyd County",
+                "Fluvanna County",
+                "Franklin County",
+                "Franklin city",
+                "Frederick County",
+                "Fredericksburg city",
+                "Galax city",
+                "Giles County",
+                "Gloucester County",
+                "Goochland County",
+                "Grayson County",
+                "Greene County",
+                "Greensville County",
+                "Halifax County",
+                "Hampton city",
+                "Hanover County",
+                "Harrisonburg city",
+                "Henrico County",
+                "Henry County",
+                "Highland County",
+                "Hopewell city",
+                "Isle of Wight County",
+                "James City County",
+                "King George County",
+                "King William County",
+                "King and Queen County",
+                "Lancaster County",
+                "Lee County",
+                "Lexington city",
+                "Loudoun County",
+                "Louisa County",
+                "Lunenburg County",
+                "Lynchburg city",
+                "Madison County",
+                "Manassas Park city",
+                "Manassas city",
+                "Martinsville city",
+                "Mathews County",
+                "Mecklenburg County",
+                "Middlesex County",
+                "Montgomery County",
+                "Nelson County",
+                "New Kent County",
+                "Newport News city",
+                "Norfolk city",
+                "Northampton County",
+                "Northumberland County",
+                "Norton city",
+                "Nottoway County",
+                "Orange County",
+                "Page County",
+                "Patrick County",
+                "Petersburg city",
+                "Pittsylvania County",
+                "Poquoson city",
+                "Portsmouth city",
+                "Powhatan County",
+                "Prince Edward County",
+                "Prince George County",
+                "Prince William County",
+                "Pulaski County",
+                "Radford city",
+                "Rappahannock County",
+                "Richmond County",
+                "Richmond city",
+                "Roanoke County",
+                "Roanoke city",
+                "Rockbridge County",
+                "Rockingham County",
+                "Russell County",
+                "Salem city",
+                "Scott County",
+                "Shenandoah County",
+                "Smyth County",
+                "Southampton County",
+                "Spotsylvania County",
+                "Stafford County",
+                "Staunton city",
+                "Suffolk city",
+                "Surry County",
+                "Sussex County",
+                "Tazewell County",
+                "Virginia Beach city",
+                "Warren County",
+                "Washington County",
+                "Waynesboro city",
+                "Westmoreland County",
+                "Williamsburg city",
+                "Winchester city",
+                "Wise County",
+                "Wythe County",
+                "York County"
+            ],
+            "qct_24": [
+                1,
+                0
+            ],
+            "pop_under_35k": [
+                "Greater",
+                "Less than 35k"
+            ]
+        }
+    },
     "poverty": {
         "name": "Poverty",
         "source_id": "va_24_source",
         "url": "mapbox://wodacooper.va_24",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "line": {
             "line-width": [
                 "match",
