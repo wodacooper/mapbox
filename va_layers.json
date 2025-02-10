@@ -507,7 +507,7 @@
         }
     },
     "va_25_whatif_avg": {
-        "name": "Virginia 2025 What If Off Average Rent Burden",
+        "name": "2025 What If CT >< Avg RentBurd",
         "source_id": "va_25_source",
         "url": "mapbox://wodacooper.va_25",
         "source_layer": "hello_world",
@@ -833,7 +833,7 @@
         }
     },
     "va_25_whatif_ranked": {
-        "name": "Virginia 2025 What If 5 Rent Burden Ranks",
+        "name": "2025 What If 5 RentBurdRanks",
         "source_id": "va_25_source",
         "url": "mapbox://wodacooper.va_25",
         "source_layer": "hello_world",
