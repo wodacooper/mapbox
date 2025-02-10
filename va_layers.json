@@ -592,7 +592,7 @@
             ],
             "rent_burd_points_plusminavg": [
                 true,
-                "><avg Rent Burden Points"
+                "Rent Burden Points > or < avg"
             ],
             "Econ Activity Points": [
                 true,
@@ -618,7 +618,7 @@
             ],
             "rent_burd_points_plusminavg": [
                 true,
-                "><avg Rent Burden Points"
+                "Rent Burden Points > or < avg"
             ],
             "Econ Activity Points": [
                 true,
