@@ -230,7 +230,6 @@
         "cat_filters": {
             "pool": "",
             "County": "County/City",
-            "qct_24": "QCT",
             "pop_under_35k": "Population < 35k"
         },
         "legend": [
@@ -284,13 +283,17 @@
                 true,
                 ""
             ],
+            "Rent Burden Points": [
+                true,
+                "Rent Burden Points"
+            ],
+            "Econ Activity Points": [
+                true,
+                "Econ Activity Points"
+            ],
             "pov_pts": [
                 true,
-                "Povert Points"
-            ],
-            "qct_24": [
-                true,
-                "QCT"
+                "Poverty Points"
             ]
         },
         "click": {
@@ -308,11 +311,7 @@
             ],
             "pov_pts": [
                 true,
-                "Povert Points"
-            ],
-            "qct_24": [
-                true,
-                "QCT"
+                "Poverty Points"
             ],
             "pop_under_35k": [
                 true,
@@ -473,10 +472,6 @@
                 "Wise County",
                 "Wythe County",
                 "York County"
-            ],
-            "qct_24": [
-                1,
-                0
             ],
             "pop_under_35k": [
                 "Greater",
@@ -534,7 +529,6 @@
         "cat_filters": {
             "pool": "",
             "County": "County/City",
-            "qct_24": "QCT",
             "pop_under_35k": "Population < 35k"
         },
         "legend": [
@@ -590,11 +584,7 @@
             ],
             "pov_pts": [
                 true,
-                "Povert Points"
-            ],
-            "qct_24": [
-                true,
-                "QCT"
+                "Poverty Points"
             ]
         },
         "click": {
@@ -612,11 +602,7 @@
             ],
             "pov_pts": [
                 true,
-                "Povert Points"
-            ],
-            "qct_24": [
-                true,
-                "QCT"
+                "Poverty Points"
             ],
             "pop_under_35k": [
                 true,
@@ -777,10 +763,6 @@
                 "Wise County",
                 "Wythe County",
                 "York County"
-            ],
-            "qct_24": [
-                1,
-                0
             ],
             "pop_under_35k": [
                 "Greater",
@@ -838,7 +820,6 @@
         "cat_filters": {
             "pool": "",
             "County": "County/City",
-            "qct_24": "QCT",
             "pop_under_35k": "Population < 35k"
         },
         "legend": [
@@ -894,11 +875,7 @@
             ],
             "pov_pts": [
                 true,
-                "Povert Points"
-            ],
-            "qct_24": [
-                true,
-                "QCT"
+                "Poverty Points"
             ]
         },
         "click": {
@@ -916,11 +893,7 @@
             ],
             "pov_pts": [
                 true,
-                "Povert Points"
-            ],
-            "qct_24": [
-                true,
-                "QCT"
+                "Poverty Points"
             ],
             "pop_under_35k": [
                 true,
@@ -1081,10 +1054,6 @@
                 "Wise County",
                 "Wythe County",
                 "York County"
-            ],
-            "qct_24": [
-                1,
-                0
             ],
             "pop_under_35k": [
                 "Greater",
