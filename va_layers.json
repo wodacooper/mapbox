@@ -289,7 +289,7 @@
             ],
             "Econ Activity Points": [
                 true,
-                "Econ Activity Points"
+                "Economic Activity Points"
             ],
             "pov_pts": [
                 true,
@@ -308,6 +308,14 @@
             "County": [
                 true,
                 ""
+            ],
+            "Rent Burden Points": [
+                true,
+                "Rent Burden Points"
+            ],
+            "Econ Activity Points": [
+                true,
+                "Economic Activity Points"
             ],
             "pov_pts": [
                 true,
@@ -582,6 +590,14 @@
                 true,
                 ""
             ],
+            "rent_burd_points_plusminavg": [
+                true,
+                "><avg Rent Burden Points"
+            ],
+            "Econ Activity Points": [
+                true,
+                "Economic Activity Points"
+            ],
             "pov_pts": [
                 true,
                 "Poverty Points"
@@ -599,6 +615,14 @@
             "County": [
                 true,
                 ""
+            ],
+            "rent_burd_points_plusminavg": [
+                true,
+                "><avg Rent Burden Points"
+            ],
+            "Econ Activity Points": [
+                true,
+                "Economic Activity Points"
             ],
             "pov_pts": [
                 true,
@@ -873,6 +897,14 @@
                 true,
                 ""
             ],
+            "rent_burd_points_ranked": [
+                true,
+                "5 Ranks Rent Burden Points"
+            ],
+            "Econ Activity Points": [
+                true,
+                "Economic Activity Points"
+            ],
             "pov_pts": [
                 true,
                 "Poverty Points"
@@ -890,6 +922,14 @@
             "County": [
                 true,
                 ""
+            ],
+            "rent_burd_points_ranked": [
+                true,
+                "5 Ranks Rent Burden Points"
+            ],
+            "Econ Activity Points": [
+                true,
+                "Economic Activity Points"
             ],
             "pov_pts": [
                 true,
