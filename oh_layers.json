@@ -2523,7 +2523,11 @@
                 0
             ],
             "line-color":
-            "#ffffff"
+            "#ffffff",
+            "line-opacity": [
+                "case",
+                ["==", ["get", "opp_disc_score"], 10], 1, 0
+            ]
 
         },
         "legend": [
