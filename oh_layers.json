@@ -2457,8 +2457,8 @@
     },
     "olihtc_score": {
         "name": "2025 OLIHTC Score",
-        "source_id": "oh_bgf_25",
-        "url": "mapbox://wodacooper.oh_bgf_25",
+        "source_id": "oh_lihtc_25",
+        "url": "mapbox://wodacooper.oh_lihtc_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
