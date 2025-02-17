@@ -3629,12 +3629,15 @@
         },
         "num_filter_vals": {
             "opp_disc_score": [
+                0.0,
                 10.0
             ],
             "discount_pts": [
+                0.0,
                 10.0
             ],
             "opp_points": [
+                0.0,
                 10.0
             ]
         }
