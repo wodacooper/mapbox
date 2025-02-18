@@ -1682,6 +1682,7 @@
             ]
         },
         "cat_filters": {
+            "inc_2023": "Point Increase in 2023",
             "pool": "",
             "County": "County",
             "city_x": "City",
@@ -1695,6 +1696,7 @@
             "revit_pts": "Revit Score"
         },
         "cat_filter_vals": {
+            "inc_2023": ["0.0","1.0", "2.0"],
             "pool": [
                 "Atlanta Metro",
                 "Other Metro",
