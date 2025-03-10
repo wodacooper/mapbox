@@ -245,6 +245,10 @@
             "Active Supportive Housing Projects": [
                 true,
                 ""
+            ],
+            "Senior Rental Housing Desert": [
+                true,
+                ""
             ]
         },
         "cat_filter_vals": {
