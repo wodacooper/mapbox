@@ -229,6 +229,18 @@
             "score 2026": [
                 true,
                 ""
+            ],
+            "Active Family Projects": [
+                true,
+                ""
+            ],
+            "Active Age Restricted Projects": [
+                true,
+                ""
+            ],
+            "Active Supportive Housing Projects": [
+                true,
+                ""
             ]
         },
         "cat_filter_vals": {
