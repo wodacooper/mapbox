@@ -214,6 +214,10 @@
             ]
         },
         "click": {
+            "Tract Number": [
+                true,
+                ""
+            ],
             "Pool": [
                 true,
                 ""
