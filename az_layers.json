@@ -1,0 +1,35 @@
+{
+    "initial_mapping": {
+        "name": "2025 Arizona",
+        "source_id": "az_25",
+        "url": "mapbox://wodacooper.az_25",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "properties": {
+            "County": "{county_x}",
+            "pool": "{pool}",
+            "qct": {
+                "value": "{qct}",
+                "category": {
+                    "0": "Not a QCT",
+                    "1": "Is a QCT"
+                }
+            },
+            "2025 SDDA (1=SDDA)": {
+                "value": "{DDA}",
+                "category": {
+                    "0": "Not in DDA",
+                    "1": "Is in DDA"
+                }
+            }
+        },
+        "tooltip": ["County", "pool", "qct", "2025 SDDA (1=SDDA)"],
+        "filters": {
+            "qct": ["Not a QCT", "Is a QCT"],
+            "2025 SDDA (1=SDDA)": ["Not in DDA", "Is in DDA"]
+        }
+    }
+}
