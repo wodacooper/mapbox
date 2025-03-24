@@ -60,8 +60,8 @@
 
     "Pool": {
         "name": "Pool 2025",
-        "source_id": "az_25_pool",
-        "url": "mapbox://wodacooper.az_25_pool",
+        "source_id": "az_25",
+        "url": "mapbox://wodacooper.az_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
