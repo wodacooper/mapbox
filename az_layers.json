@@ -20,7 +20,8 @@
                 "#a0a0a0",
                 1,
                 "#ffffff",
-                2
+                2,
+                "#800080"
             ],
             "fill-opacity": [
                 "match",
