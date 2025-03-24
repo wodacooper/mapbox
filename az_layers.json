@@ -25,20 +25,18 @@
                     "get",
                     "qct_dda"
                 ],
-                2,
-                1,
-                1,
-                0.5,
-                0 
+                0,
+                0,
+                1
             ]
         },
         "legend": [
             [
-                "QCT",
+                "QCT and DDA",
                 "#ffffff"
             ],
            [
-                "DDA",
+                "QCT or DDA",
                 "#a0a0a0"
             ]
         ],
