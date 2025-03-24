@@ -1,6 +1,6 @@
 {
-    "initial_mapping": {
-        "name": "2025 Arizona",
+    "QCT or DDA": {
+        "name": "QCT or DDA 2025",
         "source_id": "az_25",
         "url": "mapbox://wodacooper.az_25",
         "source_layer": "hello_world",
@@ -8,28 +8,119 @@
             "visibility": "visible"
         },
         "visible": true,
-        "properties": {
-            "County": "{county_x}",
-            "pool": "{pool}",
-            "qct": {
-                "value": "{qct}",
-                "category": {
-                    "0": "Not a QCT",
-                    "1": "Is a QCT"
-                }
-            },
-            "2025 SDDA (1=SDDA)": {
-                "value": "{DDA}",
-                "category": {
-                    "0": "Not in DDA",
-                    "1": "Is in DDA"
-                }
-            }
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "qct"
+                ],
+                1,
+                "#ffffff",
+                "#a0a0a0"
+            ],
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "qct_or_dda"
+                ],
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0 
+            ]
         },
-        "tooltip": ["County", "pool", "qct", "2025 SDDA (1=SDDA)"],
-        "filters": {
-            "qct": ["Not a QCT", "Is a QCT"],
-            "2025 SDDA (1=SDDA)": ["Not in DDA", "Is in DDA"]
+        "legend": [
+            [
+                "QCT",
+                "#ffffff"
+            ],
+           [
+                "DDA",
+                "#a0a0a0"
+            ]
+        ],
+        "click":{
+            "qct":[true,""], 
+            "qct_or_dda":[true,""]
+        },
+        "hover": {
+            "qct": [
+                true,
+                ""
+            ],
+            "qct_or_dda": [
+                true,
+                ""
+            ]
         }
+    },
+
+    "Pool": {
+        "name": "Pool 2025",
+        "source_id": "az_25_pool",
+        "url": "mapbox://wodacooper.az_25_pool",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-opacity": [
+                "match",
+                [
+                    "get",
+                    "pool"
+                ],
+                "Rural / Balance of State",
+                1,
+                0
+            ],
+            "line-width": 3,
+            "line-color": "ffffff"
+        },
+        "hover": {
+            "pool": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "pool": [
+                true,
+                ""
+            ]
+        }
+    },
+
+    "Tribal Land": {
+        "name": "Tribal Land 2025",
+        "source_id": "az_tribal",
+        "url": "mapbox://wodacooper.az_tribal",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "#ffa500"
+            ],
+            "fill-opacity": [
+                0.5
+            ]
+        },
+        "legend": [
+            [
+                "QCT",
+                "#ffffff"
+            ],
+           [
+                "DDA",
+                "#a0a0a0"
+            ]
+        ]
     }
 }
