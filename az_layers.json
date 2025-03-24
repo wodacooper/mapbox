@@ -10,14 +10,17 @@
         "visible": true,
         "fill": {
             "fill-color": [
-                "match",
+                "step",
                 [
                     "get",
                     "qct_dda"
                 ],
+                0,
+                "#800080", 
+                1,
+                "#a0a0a0",
                 2,
-                "#ffffff",
-                "#a0a0a0"
+                "#ffffff"
             ],
             "fill-opacity": [
                 "match",
