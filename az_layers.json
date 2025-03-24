@@ -15,12 +15,12 @@
                     "get",
                     "qct_dda"
                 ],
-                0,
                 "#800080", 
-                1,
+                0,
                 "#a0a0a0",
-                2,
-                "#ffffff"
+                1,
+                "#ffffff",
+                2
             ],
             "fill-opacity": [
                 "match",
