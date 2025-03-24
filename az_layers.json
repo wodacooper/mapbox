@@ -8,6 +8,7 @@
             "visibility": "visible"
         },
         "visible": true,
+        "layer_id": "QCT_or_DDA_fill",
         "fill": {
             "fill-color": [
                 "match",
@@ -67,6 +68,7 @@
             "visibility": "visible"
         },
         "visible": true,
+        "layer_id": "Pool_line",
         "line": {
             "line-opacity": [
                 "match",
@@ -104,6 +106,7 @@
             "visibility": "visible"
         },
         "visible": true,
+        "layer_id": "Tribal_Land_fill",
         "fill": {
             "fill-color": [
                 "#ffa500"
