@@ -58,8 +58,8 @@
 
     "Pool": {
         "name": "Pool 2025",
-        "source_id": "az_25",
-        "url": "mapbox://wodacooper.az_25",
+        "source_id": "az_pool",
+        "url": "mapbox://wodacooper.az_pool",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -103,17 +103,17 @@
         },
         "visible": true,
         "fill": {
-            "fill-color": "#ffa500",
-            "fill-opacity": 0.5
+            "fill-color": "#ff0000",
+            "fill-opacity": 0.3
+        },
+        "line": {
+            "line-width": 2,
+            "line-color": "#ff0000"
         },
         "legend": [
             [
-                "QCT",
-                "#ffffff"
-            ],
-           [
-                "DDA",
-                "#a0a0a0"
+                "Tribal Land",
+                "#ff0000"
             ]
         ]
     }
