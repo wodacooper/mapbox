@@ -13,7 +13,7 @@
                 "step",
                 [
                     "get",
-                    "qct_dda"
+                    "qct_dda_float"
                 ],
                 "#800080", 
                 0,
@@ -27,7 +27,7 @@
                 "match",
                 [
                     "get",
-                    "qct_dda"
+                    "qct_dda_float"
                 ],
                 0,
                 0,
@@ -47,7 +47,7 @@
         "click":{
             "qct":[true,""],
             "2025 SDDA (1=SDDA)":[true,"DDA"], 
-            "qct_dda":[true,""]
+            "qct_dda_float":[true,"qct_dda"]
         },
         "hover": {
             "qct": [
@@ -58,9 +58,9 @@
                 true,
                 "DDA"
             ],
-            "qct_dda": [
+            "qct_dda_float": [
                 true,
-                ""
+                "qct_dda"
             ]
         }
     },
