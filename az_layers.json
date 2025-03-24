@@ -13,9 +13,9 @@
                 "match",
                 [
                     "get",
-                    "qct"
+                    "qct_dda"
                 ],
-                1,
+                2,
                 "#ffffff",
                 "#a0a0a0"
             ],
@@ -43,15 +43,20 @@
             ]
         ],
         "click":{
-            "qct":[true,""], 
-            "qct_or_dda":[true,""]
+            "qct":[true,""],
+            "2025 SDDA (1=SDDA)":[true,"DDA"], 
+            "qct_dda":[true,""]
         },
         "hover": {
             "qct": [
                 true,
                 ""
             ],
-            "qct_or_dda": [
+            "2025 SDDA (1=SDDA)": [
+                true,
+                "DDA"
+            ],
+            "qct_dda": [
                 true,
                 ""
             ]
