@@ -81,8 +81,8 @@
                 1,
                 0
             ],
-            "line-width": 3,
-            "line-color": "#ffffff"
+            "line-width": 4,
+            "line-color": "#000000"
         },
         "hover": {
             "pool": [
