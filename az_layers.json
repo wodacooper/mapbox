@@ -10,18 +10,14 @@
         "visible": true,
         "fill": {
             "fill-color": [
-                "step",
+                "match",
                 [
                     "get",
-                    "qct_dda"
+                    "qct"
                 ],
-                "#00ff00", 
-                0,
-                "#a0a0a0",
                 1,
                 "#ffffff",
-                2,
-                "#800080"
+                "#aeaeae"
             ],
             "fill-opacity": [
                 "match",
@@ -31,7 +27,7 @@
                 ],
                 0,
                 0,
-                1
+                0.6
             ]
         },
         "legend": [
