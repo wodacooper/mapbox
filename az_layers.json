@@ -41,11 +41,16 @@
             ]
         ],
         "click":{
+            "pool":[true,""],
             "qct":[true,""],
             "2025 SDDA (1=SDDA)":[true,"DDA"], 
             "qct_dda":[true,"qct_dda"]
         },
         "hover": {
+            "pool": [
+                true,
+                ""
+            ],
             "qct": [
                 true,
                 ""
