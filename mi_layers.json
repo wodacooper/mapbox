@@ -628,13 +628,13 @@
                     "total_pts"
                 ],
                 "#ff0000",
-                9,
+                8,
                 "#ffff00",
-                10,
+                9,
                 "#ff00ff",
-                11,
+                10,
                 "#00ff00",
-                12,
+                11,
                 "#00ffff"
             ],
             "fill-opacity": [
@@ -644,14 +644,13 @@
                     "total_pts"
                 ],
                 0,
-                8,
+                7,
                 0.6
             ]
         },
         "cat_filters": {
             "pool": "",
-            "NAMELSAD": "County",
-            "promise_pt": ""
+            "NAMELSAD": "County"
         },
         "num_filters": {
             "total_pts": "",
@@ -659,23 +658,23 @@
         },
         "legend": [
             [
-                "12",
+                "11",
                 "#00ffff"
             ],
             [
-                "11",
+                "10",
                 "#00ff00"
             ],
             [
-                "10",
+                "9",
                 "#ff00ff"
             ],
             [
-                "9",
+                "8",
                 "#ffff00"
             ],
             [
-                "8",
+                "7",
                 "#ff0000"
             ]
         ],
@@ -718,19 +717,11 @@
                 true,
                 ""
             ],
-            "promise_pt": [
-                true,
-                ""
-            ],
             "childcare_pts": [
                 true,
                 ""
             ],
             "school_pts": [
-                true,
-                ""
-            ],
-            "district": [
                 true,
                 ""
             ]
@@ -824,10 +815,6 @@
                 "Washtenaw County",
                 "Wayne County",
                 "Wexford County"
-            ],
-            "promise_pt": [
-                "0",
-                "1"
             ]
         },
         "num_filter_vals": {
@@ -858,11 +845,11 @@
                     "pts_no_amenities"
                 ],
                 "#0000ff",
-                3,
+                2,
                 "#ff00ff",
-                4,
+                3,
                 "#00ff00",
-                5,
+                4,
                 "#00ffff"
             ],
             "fill-opacity": [
@@ -872,25 +859,25 @@
                     "pts_no_amenities"
                 ],
                 0,
-                2,
+                1,
                 0.6
             ]
         },
         "legend": [
             [
-                "5",
+                "4",
                 "#00ffff"
             ],
             [
-                "4",
+                "3",
                 "#00ff00"
             ],
             [
-                "3",
+                "2",
                 "#ff00ff"
             ],
             [
-                "2",
+                "1",
                 "#0000ff"
             ]
         ],
@@ -932,20 +919,11 @@
             "burden_pts": [
                 true,
                 ""
-            ],
-            "promise_pt": [
-                true,
-                ""
-            ],
-            "district": [
-                true,
-                ""
             ]
         },
         "cat_filters": {
             "pool": "",
-            "NAMELSAD": "County",
-            "promise_pt": ""
+            "NAMELSAD": "County"
         },
         "num_filters": {
             "total_pts": "Score with Amenities",
@@ -1040,10 +1018,6 @@
                 "Washtenaw County",
                 "Wayne County",
                 "Wexford County"
-            ],
-            "promise_pt": [
-                "0",
-                "1"
             ]
         },
         "num_filter_vals": {
