@@ -97,7 +97,7 @@
             ]
         }
     },
-    "score": {
+    "score_2024": {
         "name": "2024 County Pool Rank",
         "source_id": "tn_basemap_10_25_24",
         "url": "mapbox://wodacooper.tn_basemap_10_25_24",
@@ -366,6 +366,62 @@
                 "3",
                 "4"
             ]
+        }
+    },
+     "score": {
+        "name": "2025 Score",
+        "source_id": "tn_25_source",
+        "url": "mapbox://wodacooper.tn_25",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+             "fill-color":[
+                "match",
+                [
+                    "get",
+                    "boost_25"
+                ],
+                1,
+                "#00FFFF",
+                "#0000FF"
+            ],
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "Points"
+                ],
+                4,
+                0.6,
+                0 
+            ]
+        },
+        "legend": [
+            [
+                "QCT/DDA + 4 Points",
+                "#00FFFF"
+            ],
+           [
+                "Just 4 Points",
+                "#0000FF"
+            ]
+        ],
+        "click":{
+            "countyname":[true,"County"],
+            "GEOID_1":[true,"GEOID"],
+            "Points":[true,""], 
+            "qct_25":[true,""], 
+            "sadda_25":[true,""],
+            "nmdda_25":[true,""],
+            "new_boost":[true,""],
+            "metro":[true,""], 
+            "hud_area_name":[true,""], 
+            "fmr_24":[true,"2br FMR"],
+            "vlil_4_24": [true, "4-Person VLIL"],
+            "rent_limit_24":[true,"4-Person VLIL rent"]
         }
     }
 }
