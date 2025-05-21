@@ -4867,9 +4867,9 @@
         "url": "mapbox://wodacooper.oh_lihtc_25",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "match",
