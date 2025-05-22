@@ -562,6 +562,22 @@
                 true,
                 "20% Benchmark"
             ],
+            "Poverty Rate": [
+                true,
+                ""
+            ],
+            "Median Poverty Rate by Region": [
+                true,
+                ""
+            ],
+            "Median Household Income": [
+                true,
+                ""
+            ],
+            "Median Household Income Quartile": [
+                true,
+                ""
+            ],
             "GEOID": [
                 true,
                 ""
