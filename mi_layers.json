@@ -611,6 +611,170 @@
             ]
         }
     },
+    "soar_sites": {
+        "name": "SOAR Sites",
+        "source_id": "mi_soar_source_v2",
+        "url": "mapbox://wodacooper.mi_soar_v2",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "Info Gathered"
+                ],
+                "SOAR Fund Report",
+                "#FF88DF",
+                "#5FC359"
+            ],
+            "line-width":3
+        },
+        "cat_filters": {
+            "Info Gathered": "Source",
+            "Year": ""
+        },
+        "legend": [
+            [
+                "SOAR Fund Report",
+                "#FF88DF"
+            ],
+            [
+                "MSHDA Meeting",
+                "#5FC359"
+            ]
+        ],
+        "hover": {
+            "Info Gathered": [
+                true,
+                ""
+            ],
+            "Project": [
+                true,
+                "County"
+            ],
+            "Project Type": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Info Gathered": [
+                true,
+                ""
+            ],
+            "Project": [
+                true,
+                "County"
+            ],
+            "Project Type": [
+                true,
+                ""
+            ],
+            "Year": [
+                true,
+                ""
+            ],
+            "Fund": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+            "Article": [
+                true,
+                ""
+            ] 
+        },
+        "cat_filter_vals": {
+            "Info Gathered": [
+                "SOAR Fund Report/MSHDA Meeting",
+                "SOAR Fund Report",
+                "MSHDA Meeting"
+            ],
+            "Year": [
+               "2024",
+                "2023",
+                "2022"
+            ]
+        }
+    },
+    "soar_buffers": {
+        "name": "SOAR Buffers",
+        "source_id": "mi_soar_buffers_source",
+        "url": "mapbox://wodacooper.mi_soar_buffers",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "Source"
+                ],
+                "SOAR Fund Report",
+                "#FF88DF",
+                "#5FC359"
+            ],
+            "line-width":2
+        },
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "soar_pts"
+                ],
+                2,
+                "#aaaaaa",
+                "#ffffff"
+            ],
+            "fill-opacity":0.3
+        },
+        "cat_filters": {
+            "Source": "Source",
+            "soar_pts":""
+        },
+        "legend": [
+            [
+                "4",
+                "#ffffff"
+            ],
+            [
+                "2",
+                "#aaaaaa"
+            ]
+        ],
+        "hover": {
+            "Source": [
+                true,
+                ""
+            ],
+            "soar_pts": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "Source": [
+                "SOAR Fund Report/MSHDA Meeting",
+                "SOAR Fund Report",
+                "MSHDA Meeting"
+            ],
+            "soar_pts": [
+               "2.0",
+                "4.0"
+            ]
+        }
+    },
     "score_geocode": {
         "name": "2025 Score w/ Amenities",
         "source_id": "mi_25_source",
