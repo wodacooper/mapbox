@@ -620,6 +620,9 @@
             "visibility": "none"
         },
         "visible": false,
+        "fill"  : {
+            "fill-opacity": 0
+        },
         "line": {
             "line-color": [
                 "match",
@@ -704,10 +707,10 @@
             ]
         }
     },
-    "soar_buffers": {
+    "soar_buffer": {
         "name": "SOAR Buffers",
-        "source_id": "mi_soar_buffers_source",
-        "url": "mapbox://wodacooper.mi_soar_buffers",
+        "source_id": "mi_soar_buffer_source",
+        "url": "mapbox://wodacooper.mi_soar_buffer",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
