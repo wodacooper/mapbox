@@ -63,7 +63,7 @@
     "lightbox_parcels": {
         "name": "Lightbox Parcels",
         "source_id": "lightbox_parcels_test_v8_source",
-        "url": "mapbox://tileset-source/wodacooper/lightbox_parcels_test_v8_source",
+        "url": "mapbox://wodacooper.lightbox_parcels_test_v8",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
