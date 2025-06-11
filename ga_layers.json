@@ -69,6 +69,46 @@
             "rent_limit_24":[934.5,2320.5]
         }
     },
+    "lightbox_parcels": {
+        "name": "Lightbox Parcels",
+        "source_id": "lightbox_parcels_test_v8_source",
+        "url": "mapbox://tileset-source/wodacooper/lightbox_parcels_test_v8_source",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#00ff00"
+            },
+        "fill": {
+            "fill-opacity": 0
+            },
+        "legend": [
+            [
+                "parcels",
+                "#00ff00"
+            ]
+        ],
+        "click":{
+            "ACREAGE":[true,"Acreage"], 
+            "OWNERSHIP_STATUS_CODE":[true,"Ownership Status Code"], 
+            "VACANT":[true,"Vacant"], 
+            "YR_BLT":[true,"Year Built"], 
+            "bf_bldg_area":[true,"Building Square Footage"]
+        },
+        "num_filters":{
+            "ACREAGE":"Acreage",
+            "YR_BLT":"Year Built",
+            "bf_bldg_area":"Building Square Footage"
+        },
+        "num_filter_vals":{
+            "ACREAGE":[0.0,680.0],
+            "YR_BLT":[1800,2023],
+            "bf_bldg_area":[251,5900000]
+        }
+    },
     "atl_tads": {
         "name": "Atlanta TADs",
         "source_id": "atl_tads_source",
