@@ -1,5 +1,5 @@
 {
-"qct_dda_test": {
+    "qct_dda_test": {
         "name": "QCT/DDA",
         "source_id": "qct/dda_source",
         "url": "mapbox://wodacooper.qct_dda",
@@ -58,6 +58,46 @@
             "2023 Final 40th Percentile 2-Bedroom FMR":[370.0,4080.0],
             "2023 4-PersonVLIL ":[31100.0,75350.0],
             "LIHTC Maximum Rent (1/12 of 30% of 120% of VLIL)":[933.0,2260.5]
+        }
+    },
+    "lightbox_parcels": {
+        "name": "Lightbox Parcels",
+        "source_id": "lightbox_parcels_test_v8_source",
+        "url": "mapbox://tileset-source/wodacooper/lightbox_parcels_test_v8_source",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#00ff00"
+            },
+        "fill": {
+            "fill-opacity": 0
+            },
+        "legend": [
+            [
+                "parcels",
+                "#00ff00"
+            ]
+        ],
+        "click":{
+            "ACREAGE":[true,"Acreage"], 
+            "OWNERSHIP_STATUS_CODE":[true,"Ownership Status Code"], 
+            "VACANT":[true,"Vacant"], 
+            "YR_BLT":[true,"Year Built"], 
+            "bf_bldg_area":[true,"Building Square Footage"]
+        },
+        "num_filters":{
+            "ACREAGE":"Acreage",
+            "YR_BLT":"Year Built",
+            "bf_bldg_area":"Building Square Footage"
+        },
+        "num_filter_vals":{
+            "ACREAGE":[0.0,680.0],
+            "YR_BLT":[1800,2023],
+            "bf_bldg_area":[251,5900000]
         }
     },
     "atl_beltline": {
