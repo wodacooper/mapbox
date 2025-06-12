@@ -185,8 +185,7 @@
         "cat_filters": {
             "OWNERSHIP_STATUS_CODE": "Ownership Status Code",
             "VACANT": "Vacant",
-            "ZONING_CODE":"",
-            "ZONING_SUBCATEGORY":""
+            "ZONING_SUBCATEGORY": ""
         },
         "cat_filter_vals": {
             "OWNERSHIP_STATUS_CODE": [
