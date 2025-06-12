@@ -89,6 +89,182 @@
             "YR_BLT":[true,"Year Built"], 
             "bf_bldg_area":[true,"Building Square Footage"]
         },
+        "cat_filters": {
+            "OWNERSHIP_STATUS_CODE": "Ownership Status Code",
+            "VACANT": "Vacant"
+        },
+        "cat_filter_vals": {
+            "OWNERSHIP_STATUS_CODE": [
+                "ID",
+                "None",
+                "LC",
+                "TT",
+                "LS",
+                "CO",
+                "FM",
+                "RT",
+                "GV",
+                "PA",
+                "ES",
+                "nan",
+                "CN",
+                "FR",
+                "LP",
+                "LV",
+                "FL",
+                "RL",
+                "TR",
+                "IR",
+                "EA",
+                "LL",
+                "AG",
+                "EX",
+                "LT",
+                "IL",
+                "GP",
+                "HW",
+                "SW",
+                "AC",
+                "SP",
+                "SJ",
+                "BE",
+                "MM",
+                "SM",
+                "MI",
+                "MP",
+                "ME"
+            ],
+            "VACANT": [
+                "V",
+                ""
+            ]
+        },
+        "num_filters":{
+            "ACREAGE":"Acreage",
+            "YR_BLT":"Year Built",
+            "bf_bldg_area":"Building Square Footage"
+        },
+        "num_filter_vals":{
+            "ACREAGE":[0.0,680.0],
+            "YR_BLT":[1800,2023],
+            "bf_bldg_area":[251,5900000]
+        }
+    },
+    "lightbox_zoning": {
+        "name": "Lightbox Zoning",
+        "source_id": "zoning_test_v2_source",
+        "url": "mapbox://wodacooper.zoning_test_v2",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#00ff00"
+            },
+        "fill": {
+            "fill-opacity": 0
+            },
+        "legend": [
+            [
+                "parcels",
+                "#00ff00"
+            ]
+        ],
+        "click":{
+            "ACREAGE":[true,"Acreage"], 
+            "OWNERSHIP_STATUS_CODE":[true,"Ownership Status Code"], 
+            "VACANT":[true,"Vacant"], 
+            "YR_BLT":[true,"Year Built"], 
+            "bf_bldg_area":[true,"Building Square Footage"],
+            "ORDINANCE_DOCUMENT_URL":[true,"Ordinance Document URL"],
+            "ZONING_CODE":[true,"Zoning Code"],
+            "ZONING_SUBCATEGORY":[true,"Zoning Subcategory"]
+        },
+        "cat_filters": {
+            "OWNERSHIP_STATUS_CODE": "Ownership Status Code",
+            "VACANT": "Vacant",
+            "ZONING_CODE":"",
+            "ZONING_SUBCATEGORY":""
+        },
+        "cat_filter_vals": {
+            "OWNERSHIP_STATUS_CODE": [
+                "ID",
+                "None",
+                "LC",
+                "TT",
+                "LS",
+                "CO",
+                "FM",
+                "RT",
+                "GV",
+                "PA",
+                "ES",
+                "nan",
+                "CN",
+                "FR",
+                "LP",
+                "LV",
+                "FL",
+                "RL",
+                "TR",
+                "IR",
+                "EA",
+                "LL",
+                "AG",
+                "EX",
+                "LT",
+                "IL",
+                "GP",
+                "HW",
+                "SW",
+                "AC",
+                "SP",
+                "SJ",
+                "BE",
+                "MM",
+                "SM",
+                "MI",
+                "MP",
+                "ME"
+            ],
+            "VACANT": [
+                "V",
+                ""
+            ],
+            "ZONING_SUBCATEGORY": [
+                "UNKNOWN",
+                "AGRICULTURE",
+                "OVERLAY",
+                "COMMERCIAL",
+                "OTHER",
+                "INDUSTRIAL",
+                "LIGHT INDUSTRIAL",
+                "RESIDENTIAL",
+                "BUSINESS PARK/OFFICE",
+                "MEDIUM DENSITY RESIDENTIAL",
+                "INSTITUTIONAL",
+                "PLANNED DEVELOPMENT",
+                "SINGLE FAMILY RESIDENTIAL",
+                "NEIGHBORHOOD COMMERCIAL",
+                "RETAIL/SHOPPING",
+                "LOW DENSITY RESIDENTIAL",
+                "MIXED USE",
+                "HEAVY INDUSTRIAL",
+                "MULTI FAMILY RESIDENTIAL",
+                "HIGH DENSITY RESIDENTIAL",
+                "MOBILE HOME PARK",
+                "HEAVY COMMERCIAL",
+                "OPEN SPACE/PARKS",
+                "CONSERVATION",
+                "SPECIFIC PURPOSE",
+                "PUBLIC",
+                "LIGHT COMMERCIAL",
+                "RECREATION"    
+            ]
+
+        },
         "num_filters":{
             "ACREAGE":"Acreage",
             "YR_BLT":"Year Built",
