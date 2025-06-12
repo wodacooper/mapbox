@@ -185,7 +185,8 @@
         "cat_filters": {
             "OWNERSHIP_STATUS_CODE": "Ownership Status Code",
             "VACANT": "Vacant",
-            "ZONING_SUBCATEGORY": "Zoning Subcategory"
+            "ZONING_SUBCATEGORY": "Zoning Subcategory",
+            "ideal_zone": "Ideal Zone"
         },
         "cat_filter_vals": {
             "OWNERSHIP_STATUS_CODE": [
@@ -261,6 +262,11 @@
                 "PUBLIC",
                 "LIGHT COMMERCIAL",
                 "RECREATION"    
+            ],
+            "ideal_zone":
+            [
+                "Y",
+                "N"
             ]
 
         },
