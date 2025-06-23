@@ -2540,7 +2540,15 @@
             ]
         },
         "click": {
+             "name": [
+                true,
+                ""
+            ],
             "address": [
+                true,
+                ""
+            ],
+            "type": [
                 true,
                 ""
             ],
@@ -2553,6 +2561,10 @@
                 ""
             ],
             "plus_code": [
+                true,
+                ""
+            ],
+            "links": [
                 true,
                 ""
             ]
