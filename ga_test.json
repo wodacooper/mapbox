@@ -3543,8 +3543,8 @@
     },
     "stable_2026": {
         "name": "Stable + Schools 2026",
-        "source_id": "ga_26_draft_lats_source",
-        "url": "mapbox://wodacooper.ga_26_draft_lats",
+        "source_id": "ga_26_draft_source",
+        "url": "mapbox://wodacooper.ga_26_draft",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
