@@ -3753,7 +3753,7 @@
                 true,
                 ""
             ],
-            "trans_qual": [
+            "travel_qual": [
                 true,
                 ""
             ],
@@ -3761,7 +3761,7 @@
                 true,
                 ""
             ],
-            "jobs_qual": [
+            "emp_qual": [
                 true,
                 ""
             ],
