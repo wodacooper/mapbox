@@ -1540,7 +1540,7 @@
         "url": "mapbox://wodacooper.ga_25",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "none"
+            "visibility": "visible"
         },
         "visible": true,
         "fill": {
@@ -2524,7 +2524,7 @@
         "url": "mapbox://wodacooper.georgia_bus_stops_v2",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
         "visible": true,
         "circle": {
