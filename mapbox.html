@@ -501,10 +501,11 @@ const bounds_dict = {
         } 
     }
 
-    .mapboxgl-ctrl-bottom-left .mapboxgl-ctrl-group{
+    .mapboxgl-ctrl-top-right .mapboxgl-ctrl-group{
         display: flex;
         flex-direction: row;
     }
+    
     .popup {
         display: none;
         position: absolute;
@@ -514,12 +515,37 @@ const bounds_dict = {
         bottom: 95px;
         left: 20px;
     }
-    .googlemaps_link{
+    .googlemaps_link {
         font-size: 15px;
-        text-align: center;
+        text-align: right;
         cursor: pointer;
         color: white;
         pointer-events: auto;
+        background: #128ed6;
+        margin: 4px 0 0 0;
+        padding: 6px 10px;
+        border-radius: 4px;
+        width: 100px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .googlemaps_link:hover {
+        width: 120px;
+        background: #45b9fc;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow:
+            -8px 0 18px -8px #0a5c8c55, 
+            0 4px 12px rgba(0,0,0,0.18);
+    }
+    
+    .mapboxgl-ctrl-top-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .mapboxgl-ctrl-top-right .mapboxgl-ctrl-group {
+        margin-bottom: 8px;
     }
     .area{
         position: absolute;
@@ -538,8 +564,19 @@ const bounds_dict = {
         padding: 0%;
         font-size: 17px;
     }
-   
-    .show {display: block; max-height: 200px;}
+    .mapboxgl-ctrl-attrib.mapboxgl-compact {
+        width:80px;
+        margin: 0;
+
+    }
+
+    a.mapboxgl-ctrl-logo {
+        height: 23px;
+        width: 80px;
+        margin: 0 0 -3px 2px;
+        }
+
+    .show {display: block; max-height: 250px;}
 
     .show input[type='range'] {position: absolute;}
     .show_filters {display: block;max-height: 800px;}
@@ -547,6 +584,12 @@ const bounds_dict = {
 
     .gray {background-color: #aaaaaa;}
 
+    .legend-box {
+        padding: 0px;
+        right: 0px;
+        bottom: 24px;
+
+    }
 
 </style>
 <div id="map"></div>
@@ -561,7 +604,7 @@ const bounds_dict = {
 <div id="area_box" class="area"></div>
 <script>
     
-    const query_string = window.location.search;
+    const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?mn'
     const query_vals = query_string.split('?')
 
     //const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'oh']
@@ -571,8 +614,11 @@ const bounds_dict = {
         container: 'map',
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/mapbox/satellite-streets-v12',
-        bounds: bounds_dict[query_vals[2]]["bounds"]
-    });
+        bounds: bounds_dict[query_vals[2]]["bounds"],
+        attributionControl: false
+    }).addControl(new mapboxgl.AttributionControl({
+        compact: true
+    }));
     /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
             const query = await fetch(
@@ -617,23 +663,7 @@ const bounds_dict = {
         get_json().then(data => {
             layers = data;
             var sources = []
-
-            //Code for linking Google maps to mapbox
-            var googleMaps_link = document.createElement('div');
-            googleMaps_link.className = 'googlemaps_link';
-            googleMaps_link.textContent = 'Google maps';
-
-            var logo = document.querySelector('.mapboxgl-ctrl').parentNode;
-            logo.appendChild(googleMaps_link);
-        
-            googleMaps_link.addEventListener('click', () => {
-                var center = map.getCenter();
-                var zoom = 2+Math.round(map.getZoom());
-                var googleMapsUrl = `https://www.google.com/maps/@?api=1&map_action=map&center=${center.lat}%2C${center.lng}&zoom=${zoom}&basemap=satellite&layer=transit`;
-                console.log(googleMapsUrl);
-                window.open(googleMapsUrl,'_blank');
-            });
-
+            
             //Dropdown button for the layerlist box in the top left
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn');
@@ -769,11 +799,7 @@ const bounds_dict = {
                     mapboxgl: mapboxgl
                 })
             );
-            map.addControl(
-                new mapboxgl.NavigationControl({
-                    showCompass: false
-                })
-            );
+
             var draw_circlemode ={};
             draw_circlemode.onClick = function(state, e) {
                 const feature = turf.circle([e.lngLat.lng, e.lngLat.lat], popupContent.value, {units:'miles'});
@@ -1045,9 +1071,61 @@ const bounds_dict = {
                 //defaultMode: 'draw_polygon'
             });
             
-            map.addControl(draw, 'bottom-left');
+            map.addControl(draw, 'top-right');
 
-            const controls = document.getElementsByClassName('mapboxgl-ctrl-bottom-left')[0].firstElementChild;
+            map.addControl(
+                new mapboxgl.NavigationControl({
+                    showCompass: false
+                })
+            );
+
+            //Code for linking Google maps to mapbox
+            var googleMaps_link = document.createElement('div');
+            googleMaps_link.className = 'googlemaps_link';
+            googleMaps_link.textContent = 'Google Maps';
+
+            var logo = document.querySelector('.mapboxgl-ctrl-top-right');
+
+        
+            googleMaps_link.addEventListener('click', () => {
+                var center = map.getCenter();
+                var zoom = 2+Math.round(map.getZoom());
+                var googleMapsUrl = `https://www.google.com/maps/@?api=1&map_action=map&center=${center.lat}%2C${center.lng}&zoom=${zoom}&basemap=satellite&layer=transit`;
+                console.log(googleMapsUrl);
+                window.open(googleMapsUrl,'_blank');
+            });
+            
+            var flood_link = document.createElement('div');
+            flood_link.className = 'googlemaps_link';
+            flood_link.textContent = 'Flood Map';
+
+            var logo = document.querySelector('.mapboxgl-ctrl-top-right');
+
+
+            flood_link.addEventListener('click', () => {
+                var center = map.getCenter();
+                var floodMapsUrl = `https://msc.fema.gov/portal/search?AddressQuery=${center.lng}%2C%20${center.lat}`;
+                console.log(floodMapsUrl);
+                window.open(floodMapsUrl,'_blank');
+            });
+
+            var ctrlGroups = document.querySelectorAll('.mapboxgl-ctrl-top-right .mapboxgl-ctrl-group');
+            var navCtrl = ctrlGroups[ctrlGroups.length - 1];
+
+            navCtrl.insertAdjacentElement('afterend', flood_link);
+            flood_link.style.display = 'block';
+            navCtrl.insertAdjacentElement('afterend', googleMaps_link);
+            googleMaps_link.style.display = 'block';
+
+            const mapboxLogo = document.getElementsByClassName('mapboxgl-ctrl-logo')[0];
+            console.log(mapboxLogo);
+            const cloneLogo = mapboxLogo.cloneNode(true);
+            const bottomRight = document.getElementsByClassName('mapboxgl-ctrl-bottom-right')[0].children[0];
+            mapboxLogo.remove();
+            
+            bottomRight.appendChild(cloneLogo);
+
+            const controls = document.getElementsByClassName('mapboxgl-ctrl-top-right')[0].children[1];
             const popup = document.getElementById('popup_box');
             const popupContent = document.getElementById('popup_content');
             const colorPicker = document.getElementById('color-picker');
@@ -1442,13 +1520,6 @@ const bounds_dict = {
                             dropdown_arrow.classList.add('dropdown_arrow','fa-solid','fa-caret-right');
                             dropdown_arrow.addEventListener('click',function(){
                                 this.nextElementSibling.click()
-                                if(dropdown_arrow.classList.contains('fa-caret-right')){
-                                    dropdown_arrow.classList.remove('fa-solid','fa-caret-right','dropdown_arrow') 
-                                    dropdown_arrow.classList.add('fa-solid','fa-caret-down','dropdown_arrow')
-                                }else{
-                                    dropdown_arrow.classList.remove('fa-solid','fa-caret-down','dropdown_arrow') 
-                                    dropdown_arrow.classList.add('fa-solid','fa-caret-right','dropdown_arrow')
-                                }
                              });
                             layer_div.appendChild(dropdown_arrow);
                         }
@@ -1459,6 +1530,15 @@ const bounds_dict = {
                         layer_button.addEventListener("click", function() {
                             this.classList.toggle("active");
                             this.nextElementSibling.classList.toggle('show_filters');
+                            const dropdown_arrow = this.previousElementSibling;
+                            //toggle the dropdown arrow
+                            if(dropdown_arrow.classList.contains('fa-caret-right')){
+                                dropdown_arrow.classList.remove('fa-solid','fa-caret-right','dropdown_arrow') 
+                                dropdown_arrow.classList.add('fa-solid','fa-caret-down','dropdown_arrow')
+                            }else{
+                                dropdown_arrow.classList.remove('fa-solid','fa-caret-down','dropdown_arrow') 
+                                dropdown_arrow.classList.add('fa-solid','fa-caret-right','dropdown_arrow')
+                            }
                         });
                         layer_div.appendChild(layer_button);
 
