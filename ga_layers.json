@@ -2518,6 +2518,59 @@
             ]
         }
     },
+        "bus_stops": {
+        "name": "Georgia Bus Stops",
+        "source_id": "georgia_bus_stops_v2_source",
+        "url": "mapbox://wodacooper.georgia_bus_stops_v2",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1
+        },
+
+        "hover": {
+            "name": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+             "name": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "type": [
+                true,
+                ""
+            ],
+            "lat": [
+                true,
+                ""
+            ],
+            "lng": [
+                true,
+                ""
+            ],
+            "plus_code": [
+                true,
+                ""
+            ],
+            "links": [
+                true,
+                ""
+            ]
+        }
+
+    },
     "revit": {
         "name": "Revit + Schools 2024",
         "source_id": "ga_24",
