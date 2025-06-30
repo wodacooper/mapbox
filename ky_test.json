@@ -5,7 +5,7 @@
         "url": "mapbox://wodacooper.NFHL_FLD_HAZ",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "none"
+            "visibility": "visible"
         },
         "visible": false,
         "line": {
