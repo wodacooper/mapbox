@@ -1,5 +1,5 @@
 {
-    "lightbox_parcels": {
+    "NFHL_FLD_HAZ": {
         "name": "Flood Map",
         "source_id": "NFHL_FLD_HAZ_source",
         "url": "mapbox://wodacooper.NFHL_FLD_HAZ",
@@ -17,7 +17,7 @@
             },
         "legend": [
             [
-                "parcels",
+                "Flood Zone",
                 "#00ff00"
             ]
         ],
