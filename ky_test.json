@@ -10,7 +10,16 @@
         "visible": true,
         "line": {
             "line-width": 1,
-            "line-color": "#0099ff"
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "ZONE_SUBTY"
+                ],
+                "0.2 PCT ANNUAL CHANCE FLOOD HAZARD",
+                "#ff9900",
+                "#0099ff"
+            ]
             },
         "fill": {
             "fill-color": [
@@ -28,7 +37,7 @@
         "legend": [
             [
                 "0.2% Annual Chance",
-                "ff9900"
+                "#ff9900"
             ],
             [
                 "Other",
