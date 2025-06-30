@@ -19,8 +19,8 @@
                     "get",
                     "ZONE_SUBTY"
                 ],
-                "0.2 PCT ANNUAL CHANCE FLOOD HAZARD",
                 "#FF9900",
+                "0.2 PCT ANNUAL CHANCE FLOOD HAZARD",
                 "#0099ff" 
             ],
             "fill-opacity": 0.5
