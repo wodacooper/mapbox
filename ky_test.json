@@ -28,7 +28,9 @@
         "legend": [
             [
                 "0.2 PCT ANNUAL CHANCE FLOOD HAZARD",
-                "FF9900",
+                "FF9900"
+            ],
+            [
                 "Other",
                 "#0099ff"
             ]
