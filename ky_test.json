@@ -13,8 +13,17 @@
             "line-color": "#0099ff"
             },
         "fill": {
-            "fill-opacity": 0.5,
-            "fill-color": "#0099ff"
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "ZONE_SUBTY"
+                ],
+                "0.2 PCT ANNUAL CHANCE FLOOD HAZARD",
+                "#FF9900",
+                "#0099ff" 
+            ],
+            "fill-opacity": 0.5
             },
         "legend": [
             [
@@ -23,7 +32,12 @@
             ]
         ],
         "click":{
-            "FLD_ZONE":[true,"Flood Zone"]
+            "FLD_ZONE":[true,"Flood Zone"],
+            "ZONE_SUBTY":[true,"Flood Zone Subtype"]
+        },
+        "hover": {
+            "FLD_ZONE": [true, "Flood Zone"],
+            "ZONE_SUBTY": [true, "Flood Zone Subtype"]
         }
     }
 }
