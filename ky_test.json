@@ -1,0 +1,28 @@
+{
+    "lightbox_parcels": {
+        "name": "Flood Map",
+        "source_id": "NFHL_FLD_HAZ_source",
+        "url": "mapbox://wodacooper.NFHL_FLD_HAZ",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#00ff00"
+            },
+        "fill": {
+            "fill-opacity": 0
+            },
+        "legend": [
+            [
+                "parcels",
+                "#00ff00"
+            ]
+        ],
+        "click":{
+            "FLD_ZONE":[true,"Flood Zone"]
+        }
+    }
+}
