@@ -10,15 +10,16 @@
         "visible": false,
         "line": {
             "line-width": 1,
-            "line-color": "#00ff00"
+            "line-color": "#ff0000"
             },
         "fill": {
-            "fill-opacity": 0
+            "fill-opacity": 0.5,
+            "fill-color": "#ff0000"
             },
         "legend": [
             [
                 "Flood Zone",
-                "#00ff00"
+                "#ff0000"
             ]
         ],
         "click":{
