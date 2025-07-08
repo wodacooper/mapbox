@@ -1337,6 +1337,10 @@
             ]
         },
         "cat_filter_vals": {
+            "QCT": [
+                "QCT",
+                ""
+            ],
             "Region": [
                 "Southwest",
                 "Southeast",
