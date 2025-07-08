@@ -1314,15 +1314,19 @@
                 true,
                 ""
             ],
-            "County": [
-                true,
-                ""
-            ],
-            "city": [
-                true,
-                "City"
-            ],
-            "general_score": [
+        "County": [
+            true,
+            ""
+        ],
+        "QCT": [
+            true,
+            ""
+        ],
+        "city": [
+            true,
+            "City"
+        ],
+        "general_score": [
                 true,
                 ""
             ]
@@ -1333,6 +1337,10 @@
                 ""
             ],
             "County": [
+                true,
+                ""
+            ],
+            "QCT": [
                 true,
                 ""
             ],
@@ -1369,10 +1377,6 @@
                 ""
             ],
             "GEOID": [
-                true,
-                ""
-            ],
-            "QCT":[
                 true,
                 ""
             ]
