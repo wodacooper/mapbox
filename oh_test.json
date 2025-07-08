@@ -4813,7 +4813,7 @@
         "url": "mapbox://wodacooper.oh_26",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
         "visible": true,
         "fill": {
