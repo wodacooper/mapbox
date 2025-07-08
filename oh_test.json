@@ -2440,7 +2440,7 @@
                 "fill-opacity": [
                     "interpolate",
                     ["linear"],
-                    ["get", "points"],
+                    ["get", "general_score"],
                     0, 0,
                     10, 0.2,
                     20, 0.4,
