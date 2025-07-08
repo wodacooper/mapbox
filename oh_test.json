@@ -2424,7 +2424,7 @@
         }
     },
     "oh_26_general_opacity": {
-        "name": "2026 General buckets",
+        "name": "2026 General opacity",
         "source_id": "oh_26_070725_source",
         "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
@@ -2434,25 +2434,22 @@
         "visible": true,
         "fill": {
             "fill-color": [
-                "step",
-                [
-                    "get",
-                    "general_score"
-                ],
-                "#ffffff",
-                10,
-                "#ff0000",
-                20,
-                "#fe8103",
-                30,
-                "#ffff00",
-                40,
-                "#ff00ff",
-                50,
-                "#00ffff"
+                "match",
+                "000000"
             ],
-            "fill-opacity": 0.6
-        },
+                "fill-opacity": [
+                    "interpolate",
+                    ["linear"],
+                    ["get", "points"],
+                    0, 0,
+                    10, 0.2,
+                    20, 0.4,
+                    30, 0.6,
+                    40, 0.8,
+                    50, 1
+                ]
+            },
+
         "cat_filters": {
             "QCT":"",
             "Region": "",
