@@ -1,7 +1,7 @@
 {
     "oh_26_senior": {
         "name": "2026 Senior",
-        "source_id": "oh_26_source",
+        "source_id": "oh_26_070725_source",
         "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
         "layout": {
@@ -1204,7 +1204,7 @@
     },
     "oh_26_general": {
         "name": "2026 General",
-        "source_id": "oh_26_source",
+        "source_id": "oh_26_070725_source",
         "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
         "layout": {
@@ -1358,6 +1358,10 @@
                 ""
             ],
             "GEOID": [
+                true,
+                ""
+            ],
+            "QCT":[
                 true,
                 ""
             ]
@@ -2561,6 +2565,10 @@
                 ""
             ],
             "GEOID": [
+                true,
+                ""
+            ],
+            "QCT": [
                 true,
                 ""
             ]
