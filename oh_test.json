@@ -1203,7 +1203,7 @@
         }
     },
     "oh_26_general_buckets": {
-        "name": "2026 General buckets",
+        "name": "2026 General Buckets",
         "source_id": "oh_26_070725_source",
         "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
@@ -2424,7 +2424,7 @@
         }
     },
     "oh_26_general_opacity": {
-        "name": "2026 General opacity",
+        "name": "2026 General Opacity",
         "source_id": "oh_26_070725_source",
         "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
@@ -2434,8 +2434,7 @@
         "visible": true,
         "fill": {
             "fill-color": [
-                "match",
-                "000000"
+                "#0000000"
             ],
                 "fill-opacity": [
                     "interpolate",
