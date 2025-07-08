@@ -2433,10 +2433,8 @@
         },
         "visible": true,
         "fill": {
-            "fill-color": [
-                "#0000000"
-            ],
-                "fill-opacity": [
+            "fill-color": "#000000",
+            "fill-opacity": [
                     "interpolate",
                     ["linear"],
                     ["get", "general_score"],
