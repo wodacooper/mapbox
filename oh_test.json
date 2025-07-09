@@ -1,6 +1,6 @@
 {
-    "oh_26_senior": {
-        "name": "2026 Senior",
+    "oh_26_senior_draft1": {
+        "name": "2026 Senior Draft 1",
         "source_id": "oh_26_070725_source",
         "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
@@ -1224,8 +1224,8 @@
             ]
         }
     },
-    "oh_26_general_buckets": {
-        "name": "2026 General Buckets",
+    "oh_26_general_draft1": {
+        "name": "2026 General Draft 1",
         "source_id": "oh_26_070725_source",
         "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
