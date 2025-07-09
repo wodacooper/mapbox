@@ -40,6 +40,7 @@
             "fill-opacity": 0.6
         },
         "cat_filters": {
+            "QCT": "",
             "Region": "",
             "County": "",
             "NAMELSAD": "City",
@@ -1404,8 +1405,7 @@
         },
         "cat_filter_vals": {
             "QCT": [
-                "QCT",
-                ""
+                "QCT"
             ],
             "Region": [
                 "Southwest",
