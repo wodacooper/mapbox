@@ -1404,7 +1404,8 @@
         },
         "cat_filter_vals": {
             "QCT": [
-                "QCT"
+                "QCT",
+                ""
             ],
             "Region": [
                 "Southwest",
