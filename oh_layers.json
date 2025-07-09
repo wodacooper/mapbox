@@ -1286,47 +1286,48 @@
             ]
         }
     },
-    "oh_26_senior": {
-        "name": "2026 Senior Draft",
-        "source_id": "oh_26_source",
-        "url": "mapbox://wodacooper.oh_26",
+    "oh_26_senior_draft1": {
+        "name": "2026 Senior Draft 1",
+        "source_id": "oh_26_070725_source",
+        "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "none"
+            "visibility": "visible"
         },
-        "visible": false,
+        "visible": true,
         "fill": {
             "fill-color": [
                 "step",
                 [
                     "get",
-                    "senior_score"
+                    "general_score"
                 ],
                 "#ffffff",
-                6,
-                "#9e9e9e",
-                8,
-                "#70534e",
                 10,
-                "#346b36",
-                12,
-                "#0000ff",
-                14,
-                "#ff0000",
-                16,
-                "#fe8103",
-                18,
-                "#ffff00",
+                "#70534e",
                 20,
+                "#346b36",
+                30,
+                "#0000ff",
+                33,
+                "#9207fc",
+                36,
+                "#ff0000",
+                39,
+                "#fe8103",
+                42,
+                "#ffff00",
+                45,
                 "#ff00ff",
-                22,
+                48,
                 "#00ff00",
-                24,
+                51,
                 "#00ffff"
             ],
             "fill-opacity": 0.6
         },
         "cat_filters": {
+            "QCT": "",
             "Region": "",
             "County": "",
             "NAMELSAD": "City",
@@ -1338,47 +1339,57 @@
         },
         "legend": [
             [
-                "24 - 28",
+                "51+",
                 "#00ffff"
             ],
+
             [
-                "22",
-                "#00ff00"
+                "48",
+                 "#00ff00"
             ],
+
+            [
+                "45",
+                 "#ff00ff"
+            ],
+
+            [
+                "42",
+                 "#ffff00"
+            ],
+
+            [
+                "39",
+                 "#fe8103"
+            ],
+
+            [
+                "36",
+                 "#ff0000"
+            ],
+
+            [
+                "33",
+                 "#9207fc"
+            ],
+
+            [
+                "30",
+                 "#0000ff"
+            ],
+
             [
                 "20",
-                "#ff00ff"
+                 "#346b36"
             ],
-            [
-                "18",
-                "#ffff00"
-            ],
-            [
-                "16",
-                "#fe8103"
-            ],
-            [
-                "14",
-                "#ff0000"
-            ],
-            [
-                "12",
-                "#0000ff"
-            ],
+
             [
                 "10",
-                "#346b36"
-            ],
-            [
-                "8",
                 "#70534e"
             ],
+
             [
-                "6",
-                "#9e9e9e"
-            ],
-            [
-                "<6",
+                "<10",
                 "#ffffff"
             ]
         ],
@@ -1388,6 +1399,10 @@
                 ""
             ],
             "County": [
+                true,
+                ""
+            ],
+            "QCT": [
                 true,
                 ""
             ],
@@ -1408,6 +1423,10 @@
             "County": [
                 true,
                 ""
+            ],
+            "QCT": [
+            true,
+            ""
             ],
             "city": [
                 true,
@@ -1447,6 +1466,9 @@
             ]
         },
         "cat_filter_vals": {
+            "QCT": [
+                "QCT"
+            ],
             "Region": [
                 "Southwest",
                 "Southeast",
@@ -2481,7 +2503,7 @@
         "num_filter_vals": {
             "senior_score": [
                 0.0,
-                28.0
+                67.0
             ],
             "senior_opp_indexes": [
                 0.0,
@@ -2489,15 +2511,15 @@
             ]
         }
     },
-    "oh_26_general": {
-        "name": "2026 General Draft",
-        "source_id": "oh_26_source",
-        "url": "mapbox://wodacooper.oh_26",
+    "oh_26_general_draft1": {
+        "name": "2026 General Draft 1",
+        "source_id": "oh_26_070725_source",
+        "url": "mapbox://wodacooper.oh_26_070725",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -2506,30 +2528,31 @@
                     "general_score"
                 ],
                 "#ffffff",
-                6,
-                "#9e9e9e",
-                8,
-                "#70534e",
                 10,
-                "#346b36",
-                12,
-                "#0000ff",
-                14,
-                "#ff0000",
-                16,
-                "#fe8103",
-                18,
-                "#ffff00",
+                "#70534e",
                 20,
+                "#346b36",
+                29,
+                "#0000ff",
+                32,
+                "#9207fc",
+                35,
+                "#ff0000",
+                38,
+                "#fe8103",
+                41,
+                "#ffff00",
+                44,
                 "#ff00ff",
-                22,
+                47,
                 "#00ff00",
-                24,
+                50,
                 "#00ffff"
             ],
             "fill-opacity": 0.6
         },
         "cat_filters": {
+            "QCT":"",
             "Region": "",
             "County": "",
             "NAMELSAD": "City",
@@ -2541,47 +2564,57 @@
         },
         "legend": [
             [
-                "24 - 28",
+                "50+",
                 "#00ffff"
             ],
+
             [
-                "22",
-                "#00ff00"
+                "47",
+                 "#00ff00"
             ],
+
+            [
+                "44",
+                 "#ff00ff"
+            ],
+
+            [
+                "41",
+                 "#ffff00"
+            ],
+
+            [
+                "38",
+                 "#fe8103"
+            ],
+
+            [
+                "35",
+                 "#ff0000"
+            ],
+
+            [
+                "32",
+                 "#9207fc"
+            ],
+
+            [
+                "29",
+                 "#0000ff"
+            ],
+
             [
                 "20",
-                "#ff00ff"
+                 "#346b36"
             ],
-            [
-                "18",
-                "#ffff00"
-            ],
-            [
-                "16",
-                "#fe8103"
-            ],
-            [
-                "14",
-                "#ff0000"
-            ],
-            [
-                "12",
-                "#0000ff"
-            ],
+
             [
                 "10",
-                "#346b36"
-            ],
-            [
-                "8",
                 "#70534e"
             ],
+
             [
-                "6",
-                "#9e9e9e"
-            ],
-            [
-                "<6",
+                "<10",
                 "#ffffff"
             ]
         ],
@@ -2590,15 +2623,19 @@
                 true,
                 ""
             ],
-            "County": [
-                true,
-                ""
-            ],
-            "city": [
-                true,
-                "City"
-            ],
-            "general_score": [
+        "County": [
+            true,
+            ""
+        ],
+        "QCT": [
+            true,
+            ""
+        ],
+        "city": [
+            true,
+            "City"
+        ],
+        "general_score": [
                 true,
                 ""
             ]
@@ -2609,6 +2646,10 @@
                 ""
             ],
             "County": [
+                true,
+                ""
+            ],
+            "QCT": [
                 true,
                 ""
             ],
@@ -2650,6 +2691,9 @@
             ]
         },
         "cat_filter_vals": {
+            "QCT": [
+                "QCT"
+            ],
             "Region": [
                 "Southwest",
                 "Southeast",
@@ -3684,7 +3728,7 @@
         "num_filter_vals": {
             "general_score": [
                 0.0,
-                28.0
+                61.33
             ],
             "general_opp_indexes": [
                 0.0,
