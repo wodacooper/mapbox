@@ -5,9 +5,9 @@
         "url": "mapbox://wodacooper.IL_Projects",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "none"
+            "visibility": "Visible"
         },
-        "visible": false,
+        "visible": true,
         "circle": {
             "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
@@ -15,16 +15,26 @@
         },
 
         "hover": {
-            "name": [
+            "Development": [
+                true,
+                ""
+            ],
+
+            "Address": [
                 true,
                 ""
             ]
         },
         "click": {
-             "name": [
+            "Development": [
+                true,
+                ""
+            ],
+            "Address": [
                 true,
                 ""
             ]
+            
         }
     }
 }
