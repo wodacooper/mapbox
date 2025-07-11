@@ -5,7 +5,7 @@
         "url": "mapbox://wodacooper.IL_Projects",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "Visible"
+            "visibility": "visible"
         },
         "visible": true,
         "circle": {
