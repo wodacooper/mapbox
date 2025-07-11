@@ -1,0 +1,30 @@
+{
+    "Prev Projects": {
+        "name": "Previous Projects",
+        "source_id": "georgia_IL_Projects_source",
+        "url": "mapbox://wodacooper.IL_Projects",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1
+        },
+
+        "hover": {
+            "name": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+             "name": [
+                true,
+                ""
+            ]
+        }
+    }
+}
