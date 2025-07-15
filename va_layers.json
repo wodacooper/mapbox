@@ -271,17 +271,17 @@
             ]
         ],
         "hover": {
-            "Total_Points": [
-                true,
-                "Total Points"
-            ],
-            "pool": [
+            "Pool": [
                 true,
                 "Pool"
             ],
-            "County": [
+            "County Named adjusted": [
                 true,
-                ""
+                "County"
+            ],
+            "Total_Points": [
+                true,
+                "Total Points"
             ],
             "Rent Burden Points": [
                 true,
@@ -297,17 +297,17 @@
             ]
         },
         "click": {
-            "Total_Points": [
-                true,
-                "Total Points"
-            ],
-            "pool": [
+            "Pool": [
                 true,
                 "Pool"
             ],
-            "County": [
+            "County Named adjusted": [
                 true,
-                ""
+                "County"
+            ],
+            "Total_Points": [
+                true,
+                "Total Points"
             ],
             "Rent Burden Points": [
                 true,
