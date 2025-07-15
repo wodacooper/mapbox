@@ -602,7 +602,7 @@ const bounds_dict = {
     var hover_layers = [];
     var click_layers = [];
     var layers;
-    
+    map.addControl(new mapboxgl.FullscreenControl());
 
     map.on('load', () => {
         get_json().then(data => {
