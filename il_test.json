@@ -80,8 +80,8 @@
         },
         "cat_filters_vals": {
             "LIHTC": [
-                "0.09",
-                ""
+                "9%",
+                "4%"
             ]
         },
        "num_filters": {
