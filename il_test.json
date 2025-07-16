@@ -17,8 +17,7 @@
             ["get", "Population"],
             "NON-ELDERLY", "#ff0000",
             "ELDERLY", "#00ff00",
-            "ELDERLY/NON-ELDERLY", "#0000ff",
-            "#ffffff"
+            "ELDERLY/NON-ELDERLY", "#0000ff"
             ]
         },
 
