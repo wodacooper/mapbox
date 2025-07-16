@@ -33,6 +33,14 @@
             "Address": [
                 true,
                 ""
+            ],
+            "Board Year": [
+                true,
+                "Board Year"
+            ],
+            "Closing Year": [
+                true,
+                "Closing Year"
             ]
         },
        "num_filters": {
