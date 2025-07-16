@@ -75,13 +75,20 @@
                 ""
             ]
         },
+        "cat_filters": {
+            "LIHTC": ""
+        },
+        "cat_filters_vals": {
+            "LIHTC": [
+                ".09",
+                ".04"
+            ]
+        },
        "num_filters": {
             "Board Year": "",
             "Closing Year": ""
         },
-        "cat_filter_vals": {
-            "LIHTC": ""
-        },
+
         "num_filter_vals": {
             "Board Year": [
                 1976,
