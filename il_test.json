@@ -78,7 +78,7 @@
         "cat_filters": {
             "LIHTC": ""
         },
-        "cat_filters_vals": {
+        "cat_filter_vals": {
             "LIHTC": [
                 "9%",
                 "4%"
