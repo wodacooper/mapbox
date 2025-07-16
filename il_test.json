@@ -1,8 +1,8 @@
 {
     "Prev Projects": {
         "name": "Previous Projects",
-        "source_id": "georgia_IL_Projects_v5_source",
-        "url": "mapbox://wodacooper.IL_Projects_v5",
+        "source_id": "georgia_IL_Projects_v6_source",
+        "url": "mapbox://wodacooper.IL_Projects_v6",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
