@@ -34,13 +34,17 @@
                 true,
                 ""
             ],
-            "Board Year": [
+            "LIHTC": [
                 true,
-                "Board Year"
+                ""
             ],
-            "Closing Year": [
+            "Board Date": [
                 true,
-                "Closing Year"
+                ""
+            ],
+            "Closing Date": [
+                true,
+                ""
             ]
         },
        "num_filters": {
