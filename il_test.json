@@ -11,7 +11,15 @@
         "circle": {
             "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 1
+            "circle-stroke-width": 1,
+            "circle-color": [
+            "match",
+            ["get", "Population"],
+            "NON-ELDERLY", "#ff0000",
+            "ELDERLY", "#00ff00",
+            "ELDERLY/NON-ELDERLY", "#0000ff",
+            "#000000"
+            ]
         },
 
         "hover": {
