@@ -34,7 +34,20 @@
                 true,
                 ""
             ]
-            
+        },
+       "num_filters": {
+            "Board Year": "",
+            "Closing Year": ""
+        },
+        "num_filter_vals": {
+            "Board Year": [
+                1976,
+                2025
+            ],
+        "Closing Year": [
+                1976,
+                2025
+            ]
         }
     }
 }
