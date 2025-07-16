@@ -15,9 +15,9 @@
             "circle-color": [
             "match",
             ["get", "Population"],
-            "NON-ELDERLY", "#1f77b4",
-            "ELDERLY", "#ff7f0e",
-            "ELDERLY/NON-ELDERLY", "#2ca02c"
+            "NON-ELDERLY", "#ff0000",
+            "ELDERLY", "#00ff00",
+            "ELDERLY/NON-ELDERLY", "#0000ff"
             ]
         },
 
