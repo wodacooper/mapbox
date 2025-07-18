@@ -1288,8 +1288,8 @@
     },
     "oh_26_senior_draft1": {
         "name": "2026 Senior Draft 1",
-        "source_id": "oh_26_070725_source",
-        "url": "mapbox://wodacooper.oh_26_070725",
+        "source_id": "oh_26_071825_source",
+        "url": "mapbox://wodacooper.oh_26_071825",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -1303,13 +1303,13 @@
                     "general_score"
                 ],
                 "#ffffff",
-                10,
+                27,
                 "#70534e",
-                20,
-                "#346b36",
                 30,
+                "#346b36",
+                32,
                 "#0000ff",
-                33,
+                34,
                 "#9207fc",
                 36,
                 "#ff0000",
@@ -1369,27 +1369,27 @@
             ],
 
             [
-                "33",
+                "34",
                  "#9207fc"
             ],
 
             [
-                "30",
+                "32",
                  "#0000ff"
             ],
 
             [
-                "20",
+                "30",
                  "#346b36"
             ],
 
             [
-                "10",
+                "27",
                 "#70534e"
             ],
 
             [
-                "<10",
+                "<27",
                 "#ffffff"
             ]
         ],
@@ -2503,7 +2503,7 @@
         "num_filter_vals": {
             "senior_score": [
                 0.0,
-                67.0
+                63.57
             ],
             "senior_opp_indexes": [
                 0.0,
@@ -2513,8 +2513,8 @@
     },
     "oh_26_general_draft1": {
         "name": "2026 General Draft 1",
-        "source_id": "oh_26_070725_source",
-        "url": "mapbox://wodacooper.oh_26_070725",
+        "source_id": "oh_26_071825_source",
+        "url": "mapbox://wodacooper.oh_26_071825",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -2528,23 +2528,23 @@
                     "general_score"
                 ],
                 "#ffffff",
-                10,
-                "#70534e",
                 20,
+                "#70534e",
+                27,
                 "#346b36",
-                29,
+                30,
                 "#0000ff",
-                32,
+                33,
                 "#9207fc",
-                35,
+                36,
                 "#ff0000",
-                38,
+                39,
                 "#fe8103",
-                41,
+                42,
                 "#ffff00",
-                44,
+                45,
                 "#ff00ff",
-                47,
+                48,
                 "#00ff00",
                 50,
                 "#00ffff"
@@ -2569,52 +2569,52 @@
             ],
 
             [
-                "47",
+                "48",
                  "#00ff00"
             ],
 
             [
-                "44",
+                "45",
                  "#ff00ff"
             ],
 
             [
-                "41",
+                "42",
                  "#ffff00"
             ],
 
             [
-                "38",
+                "39",
                  "#fe8103"
             ],
 
             [
-                "35",
+                "36",
                  "#ff0000"
             ],
 
             [
-                "32",
+                "33",
                  "#9207fc"
             ],
 
             [
-                "29",
+                "30",
                  "#0000ff"
             ],
 
             [
-                "20",
+                "27",
                  "#346b36"
             ],
 
             [
-                "10",
+                "20",
                 "#70534e"
             ],
 
             [
-                "<10",
+                "<20",
                 "#ffffff"
             ]
         ],
@@ -3728,7 +3728,7 @@
         "num_filter_vals": {
             "general_score": [
                 0.0,
-                61.33
+                58.33
             ],
             "general_opp_indexes": [
                 0.0,
@@ -3736,7 +3736,6 @@
             ]
         }
     },
-
     "olihtc_score": {
         "name": "2025 OLIHTC Score",
         "source_id": "oh_lihtc_25",
