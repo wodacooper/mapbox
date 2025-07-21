@@ -69,6 +69,142 @@
             "rent_limit_24":[934.5,2320.5]
         }
     },
+     "Prev Projects": {
+        "name": "Previous Projects",
+        "source_id": "georgia_IL_Projects_v6_source",
+        "url": "mapbox://wodacooper.IL_Projects_v6",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+            "match",
+            ["get", "Population"],
+            "NON-ELDERLY", "#ff0000",
+            "ELDERLY", "#00ff00",
+            "ELDERLY/NON-ELDERLY", "#0000ff",
+            "#ffffff"
+            ]
+        },
+        "legend": [
+            [
+                "NON-ELDERLY",
+                "#ff0000"
+            ],
+            [
+                "ELDERLY",
+                "#00ff00"
+            ],
+            [
+                "ELDERLY/NON-ELDERLY",
+                "#0000ff"
+            ]
+        ],
+
+        "hover": {
+            "Development": [
+                true,
+                ""
+            ],
+            "Population": [
+                true,
+                ""
+            ],
+            "Construction": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ]
+            "Project Status": [
+                true,
+                ""
+            ],
+            "Board Year": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Development": [
+                true,
+                ""
+            ],
+            "Population": [
+                true,
+                ""
+
+            ],
+            "Construction": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "Project Status": [
+                true,
+                ""
+            ],
+            "Board Year": [
+                true,
+                ""
+            ],
+            "Current Board Date": [
+                true,
+                ""
+            ],
+            "Closing Date": [
+                true,
+                ""
+            ],
+            "Units": [
+                true,
+                ""
+            ],
+            "LIHTC": [
+                true,
+                ""
+            ]
+        },
+        "cat_filters": {
+            "LIHTC": "",
+            "Population": ""
+        },
+        "cat_filter_vals": {
+            "LIHTC": [
+                "9%",
+                "4%"
+            ],
+            "Population":  [
+                "NON-ELDERLY",
+                "ELDERLY",
+                "ELDERLY/NON-ELDERLY"
+            ]
+        },
+       "num_filters": {
+            "Board Year": ""
+        },
+
+        "num_filter_vals": {
+            "Board Year": [
+                1976,
+                2025
+            ]
+        }
+    },
     "gen_score_25": {
         "name": "2025 General Score",
         "source_id": "score_source",
