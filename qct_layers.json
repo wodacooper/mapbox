@@ -1,8 +1,8 @@
 {
     "qct_25_predictions": {
-        "name": "2025 QCT predictions",
-        "source_id": "qct_25_predictions_source",
-        "url": "mapbox://wodacooper.qct_25_predictions",
+        "name": "2026 QCT predictions",
+        "source_id": "qct_26_predictions_source",
+        "url": "mapbox://wodacooper.qct_26_predictions",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
