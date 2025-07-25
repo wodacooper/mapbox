@@ -7400,5 +7400,47 @@
                 22.0
             ]
         }
+    },"revit_area_25": {
+        "name": "2025 Revit Impact Areas",
+        "source_id": "score_source",
+        "url": "mapbox://wodacooper.il_25",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "ria_des"
+                ],
+                "#9e9e9e",
+                "High",
+                "#70534e",
+                "Moderate",
+                "#346b36",
+                "Not",
+                "#0000ff"
+            ]
+        },
+        
+        "legend": [
+            [
+                "High",
+                "#9e9e9e"
+            ],
+            [
+                "Moderate",
+                "#70534e"
+            ],
+            [
+                "Not",
+                "#346b36"
+            ]
+            
+        ]
+       
     }
 }
