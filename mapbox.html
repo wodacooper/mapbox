@@ -1108,7 +1108,7 @@ const bounds_dict = {
 
             flood_link.addEventListener('click', () => {
                 var center = map.getCenter();
-                var floodMapsUrl = `https://msc.fema.gov/portal/search?AddressQuery=${center.lng}%2C%20${center.lat}`;
+                var floodMapsUrl = `https://nepassisttool.epa.gov/nepassist/nepamap.aspx?wherestr=${center.lat}%2C%20${center.lng}`;
                 console.log(floodMapsUrl);
                 window.open(floodMapsUrl,'_blank');
             });
