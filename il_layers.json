@@ -7406,9 +7406,9 @@
         "url": "mapbox://wodacooper.il_25",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "none"
+            "visibility": "visible"
         },
-        "visible": false,
+        "visible": true,
         "fill": {
             "fill-color": [
                 "match",
