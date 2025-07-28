@@ -7401,8 +7401,8 @@
             ]
         }
     },"revit_area_25": {
-        "name": "2025 Revit Impact xAreas",
-        "source_id": "il_25_source",
+        "name": "2025 Revit Impact Areas",
+        "source_id": "score_source",
         "url": "mapbox://wodacooper.il_25",
         "source_layer": "hello_world",
         "layout": {
@@ -7427,7 +7427,7 @@
             ["get", "ria_des"],
             "High", 0.5,
             "Moderate", 0.5,
-            0.2
+            0.3
             ]
         },
         
