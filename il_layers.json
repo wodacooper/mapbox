@@ -7420,6 +7420,8 @@
                 "High",
                 "#70534e",
                 "Moderate",
+                "#346b36",
+                "Not",
                 "#0000ff"
             ],
             "fill-opacity": [
@@ -7436,14 +7438,7 @@
         "cat_filters": {
             "ria_des": "Designation"
         },
-
-        "cat_filter_vals": {
-            "ria_des": [
-                "High",
-                "Moderate",
-                "Not"
-                ],     
-
+        
         "legend": [
             [
                 "High",
@@ -7458,8 +7453,8 @@
                 "#346b36"
             ]
             
-        ]
-        },
+        ],
+
         "hover": {
             "ria_des": [
                 true,
