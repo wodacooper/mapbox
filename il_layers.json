@@ -7444,7 +7444,7 @@
         ],
 
         "click":{
-            "ria_des":[true,""], 
+            "ria_des":[true,"RIA Designation"], 
             "poverty_scores":[true,""],
             "job_scores":[true,""],
             "income_scores":[true,""],
