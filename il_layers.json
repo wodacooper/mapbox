@@ -7401,8 +7401,8 @@
             ]
         }
     },"revit_area_25": {
-        "name": "202 Revit Impact Areas",
-        "source_id": "revit_source",
+        "name": "2025 Revit Impact Areas",
+        "source_id": "score_source",
         "url": "mapbox://wodacooper.il_25",
         "source_layer": "hello_world",
         "layout": {
