@@ -7401,7 +7401,7 @@
             ]
         }
     },"revit_area_25": {
-        "name": "2025 Revit Impact Areas",
+        "name": "2025 Revit Impact Area",
         "source_id": "score_source",
         "url": "mapbox://wodacooper.il_25",
         "source_layer": "hello_world",
@@ -7461,24 +7461,6 @@
             "vacancy_scores":""
         },
 
-        "num_filter_vals": {
-            "poverty_scores": [
-                0.0,
-                2.0
-            ],
-             "job_scores": [
-                0.0,
-                1.0
-            ],
-            "income_scores": [
-                0.0,
-                1.0
-            ],
-            "vacancy_scores": [
-                0.0,
-                1.0
-            ]
-        },
         "cat_filter_vals": {
             "ria_des": [
                 "High",
