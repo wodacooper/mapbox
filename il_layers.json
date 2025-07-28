@@ -7417,9 +7417,9 @@
                     "ria_des"
                 ],
                 "High",
-                "#346b36",
+                "#ff2b2b",
                 "Moderate",
-                "#70534e",
+                "#ff802b",
                 "#0000ff"
             ],
             "fill-opacity": [
@@ -7427,18 +7427,18 @@
             ["get", "ria_des"],
             "High", 0.5,
             "Moderate", 0.5,
-            0.2
+            0.1
             ]
         },
         
         "legend": [
             [
                 "High",
-                "#346b36"
+                "#ff2b2b"
             ],
             [
                 "Moderate",
-                "#70534e"
+                "#ff802b"
             ]
             
         ],
