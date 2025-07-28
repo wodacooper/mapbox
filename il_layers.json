@@ -7442,7 +7442,7 @@
                 "High",
                 "Moderate",
                 "Not"
-                ],
+                ],     
 
         "legend": [
             [
@@ -7458,8 +7458,8 @@
                 "#346b36"
             ]
             
-        ],
-
+        ]
+        },
         "hover": {
             "ria_des": [
                 true,
