@@ -3504,8 +3504,8 @@
     },
     "bus_stops": {
         "name": "Georgia Bus Stops",
-        "source_id": "georgia_bus_stops_v2_source",
-        "url": "mapbox://wodacooper.georgia_bus_stops_v2",
+        "source_id": "all_georgia_bus_stops_source",
+        "url": "mapbox://wodacooper.all_georgia_bus_stops",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
