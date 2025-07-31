@@ -41,7 +41,8 @@
         ],
         "click":{
             "GEOID":[true,"Census Tract"], 
-            "prediction":[true,"Prediction"]
+            "QCT":[true,"QCT Prediction"]
+            "DDA":[true,"DDA Prediction"]
         }
     }
 }
