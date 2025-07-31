@@ -9,7 +9,7 @@
         },
         "visible": true,
         "filter": [
-        "in",
+        "match",
         ["get", "QCT"],
         ["literal", ["Remains a QCT", "No Longer QCT", "New QCT"]]
         ],
@@ -59,7 +59,7 @@
         },
         "visible": true,
         "filter": [
-        "in",
+        "match",
         ["get", "DDA"],
         ["literal", ["Remains a DDA", "No Longer DDA", "New DDA"]]
         ],
