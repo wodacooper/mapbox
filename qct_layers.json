@@ -69,7 +69,7 @@
                 ],
                 "Remains a DDA",
                 "#8b4000",
-                "No Longer DDA",
+                "No Longer a DDA",
                 "#f88379",
                 "New DDA",
                 "#ffac1c",
@@ -79,7 +79,7 @@
                 "match",
                 ["get", "DDA"],
                 "Remains a DDA", 0.6,
-                "No Longer DDA", 0.6,
+                "No Longer a DDA", 0.6,
                 "New DDA", 0.6,
                 0 
             ]
