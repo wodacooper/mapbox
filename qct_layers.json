@@ -13,7 +13,7 @@
                 "match",
                 [
                     "get",
-                    "prediction"
+                    "QCT"
                 ],
                 "Remains a QCT",
                 "#3c6bc9",
