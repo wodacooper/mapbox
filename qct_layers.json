@@ -99,7 +99,7 @@
               ]
         ],
         "click":{
-            "GEOID":[true,"Census Tract"], 
+            "cbsasub":[true,"CBSA"], 
             "DDA":[true,"DDA Prediction"]
         }
     }
