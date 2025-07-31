@@ -8,13 +8,6 @@
             "visibility": "visible"
         },
         "visible": true,
-        "filter": [
-        "match",
-        ["get", "QCT"],
-        ["literal", ["Remains a QCT", "No Longer QCT", "New QCT"]],
-            true,
-            false
-        ],
         "fill": {
             "fill-color": [
                 "match",
@@ -28,9 +21,16 @@
                 "#d92e41",
                 "New QCT",
                 "#2ed950",
-                "#000000"
+                "#ffffff"
             ],
-            "fill-opacity": 0.6
+            "fill-opacity": [
+            "match",
+            ["get", "QCT"],
+            "Remains a QCT", 0.6,
+            "No Longer QCT", 0.6,
+            "New QCT", 0.6,
+            0  
+            ]
         },
         "legend": [
               [
@@ -60,13 +60,6 @@
             "visibility": "visible"
         },
         "visible": true,
-        "filter": [
-        "match",
-        ["get", "DDA"],
-        ["literal", ["Remains a DDA", "No Longer DDA", "New DDA"]],
-            true,
-            false
-        ],
         "fill": {
             "fill-color": [
                 "match",
@@ -80,9 +73,16 @@
                 "#f88379",
                 "New DDA",
                 "#ffac1c",
-                "#000000"
+                "#ffffff"
             ],
-            "fill-opacity": 0.6
+            "fill-opacity": [
+                "match",
+                ["get", "DDA"],
+                "Remains a DDA", 0.6,
+                "No Longer DDA", 0.6,
+                "New DDA", 0.6,
+                0 
+            ]
         },
         "legend": [
               [
