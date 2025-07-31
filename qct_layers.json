@@ -42,6 +42,50 @@
         "click":{
             "GEOID":[true,"Census Tract"], 
             "QCT":[true,"QCT Prediction"]
+        }
+    },
+    "dda_26_predictions": {
+        "name": "2026 DDA predictions",
+        "source_id": "qct_26_predictions_source",
+        "url": "mapbox://wodacooper.qct_26_predictions",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "DDA"
+                ],
+                "Remains a DDA",
+                "#8b4000",
+                "No Longer DDA",
+                "#f88379",
+                "New DDA",
+                "#ffac1c",
+                "#f4fafc"
+            ],
+            "fill-opacity": 0.6
+        },
+        "legend": [
+              [
+                  "Remains a DDA",
+                  "#8b4000"
+              ],
+              [
+                  "New DDA",
+                  "#ffac1c"
+              ],
+              [
+                  "No Longer a DDA",
+                  "#f88379"
+              ]
+        ],
+        "click":{
+            "GEOID":[true,"Census Tract"], 
             "DDA":[true,"DDA Prediction"]
         }
     }
