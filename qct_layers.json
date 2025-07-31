@@ -11,7 +11,9 @@
         "filter": [
         "match",
         ["get", "QCT"],
-        ["literal", ["Remains a QCT", "No Longer QCT", "New QCT"]]
+        ["literal", ["Remains a QCT", "No Longer QCT", "New QCT"]],
+            true,
+            false
         ],
         "fill": {
             "fill-color": [
@@ -61,7 +63,9 @@
         "filter": [
         "match",
         ["get", "DDA"],
-        ["literal", ["Remains a DDA", "No Longer DDA", "New DDA"]]
+        ["literal", ["Remains a DDA", "No Longer DDA", "New DDA"]],
+            true,
+            false
         ],
         "fill": {
             "fill-color": [
