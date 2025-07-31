@@ -8,6 +8,11 @@
             "visibility": "visible"
         },
         "visible": true,
+        "filter": [
+        "in",
+        ["get", "QCT"],
+        ["literal", ["Remains a QCT", "No Longer QCT", "New QCT"]]
+        ],
         "fill": {
             "fill-color": [
                 "match",
@@ -53,6 +58,11 @@
             "visibility": "visible"
         },
         "visible": true,
+        "filter": [
+        "in",
+        ["get", "DDA"],
+        ["literal", ["Remains a DDA", "No Longer DDA", "New DDA"]]
+        ],
         "fill": {
             "fill-color": [
                 "match",
