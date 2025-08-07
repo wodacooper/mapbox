@@ -105,9 +105,9 @@
     },
 
     "dda_26_predictions": {
-        "name": "2026 DDA predictions (Metro)",
+        "name": "2026 DDA predictions (Metr00)",
         "source_id": "metro_dda_26_source",
-        "url": "mapbox://wodacooper.metro_dda_26_source",
+        "url": "mapbox://wodacooper.metro_dda_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
