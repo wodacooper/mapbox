@@ -137,20 +137,6 @@
                 0 
             ]
         },
-        "legend": [
-              [
-                  "Remains a DDA",
-                  "#8b4000"
-              ],
-              [
-                  "New DDA",
-                  "#ffac1c"
-              ],
-              [
-                  "No Longer a DDA",
-                  "#f88379"
-              ]
-        ],
         "click":{
             "zipcode":[true,"ZIP Code"], 
             "Designation":[true,"Designation"]
