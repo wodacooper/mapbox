@@ -51,7 +51,7 @@
             "QCT":[true,"QCT Prediction"]
         }
     },
-    "dda_26_predictions": {
+    "dda_26_nm_predictions": {
         "name": "2026 DDA predictions",
         "source_id": "qct_26_predictions_source",
         "url": "mapbox://wodacooper.qct_26_predictions",
@@ -101,6 +101,59 @@
         "click":{
             "cbsasub":[true,"CBSA"], 
             "DDA":[true,"DDA Prediction"]
+        }
+    },
+
+    "dda_26_predictions": {
+        "name": "2026 DDA predictions",
+        "source_id": "metro_dda_26_source",
+        "url": "mapbox://wodacooper.metro_dda_26_source",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "Designation"
+                ],
+                "Remains a DDA",
+                "#8b4000",
+                "No Longer DDA",
+                "#f88379",
+                "New DDA",
+                "#ffac1c",
+                "#ffffff"
+            ],
+            "fill-opacity": [
+                "match",
+                ["get", "DDA"],
+                "Remains a DDA", 0.6,
+                "No Longer DDA", 0.6,
+                "New DDA", 0.6,
+                0 
+            ]
+        },
+        "legend": [
+              [
+                  "Remains a DDA",
+                  "#8b4000"
+              ],
+              [
+                  "New DDA",
+                  "#ffac1c"
+              ],
+              [
+                  "No Longer a DDA",
+                  "#f88379"
+              ]
+        ],
+        "click":{
+            "zipcode":[true,"ZIP Code"], 
+            "Designation":[true,"Designation"]
         }
     }
 }
