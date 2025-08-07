@@ -105,7 +105,7 @@
     },
 
     "dda_26_predictions": {
-        "name": "2026 DDA predictions (Metr00)",
+        "name": "2026 DDA predictions (Metro)",
         "source_id": "metro_dda_26_source",
         "url": "mapbox://wodacooper.metro_dda_26",
         "source_layer": "hello_world",
@@ -134,7 +134,7 @@
                 "Remains a DDA", 0.6,
                 "No Longer DDA", 0.6,
                 "New DDA", 0.6,
-                0.3 
+                0
             ]
         },
         
