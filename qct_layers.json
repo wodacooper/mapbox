@@ -106,7 +106,7 @@
     },
 
     "dda_26_predictions": {
-        "name": "2026 DDA predictions (Metr0)",
+        "name": "2026 DDA predictions (MetrOO)",
         "source_id": "metro_dda_26_source",
         "url": "mapbox://wodacooper.metro_dda_26",
         "source_layer": "hello_world",
@@ -120,7 +120,7 @@
                 "match",
                 [
                     "get",
-                    "Designation"
+                    "Designation "
                 ],
                 "Remains a DDA",
                 "#8b4000",
@@ -132,7 +132,7 @@
             ],
             "fill-opacity": [
                 "match",
-                ["get", "Designation"],
+                ["get", "Designation "],
                 "Remains a DDA", 0.6,
                 "No Longer DDA", 0.6,
                 "New DDA", 0.6,
@@ -142,7 +142,7 @@
         
         "click":{
             "zipcode":[true,"ZIP Code"], 
-            "Designation":[true,"DDA Prediction"]
+            "Designation ": true
         }
     }
 }
