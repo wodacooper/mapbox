@@ -60,6 +60,7 @@
             "visibility": "visible"
         },
         "visible": true,
+        "legend_group": "dda_2026",
         "fill": {
             "fill-color": [
                 "match",
@@ -105,7 +106,7 @@
     },
 
     "dda_26_predictions": {
-        "name": "2026 DDA predictions (Metro)",
+        "name": "2026 DDA predictions (Metr0)",
         "source_id": "metro_dda_26_source",
         "url": "mapbox://wodacooper.metro_dda_26",
         "source_layer": "hello_world",
@@ -113,6 +114,7 @@
             "visibility": "visible"
         },
         "visible": true,
+        "legend_group": "dda_2026",
         "fill": {
             "fill-color": [
                 "match",
@@ -130,7 +132,7 @@
             ],
             "fill-opacity": [
                 "match",
-                ["get", "DDA"],
+                ["get", "Designation"],
                 "Remains a DDA", 0.6,
                 "No Longer DDA", 0.6,
                 "New DDA", 0.6,
