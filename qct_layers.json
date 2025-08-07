@@ -52,7 +52,7 @@
         }
     },
     "dda_26_nm_predictions": {
-        "name": "2026 DDA predictions",
+        "name": "2026 DDA predictions (Non Metro)",
         "source_id": "qct_26_predictions_source",
         "url": "mapbox://wodacooper.qct_26_predictions",
         "source_layer": "hello_world",
@@ -105,7 +105,7 @@
     },
 
     "dda_26_predictions": {
-        "name": "2026 DDA predictions",
+        "name": "2026 DDA predictions (Metro)",
         "source_id": "metro_dda_26_source",
         "url": "mapbox://wodacooper.metro_dda_26_source",
         "source_layer": "hello_world",
@@ -134,9 +134,10 @@
                 "Remains a DDA", 0.6,
                 "No Longer DDA", 0.6,
                 "New DDA", 0.6,
-                0 
+                0.3 
             ]
         },
+        
         "click":{
             "zipcode":[true,"ZIP Code"], 
             "Designation":[true,"Designation"]
