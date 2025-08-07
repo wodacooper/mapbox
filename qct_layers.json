@@ -140,7 +140,7 @@
         
         "click":{
             "zipcode":[true,"ZIP Code"], 
-            "Designation":[true,"Designation"]
+            "Designation":[true,"DDA Prediction"]
         }
     }
 }
