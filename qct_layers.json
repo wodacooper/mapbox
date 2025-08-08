@@ -1,8 +1,8 @@
 {
     "qct_26_predictions": {
-        "name": "2026 QCT predictions",
-        "source_id": "qct_26_predictions_source",
-        "url": "mapbox://wodacooper.qct_26_predictions",
+        "name": "2026 QCTT predictions",
+        "source_id": "metro_dda_26_source",
+        "url": "mapbox://wodacooper.metro_dda_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
