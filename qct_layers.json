@@ -139,10 +139,10 @@
                 0
             ]
         },
-        
+        "legend": [],
         "click":{
             "zipcode":[true,"ZIP Code"], 
-            "Designation ": true
+            "Designation ": [true, "DDA Prediction"]
         }
     }
 }
