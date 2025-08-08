@@ -104,7 +104,7 @@
               ]
         ],
         "click":{
-            "GEOID": [true, "Area ID"], 
+            "GEOID": [true, "Tract ID"], 
             "DDA": [true, "DDA Prediction"],
             "zipcode":[true,"ZIP Code"], 
             "Designation ": [true, "DDA Prediction"]
