@@ -609,7 +609,7 @@
                 "12",
                 "13"
             ],
-            "Place Name": [
+            "city": [
                 "Abbott city",
                 "Abernathy city",
                 "Abilene city",
@@ -2738,3 +2738,4 @@
         }
     }
 }
+
