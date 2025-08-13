@@ -417,7 +417,7 @@
             "potential_16":"",
             "pool": "",
             "Region_1": "Region",
-            "city": "",
+            "Place Name": "City",
             "County_1": "County",
             "pts_oi": "Opportunity Index"
         },
@@ -609,7 +609,7 @@
                 "12",
                 "13"
             ],
-            "city": [
+            "Place Name": [
                 "Abbott city",
                 "Abernathy city",
                 "Abilene city",
@@ -2738,4 +2738,3 @@
         }
     }
 }
-
