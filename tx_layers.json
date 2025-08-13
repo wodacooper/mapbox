@@ -252,43 +252,43 @@
         "click": {
             "USER_School_Name": [
                 true,
-                ""
+                "School Name"
             ],
             "USER_Instruction_Type": [
                 true,
-                ""
+                "Instruction Type"
             ],
             "USER_District_Name": [
                 true,
-                ""
+                "District Name"
             ],
             "USER_School_Site_Street_Address": [
                 true,
-                ""
+                "School Site Street Address"
             ],
             "USER_School_Site_City": [
                 true,
-                ""
+                "School Site City"
             ],
             "USER_School_Site_Zip": [
                 true,
-                ""
+                "School Site Zip"
             ],
             "USER_Grade_Range": [
                 true,
-                ""
+                "Grade Range"
             ],
             "USER_School_Web_Page_Address": [
                 true,
-                ""
+                "School Web Page Address"
             ],
             "USER_School_Email_Address": [
                 true,
-                ""
+                "School Email Address"
             ],
             "USER_School_Phone": [
                 true,
-                ""
+                "School Phone"
             ]
         }
     },
