@@ -210,7 +210,7 @@
         }
     },
     "schools": {
-        "name": "Schools",
+        "name": "All Schools",
         "source_id": "schools_source",
         "url": "mapbox://wodacooper.tx_25_schools",
         "source_layer": "hello_world",
@@ -2757,3 +2757,4 @@
         }
     }
 }
+
