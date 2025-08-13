@@ -210,9 +210,9 @@
         }
     },
     "schools": {
-        "name": "Elementary Schools",
+        "name": "Schools",
         "source_id": "schools_source",
-        "url": "mapbox://wodacooper.tx_el_schools_24",
+        "url": "mapbox://wodacooper.tx_25_schools",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -222,52 +222,71 @@
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": "#FF6600"
+            "circle-color": [
+                "match",
+                ["get", "School_Type"],
+                "Elementary School", "#FF6600",
+                "Elementary/Secondary", "#FF6600",
+                "Middle School", "#008000",
+                "High School", "#4169E1",
+                "Other", "#000000",
+                "#000000"  
+            ]
         },
         "legend": [
             [
                 "Elementary Schools",
                 "#FF6600"
+            ],
+            [    "Middle Schools",
+                "#008000"
+            ],
+            [    "High Schools",
+                "#4169E1"
+            ],
+            [
+                "Other",
+                "#000000"
             ]
         ],
         "click": {
-            "School Name": [
+            "USER_School_Name": [
                 true,
                 ""
             ],
-            "Instruction Type": [
+            "USER_Instruction_Type": [
                 true,
                 ""
             ],
-            "District Name": [
+            "USER_District_Name": [
                 true,
                 ""
             ],
-            "School Site Street Address": [
+            "USER_School_Site_Street_Address": [
                 true,
                 ""
             ],
-            "School Site City": [
+            "USER_School_Site_City": [
                 true,
                 ""
             ],
-            "School Site Zip": [
+            "USER_School_Site_Zip": [
                 true,
                 ""
             ],
-            "Grade Range": [
+            "USER_Grade_Range": [
                 true,
                 ""
             ],
-            "School Web Page Address": [
+            "USER_School_Web_Page_Address": [
                 true,
                 ""
             ],
-            "School Email Address": [
+            "USER_School_Email_Address": [
                 true,
                 ""
             ],
-            "School Phone": [
+            "USER_School_Phone": [
                 true,
                 ""
             ]
