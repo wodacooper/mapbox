@@ -24,12 +24,20 @@
             "#9E9E9E"
             ]
         },
-        "legend": {
-            "Pre-App": "#4CAF50",
-            "Awarded-Pending Closing": "#FFC107",
-            "Pending Funding": "#2196F3",
-            "Other": "#9E9E9E"
-        },
+        "legend": [
+            [
+                "Pre-App",
+                "#4CAF50"
+            ],
+            [
+                "Awarded-Pending Closing",
+                "#FFC107"
+            ],
+            [
+                "Pending Funding",
+                "#2196F3"
+            ]
+        ],
 
         "hover": {
             "Project Name": [
