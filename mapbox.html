@@ -1288,6 +1288,13 @@ const bounds_dict = {
             function updateTooltip(e) {
             rafPending = false;
             const feats = map.queryRenderedFeatures(e.point, { layers: visibleHoverLayers() });
+            
+            // Early suppression: if mouse is over a clicked feature, always suppress tooltip
+            if (lastClickedKey && feats.some(ft => featureKey(ft) === lastClickedKey)) {
+                tooltip.remove();
+                return;
+            }
+            
             const f = feats.find(ft => featureKey(ft) !== lastClickedKey);
             if (!f) {
                 if (hoveredId !== null) {
