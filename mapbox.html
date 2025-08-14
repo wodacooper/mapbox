@@ -1277,71 +1277,67 @@ const bounds_dict = {
                 tooltip.remove();
             });
 
-            let lastHoverFeatureKey = null;
-            map.on('mousemove', hover_layers, (e) => {
-                if (lastClickedKey) {
-                    for (let layer_name of hover_layers) {
-                        const feats = map.queryRenderedFeatures(e.point, { layers: [layer_name] });
-                        if (feats.some(ft => featureKey(ft) === lastClickedKey)) {
-                            tooltip.remove();
-                            lastHoverFeatureKey = null;
-                            return;
-                        }
-                    }
-                }
+            tooltip._content?.parentElement?.style && (tooltip._content.parentElement.style.pointerEvents = 'none');
 
-                let foundFeature = null;
-                let foundLayerBase = null;
+            let hoveredId = null;
+            let rafPending = false;
 
-                for (let layer_name of hover_layers) {
-                    const base = layer_name.split('@')[0];
-                    if (map.getLayoutProperty(layer_name, 'visibility') === 'visible') {
-                        const feats = map.queryRenderedFeatures(e.point, { layers: [layer_name] });
-                        const f = feats.find(ft => featureKey(ft) !== lastClickedKey);
-                        if (f) {
-                            foundFeature = f;
-                            foundLayerBase = base;
-                            break;
-                        }
-                    }
-                }
+            const visibleHoverLayers = () =>
+            hover_layers.filter(id => map.getLayer(id) && map.getLayoutProperty(id, 'visibility') !== 'none');
 
-                if (!foundFeature) {
-                    tooltip.remove();
-                    lastHoverFeatureKey = null;
-                    return;
-                }
-
-                const currentFeatureKey = featureKey(foundFeature);
-                if (lastHoverFeatureKey === currentFeatureKey) {
-                    // Do not update tooltip if hovering the same feature
-                    return;
-                }
-                lastHoverFeatureKey = currentFeatureKey;
-
-                let table = ['<div style="line-height: 100%">'];
-                table.push(`<h3 style="margin:0; padding:0 0 5px">${layers[foundLayerBase].name}</h3>`);
-                const hover_cats = layers[foundLayerBase]['hover'] || {};
-                for (const [key, args] of Object.entries(hover_cats)) {
-                    const value = foundFeature.properties?.[key];
-                    if (value || value === 0) {
-                        if (args?.[0]) {
-                            table.push(`<h4 style="margin:0; padding:0;color:#aaaaaa;">${(args[1] ?? "") || key}</h4>`);
-                        }
-                        table.push(`<p style="margin:0; padding:0 0 5px;">${value}</p>`);
-                    }
-                }
-                table.push('</div>');
-
-                const { lng, lat } = e.lngLat.wrap();
-                tooltip.setLngLat([lng, lat]).setHTML(table.join(''));
-                if (!tooltip.isOpen()) tooltip.addTo(map);
-            });
-
-            map.on('mouseleave', hover_layers, (e) => {
+            function updateTooltip(e) {
+            rafPending = false;
+            const feats = map.queryRenderedFeatures(e.point, { layers: visibleHoverLayers() });
+            const f = feats.find(ft => featureKey(ft) !== lastClickedKey);
+            if (!f) {
+                if (hoveredId !== null) {
+                hoveredId = null;
                 tooltip.remove();
-                lastHoverFeatureKey = null;
+                }
+                return;
+            }
+            const id = featureKey(f);
+            if (id === hoveredId) {
+                tooltip.setLngLat(e.lngLat);
+                return;
+            }
+            hoveredId = id;
+            const base = (f.layer.id || '').split('@')[0];
+            const layerCfg = layers[base];
+            const hover_cats = layerCfg?.hover || {};
+            const parts = ['<div style="line-height:100%">'];
+            parts.push(`<h3 style="margin:0; padding:0 0 5px">${layerCfg?.name ?? base}</h3>`);
+            for (const [key, args] of Object.entries(hover_cats)) {
+                const value = f.properties?.[key];
+                if (value || value === 0) {
+                if (args?.[0]) {
+                    parts.push(`<h4 style="margin:0; padding:0;color:#aaa;">${(args[1] ?? "") || key}</h4>`);
+                }
+                parts.push(`<p style="margin:0; padding:0 0 5px;">${value}</p>`);
+                }
+            }
+            parts.push('</div>');
+            tooltip.setLngLat(e.lngLat).setHTML(parts.join(''));
+            if (!tooltip.isOpen()) tooltip.addTo(map);
+            }
+
+            map.off('mousemove'); // optional: in case old handler is still bound
+            map.on('mousemove', (e) => {
+            if (!rafPending) {
+                rafPending = true;
+                requestAnimationFrame(() => updateTooltip(e));
+            }
             });
+
+            for (const layerId of hover_layers) {
+            if (map.getLayer(layerId)) {
+                map.on('mouseleave', layerId, () => {
+                hoveredId = null;
+                tooltip.remove();
+                });
+            }
+            }
+
 
             map.on('click', click_layers, (e) => {
                 console.log(draw.getMode());
