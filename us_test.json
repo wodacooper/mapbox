@@ -10,7 +10,7 @@
         "visible": true,
         "circle": {
             "circle-radius": 5,
-            "circle-stroke-color": "#ffffff",
+            "circle-stroke-color": "#000000",
             "circle-stroke-width": 1,
             "circle-color": [
             "match",
