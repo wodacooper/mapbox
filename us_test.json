@@ -46,6 +46,10 @@
             "Address": [
                 true,
                 ""
+            ],
+            "status": [
+                true,
+                "Status"
             ]
         },
         "click": {
