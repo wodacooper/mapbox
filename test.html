@@ -1197,8 +1197,10 @@ const bounds_dict = {
                     }
                 };
                 table.push('</div>')
-                tooltip.setHTML(table.join(''));
-                if (!tooltip.isOpen()){tooltip.addTo(map)}
+				const { lng, lat } = e.lngLat.wrap();
+				tooltip.setLngLat([lng, lat]).setHTML(table.join(''));
+				if (!tooltip.isOpen()) tooltip.addTo(map);
+
             });
            
             map.on('click', click_layers, (e) => {
@@ -1685,5 +1687,6 @@ const bounds_dict = {
 
 </body>
 </html>
+
 
 
