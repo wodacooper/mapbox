@@ -1,0 +1,44 @@
+{
+    "development_aquisitions": {
+        "name": "Development Acquisitions",
+        "source_id": "development_aquisitions_source",
+        "url": "mapbox://wodacooper.development_aquisitions",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+         "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1
+        },
+
+        "hover": {
+            "Project Name": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+             "Project Name": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+
+            "status": [
+                true,
+                "Status"
+            ],
+            
+            "Coordinates": [
+                true,
+                ""
+            ]
+        }
+    }
+}
