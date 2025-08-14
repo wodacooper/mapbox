@@ -1263,7 +1263,7 @@ const bounds_dict = {
 
 
             
-            let lastClickedKey = null;
+           let lastClickedKey = null;
 
             function featureKey(ft) {
                 return [
@@ -1278,45 +1278,54 @@ const bounds_dict = {
             });
 
             map.on('mousemove', hover_layers, (e) => {
+                if (lastClickedKey) {
+                    for (let layer_name of hover_layers) {
+                        const feats = map.queryRenderedFeatures(e.point, { layers: [layer_name] });
+                        if (feats.some(ft => featureKey(ft) === lastClickedKey)) {
+                            tooltip.remove();
+                            return;
+                        }
+                    }
+                }
+
                 let table = ['<div style="line-height: 100%">'];
-                let found = false;
+                let foundFeature = null;
+                let foundLayerBase = null;
 
                 for (let layer_name of hover_layers) {
-                    let layer = layer_name.split('@')[0];
-                    if (map.getLayoutProperty(layer_name, 'visibility') == 'visible') {
-                        let feats = map.queryRenderedFeatures(e.point, { layers: [layer_name] });
-                        let feature = feats.find(f => featureKey(f) !== lastClickedKey);
-                        if (feature) {
-                            found = true;
-                            table.push(`<h3 style="margin:0; padding:0 0 5px">${layers[layer].name}</h3>`);
-                            const hover_cats = layers[layer]['hover'];
-                            for (let [key, args] of Object.entries(hover_cats)) {
-                                let value = feature.properties[key];
-                                if (value || value == 0) {
-                                    if (args[0]) {
-                                        if (args[1] == "") {
-                                            table.push(`<h4 style="margin:0; padding:0;color: #aaaaaa;">${key}</h4>`);
-                                        } else {
-                                            table.push(`<h4 style="margin:0; padding:0;color: #aaaaaa;">${args[1]}</h4>`);
-                                        }
-                                    }
-                                    table.push(`<p style="margin: 0; padding: 0 0 5px;">${value}</p>`);
-                                }
-                            }
+                    const base = layer_name.split('@')[0];
+                    if (map.getLayoutProperty(layer_name, 'visibility') === 'visible') {
+                        const feats = map.queryRenderedFeatures(e.point, { layers: [layer_name] });
+                        const f = feats.find(ft => featureKey(ft) !== lastClickedKey);
+                        if (f) {
+                            foundFeature = f;
+                            foundLayerBase = base;
                             break;
                         }
                     }
                 }
 
+                if (!foundFeature) {
+                    tooltip.remove();
+                    return;
+                }
+
+                table.push(`<h3 style="margin:0; padding:0 0 5px">${layers[foundLayerBase].name}</h3>`);
+                const hover_cats = layers[foundLayerBase]['hover'] || {};
+                for (const [key, args] of Object.entries(hover_cats)) {
+                    const value = foundFeature.properties?.[key];
+                    if (value || value === 0) {
+                        if (args?.[0]) {
+                            table.push(`<h4 style="margin:0; padding:0;color:#aaaaaa;">${(args[1] ?? "") || key}</h4>`);
+                        }
+                        table.push(`<p style="margin:0; padding:0 0 5px;">${value}</p>`);
+                    }
+                }
                 table.push('</div>');
 
-                if (found) {
-                    const { lng, lat } = e.lngLat.wrap();
-                    tooltip.setLngLat([lng, lat]).setHTML(table.join(''));
-                    if (!tooltip.isOpen()) tooltip.addTo(map);
-                } else {
-                    tooltip.remove();
-                }
+                const { lng, lat } = e.lngLat.wrap();
+                tooltip.setLngLat([lng, lat]).setHTML(table.join(''));
+                if (!tooltip.isOpen()) tooltip.addTo(map);
             });
 
             map.on('click', click_layers, (e) => {
