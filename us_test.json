@@ -1,8 +1,8 @@
 {
     "development_acquisitions": {
         "name": "Development Acquisitions",
-        "source_id": "development_acquisitions_source",
-        "url": "mapbox://wodacooper.development_acquisitions",
+        "source_id": "development_acquisitions2_source",
+        "url": "mapbox://wodacooper.development_acquisitions2",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
