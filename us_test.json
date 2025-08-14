@@ -1,14 +1,14 @@
 {
-    "development_aquisitions": {
+    "development_acquisitions": {
         "name": "Development Acquisitions",
-        "source_id": "development_aquisitions_source",
-        "url": "mapbox://wodacooper.development_aquisitions",
+        "source_id": "development_acquisitions_source",
+        "url": "mapbox://wodacooper.development_acquisitions",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
         },
         "visible": true,
-        "paint": {
+        "circle": {
             "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 1
