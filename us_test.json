@@ -18,27 +18,86 @@
             "Project Name": [
                 true,
                 ""
-            ]
-        },
-        "click": {
-             "Project Name": [
-                true,
-                ""
             ],
             "Address": [
                 true,
                 ""
-            ],
-
-            "status": [
+            ]
+        },
+        "click": {
+            "Project Name": [
                 true,
-                "Status"
+                ""
             ],
-
+            
+            "Address": [
+                true,
+                ""
+            ],
+            "Lead Development Officer": [
+                true,
+                ""
+            ],
+            "Closing Lead": [
+                true,
+                ""
+            ],
+            "Seller": [
+                true,
+                ""
+            ],
+            "Buying Entity": [
+                true,
+                ""
+            ],
+            "Total Purchase Price": [
+                true,
+                ""
+            ],
+            "Current PA Expiration Date": [
+                true,
+                ""
+            ],
+            "Latest PA Expiration Date": [
+                true,
+                ""
+            ],
+            "Date of Execution": [
+                true,
+                ""
+            ],
+            "Extensions": [
+                true,
+                ""
+            ],
+            "Title Status": [
+                true,
+                ""
+            ],
+            "Round/Notes": [
+                true,
+                ""
+            ],
             "Coordinates": [
                 true,
                 ""
+            ],
+            "status": [
+                true,
+                ""
+            ],
+            "Title": [
+                true,
+                ""
+            ],
+            "Notes": [
+                true,
+                ""
+            ],
+            "Escrow Agent": [
+                true,
+                ""
             ]
-        }
+    }
     }
 }
