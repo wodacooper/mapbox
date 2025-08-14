@@ -1263,7 +1263,17 @@ const bounds_dict = {
 
 
             
-           map.on('mouseleave', hover_layers, (e) => {
+            let lastClickedKey = null;
+
+            function featureKey(ft) {
+                return [
+                    ft.source || '',
+                    ft.sourceLayer || '',
+                    ft.id ?? ft.properties?.id ?? ft.properties?.['Project Name'] ?? ''
+                ].join('|');
+            }
+
+            map.on('mouseleave', hover_layers, (e) => {
                 tooltip.remove();
             });
 
@@ -1274,7 +1284,8 @@ const bounds_dict = {
                 for (let layer_name of hover_layers) {
                     let layer = layer_name.split('@')[0];
                     if (map.getLayoutProperty(layer_name, 'visibility') == 'visible') {
-                        let feature = map.queryRenderedFeatures(e.point, { layers: [layer_name] })[0];
+                        let feats = map.queryRenderedFeatures(e.point, { layers: [layer_name] });
+                        let feature = feats.find(f => featureKey(f) !== lastClickedKey);
                         if (feature) {
                             found = true;
                             table.push(`<h3 style="margin:0; padding:0 0 5px">${layers[layer].name}</h3>`);
@@ -1313,12 +1324,14 @@ const bounds_dict = {
                 if (draw.getMode() == 'simple_select') {
                     if (allow_click) {
                         let table = ['<div style="line-height: 100%">'];
+                        let clickedFeature = null;
+
                         for (let layer_name of click_layers) {
                             let layer = layer_name.split('@')[0];
                             if (map.getLayoutProperty(layer_name, 'visibility') == 'visible') {
                                 let feature = map.queryRenderedFeatures(e.point, { layers: [layer_name] })[0];
                                 if (feature) {
-                                    console.log(feature);
+                                    clickedFeature = feature;
                                     table.push(`<h3>${layers[layer].name}</h3>`);
                                     const click_cats = layers[layer]['click'];
                                     for (let [cat, args] of Object.entries(click_cats)) {
@@ -1338,11 +1351,20 @@ const bounds_dict = {
                                 }
                             }
                         }
+
                         table.push('</div>');
-                        new mapboxgl.Popup({ className: 'popup-box', anchor: 'top-left' })
+
+                        if (clickedFeature) {
+                            lastClickedKey = featureKey(clickedFeature);
+                        }
+
+                        const popup = new mapboxgl.Popup({ className: 'popup-box', anchor: 'top-left' })
                             .setLngLat(e.lngLat.wrap())
                             .setHTML(table.join(''))
                             .addTo(map);
+
+                        popup.on('close', () => { lastClickedKey = null; });
+
                     } else {
                         allow_click = true;
                     }
@@ -1350,6 +1372,7 @@ const bounds_dict = {
                     allow_click = false;
                 }
             });
+
 
 
             //Code for mobile optimization for enabling the touch and zoom functions
