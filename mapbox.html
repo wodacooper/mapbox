@@ -1277,18 +1277,19 @@ const bounds_dict = {
                 tooltip.remove();
             });
 
+            let lastHoverFeatureKey = null;
             map.on('mousemove', hover_layers, (e) => {
                 if (lastClickedKey) {
                     for (let layer_name of hover_layers) {
                         const feats = map.queryRenderedFeatures(e.point, { layers: [layer_name] });
                         if (feats.some(ft => featureKey(ft) === lastClickedKey)) {
                             tooltip.remove();
+                            lastHoverFeatureKey = null;
                             return;
                         }
                     }
                 }
 
-                let table = ['<div style="line-height: 100%">'];
                 let foundFeature = null;
                 let foundLayerBase = null;
 
@@ -1307,9 +1308,18 @@ const bounds_dict = {
 
                 if (!foundFeature) {
                     tooltip.remove();
+                    lastHoverFeatureKey = null;
                     return;
                 }
 
+                const currentFeatureKey = featureKey(foundFeature);
+                if (lastHoverFeatureKey === currentFeatureKey) {
+                    // Do not update tooltip if hovering the same feature
+                    return;
+                }
+                lastHoverFeatureKey = currentFeatureKey;
+
+                let table = ['<div style="line-height: 100%">'];
                 table.push(`<h3 style="margin:0; padding:0 0 5px">${layers[foundLayerBase].name}</h3>`);
                 const hover_cats = layers[foundLayerBase]['hover'] || {};
                 for (const [key, args] of Object.entries(hover_cats)) {
@@ -1326,6 +1336,11 @@ const bounds_dict = {
                 const { lng, lat } = e.lngLat.wrap();
                 tooltip.setLngLat([lng, lat]).setHTML(table.join(''));
                 if (!tooltip.isOpen()) tooltip.addTo(map);
+            });
+
+            map.on('mouseleave', hover_layers, (e) => {
+                tooltip.remove();
+                lastHoverFeatureKey = null;
             });
 
             map.on('click', click_layers, (e) => {
