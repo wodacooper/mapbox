@@ -11,7 +11,24 @@
         "circle": {
             "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 1
+            "circle-stroke-width": 1,
+            "circle-color": [
+            "match",
+            ["get", "status"],
+            "Pre-App", 
+            "#4CAF50",
+            "Awarded-Pending Closing",
+            "#FFC107",
+            "Pending Funding",
+            "#2196F3",
+            "#9E9E9E"
+            ]
+        },
+        "legend": {
+            "Pre-App": "#4CAF50",
+            "Awarded-Pending Closing": "#FFC107",
+            "Pending Funding": "#2196F3",
+            "Other": "#9E9E9E"
         },
 
         "hover": {
