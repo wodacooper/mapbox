@@ -209,89 +209,6 @@
             ]
         }
     },
-    "schools": {
-        "name": "All Schools",
-        "source_id": "schools_source",
-        "url": "mapbox://wodacooper.tx_25_schools",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": [
-                "match",
-                ["get", "School_Type"],
-                "Elementary School", "#FF6600",
-                "Elementary/Secondary", "#FF6600",
-                "Middle School", "#008000",
-                "High School", "#4169E1",
-                "Other", "#000000",
-                "#000000"  
-            ]
-        },
-        "legend": [
-            [
-                "Elementary Schools",
-                "#FF6600"
-            ],
-            [    "Middle Schools",
-                "#008000"
-            ],
-            [    "High Schools",
-                "#4169E1"
-            ],
-            [
-                "Other",
-                "#000000"
-            ]
-        ],
-        "click": {
-            "USER_School_Name": [
-                true,
-                "School Name"
-            ],
-            "USER_Instruction_Type": [
-                true,
-                "Instruction Type"
-            ],
-            "USER_District_Name": [
-                true,
-                "District Name"
-            ],
-            "USER_School_Site_Street_Address": [
-                true,
-                "School Site Street Address"
-            ],
-            "USER_School_Site_City": [
-                true,
-                "School Site City"
-            ],
-            "USER_School_Site_Zip": [
-                true,
-                "School Site Zip"
-            ],
-            "USER_Grade_Range": [
-                true,
-                "Grade Range"
-            ],
-            "USER_School_Web_Page_Address": [
-                true,
-                "School Web Page Address"
-            ],
-            "USER_School_Email_Address": [
-                true,
-                "School Email Address"
-            ],
-            "USER_School_Phone": [
-                true,
-                "School Phone"
-            ]
-        }
-    },
     "amenities": {
         "name": "Amenities",
         "source_id": "tx_amenities_source",
@@ -311,7 +228,7 @@
                     "get",
                     "type"
                 ],
-                "Elementary",
+                "Schools",
                 "#246e28",
                 "Grocery",
                 "#FF0000",
@@ -320,7 +237,7 @@
         },
         "legend": [
             [
-                "Elementary",
+                "School",
                 "#246e28"
             ],
             [
@@ -2757,4 +2674,5 @@
         }
     }
 }
+
 
