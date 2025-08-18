@@ -1203,11 +1203,10 @@
             ]
         ]
     },
-
     "old_4% scoring": {
         "name": "4% Scoring 2025",
-        "source_id": "ga_4_24_source",
-        "url": "mapbox://wodacooper.ga_4_24",
+        "source_id": "ga_4_25_source",
+        "url": "mapbox://wodacooper.ga_4_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -1288,9 +1287,9 @@
                 true,
                 ""
             ],
-            "qct_25": [
+            "qct_25_2": [
                 true,
-                ""
+                "qct_25"
             ],
             "sadda_25":[
                 true,
@@ -1346,7 +1345,6 @@
             ]
         },
         "cat_filters": {
-            "county": "County",
             "new_boost": "New QCT/DDA in 2025",
             "stable_pts": "Stable Communities",
             "sch_pts":"School Points"
