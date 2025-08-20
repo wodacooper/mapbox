@@ -2672,6 +2672,34 @@
                 16.0
             ]
         }
+    },
+    "Test": {
+        "name": "Test",
+        "source_id": "heatmap_source",
+        "url": "mapbox://wodacooper.heatmap-dusc1l",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+     "paint": {
+        "heatmap-weight": [
+        "/",
+        1,
+        ["+", ["get", "total_distance"], 0.000001]
+        ],
+        "heatmap-intensity": 1,
+        "heatmap-color": [
+        "interpolate",
+        ["linear"],
+        ["heatmap-density"],
+        0, "blue",
+        0.5, "lime",
+        1, "red"
+        ],
+        "heatmap-radius": 15,
+        "heatmap-opacity": 0.8
+        }
     }
 }
 
