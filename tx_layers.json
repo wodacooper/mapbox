@@ -2674,14 +2674,20 @@
         }
     },
     "Test": {
-        "name": "Test11",
+        "name": "Test1",
         "source_id": "heatmap_source",
         "url": "mapbox://wodacooper.heatmap-dusc1l",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
-        "visible": false
+        "visible": false,
+        "circle": {
+            "circle-radius": 6,
+            "circle-color": "#007cbf",
+            "circle-stroke-width": 1,
+            "circle-stroke-color": "#fff"
+        }
     }
 }
 
