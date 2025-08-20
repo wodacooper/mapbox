@@ -2674,31 +2674,17 @@
         }
     },
     "Test": {
-        "name": "Test1",
+        "name": "Test11",
         "source_id": "heatmap_source",
         "url": "mapbox://wodacooper.heatmap-dusc1l",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
-        "visible": false,
-        "circle": {
-            "circle-radius": 5,
-            "circle-color": [
-              "interpolate",
-              ["linear"],
-              ["get", "total_distance"],
-              0, "#2DC4B2",
-              1, "#3BB3C3",
-              2, "#669EC4",
-              3, "#8B88B6",
-              5, "#A2719B",
-              10, "#AA5E79"
-            ],
-            "circle-opacity": 0.7
-          }
+        "visible": false
     }
 }
+
 
 
 
