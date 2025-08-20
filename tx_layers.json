@@ -2675,8 +2675,8 @@
     },
     "Test": {
         "name": "Test1",
-        "source_id": "heatmap_source",
-        "url": "mapbox://wodacooper.tx_heatmap_source",
+        "source_id": "tx_heatmap_source",
+        "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -2690,6 +2690,7 @@
         }
     }
 }
+
 
 
 
