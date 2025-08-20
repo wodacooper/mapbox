@@ -2674,7 +2674,7 @@
         }
     },
     "Test": {
-        "name": "Test1",
+        "name": "Test2",
         "source_id": "heatmap_source",
         "url": "mapbox://wodacooper.heatmap-dusc1l",
         "source_layer": "hello_world",
@@ -2690,6 +2690,7 @@
         }
     }
 }
+
 
 
 
