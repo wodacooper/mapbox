@@ -2673,6 +2673,7 @@
             ]
         }
     },
+
     "Test": {
         "name": "Test1",
         "source_id": "tx_heatmap_source",
@@ -2682,12 +2683,16 @@
             "visibility": "none"
         },
         "visible": false,
-        "circle": {
-            "circle-radius": 6,
-            "circle-color": "#007cbf",
-            "circle-stroke-width": 1,
-            "circle-stroke-color": "#fff"
-        }
+        "circle-color": [
+            "step",
+            ["get", "total_distance"],
+            "#d73027",     
+            0.2, "#fc8d59", 
+            0.4, "#fee08b", 
+            0.6, "#d9ef8b", 
+            0.8, "#91cf60", 
+            1.0, "#1a9850"
+        ]
     }
 }
 
