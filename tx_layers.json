@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Test1",
+        "name": "Test3",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2706,6 +2706,7 @@
     }
 
 }
+
 
 
 
