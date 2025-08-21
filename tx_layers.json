@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Test2",
+        "name": "Test1",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2683,6 +2683,8 @@
             "visibility": "none"
         },
         "visible": false,
+        "circle": { 
+        "circle-radius": 6,
         "circle-color": [
             "step",
             ["get", "total_distance"],
@@ -2692,10 +2694,19 @@
             0.6, "#d9ef8b", 
             0.8, "#91cf60", 
             1.0, "#1a9850"
-        ]
+        ],
+        "circle-stroke-width": 1, 
+        "circle-stroke-color": "#fff" 
+        },
+        
+        "click": {
+            "total_distance": [
+                true,
+                "Total Distance"
+            ]
+        }
     }
 }
-
 
 
 
