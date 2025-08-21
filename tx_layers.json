@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Test3",
+        "name": "Test1",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2701,12 +2701,16 @@
                     0.9, "#1a9850"
                 ],
                 "circle-stroke-width": 0
-            
+        },
+        "click": {
+            "total_distance": [
+                true,
+                "Total Distance"
+            ]
         }
     }
 
 }
-
 
 
 
