@@ -2693,15 +2693,16 @@
                 "interpolate",
                 ["linear"],
                 ["heatmap-density"],
-                0, "FFFF00",
-                0.5, "FFA500",
-                1, "#FF4433"
+                0, "#FFFF00",
+                0.5, "#FFA500",
+                1, "#FF4433"            
             ],
             "heatmap-radius": 15,
             "heatmap-opacity": 0.8
         }
     }
 }
+
 
 
 
