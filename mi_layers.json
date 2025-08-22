@@ -612,7 +612,7 @@
         }
     },
     "soar_sites": {
-        "name": "SOAR SSites",
+        "name": "SOAR Sites",
         "source_id": "mi_soar_source_v2",
         "url": "mapbox://wodacooper.mi_soar_v2",
         "source_layer": "hello_world",
@@ -645,10 +645,6 @@
                 "Kalkaska", 0.2,
                 0
             ]
-        },
-        "cat_filters": {
-            "Info Gathered": "Source",
-            "Year": ""
         }
    
     },
@@ -1144,4 +1140,3 @@
         }
     }
 }
-
