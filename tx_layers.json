@@ -312,7 +312,7 @@
         }
     },
     "score": {
-        "name": "2025 Score",
+        "name": "2026 Score",
         "source_id": "tx_25_source",
         "url": "mapbox://wodacooper.tx_25",
         "source_layer": "hello_world",
@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Test23",
+        "name": "Test",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2711,6 +2711,7 @@
     }
 
 }
+
 
 
 
