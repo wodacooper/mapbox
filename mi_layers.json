@@ -626,10 +626,8 @@
                 "match",
                 [
                     "get",
-                    "Township"
+                    "Name"
                 ],
-                "match",
-                ["get", "Township"],
                 "Marshall", "#FF88DF",
                 "Ann Arbor", "#FF88DF",
                 "Zeeland", "#FF88DF",
@@ -638,7 +636,7 @@
             ],
             "fill-opacity": [
                 "match",
-                ["get", "Township"],
+                ["get", "Name"],
                 "Marshall", 0.8,
                 "Ann Arbor", 0.6,
                 "Zeeland", 0.4,
@@ -1140,5 +1138,4 @@
         }
     }
 }
-
 
