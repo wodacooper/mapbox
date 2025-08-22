@@ -638,8 +638,8 @@
                 "match",
                 ["get", "Name"],
                 "Marshall", 0.8,
-                "Ann Arbor", 0.6,
-                "Zeeland", 0.4,
+                "Ann Arbor", 0.8,
+                "Zeeland", 0.8,
                 "Kalkaska", 0.2,
                 0
             ]
