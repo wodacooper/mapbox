@@ -612,7 +612,7 @@
         }
     },
     "soar_sites": {
-        "name": "SOAR SITES",
+        "name": "SOAR Sites",
         "source_id": "mi_soar_source",
         "url": "mapbox://wodacooper.mi_soar",
         "source_layer": "hello_world",
