@@ -647,7 +647,7 @@
    
     },
     "soar_buffer": {
-        "name": "SOAR Buffers",
+        "name": "SOAR Buffers1",
         "source_id": "mi_soar_buffer_source",
         "url": "mapbox://wodacooper.mi_soar_buffer",
         "source_layer": "hello_world",
@@ -660,11 +660,14 @@
                 "match",
                 [
                     "get",
-                    "Source"
+                    "Name"
                 ],
-                "SOAR Fund Report",
+                "Marshall",
                 "#FF88DF",
-                "#5FC359"
+                "Ann Arbor", "#FF88DF",
+                "Zeeland", "#FF88DF",
+                "Kalkaska", "#FF88DF",
+                "#000000"
             ],
             "line-width":2
         },
@@ -673,49 +676,18 @@
                 "match",
                 [
                     "get",
-                    "soar_pts"
+                    "circle_type"
                 ],
-                2,
+                "15-mile",
                 "#aaaaaa",
-                "#ffffff"
+                "25-mile",
+                "#aaaaaa",
+                "#ffffff",
+                "#000000"
             ],
             "fill-opacity":0.3
-        },
-        "cat_filters": {
-            "Source": "Source",
-            "soar_pts":""
-        },
-        "legend": [
-            [
-                "4",
-                "#ffffff"
-            ],
-            [
-                "2",
-                "#aaaaaa"
-            ]
-        ],
-        "hover": {
-            "Source": [
-                true,
-                ""
-            ],
-            "soar_pts": [
-                true,
-                ""
-            ]
-        },
-        "cat_filter_vals": {
-            "Source": [
-                "SOAR Fund Report/MSHDA Meeting",
-                "SOAR Fund Report",
-                "MSHDA Meeting"
-            ],
-            "soar_pts": [
-               "2.0",
-                "4.0"
-            ]
         }
+        
     },
     "score_geocode": {
         "name": "2025 Score w/ Amenities",
