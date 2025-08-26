@@ -647,7 +647,7 @@
    
     },
     "soar_buffer": {
-        "name": "SOAR Buffers1",
+        "name": "SOAR Buffers",
         "source_id": "mi_soar_buffer_source",
         "url": "mapbox://wodacooper.mi_soar_buffer",
         "source_layer": "hello_world",
@@ -662,12 +662,11 @@
                     "get",
                     "Name"
                 ],
-                "Marshall",
-                "#FF88DF",
-                "Ann Arbor", "#FF88DF",
-                "Zeeland", "#FF88DF",
-                "Kalkaska", "#FF88DF",
-                "#000000"
+                "Marshall","#FF44AA",
+                "Ann Arbor", "#33BBFF",
+                "Zeeland", "#0077CC",
+                "Kalkaska", "#88CC44",
+                "rgba(0,0,0,0)"
             ],
             "line-width":2
         },
@@ -678,12 +677,10 @@
                     "get",
                     "circle_type"
                 ],
-                "15-mile",
-                "#aaaaaa",
-                "25-mile",
-                "#aaaaaa",
+                "15-mile","#559922",
+                "25-mile","#CC8400",
                 "#ffffff",
-                "#000000"
+                "rgba(0,0,0,0)"
             ],
             "fill-opacity":0.3
         }
