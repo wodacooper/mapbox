@@ -662,10 +662,10 @@
                     "get",
                     "Name"
                 ],
-                "Marshall","#FF44AA",
-                "Ann Arbor", "#33BBFF",
+                "Marshall","#0077CC",
+                "Ann Arbor", "#0077CC",
                 "Zeeland", "#0077CC",
-                "Kalkaska", "#88CC44",
+                "Kalkaska", "#0077CC",
                 "rgba(0,0,0,0)"
             ],
             "line-width":2
@@ -679,10 +679,9 @@
                 ],
                 "15-mile","#559922",
                 "25-mile","#CC8400",
-                "#ffffff",
                 "rgba(0,0,0,0)"
             ],
-            "fill-opacity":0.3
+            "fill-opacity":0.5
         }
         
     },
