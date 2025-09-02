@@ -108,7 +108,7 @@
         }
     },
     "past_projects": {
-        "name": "PPast Projects 21-24",
+        "name": "Past Projects 21-24",
         "source_id": "sc_past_buf",
         "url": "mapbox://wodacooper.sc_past_buf",
         "source_layer": "hello_world",
@@ -116,76 +116,48 @@
             "visibility": "visible"
         },
         "visible": true,
-        "line":{
-            "line-color":[
-                "match",
-                [
-                    "get",
-                    "market"
-                ],
-                "Older Persons",
-                "#39ff14",
-                "Older",
-                "#39ff14",
-                "Family",
-                "#ff073a",
-                "#000000"
-
-            ]
-        },
-        "fill": {
-            "fill-color": [
-                "match",
-                [
-                    "get",
-                    "award_year"
-                ],
+        "circle": {
+            "circle-radius": 6,
+            "circle-stroke-width": 1,
+            "circle-stroke-color": [
+            "match",
+            ["get", "market"],
+            "Older Persons",
+            "#39ff14",
+            "Older",
+            "#39ff14",
+            "Family",
+            "#ff073a",
+            "#000000"
+            ],
+            "circle-color": [
+            "match",
+                ["get","award_year"],
                 2024,
                 "#ffffff",
                 "#a0a0a0"
             ],
-            "fill-opacity": [
-                "match",
-                [
-                    "get",
-                    "award_year"
-                ],
-                2024, 1, 0.6
+            "circle-opacity": [
+            "match",
+            ["get", "award_year"],
+            2024, 1,
+            0.6
             ]
         },
         "legend": [
-            [
-                "1 mile radius",
-                "#000000"
-            ]
+            ["Family", "#ff073a"],
+            ["Older Persons", "#39ff14"]
+            ["",""]
         ],
         "click": {
-            "property": [
-                true,
-                ""
-            ],
-            "award_year": [
-                true,
-                ""
-            ],
-            "address": [
-                true,
-                ""
-            ],
-            "market": [
-                true,
-                ""
-            ],
-            "type": [
-                true,
-                ""
-            ],
-            "app_type": [
-                true,
-                ""
-            ]
+            "property": [true, ""],
+            "award_year": [true, ""],
+            "address": [true, ""],
+            "market": [true, ""],
+            "type": [true, ""],
+            "app_type": [true, ""]
         }
-    },
+},
     "amenities": {
         "name": "Primary Amenities",
         "source_id": "sc_amenities",
