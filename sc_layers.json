@@ -69,6 +69,44 @@
             "rent_limit_24":[934.5,2320.5]
         }
     },
+    "tracts": {
+        "name": "Tracts",
+        "source_id": "sc_tracts",
+        "url": "mapbox://wodacooper.sc_tracts",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#6D0000"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+
+        "click": {
+            "namelsad": [
+                true,
+                ""
+            ],
+            "GEOID":[
+                true,
+                ""
+            ]
+        },
+        "hover": {
+            "namelsad": [
+                true,
+                ""
+            ],
+            "GEOID":[
+                true,
+                ""
+            ]
+        }
+    },
     "past_projects": {
         "name": "Past Projects 21-24",
         "source_id": "sc_past_buf",
@@ -628,4 +666,5 @@
         }
     }
 }
+
 
