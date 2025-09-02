@@ -146,8 +146,8 @@
         },
         "legend": [
             ["Family", "#ff073a"],
-            ["Older Persons", "#39ff14"]
-            ["",""]
+            ["Older Persons", "#39ff14"],
+            ["2024 Projects","#ffffff"]
         ],
         "click": {
             "property": [true, ""],
