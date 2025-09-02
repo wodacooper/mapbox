@@ -70,7 +70,7 @@
         }
     },
     "past_projects": {
-        "name": "Past Projects 21/22",
+        "name": "Past Projects 21-24",
         "source_id": "sc_past_buf",
         "url": "mapbox://wodacooper.sc_past_buf",
         "source_layer": "hello_world",
@@ -628,3 +628,4 @@
         }
     }
 }
+
