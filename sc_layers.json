@@ -87,7 +87,7 @@
         },
 
         "click": {
-            "namelsad": [
+            "NAMESLAD": [
                 true,
                 ""
             ],
@@ -97,7 +97,7 @@
             ]
         },
         "hover": {
-            "namelsad": [
+            "NAMESLAD": [
                 true,
                 ""
             ],
@@ -666,6 +666,7 @@
         }
     }
 }
+
 
 
 
