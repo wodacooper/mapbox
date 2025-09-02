@@ -108,7 +108,7 @@
         }
     },
     "past_projects": {
-        "name": "Past Projects 21-24",
+        "name": "PPast Projects 21-24",
         "source_id": "sc_past_buf",
         "url": "mapbox://wodacooper.sc_past_buf",
         "source_layer": "hello_world",
@@ -116,9 +116,42 @@
             "visibility": "visible"
         },
         "visible": true,
+        "line":{
+            "line-color":[
+                "match",
+                [
+                    "get",
+                    "market"
+                ],
+                "Older Persons",
+                "#39ff14",
+                "Older",
+                "#39ff14",
+                "Family",
+                "#ff073a",
+                "#000000"
+
+            ]
+        },
         "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.5
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "award_year"
+                ],
+                2024,
+                "#ffffff",
+                "#a0a0a0"
+            ],
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "award_year"
+                ],
+                2024, 1, 0.6
+            ]
         },
         "legend": [
             [
@@ -666,6 +699,7 @@
         }
     }
 }
+
 
 
 
