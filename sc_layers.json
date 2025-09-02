@@ -79,7 +79,7 @@
         },
         "visible": false,
         "line": {
-            "line-width": 2,
+            "line-width": 1,
             "line-color": "#6D0000"
         },
         "fill": {
@@ -666,6 +666,7 @@
         }
     }
 }
+
 
 
 
