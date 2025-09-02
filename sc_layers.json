@@ -126,6 +126,8 @@
             "#39ff14",
             "Older",
             "#39ff14",
+            "Elderly",
+            "#39ff14",
             "Family",
             "#ff073a",
             "#000000"
@@ -157,7 +159,7 @@
             "type": [true, ""],
             "app_type": [true, ""]
         }
-},
+    },
     "amenities": {
         "name": "Primary Amenities",
         "source_id": "sc_amenities",
@@ -671,7 +673,6 @@
         }
     }
 }
-
 
 
 
