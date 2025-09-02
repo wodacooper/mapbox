@@ -70,7 +70,7 @@
         }
     },
     "tracts": {
-        "name": "Tracts",
+        "name": "Census Tracts",
         "source_id": "sc_tracts",
         "url": "mapbox://wodacooper.sc_tracts",
         "source_layer": "hello_world",
@@ -666,5 +666,6 @@
         }
     }
 }
+
 
 
