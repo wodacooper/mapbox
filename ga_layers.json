@@ -2496,8 +2496,8 @@
                 "unincorporated"
             ],
             "qct_25": [
-                "No0",
-                "Yes1"
+                "QCT",
+                "Not a QCT"
             ],
             "gich_filter": [
                 "Currently Eligible",
@@ -3470,8 +3470,8 @@
                 "unincorporated"
             ],
             "qct_25": [
-                "No0",
-                "Yes1"
+                "QCT",
+                "Not a QCT"
             ],
             "gich_filter": [
                 "Currently Eligible",
@@ -3545,3 +3545,4 @@
 
     }
 }
+
