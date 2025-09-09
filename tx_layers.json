@@ -2701,16 +2701,30 @@
                     8000, "#006837"
                 ],
                 "circle-stroke-width": 0,
-                "circle-opacity": 0.3
+                "circle-opacity": 0.4
         },
         "click": {
             "total_distance": [
                 true,
-                "Total Distance"
+                "Total Distance to 3 Nearest Amenities (Meters)"
             ]
         }
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
