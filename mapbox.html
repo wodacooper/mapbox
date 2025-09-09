@@ -364,12 +364,15 @@ const bounds_dict = {
         max-height: 0px;
     }
 
-    .toggle_checkbox{
-        position:absolute;
+    .toggle_checkbox {
+        position: absolute;
         right: 5px;
-        top: 8px;
+        top: 10px;
         cursor: pointer;
+        height: 16px;
+        width: 16px;
     }
+
     .dropdown_arrow{
         position:absolute;
         left: 10px;
@@ -398,7 +401,7 @@ const bounds_dict = {
     .dropdown-content input[type='checkbox'] + label {
         position: relative; 
         padding-right: 25px;
-        background-color: #fd8c8c;
+        background-color: #fff;
         display: block;
         cursor: pointer;
         padding: 10px;
@@ -407,7 +410,7 @@ const bounds_dict = {
 
     .dropdown-content input[type='checkbox'] + label:hover,
     .dropdown-content input[type='checkbox']:checked + label {
-        background-color: #fd8c8c;
+        background-color: #fff;
     }
     
     .dropdown-content input[type='checkbox']:checked + label:before {
@@ -616,9 +619,9 @@ const bounds_dict = {
     //const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?mn'
     const query_string = window.location.search;
     
-    const query_vals = query_string.split('?')
+    //const query_vals = query_string.split('?')
 
-    //const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'oh']
+    const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'oh']
     
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
@@ -1528,7 +1531,7 @@ const bounds_dict = {
                             }
                         });
                         layer_div.appendChild(toggle_checkbox);
-                        if (layers[layer].cat_filters ||layers[layer].num_filters ){
+                        if (layers[layer].cat_filters || layers[layer].num_filters ){
                             const dropdown_arrow = document.createElement('div')
                             dropdown_arrow.classList.add('dropdown_arrow','fa-solid','fa-caret-right');
                             dropdown_arrow.addEventListener('click',function(){
@@ -1544,13 +1547,14 @@ const bounds_dict = {
                             this.classList.toggle("active");
                             this.nextElementSibling.classList.toggle('show_filters');
                             const dropdown_arrow = this.previousElementSibling;
-                            //toggle the dropdown arrow
-                            if(dropdown_arrow.classList.contains('fa-caret-right')){
-                                dropdown_arrow.classList.remove('fa-solid','fa-caret-right','dropdown_arrow') 
-                                dropdown_arrow.classList.add('fa-solid','fa-caret-down','dropdown_arrow')
-                            }else{
-                                dropdown_arrow.classList.remove('fa-solid','fa-caret-down','dropdown_arrow') 
-                                dropdown_arrow.classList.add('fa-solid','fa-caret-right','dropdown_arrow')
+                            if (dropdown_arrow && dropdown_arrow.classList.contains('dropdown_arrow')) {
+                                if (dropdown_arrow.classList.contains('fa-caret-right')) {
+                                    dropdown_arrow.classList.remove('fa-caret-right');
+                                    dropdown_arrow.classList.add('fa-caret-down');
+                                } else {
+                                    dropdown_arrow.classList.remove('fa-caret-down');
+                                    dropdown_arrow.classList.add('fa-caret-right');
+                                }
                             }
                         });
                         layer_div.appendChild(layer_button);
