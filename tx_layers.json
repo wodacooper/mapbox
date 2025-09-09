@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Test1",
+        "name": "Amenities Heatmap - Need to zoom in on a potential-16 area",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2694,8 +2694,8 @@
                     1500, "#f46d43",
                     2000, "#fdae61",
                     3000, "#d9ef8b",
-                    4000, "#fc8d59", 
-                    5000, "#fee08b", 
+                    4000, "#fee08b", 
+                    5000, "#fc8d59", 
                     6000, "#91cf60", 
                     7000, "#1a9850", 
                     8000, "#006837"
@@ -2712,5 +2712,19 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
