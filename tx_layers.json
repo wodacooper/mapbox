@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Amenities Heatmap1",
+        "name": "Amenities Heatmap",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2684,7 +2684,7 @@
         },
         "visible": false,
         "circle": { 
-                "circle-radius": 8,
+                "circle-radius": 9,
                 "circle-color": [
                     "step",
                     ["get", "total_distance"],
@@ -2705,8 +2705,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
-                    12, 0.2,      
-                    13, 0.35,    
+                    12, 0.15,      
+                    13, 0.25,    
                     14, 0.8
                 ]
         },
