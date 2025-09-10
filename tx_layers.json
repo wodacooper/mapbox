@@ -2683,7 +2683,7 @@
             "visibility": "none"
         },
         "visible": false,
-        "circle": { 
+        "circle": {
                 "circle-radius": 9,
                 "circle-color": [
                     "step",
@@ -2706,7 +2706,7 @@
                     ["linear"],
                     ["zoom"],
                     12, 0.15,      
-                    13, 0.25,    
+                    13, 0.20,    
                     14, 0.8
                 ]
         },
