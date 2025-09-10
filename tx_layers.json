@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Amenities Heatmap",
+        "name": "Amenities Heatmap1",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2705,15 +2705,68 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
-                    12, 0.15,      
-                    13, 0.20,    
+                    12, 0.10,      
+                    13, 0.15,    
                     14, 0.8
                 ]
         },
+        "legend": [
+            [
+                "<500",
+                "#8b0000"
+            ],
+            [
+                "500-1000",
+                "#a50026"
+            ],
+            [
+                "1000-1500",
+                "#d73027"
+            ],
+            [
+                "1500-2000",
+                "#f46d43"
+            ],
+            [
+                "2000-3000",
+                "#fc8d59"                
+            ],
+            [
+                "3000-4000",
+                "#fdae61"                
+            ],
+            [
+                "4000-5000",
+                "#fee08b"
+            ],
+            [
+                "5000-6000",
+                "#d9ef8b"
+            ],
+            [
+                "6000-7000",
+                "#91cf60"
+            ],
+            [
+                "7000-8000",
+                "#1a9850"
+            ],
+            [
+                "9000+",
+                "#006837"
+            ]
+        ],
         "click": {
             "total_distance": [
                 true,
                 "Total Distance to 3 Nearest Amenities (Meters)"
+            ]
+        },
+
+        "num_filter_vals": {
+            "total_distance": [
+                0.0,
+                30000.0
             ]
         }
     }
