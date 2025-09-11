@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Amenities Heatmap1",
+        "name": "Amenities Heatmap",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2689,7 +2689,7 @@
                     "step",
                     ["get", "total_distance"],
                     "#8b0000",     
-                    1500, "#a50026",     
+                    2000, "#a50026",     
                     3000, "#d73027",  
                     5000, "#f46d43",
                     8000, "#fc8d59",
@@ -2759,7 +2759,7 @@
         "click": {
             "total_distance": [
                 true,
-                "Total Distance to 3 Nearest Amenities (Meters)"
+                "Total Distance to 3 Nearest Amenities (Feet)"
             ]
         },
 
