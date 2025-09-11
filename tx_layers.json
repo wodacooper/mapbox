@@ -2675,7 +2675,7 @@
     },
 
     "Test": {
-        "name": "Amenities Heatmap",
+        "name": "Amenities Heatmap1",
         "source_id": "tx_heatmap_source",
         "url": "mapbox://wodacooper.tx_heatmap",
         "source_layer": "hello_world",
@@ -2689,16 +2689,16 @@
                     "step",
                     ["get", "total_distance"],
                     "#8b0000",     
-                    500, "#a50026",     
-                    1000, "#d73027",  
-                    1500, "#f46d43",
-                    2000, "#fc8d59",
-                    3000, "#fdae61",
-                    4000, "#fee08b", 
-                    5000, "#d9ef8b", 
-                    6000, "#91cf60", 
-                    7000, "#1a9850", 
-                    8000, "#006837"
+                    1500, "#a50026",     
+                    3000, "#d73027",  
+                    5000, "#f46d43",
+                    8000, "#fc8d59",
+                    11000, "#fdae61",
+                    14000, "#fee08b", 
+                    17000, "#d9ef8b", 
+                    20000, "#91cf60", 
+                    25000, "#1a9850", 
+                    30000, "#006837"
                 ],
                 "circle-stroke-width": 0,
                 "circle-opacity": [
@@ -2770,7 +2770,7 @@
         "num_filter_vals": {
             "total_distance": [
                 0.0,
-                30000.0
+                31000.0
             ]
         }
     }
