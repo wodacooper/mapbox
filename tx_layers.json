@@ -209,6 +209,70 @@
             ]
         }
     },
+    "jason_sites": {
+        "name": "Potential Sites 9.16.25",
+        "source_id": "jason_sites_091625_source",
+        "url": "mapbox://wodacooper.jason_sites_091625",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#038cfc"
+        },
+        "legend": [
+            [
+                "sites",
+                "#038cfc"
+            ]
+        ],
+        "click": {
+            "ML #": [
+                true,
+                ""
+            ],
+            "Mls Status": [
+                true,
+                ""
+            ],
+            "Parcel Number": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+            "Subdivision Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "CDOM": [
+                true,
+                ""
+            ],
+            "Lot Size Area": [
+                true,
+                ""
+            ],
+            "Current Price": [
+                true,
+                ""
+            ],
+            "City Limits":[
+                true,
+                ""
+            ]
+        }
+    },
     "amenities": {
         "name": "Amenities",
         "source_id": "tx_amenities_source",
@@ -2776,4 +2840,5 @@
     }
 
 }
+
 
