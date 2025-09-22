@@ -306,9 +306,9 @@
         ]
     },
     "score": {
-        "name": "2025 Draft County Pool Rank",
-        "source_id": "nc_basemap_4_4_24",
-        "url": "mapbox://wodacooper.nc_basemap_4_4_24",
+        "name": "2026 Draft County Pool Rank",
+        "source_id": "nc_26_092225",
+        "url": "mapbox://wodacooper.nc_26_092225",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -316,10 +316,10 @@
         "visible": true,
         "line": {
             "line-color": [
-                "match",
+            "match",
                 [
                     "get",
-                    "dhhs"
+                    "Bonus Point"
                 ],
                 1,
                 "#000000",
@@ -329,11 +329,11 @@
                 "match",
                 [
                     "get",
-                    "dhhs"
+                    "Bonus Point"
                 ],
                 1,
-                4,
-                0
+                "#000000",
+                "#FFFFFF"
             ]
         },
         "fill": {
@@ -341,51 +341,21 @@
                 "match",
                 [
                     "get",
-                    "county"
+                    "Rank"
                 ],
-                "Wilson",
+                1,
                 "#00FFFF",
-                "Gaston",
-                "#00FFFF",
-                "Alamance",
-                "#00FFFF",
-                "Durham",
-                "#00FFFF",
-                "New Hanover",
+                2,
                 "#11FF00",
-                "Henderson",
-                "#11FF00",
-                "Cabarrus",
-                "#11FF00",
-                "Wake",
-                "#11FF00",
-                "Pitt",
+                3,
                 "#FF10B7",
-                "Burke",
-                "#FF10B7",
-                "Orange",
-                "#FF10B7",
-                "Mecklenburg",
-                "#FF10B7",
-                "Wayne",
+                4,
                 "#FFEB3B",
-                "Watauga",
-                "#FFEB3B",
-                "Buncombe",
-                "#FFEB3B",
-                "Iredell",
-                "#FFEB3B",
-                "Robeson",
+                5,
                 "#FF9800",
-                "Cleveland",
-                "#FF9800",
-                "Harnett",
-                "#FF9800",
-                "Forsyth",
-                "#FF9800",
-                "Guilford",
+                6,
                 "#8A00AD",
-                "Cumberland",
+                7,
                 "#FFFFFF",
                 "#000000"
             ],
@@ -393,51 +363,21 @@
                 "match",
                 [
                     "get",
-                    "county"
+                    "Rank"
                 ],
-                "New Hanover",
+                1,
                 0.4,
-                "Henderson",
+                2,
                 0.4,
-                "Alamance",
+                3,
                 0.4,
-                "Durham",
+                4,
                 0.4,
-                "Pitt",
+                5,
                 0.4,
-                "Gaston",
+                6,
                 0.4,
-                "Orange",
-                0.4,
-                "Mecklenburg",
-                0.4,
-                "Wilson",
-                0.4,
-                "Burke",
-                0.4,
-                "Cabarrus",
-                0.4,
-                "Wake",
-                0.4,
-                "Wayne",
-                0.4,
-                "Watauga",
-                0.4,
-                "Guilford",
-                0.4,
-                "Iredell",
-                0.4,
-                "Robeson",
-                0.4,
-                "Cleveland",
-                0.4,
-                "Harnett",
-                0.4,
-                "Cumberland",
-                0.4,
-                "Forsyth",
-                0.4,
-                "Buncombe",
+                7,
                 0.4,
                 0
             ]
@@ -477,7 +417,7 @@
                 "#FFFFFF"
             ],
             [
-                "DHHS (Outline)",
+                "DHHS/MID (Outline)",
                 "#000000"
             ]
         ],
@@ -492,19 +432,23 @@
             ]
         },
         "click": {
-            "pool": [
+            "Pool": [
                 true,
                 ""
             ],
-            "county": [
+            "County": [
                 true,
                 ""
             ],
-            "income_designation": [
+            "Income Designation": [
                 true,
                 ""
             ],
-            "dhhs": [
+            "DHHS": [
+                true,
+                ""
+            ],
+            "MID": [
                 true,
                 ""
             ]
@@ -612,12 +556,12 @@
                 "Yadkin",
                 "Yancey"
             ],
-            "income_designation": [
+            "Income Designation": [
                 "High",
                 "Low",
                 "Moderate"
             ],
-            "pool": [
+            "Pool": [
                 "Central",
                 "East",
                 "Metro",
