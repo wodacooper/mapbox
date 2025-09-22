@@ -306,7 +306,7 @@
         ]
     },
     "score": {
-        "name": "2026 Draft County Pool Rank",
+        "name": "2026 Draft County Pool Rank2",
         "source_id": "nc_26",
         "url": "mapbox://wodacooper.nc_26_092225",
         "source_layer": "hello_world",
@@ -383,9 +383,9 @@
             ]
         },
         "cat_filters": {
-            "county": "",
-            "income_designation": "",
-            "pool": ""
+            "County": "",
+            "Income Designation": "",
+            "Pool": ""
         },
         "legend": [
             [
@@ -422,11 +422,11 @@
             ]
         ],
         "hover": {
-            "pool": [
+            "Pool": [
                 true,
                 ""
             ],
-            "county": [
+            "County": [
                 true,
                 ""
             ]
