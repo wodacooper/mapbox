@@ -458,7 +458,7 @@
             ]
         },
         "cat_filter_vals": {
-            "county": [
+            "County": [
                 "Alamance",
                 "Alexander",
                 "Alleghany",
@@ -574,4 +574,5 @@
         }
     }
 }
+
 
