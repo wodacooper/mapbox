@@ -2794,7 +2794,10 @@
                 "Opportunity Zone",
                 "#ffa500"
             ]
-        ]
+        ],
+        "click":{
+            "GEOID":[true,"Tract ID"]
+        }
     }
 
 }
