@@ -2793,12 +2793,12 @@
                 0.5
             ]
         },
-        "legend": 
+        "legend":[
             [
                 "Opportunity Zone",
-                "#ffffff"
+                "#FFA500"
             ]
-
+        ]
     }
 
 }
