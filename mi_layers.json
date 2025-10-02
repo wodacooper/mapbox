@@ -686,9 +686,9 @@
         
     },
     "score_geocode": {
-        "name": "2025 Score w/ Amenities",
-        "source_id": "mi_25_source",
-        "url": "mapbox://wodacooper.mi_25",
+        "name": "",
+        "source_id": "",
+        "url": "",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -1106,4 +1106,5 @@
         }
     }
 }
+
 
