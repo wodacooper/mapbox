@@ -899,7 +899,32 @@
         },
         "visible": false,
 
-
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "median2025"
+                ],
+                "#0000ff",
+                72850,
+                "#ff00ff",
+                83000,
+                "#00ff00",
+                93550,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "median2025"
+                ],
+                0.5,
+                83000,
+                0.3
+            ]
+        },
         "hover": {
              "County_Name": [
                 true,
