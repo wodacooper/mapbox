@@ -891,8 +891,8 @@
     },
     "median_income": {
         "name": "County Median Income",
-        "source_id": "mi_median_income_source",
-        "url": "mapbox://wodacooper.mi_median_income",
+        "source_id": "mi_county_medians_source",
+        "url": "mapbox://wodacooper.mi_county_medians",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
