@@ -902,29 +902,43 @@
         "fill": {
             "fill-color": [
                 "step",
-                [
-                    "get",
-                    "median2025"
-                ],
-                "#0000ff",
+                ["get", "median2025"],
+                "#ff0000",  
                 72850,
-                "#ff00ff",
+                "#ffa500",     
                 83000,
-                "#00ff00",
+                "#ffff00",   
                 93550,
-                "#00ffff"
+                "#00ff00"      
             ],
             "fill-opacity": [
                 "step",
-                [
-                    "get",
-                    "median2025"
-                ],
+                ["get", "median2025"],
                 0.5,
                 83000,
                 0.3
             ]
         },
+
+        "legend": [
+            [
+                "<72,850",
+                "#ff0000"
+            ],
+            [
+                "72,850-83,000",
+                "#ffa500"
+            ],
+            [
+                "83,000-93,550",
+                "#ffff00"
+            ],
+            [
+                "≥93,550",
+                "#00ff00"
+            ]
+        ],
+
         "hover": {
              "County_Name": [
                 true,
@@ -948,6 +962,10 @@
 
         "num_filters": {
             "median2025": "Median Income"
+        },
+
+        "num_filter_vals":{
+            "median2025":[63900,130600]
         }
     }
 }
