@@ -8,6 +8,7 @@
             "visibility": "visible"
         },
         "visible": true,
+        "filter": ["==", ["get", "state"], 4],
         "fill": {
             "fill-color": [
                 "match",
@@ -128,4 +129,5 @@
         ]
     }
 }
+
 
