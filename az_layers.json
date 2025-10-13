@@ -14,7 +14,7 @@
                 ["==", ["get", "state"], 4],
                 [
                     "match",
-                    ["get", "qct"],
+                    ["get", "dda"],
                     1,
                     "#ffffff",
                     "#aeaeae"
