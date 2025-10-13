@@ -14,7 +14,7 @@
                 ["==", ["get", "state"], 4],
                 [
                     "match",
-                    ["get", "qct"],
+                    ["get", "qct_dda"],
                     1,
                     "#ffffff",
                     "#aeaeae"
@@ -132,8 +132,6 @@
         ]
     }
 }
-
-
 
 
 
