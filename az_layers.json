@@ -1,8 +1,8 @@
 {
     "QCT or DDA": {
         "name": "QCT or DDA 2025",
-        "source_id": "az_25",
-        "url": "mapbox://wodacooper.az_25",
+        "source_id": "qct_dda_26",
+        "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -43,7 +43,7 @@
         "click":{
             "pool":[true,""],
             "qct":[true,""],
-            "2025 SDDA (1=SDDA)":[true,"DDA"], 
+            "dda":[true,"DDA"],
             "qct_dda":[true,"qct_dda"]
         },
         "hover": {
@@ -55,7 +55,7 @@
                 true,
                 ""
             ],
-            "2025 SDDA (1=SDDA)": [
+            "dda": [
                 true,
                 "DDA"
             ],
