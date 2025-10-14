@@ -16,9 +16,9 @@
                     ["get", "zone"],
                     "both",
                     "#ffffff",
-                    "qct only",
+                    "qct_only",
                     "#a0a0a0",
-                    "dda only",
+                    "dda_only",
                     "#a0a0a0",
                     "#ffa500"
                 ],
@@ -121,6 +121,7 @@
         ]
     }
 }
+
 
 
 
