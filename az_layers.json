@@ -8,7 +8,7 @@
             "visibility": "visible"
         },
         "visible": true,
-        "perm_filters":[["==","stusps","GA"]],
+        "perm_filters":[["==","state",4]],
 
         "fill": {
             "fill-color": [
@@ -121,6 +121,7 @@
         ]
     }
 }
+
 
 
 
