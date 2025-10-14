@@ -1,6 +1,6 @@
 {
     "QCT or DDA": {
-        "name": "QCT or DDA 20026",
+        "name": "QCT or DDA 2026",
         "source_id": "qct_dda_26",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -8,31 +8,29 @@
             "visibility": "visible"
         },
         "visible": true,
+        "perm_filters":[["==","stusps","GA"]],
+
         "fill": {
             "fill-color": [
-                "case",
-                ["==", ["get", "state"], 4],
-                [
                     "match",
-                    ["get", "qct_dda"],
-                    1,
+                    ["get", "zone"],
+                    "both",
                     "#ffffff",
-                    "#aeaeae"
+                    "qct only",
+                    "#a0a0a0",
+                    "dda only",
+                    "#a0a0a0",
+                    "#ffa500"
                 ],
-                "#cc0000"  
-            ],
-            "fill-opacity": [
-                "case",
-                ["==", ["get", "state"], 4],
+            "fill-opacity": 
                 [
                     "match",
-                    ["get", "qct_dda"],
-                    1,
-                    0.3,
-                    0
-                ],
-                0  
-            ]
+                    ["get", "zone"],
+                    "neither",
+                    0,
+                    0.3
+                ]
+                
         },
         "legend": [
             [
@@ -46,26 +44,17 @@
         ],
         "click":{
             "pool":[true,""],
-            "qct":[true,""],
-            "dda":[true,"DDA"],
-            "qct_dda":[true,"qct_dda"]
+            "zone":[true,""]
+            
         },
         "hover": {
             "pool": [
                 true,
                 ""
             ],
-            "qct": [
+            "zone": [
                 true,
                 ""
-            ],
-            "dda": [
-                true,
-                "DDA"
-            ],
-            "qct_dda": [
-                true,
-                "qct_dda"
             ]
         }
     },
@@ -132,10 +121,6 @@
         ]
     }
 }
-
-
-
-
 
 
 
