@@ -612,7 +612,7 @@
         }
     },
     "soar_sites": {
-        "name": "SOAR1 Sites",
+        "name": "SOAR Sites",
         "source_id": "mi_soar_source",
         "url": "mapbox://wodacooper.mi_soar",
         "source_layer": "hello_world",
@@ -632,7 +632,8 @@
                 "Ann Arbor", "#FF88DF",
                 "Zeeland", "#FF88DF",
                 "Kalkaska", "#FF88DF",
-                "#000000"
+                "Lansing", "#FF88DF",
+                 "#000000"
             ],
             "fill-opacity": [
                 "match",
@@ -971,6 +972,7 @@
         }
     }
 }
+
 
 
 
