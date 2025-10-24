@@ -109,8 +109,8 @@
     },
     "past_projects": {
         "name": "Past Projects 21-25",
-        "source_id": "sc_past_buf",
-        "url": "mapbox://wodacooper.sc_past_buf",
+        "source_id": "sc_past_projects",
+        "url": "mapbox://wodacooper.sc_past_projects",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -158,6 +158,20 @@
             "market": [true, ""],
             "type": [true, ""],
             "app_type": [true, ""]
+        }
+    },
+    "past_projects_buffer": {
+        "name": "Past Projects Radius",
+        "source_id": "sc_past_buf",
+        "url": "mapbox://wodacooper.sc_past_buf",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color":"#a0a0a0",
+            "fill-opacity": 0.5
         }
     },
     "amenities": {
