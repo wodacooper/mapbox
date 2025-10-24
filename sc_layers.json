@@ -108,7 +108,7 @@
         }
     },
     "past_projects": {
-        "name": "Past Projects 21-24",
+        "name": "Past Projects 21-25",
         "source_id": "sc_past_buf",
         "url": "mapbox://wodacooper.sc_past_buf",
         "source_layer": "hello_world",
@@ -121,35 +121,35 @@
             "circle-stroke-width": 2,
             "circle-stroke-color": [
             "match",
-            ["get", "market"],
-            "Older Persons",
-            "#39ff14",
-            "Older",
-            "#39ff14",
-            "Elderly",
-            "#39ff14",
-            "Family",
-            "#ff073a",
-            "#000000"
+                ["get", "market"],
+                "Older Persons",
+                "#39ff14",
+                "Older",
+                "#39ff14",
+                "Elderly",
+                "#39ff14",
+                "Family",
+                "#ff073a",
+                "#000000"
             ],
             "circle-color": [
             "match",
                 ["get","award_year"],
-                2024,
+                2025,
                 "#ffffff",
                 "#a0a0a0"
             ],
             "circle-opacity": [
             "match",
             ["get", "award_year"],
-            2024, 1,
+            2025, 1,
             0.6
             ]
         },
         "legend": [
             ["Family", "#ff073a"],
             ["Older Persons", "#39ff14"],
-            ["2024 Projects","#ffffff"]
+            ["2025 Projects","#ffffff"]
         ],
         "click": {
             "property": [true, ""],
@@ -792,6 +792,7 @@
         }
     }
 }
+
 
 
 
