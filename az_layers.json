@@ -15,12 +15,12 @@
                     "match",
                     ["get", "zone"],
                     "both",
-                    "#ffffff",
+                    "#ffa500",
                     "qct_only",
-                    "#a0a0a0",
+                    "#ffffff",
                     "dda_only",
-                    "#a0a0a0",
-                    "#ffa500"
+                    "#ffffff",
+                    "#a0a0a0"
                 ],
             "fill-opacity": 
                 [
@@ -35,17 +35,20 @@
         "legend": [
             [
                 "QCT and DDA",
-                "#ffffff"
+                "#ffa500"
             ],
            [
                 "QCT or DDA",
+                "#ffffff"
+            ],
+            [
+                "Neither",
                 "#a0a0a0"
             ]
         ],
         "click":{
             "pool":[true,""],
             "zone":[true,""],
-            
             
         },
         "hover": {
@@ -122,6 +125,7 @@
         ]
     }
 }
+
 
 
 
