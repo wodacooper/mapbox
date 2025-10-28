@@ -48,8 +48,7 @@
         ],
         "click":{
             "pool":[true,""],
-            "zone":[true,""],
-            
+            "zone":[true,""]
         },
         "hover": {
             "pool": [
@@ -125,10 +124,4 @@
         ]
     }
 }
-
-
-
-
-
-
 
