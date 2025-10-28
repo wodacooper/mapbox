@@ -1,6 +1,6 @@
 {
     "QCT or DDA": {
-        "name": "QCT or DDA 20026",
+        "name": "QCT or DDA 2026",
         "source_id": "qct_dda_26",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -14,12 +14,12 @@
             "fill-color": [
                     "match",
                     ["get", "zone"],
-                    "both",
-                    "#ffa500",
                     "qct_only",
                     "#ffffff",
                     "dda_only",
                     "#ffffff",
+                    "both",
+                    "#ffa500",
                     "#a0a0a0"
                 ],
             "fill-opacity": 
@@ -124,4 +124,10 @@
         ]
     }
 }
+
+
+
+
+
+
 
