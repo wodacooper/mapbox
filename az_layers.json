@@ -40,10 +40,6 @@
            [
                 "QCT or DDA",
                 "#ffffff"
-            ],
-            [
-                "Neither",
-                "#a0a0a0"
             ]
         ],
         "click":{
@@ -124,6 +120,7 @@
         ]
     }
 }
+
 
 
 
