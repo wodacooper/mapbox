@@ -1,8 +1,8 @@
 {
     "QCT or DDA": {
-        "name": "QCT or DDA 22026",
-        "source_id": "qct_nmtest",
-        "url": "mapbox://wodacooper.qct_nmtest",
+        "name": "QCT or DDA 2026",
+        "source_id": "qct_dda_26",
+        "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -122,6 +122,7 @@
         ]
     }
 }
+
 
 
 
