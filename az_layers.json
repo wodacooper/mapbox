@@ -1,8 +1,8 @@
 {
     "QCT or DDA": {
         "name": "QCT or DDA 2026",
-        "source_id": "qct_dda_26",
-        "url": "mapbox://wodacooper.qct_dda_26",
+        "source_id": "qct_nmtest",
+        "url": "mapbox://wodacooper.qct_nmtest",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -17,17 +17,17 @@
                     "qct_only",
                     "#ffffff",
                     "dda_only",
-                    "#ffffff",
+                    "#a0a0a0",
                     "both",
                     "#ffa500",
-                    "#a0a0a0"
+                    "#000000"
                 ],
             "fill-opacity": 
                 [
                     "match",
                     ["get", "zone"],
                     "neither",
-                    0.1,
+                    0,
                     0.65
                 ]
                 
@@ -38,19 +38,21 @@
                 "#ffa500"
             ],
            [
-                "QCT or DDA",
+                "QCT",
                 "#ffffff"
+            ],
+            [
+                "DDA",
+                "#a0a0a0"
             ]
         ],
         "click":{
-            "pool":[true,""],
-            "zone":[true,""]
+            "zone":[true,""],
+            "VLIL_60%":[true,""],
+            "FMR":[true,""],
+            "Rent_Limit":[true,""]
         },
         "hover": {
-            "pool": [
-                true,
-                ""
-            ],
             "zone": [
                 true,
                 ""
@@ -120,6 +122,7 @@
         ]
     }
 }
+
 
 
 
