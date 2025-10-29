@@ -57,6 +57,11 @@
                 true,
                 ""
             ]
+        },
+        "num_filters":{
+            "fmr_24":"2br FMR",
+            "vlil_4_24":"4-Person VLIL",
+            "rent_limit_24":"60% AMI max rent"
         }
     },
 
@@ -122,6 +127,7 @@
         ]
     }
 }
+
 
 
 
