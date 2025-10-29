@@ -1,72 +1,61 @@
 {
     "qct_dda": {
-        "name": "2025 QCT/DDAs",
-        "source_id": "qct_dda_25_source",
-        "url": "mapbox://wodacooper.qct_dda_25",
+        "name": "2026 QCT/DDAs",
+        "source_id": "qct_dda_26",
+        "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
         "visible": false,
-        "perm_filters":[["==","stusps","IL"]],
+        "perm_filters":[["==","state",17]],
         "fill": {
             "fill-color": [
-                "match",
-                [
-                    "get",
-                    "qct_25"
+                    "match",
+                    ["get", "zone"],
+                    "qct_only",
+                    "#ffffff",
+                    "dda_only",
+                    "#a0a0a0",
+                    "both",
+                    "#ffa500",
+                    "#000000"
                 ],
-                1,
-                "#ffffff",
-                "#a0a0a0"
-            ],
-            "fill-opacity": [
-                "match",
+            "fill-opacity": 
                 [
-                    "get",
-                    "boost_25"
-                ],
-                1,
-                0.5,
-                0 
-            ]
+                    "match",
+                    ["get", "zone"],
+                    "neither",
+                    0,
+                    0.65
+                ]
+                
         },
         "legend": [
             [
+                "QCT and DDA",
+                "#ffa500"
+            ],
+           [
                 "QCT",
                 "#ffffff"
             ],
-           [
+            [
                 "DDA",
                 "#a0a0a0"
             ]
         ],
         "click":{
-            "qct_25":[true,""], 
-            "sadda_25":[true,""],
-            "nmdda_25":[true,""],
-            "new_boost":[true,""],
-            "metro":[true,""], 
-            "hud_area_name":[true,""], 
-            "fmr_24":[true,"2br FMR"],
-            "vlil_4_24": [true, "4-Person VLIL"],
-            "rent_limit_24":[true,"4-Person VLIL rent"]
+            "zone":[true,""],
+            "VLIL_60%":[true,""],
+            "FMR":[true,""],
+            "Rent_Limit":[true,""]
         },
-        "num_filters":{
-            "fmr_24":"2br FMR",
-            "vlil_4_24":"4-Person VLIL",
-            "rent_limit_24":"60% AMI max rent"
-        },
-        "cat_filters":{
-            "new_boost":"New QCT/DDA in 2025"
-        },
-        "cat_filter_vals":{
-            "new_boost":["New QCT/DDA in 2025"]
-        },
-        "num_filter_vals":{
-            "fmr_24":[390.0,4780.0],
-            "vlil_4_24":[31150.0,77350.0],
-            "rent_limit_24":[934.5,2320.5]
+        "hover": {
+            "zone": [
+                true,
+                ""
+            ]
         }
     },
      "Prev Projects": {
@@ -7493,3 +7482,4 @@
        
     }
 }
+
