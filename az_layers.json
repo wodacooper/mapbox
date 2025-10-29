@@ -1,6 +1,6 @@
 {
     "QCT or DDA": {
-        "name": "QCT or DDA 20026",
+        "name": "QCT or DDA 2026",
         "source_id": "qct_dda_26",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -57,12 +57,8 @@
                 true,
                 ""
             ]
-        },
-        "num_filters":{
-            "fmr_24":"2br FMR",
-            "vlil_4_24":"4-Person VLIL",
-            "rent_limit_24":"60% AMI max rent"
         }
+        
     },
 
     "Pool": {
@@ -127,7 +123,6 @@
         ]
     }
 }
-
 
 
 
