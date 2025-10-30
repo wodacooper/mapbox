@@ -356,11 +356,13 @@
             "Region_1": "Region",
             "Place Name": "City",
             "County_1": "County",
-            "pts_oi": "Opportunity Index"
+            "pts_oi": "Opportunity Index",
+            "Median Household Income Quartile": ""
         },
         "num_filters": {
             "score": "",
-            "score_t": "Score w/ Transit"
+            "score_t": "Score w/ Transit",
+            "Poverty Rate": ""
         },
         "legend": [
             [
@@ -2661,6 +2663,12 @@
             "pts_oi": [
                 "0",
                 "7"
+            ],
+            "Median Household Income Quartile": [
+                "1q",
+                "2q",
+                "3q",
+                "4q"
             ]
         },
         "num_filter_vals": {
@@ -2671,6 +2679,10 @@
             "score_t": [
                 0.0,
                 16.0
+            ],
+            "Poverty Rate": [
+                0.0,
+                100
             ]
         }
     },
@@ -2801,5 +2813,6 @@
     }
 
 }
+
 
 
