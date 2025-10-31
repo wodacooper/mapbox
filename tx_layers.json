@@ -303,7 +303,7 @@
         }
     },
     "score": {
-        "name": "20266 Score",
+        "name": "2026 Score",
         "source_id": "tx_26_source",
         "url": "mapbox://wodacooper.tx_26",
         "source_layer": "hello_world",
@@ -2803,6 +2803,7 @@
     }
 
 }
+
 
 
 
