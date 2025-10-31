@@ -7,7 +7,7 @@
         "layout": {
             "visibility": "visible"
         },
-        "visible": true
+        "visible": true,
         "perm_filters":[["==","state",47]],
 
         "fill": {
@@ -144,6 +144,7 @@
         }
     }
 }
+
 
 
 
