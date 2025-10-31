@@ -8,7 +8,7 @@
             "visibility": "none"
         },
         "visible": false,
-        "perm_filters":[["==","state",4]],
+        "perm_filters":[["==","state",42]],
 
         "fill": {
             "fill-color": [
@@ -699,4 +699,5 @@
         }
     }
 }
+
 
