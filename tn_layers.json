@@ -1,8 +1,8 @@
 {
      "qct_dda": {
         "name": "2026 QCT/DDAs",
-        "source_id": "qct_dda_26",
-        "url": "mapbox://wodacooper.qct_dda_26",
+        "source_id": "tn_qctdda",
+        "url": "mapbox://wodacooper.tn_qctdda",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -144,6 +144,7 @@
         }
     }
 }
+
 
 
 
