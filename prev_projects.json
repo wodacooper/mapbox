@@ -125,8 +125,8 @@
         },
         "hover":{
             "Community Name:":[true,""],
-            "Housing Units":[true, "Number of Units"],
-            "Status(IO/UC/ID)":[true, "Status"]
+            "num_units":[true, "Number of Units"],
+            "Status (IO/UC/ID)":[true, "Status"]
         },
         
         "click":{
@@ -134,14 +134,14 @@
             "Community Address":[true,""],
             "City/Village":[true,""],
             "State":[true,""],
-            "Housing Units":[true, "Number of Units"],
+            "num_units":[true, "Number of Units"],
             "Status(IO/UC/ID)":[true, "Status"]
         },
         "num_filters":{
-            "Housing Units":"Number of Units"
+            "num_units":"Number of Units"
         },
         "num_filter_vals":{
-            "Housing Units":[3,144]
+            "num_units":[3,144]
         },
 
         "cat_filters":{
