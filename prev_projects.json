@@ -1,5 +1,5 @@
 {
-    "Previous Projects": {
+    "All Previous Projects": {
         "name": "Previous Projects",
         "source_id": "previous_projects",
         "url": "mapbox://wodacooper.previous_projects",
@@ -23,10 +23,13 @@
         
         "click":{
             "project":[true,""],
+            "proj_add":[true, "Project Address"],
+            "proj_cty":[true, "Project City"],
             "proj_st":[true, "State"],
             "n_units":[true, "Total number of Units"],
             "li_units":[true, "Number of Low Income Units"],
             "yr_pis":[true, "Year Put in Service (9999/8888 = Year Missing/Not Confirmed)"],
+            "rentassist":[true, "Rental Assistance Contract"],
             "non_prof":[true, "Non Profit?"],
             "credit":[true, ""]
         },
@@ -102,5 +105,22 @@
                 "WY"
             ]
         }
+    },
+    
+    "Woda Cooper Previous Projects":{
+         "name": "Woda Cooper Previous Projects",
+        "source_id": "woda_projects",
+        "url": "mapbox://wodacooper.woda_projects",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+         "circle": {
+            "circle-radius": 5,
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "#ff0000"
+        }
+
     }
 }
