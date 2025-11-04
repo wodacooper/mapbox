@@ -109,7 +109,7 @@
     },
     
     "Woda Cooper Previous Projects":{
-         "name": "Woda Cooper Previous Projects",
+         "name": "Woda Cooper Projects",
         "source_id": "woda_projects",
         "url": "mapbox://wodacooper.woda_projects",
         "source_layer": "hello_world",
@@ -122,7 +122,54 @@
             "circle-radius": 5,
             "circle-stroke-width": 2,
             "circle-stroke-color": "#FFFF00"
-        }
+        },
+        "hover":{
+            "Community Name:":[true,""],
+            "Housing Units":[true, "Number of Units"],
+            "Status(IO/UC/ID)":[true, "Status"]
+        },
+        
+        "click":{
+            "Community Name:":[true,""],
+            "Community Address":[true,""],
+            "City/Village":[true,""],
+            "State":[true,""],
+            "Housing Units":[true, "Number of Units"],
+            "Status(IO/UC/ID)":[true, "Status"]
+        },
+        "num_filters":{
+            "Housing Units":"Number of Units"
+        },
+        "num_filter_vals":{
+            "Housing Units":[3,144]
+        },
 
+        "cat_filters":{
+            "proj_st":"State"
+        },
+        "cat_filter_vals":{
+            "State": [
+                "AZ",
+                "FL",
+                "GA",
+                "IL",
+                "IN",
+                "IA",
+                "KY",
+                "MD",
+                "MI",
+                "MN",
+                "NM",
+                "NC",
+                "OH",
+                "PA",
+                "SC",
+                "TN",
+                "TX",
+                "VA",
+                "WV",
+                "WI"
+            ]
+        }
     }
 }
