@@ -135,20 +135,20 @@
             "City/Village":[true,""],
             "State":[true,""],
             "num_units":[true, "Number of Units"],
-            "Status(IO/UC/ID)":[true, "Status"]
+            "Status (IO/UC/ID)":[true, "Status"]
         },
         "num_filters":{
             "num_units":"Number of Units"
         },
         "num_filter_vals":{
-            "num_units": [3,144]
+            "num_units":[3,144]
         },
 
         "cat_filters":{
             "proj_st":"State"
         },
         "cat_filter_vals":{
-            "proj_st": [
+            "State": [
                 "AZ",
                 "FL",
                 "GA",
