@@ -13,6 +13,94 @@
             "circle-radius": 2,
             "circle-stroke-width": 1,
             "circle-stroke-color": "#ff0000"
+        },
+
+        "hover":{
+            "n_units":[true, "Total number of Units"],
+            "li_units":[true, "Number of Low Income Units"],
+            "yr_pis":[true, "Year Put in Service (9999/8888 = Year Missing/Not Confirmed)"]
+        },
+        
+        "click":{
+            "project":[true,""],
+            "proj_st":[true, "State"],
+            "n_units":[true, "Total number of Units"],
+            "li_units":[true, "Number of Low Income Units"],
+            "yr_pis":[true, "Year Put in Service (9999/8888 = Year Missing/Not Confirmed)"],
+            "non_prof":[true, "Non Profit?"],
+            "credit":[true, ""]
+        },
+
+        "num_filters":{
+            "yr_pis":"Year Put in Service",
+            "n_units":"Number of Units"
+        },
+        "num_filter_vals":{
+            "yr_pis":[1987,2023],
+            "n_units":[0,2025]
+        },
+
+        "cat_filters":{
+            "proj_st":"State"
+        },
+        "cat_filter_vals":{
+            "proj_st": [
+                "AK",
+                "AS",
+                "AZ",
+                "AR",
+                "CA",
+                "CO",
+                "CT",
+                "DE",
+                "DC",
+                "FL",
+                "GA",
+                "GU",
+                "HI",
+                "ID",
+                "IL",
+                "IN",
+                "IA",
+                "KS",
+                "KY",
+                "LA",
+                "ME",
+                "MD",
+                "MA",
+                "MI",
+                "MN",
+                "MS",
+                "MO",
+                "MT",
+                "NE",
+                "NV",
+                "NH",
+                "NJ",
+                "NM",
+                "NY",
+                "NC",
+                "ND",
+                "MP",
+                "OH",
+                "OK",
+                "OR",
+                "PA",
+                "PR",
+                "RI",
+                "SC",
+                "SD",
+                "TN",
+                "TX",
+                "UT",
+                "VT",
+                "VA",
+                "VI",
+                "WA",
+                "WV",
+                "WI",
+                "WY"
+            ]
         }
     }
 }
