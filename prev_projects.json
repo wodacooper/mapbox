@@ -109,7 +109,7 @@
     },
     
     "Woda Cooper Previous Projects":{
-         "name": "Woda 1Cooper Projects",
+         "name": "Woda Cooper Projects",
         "source_id": "woda_projects",
         "url": "mapbox://wodacooper.woda_projects",
         "source_layer": "hello_world",
@@ -141,14 +141,14 @@
             "num_units":"Number of Units"
         },
         "num_filter_vals":{
-            "num_units":[3,144]
+            "num_units": [3,144]
         },
 
         "cat_filters":{
             "proj_st":"State"
         },
         "cat_filter_vals":{
-            "State": [
+            "proj_st": [
                 "AZ",
                 "FL",
                 "GA",
