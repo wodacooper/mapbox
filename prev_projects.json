@@ -117,10 +117,10 @@
         },
         "visible": true,
          "circle": {
-             "circle-color": "#ffffff",
+             "circle-color": "#4287f5",
             "circle-radius": 5,
             "circle-stroke-width": 2,
-            "circle-stroke-color": "#4287f5"
+            "circle-stroke-color": "#CFFF04"
         }
 
     }
