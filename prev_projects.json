@@ -1,6 +1,6 @@
 {
     "Previous Projects": {
-        "name": "Previous Projects1",
+        "name": "Previous Projects",
         "source_id": "previous_projects",
         "url": "mapbox://wodacooper.previous_projects",
         "source_layer": "hello_world",
@@ -10,8 +10,8 @@
         "visible": true,
         
          "circle": {
-            "circle-radius": 2,
-            "circle-stroke-width": 1,
+            "circle-radius": 5,
+            "circle-stroke-width": 2,
             "circle-stroke-color": "#ff0000"
         },
 
