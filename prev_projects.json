@@ -17,6 +17,7 @@
         },
 
         "hover":{
+            "project":[true,""],
             "n_units":[true, "Total number of Units"],
             "li_units":[true, "Number of Low Income Units"],
             "yr_pis":[true, "Year Put in Service (9999/8888 = Year Missing/Not Confirmed)"]
