@@ -637,7 +637,10 @@ const bounds_dict = {
         attributionControl: false
     }).addControl(new mapboxgl.AttributionControl({
         compact: true
+        
     }));
+    map.addControl(new mapboxgl.FullscreenControl());
+
     /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
             const query = await fetch(
@@ -1278,6 +1281,8 @@ const bounds_dict = {
             });
         
             map.on('mousemove', hover_layers, (e) => {
+                if (e.originalEvent.pointerType && e.originalEvent.pointerType !== 'mouse') return; // ignore touch
+
                 let table = ['<div style="line-height: 100%">']
                 for (layer_name of hover_layers) {
                     layer = layer_name.split('@')[0];
@@ -1310,145 +1315,139 @@ const bounds_dict = {
             });
            
             map.on('click', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
+                if (draw.getMode() !== 'simple_select') return;
+
+                if (!allow_click) {
+                    allow_click = true;
+                    return;
+                }
+
+                let table = ['<div style="line-height: 100%">'];
+                for (const layer_name of click_layers) {
+                    const layer = layer_name.split('@')[0];
+                    if (map.getLayoutProperty(layer_name, 'visibility') === 'visible') {
+                        const feature = map.queryRenderedFeatures(e.point, { layers: [layer_name] })[0];
+                        if (feature) {
+                            table.push(`<h3>${layers[layer].name}</h3>`);
+                            const click_cats = layers[layer]['click'];
+                            for (const [cat, args] of Object.entries(click_cats)) {
+                                const value = feature.properties[cat];
+                                if (value || value === 0) {
+                                    if (args[0]) {
+                                        table.push(`<h4>${args[1] || cat}</h4>`);
+                                    }
+                                    table.push(`<p>${value}</p>`);
                                 }
                             }
-                        };
-                        table.push('</div>')
-                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
-                        .setLngLat(e.lngLat)
-                        .setHTML(table.join(''))
-                        .addTo(map);
-                        
-                    } else {
-                        allow_click = true;
-                    };
-                    
-                } else {
-                    allow_click = false;
-                };
+                        }
+                    }
+                }
+                table.push('</div>');
+
+                new mapboxgl.Popup({
+                    className: 'popup-box',
+                    anchor: 'top-left'
+                }).setLngLat(e.lngLat)
+                .setHTML(table.join(''))
+                .addTo(map);
             });
 
-            //Code for mobile optimization for enabling the touch and zoom functions
-            map.on('touchstart', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
-                                }
-                            }
-                        };
-                        table.push('</div>')
-                        const touch_screen = new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'}).trackPointer()
-                        touch_screen.addTo(map)
-                        .setLngLat(e.lngLat)
-                        .setHTML(table.join(''))
-                        .addTo(map);
+            // //Code for mobile optimization for enabling the touch and zoom functions
+            // map.on('touchstart', click_layers, (e) => {
+            //     console.log(draw.getMode());
+            //     if (draw.getMode() == 'simple_select') {
+            //         if (allow_click){
+            //             let table = ['<div style="line-height: 100%">']
+            //             for (layer_name of click_layers) {
+            //                 layer = layer_name.split('@')[0];
+            //                 if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
+            //                     feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
+            //                     if (feature) {
+            //                         console.log(feature)
+            //                         table.push(`<h3>${layers[layer].name}</h3>`)
+            //                         const click_cats = layers[layer]['click'];
+            //                         for (let [cat, args] of Object.entries(click_cats)){
+            //                             let value = feature.properties[cat];
+            //                             if (value||value == 0){
+            //                                 if(args[0]){
+            //                                     if(args[1]==""){
+            //                                         table.push(`<h4>${cat}</h4>`);
+            //                                     } else{
+            //                                         table.push(`<h4>${args[1]}</h4>`);
+            //                                     }
+            //                                 }
+            //                                 table.push(`<p>${value}</p>`);
+            //                             }
+            //                         };                        
+            //                     }
+            //                 }
+            //             };
+            //             table.push('</div>')
+            //             const touch_screen = new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'}).trackPointer()
+            //             touch_screen.addTo(map)
+            //             .setLngLat(e.lngLat)
+            //             .setHTML(table.join(''))
+            //             .addTo(map);
 
-                        map.on('touchstart', click_layers, (e) => {
-                            touch_screen.remove()
-                        });
+            //             map.on('touchstart', click_layers, (e) => {
+            //                 touch_screen.remove()
+            //             });
 
-                    } else {
-                        allow_click = true;
-                    };
+            //         } else {
+            //             allow_click = true;
+            //         };
                     
-                } else {
-                    allow_click = false;
-                };
-            });
+            //     } else {
+            //         allow_click = false;
+            //     };
+            // });
 
-            //Code for mobile optimization for enabling the touch and zoom functions
-            map.on('touchmove', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
-                                }
-                            }
-                        };
-                        table.push('</div>')
-                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
-                        .setLngLat(e.lngLat)
-                        .addTo(map);
+            // //Code for mobile optimization for enabling the touch and zoom functions
+            // map.on('touchmove', click_layers, (e) => {
+            //     console.log(draw.getMode());
+            //     if (draw.getMode() == 'simple_select') {
+            //         if (allow_click){
+            //             let table = ['<div style="line-height: 100%">']
+            //             for (layer_name of click_layers) {
+            //                 layer = layer_name.split('@')[0];
+            //                 if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
+            //                     feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
+            //                     if (feature) {
+            //                         console.log(feature)
+            //                         table.push(`<h3>${layers[layer].name}</h3>`)
+            //                         const click_cats = layers[layer]['click'];
+            //                         for (let [cat, args] of Object.entries(click_cats)){
+            //                             let value = feature.properties[cat];
+            //                             if (value||value == 0){
+            //                                 if(args[0]){
+            //                                     if(args[1]==""){
+            //                                         table.push(`<h4>${cat}</h4>`);
+            //                                     } else{
+            //                                         table.push(`<h4>${args[1]}</h4>`);
+            //                                     }
+            //                                 }
+            //                                 table.push(`<p>${value}</p>`);
+            //                             }
+            //                         };                        
+            //                     }
+            //                 }
+            //             };
+            //             table.push('</div>')
+            //             new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
+            //             .setLngLat(e.lngLat)
+            //             .addTo(map);
                         
-                        touch_screen.setHTML(table.join(''));
-                        if (!touch_screen.isOpen()){touch_screen.addTo(map)}
+            //             touch_screen.setHTML(table.join(''));
+            //             if (!touch_screen.isOpen()){touch_screen.addTo(map)}
                         
-                    } else {
-                        allow_click = true;
-                    };
+            //         } else {
+            //             allow_click = true;
+            //         };
                     
-                } else {
-                    allow_click = false;
-                };
-            });
+            //     } else {
+            //         allow_click = false;
+            //     };
+            // });
 
             function updateLayerFilter(evt) {
                 // get an array of icon names that corresponds to the currently checked checkboxes
