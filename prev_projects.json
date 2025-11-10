@@ -141,7 +141,7 @@
         },
         "visible": true,
          "circle": {
-            "circle-color": "#ffffff",
+            "circle-color": "#000000",
             "circle-radius": 5,
             "circle-stroke-width": 3,
             "circle-stroke-color": "#FFFF00"
