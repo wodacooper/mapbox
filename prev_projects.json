@@ -12,7 +12,7 @@
          "circle": {
             "circle-color": "#808080",
             "circle-radius": 5,
-            "circle-stroke-width": 2,
+            "circle-stroke-width": 3,
             "circle-stroke-color": [
                 "interpolate",
                 ["linear"],
@@ -28,7 +28,24 @@
             "li_units":[true, "Number of Low Income Units"],
             "yr_pis":[true, "Year Put in Service (9999/8888 = Year Missing/Not Confirmed)"]
         },
-        
+        "legend": [
+            [
+                "0-50 Units",
+                "#E74C3C"
+            ],
+           [
+                "50-100 Units",
+                "#58D68D"
+            ],
+            [
+                "100-150 Units",
+                "#F5B041"
+            ],
+            [
+                "150+ Units",
+                "#48C9B0"
+            ]
+        ],
         "click":{
             "project":[true,""],
             "proj_add":[true, "Project Address"],
