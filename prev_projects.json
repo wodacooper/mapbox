@@ -16,7 +16,7 @@
             "circle-stroke-color": [
                 "interpolate",
                 ["linear"],
-                ["get", "value"],
+                ["get", "n_units"],
                 0, "#48C9B0",
                 50, "#58D68D",
                 100, "#F5B041",
