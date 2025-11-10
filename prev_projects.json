@@ -1,6 +1,6 @@
 {
     "All Previous Projects": {
-        "name": "All Previous2 Projects",
+        "name": "All Previous Projects",
         "source_id": "previous_projects",
         "url": "mapbox://wodacooper.previous_projects",
         "source_layer": "hello_world",
@@ -16,7 +16,7 @@
             "circle-stroke-color": [
                  "step",
                 ["get", "n_units"],
-                0, "#E74C3C",
+                "#E74C3C",
                 50, "#58D68D",
                 100, "#F5B041",
                 150, "#48C9B0"
