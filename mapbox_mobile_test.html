@@ -1349,9 +1349,16 @@ const bounds_dict = {
                 .setHTML(table.join(''))
                 .addTo(map);
             });
+            
+            let touchPopup = null;
 
             function showClickPopup(e) {
                 if (draw.getMode() !== 'simple_select') return;
+
+                if (touchPopup) {
+                    touchPopup.remove();
+                    touchPopup = null;
+                }
 
                 let table = ['<div style="line-height: 100%">'];
 
@@ -1379,7 +1386,7 @@ const bounds_dict = {
 
                 table.push('</div>');
 
-                new mapboxgl.Popup({ className: 'popup-box', anchor: 'top-left' })
+                touchPopup = new mapboxgl.Popup({ className: 'popup-box', anchor: 'top-left' })
                     .setLngLat(e.lngLat)
                     .setHTML(table.join(''))
                     .addTo(map);
