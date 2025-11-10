@@ -13,11 +13,17 @@
             "circle-color": "#808080",
             "circle-radius": 5,
             "circle-stroke-width": 2,
-            "circle-stroke-color": "#FF5F1F"
+            "circle-stroke-color": [
+                "interpolate",
+                ["linear"],
+                ["get", "value"],
+                0, "#48C9B0",
+                50, "#58D68D",
+                100, "#F5B041",
+                150, "#E74C3C"
+                ]
         },
-
         "hover":{
-            "project":[true,""],
             "n_units":[true, "Total number of Units"],
             "li_units":[true, "Number of Low Income Units"],
             "yr_pis":[true, "Year Put in Service (9999/8888 = Year Missing/Not Confirmed)"]
