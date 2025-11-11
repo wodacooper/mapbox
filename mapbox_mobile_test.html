@@ -755,7 +755,7 @@ const bounds_dict = {
     }
 }
     if (isMobile()) { // use custom js to force fullscreen, prone to bugs
-        map.addControl(new CustomFullscreenControl());
+        map.addControl(new MobileFullScreenControl(), 'bottom-left');
     }
     else {
         map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}), 'bottom-left');
