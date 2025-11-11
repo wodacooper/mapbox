@@ -509,11 +509,11 @@ const bounds_dict = {
     .mapboxgl-ctrl-geocoder {
         min-width: 250px;
         max-width: 400px;
-        position: relative;
+        /* position: relative; */
     }
     @media (max-width:600px) {
         .mapboxgl-ctrl-geocoder{
-            min-width: 90px;
+            min-width: 75px;
             max-width: 250px;
             
         } 
@@ -707,6 +707,9 @@ const bounds_dict = {
     var click_layers = [];
     var layers;
     
+    function isMobile() {
+        return window.matchMedia('(max-width: 600px)').matches;
+    }
 
     map.on('load', () => {
         get_json().then(data => {
@@ -731,8 +734,14 @@ const bounds_dict = {
             });
             
             const layer_list = document.createElement('div');
-            layer_box.appendChild(layer_list);
 
+            if (isMobile()) {
+                layer_list.style.display = 'none';
+                dropdown_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn');
+                dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn');
+            }
+            
+            layer_box.appendChild(layer_list);
             layer_box.appendChild(dropdown_btn);
 
             //Dropdown button for the legend box in the bottom right
@@ -750,9 +759,16 @@ const bounds_dict = {
                     legend_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
                 }
             });
+
             legend_box.appendChild(legend_btn);
-            
             const legend_inner = document.createElement('div');
+
+            if (isMobile()) {
+                legend_inner.style.display = 'none';
+                legend_btn.classList.remove('fa-solid','fa-caret-down','legend_btn');
+                legend_btn.classList.add('fa-solid','fa-caret-up','legend_btn');
+            }
+
             legend_box.appendChild(legend_inner);
             
             for (const layer of Object.keys(layers).reverse()){
@@ -1430,9 +1446,9 @@ const bounds_dict = {
 
                 const dx = Math.abs(e.point.x - touchStartPoint.x);
                 const dy = Math.abs(e.point.y - touchStartPoint.y);
-                const TAP_THRESHOLD = 10;
+                const threshold= 10;
 
-                if (dx < TAP_THRESHOLD && dy < TAP_THRESHOLD) {
+                if (dx < threshold && dy < threshold) { // if user start -> end tap dist is less than threshold, treat it as a click
                     showClickPopup(e);
                 }
 
