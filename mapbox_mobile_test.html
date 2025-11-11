@@ -673,7 +673,9 @@ const bounds_dict = {
         compact: true
         
     }));
-    // map.addControl(new mapboxgl.FullscreenControl());
+    //map.addControl(new mapboxgl.FullscreenControl());
+
+    map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}), 'bottom-left');
 
     /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
@@ -1455,7 +1457,7 @@ const bounds_dict = {
                 const dy = Math.abs(e.point.y - touchStartPoint.y);
                 const threshold= 10;
 
-                if (dx < threshold && dy < threshold) { // if user start -> end tap dist is less than threshold, treat it as a click
+                if (dx < threshold && dy < threshold) { // if user start -> end tap dist is less than threshold, click
                     showClickPopup(e);
                 }
 
