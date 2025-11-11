@@ -509,7 +509,7 @@ const bounds_dict = {
     .mapboxgl-ctrl-geocoder {
         min-width: 250px;
         max-width: 400px;
-        /* position: relative; */
+        position: relative;
     }
     @media (max-width:600px) {
         .mapboxgl-ctrl-geocoder{
@@ -543,12 +543,19 @@ const bounds_dict = {
         }
         .mapboxgl-ctrl-geocoder--input {
             padding-left: 30px;
+            max-width: 235px;
         }
     }
 
     .mapboxgl-ctrl-top-right .mapboxgl-ctrl-group{
         display: flex;
         flex-direction: row;
+    }
+
+    @media (max-width: 600px) {
+        .mapboxgl-ctrl-top-right .mapboxgl-ctrl{
+            margin: 5px 5px 0 0;
+        }
     }
     
     .popup {
@@ -740,7 +747,7 @@ const bounds_dict = {
                 dropdown_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn');
                 dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn');
             }
-            
+
             layer_box.appendChild(layer_list);
             layer_box.appendChild(dropdown_btn);
 
