@@ -675,8 +675,92 @@ const bounds_dict = {
     }));
     //map.addControl(new mapboxgl.FullscreenControl());
 
-    map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}), 'bottom-left');
-
+    class MobileFullScreenControl {
+    onAdd(map) {
+        this._map = map;
+        this._container = document.createElement('div');
+        this._container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group';
+        
+        this._fullscreenButton = document.createElement('button');
+        this._fullscreenButton.className = 'mapboxgl-ctrl-icon mapboxgl-ctrl-fullscreen';
+        this._fullscreenButton.type = 'button';
+        this._fullscreenButton.setAttribute('aria-label', 'Toggle fullscreen');
+        
+        this._fullscreenButton.addEventListener('click', () => {
+            if (this._isFullscreen()) {
+                this._exitFullscreen();
+            } else {
+                this._requestFullscreen();
+            }
+        });
+        
+        this._container.appendChild(this._fullscreenButton);
+        
+        // listen for fullscreen changes to update button icon
+        document.addEventListener('fullscreenchange', () => this._updateIcon());
+        document.addEventListener('webkitfullscreenchange', () => this._updateIcon());
+        document.addEventListener('mozfullscreenchange', () => this._updateIcon());
+        document.addEventListener('MSFullscreenChange', () => this._updateIcon());
+        
+        return this._container;
+    }
+    
+    onRemove() {
+        this._container.parentNode.removeChild(this._container);
+        this._map = undefined;
+    }
+    
+    _isFullscreen() {
+        return !!(document.fullscreenElement || 
+                document.webkitFullscreenElement || 
+                document.mozFullScreenElement || 
+                document.msFullscreenElement);
+    }
+    
+    _requestFullscreen() {
+        const element = document.body;
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+        }
+    }
+    
+    _exitFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+    
+    _updateIcon() {
+        if (this._isFullscreen()) {
+            this._fullscreenButton.classList.add('mapboxgl-ctrl-shrink');
+            this._fullscreenButton.classList.remove('mapboxgl-ctrl-fullscreen');
+        } else {
+            this._fullscreenButton.classList.remove('mapboxgl-ctrl-shrink');
+            this._fullscreenButton.classList.add('mapboxgl-ctrl-fullscreen');
+        }
+        
+        this._map.resize();
+    }
+}
+    if (isMobile()) { // use custom js to force fullscreen, prone to bugs
+        map.addControl(new CustomFullscreenControl());
+    }
+    else {
+        map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}), 'bottom-left');
+    }
+    
     /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
             const query = await fetch(
