@@ -677,87 +677,87 @@ const bounds_dict = {
         
     }));
 
-    class MobileFullScreenControl {
-        onAdd(map) {
-            this._map = map;
-            this._container = document.createElement('div');
-            this._container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group';
+    // class MobileFullScreenControl {
+    //     onAdd(map) {
+    //         this._map = map;
+    //         this._container = document.createElement('div');
+    //         this._container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group';
             
-            this._fullscreenButton = document.createElement('button');
-            this._fullscreenButton.className = 'mapboxgl-ctrl-fullscreen';
-            this._fullscreenButton.type = 'button';
-            this._fullscreenButton.setAttribute('aria-label', 'Toggle fullscreen');
+    //         this._fullscreenButton = document.createElement('button');
+    //         this._fullscreenButton.className = 'mapboxgl-ctrl-fullscreen';
+    //         this._fullscreenButton.type = 'button';
+    //         this._fullscreenButton.setAttribute('aria-label', 'Toggle fullscreen');
             
-            this._iconSpan = document.createElement('span');
-            this._iconSpan.className = 'mapboxgl-ctrl-icon';
-            this._iconSpan.setAttribute('aria-hidden', 'true');
-            this._iconSpan.title = 'Enter fullscreen';
+    //         this._iconSpan = document.createElement('span');
+    //         this._iconSpan.className = 'mapboxgl-ctrl-icon';
+    //         this._iconSpan.setAttribute('aria-hidden', 'true');
+    //         this._iconSpan.title = 'Enter fullscreen';
 
-            this._fullscreenButton.appendChild(this._iconSpan);
-            this._container.appendChild(this._fullscreenButton);
+    //         this._fullscreenButton.appendChild(this._iconSpan);
+    //         this._container.appendChild(this._fullscreenButton);
 
-            this._fullscreenButton.addEventListener('click', () => {
-                if (this._isFullscreen()) {
-                    this._exitFullscreen();
-                } else {
-                    this._requestFullscreen();
-                }
-                this._updateIcon();
-            });
+    //         this._fullscreenButton.addEventListener('click', () => {
+    //             if (this._isFullscreen()) {
+    //                 this._exitFullscreen();
+    //             } else {
+    //                 this._requestFullscreen();
+    //             }
+    //             this._updateIcon();
+    //         });
 
             
-            return this._container;
-        }
+    //         return this._container;
+    //     }
         
-        onRemove() {
-            this._container.parentNode.removeChild(this._container);
-            this._map = undefined;
-        }
+    //     onRemove() {
+    //         this._container.parentNode.removeChild(this._container);
+    //         this._map = undefined;
+    //     }
         
-        _isFullscreen() {
-            return !!(document.fullscreenElement || 
-                    document.webkitFullscreenElement || 
-                    document.mozFullScreenElement || 
-                    document.msFullscreenElement);
-        }
+    //     _isFullscreen() {
+    //         return !!(document.fullscreenElement || 
+    //                 document.webkitFullscreenElement || 
+    //                 document.mozFullScreenElement || 
+    //                 document.msFullscreenElement);
+    //     }
         
-        _requestFullscreen() {
-            const element = document.body;
-            if (element.requestFullscreen) {
-                element.requestFullscreen();
-            } else if (element.webkitRequestFullscreen) {
-                element.webkitRequestFullscreen();
-            } else if (element.mozRequestFullScreen) {
-                element.mozRequestFullScreen();
-            } else if (element.msRequestFullscreen) {
-                element.msRequestFullscreen();
-            }
-        }
+    //     _requestFullscreen() {
+    //         const element = document.body;
+    //         if (element.requestFullscreen) {
+    //             element.requestFullscreen();
+    //         } else if (element.webkitRequestFullscreen) {
+    //             element.webkitRequestFullscreen();
+    //         } else if (element.mozRequestFullScreen) {
+    //             element.mozRequestFullScreen();
+    //         } else if (element.msRequestFullscreen) {
+    //             element.msRequestFullscreen();
+    //         }
+    //     }
         
-        _exitFullscreen() {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            } else if (document.mozCancelFullScreen) {
-                document.mozCancelFullScreen();
-            } else if (document.msExitFullscreen) {
-                document.msExitFullscreen();
-            }
-        }
+    //     _exitFullscreen() {
+    //         if (document.exitFullscreen) {
+    //             document.exitFullscreen();
+    //         } else if (document.webkitExitFullscreen) {
+    //             document.webkitExitFullscreen();
+    //         } else if (document.mozCancelFullScreen) {
+    //             document.mozCancelFullScreen();
+    //         } else if (document.msExitFullscreen) {
+    //             document.msExitFullscreen();
+    //         }
+    //     }
         
-        _updateIcon() {
-            if (this._isFullscreen()) {
-                this._fullscreenButton.classList.add('mapboxgl-ctrl-fullscreen');
-                this._fullscreenButton.classList.remove('mapboxgl-ctrl-shrink');
-            } else {
-                this._fullscreenButton.classList.remove('mapboxgl-ctrl-fullscreen');
-                this._fullscreenButton.classList.add('mapboxgl-ctrl-shrink');
-            }
+    //     _updateIcon() {
+    //         if (this._isFullscreen()) {
+    //             this._fullscreenButton.classList.add('mapboxgl-ctrl-fullscreen');
+    //             this._fullscreenButton.classList.remove('mapboxgl-ctrl-shrink');
+    //         } else {
+    //             this._fullscreenButton.classList.remove('mapboxgl-ctrl-fullscreen');
+    //             this._fullscreenButton.classList.add('mapboxgl-ctrl-shrink');
+    //         }
             
-            this._map.resize();
-        }
-    }
+    //         this._map.resize();
+    //     }
+    // }
     
     /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
@@ -1240,11 +1240,13 @@ const bounds_dict = {
             navFullscreenRow.appendChild(navContainer);
 
             let fullscreen;
-            if (isMobile()) {
-                fullscreen = new MobileFullScreenControl();
-            } else {
-                fullscreen = new mapboxgl.FullscreenControl({ container: document.querySelector('body') });
-            }
+            // if (isMobile()) {
+            //     fullscreen = new MobileFullScreenControl();
+            // } else {
+            //     fullscreen = new mapboxgl.FullscreenControl({ container: document.querySelector('body') });
+            // }
+
+            fullscreen = new mapboxgl.FullscreenControl({ container: document.querySelector('body') })
 
             const fullscreenContainer = document.createElement('div');
             fullscreenContainer.className = 'mapboxgl-ctrl';
