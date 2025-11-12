@@ -509,13 +509,13 @@ const bounds_dict = {
         color: #aaaaaa    
     }
     .mapboxgl-ctrl-geocoder {
-        min-width: 250px;
+        min-width: 245px;
         max-width: 400px;
     }
     @media (max-width:600px) {
         .mapboxgl-ctrl-geocoder{
             min-width: 75px;
-            max-width: 250px;
+            max-width: 240px;
         }
     }
 
@@ -532,7 +532,9 @@ const bounds_dict = {
 
     @media (max-width: 600px) {
         .mapboxgl-ctrl-top-right .mapboxgl-ctrl{
-            margin: 5px 5px 0 0;
+            margin: 8px 8px 0 0;
+            transform: scale(0.92);
+            transform-origin: right center;
         }
     }
     
@@ -563,7 +565,7 @@ const bounds_dict = {
         color: white;
         pointer-events: auto;
         background: #128ed6;
-        margin-top: 10px;
+        margin: 10px 10px 0 0;
         padding: 6px 10px;
         border-radius: 4px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -585,7 +587,7 @@ const bounds_dict = {
         color: white;
         pointer-events: auto;
         background: #128ed6;
-        margin-top: 10px;
+        margin: 10px 10px 0 0;
         padding: 6px 10px;
         border-radius: 4px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
