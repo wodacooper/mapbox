@@ -1642,7 +1642,7 @@
                 true,
                 "City"
             ],
-            "qct_25": [
+            "qct": [
                 true,
                 ""
             ],
@@ -1764,7 +1764,7 @@
             "pool": "",
             "County": "County",
             "city_x": "City",
-            "qct_25": "",
+            "qct": "",
             "gich_filter": "GICH Filter",
             "stable_pts": "Stable Communities",
             "sch_pts":"School Points"
@@ -2484,13 +2484,12 @@
                 "Zebulon city",
                 "unincorporated"
             ],
-            "qct_25": [
+            "qct": [
                 "QCT",
                 "Not a QCT"
             ],
             "gich_filter": [
                 "Currently Eligible",
-                "Expiring__010125",
                 "Formerly Certified",
                 "None"
             ]
@@ -2614,7 +2613,7 @@
                 true,
                 ""
             ],
-            "qct_25": [
+            "qct": [
                 true,
                 ""
             ],
@@ -2739,7 +2738,7 @@
             "pool": "",
             "cnty_x": "County",
             "city_x": "City",
-            "qct_25": "",
+            "qct": "",
             "gich_filter": "GICH Filter",
             "stable_pts": "Stable Communities",
             "sch_pts":"School Points"
@@ -3458,13 +3457,12 @@
                 "Zebulon city",
                 "unincorporated"
             ],
-            "qct_25": [
+            "qct": [
                 "QCT",
                 "Not a QCT"
             ],
             "gich_filter": [
                 "Currently Eligible",
-                "Expiring_010125",
                 "Formerly Certified",
                 "None"
             ]
@@ -3534,9 +3532,6 @@
 
     }
 }
-
-
-
 
 
 
