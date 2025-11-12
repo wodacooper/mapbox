@@ -1523,7 +1523,7 @@
         }
     },
     "stable": {
-        "name": "Stable + Schools 2026 Draft",
+        "name": "Stable + Schools 2026 Draft1",
         "source_id": "ga_26",
         "url": "mapbox://wodacooper.ga_26",
         "source_layer": "hello_world",
@@ -3532,6 +3532,7 @@
 
     }
 }
+
 
 
 
