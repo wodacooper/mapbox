@@ -532,7 +532,7 @@ const bounds_dict = {
 
     @media (max-width: 600px) {
         .mapboxgl-ctrl-top-right .mapboxgl-ctrl{
-            margin: 8px 8px 0 0;
+            margin: 5px 5px 0 0;
             transform: scale(0.92);
             transform-origin: right center;
         }
@@ -558,6 +558,7 @@ const bounds_dict = {
         flex-direction: column;
         align-items: flex-end;
     }
+
     .googlemaps_link {
         font-size: 14px;
         text-align: right;
@@ -571,6 +572,12 @@ const bounds_dict = {
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 
+    @media (max-width: 600px) {
+        .googlemaps_link {
+            margin: 5px 5px 0 0;
+        }
+    }
+
     .googlemaps_link:hover {
         background: #45b9fc;
         font-size: 14px;
@@ -578,7 +585,7 @@ const bounds_dict = {
         box-shadow:
             -8px 0 18px -8px #0a5c8c55, 
             0 4px 12px rgba(0,0,0,0.18);
-    }
+    } 
 
     .nepaassist_link {
         font-size: 14px;
@@ -591,6 +598,12 @@ const bounds_dict = {
         padding: 6px 10px;
         border-radius: 4px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+        .nepaassist_link {
+            margin: 5px 5px 0 0;
+        }
     }
 
     .nepaassist_link:hover {
