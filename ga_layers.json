@@ -1523,7 +1523,7 @@
         }
     },
     "stable": {
-        "name": "Stable + Schools 20026 Draft3",
+        "name": "Stable + Schools 2026 Draft1",
         "source_id": "ga_26",
         "url": "mapbox://wodacooper.ga_26",
         "source_layer": "hello_world",
@@ -1767,8 +1767,7 @@
             "qct": "",
             "gich_filter": "GICH Filter",
             "stable_pts": "Stable Communities",
-            "sch_pts":"School Points",
-            "hnc_max":"Housing Needs Max"
+            "sch_pts":"School Points"
         },
         "num_filters": {
             "score": "Stable Score",
@@ -2493,10 +2492,6 @@
                 "Currently Eligible",
                 "Formerly Certified",
                 "None"
-            ],
-            "hnc_max":[
-                "Yes",
-                "No"
             ]
         },
         "num_filter_vals": {
@@ -3537,7 +3532,6 @@
 
     }
 }
-
 
 
 
