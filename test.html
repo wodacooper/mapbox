@@ -206,9 +206,14 @@ input[type="range"] {
 <script>
 const bounds_dict = {
     "test":{
-        "bounds":[[-102.3730577149232, 30.749061535513654], [-73.03945321153677, 43.16674390102708]],
-        "geocoder_bounds":[-107.30772781365022, 25.299889658938284, -72.28951798383322, 49.75322339114976],
+        "bounds":[[-85.43912683641372, 33.26118181948529], [-82.06632411429437, 34.456279633297356]],
+        "geocoder_bounds":[-85.84562097556167, 30.177882355149897, -80.16568935557564, 35.267583145126984],
         "url": 'https://wodacooper.github.io/mapbox/us_test.json'
+    },
+    "az":{
+        "bounds":[[-112.85213370466587, 32.55524609368921], [-110.58895036953413, 34.01542804220637]],
+        "geocoder_bounds":[-115.28142166744192, 31.724851547973447, -108.7395412009782, 37.26979298744543],
+        "url": 'https://wodacooper.github.io/mapbox/az_layers.json'
     },
     "fl":{
         "bounds":[[-84.37526158463271, 26.255905741318735], [-78.81301050869402, 29.55055750061163]],
@@ -295,7 +300,21 @@ const bounds_dict = {
         "geocoder_bounds":[-93.08914727732419, 42.41904924359892, -86.19111432679766, 47.426598853498625],
         "url": 'https://wodacooper.github.io/mapbox/wi_layers.json'
     },
-    
+    "wv":{
+        "bounds":[[-82.96804854706158, 37.08701648003831], [-77.31429927306313, 41.03426453486921]],
+        "geocoder_bounds":[-82.96804854706158, 37.08701648003831, -77.31429927306313, 41.03426453486921],
+        "url": 'https://wodacooper.github.io/mapbox/wv_layers.json'
+    },
+"qct":{
+        "bounds":[[-102.3730577149232, 30.749061535513654], [-73.03945321153677, 43.16674390102708]],
+        "geocoder_bounds":[-107.30772781365022, 25.299889658938284, -72.28951798383322, 49.75322339114976],
+        "url": 'https://wodacooper.github.io/mapbox/qct_layers.json'
+    },
+"prev_projects":{
+        "bounds":[[-102.3730577149232, 30.749061535513654], [-73.03945321153677, 43.16674390102708]],
+        "geocoder_bounds":[-107.30772781365022, 25.299889658938284, -72.28951798383322, 49.75322339114976],
+        "url": 'https://wodacooper.github.io/mapbox/prev_projects.json'
+    }
 }
 </script>
 <style>
@@ -341,7 +360,9 @@ const bounds_dict = {
         position: relative;
         display: block;
         width:220px;
+        z-index: 100;
     }
+
     .filters {
         position: relative;
         display: block;
@@ -350,12 +371,15 @@ const bounds_dict = {
         max-height: 0px;
     }
 
-    .toggle_checkbox{
-        position:absolute;
+    .toggle_checkbox {
+        position: absolute;
         right: 5px;
-        top: 8px;
+        top: 10px;
         cursor: pointer;
+        height: 16px;
+        width: 16px;
     }
+
     .dropdown_arrow{
         position:absolute;
         left: 10px;
@@ -382,6 +406,8 @@ const bounds_dict = {
     }
     
     .dropdown-content input[type='checkbox'] + label {
+        position: relative; 
+        padding-right: 25px;
         background-color: #fff;
         display: block;
         cursor: pointer;
@@ -417,6 +443,7 @@ const bounds_dict = {
         clear: both;
     }
     .legend-box{
+        max-height: 450px;
         position:absolute;
         right: 10px;
         bottom: 20px;
@@ -482,20 +509,35 @@ const bounds_dict = {
         color: #aaaaaa    
     }
     .mapboxgl-ctrl-geocoder {
-        min-width: 300px;
+        min-width: 245px;
         max-width: 400px;
     }
     @media (max-width:600px) {
         .mapboxgl-ctrl-geocoder{
-            min-width: 100px;
-            max-width: 250px; 
-        } 
+            min-width: 75px;
+            max-width: 240px;
+        }
     }
 
-    .mapboxgl-ctrl-bottom-left .mapboxgl-ctrl-group{
+    .mapboxgl-ctrl-top-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .mapboxgl-ctrl-top-right .mapboxgl-ctrl-group{
         display: flex;
         flex-direction: row;
     }
+
+    @media (max-width: 600px) {
+        .mapboxgl-ctrl-top-right .mapboxgl-ctrl{
+            margin: 5px 5px 0 0;
+            transform: scale(0.92);
+            transform-origin: right center;
+        }
+    }
+    
     .popup {
         display: none;
         position: absolute;
@@ -505,13 +547,74 @@ const bounds_dict = {
         bottom: 95px;
         left: 20px;
     }
-    .googlemaps_link{
-        font-size: 15px;
-        text-align: center;
+    
+    .nav-fullscreen-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .google-nepa-links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .googlemaps_link {
+        font-size: 14px;
+        text-align: right;
         cursor: pointer;
         color: white;
         pointer-events: auto;
+        background: #128ed6;
+        margin: 10px 10px 0 0;
+        padding: 6px 10px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
+
+    @media (max-width: 600px) {
+        .googlemaps_link {
+            margin: 5px 5px 0 0;
+        }
+    }
+
+    .googlemaps_link:hover {
+        background: #45b9fc;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow:
+            -8px 0 18px -8px #0a5c8c55, 
+            0 4px 12px rgba(0,0,0,0.18);
+    } 
+
+    .nepaassist_link {
+        font-size: 14px;
+        text-align: right;
+        cursor: pointer;
+        color: white;
+        pointer-events: auto;
+        background: #128ed6;
+        margin: 10px 10px 0 0;
+        padding: 6px 10px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+        .nepaassist_link {
+            margin: 5px 5px 0 0;
+        }
+    }
+
+    .nepaassist_link:hover {
+        background: #45b9fc;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow:
+            -8px 0 18px -8px #0a5c8c55, 
+            0 4px 12px rgba(0,0,0,0.18);
+    }
+
     .area{
         position: absolute;
         width: 100px;
@@ -529,8 +632,19 @@ const bounds_dict = {
         padding: 0%;
         font-size: 17px;
     }
-   
-    .show {display: block; max-height: 200px;}
+    .mapboxgl-ctrl-attrib.mapboxgl-compact {
+        width:80px;
+        margin: 0;
+
+    }
+
+    a.mapboxgl-ctrl-logo {
+        height: 23px;
+        width: 80px;
+        margin: 0 0 -3px 2px;
+        }
+
+    .show {display: block; max-height: 250px;}
 
     .show input[type='range'] {position: absolute;}
     .show_filters {display: block;max-height: 800px;}
@@ -538,6 +652,12 @@ const bounds_dict = {
 
     .gray {background-color: #aaaaaa;}
 
+    .legend-box {
+        padding: 0px;
+        right: 0px;
+        bottom: 24px;
+
+    }
 
 </style>
 <div id="map"></div>
@@ -552,7 +672,10 @@ const bounds_dict = {
 <div id="area_box" class="area"></div>
 <script>
     
+    
+    // const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?mn'
     const query_string = window.location.search;
+    
     const query_vals = query_string.split('?')
 
     //const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'oh']
@@ -562,8 +685,95 @@ const bounds_dict = {
         container: 'map',
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/mapbox/satellite-streets-v12',
-        bounds: bounds_dict[query_vals[2]]["bounds"]
-    });
+        bounds: bounds_dict[query_vals[2]]["bounds"],
+        attributionControl: false
+    }).addControl(new mapboxgl.AttributionControl({
+        compact: true
+        
+    }));
+
+    // class MobileFullScreenControl {
+    //     onAdd(map) {
+    //         this._map = map;
+    //         this._container = document.createElement('div');
+    //         this._container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group';
+            
+    //         this._fullscreenButton = document.createElement('button');
+    //         this._fullscreenButton.className = 'mapboxgl-ctrl-fullscreen';
+    //         this._fullscreenButton.type = 'button';
+    //         this._fullscreenButton.setAttribute('aria-label', 'Toggle fullscreen');
+            
+    //         this._iconSpan = document.createElement('span');
+    //         this._iconSpan.className = 'mapboxgl-ctrl-icon';
+    //         this._iconSpan.setAttribute('aria-hidden', 'true');
+    //         this._iconSpan.title = 'Enter fullscreen';
+
+    //         this._fullscreenButton.appendChild(this._iconSpan);
+    //         this._container.appendChild(this._fullscreenButton);
+
+    //         this._fullscreenButton.addEventListener('click', () => {
+    //             if (this._isFullscreen()) {
+    //                 this._exitFullscreen();
+    //             } else {
+    //                 this._requestFullscreen();
+    //             }
+    //             this._updateIcon();
+    //         });
+
+            
+    //         return this._container;
+    //     }
+        
+    //     onRemove() {
+    //         this._container.parentNode.removeChild(this._container);
+    //         this._map = undefined;
+    //     }
+        
+    //     _isFullscreen() {
+    //         return !!(document.fullscreenElement || 
+    //                 document.webkitFullscreenElement || 
+    //                 document.mozFullScreenElement || 
+    //                 document.msFullscreenElement);
+    //     }
+        
+    //     _requestFullscreen() {
+    //         const element = document.body;
+    //         if (element.requestFullscreen) {
+    //             element.requestFullscreen();
+    //         } else if (element.webkitRequestFullscreen) {
+    //             element.webkitRequestFullscreen();
+    //         } else if (element.mozRequestFullScreen) {
+    //             element.mozRequestFullScreen();
+    //         } else if (element.msRequestFullscreen) {
+    //             element.msRequestFullscreen();
+    //         }
+    //     }
+        
+    //     _exitFullscreen() {
+    //         if (document.exitFullscreen) {
+    //             document.exitFullscreen();
+    //         } else if (document.webkitExitFullscreen) {
+    //             document.webkitExitFullscreen();
+    //         } else if (document.mozCancelFullScreen) {
+    //             document.mozCancelFullScreen();
+    //         } else if (document.msExitFullscreen) {
+    //             document.msExitFullscreen();
+    //         }
+    //     }
+        
+    //     _updateIcon() {
+    //         if (this._isFullscreen()) {
+    //             this._fullscreenButton.classList.add('mapboxgl-ctrl-fullscreen');
+    //             this._fullscreenButton.classList.remove('mapboxgl-ctrl-shrink');
+    //         } else {
+    //             this._fullscreenButton.classList.remove('mapboxgl-ctrl-fullscreen');
+    //             this._fullscreenButton.classList.add('mapboxgl-ctrl-shrink');
+    //         }
+            
+    //         this._map.resize();
+    //     }
+    // }
+    
     /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
             const query = await fetch(
@@ -602,29 +812,16 @@ const bounds_dict = {
     var hover_layers = [];
     var click_layers = [];
     var layers;
-    map.addControl(new mapboxgl.FullscreenControl());
+    
+    function isMobile() {
+        return window.matchMedia('(max-width: 600px)').matches;
+    }
 
     map.on('load', () => {
         get_json().then(data => {
             layers = data;
             var sources = []
-
-            //Code for linking Google maps to mapbox
-            var googleMaps_link = document.createElement('div');
-            googleMaps_link.className = 'googlemaps_link';
-            googleMaps_link.textContent = 'Google maps';
-
-            var logo = document.querySelector('.mapboxgl-ctrl').parentNode;
-            logo.appendChild(googleMaps_link);
-        
-            googleMaps_link.addEventListener('click', () => {
-                var center = map.getCenter();
-                var zoom = 2+Math.round(map.getZoom());
-                var googleMapsUrl = `https://www.google.com/maps/@?api=1&map_action=map&center=${center.lat}%2C${center.lng}&zoom=${zoom}&basemap=satellite&layer=transit`;
-                console.log(googleMapsUrl);
-                window.open(googleMapsUrl,'_blank');
-            });
-
+            
             //Dropdown button for the layerlist box in the top left
             const dropdown_btn = document.createElement('button');
             dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn');
@@ -635,7 +832,7 @@ const bounds_dict = {
                     dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
                     
                 
-                }else{
+                } else {
                     layer_list.style.display='none';
                     dropdown_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn') 
                     dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn')
@@ -643,8 +840,14 @@ const bounds_dict = {
             });
             
             const layer_list = document.createElement('div');
-            layer_box.appendChild(layer_list);
 
+            if (isMobile()) {
+                layer_list.style.display = 'none';
+                dropdown_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn');
+                dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn');
+            }
+
+            layer_box.appendChild(layer_list);
             layer_box.appendChild(dropdown_btn);
 
             //Dropdown button for the legend box in the bottom right
@@ -662,9 +865,16 @@ const bounds_dict = {
                     legend_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
                 }
             });
+
             legend_box.appendChild(legend_btn);
-            
             const legend_inner = document.createElement('div');
+
+            if (isMobile()) {
+                legend_inner.style.display = 'none';
+                legend_btn.classList.remove('fa-solid','fa-caret-down','legend_btn');
+                legend_btn.classList.add('fa-solid','fa-caret-up','legend_btn');
+            }
+
             legend_box.appendChild(legend_inner);
             
             for (const layer of Object.keys(layers).reverse()){
@@ -750,7 +960,7 @@ const bounds_dict = {
                     type: 'Feature'
                 };
                 return [geocodes];
-            }
+            }        
 
             map.addControl(
                 new MapboxGeocoder({
@@ -760,11 +970,7 @@ const bounds_dict = {
                     mapboxgl: mapboxgl
                 })
             );
-            map.addControl(
-                new mapboxgl.NavigationControl({
-                    showCompass: false
-                })
-            );
+
             var draw_circlemode ={};
             draw_circlemode.onClick = function(state, e) {
                 const feature = turf.circle([e.lngLat.lng, e.lngLat.lat], popupContent.value, {units:'miles'});
@@ -1035,10 +1241,84 @@ const bounds_dict = {
                 // The user does not have to click the polygon control button first.
                 //defaultMode: 'draw_polygon'
             });
-            
-            map.addControl(draw, 'bottom-left');
+                       
+            map.addControl(draw, 'top-right');
 
-            const controls = document.getElementsByClassName('mapboxgl-ctrl-bottom-left')[0].firstElementChild;
+
+            const navFullscreenRow = document.createElement('div');
+            navFullscreenRow.className = 'nav-fullscreen-row';
+
+            const navControl = new mapboxgl.NavigationControl({ showCompass: false });
+            const navContainer = document.createElement('div');
+            navContainer.className = 'mapboxgl-ctrl';
+            navContainer.appendChild(navControl.onAdd(map));
+            navFullscreenRow.appendChild(navContainer);
+
+            let fullscreen;
+            // if (isMobile()) {
+            //     fullscreen = new MobileFullScreenControl();
+            // } else {
+            //     fullscreen = new mapboxgl.FullscreenControl({ container: document.querySelector('body') });
+            // }
+
+            fullscreen = new mapboxgl.FullscreenControl({ container: document.querySelector('body') })
+
+            const fullscreenContainer = document.createElement('div');
+            fullscreenContainer.className = 'mapboxgl-ctrl';
+            fullscreenContainer.appendChild(fullscreen.onAdd(map));
+            navFullscreenRow.appendChild(fullscreenContainer);
+
+            const topRightCorner = map._controlContainer.querySelector('.mapboxgl-ctrl-top-right');
+            topRightCorner.appendChild(navFullscreenRow);
+
+
+            //Code for linking Google maps to mapbox
+            var googleMaps_link = document.createElement('div');
+            googleMaps_link.className = 'googlemaps_link';
+            googleMaps_link.textContent = 'Google Maps';
+
+            var logo = document.querySelector('.mapboxgl-ctrl-top-right');
+
+        
+            googleMaps_link.addEventListener('click', () => {
+                var center = map.getCenter();
+                var zoom = 2+Math.round(map.getZoom());
+                var googleMapsUrl = `https://www.google.com/maps/@?api=1&map_action=map&center=${center.lat}%2C${center.lng}&zoom=${zoom}&basemap=satellite&layer=transit`;
+                console.log(googleMapsUrl);
+                window.open(googleMapsUrl,'_blank');
+            });
+            
+            var flood_link = document.createElement('div');
+            flood_link.className = 'nepaassist_link';
+            flood_link.textContent = 'NEPAAssist';
+
+            var logo = document.querySelector('.mapboxgl-ctrl-top-right');
+
+
+            flood_link.addEventListener('click', () => {
+                var center = map.getCenter();
+                var floodMapsUrl = `https://nepassisttool.epa.gov/nepassist/nepamap.aspx?wherestr=${center.lat}%2C%20${center.lng}`;
+                console.log(floodMapsUrl);
+                window.open(floodMapsUrl,'_blank');
+            });
+
+            const google_nepa_container = document.createElement('div');
+            google_nepa_container.className = 'google-nepa-links-container';
+
+            google_nepa_container.appendChild(googleMaps_link);
+            google_nepa_container.appendChild(flood_link);
+
+            topRightCorner.appendChild(google_nepa_container);
+
+            const mapboxLogo = document.getElementsByClassName('mapboxgl-ctrl-logo')[0];
+            console.log(mapboxLogo);
+            const cloneLogo = mapboxLogo.cloneNode(true);
+            const bottomRight = document.getElementsByClassName('mapboxgl-ctrl-bottom-right')[0].children[0];
+            mapboxLogo.remove();
+            
+            bottomRight.appendChild(cloneLogo);
+
+            const controls = document.querySelector('.mapbox-gl-draw_ctrl-draw-btn').parentElement;
             const popup = document.getElementById('popup_box');
             const popupContent = document.getElementById('popup_content');
             const colorPicker = document.getElementById('color-picker');
@@ -1204,144 +1484,103 @@ const bounds_dict = {
             });
            
             map.on('click', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
+                if (draw.getMode() !== 'simple_select') return;
+
+                if (!allow_click) {
+                    allow_click = true;
+                    return;
+                }
+
+                let table = ['<div style="line-height: 100%">'];
+                for (const layer_name of click_layers) {
+                    const layer = layer_name.split('@')[0];
+                    if (map.getLayoutProperty(layer_name, 'visibility') === 'visible') {
+                        const feature = map.queryRenderedFeatures(e.point, { layers: [layer_name] })[0];
+                        if (feature) {
+                            table.push(`<h3>${layers[layer].name}</h3>`);
+                            const click_cats = layers[layer]['click'];
+                            for (const [cat, args] of Object.entries(click_cats)) {
+                                const value = feature.properties[cat];
+                                if (value || value === 0) {
+                                    if (args[0]) {
+                                        table.push(`<h4>${args[1] || cat}</h4>`);
+                                    }
+                                    table.push(`<p>${value}</p>`);
                                 }
                             }
-                        };
-                        table.push('</div>')
-                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
-                        .setLngLat(e.lngLat)
-                        .setHTML(table.join(''))
-                        .addTo(map);
-                        
-                    } else {
-                        allow_click = true;
-                    };
-                    
-                } else {
-                    allow_click = false;
-                };
-            });
+                        }
+                    }
+                }
+                table.push('</div>');
 
-            //Code for mobile optimization for enabling the touch and zoom functions
+                new mapboxgl.Popup({
+                    className: 'popup-box',
+                    anchor: 'top-left'
+                }).setLngLat(e.lngLat)
+                .setHTML(table.join(''))
+                .addTo(map);
+            });
+            
+            let touchPopup = null;
+
+            function showClickPopup(e) {
+                if (draw.getMode() !== 'simple_select') return;
+
+                if (touchPopup) {
+                    touchPopup.remove();
+                    touchPopup = null;
+                }
+
+                let table = ['<div style="line-height: 100%">'];
+
+                for (const layer_name of click_layers) {
+                    const layer = layer_name.split('@')[0];
+
+                    if (map.getLayoutProperty(layer_name, 'visibility') === 'visible') {
+                        const feature = map.queryRenderedFeatures(e.point, { layers: [layer_name] })[0];
+                        if (!feature) continue;
+
+                        table.push(`<h3>${layers[layer].name}</h3>`);
+
+                        const click_cats = layers[layer]['click'];
+                        for (const [cat, args] of Object.entries(click_cats)) {
+                            const value = feature.properties[cat];
+                            if (value || value === 0) {
+                                if (args[0]) {
+                                    table.push(`<h4>${args[1] || cat}</h4>`);
+                                }
+                                table.push(`<p>${value}</p>`);
+                            }
+                        }
+                    }
+                }
+
+                table.push('</div>');
+
+                touchPopup = new mapboxgl.Popup({ className: 'popup-box', anchor: 'top-left' })
+                    .setLngLat(e.lngLat)
+                    .setHTML(table.join(''))
+                    .addTo(map);
+            }
+
+            let touchStartPoint = null;
+
             map.on('touchstart', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
-                                }
-                            }
-                        };
-                        table.push('</div>')
-                        const touch_screen = new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'}).trackPointer()
-                        touch_screen.addTo(map)
-                        .setLngLat(e.lngLat)
-                        .setHTML(table.join(''))
-                        .addTo(map);
-
-                        map.on('touchstart', click_layers, (e) => {
-                            touch_screen.remove()
-                        });
-
-                    } else {
-                        allow_click = true;
-                    };
-                    
-                } else {
-                    allow_click = false;
-                };
+                touchStartPoint = e.point;
             });
 
-            //Code for mobile optimization for enabling the touch and zoom functions
-            map.on('touchmove', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
-                                }
-                            }
-                        };
-                        table.push('</div>')
-                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
-                        .setLngLat(e.lngLat)
-                        .addTo(map);
-                        
-                        touch_screen.setHTML(table.join(''));
-                        if (!touch_screen.isOpen()){touch_screen.addTo(map)}
-                        
-                    } else {
-                        allow_click = true;
-                    };
-                    
-                } else {
-                    allow_click = false;
-                };
+            map.on('touchend', (e) => {
+                if (!touchStartPoint) return;
+
+                const dx = Math.abs(e.point.x - touchStartPoint.x);
+                const dy = Math.abs(e.point.y - touchStartPoint.y);
+                const threshold= 10;
+
+                if (dx < threshold && dy < threshold) { // if user start -> end tap dist is less than threshold, click
+                    showClickPopup(e);
+                }
+
+                touchStartPoint = null;
             });
 
             function updateLayerFilter(evt) {
@@ -1430,18 +1669,11 @@ const bounds_dict = {
                             }
                         });
                         layer_div.appendChild(toggle_checkbox);
-                        if (layers[layer].cat_filters ||layers[layer].num_filters ){
+                        if (layers[layer].cat_filters || layers[layer].num_filters ){
                             const dropdown_arrow = document.createElement('div')
                             dropdown_arrow.classList.add('dropdown_arrow','fa-solid','fa-caret-right');
                             dropdown_arrow.addEventListener('click',function(){
                                 this.nextElementSibling.click()
-                                if(dropdown_arrow.classList.contains('fa-caret-right')){
-                                    dropdown_arrow.classList.remove('fa-solid','fa-caret-right','dropdown_arrow') 
-                                    dropdown_arrow.classList.add('fa-solid','fa-caret-down','dropdown_arrow')
-                                }else{
-                                    dropdown_arrow.classList.remove('fa-solid','fa-caret-down','dropdown_arrow') 
-                                    dropdown_arrow.classList.add('fa-solid','fa-caret-right','dropdown_arrow')
-                                }
                              });
                             layer_div.appendChild(dropdown_arrow);
                         }
@@ -1452,6 +1684,16 @@ const bounds_dict = {
                         layer_button.addEventListener("click", function() {
                             this.classList.toggle("active");
                             this.nextElementSibling.classList.toggle('show_filters');
+                            const dropdown_arrow = this.previousElementSibling;
+                            if (dropdown_arrow && dropdown_arrow.classList.contains('dropdown_arrow')) {
+                                if (dropdown_arrow.classList.contains('fa-caret-right')) {
+                                    dropdown_arrow.classList.remove('fa-caret-right');
+                                    dropdown_arrow.classList.add('fa-caret-down');
+                                } else {
+                                    dropdown_arrow.classList.remove('fa-caret-down');
+                                    dropdown_arrow.classList.add('fa-caret-right');
+                                }
+                            }
                         });
                         layer_div.appendChild(layer_button);
 
