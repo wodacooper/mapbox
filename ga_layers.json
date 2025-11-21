@@ -1,6 +1,6 @@
 {
 "qct_dda": {
-        "name": "2026 QCT/DDAs",
+        "name": "22026 QCT/DDAs",
         "source_id": "qct_dda_26",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -1604,7 +1604,7 @@
                 true,
                 ""
             ],
-            "County": [
+            "County Name": [
                 true,
                 ""
             ],
@@ -1634,7 +1634,7 @@
                 true,
                 ""
             ],
-            "County": [
+            "County Name": [
                 true,
                 ""
             ],
@@ -3537,6 +3537,7 @@
 
     }
 }
+
 
 
 
