@@ -360,7 +360,9 @@ const bounds_dict = {
         position: relative;
         display: block;
         width:220px;
+        z-index: 100;
     }
+
     .filters {
         position: relative;
         display: block;
@@ -507,19 +509,33 @@ const bounds_dict = {
         color: #aaaaaa    
     }
     .mapboxgl-ctrl-geocoder {
-        min-width: 300px;
+        min-width: 245px;
         max-width: 400px;
     }
     @media (max-width:600px) {
         .mapboxgl-ctrl-geocoder{
-            min-width: 100px;
-            max-width: 250px; 
-        } 
+            min-width: 75px;
+            max-width: 240px;
+        }
+    }
+
+    .mapboxgl-ctrl-top-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     .mapboxgl-ctrl-top-right .mapboxgl-ctrl-group{
         display: flex;
         flex-direction: row;
+    }
+
+    @media (max-width: 600px) {
+        .mapboxgl-ctrl-top-right .mapboxgl-ctrl{
+            margin: 5px 5px 0 0;
+            transform: scale(0.92);
+            transform-origin: right center;
+        }
     }
     
     .popup {
@@ -531,38 +547,74 @@ const bounds_dict = {
         bottom: 95px;
         left: 20px;
     }
+    
+    .nav-fullscreen-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .google-nepa-links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     .googlemaps_link {
-        font-size: 15px;
+        font-size: 14px;
         text-align: right;
         cursor: pointer;
         color: white;
         pointer-events: auto;
         background: #128ed6;
-        margin: 4px 0 0 0;
+        margin: 10px 10px 0 0;
         padding: 6px 10px;
         border-radius: 4px;
-        width: 100px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 
+    @media (max-width: 600px) {
+        .googlemaps_link {
+            margin: 5px 5px 0 0;
+        }
+    }
+
     .googlemaps_link:hover {
-        width: 120px;
         background: #45b9fc;
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow:
+            -8px 0 18px -8px #0a5c8c55, 
+            0 4px 12px rgba(0,0,0,0.18);
+    } 
+
+    .nepaassist_link {
+        font-size: 14px;
+        text-align: right;
+        cursor: pointer;
+        color: white;
+        pointer-events: auto;
+        background: #128ed6;
+        margin: 10px 10px 0 0;
+        padding: 6px 10px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+        .nepaassist_link {
+            margin: 5px 5px 0 0;
+        }
+    }
+
+    .nepaassist_link:hover {
+        background: #45b9fc;
+        font-size: 14px;
         font-weight: bold;
         box-shadow:
             -8px 0 18px -8px #0a5c8c55, 
             0 4px 12px rgba(0,0,0,0.18);
     }
-    
-    .mapboxgl-ctrl-top-right {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    .mapboxgl-ctrl-top-right .mapboxgl-ctrl-group {
-        margin-bottom: 8px;
-    }
+
     .area{
         position: absolute;
         width: 100px;
@@ -621,7 +673,7 @@ const bounds_dict = {
 <script>
     
     
-    //const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?mn'
+    // const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?mn'
     const query_string = window.location.search;
     
     const query_vals = query_string.split('?')
@@ -637,7 +689,91 @@ const bounds_dict = {
         attributionControl: false
     }).addControl(new mapboxgl.AttributionControl({
         compact: true
+        
     }));
+
+    // class MobileFullScreenControl {
+    //     onAdd(map) {
+    //         this._map = map;
+    //         this._container = document.createElement('div');
+    //         this._container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group';
+            
+    //         this._fullscreenButton = document.createElement('button');
+    //         this._fullscreenButton.className = 'mapboxgl-ctrl-fullscreen';
+    //         this._fullscreenButton.type = 'button';
+    //         this._fullscreenButton.setAttribute('aria-label', 'Toggle fullscreen');
+            
+    //         this._iconSpan = document.createElement('span');
+    //         this._iconSpan.className = 'mapboxgl-ctrl-icon';
+    //         this._iconSpan.setAttribute('aria-hidden', 'true');
+    //         this._iconSpan.title = 'Enter fullscreen';
+
+    //         this._fullscreenButton.appendChild(this._iconSpan);
+    //         this._container.appendChild(this._fullscreenButton);
+
+    //         this._fullscreenButton.addEventListener('click', () => {
+    //             if (this._isFullscreen()) {
+    //                 this._exitFullscreen();
+    //             } else {
+    //                 this._requestFullscreen();
+    //             }
+    //             this._updateIcon();
+    //         });
+
+            
+    //         return this._container;
+    //     }
+        
+    //     onRemove() {
+    //         this._container.parentNode.removeChild(this._container);
+    //         this._map = undefined;
+    //     }
+        
+    //     _isFullscreen() {
+    //         return !!(document.fullscreenElement || 
+    //                 document.webkitFullscreenElement || 
+    //                 document.mozFullScreenElement || 
+    //                 document.msFullscreenElement);
+    //     }
+        
+    //     _requestFullscreen() {
+    //         const element = document.body;
+    //         if (element.requestFullscreen) {
+    //             element.requestFullscreen();
+    //         } else if (element.webkitRequestFullscreen) {
+    //             element.webkitRequestFullscreen();
+    //         } else if (element.mozRequestFullScreen) {
+    //             element.mozRequestFullScreen();
+    //         } else if (element.msRequestFullscreen) {
+    //             element.msRequestFullscreen();
+    //         }
+    //     }
+        
+    //     _exitFullscreen() {
+    //         if (document.exitFullscreen) {
+    //             document.exitFullscreen();
+    //         } else if (document.webkitExitFullscreen) {
+    //             document.webkitExitFullscreen();
+    //         } else if (document.mozCancelFullScreen) {
+    //             document.mozCancelFullScreen();
+    //         } else if (document.msExitFullscreen) {
+    //             document.msExitFullscreen();
+    //         }
+    //     }
+        
+    //     _updateIcon() {
+    //         if (this._isFullscreen()) {
+    //             this._fullscreenButton.classList.add('mapboxgl-ctrl-fullscreen');
+    //             this._fullscreenButton.classList.remove('mapboxgl-ctrl-shrink');
+    //         } else {
+    //             this._fullscreenButton.classList.remove('mapboxgl-ctrl-fullscreen');
+    //             this._fullscreenButton.classList.add('mapboxgl-ctrl-shrink');
+    //         }
+            
+    //         this._map.resize();
+    //     }
+    // }
+    
     /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
             const query = await fetch(
@@ -677,6 +813,9 @@ const bounds_dict = {
     var click_layers = [];
     var layers;
     
+    function isMobile() {
+        return window.matchMedia('(max-width: 600px)').matches;
+    }
 
     map.on('load', () => {
         get_json().then(data => {
@@ -693,7 +832,7 @@ const bounds_dict = {
                     dropdown_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
                     
                 
-                }else{
+                } else {
                     layer_list.style.display='none';
                     dropdown_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn') 
                     dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn')
@@ -701,8 +840,14 @@ const bounds_dict = {
             });
             
             const layer_list = document.createElement('div');
-            layer_box.appendChild(layer_list);
 
+            if (isMobile()) {
+                layer_list.style.display = 'none';
+                dropdown_btn.classList.remove('fa-solid','fa-caret-up','dropdown_btn');
+                dropdown_btn.classList.add('fa-solid','fa-caret-down','dropdown_btn');
+            }
+
+            layer_box.appendChild(layer_list);
             layer_box.appendChild(dropdown_btn);
 
             //Dropdown button for the legend box in the bottom right
@@ -720,9 +865,16 @@ const bounds_dict = {
                     legend_btn.classList.add('fa-solid','fa-caret-up','dropdown_btn')
                 }
             });
+
             legend_box.appendChild(legend_btn);
-            
             const legend_inner = document.createElement('div');
+
+            if (isMobile()) {
+                legend_inner.style.display = 'none';
+                legend_btn.classList.remove('fa-solid','fa-caret-down','legend_btn');
+                legend_btn.classList.add('fa-solid','fa-caret-up','legend_btn');
+            }
+
             legend_box.appendChild(legend_inner);
             
             for (const layer of Object.keys(layers).reverse()){
@@ -808,7 +960,7 @@ const bounds_dict = {
                     type: 'Feature'
                 };
                 return [geocodes];
-            }
+            }        
 
             map.addControl(
                 new MapboxGeocoder({
@@ -1089,14 +1241,36 @@ const bounds_dict = {
                 // The user does not have to click the polygon control button first.
                 //defaultMode: 'draw_polygon'
             });
-            
+                       
             map.addControl(draw, 'top-right');
 
-            map.addControl(
-                new mapboxgl.NavigationControl({
-                    showCompass: false
-                })
-            );
+
+            const navFullscreenRow = document.createElement('div');
+            navFullscreenRow.className = 'nav-fullscreen-row';
+
+            const navControl = new mapboxgl.NavigationControl({ showCompass: false });
+            const navContainer = document.createElement('div');
+            navContainer.className = 'mapboxgl-ctrl';
+            navContainer.appendChild(navControl.onAdd(map));
+            navFullscreenRow.appendChild(navContainer);
+
+            let fullscreen;
+            // if (isMobile()) {
+            //     fullscreen = new MobileFullScreenControl();
+            // } else {
+            //     fullscreen = new mapboxgl.FullscreenControl({ container: document.querySelector('body') });
+            // }
+
+            fullscreen = new mapboxgl.FullscreenControl({ container: document.querySelector('body') })
+
+            const fullscreenContainer = document.createElement('div');
+            fullscreenContainer.className = 'mapboxgl-ctrl';
+            fullscreenContainer.appendChild(fullscreen.onAdd(map));
+            navFullscreenRow.appendChild(fullscreenContainer);
+
+            const topRightCorner = map._controlContainer.querySelector('.mapboxgl-ctrl-top-right');
+            topRightCorner.appendChild(navFullscreenRow);
+
 
             //Code for linking Google maps to mapbox
             var googleMaps_link = document.createElement('div');
@@ -1115,7 +1289,7 @@ const bounds_dict = {
             });
             
             var flood_link = document.createElement('div');
-            flood_link.className = 'googlemaps_link';
+            flood_link.className = 'nepaassist_link';
             flood_link.textContent = 'NEPAAssist';
 
             var logo = document.querySelector('.mapboxgl-ctrl-top-right');
@@ -1128,13 +1302,13 @@ const bounds_dict = {
                 window.open(floodMapsUrl,'_blank');
             });
 
-            var ctrlGroups = document.querySelectorAll('.mapboxgl-ctrl-top-right .mapboxgl-ctrl-group');
-            var navCtrl = ctrlGroups[ctrlGroups.length - 1];
+            const google_nepa_container = document.createElement('div');
+            google_nepa_container.className = 'google-nepa-links-container';
 
-            navCtrl.insertAdjacentElement('afterend', flood_link);
-            flood_link.style.display = 'block';
-            navCtrl.insertAdjacentElement('afterend', googleMaps_link);
-            googleMaps_link.style.display = 'block';
+            google_nepa_container.appendChild(googleMaps_link);
+            google_nepa_container.appendChild(flood_link);
+
+            topRightCorner.appendChild(google_nepa_container);
 
             const mapboxLogo = document.getElementsByClassName('mapboxgl-ctrl-logo')[0];
             console.log(mapboxLogo);
@@ -1144,7 +1318,7 @@ const bounds_dict = {
             
             bottomRight.appendChild(cloneLogo);
 
-            const controls = document.getElementsByClassName('mapboxgl-ctrl-top-right')[0].children[1];
+            const controls = document.querySelector('.mapbox-gl-draw_ctrl-draw-btn').parentElement;
             const popup = document.getElementById('popup_box');
             const popupContent = document.getElementById('popup_content');
             const colorPicker = document.getElementById('color-picker');
@@ -1310,144 +1484,103 @@ const bounds_dict = {
             });
            
             map.on('click', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
+                if (draw.getMode() !== 'simple_select') return;
+
+                if (!allow_click) {
+                    allow_click = true;
+                    return;
+                }
+
+                let table = ['<div style="line-height: 100%">'];
+                for (const layer_name of click_layers) {
+                    const layer = layer_name.split('@')[0];
+                    if (map.getLayoutProperty(layer_name, 'visibility') === 'visible') {
+                        const feature = map.queryRenderedFeatures(e.point, { layers: [layer_name] })[0];
+                        if (feature) {
+                            table.push(`<h3>${layers[layer].name}</h3>`);
+                            const click_cats = layers[layer]['click'];
+                            for (const [cat, args] of Object.entries(click_cats)) {
+                                const value = feature.properties[cat];
+                                if (value || value === 0) {
+                                    if (args[0]) {
+                                        table.push(`<h4>${args[1] || cat}</h4>`);
+                                    }
+                                    table.push(`<p>${value}</p>`);
                                 }
                             }
-                        };
-                        table.push('</div>')
-                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
-                        .setLngLat(e.lngLat)
-                        .setHTML(table.join(''))
-                        .addTo(map);
-                        
-                    } else {
-                        allow_click = true;
-                    };
-                    
-                } else {
-                    allow_click = false;
-                };
-            });
+                        }
+                    }
+                }
+                table.push('</div>');
 
-            //Code for mobile optimization for enabling the touch and zoom functions
+                new mapboxgl.Popup({
+                    className: 'popup-box',
+                    anchor: 'top-left'
+                }).setLngLat(e.lngLat)
+                .setHTML(table.join(''))
+                .addTo(map);
+            });
+            
+            let touchPopup = null;
+
+            function showClickPopup(e) {
+                if (draw.getMode() !== 'simple_select') return;
+
+                if (touchPopup) {
+                    touchPopup.remove();
+                    touchPopup = null;
+                }
+
+                let table = ['<div style="line-height: 100%">'];
+
+                for (const layer_name of click_layers) {
+                    const layer = layer_name.split('@')[0];
+
+                    if (map.getLayoutProperty(layer_name, 'visibility') === 'visible') {
+                        const feature = map.queryRenderedFeatures(e.point, { layers: [layer_name] })[0];
+                        if (!feature) continue;
+
+                        table.push(`<h3>${layers[layer].name}</h3>`);
+
+                        const click_cats = layers[layer]['click'];
+                        for (const [cat, args] of Object.entries(click_cats)) {
+                            const value = feature.properties[cat];
+                            if (value || value === 0) {
+                                if (args[0]) {
+                                    table.push(`<h4>${args[1] || cat}</h4>`);
+                                }
+                                table.push(`<p>${value}</p>`);
+                            }
+                        }
+                    }
+                }
+
+                table.push('</div>');
+
+                touchPopup = new mapboxgl.Popup({ className: 'popup-box', anchor: 'top-left' })
+                    .setLngLat(e.lngLat)
+                    .setHTML(table.join(''))
+                    .addTo(map);
+            }
+
+            let touchStartPoint = null;
+
             map.on('touchstart', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
-                                }
-                            }
-                        };
-                        table.push('</div>')
-                        const touch_screen = new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'}).trackPointer()
-                        touch_screen.addTo(map)
-                        .setLngLat(e.lngLat)
-                        .setHTML(table.join(''))
-                        .addTo(map);
-
-                        map.on('touchstart', click_layers, (e) => {
-                            touch_screen.remove()
-                        });
-
-                    } else {
-                        allow_click = true;
-                    };
-                    
-                } else {
-                    allow_click = false;
-                };
+                touchStartPoint = e.point;
             });
 
-            //Code for mobile optimization for enabling the touch and zoom functions
-            map.on('touchmove', click_layers, (e) => {
-                console.log(draw.getMode());
-                if (draw.getMode() == 'simple_select') {
-                    if (allow_click){
-                        let table = ['<div style="line-height: 100%">']
-                        for (layer_name of click_layers) {
-                            layer = layer_name.split('@')[0];
-                            if (map.getLayoutProperty(layer_name, 'visibility') == 'visible'){
-                                feature = map.queryRenderedFeatures(e.point, {layers: [layer_name]})[0]
-                                if (feature) {
-                                    console.log(feature)
-                                    table.push(`<h3>${layers[layer].name}</h3>`)
-                                    const click_cats = layers[layer]['click'];
-                                    for (let [cat, args] of Object.entries(click_cats)){
-                                        let value = feature.properties[cat];
-                                        if (value||value == 0){
-                                            if(args[0]){
-                                                if(args[1]==""){
-                                                    table.push(`<h4>${cat}</h4>`);
-                                                } else{
-                                                    table.push(`<h4>${args[1]}</h4>`);
-                                                }
-                                            }
-                                            table.push(`<p>${value}</p>`);
-                                        }
-                                    };                        
-                                }
-                            }
-                        };
-                        table.push('</div>')
-                        new mapboxgl.Popup({className: 'popup-box', anchor:'top-left'})
-                        .setLngLat(e.lngLat)
-                        .addTo(map);
-                        
-                        touch_screen.setHTML(table.join(''));
-                        if (!touch_screen.isOpen()){touch_screen.addTo(map)}
-                        
-                    } else {
-                        allow_click = true;
-                    };
-                    
-                } else {
-                    allow_click = false;
-                };
+            map.on('touchend', (e) => {
+                if (!touchStartPoint) return;
+
+                const dx = Math.abs(e.point.x - touchStartPoint.x);
+                const dy = Math.abs(e.point.y - touchStartPoint.y);
+                const threshold= 10;
+
+                if (dx < threshold && dy < threshold) { // if user start -> end tap dist is less than threshold, click
+                    showClickPopup(e);
+                }
+
+                touchStartPoint = null;
             });
 
             function updateLayerFilter(evt) {
