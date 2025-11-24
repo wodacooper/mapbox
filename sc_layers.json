@@ -1,8 +1,8 @@
 {
     "qct_dda": {
-        "name": "20262 QCT/DDAs",
-        "source_id": "ga_test_source",
-        "url": "mapbox://wodacooper.ga_test",
+        "name": "2026 QCT/DDAs",
+        "source_id": "qct_dda_26_source",
+        "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -796,6 +796,7 @@
         }
     }
 }
+
 
 
 
