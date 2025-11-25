@@ -1772,7 +1772,8 @@
         },
         "num_filters": {
             "score": "Stable Score",
-            "revit_pts": "Revit Score"
+            "revit_pts": "Revit Score",
+            "prev_pts": "Previous Project Score"
         },
         "cat_filter_vals": {
             "inc_2023": ["0.0","1.0", "2.0"],
@@ -2507,6 +2508,10 @@
             "revit_pts": [
                 0.0,
                 8.0
+            ],
+            "prev_pts":[
+               0.0,
+               15.0
             ]
         }
     },
@@ -3537,6 +3542,7 @@
 
     }
 }
+
 
 
 
