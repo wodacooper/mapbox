@@ -105,8 +105,8 @@
     },
     "score": {
         "name": "2026 Score Final Draft",
-        "source_id": "in_26",
-        "url": "mapbox://wodacooper.in_26",
+        "source_id": "in_25",
+        "url": "mapbox://wodacooper.in_25",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -940,6 +940,7 @@
         }
     }
 }
+
 
 
 
