@@ -254,6 +254,85 @@
             ]
         }
     },
+    "median_income": {
+        "name": "County Median Income",
+        "source_id": "sc_county_medians_source",
+        "url": "mapbox://wodacooper.sc_county_medians",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+
+        "fill": {
+            "fill-color": [
+                "step",
+                ["get", "median2025"],
+                "#ff0000",  
+                66225,
+                "#ffa500",     
+                80850,
+                "#ffff00",   
+                92700,
+                "#00ff00"      
+            ],
+            "fill-opacity": [
+                "step",
+                ["get", "median2025"],
+                0.5,
+                80850,
+                0.3
+            ]
+        },
+
+        "legend": [
+            [
+                "<66,225",
+                "#ff0000"
+            ],
+            [
+                "66,225-80,850",
+                "#ffa500"
+            ],
+            [
+                "80,850-92,700",
+                "#ffff00"
+            ],
+            [
+                "≥92,700",
+                "#00ff00"
+            ]
+        ],
+
+        "hover": {
+             "County_Name": [
+                true,
+                "County Name"
+            ],
+            "median2025":[
+                true,
+                "Median Income"
+            ]
+        },
+        "click": {
+            "County_Name": [
+                true,
+                "County Name"
+            ],
+            "median2025":[
+                true,
+                "Median Income"
+            ]
+        },
+
+        "num_filters": {
+            "median2025": "Median Income"
+        },
+
+        "num_filter_vals":{
+            "median2025":[51100,112500]
+        }
+    },
     "Urban": {
         "name": "Urban 2026",
         "source_id": "score_source",
