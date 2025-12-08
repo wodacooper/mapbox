@@ -2804,6 +2804,75 @@
         "click":{
             "GEOID":[true,"Tract ID"]
         }
+    },
+    
+    "rrc":{
+        "name": "Oil and Gas",
+        "source_id": "tx_rrc",
+        "url": "mapbox://wodacooper.tx_rrc",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#77fc03",
+            "line-opacity": 0.8 
+        },
+        "circle": {
+            "circle-radius": 5,
+            "circle-color": "#2b00ff",
+            "circle-opacity": [
+                "match",
+                ["get", "System"],
+                "Well",
+                0.75,
+                0
+            ],
+            "circle-stroke-width": 1,
+            "circle-stroke-color": "#FFFFFF",
+            "circle-stroke-opacity": [
+                "match",
+                ["get", "System"],
+                "Well",
+                0.75,
+                0
+            ]
+        },
+        "cat_filters": {
+            "System": ""
+        },
+        "cat_filter_vals": {
+            "System": [
+                "Pipeline",
+                "Well"
+            ]
+        },
+        "legend": [
+            [
+                "Pipeline",
+                "#77fc03"
+            ],
+            [
+                "Well",
+                "#2b00ff"
+            ]
+        ],
+        "click": {
+            "System": [true, "System"],
+            "API": [true, "API"],
+            "Description": [true, "Description"],
+            "System Name": [true, "System Name"],
+            "System Type": [true, "System Type"],
+            "Status": [true, "Status"]
+        },
+        "hover": {
+            "System": [true, "System"],
+            "Description": [true, "Description"],
+            "Status": [true, "System Name"]
+        }
     }
 
 }
