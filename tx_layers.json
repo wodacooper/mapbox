@@ -2808,8 +2808,8 @@
     
     "rrc":{
         "name": "Oil and Gas",
-        "source_id": "tx_rrc",
-        "url": "mapbox://wodacooper.tx_rrc",
+        "source_id": "tx_oil_gas",
+        "url": "mapbox://wodacooper.tx_oil_gas",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
