@@ -62,7 +62,7 @@
     "score": {
         "name": "2026 Score",
         "source_id": "score",
-        "url": "mapbox://wodacooper.ia_25",
+        "url": "mapbox://wodacooper.ia_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -2332,6 +2332,7 @@
         }
     }
 }
+
 
 
 
