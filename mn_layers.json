@@ -1576,7 +1576,7 @@
             26,
             "#00ffff"
             ],
-            "fill-opacity": 0.6
+            "fill-opacity": 0.5
         },
         "cat_filters": {
             "name_places": "City",
@@ -1670,7 +1670,7 @@
             34,
             "#00ffff"
             ],
-            "fill-opacity": 0.6
+            "fill-opacity": 0.5
         },
         "cat_filters": {
             "name_places": "City",
@@ -1726,4 +1726,5 @@
         }
     }
 }
+
 
