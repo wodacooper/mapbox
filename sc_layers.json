@@ -873,7 +873,34 @@
                 25.0
             ]
         }
-    }
+    },
+    "Walmarts": {
+        "name": "Walmarts",
+        "source_id": "sc_walmart_source",
+        "url": "mapbox://wodacooper.sc_walmart",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": ["#0071ce"]
+        },
+        "legend": [
+            [
+                "Walmart",
+                "#0071ce"
+            ]
+        ],
+        "click": {
+            "Address": [
+                true,
+                ""
+            ]
+        }
 }
 
 
