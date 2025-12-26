@@ -876,7 +876,7 @@
     },
     "Walmarts": {
         "name": "Walmarts",
-        "source_id": "sc_walmarts_source",
+        "source_id": "sc_walmarts",
         "url": "mapbox://wodacooper.sc_walmarts",
         "source_layer": "hello_world",
         "layout": {
@@ -903,6 +903,7 @@
         }
     }
 }
+
 
 
 
