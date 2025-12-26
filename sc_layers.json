@@ -887,7 +887,7 @@
             "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 1,
-            "circle-color": ["#0071ce"]
+            "circle-color": "#0071ce"
         },
         "legend": [
             [
@@ -903,6 +903,7 @@
         }
     }
 }
+
 
 
 
