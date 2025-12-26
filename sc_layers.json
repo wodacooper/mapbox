@@ -876,8 +876,8 @@
     },
     "Walmarts": {
         "name": "Walmarts",
-        "source_id": "sc_walmart_source",
-        "url": "mapbox://wodacooper.sc_walmart",
+        "source_id": "sc_walmarts_source",
+        "url": "mapbox://wodacooper.sc_walmarts",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -891,7 +891,7 @@
         },
         "legend": [
             [
-                "Walmart",
+                "Walmarts",
                 "#0071ce"
             ]
         ],
@@ -903,6 +903,7 @@
         }
     }
 }
+
 
 
 
