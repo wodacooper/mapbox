@@ -97,6 +97,34 @@
             ]
         }
     },
+    "Walmarts": {
+        "name": "Walmarts",
+        "source_id": "sc_walmarts",
+        "url": "mapbox://wodacooper.sc_walmarts",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": "#0071ce"
+        },
+        "legend": [
+            [
+                "Walmarts",
+                "#0071ce"
+            ]
+        ],
+        "click": {
+            "Address": [
+                true,
+                ""
+            ]
+        }
+    },
     "past_projects": {
         "name": "Past Projects 21-25",
         "source_id": "sc_past_projects",
@@ -873,55 +901,6 @@
                 25.0
             ]
         }
-    },
-    "Walmarts": {
-        "name": "Walmarts",
-        "source_id": "sc_walmarts",
-        "url": "mapbox://wodacooper.sc_walmarts",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "visible"
-        },
-        "visible": true,
-        "circle": {
-            "circle-radius": 5,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 1,
-            "circle-color": "#0071ce"
-        },
-        "legend": [
-            [
-                "Walmarts",
-                "#0071ce"
-            ]
-        ],
-        "click": {
-            "Address": [
-                true,
-                ""
-            ]
-        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
