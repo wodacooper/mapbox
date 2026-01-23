@@ -1277,9 +1277,9 @@
         }
     },
     "oh_26_senior_draft1": {
-        "name": "2026 Senior Draft 1",
-        "source_id": "oh_26_071825_source",
-        "url": "mapbox://wodacooper.oh_26_071825",
+        "name": "2027 Senior Draft 1",
+        "source_id": "oh_26_source",
+        "url": "mapbox://wodacooper.oh_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -1321,11 +1321,13 @@
             "Region": "",
             "County": "",
             "NAMELSAD": "City",
-            "Metro/Rural": ""
+            "Metro/Rural": "",
+            "tr":"Transformative"
         },
         "num_filters": {
             "senior_score": "Senior Score",
-            "senior_opp_indexes": "Senior Opportunity Index"
+            "senior_opp_indexes": "Senior Opportunity Index",
+            "2026 SDDA":"DDA"
         },
         "legend": [
             [
@@ -2488,6 +2490,10 @@
             "Metro/Rural": [
                 "Metro",
                 "Rural"
+            ],
+            "tr":[
+                "Transformative",
+                "Not Transformative"
             ]
         },
         "num_filter_vals": {
@@ -2498,6 +2504,10 @@
             "senior_opp_indexes": [
                 0.0,
                 100.0
+            ],
+            "2026 SDDA":[
+                0,
+                1
             ]
         }
     },
