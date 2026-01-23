@@ -1290,7 +1290,7 @@
                 "step",
                 [
                     "get",
-                    "general_score"
+                    "senior_score"
                 ],
                 "#ffffff",
                 4,
