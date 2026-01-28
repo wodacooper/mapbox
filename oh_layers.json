@@ -1,6 +1,6 @@
 {
     "qct_dda": {
-        "name": "20216 QCT/DDAs",
+        "name": "2016 QCT/DDAs",
         "source_id": "qct_dda_26_source",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -1277,7 +1277,7 @@
         }
     },
     "oh_26_senior_draft1": {
-        "name": "2027 Senior Draft 1",
+        "name": "2027 OLIHTC Senior",
         "source_id": "oh_26_source",
         "url": "mapbox://wodacooper.oh_26",
         "source_layer": "hello_world",
@@ -2517,7 +2517,7 @@
         }
     },
     "oh_26_general_draft1": {
-        "name": "2027 General Draft 1",
+        "name": "2027 OLIHTC General",
         "source_id": "oh_26_source",
         "url": "mapbox://wodacooper.oh_26",
         "source_layer": "hello_world",
@@ -5510,5 +5510,6 @@
         }
     }
 }
+
 
 
