@@ -1,6 +1,6 @@
 {
     "qct_dda": {
-        "name": "2026 QCT/DDAs",
+        "name": "20216 QCT/DDAs",
         "source_id": "qct_dda_26_source",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -1327,7 +1327,8 @@
         },
         "num_filters": {
             "senior_score": "Senior Score",
-            "senior_opp_indexes": "Senior Opportunity Index"
+            "senior_opp_indexes": "Senior Opportunity Index",
+            "New Affordability Units 2021-2025":"New Affordability Units"
         },
         "legend": [
             [
@@ -2508,6 +2509,10 @@
             "senior_opp_indexes": [
                 0.0,
                 100.0
+            ],
+            "New Affordability Units 2021-2025":[
+                0.0,
+                5073.0
             ]
         }
     },
@@ -2562,7 +2567,8 @@
         },
         "num_filters": {
             "general_score": "General Score",
-            "general_opp_indexes": "General Opportunity Index"
+            "general_opp_indexes": "General Opportunity Index",
+            "New Affordability Units 2021-2025":"New Affordability Units"
         },
         "legend": [
             [
@@ -3743,6 +3749,10 @@
             "general_opp_indexes": [
                 0.0,
                 100.0
+            ],
+            "New Affordability Units 2021-2025":[
+                0.0,
+                5073.0
             ]
         }
     },
