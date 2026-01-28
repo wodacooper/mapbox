@@ -1,0 +1,33 @@
+{
+    "Projects": {
+        "name": "Properties",
+        "source_id": "properties",
+        "url": "mapbox://wodacooper.properties_source",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        
+         "circle": {
+            "circle-color": "#808080",
+            "circle-radius": 5,
+            "circle-stroke-width": 3,
+            "circle-stroke-color": ["#E74C3C"]
+        },
+        "hover":{
+            
+            "Name":[true, ""],
+            "Units":[true,""],
+            "Address":[true, ""],
+            "Occupancy":[true, ""]
+        },
+        
+        "click":{
+           "Name":[true, ""],
+            "Units":[true,""],
+            "Address":[true, ""],
+            "Occupancy":[true, ""]
+        }
+    }
+}
