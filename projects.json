@@ -1,6 +1,6 @@
 {
     "Projects": {
-        "name": "Properties1",
+        "name": "Properties2",
         "source_id": "properties_source",
         "url": "mapbox://wodacooper.properties",
         "source_layer": "hello_world",
@@ -13,7 +13,7 @@
             "circle-color": "#808080",
             "circle-radius": 5,
             "circle-stroke-width": 3,
-            "circle-stroke-color": ["#E74C3C"]
+            "circle-stroke-color": "#E74C3C"
         },
         "hover":{
             
