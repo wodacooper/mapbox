@@ -1,8 +1,8 @@
 {
     "Projects": {
         "name": "Properties",
-        "source_id": "properties",
-        "url": "mapbox://wodacooper.properties_source",
+        "source_id": "properties_source",
+        "url": "mapbox://wodacooper.properties",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
