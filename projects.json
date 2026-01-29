@@ -10,10 +10,10 @@
         "visible": true,
         
          "circle": {
-            "circle-color": "#808080",
+            "circle-color": "#ffffff",
             "circle-radius": 5,
             "circle-stroke-width": 3,
-            "circle-stroke-color": "#E74C3C"
+            "circle-stroke-color": "#1c1c84"
         },
         "hover":{
             
