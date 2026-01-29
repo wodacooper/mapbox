@@ -16,18 +16,20 @@
             "circle-stroke-color": "#1c1c84"
         },
         "hover":{
-            
             "Name":[true, ""],
             "Units":[true,""],
             "Address":[true, ""],
-            "Occupancy":[true, ""]
+            "Occupancy":[true, ""],
+            "Credit Type":[true,""],
+            "Application Date:[true,""]
         },
-        
         "click":{
            "Name":[true, ""],
             "Units":[true,""],
             "Address":[true, ""],
-            "Occupancy":[true, ""]
+            "Occupancy":[true, ""],
+            "Credit Type":[true,""],
+            "Application Date:[true,""]
         }
     }
 }
