@@ -21,7 +21,7 @@
             "Address":[true, ""],
             "Occupancy":[true, ""],
             "Credit Type":[true,""],
-            "Application Date:[true,""]
+            "Application Date":[true,""]
         },
         "click":{
            "Name":[true, ""],
@@ -29,7 +29,7 @@
             "Address":[true, ""],
             "Occupancy":[true, ""],
             "Credit Type":[true,""],
-            "Application Date:[true,""]
+            "Application Date":[true,""]
         }
     }
 }
