@@ -16,20 +16,22 @@
             "circle-stroke-color": "#1c1c84"
         },
         "hover":{
-            "Name":[true, ""],
+            "Project Name":[true, ""],
             "Units":[true,""],
+            "Lead Development Officer":[true,""],
             "Address":[true, ""],
             "Occupancy":[true, ""],
             "Credit Type":[true,""],
-            "Application Date":[true,""]
+            "Submission Date":[true,""]
         },
         "click":{
-           "Name":[true, ""],
+           "Project Name":[true, ""],
             "Units":[true,""],
+            "Lead Development Officer":[true,""],
             "Address":[true, ""],
             "Occupancy":[true, ""],
             "Credit Type":[true,""],
-            "Application Date":[true,""]
+            "Submission Date":[true,""]
         }
     }
 }
