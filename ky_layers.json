@@ -203,8 +203,7 @@
         },
         "cat_filters": {
             "county": "",
-            "NAMELSAD": "City",
-            "qct_filter": "QCT"
+            "NAMELSAD": "City"
         },
         "num_filters": {
             "urban_score": "Urban Score"
