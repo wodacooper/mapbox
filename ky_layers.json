@@ -881,7 +881,7 @@
             ]
         }
     },
-    "BoS_score": {
+    "bos_score": {
         "name": "2026 BoS Score",
         "source_id": "ky_26",
         "url": "mapbox://wodacooper.ky_26",
@@ -1611,4 +1611,5 @@
         }
     }    
 }
+
 
