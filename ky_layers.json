@@ -875,12 +875,13 @@
             ]
         },
         "num_filter_vals": {
-            "score": [
+            "urban_score": [
                 0.0,
                 25.6
             ]
         }
-    },"BoS score": {
+    },
+    "BoS score": {
         "name": "2026 BoS Score",
         "source_id": "ky_26_source",
         "url": "mapbox://wodacooper.ky_26",
