@@ -931,8 +931,7 @@
         },
         "cat_filters": {
             "county": "",
-            "NAMELSAD": "City",
-            "qct_filter": "QCT"
+            "NAMELSAD": "City"
         },
         "num_filters": {
             "bos_score": "BoS Score"
