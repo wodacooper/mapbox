@@ -1,6 +1,6 @@
 {
     "qct_dda": {
-        "name": "2026 QCT/DDAs",
+        "name": "20126 QCT/DDAs",
         "source_id": "qct_dda_26",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -152,7 +152,7 @@
             ]
         }
     },
-    "urban score": {
+    "urban_score": {
         "name": "2026 Urban Score",
         "source_id": "ky_26_source",
         "url": "mapbox://wodacooper.ky_26",
@@ -881,7 +881,7 @@
             ]
         }
     },
-    "BoS score": {
+    "BoS_score": {
         "name": "2026 BoS Score",
         "source_id": "ky_26",
         "url": "mapbox://wodacooper.ky_26",
@@ -1610,6 +1610,5 @@
             ]
         }
     }    
-
 }
 
