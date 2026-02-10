@@ -1,6 +1,6 @@
 {
     "development_acquisitions": {
-        "name": "Development Acquisitions1",
+        "name": "Development Acquisitions",
         "source_id": "development_acquisitions2_source",
         "url": "mapbox://wodacooper.development_acquisitions2",
         "source_layer": "hello_world",
@@ -11,7 +11,7 @@
         "visible": true,
         "icon": {
             "icon-image": ["get", "icon"],
-            "icon-size": 0.8,
+            "icon-size": 5,
             "icon-allow-overlap": true
         },
         "circle": {
@@ -135,5 +135,6 @@
     }
     }
 }
+
 
 
