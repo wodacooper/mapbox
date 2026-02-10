@@ -1,6 +1,6 @@
 {
   "development_acquisitions": {
-    "name": "Development Acquisitions",
+    "name": "Development Acquisitions1",
     "source_id": "development_acquisitions2_source",
     "url": "mapbox://wodacooper.development_acquisitions2",
     "source_layer": "hello_world",
@@ -67,5 +67,6 @@
     }
   }
 }
+
 
 
