@@ -1,140 +1,68 @@
 {
-    "development_acquisitions": {
-        "name": "Development Acquisitions",
-        "source_id": "development_acquisitions2_source",
-        "url": "mapbox://wodacooper.development_acquisitions2",
-        "source_layer": "hello_world",
-        "layout": {
-            
-            "visibility": "visible"
-        },
-        "visible": true,
-        "icon": {
-            "icon-image": ["get", "icon"],
-            "icon-size": 5,
-            "icon-allow-overlap": true
-        },
-        "circle": {
-            "circle-radius": 5,
-            "circle-stroke-width": 1,
-            "circle-color": [
-            "match",
-            ["get", "status"],
-            "Pre-App", 
-            "#4CAF50",
-            "Awarded-Pending Closing",
-            "#FFC107",
-            "Pending Funding",
-            "#2196F3",
-            "#9E9E9E"
-            ]
-        },
-        "legend": [
-            [
-                "Pre-App",
-                "#4CAF50"
-            ],
-            [
-                "Awarded-Pending Closing",
-                "#FFC107"
-            ],
-            [
-                "Pending Funding",
-                "#2196F3"
-            ]
-        ],
+  "development_acquisitions": {
+    "name": "Development Acquisitions",
+    "source_id": "development_acquisitions2_source",
+    "url": "mapbox://wodacooper.development_acquisitions2",
+    "source_layer": "hello_world",
 
-        "hover": {
-            "Project Name": [
-                true,
-                ""
-            ],
-            "Address": [
-                true,
-                ""
-            ],
-            "status": [
-                true,
-                "Status"
-            ]
-        },
-        "click": {
-            "Project Name": [
-                true,
-                ""
-            ],
-            
-            "Address": [
-                true,
-                ""
-            ],
-            "Lead Development Officer": [
-                true,
-                ""
-            ],
-            "Closing Lead": [
-                true,
-                ""
-            ],
-            "Seller": [
-                true,
-                ""
-            ],
-            "Buying Entity": [
-                true,
-                ""
-            ],
-            "Total Purchase Price": [
-                true,
-                ""
-            ],
-            "Current PA Expiration Date": [
-                true,
-                ""
-            ],
-            "Latest PA Expiration Date": [
-                true,
-                ""
-            ],
-            "Date of Execution": [
-                true,
-                ""
-            ],
-            "Extensions": [
-                true,
-                ""
-            ],
-            "Title Status": [
-                true,
-                ""
-            ],
-            "Round/Notes": [
-                true,
-                ""
-            ],
-            "Coordinates": [
-                true,
-                ""
-            ],
-            "status": [
-                true,
-                "Status"
-            ],
-            "Title": [
-                true,
-                ""
-            ],
-            "Notes": [
-                true,
-                ""
-            ],
-            "Escrow Agent": [
-                true,
-                ""
-            ]
+    "layout": {
+      "icon-image": ["get", "icon"],
+      "icon-size": 5.0,
+      "icon-allow-overlap": true,
+      "visibility": "visible"
+    },
+
+    "visible": true,
+
+    "icon": {},
+
+    "circle": {
+      "circle-radius": 5,
+      "circle-stroke-width": 1,
+      "circle-color": [
+        "match",
+        ["get", "status"],
+        "Pre-App",
+        "#4CAF50",
+        "Awarded-Pending Closing",
+        "#FFC107",
+        "Pending Funding",
+        "#2196F3",
+        "#9E9E9E"
+      ]
+    },
+
+    "legend": [
+      ["Pre-App", "#4CAF50"],
+      ["Awarded-Pending Closing", "#FFC107"],
+      ["Pending Funding", "#2196F3"]
+    ],
+
+    "hover": {
+      "Project Name": [true, ""],
+      "Address": [true, ""],
+      "status": [true, "Status"]
+    },
+
+    "click": {
+      "Project Name": [true, ""],
+      "Address": [true, ""],
+      "Lead Development Officer": [true, ""],
+      "Closing Lead": [true, ""],
+      "Seller": [true, ""],
+      "Buying Entity": [true, ""],
+      "Total Purchase Price": [true, ""],
+      "Current PA Expiration Date": [true, ""],
+      "Latest PA Expiration Date": [true, ""],
+      "Date of Execution": [true, ""],
+      "Extensions": [true, ""],
+      "Title Status": [true, ""],
+      "Round/Notes": [true, ""],
+      "Coordinates": [true, ""],
+      "status": [true, "Status"],
+      "Title": [true, ""],
+      "Notes": [true, ""],
+      "Escrow Agent": [true, ""]
     }
-    }
+  }
 }
-
-
-
