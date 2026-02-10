@@ -63,9 +63,9 @@
       "status": [true, "Status"],
       "Title": [true, ""],
       "Notes": [true, ""],
-      "Escrow Agent": [true, ""],
       "icon":[true,""]
     }
   }
 }
+
 
