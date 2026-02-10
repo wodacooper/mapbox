@@ -22,8 +22,7 @@
             "Address":[true, ""],
             "Occupancy":[true, ""],
             "Credit Type":[true,""],
-            "Submission Date":[true,""],
-            "icon":[true,""]
+            "Submission Date":[true,""]
         },
         "click":{
            "Project Name":[true, ""],
@@ -32,8 +31,7 @@
             "Address":[true, ""],
             "Occupancy":[true, ""],
             "Credit Type":[true,""],
-            "Submission Date":[true,""],
-            "icon":[true,""]
+            "Submission Date":[true,""]
         }
     }
 }
