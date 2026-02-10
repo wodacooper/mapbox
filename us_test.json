@@ -41,7 +41,8 @@
     "hover": {
       "Project Name": [true, ""],
       "Address": [true, ""],
-      "status": [true, "Status"]
+      "status": [true, "Status"],
+      "icon":[true,""]
     },
 
     "click": {
@@ -62,7 +63,9 @@
       "status": [true, "Status"],
       "Title": [true, ""],
       "Notes": [true, ""],
-      "Escrow Agent": [true, ""]
+      "Escrow Agent": [true, ""],
+      "icon":[true,""]
     }
   }
 }
+
