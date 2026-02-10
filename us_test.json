@@ -1,13 +1,13 @@
 {
   "development_acquisitions": {
-    "name": "Development Acquisitions1",
+    "name": "Development Acquisitions",
     "source_id": "development_acquisitions2_source",
     "url": "mapbox://wodacooper.development_acquisitions2",
     "source_layer": "hello_world",
 
     "layout": {
       "icon-image": ["get", "icon"],
-      "icon-size": 5.0,
+      "icon-size": 2.0,
       "icon-allow-overlap": true,
       "visibility": "visible"
     },
@@ -15,22 +15,6 @@
     "visible": true,
 
     "icon": {},
-
-    "circle": {
-      "circle-radius": 5,
-      "circle-stroke-width": 1,
-      "circle-color": [
-        "match",
-        ["get", "status"],
-        "Pre-App",
-        "#4CAF50",
-        "Awarded-Pending Closing",
-        "#FFC107",
-        "Pending Funding",
-        "#2196F3",
-        "#9E9E9E"
-      ]
-    },
 
     "legend": [
       ["Pre-App", "#4CAF50"],
@@ -67,6 +51,7 @@
     }
   }
 }
+
 
 
 
