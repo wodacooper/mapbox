@@ -1,8 +1,8 @@
 {
     "Communities": {
         "name": "Communities",
-        "source_id": "communities_source",
-        "url": "mapbox://wodacooper.communities",
+        "source_id": "communites_source",
+        "url": "mapbox://wodacooper.communites",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
