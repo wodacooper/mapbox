@@ -12,7 +12,7 @@
          },
          "visible": true,
          "icon": {
-           "icon-color": "#FF0000",
+           "icon-color": "#FF0000"
          },
          "circle": {
             "circle-color": "#808080",
