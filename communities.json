@@ -1,6 +1,6 @@
 {
     "Communities": {
-        "name": "Communities",
+        "name": "Communities1",
         "source_id": "communities_source",
         "url": "mapbox://wodacooper.communities",
         "source_layer": "hello_world",
@@ -21,7 +21,7 @@
             "match",
                 ["get","Status (IO/UC/ID)"],
                 "IO",
-                "#0000FF",
+                "#4667FA",
                 "UC",
                 "#708238",
                 "ID",
