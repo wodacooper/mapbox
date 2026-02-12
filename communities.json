@@ -1,12 +1,12 @@
 {
     "Communities": {
-        "name": "Communities",
+        "name": "Communities1",
         "source_id": "communities_source",
         "url": "mapbox://wodacooper.communities",
         "source_layer": "hello_world",
         "layout": {
           "icon-image": ["get", "icon"],
-          "icon-size": 0.3,
+          "icon-size": 0.2,
           "icon-allow-overlap": true,
           "visibility": "visible"
          },
@@ -28,8 +28,8 @@
                 "#ED2939",
                 "#151B54"
             ],
-            "circle-radius": 12,
-            "circle-stroke-width": 3,
+            "circle-radius": 13,
+            "circle-stroke-width": 4,
             "circle-stroke-color": "#FFFFFF"
         },
         "hover":{
