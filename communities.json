@@ -1,0 +1,27 @@
+{
+    "Communities": {
+        "name": "Communities",
+        "source_id": "communities_source",
+        "url": "mapbox://wodacooper.communities",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        
+         "circle": {
+            "circle-color": "#808080",
+            "circle-radius": 5,
+            "circle-stroke-width": 3,
+            "circle-stroke-color": "#E74C3C"
+        },
+        "hover":{
+            "Community Name":[true, ""],
+            "Community Address":[true, ""]
+        },
+        "click":{
+            "Community Name":[true, ""],
+            "Community Address":[true, ""]
+        }
+    }
+}
