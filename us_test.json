@@ -6,7 +6,7 @@
     "source_layer": "hello_world",
     "layout": {
       "icon-image": ["get", "icon"],
-      "icon-size": 2.0,
+      "icon-size": 0.5,
       "icon-allow-overlap": true,
       "visibility": "visible"
     },
@@ -14,7 +14,7 @@
     "icon": {
       "icon-color": "#FF0000",
       "icon-halo-color": "#FFFFFF",
-      "icon-halo-width": 2
+      "icon-halo-width": 0.2
     },
     "legend": [
       ["Pre-App", "#4CAF50"],
@@ -47,4 +47,5 @@
     }
   }
 }
+
 
