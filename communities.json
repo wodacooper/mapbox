@@ -1,13 +1,13 @@
 {
     "Communities": {
-        "name": "Communities1",
+        "name": "Communities",
         "source_id": "communities_source",
         "url": "mapbox://wodacooper.communities",
         "source_layer": "hello_world",
         "layout": {
           "icon-image": ["get", "icon"],
           "icon-size": 0.2,
-          "icon-allow-overlap": true,
+          "icon-allow-overlap": false,
           "visibility": "visible"
          },
          "visible": true,
