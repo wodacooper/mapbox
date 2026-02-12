@@ -4,31 +4,28 @@
     "source_id": "development_acquisitions2_source",
     "url": "mapbox://wodacooper.development_acquisitions2",
     "source_layer": "hello_world",
-
     "layout": {
       "icon-image": ["get", "icon"],
       "icon-size": 2.0,
       "icon-allow-overlap": true,
       "visibility": "visible"
     },
-
     "visible": true,
-
-    "icon": {},
-
+    "icon": {
+      "icon-color": "#FF0000",
+      "icon-halo-color": "#FFFFFF",
+      "icon-halo-width": 2
+    },
     "legend": [
       ["Pre-App", "#4CAF50"],
       ["Awarded-Pending Closing", "#FFC107"],
       ["Pending Funding", "#2196F3"]
     ],
-
     "hover": {
       "Project Name": [true, ""],
       "Address": [true, ""],
-      "status": [true, "Status"],
-      "icon":[true,""]
+      "status": [true, "Status"]
     },
-
     "click": {
       "Project Name": [true, ""],
       "Address": [true, ""],
@@ -46,13 +43,7 @@
       "Coordinates": [true, ""],
       "status": [true, "Status"],
       "Title": [true, ""],
-      "Notes": [true, ""],
-      "icon":[true,""]
+      "Notes": [true, ""]
     }
   }
 }
-
-
-
-
-
