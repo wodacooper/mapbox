@@ -1,6 +1,6 @@
 {
     "Communities": {
-        "name": "Communities2",
+        "name": "Communities",
         "source_id": "communities_source",
         "url": "mapbox://wodacooper.communities",
         "source_layer": "hello_world",
