@@ -1,6 +1,6 @@
 {
     "Communities": {
-        "name": "Communities1",
+        "name": "Communities2",
         "source_id": "communities_source",
         "url": "mapbox://wodacooper.communities",
         "source_layer": "hello_world",
@@ -23,11 +23,11 @@
             "circle-stroke-color": "#E74C3C"
         },
         "hover":{
-            "Community Name":[true, ""],
+            "Community Name:":[true, ""],
             "Community Address":[true, ""]
         },
         "click":{
-            "Community Name":[true, ""],
+            "Community Name:":[true, ""],
             "Community Address":[true, ""]
         }
     }
