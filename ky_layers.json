@@ -161,6 +161,9 @@
             "visibility": "visible"
         },
         "visible": true,
+
+        "perm_filters":[["==","set_aside", "Urban"]],
+
         "fill": {
             "fill-color": [
                 "step",
@@ -202,7 +205,7 @@
             ]
         },
         "cat_filters": {
-            "county": "",
+            "County": "",
             "NAMELSAD": "City"
         },
         "num_filters": {
@@ -259,7 +262,7 @@
                 true,
                 ""
             ],
-            "county": [
+            "County": [
                 true,
                 ""
             ],
@@ -273,7 +276,7 @@
                 true,
                 ""
             ],
-            "county": [
+            "County": [
                 true,
                 ""
             ],
@@ -327,7 +330,7 @@
             ]
         },
         "cat_filter_vals": {
-            "county": [
+            "County": [
                 "Adair County",
                 "Allen County",
                 "Anderson County",
@@ -881,7 +884,7 @@
         }
     },
     "bos_score": {
-        "name": "2026 BoS Score",
+        "name": "20261 BoS Score",
         "source_id": "ky_26",
         "url": "mapbox://wodacooper.ky_26",
         "source_layer": "hello_world",
@@ -889,6 +892,8 @@
             "visibility": "visible"
         },
         "visible": true,
+        "perm_filters":[["==","set_aside", "Rural"]],
+
         "fill": {
             "fill-color": [
                 "step",
@@ -897,25 +902,25 @@
                     "bos_score"
                 ],
                 "#ffffff",
-                4,
+                7,
                 "#9e9e9e",
-                6,
+                11,
                 "#70534e",
-                8,
+                13,
                 "#346b36",
-                10,
-                "#0000ff",
-                12,
-                "#ff0000",
                 14,
-                "#fe8103",
+                "#0000ff",
+                15,
+                "#ff0000",
                 16,
+                "#fe8103",
+                17,
                 "#ffff00",
                 18,
                 "#ff00ff",
                 19,
                 "#00ff00",
-                20,
+                21,
                 "#00ffff"
             ],
             "fill-opacity": [
@@ -925,12 +930,12 @@
                     "bos_score"
                 ],
                 0.3,
-                4,
+                7,
                 0.6
             ]
         },
         "cat_filters": {
-            "county": "",
+            "County": "",
             "NAMELSAD": "City"
         },
         "num_filters": {
@@ -938,11 +943,11 @@
         },
         "legend": [
             [
-                ">=20",
+                ">=21",
                 "#00ffff"
             ],
             [
-                "19",
+                "19-20",
                 "#00ff00"
             ],
             [
@@ -950,35 +955,35 @@
                 "#ff00ff"
             ],
             [
-                "16-17",
+                "17",
                 "#ffff00"
             ],
             [
-                "14-15",
+                "16",
                 "#fe8103"
             ],
             [
-                "12-13",
+                "15",
                 "#ff0000"
             ],
             [
-                "10-11",
+                "14",
                 "#0000ff"
             ],
             [
-                "8-9",
+                "13",
                 "#346b36"
             ],
             [
-                "6-7",
+                "11-12",
                 "#70534e"
             ],
             [
-                "4-5",
+                "7-10",
                 "#9e9e9e"
             ],
             [
-                "<4",
+                "<7",
                 "#ffffff"
             ]
         ],
@@ -987,7 +992,7 @@
                 true,
                 ""
             ],
-            "county": [
+            "County": [
                 true,
                 ""
             ],
@@ -1001,7 +1006,7 @@
                 true,
                 ""
             ],
-            "county": [
+            "County": [
                 true,
                 ""
             ],
@@ -1041,6 +1046,10 @@
                 true,
                 ""
             ],
+            "ahs_pts": [
+                true,
+                ""
+            ],
             "cbg_10": [
                 true,
                 ""
@@ -1055,7 +1064,7 @@
             ]
         },
         "cat_filter_vals": {
-            "county": [
+            "County": [
                 "Adair County",
                 "Allen County",
                 "Anderson County",
