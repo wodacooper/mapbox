@@ -265,7 +265,7 @@
                 true,
                 ""
             ],
-            "urban_score": [
+            "score": [
                 true,
                 ""
             ]
@@ -283,7 +283,7 @@
                 true,
                 ""
             ],
-            "urban_score": [
+            "score": [
                 true,
                 ""
             ],
@@ -880,7 +880,7 @@
             ]
         },
         "num_filter_vals": {
-            "urban_score": [
+            "score": [
                 0.0,
                 25.7
             ]
