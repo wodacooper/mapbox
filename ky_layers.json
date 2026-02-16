@@ -1,6 +1,6 @@
 {
     "qct_dda": {
-        "name": "20216 QCT/DDAs",
+        "name": "2026 QCT/DDAs",
         "source_id": "qct_dda_26",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -205,7 +205,8 @@
         "cat_filters": {
             "set_aside": "",
             "County": "",
-            "NAMELSAD": "City"
+            "NAMELSAD": "City",
+            "region": ""
         },
         "num_filters": {
             "score": "Score"
@@ -303,6 +304,10 @@
                 true,
                 ""
             ],
+            "ahs_pts": [
+                true,
+                ""
+            ],
             "burd_pct": [
                 true,
                 ""
@@ -333,6 +338,11 @@
                 "Urban",
                 "Rural"
             ],
+            "region": [
+                "Northern",
+                "Other"
+            ]
+            ,
             "County": [
                 "Adair County",
                 "Allen County",
@@ -889,7 +899,4 @@
 
     
 }
-
-
-
 
