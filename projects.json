@@ -17,11 +17,12 @@
         },
         "hover":{
             "Project Name":[true, ""],
-            "Units":[true,""],
+            
             "Lead Development Officer":[true,""],
             "Address":[true, ""],
-            "Occupancy":[true, ""],
             "Credit Type":[true,""],
+            "Unit Count":[true,""],
+            "Occupancy Type":[true, ""],
             "Submission Date":[true,""]
         },
         "click":{
