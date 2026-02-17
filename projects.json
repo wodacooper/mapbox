@@ -1,6 +1,6 @@
 {
     "Projects": {
-        "name": "Properties1",
+        "name": "Properties",
         "source_id": "properties_source",
         "url": "mapbox://wodacooper.properties",
         "source_layer": "hello_world",
