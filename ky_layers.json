@@ -1,6 +1,6 @@
 {
     "qct_dda": {
-        "name": "20261 QCT/DDAs",
+        "name": "2026 QCT/DDAs",
         "source_id": "qct_dda_26",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -292,7 +292,15 @@
                 true,
                 ""
             ],
-            "urban_inc_pts": [
+            "rbr": [
+                true,
+                ""
+            ],
+            "inc_pts": [
+                true,
+                ""
+            ],
+            "med_inc_pct": [
                 true,
                 ""
             ],
@@ -300,15 +308,19 @@
                 true,
                 ""
             ],
+            "Employment Density": [
+                true,
+                ""
+            ],
             "rnd_pts": [
                 true,
                 ""
             ],
-            "ahs_pts": [
+            "Road Network Density": [
                 true,
                 ""
             ],
-            "burd_pct": [
+            "ahs_pts": [
                 true,
                 ""
             ],
@@ -336,7 +348,7 @@
         "cat_filter_vals": {
             "set_aside": [
                 "Urban",
-                "Rural"
+                "Balance of State"
             ],
             "region": [
                 "Northern",
@@ -898,4 +910,5 @@
     }
 
 }
+
 
