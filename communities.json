@@ -1,6 +1,39 @@
 {
-    "Communities": {
-        "name": "Communities",
+   
+    "Offices": {
+        "name": "Offices",
+        "source_id": "offices_source",
+        "url": "mapbox://wodacooper.offices",
+        "source_layer": "hello_world",
+        "layout": {
+          "icon-image": ["get", "icon"],
+          "icon-size": 0.2,
+          "icon-allow-overlap": false,
+          "visibility": "visible"
+         },
+         "visible": true,
+         "icon": {
+           "icon-color": "#FF0000",
+           "icon-halo-color": "#FFFFFF",
+           "icon-halo-width": 0.3
+         },
+         "circle": {
+            "circle-color": "#000080",
+            "circle-radius": 13,
+            "circle-stroke-width": 4,
+            "circle-stroke-color": "#FFFFFF"
+        },
+        "hover":{
+            "Office":[true, ""],
+            "Address":[true, ""]
+        },
+        "click":{
+            "Office":[true, ""],
+            "Address":[true, ""]
+        }
+    },
+     "In-Dev": {
+        "name": "In Development",
         "source_id": "communities_source",
         "url": "mapbox://wodacooper.communities",
         "source_layer": "hello_world",
@@ -16,18 +49,11 @@
            "icon-halo-color": "#FFFFFF",
            "icon-halo-width": 0.3
          },
+         
+        "perm_filters":[["==","Status (IO/UC/ID)","ID"]],
+
          "circle": {
-            "circle-color": [
-            "match",
-                ["get","Status (IO/UC/ID)"],
-                "IO",
-                "#4667FA",
-                "UC",
-                "#708238",
-                "ID",
-                "#ED2939",
-                "#151B54"
-            ],
+            "circle-color":"#ED2939",
             "circle-radius": 13,
             "circle-stroke-width": 4,
             "circle-stroke-color": "#FFFFFF"
@@ -40,5 +66,75 @@
             "Community Name:":[true, ""],
             "Community Address":[true, ""]
         }
-    }
+    },
+    "Under_Con": {
+            "name": "Under Construction",
+            "source_id": "communities_source",
+            "url": "mapbox://wodacooper.communities",
+            "source_layer": "hello_world",
+            "layout": {
+              "icon-image": ["get", "icon"],
+              "icon-size": 0.2,
+              "icon-allow-overlap": false,
+              "visibility": "visible"
+             },
+             "visible": true,
+             "icon": {
+               "icon-color": "#FF0000",
+               "icon-halo-color": "#FFFFFF",
+               "icon-halo-width": 0.3
+             },
+             
+            "perm_filters":[["==","Status (IO/UC/ID)","UC"]],
+    
+             "circle": {
+                "circle-color":"#708238",
+                "circle-radius": 13,
+                "circle-stroke-width": 4,
+                "circle-stroke-color": "#FFFFFF"
+            },
+            "hover":{
+                "Community Name:":[true, ""],
+                "Community Address":[true, ""]
+            },
+            "click":{
+                "Community Name:":[true, ""],
+                "Community Address":[true, ""]
+            }
+    },
+    "In_Op": {
+            "name": "In Operation",
+            "source_id": "communities_source",
+            "url": "mapbox://wodacooper.communities",
+            "source_layer": "hello_world",
+            "layout": {
+              "icon-image": ["get", "icon"],
+              "icon-size": 0.2,
+              "icon-allow-overlap": false,
+              "visibility": "visible"
+             },
+             "visible": true,
+             "icon": {
+               "icon-color": "#FF0000",
+               "icon-halo-color": "#FFFFFF",
+               "icon-halo-width": 0.3
+             },
+             
+            "perm_filters":[["==","Status (IO/UC/ID)","IO"]],
+    
+             "circle": {
+                "circle-color":"#4667FA",
+                "circle-radius": 13,
+                "circle-stroke-width": 4,
+                "circle-stroke-color": "#FFFFFF"
+            },
+            "hover":{
+                "Community Name:":[true, ""],
+                "Community Address":[true, ""]
+            },
+            "click":{
+                "Community Name:":[true, ""],
+                "Community Address":[true, ""]
+            }
+    }    
 }
