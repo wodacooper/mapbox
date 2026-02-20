@@ -1,13 +1,13 @@
 {
    
     "Offices": {
-        "name": "Offices1",
+        "name": "Offices",
         "source_id": "offices_source",
         "url": "mapbox://wodacooper.offices",
         "source_layer": "hello_world",
         "layout": {
           "icon-image": ["get", "icon"],
-          "icon-size": 0.02,
+          "icon-size": 0.05,
           "icon-allow-overlap": false,
           "visibility": "visible"
          },
