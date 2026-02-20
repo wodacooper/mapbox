@@ -319,6 +319,11 @@ const bounds_dict = {
         "bounds":[[-102.3730577149232, 30.749061535513654], [-73.03945321153677, 43.16674390102708]],
         "geocoder_bounds":[-107.30772781365022, 25.299889658938284, -72.28951798383322, 49.75322339114976],
         "url": 'https://wodacooper.github.io/mapbox/projects.json'
+    },
+"communities":{
+        "bounds":[[-102.3730577149232, 30.749061535513654], [-73.03945321153677, 43.16674390102708]],
+        "geocoder_bounds":[-107.30772781365022, 25.299889658938284, -72.28951798383322, 49.75322339114976],
+        "url": 'https://wodacooper.github.io/mapbox/communities.json'
     }
 }
 </script>
@@ -678,12 +683,12 @@ const bounds_dict = {
 <script>
     
     
-    // const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?mn'
+    //const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?mn'
     const query_string = window.location.search;
     
     const query_vals = query_string.split('?')
 
-    //const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'oh']
+    //const query_vals = ['', 'pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbHQ4dTBwdmIwYmE5MmtsY2pndGtrbDcxIn0.ZymqiloBBqzGMcNlqdo4bA', 'communities']
     
     mapboxgl.accessToken = query_vals[1];
     const map = new mapboxgl.Map({
@@ -697,98 +702,7 @@ const bounds_dict = {
         
     }));
 
-    // class MobileFullScreenControl {
-    //     onAdd(map) {
-    //         this._map = map;
-    //         this._container = document.createElement('div');
-    //         this._container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group';
-            
-    //         this._fullscreenButton = document.createElement('button');
-    //         this._fullscreenButton.className = 'mapboxgl-ctrl-fullscreen';
-    //         this._fullscreenButton.type = 'button';
-    //         this._fullscreenButton.setAttribute('aria-label', 'Toggle fullscreen');
-            
-    //         this._iconSpan = document.createElement('span');
-    //         this._iconSpan.className = 'mapboxgl-ctrl-icon';
-    //         this._iconSpan.setAttribute('aria-hidden', 'true');
-    //         this._iconSpan.title = 'Enter fullscreen';
-
-    //         this._fullscreenButton.appendChild(this._iconSpan);
-    //         this._container.appendChild(this._fullscreenButton);
-
-    //         this._fullscreenButton.addEventListener('click', () => {
-    //             if (this._isFullscreen()) {
-    //                 this._exitFullscreen();
-    //             } else {
-    //                 this._requestFullscreen();
-    //             }
-    //             this._updateIcon();
-    //         });
-
-            
-    //         return this._container;
-    //     }
-        
-    //     onRemove() {
-    //         this._container.parentNode.removeChild(this._container);
-    //         this._map = undefined;
-    //     }
-        
-    //     _isFullscreen() {
-    //         return !!(document.fullscreenElement || 
-    //                 document.webkitFullscreenElement || 
-    //                 document.mozFullScreenElement || 
-    //                 document.msFullscreenElement);
-    //     }
-        
-    //     _requestFullscreen() {
-    //         const element = document.body;
-    //         if (element.requestFullscreen) {
-    //             element.requestFullscreen();
-    //         } else if (element.webkitRequestFullscreen) {
-    //             element.webkitRequestFullscreen();
-    //         } else if (element.mozRequestFullScreen) {
-    //             element.mozRequestFullScreen();
-    //         } else if (element.msRequestFullscreen) {
-    //             element.msRequestFullscreen();
-    //         }
-    //     }
-        
-    //     _exitFullscreen() {
-    //         if (document.exitFullscreen) {
-    //             document.exitFullscreen();
-    //         } else if (document.webkitExitFullscreen) {
-    //             document.webkitExitFullscreen();
-    //         } else if (document.mozCancelFullScreen) {
-    //             document.mozCancelFullScreen();
-    //         } else if (document.msExitFullscreen) {
-    //             document.msExitFullscreen();
-    //         }
-    //     }
-        
-    //     _updateIcon() {
-    //         if (this._isFullscreen()) {
-    //             this._fullscreenButton.classList.add('mapboxgl-ctrl-fullscreen');
-    //             this._fullscreenButton.classList.remove('mapboxgl-ctrl-shrink');
-    //         } else {
-    //             this._fullscreenButton.classList.remove('mapboxgl-ctrl-fullscreen');
-    //             this._fullscreenButton.classList.add('mapboxgl-ctrl-shrink');
-    //         }
-            
-    //         this._map.resize();
-    //     }
-    // }
     
-    /*const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
-    async function get_json() {
-            const query = await fetch(
-                'https://wodacooper.github.io/mapbox/VA_testlayers.json',
-                { method: 'GET' }
-            );
-            const data = await query.json();
-            console.log(data);
-            return data;
-    }*/
     const geocoder_bounds = bounds_dict[query_vals[2]]["geocoder_bounds"]
     async function get_json() {
             const query = await fetch(
@@ -823,6 +737,10 @@ const bounds_dict = {
     }
 
     map.on('load', () => {
+        map.loadImage('under_con.png', (error, image) => {if (error) throw error; map.addImage('under_con.png', image);});
+        map.loadImage('in_dev.png', (error, image) => {if (error) throw error; map.addImage('in_dev.png', image);});
+        map.loadImage('office.png', (error, image) => {if (error) throw error; map.addImage('office.png', image);});
+
         get_json().then(data => {
             layers = data;
             var sources = []
@@ -893,10 +811,11 @@ const bounds_dict = {
                 
                 for (type of layer_types){
                     if (layers[layer][type]){
+                        const mapboxType = (type === 'icon') ? 'symbol' : type;
                         map.addLayer(
                             {
                                 'id': layer.concat('@',type),
-                                'type': type,
+                                'type': mapboxType,
                                 'source': layers[layer].source_id,
                                 'source-layer': layers[layer].source_layer,
                                 'layout': layers[layer].layout,
