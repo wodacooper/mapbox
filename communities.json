@@ -1,6 +1,6 @@
 {
     "Offices": {
-        "name": "Offices1",
+        "name": "Offices",
         "source_id": "offices_source",
         "url": "mapbox://wodacooper.offices",
         "source_layer": "hello_world",
@@ -69,10 +69,10 @@
             "Community Address":[true, ""]
         },
         "cat_filters":{
-            "Community Name":""
+            "Community Name:":""
         },
         "cat_filter_vals":{
-            "Community Name":[
+            "Community Name:":[
                 "123 Club",
                 "43 Town Square",
                 "Adair Court",
