@@ -186,25 +186,14 @@
     },
     "In_Op": {
         "name": "In Operation",
-        "source_id": "communities_source",
-        "url": "mapbox://wodacooper.communities",
+        "source_id": "in_op_source",
+        "url": "mapbox://wodacooper.in_op",
         "source_layer": "hello_world",
         "layout": {
-            "icon-image": ["get", "icon"],
-            "icon-size": 0.2,
-            "icon-allow-overlap": false,
             "visibility": "visible"
-            },
-            "visible": true,
-            "icon": {
-            "icon-color": "#FF0000",
-            "icon-halo-color": "#FFFFFF",
-            "icon-halo-width": 0.3
-            },
-            
-        "perm_filters":[["==","Status (IO/UC/ID)","IO"]],
-
-            "circle": {
+        },
+        "visible": true,
+        "circle": {
             "circle-color":"#4667FA",
             "circle-radius": 13,
             "circle-stroke-width": 4,
