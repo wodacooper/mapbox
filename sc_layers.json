@@ -492,7 +492,7 @@
             ],
             "otm_pts": [
                 true,
-                ""
+                "job_pts"
             ],
             "rural_pts": [
                 true,
@@ -670,7 +670,7 @@
             ],
             "otm_pts": [
                 true,
-                ""
+                "job_pts"
             ],
             "rural_pts": [
                 true,
@@ -848,7 +848,7 @@
             ],
             "otm_pts": [
                 true,
-                ""
+                "job_pts"
             ],
             "rural_pts": [
                 true,
@@ -903,4 +903,5 @@
         }
     }
 }
+
 
