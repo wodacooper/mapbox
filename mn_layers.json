@@ -185,9 +185,9 @@
    "url": "mapbox://wodacooper.mn_25",
    "source_layer": "hello_world",
    "layout": {
-       "visibility": "visible"
+       "visibility": "none"
    },
-   "visible": true,
+   "visible": false,
         "perm_filters":[["==","Pool","Metro"]],
         "fill": {
             "fill-color": [
@@ -334,9 +334,9 @@
    "url": "mapbox://wodacooper.mn_25",
    "source_layer": "hello_world",
    "layout": {
-       "visibility": "visible"
+       "visibility": "none"
    },
-   "visible": true,
+   "visible": false,
      "perm_filters":[["==","Pool","Greater Minnesota"]],
         "fill": {
             "fill-color": [
@@ -1546,7 +1546,7 @@
         "layout": {
             "visibility": "visible"
         },
-        "visible": false,
+        "visible": true,
         "perm_filters": [["==", "Pool", "Metro"]],
         "fill": {
             "fill-color": [
@@ -1640,7 +1640,7 @@
         "layout": {
             "visibility": "visible"
         },
-        "visible": false,
+        "visible": true,
         "perm_filters": [["==", "Pool", "Greater Minnesota"]],
         "fill": {
             "fill-color": [
@@ -1733,7 +1733,7 @@
         "layout": {
             "visibility": "visible"
         },
-        "visible": false,
+        "visible": true,
         "fill": {
             "fill-color": [
             "step",
