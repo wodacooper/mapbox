@@ -274,7 +274,7 @@
         }
     },
     "Metro": {
-        "name": "New File Score 2026",
+        "name": "Metro Score 2026",
         "source_id": "mn_test_source",
         "url": "mapbox://wodacooper.mn_test",
         "source_layer": "hello_world",
@@ -350,8 +350,8 @@
             "Composite_": [4.0, 34.0]
         }
     },
-    "Rural": {
-        "name": "New File Score 2026",
+    "Greater Minnesota": {
+        "name": "Greater Minnesota Score 2026",
         "source_id": "mn_test_source",
         "url": "mapbox://wodacooper.mn_test",
         "source_layer": "hello_world",
@@ -429,3 +429,4 @@
     }
     
 }
+
