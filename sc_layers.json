@@ -178,20 +178,7 @@
             "app_type": [true, ""]
         }
     },
-    "past_projects_buffer": {
-        "name": "Past Projects Radius",
-        "source_id": "sc_past_buf",
-        "url": "mapbox://wodacooper.sc_past_buf",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "visible"
-        },
-        "visible": false,
-        "fill": {
-            "fill-color":"#a0a0a0",
-            "fill-opacity": 0.5
-        }
-    },
+    
     "amenities": {
         "name": "Primary Amenities",
         "source_id": "sc_amenities",
@@ -362,7 +349,7 @@
         }
     },
     "Urban": {
-        "name": "Urban 2026",
+        "name": "Urban 2027",
         "source_id": "score_source",
         "url": "mapbox://wodacooper.sc_26",
         "source_layer": "hello_world",
@@ -540,7 +527,7 @@
         }
     },
     "Suburban": {
-        "name": "Suburban 2026",
+        "name": "Suburban 2027",
         "source_id": "score_source",
         "url": "mapbox://wodacooper.sc_26",
         "source_layer": "hello_world",
@@ -718,7 +705,7 @@
         }
     },
     "Rural": {
-        "name": "Rural 2026",
+        "name": "Rural 2027",
         "source_id": "score_source",
         "url": "mapbox://wodacooper.sc_26",
         "source_layer": "hello_world",
@@ -903,5 +890,6 @@
         }
     }
 }
+
 
 
