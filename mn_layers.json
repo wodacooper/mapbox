@@ -192,7 +192,7 @@
         "fill": {
             "fill-color": [
             "step",
-            ["get", "Overall Score"],
+            ["get", "Composite_"],
             "#ffffff",
             13,
             "#9e9e9e",
@@ -242,15 +242,17 @@
             ["<13", "#ffffff"]
         ],
         "hover": {
-            "county": [true, "County"],
-            "Overall Score": [true, "Score"],
-            "Access to Affordable Housing": [true, "Need for More Affordable Housing Points"],
-            "Transit": [true, "Transit Points"],
-            "Workforce Housing": [true, "Workforce Housing Points"],
-            "Multifamily Award History": [true, "Multifamily Award History"],
+            "Composite_": [true, "Score"]
+        },
+        "click": {
+            "Composite_": [true, "Score"],
+            "NeedMoreAf": [true, "Need for More Affordable Housing Points"],
+            "Transit_Pt": [true, "Transit Points"],
+            "RURAL_PTS": [true, "Rural Points"],
+            "Wkfce_Hsg": [true, "Workforce Housing Points"],
+            "NO_AWARD_P": [true, "Multifamily Award History"],
             "Walkscore Points": [true, "Walkscore Points"],
-            "QCT/Opportunity Zone": [true, "QCT Points"],
-            "GEOID_tract": [true, "GEOID"]
+            "QCT_OZONE_": [true, "QCT Points"]
         },
         "cat_filter_vals": {
             "Name": [
