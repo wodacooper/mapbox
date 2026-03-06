@@ -1,6 +1,6 @@
 {
      "qct_dda": {
-        "name": "2026 QCT/DDAs",
+        "name": "20261 QCT/DDAs",
         "source_id": "qct_dda_26",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -242,10 +242,14 @@
             ["<13", "#ffffff"]
         ],
         "hover": {
-            "Composite_": [true, "Score"]
+            "Composite_": [true, "Score"],
+            "Name": [true, "City"],
+            "NAMELSAD": [true, "County"]
         },
         "click": {
             "Composite_": [true, "Score"],
+            "Name": [true, "City"],
+            "NAMELSAD": [true, "County"],
             "NeedMoreAf": [true, "Need for More Affordable Housing Points"],
             "Transit_Pt": [true, "Transit Points"],
             "RURAL_PTS": [true, "Rural Points"],
@@ -330,10 +334,14 @@
             ["<21", "#ffffff"]
         ],
         "hover": {
-            "Composite_": [true, "Score"]
+            "Composite_": [true, "Score"],
+            "Name": [true, "City"],
+            "NAMELSAD": [true, "County"]
         },
         "click": {
             "Composite_": [true, "Score"],
+            "Name": [true, "City"],
+            "NAMELSAD": [true, "County"],
             "NeedMoreAf": [true, "Need for More Affordable Housing Points"],
             "Transit_Pt": [true, "Transit Points"],
             "RURAL_PTS": [true, "Rural Points"],
