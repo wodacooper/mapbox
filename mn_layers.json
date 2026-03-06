@@ -181,8 +181,8 @@
     },
     "Metro": {
         "name": "Metro Score 2026",
-        "source_id": "mn_test_source",
-        "url": "mapbox://wodacooper.mn_test",
+        "source_id": "mn_26_source",
+        "url": "mapbox://wodacooper.mn_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -273,8 +273,8 @@
     },
     "Rural": {
         "name": "Greater Minnesota Score 2026",
-        "source_id": "mn_test_source",
-        "url": "mapbox://wodacooper.mn_test",
+        "source_id": "mn_26_source",
+        "url": "mapbox://wodacooper.mn_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -363,4 +363,5 @@
            
     }
 }
+
 
