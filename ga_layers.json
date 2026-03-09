@@ -1762,7 +1762,7 @@
         "cat_filters": {
             "inc_2023": "Point Increase in 2023",
             "pool": "",
-            "County": "County",
+            "County Name": "County",
             "city_x": "City",
             "qct": "",
             "gich_filter": "GICH Filter",
@@ -1784,7 +1784,7 @@
             ],
             "stable_pts": ["0","5","6","7","8","9","10"],
             "sch_pts": ["0","1","1.5","3"],
-            "County": [
+            "County Name": [
                 "Appling",
                 "Atkinson",
                 "Bacon",
@@ -3542,6 +3542,7 @@
 
     }
 }
+
 
 
 
