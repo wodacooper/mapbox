@@ -1,6 +1,6 @@
 {
      "qct_dda": {
-        "name": "2026 QCT/DDAs",
+        "name": "20216 QCT/DDAs",
         "source_id": "qct_dda_26_source",
         "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
@@ -283,7 +283,7 @@
                 true,
                 "Economic Activity Points"
             ],
-            "pov_pts": [
+            "pov_score": [
                 true,
                 "Poverty Points"
             ]
@@ -309,7 +309,7 @@
                 true,
                 "Economic Activity Points"
             ],
-            "pov_pts": [
+            "pov_score": [
                 true,
                 "Poverty Points"
             ],
@@ -470,7 +470,7 @@
         }
     },
     "va_26_TEST": {
-        "name": "**TEST ONLY 2026 DO NOT USE!!",
+        "name": "!!TEST ONLY 2026 DO NOT USE!!",
         "source_id": "va_26_TEST_source",
         "url": "mapbox://wodacooper.va_26_TEST",
         "source_layer": "hello_world",
@@ -582,7 +582,7 @@
                 true,
                 "Economic Activity Points"
             ],
-            "pov_pts": [
+            "pov_score": [
                 true,
                 "Poverty Points"
             ]
@@ -608,7 +608,7 @@
                 true,
                 "Economic Activity Points"
             ],
-            "pov_pts": [
+            "pov_score": [
                 true,
                 "Poverty Points"
             ],
@@ -769,4 +769,3 @@
         }
     }
 }
-
