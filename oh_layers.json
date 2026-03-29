@@ -1282,9 +1282,9 @@
         "url": "mapbox://wodacooper.oh_olihtc_27",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "none"
+            "visibility": "visible"
         },
-        "visible": false,
+        "visible": true,
         "fill": {
             "fill-color": [
                 "step",
