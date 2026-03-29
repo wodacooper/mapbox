@@ -1384,6 +1384,14 @@
                 true,
                 ""
             ],
+            "Units": [
+                true,
+                ""
+            ],
+            "recent_award":[
+                true,
+                ""
+            ],
             "GEOID": [
                 true,
                 ""
