@@ -1310,12 +1310,12 @@
             "Appalachian": "",
             "tr":"Transformative",
             "County": "",
-            "NAMELSAD": "City"
+            "NAMELSAD": "City",
+            "Units in County":"Units in County"
         },
         "num_filters": {
             "max_score": "Score",
-            "2br 60AMI": "",
-            "Units in County":"Units in County"
+            "2br 60AMI": ""
         },
         "legend": [
             ["10", "#2c7bb6"],
@@ -2428,6 +2428,10 @@
             ],
             "tr":[
                 "Transformative"
+            ],
+            "Units in County":[
+                0.0,
+                6507.0
             ]
         },
         "num_filter_vals": {
@@ -2436,12 +2440,8 @@
                 10.0
             ],
             "2br 60AMI": [
-                0.0,
-                76920.0
-            ],
-            "Units in County":[
-                0.0,
-                6507.0
+                40000.0,
+                69240.0
             ]
         }
     },
