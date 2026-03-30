@@ -1278,8 +1278,8 @@
     },
     "oh_olihtc_27": {
         "name": "2027 OLIHTC Score",
-        "source_id": "oh_olihtc_27_source",
-        "url": "mapbox://wodacooper.oh_olihtc_27",
+        "source_id": "oh_olihtc_27_033026_source",
+        "url": "mapbox://wodacooper.oh_olihtc_27_033026",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -1305,13 +1305,12 @@
             "fill-opacity": 0.6
         },
         "cat_filters": {
-            "QCT": "",
-            "Region": "",
-            "County": "",
-            "NAMELSAD": "City",
+            "QCT/DDA": "",
             "Metro/Rural": "",
+            "Appalachian": "",
             "tr":"Transformative",
-            "2026 SDDA":"DDA"
+            "County": "",
+            "NAMELSAD": "City"
         },
         "num_filters": {
             "max_score": "Score",
@@ -1334,7 +1333,7 @@
                 true,
                 ""
             ],
-            "QCT": [
+            "QCT/DDA": [
                 true,
                 ""
             ],
@@ -1356,7 +1355,7 @@
                 true,
                 ""
             ],
-            "QCT": [
+            "QCT/DDA": [
             true,
             ""
             ],
@@ -1398,16 +1397,12 @@
             ]
         },
         "cat_filter_vals": {
-            "QCT": [
-                "QCT"
+            "QCT/DDA": [
+                "QCT",
+                "DDA"
             ],
-            "Region": [
-                "Southwest",
-                "Southeast",
-                "Northeast",
-                "Northwest",
-                "Central"
-                
+            "Appalachian": [
+                "Appalachian"
             ],
             "County": [
                 "Adams",
@@ -2432,12 +2427,7 @@
                 "Rural"
             ],
             "tr":[
-                "Transformative",
-                "Not Transformative"
-            ],
-            "2026 SDDA":[
-                "DDA",
-                "Not DDA"
+                "Transformative"
             ]
         },
         "num_filter_vals": {
@@ -2449,7 +2439,7 @@
                 0.0,
                 76920.0
             ],
-            "Units":[
+            "Units in County":[
                 0.0,
                 6507.0
             ]
