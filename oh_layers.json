@@ -1314,8 +1314,8 @@
         },
         "num_filters": {
             "max_score": "Score",
-            "VLIL_60%": "",
-            "Units":"Units in County"
+            "2br 60AMI": "",
+            "Units in County":"Units in County"
         },
         "legend": [
             ["10", "#2c7bb6"],
@@ -2435,7 +2435,7 @@
                 0.0,
                 10.0
             ],
-            "VLIL_60%": [
+            "2br 60AMI": [
                 0.0,
                 76920.0
             ],
