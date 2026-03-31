@@ -1275,8 +1275,10 @@
             "Award Credit": [true, ""]
         },
         "legend": [
-            "Previous Project",
+            [
+            "Previous 4% Project",
             "#ff0000"
+            ]
         ]
     },
     "4%_score": {
