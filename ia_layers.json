@@ -1348,6 +1348,31 @@
             ]
         }
     },
+     "prev": {
+        "name": "4% Prev Projects",
+        "source_id": "ia_26_4p_prev_source",
+        "url": "mapbox://wodacooper.ia_26_4p_prev",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-radius": 6,
+            "circle-stroke-width": 2,
+            "circle-stroke-color": ["#39ff14"],
+            "circle-color": ["#ffffff"],
+            "circle-opacity": [ 1 ]
+        },
+        "click": {
+            "Project Name": [true, ""],
+            "Address": [true, ""],
+            "City": [true, ""],
+            "Occupancy Type": [true, ""],
+            "Total Units": [true, ""],
+            "Award Credit": [true, ""]
+        }
+    },
     "cities": {
         "name": "Cities",
         "source_id": "places",
@@ -2430,8 +2455,5 @@
         }
     }
 }
-
-
-
 
 
