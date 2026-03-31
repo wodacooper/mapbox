@@ -1330,6 +1330,10 @@
             "disaster_pts": [
                 true,
                 ""
+            ],
+            "GEOID_1":[
+                true,
+                "GEOID"
             ]
         },
         "cat_filter_vals": {
