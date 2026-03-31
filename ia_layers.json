@@ -1250,6 +1250,31 @@
             ]
         }
     },
+    "prev": {
+        "name": "4% Prev Projects",
+        "source_id": "ia_26_4p_prev",
+        "url": "mapbox://wodacooper.ia_26_4p_prev",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-radius": 6,
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "#000000",
+            "circle-color": "#ff0000",
+            "circle-opacity": 1 
+        },
+        "click": {
+            "Project Name": [true, ""],
+            "Address": [true, ""],
+            "City": [true, ""],
+            "Occupancy Type": [true, ""],
+            "Total Units": [true, ""],
+            "Award Credit": [true, ""]
+        }
+    },
     "4%_score": {
         "name": "2026 4% Score",
         "source_id": "4%_score",
@@ -1346,31 +1371,6 @@
                 0.0,
                 7.0
             ]
-        }
-    },
-     "prev": {
-        "name": "4% Prev Projects",
-        "source_id": "ia_26_4p_prev",
-        "url": "mapbox://wodacooper.ia_26_4p_prev",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "visible"
-        },
-        "visible": true,
-        "circle": {
-            "circle-radius": 6,
-            "circle-stroke-width": 2,
-            "circle-stroke-color": "#000000",
-            "circle-color": "#ff0000",
-            "circle-opacity": 1 
-        },
-        "click": {
-            "Project Name": [true, ""],
-            "Address": [true, ""],
-            "City": [true, ""],
-            "Occupancy Type": [true, ""],
-            "Total Units": [true, ""],
-            "Award Credit": [true, ""]
         }
     },
     "cities": {
@@ -2455,7 +2455,6 @@
         }
     }
 }
-
 
 
 
