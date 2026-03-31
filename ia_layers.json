@@ -1266,6 +1266,10 @@
             "circle-color": "#ff0000",
             "circle-opacity": 0.8
         },
+        "hover":{
+            "Project Name": [true, ""],
+            "Address": [true, ""]
+        },
         "click": {
             "Project Name": [true, ""],
             "Address": [true, ""],
