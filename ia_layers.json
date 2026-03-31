@@ -1360,8 +1360,8 @@
         "circle": {
             "circle-radius": 6,
             "circle-stroke-width": 2,
-            "circle-stroke-color": "#39ff14",
-            "circle-color": "#ffffff",
+            "circle-stroke-color": "#000000",
+            "circle-color": "#ff0000",
             "circle-opacity": 1 
         },
         "click": {
