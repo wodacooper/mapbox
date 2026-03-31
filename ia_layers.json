@@ -1250,6 +1250,100 @@
             ]
         }
     },
+    "4%_score": {
+        "name": "2026 4% Score",
+        "source_id": "4%_score",
+        "url": "mapbox://wodacooper.ia_26_4p",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "score"
+                ],
+                7,
+                "#00ffff",
+                6,
+                "#00ff00",
+                5,
+                "#ff00ff",
+                3,
+                "#ffff00",
+                0,
+                "#aaaaaa",
+                "#ffffff"
+            ],
+            "fill-opacity": 0.5
+        },
+        "cat_filters": {
+            "is_qct": ""
+        },
+        "num_filters":{
+            "score":""
+        },
+        "legend": [
+            [
+                "7",
+                "#00ffff"
+            ],
+            [
+                "6",
+                "#00ff00"
+            ],
+            [
+                "5",
+                "#ff00ff"
+            ],
+            [
+                "3",
+                "#ffff00"
+            ],
+            [
+                "0",
+                "#aaaaaa"
+            ]
+        ],
+        "hover": {
+            "score": [
+                true,
+                ""
+            ],
+            "is_qct": [
+                true,
+                "QCT"
+            ]
+        },
+        "click": {
+            "score": [
+                true,
+                ""
+            ],
+            "unit_density_pts": [
+                true,
+                ""
+            ],
+            "disaster_pts": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "is_qct": [
+                "QCT"
+            ]
+        },
+        "num_filter_vals":{
+            "score":[
+                0.0,
+                7.0
+            ]
+        }
+    },
     "cities": {
         "name": "Cities",
         "source_id": "places",
