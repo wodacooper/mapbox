@@ -1349,7 +1349,7 @@
         }
     },
      "prev": {
-        "name": "4%1 Prev Projects",
+        "name": "4% Prev Projects",
         "source_id": "ia_26_4p_prev",
         "url": "mapbox://wodacooper.ia_26_4p_prev",
         "source_layer": "hello_world",
@@ -1360,8 +1360,8 @@
         "circle": {
             "circle-radius": 6,
             "circle-stroke-width": 2,
-            "circle-stroke-color": ["#39ff14"],
-            "circle-color": ["#ffffff"],
+            "circle-stroke-color": "#39ff14",
+            "circle-color": "#ffffff",
             "circle-opacity": 1 
         },
         "click": {
