@@ -3540,15 +3540,105 @@
             ]
         }
 
+    },
+    "test": {
+        "name": "Test",
+        "source_id": "ga_26_040926",
+        "url": "mapbox://wodacooper.ga_26_040926",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score_2"
+                ],
+                "#9e9e9e",
+                13,
+                "#346b36",
+                14,
+                "#0000ff",
+                15,
+                "#ff0000",
+                16,
+                "#ffff00",
+                17,
+                "#ff00ff",
+                18,
+                "#00ff00",
+                19,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score_2"
+                ],
+                0,
+                12,
+                0.6
+            ]
+        },
+        "legend": [
+            [
+                "19-20",
+                "#00ffff"
+            ],
+            [
+                "18",
+                "#00ff00"
+            ],
+            [
+                "17",
+                "#ff00ff"
+            ],
+            [
+                "16",
+                "#ffff00"
+            ],
+            [
+                "15",
+                "#ff0000"
+            ],
+            [
+                "14",
+                "#0000ff"
+            ],
+            [
+                "13",
+                "#346b36"
+            ],
+            [
+                "12",
+                "#9e9e9e"
+            ]
+        ],
+        "hover": {
+            "score_2": [
+                true,
+                ""
+            ]        
+        },
+        "click": {
+            "score_2": [
+                true,
+                ""
+            ]   
+        },
+        "cat_filters": {
+            "increase": "Point Increase"
+            },
+        
+        "cat_filter_vals": {
+            "increase": ["increase", "no"]
+        }
     }
 }
-
-
-
-
-
-
-
 
 
 
