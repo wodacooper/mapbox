@@ -3542,7 +3542,7 @@
 
     },
     "test": {
-        "name": "Test1",
+        "name": "Test",
         "source_id": "ga_26_040926_source",
         "url": "mapbox://wodacooper.ga_26_040926",
         "source_layer": "hello_world",
@@ -3795,7 +3795,7 @@
             "prev_pts": "Previous Project Score"
         },
         "cat_filter_vals": {
-            "inc_2023": ["increase"],
+            "increase": ["increase"],
             "pool": [
                 "Atlanta Metro",
                 "Other Metro",
@@ -4535,15 +4535,4 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
