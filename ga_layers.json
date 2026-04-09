@@ -3547,9 +3547,9 @@
         "url": "mapbox://wodacooper.ga_26_040926",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
