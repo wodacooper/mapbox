@@ -303,7 +303,7 @@
         }
     },
     "score": {
-        "name": "2026 Score",
+        "name": "20261 Score",
         "source_id": "tx_26_source",
         "url": "mapbox://wodacooper.tx_26",
         "source_layer": "hello_world",
@@ -342,7 +342,6 @@
         },
         "cat_filters": {
             "potential_16":"",
-            "SB840":"",
             "pool": "",
             "Region_1": "Region",
             "Place Name": "City",
@@ -527,7 +526,6 @@
         },
         "cat_filter_vals": {
             "potential_16":["Yes", "No"],
-            "SB840":["Applies", "Does not Apply"],
             "pool": [
                 "None",
                 "Rural",
@@ -2882,6 +2880,9 @@
     }
 
 }
+
+
+
 
 
 
