@@ -2879,10 +2879,38 @@
             "Description": [true, "Description"],
             "Status": [true, "System Name"]
         }
+    },
+
+    "Participating Jurisdictions":{
+        "name": "PJ's",
+        "source_id": "tx_pjs_source",
+        "url": "mapbox://wodacooper.tx_pjs",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill":{
+            "fill-color": "#900603",
+            "fill-opacity": 0.5
+        },
+        "legend":[
+            [
+                "PJ's",
+                "#900603"
+            ]
+        ],
+        "hover":{
+            "Participating Jurisdiction":[true,""]
+        },
+        "click":{
+            "Participating Jurisdiction":[true,""],
+            "PJ Contact":[true, ""],
+            "Contact Title":[true,""],
+            "Phone Number":[true,""],
+            "Note":[true,""]
+        }
     }
 
 }
-
-
-
 
