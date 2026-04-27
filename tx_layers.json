@@ -1,8 +1,8 @@
 {
     "qct_dda": {
-        "name": "2026 QCT/DDAs",
-        "source_id": "qct_dda_26",
-        "url": "mapbox://wodacooper.qct_dda_26",
+        "name": "20126 QCT/DDAs",
+        "source_id": "tx_qct_dda_source",
+        "url": "mapbox://wodacooper.tx_qct_dda",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -56,6 +56,16 @@
             "zone": [
                 true,
                 ""
+            ]
+        },
+        "cat_filters": {
+            "County pop<=1.8mil": "County Population <= 1.8 Million"
+        },
+
+        "cat_filter_vals": {
+            "County pop<=1.8mil": [
+                "Yes",
+                "No"
             ]
         }
     },
