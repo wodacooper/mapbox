@@ -348,7 +348,8 @@
             "Place Name": "City",
             "County_1": "County",
             "pts_oi": "Opportunity Index",
-            "Median Household Income Quartile": ""
+            "Median Household Income Quartile": "",
+            "County pop<=1.8mil": "County Population <= 1.8 Million"
         },
         "num_filters": {
             "score": "",
@@ -2669,6 +2670,10 @@
                 "2q",
                 "3q",
                 "4q"
+            ],
+            "County pop<=1.8mil": [
+                "Yes",
+                "No"
             ]
         },
         "num_filter_vals": {
