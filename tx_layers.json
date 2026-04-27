@@ -1,6 +1,6 @@
 {
     "qct_dda": {
-        "name": "20126 QCT/DDAs",
+        "name": "2026 QCT/DDAs",
         "source_id": "tx_qct_dda_source",
         "url": "mapbox://wodacooper.tx_qct_dda",
         "source_layer": "hello_world",
@@ -59,7 +59,7 @@
             ]
         },
         "cat_filters": {
-            "County pop<=1.8mil": "County Population <= 1.8 Million"
+            "County pop<=1.8mil": "County Population is 1.8 Million or Less"
         },
 
         "cat_filter_vals": {
@@ -359,7 +359,7 @@
             "County_1": "County",
             "pts_oi": "Opportunity Index",
             "Median Household Income Quartile": "",
-            "County pop<=1.8mil": "County Population <= 1.8 Million"
+            "County pop<=1.8mil": "County Population is 1.8 Million or Less"
         },
         "num_filters": {
             "score": "",
