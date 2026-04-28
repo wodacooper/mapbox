@@ -680,7 +680,7 @@
     },
 
     "score_no_geocode": {
-        "name": "20261 Score",
+        "name": "2026 Score",
         "source_id": "mi_26_source",
         "url": "mapbox://wodacooper.mi_26",
         "source_layer": "hello_world",
