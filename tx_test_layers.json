@@ -272,14 +272,14 @@
                     "type"
                 ],
                 "Schools",
-                "#ffffff",
+                "#ffffff"
             ]
         },
         "legend": [
             [
                 "School",
-                "#246e28"
-            ],
+                "#ffffff"
+            ]
         ]
         },
 
