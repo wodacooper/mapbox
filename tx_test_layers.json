@@ -209,11 +209,10 @@
             ]
         }
     },
-    
     "amenities": {
         "name": "Amenities",
         "source_id": "tx_amenities_source",
-        "url": "mapbox://wodacooper.tx_amenities_test",
+        "url": "mapbox://wodacooper.tx_amenities",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -250,8 +249,7 @@
                 "#FFFF00"
             ]
         ]
-        },
-
+    },
     "schools_test": {
         "name": "test",
         "source_id": "tx_amenities_source_test",
@@ -272,18 +270,46 @@
                     "type"
                 ],
                 "Schools",
-                "#ffffff"
+                "#FF00FF"
             ]
         },
         "legend": [
             [
                 "School",
-                "#ffffff"
+                "#FF00FF"
             ]
-        ]
-        },
-
-    
+        ],
+        "click": {
+            "County Name": [
+                true,
+                ""
+            ],
+            "District Name": [
+                true,
+                ""
+            ],
+            "District Type": [
+                true,
+                ""
+            ],
+            "NCES District ID": [
+                true,
+                ""
+            ],
+            "School Name": [
+                true,
+                ""
+            ],
+            "School Street Address": [
+                true,
+                ""
+            ],
+            "School City": [
+                true,
+                ""
+            ]  
+        }
+    },
     "parks": {
         "name": "Parks",
         "source_id": "tx_parks_source",
