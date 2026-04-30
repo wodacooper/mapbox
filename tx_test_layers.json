@@ -251,7 +251,7 @@
         ]
     },
     "schools_test": {
-        "name": "Schools",
+        "name": "Scools",
         "source_id": "tx_amenities_source_test",
         "url": "mapbox://wodacooper.85rjk12j",
         "source_layer": "hello_world",
@@ -263,15 +263,7 @@
             "circle-radius": 6,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": [
-                "match",
-                [
-                    "get",
-                    "type"
-                ],
-                "Schools",
-                "#FF00FF"
-            ]
+            "circle-color": "#FF00FF"
         },
         "legend": [
             [
