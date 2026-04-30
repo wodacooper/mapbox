@@ -251,9 +251,9 @@
         ]
     },
     "schools_test": {
-        "name": "test",
+        "name": "Schools",
         "source_id": "tx_amenities_source_test",
-        "url": "mapbox://wodacooper.85rjk12j/#4/42.91/-132.56",
+        "url": "mapbox://wodacooper.85rjk12j",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
