@@ -253,7 +253,7 @@
     "schools_test": {
         "name": "test",
         "source_id": "tx_amenities_source_test",
-        "url": "mapbox://wodacooper.tx_el_schools-4qiutt",
+        "url": "mapbox://wodacooper.85rjk12j",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
