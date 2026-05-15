@@ -139,7 +139,7 @@
             "circle-stroke-width": 2,
             "circle-stroke-color": [
             "match",
-                ["get", "market"],
+                ["get", "Targeting"],
                 "Older Persons",
                 "#39ff14",
                 "Older",
@@ -152,14 +152,14 @@
             ],
             "circle-color": [
             "match",
-                ["get","award_year"],
+                ["get","Year"],
                 2025,
                 "#ffffff",
                 "#a0a0a0"
             ],
             "circle-opacity": [
             "match",
-            ["get", "award_year"],
+            ["get", "Year"],
             2025, 1,
             0.6
             ]
@@ -170,12 +170,12 @@
             ["2025 Projects","#ffffff"]
         ],
         "click": {
-            "property": [true, ""],
-            "award_year": [true, ""],
-            "address": [true, ""],
-            "market": [true, ""],
-            "type": [true, ""],
-            "app_type": [true, ""]
+            "Development Name": [true, ""],
+            "Year": [true, ""],
+            "Address": [true, ""],
+            "Targeting": [true, "Market"],
+            "NC or Rehab": [true, ""],
+            "TEB, 9%, or 4%": [true, "app_type"]
         }
     },
     
