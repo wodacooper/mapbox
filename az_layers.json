@@ -121,17 +121,30 @@
                 "#ff0000"
             ]
         ]
+    },
+
+    "Opportunity Zones": {
+        "name": "Opportunity Zones 2025",
+        "source_id": "az_opp_zones",
+        "url": "mapbox://wodacooper.az_opp_zones",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": "#0000ff",
+            "fill-opacity": 0.3
+        },
+        "line": {
+            "line-width": 2,
+            "line-color": "#0000ff"
+        },
+        "legend": [
+            [
+                "Opportunity Zones",
+                "#0000ff"
+            ]
+        ]
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
