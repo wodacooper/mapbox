@@ -124,7 +124,7 @@
     },
 
     "Opportunity Zones": {
-        "name": "Opportunity Zones 2025",
+        "name": "Opportunity Zones",
         "source_id": "az_opp_zones",
         "url": "mapbox://wodacooper.az_opp_zones",
         "source_layer": "hello_world",
@@ -148,3 +148,4 @@
         ]
     }
 }
+
