@@ -1,6 +1,6 @@
 {
     "Offices": {
-        "name": "Offices1",
+        "name": "Offices",
         "source_id": "offices_source",
         "url": "mapbox://wodacooper.offices",
         "source_layer": "hello_world",
@@ -73,14 +73,14 @@
         "hover":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
-            "City/Village:":[true, "City"],
-            "State:":[true, ""]
+            "City/Village":[true, "City"],
+            "State":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
-            "City/Village:":[true, "City"],
-            "State:":[true, "State"]
+            "City/Village":[true, "City"],
+            "State":[true, ""]
         },
         "cat_filters":{
             "Community Name:":""
@@ -142,14 +142,14 @@
         "hover":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
-            "City/Village:":[true, "City"],
-            "State:":[true, ""]
+            "City/Village":[true, "City"],
+            "State":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
-            "City/Village:":[true, "City"],
-            "State:":[true, ""]
+            "City/Village":[true, "City"],
+            "State":[true, ""]
         },
         "cat_filters":{
         "Community Name:":""
@@ -207,14 +207,14 @@
         "hover":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
-            "City/Village:":[true, "City"],
-            "State:":[true, ""]
+            "City/Village":[true, "City"],
+            "State":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
-            "City/Village:":[true, "City"],
-            "State:":[true, "State"]
+            "City/Village":[true, "City"],
+            "State":[true, ""]
         },
         "cat_filters":{
             "Community Name:":""
