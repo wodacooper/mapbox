@@ -62,7 +62,7 @@
            "icon-halo-width": 0.3
          },
          
-        "perm_filters":[["==","Status (IO/UC/ID)","ID"]],
+        "perm_filters":[["==","Status (ID/UC/IO/AC)","ID"]],
 
          "circle": {
             "circle-color":"#ED2939",
@@ -84,32 +84,28 @@
         "cat_filter_vals":{
             "Community Name:":[
                 "Adalynn Crossing",
+                "Addie Joss Village",
                 "Baker Crossing",
                 "Brockton Place",
                 "Gateway66",
-                "Grace Pointe",
-                "Hodges Commons",
                 "Iris Ridge",
                 "Kendall Pointe",
                 "LeTort Lofts",
-                "Livewell Terrace",
-                "Lotus Pointe",
                 "Malone Place",
                 "Opportunity Pointe I",
                 "Opportunity Pointe II",
                 "Opportunity Pointe III",
                 "Opportunity Village",
+                "Qualstan Greeene",
+                "Richardson Ridge",
                 "Richardson Townhomes",
                 "Ross Lofts",
                 "Sage Gardens",
                 "Sand Hills Estates",
-                "Shea Ravines II",
-                "Smithfield Lofts",
-                "Smithfield Office Condo",
                 "Tecovas Terrace",
                 "The Village on Center Street",
+                "TLC Capstone",
                 "Wells Pointe"
-
             ]
         }
     },
@@ -131,7 +127,7 @@
             "icon-halo-width": 0.3
             },
             
-        "perm_filters":[["==","Status (IO/UC/ID)","UC"]],
+        "perm_filters":[["==","Status (ID/UC/IO/AC)","UC"]],
 
             "circle": {
             "circle-color":"#708238",
@@ -161,26 +157,27 @@
                "Cedar Glen",
                "Connell Commons",
                "Davis Pointe",
-               "Granville Woods Lofts",
+               "Grace Pointe",
                "Henley Lofts",
+               "Hodges Commons",
+               "Livewell Terrace",
                "Lofts at 40 Long",
+               "Lotus Pointe",
                "Mallard Greene",
                "Mallard Terrace",
                "Miranda Crossing",
-               "Newton Family Apartments",
-               "Parker Glen II",
-               "Prince Pointe",
-               "Rosenwald Pointe",
-               "Sandgrass Pointe",
-               "Sawmill Crossing",
-               "Sells Greene",
-               "Shea Ravines",
-               "Talford Greene",
-               "The Lofts on First",
-               "The Terrace at Oscar Thomie",
-               "Timber Ridge",
-               "Watson Pointe "
-
+                "Parker Glen II",
+                "Prince Pointe",
+                "Rosenwald Pointe",
+                "Sandgrass Pointe",
+                "Sawmill Crossing",
+                "Shea Ravines",
+                "Shea Ravines II",
+                "Smithfield Lofts",
+                "Smithfield Office Condo",
+                "The Lofts on First",
+                "Timber Ridge",
+                "Watson Pointe"
             ]
         }
     },
