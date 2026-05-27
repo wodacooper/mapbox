@@ -526,6 +526,45 @@
                 "West"
             ]
         }
+    },
+
+    "charlotte":{
+        "name": "Charlotte Parcels",
+        "source_id": "charlotte_source",
+        "url": "mapbox://wodacooper.charlotte",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+
+        "fill": {
+            "fill-color": "#005035",
+            "fill-opacity": 0.4
+        },
+        "legend": [
+            [
+                "Charlotte",
+                "#005035"
+            ]
+        ],
+        "hover": {
+            "PID": [
+                true,
+                ""
+            ], 
+            "acerage":[true,""],
+            "Zoning":[true,""],
+            "PlanName":[true,""],
+            "PropLuseTx":[true,""]
+        },
+        "click":{
+            "PID":[true,""],
+            "acerage":[true,""],
+            "Zoning":[true,""],
+            "RezoneDate":[true,""],
+            "PlanName":[true,""],
+            "AdoptDate":[true,""],
+            "PropLuseTx":[true,""]
+        }
     }
 }
 
