@@ -529,7 +529,7 @@
     },
 
     "charlotte":{
-        "name": "Charlotte Parcels1",
+        "name": "Charlotte Parcels",
         "source_id": "charlotte_source",
         "url": "mapbox://wodacooper.charlotte",
         "source_layer": "hello_world",
