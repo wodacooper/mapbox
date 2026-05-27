@@ -529,20 +529,23 @@
     },
 
     "charlotte":{
-        "name": "Charlotte Parcels",
+        "name": "Charlotte Parcels1",
         "source_id": "charlotte_source",
         "url": "mapbox://wodacooper.charlotte",
         "source_layer": "hello_world",
         "layout": {},
         "visible": false,
-
+        "line": {
+            "line-color": "#00000",
+            "line-width": 0.1
+        },
         "fill": {
             "fill-color": "#005035",
-            "fill-opacity": 0.4
+            "fill-opacity": 0.5
         },
         "legend": [
             [
-                "Charlotte",
+                "Charlotte Parcels",
                 "#005035"
             ]
         ],
@@ -567,7 +570,4 @@
         }
     }
 }
-
-
-
 
