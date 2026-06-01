@@ -50,7 +50,8 @@
             "zone":[true,""],
             "VLIL_60%":[true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""]
+            "Rent_Limit":[true,""],
+            "SB840":[true,""]
         },
         "hover": {
             "zone": [
@@ -59,14 +60,20 @@
             ]
         },
         "cat_filters": {
-            "County pop<=1.8mil": "County Population is 1.8 Million or Less"
+            "County pop<=1.8mil": "County Population is 1.8 Million or Less",
+            "SB840":""
         },
 
         "cat_filter_vals": {
             "County pop<=1.8mil": [
                 "Yes",
                 "No"
+            ],
+            "SB840":[
+                "Applies",
+                "Does not Apply"
             ]
+            }
         }
     },
     
