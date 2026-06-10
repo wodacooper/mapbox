@@ -106,6 +106,9 @@
                 0.6
             ]
         },
+        "cat_filters": {
+            "project_in_county": "Project in County"
+        },
         "num_filters": {
             "score": "Score"
         },
@@ -161,6 +164,7 @@
                 ""
             ]
         },
+
         "click": {
             "Name": [
                 true,
@@ -199,7 +203,12 @@
                 ""
             ]
         },
-            
+        "cat_filter_vals": {
+            "project_in_county": [
+                "yes",
+                "no"
+            ]
+        },
         "num_filter_vals": {
             "score": [
                 0.0,
