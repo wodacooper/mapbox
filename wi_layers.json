@@ -193,6 +193,10 @@
             "Field5": [
                 true,
                 "SD_name"
+            ],
+            "project_in_county":[
+                true,
+                ""
             ]
         },
             
