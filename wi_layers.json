@@ -70,7 +70,7 @@
         "visible": true,
         "circle": {
             "circle-color": "#000000",
-            "circle-radius": 6,
+            "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2
         },
