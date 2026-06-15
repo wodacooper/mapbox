@@ -215,6 +215,69 @@
                 37.0
             ]
         }
+    },
+
+    "awards": {
+        "name": "Previous Awards",
+        "source_id": "wi_awards_source",
+        "url": "mapbox://wodacooper.wi_awards",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-color": "#ff0000",
+            "circle-radius": 6
+        },
+        "hover": {
+            "Project Name": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+            "Affordable Units": [
+                true,
+                ""
+            ],
+            "Federal Credit Award": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+           "Project Name": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+            "Affordable Units": [
+                true,
+                ""
+            ],
+            "Federal Credit Award": [
+                true,
+                ""
+            ],
+            "Project City": [
+                true,
+                ""
+            ],
+            "Project County": [
+                true,
+                ""
+            ],
+            "Total Units": [
+                true,
+                ""
+            ]
+        }
     }
 }
 
