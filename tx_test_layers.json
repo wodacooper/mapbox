@@ -230,7 +230,7 @@
                 ],
                 "Schools",
                 "#246e28",
-                "Groceries",
+                "Grocery",
                 "#FF0000",
                 "#FFFF00"
             ]
@@ -278,11 +278,11 @@
                     "get",
                     "type"
                 ],
-                "schools_indep",
-                "#246e28",
-                "Grocery",
+                "Libraries",
+                "#FFFF00",
+                "Groceries",
                 "#FF0000",
-                "#FFFF00"
+                "#246e28"
             ]
         },
         "legend": [
