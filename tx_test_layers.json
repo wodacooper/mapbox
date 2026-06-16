@@ -250,6 +250,166 @@
             ]
         ]
     },
+    "new_amenities": {
+        "name": "New Amenities",
+        "source_id": "tx_amenities_061526_source",
+        "url": "mapbox://wodacooper.tx_amenities_061526",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 6,
+            "circle-stroke-color": [
+            "case",
+            [
+                "any",
+                ["==", ["get", "Likely Valid"], "No"],
+                ["==", ["get", "Valid Libraries"], "No"]
+            ],
+                "#000000",
+                "#ffffff"
+            ], 
+            "circle-stroke-width": 2,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "schools_indep",
+                "#246e28",
+                "Grocery",
+                "#FF0000",
+                "#FFFF00"
+            ]
+        },
+        "legend": [
+            [
+                "School",
+                "#246e28"
+            ],
+            [
+                "Grocery",
+                "#FF0000"
+            ],
+            [
+                "Library",
+                "#FFFF00"
+            ]
+        ],
+        "click": {
+            "School Name": [
+                true,
+                "School Name"
+            ],
+            "School Site Street Address": [
+                true,
+                "Street Address"
+            ],
+            "School Site City": [
+                true,
+                "City"
+            ],
+            "School Zip": [
+                true,
+                "Zip Code"
+            ],
+            "School Phone": [
+                true,
+                "Phone"
+            ],
+            "School Email Address": [
+                true,
+                "Email"
+            ],
+            "District Name": [
+                true,
+                "District Name"
+            ],
+            "District Phone": [
+                true,
+                "District Phone"
+            ],
+            "District Email Address": [
+                true,
+                "District Email"
+            ],
+            "Store_Name": [
+                true,
+                "Store Name"
+            ],
+            "Address": [
+                true,
+                "Street Address"
+            ],
+            "City": [
+                true,
+                "City"
+            ],
+            "Zip_Code": [
+                true,
+                "Zip Code"
+            ],
+            "County": [
+                true,
+                "County"
+            ],
+            "Store_Type": [
+                true,
+                "Store Type"
+            ],
+            "Likely Valid": [
+                true,
+                "Likely Valid"
+            ],
+            "name": [
+                true,
+                "Library Name"
+            ],
+            "link": [
+                true,
+                "Library Website"
+            ],
+            "query": [
+                true,
+                "Address"
+            ],
+            "county": [
+                true,
+                "County"
+            ],
+            "phone": [
+                true,
+                "Library Phone"
+            ],
+            "email": [
+                true,
+                "Library Email"
+            ],
+            "texshare_mem": [
+                true,
+                "TexShare Member"
+            ],
+            "texshare_card": [
+                true,
+                "TexShare Card"
+            ],
+            "Y/N": [
+                true,
+                "Likely Valid"
+            ],
+            "Service Hours": [
+                true,
+                "Service Hours"
+            ],
+            "pool": [
+                true,
+                "pool"
+            ]
+        }
+    },
     "schools_test": {
         "name": "Schools",
         "source_id": "tx_amenities_source_test",
