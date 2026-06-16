@@ -219,8 +219,8 @@
         },
         "visible": false,
         "circle": {
-            "circle-radius": 6,
-            "circle-stroke-color": "#ffffff",
+            "circle-radius": 10,
+            "circle-stroke-color": "#0000FF",
             "circle-stroke-width": 2,
             "circle-color": [
                 "match",
