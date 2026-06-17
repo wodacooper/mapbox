@@ -153,10 +153,9 @@
             "County": "",
             "City": "",
             "Most Recent Project_1": "County Most Recent Project",
-            "city_award_last_3": "City award in last 3"
+            "Most Recent Project_2": "City Most Recent Project"
         },
         "num_filters": {
-            "Most Recent City Award": "City Most Recent Award",
             "score": ""
         },
         "legend": [
@@ -262,6 +261,7 @@
         },
         "cat_filter_vals": {
             "Most Recent Project_1": [2010, 2015, 2020],
+            "Most Recent Project_2": [2010, 2015, 2020],
             "Pool": [
                 "Large City",
                 "Rural",
@@ -930,14 +930,9 @@
                 "Yorktown",
                 "Zanesville",
                 "Zionsville"
-            ],
-            "city_award_last_3": ["yes","no"]
-
+            ]
         },
         "num_filter_vals": {
-            "Most Recent City Award":[
-                1994, 2026
-            ],
             "score": [
                 4.5,
                 29.5
