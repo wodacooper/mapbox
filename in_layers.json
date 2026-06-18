@@ -1089,7 +1089,7 @@
             "Active Age Restricted Projects": [true,""],
             "Active Assisted Living Projects": [true,""],
             "Active Supportive Housing Projects": [true,""],
-            "Most City Recent Award": [true,""],
+            "Most Recent City Award": [true,""],
             "QCT": [true,""],
             "Tract Number": [
                 true,
@@ -1778,3 +1778,5 @@
         }
     }
 }
+
+
