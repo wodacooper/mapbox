@@ -940,7 +940,7 @@
         }
     },
     "New Score": {
-        "name": "2026 Score New",
+        "name": "2027 Score",
         "source_id": "in_27",
         "url": "mapbox://wodacooper.in_27",
         "source_layer": "hello_world",
@@ -988,11 +988,10 @@
             "Pool": "",
             "County": "",
             "City": "",
-            "Most Recent Project_1": "County Most Recent Project",
+            "Most Recent Project": "County Most Recent Project",
             "city_award_last_3": "City award in last 3"
         },
         "num_filters": {
-            "Most Recent City Award": "City Most Recent Award",
             "score": ""
         },
         "legend": [
@@ -1090,6 +1089,7 @@
             "Active Age Restricted Projects": [true,""],
             "Active Assisted Living Projects": [true,""],
             "Active Supportive Housing Projects": [true,""],
+            "Most City Recent Award": [true,""],
             "QCT": [true,""],
             "Tract Number": [
                 true,
@@ -1771,9 +1771,6 @@
 
         },
         "num_filter_vals": {
-            "Most Recent City Award":[
-                1994, 2026
-            ],
             "score": [
                 4.5,
                 29.5
@@ -1781,5 +1778,3 @@
         }
     }
 }
-
-
