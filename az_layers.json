@@ -1,8 +1,8 @@
 {
     "QCT or DDA": {
         "name": "QCT or DDA 2026",
-        "source_id": "az_qct_dda_26",
-        "url": "mapbox://wodacooper.az_qct_dda_26",
+        "source_id": "az_qct_dda",
+        "url": "mapbox://wodacooper.az_qct_dda",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
