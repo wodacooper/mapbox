@@ -351,7 +351,7 @@
     "Urban": {
         "name": "Urban 2027",
         "source_id": "score_source",
-        "url": "mapbox://wodacooper.sc_26",
+        "url": "mapbox://wodacooper.sc_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -529,7 +529,7 @@
     "Suburban": {
         "name": "Suburban 2027",
         "source_id": "score_source",
-        "url": "mapbox://wodacooper.sc_26",
+        "url": "mapbox://wodacooper.sc_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -707,7 +707,7 @@
     "Rural": {
         "name": "Rural 2027",
         "source_id": "score_source",
-        "url": "mapbox://wodacooper.sc_26",
+        "url": "mapbox://wodacooper.sc_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -890,8 +890,6 @@
         }
     }
 }
-
-
 
 
 
