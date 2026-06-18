@@ -8,8 +8,15 @@
             "visibility": "visible"
         },
         "visible": true,
-        "perm_filters":[["==","state",4]],
-
+        "perm_filters":[
+          ["or",
+            ["==","state",41],
+            ["==","state",42],
+            ["==","state",43],
+            ["==","state",45],
+            ["==","state",47]
+          ]
+        ],
         "fill": {
             "fill-color": [
                     "match",
