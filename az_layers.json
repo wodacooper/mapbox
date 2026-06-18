@@ -147,7 +147,7 @@
         ]
     },
     "Cottonwood":{
-        "name": "Cottonwood Parcels",
+        "name": "Cottonwood Parcels1",
         "source_id": "cottonwood",
         "url": "mapbox://wodacooper.cottonwood",
         "source_layer": "hello_world",
@@ -166,7 +166,7 @@
         "legend": [
             [
                 "Cottonwood City Owned Parcels",
-                "#ffffff"
+                "#000000"
             ]
         ],
         "hover": {
@@ -213,3 +213,4 @@
         }
     }
 }
+
