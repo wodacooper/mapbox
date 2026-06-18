@@ -153,6 +153,29 @@
                 "#0000ff"
             ]
         ]
+    },
+    "Cottonwood":{
+        "name": "Cottonwood Parcels",
+        "source_id": "cottonwood",
+        "url": "mapbox://wodacooper.cottonwood",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": "#ffffff",
+            "fill-opacity": 0.3
+        },
+        "line": {
+            "line-width": 2,
+            "line-color": "#ffffff"
+        },
+        "legend": [
+            [
+                "Cottonwood City Owned Parcels",
+                "#ffffff"
+            ]
+        ]
     }
 }
-
