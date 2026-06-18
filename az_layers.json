@@ -147,7 +147,7 @@
         ]
     },
     "Cottonwood":{
-        "name": "Cottonwood Parcels",
+        "name": "Cottonwood Parcels1",
         "source_id": "cottonwood",
         "url": "mapbox://wodacooper.cottonwood",
         "source_layer": "hello_world",
@@ -168,7 +168,49 @@
                 "Cottonwood City Owned Parcels",
                 "#ffffff"
             ]
-        ]
+        ],
+        "hover": {
+            "Address": [
+                true,
+                ""
+            ],
+            "Acreage": [
+                true,
+                ""
+            ],
+            "PARCEL_ID": [
+                true,
+                ""
+            ],"PARLABEL": [
+                true,
+                ""
+            ],
+            "SUBNAME":[
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Address": [
+                true,
+                ""
+            ],
+            "Acreage": [
+                true,
+                ""
+            ],
+            "PARCEL_ID": [
+                true,
+                ""
+            ],"PARLABEL": [
+                true,
+                ""
+            ],
+            "SUBNAME":[
+                true,
+                ""
+            ]
+        }
     }
 }
 
