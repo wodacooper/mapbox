@@ -252,8 +252,8 @@
     },
     "new_amenities": {
         "name": "New Amenities",
-        "source_id": "tx_amenities_061526_source",
-        "url": "mapbox://wodacooper.tx_amenities_061526",
+        "source_id": "tx_amenities_061826_source",
+        "url": "mapbox://wodacooper.tx_amenities_061826",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -278,9 +278,9 @@
                     "get",
                     "type"
                 ],
-                "Libraries",
+                "Libraries_061826",
                 "#FFFF00",
-                "Groceries",
+                "Groceries_061826",
                 "#FF0000",
                 "#246e28"
             ]
