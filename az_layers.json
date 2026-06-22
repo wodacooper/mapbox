@@ -147,7 +147,7 @@
         ]
     },
     "Cottonwood":{
-        "name": "Cottonwood Parcels1",
+        "name": "Cottonwood Parcels",
         "source_id": "cottonwood",
         "url": "mapbox://wodacooper.cottonwood",
         "source_layer": "hello_world",
