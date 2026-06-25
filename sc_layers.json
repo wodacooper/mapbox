@@ -679,10 +679,6 @@
                 true,
                 ""
             ],
-            "county_cap_last_year": [
-                true,
-                ""
-            ],
             "income_level": [
                 true,
                 ""
@@ -858,10 +854,6 @@
                 "recent_nc"
             ],
             "awards_in_last_3": [
-                true,
-                ""
-            ],
-            "county_cap_last_year": [
                 true,
                 ""
             ],
