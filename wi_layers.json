@@ -124,7 +124,7 @@
         }
     },
     "score": {
-        "name": "2027 Score",
+        "name": "2027 Score1",
         "source_id": "wi_27_source",
         "url": "mapbox://wodacooper.wi_27",
         "source_layer": "hello_world",
@@ -171,7 +171,8 @@
             ]
         },
         "cat_filters": {
-            "project_in_county": "Project in County"
+            "project_in_county": "Project in County",
+            "Set_Aside": ""
         },
         "num_filters": {
             "score": "Score"
@@ -226,6 +227,10 @@
              "score": [
                 true,
                 ""
+            ],
+            "Set-Aside":[
+                true,
+                ""
             ]
         },
 
@@ -235,6 +240,10 @@
                 "county"
             ],
             "score": [
+                true,
+                ""
+            ],
+            "Set-Aside":[
                 true,
                 ""
             ],
@@ -271,6 +280,10 @@
             "project_in_county": [
                 "yes",
                 "no"
+            ],
+            "Set-Aside": [
+                "Metro",
+                "Non-Metro"
             ]
         },
         "num_filter_vals": {
@@ -282,4 +295,3 @@
     }
 
 }
-
