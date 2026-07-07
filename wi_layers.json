@@ -124,7 +124,7 @@
         }
     },
     "score": {
-        "name": "2027 Score2",
+        "name": "2027 Score",
         "source_id": "wi_27_source",
         "url": "mapbox://wodacooper.wi_27",
         "source_layer": "hello_world",
@@ -172,7 +172,7 @@
         },
         "cat_filters": {
             "project_in_county": "Project in County",
-            "Set_Aside": "Set_Aside"
+            "Set-Aside": "Set-Aside"
         },
         "num_filters": {
             "score": "Score"
