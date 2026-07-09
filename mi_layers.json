@@ -58,10 +58,10 @@
             ]
         },
         "cat_filters":{
-            "pop>35k":"City pop>35k"
+            "pop<35k":"City pop<35k"
         },
         "cat_filter_vals":{
-            "pop>35k":[
+            "pop<35k":[
                 "yes",
                 "no"
             ]
