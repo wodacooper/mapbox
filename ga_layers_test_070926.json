@@ -4546,6 +4546,98 @@
             ]
         }
 
+    },
+    "new_trus_stops": {
+        "name": "Bus and Train Stops",
+        "source_id": "all_georgia_bus__train_stops_source",
+        "url": "mapbox://wodacooper.all_georgia_bus_stops",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "hub"
+                ],
+                "yes",
+                "#4caf50",
+                "#e91e63"
+            ]
+        },
+        "legend": [
+            [
+                "Hub",
+                "#4caf50"
+            ],
+            [
+                "Stop",
+                "#e91e63"
+            ]
+        ],   
+        "hover": {
+            "name": [
+                true,
+                ""
+            ],
+            "type": [
+                true,
+                ""
+            ],
+            "hub": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+             "name": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "type": [
+                true,
+                ""
+            ],
+            "hub": [
+                true,
+                ""
+            ],
+            "latitude": [
+                true,
+                ""
+            ],
+            "longitude": [
+                true,
+                ""
+            ],
+            "plus_code": [
+                true,
+                ""
+            ],
+            "xlink": [
+                true,
+                ""
+            ],
+            "xlink2": [
+                true,
+                ""
+            ],
+            "search_url": [
+                true,
+                ""
+            ]
+        }
+
     }
 }
 
