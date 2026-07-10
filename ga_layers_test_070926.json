@@ -2516,7 +2516,7 @@
         }
     },
     "ga_test": {
-        "name": "070926 Test with Transit",
+        "name": "071026 Test with Transit",
         "source_id": "ga_2026",
         "url": "mapbox://wodacooper.ga_test",
         "source_layer": "hello_world",
@@ -4550,7 +4550,7 @@
     "new_trus_stops": {
         "name": "Bus and Train Stops",
         "source_id": "all_georgia_bus__train_stops_source",
-        "url": "mapbox://wodacooper.all_georgia_bus_stops",
+        "url": "mapbox://wodacooper.ga_transit",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
