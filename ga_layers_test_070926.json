@@ -2608,7 +2608,7 @@
         }
     },
     "ga_test": {
-        "name": "071326 Test5 with Transit",
+        "name": "071326 Test6 with Transit",
         "source_id": "ga_2026",
         "url": "mapbox://wodacooper.ga_26_cut_071326",
         "source_layer": "hello_world",
@@ -2623,17 +2623,15 @@
                     "get",
                     "score"
                 ],
-                "#FFFFFF",
-                12,
                 "#4B4C4E",
                 13,
                 "#5B2071",
                 14,
                 "#9e9e9e",
                 15,
-                "#346b36",
-                16,
                 "#0000ff",
+                16,
+                "#6F42B3",
                 17,
                 "#ff0000",
                 18,
@@ -2644,10 +2642,18 @@
                 "#00ff00",
                 23,
                 "#00ffff"
-            ], 
-            "fill-opacity": 0.6
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                0,
+                12,
+                0.6
+            ]
         },
-            
         "legend": [
             [
                 "23-25",
@@ -2699,9 +2705,9 @@
                 true,
                 ""
             ],
-            "city_x": [
+            "NAMELSAD_1": [
                 true,
-                "City"
+                "City: "
             ],
             "gich_detailed": [
                 true,
@@ -2733,9 +2739,9 @@
                 true,
                 ""
             ],
-            "city_x": [
+            "NAMELSAD_1": [
                 true,
-                "City"
+                "City: "
             ],
             "qct": [
                 true,
