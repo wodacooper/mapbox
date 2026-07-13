@@ -2608,9 +2608,9 @@
         }
     },
     "ga_test": {
-        "name": "071026 Test with Transit",
+        "name": "071326 Test with Transit",
         "source_id": "ga_2026",
-        "url": "mapbox://wodacooper.ga_test",
+        "url": "mapbox://wodacooper.ga_26_071026",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
