@@ -3655,7 +3655,16 @@
                 5,
                 "#00ffff"
             ],
-            "fill-opacity": 0.6
+        "fill-opacity": [
+            "step",
+            [
+                "get",
+                "trans_pts"
+            ],
+                0,
+                1,
+                0.6
+            ]
         },
         "legend": [
             [
