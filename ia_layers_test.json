@@ -1296,7 +1296,7 @@
     },
     "test_score_071326": {
         "name": "2027 Test Score",
-        "source_id": "score",
+        "source_id": "27score",
         "url": "mapbox://wodacooper.ia_27",
         "source_layer": "hello_world",
         "layout": {
