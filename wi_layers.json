@@ -65,9 +65,9 @@
         "url": "mapbox://wodacooper.wi_awards",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "circle": {
             "circle-color": "#000000",
             "circle-radius": 5,
@@ -466,4 +466,3 @@
     }
 
 }
-
