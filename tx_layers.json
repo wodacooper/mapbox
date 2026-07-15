@@ -98,9 +98,11 @@
                 ],
                 "Schools",
                 "#246e28",
-                "Grocery",
+                "Groceries",
                 "#FF0000",
-                "#FFFF00"
+                "Libraries",
+                "#FFFF00",
+                "0000FF"
             ]
         },
         "legend": [
@@ -115,6 +117,10 @@
             [
                 "Library",
                 "#FFFF00"
+            ],
+            [
+                "Pharmacy",
+                "#0000FF"
             ]
         ]
         },
