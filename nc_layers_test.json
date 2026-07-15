@@ -843,14 +843,8 @@
         "source_layer": "hello_world",
         "layout": {},
         "visible": false,
-        "filter": [
-            "==",
-            [
-                "get", 
-                "type"
-            ],
-            "Groceries_071526"
-        ],
+        "perm_filters": [["==", "type", "Groceries_071526"]],
+        
         "circle": {
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
@@ -911,14 +905,8 @@
         "source_layer": "hello_world",
         "layout": {},
         "visible": false,
-        "filter": [
-            "==",
-            [
-                "get", 
-                "type"
-            ],
-            "SHopping_062626"
-        ],
+        "perm_filters": [["==", "type", "SHopping_062626"]],
+
         "circle": {
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
@@ -979,14 +967,8 @@
         "source_layer": "hello_world",
         "layout": {},
         "visible": false,
-        "filter": [
-            "==",
-            [
-                "get", 
-                "type"
-            ],
-            "Medical_062626"
-        ],
+        "perm_filters": [["==", "type", "Medical_062626"]],
+        
         "circle": {
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
