@@ -530,7 +530,7 @@
     "test": {
         "name": "2027 Test",
         "source_id": "nc_27_saucing",
-        "url": "mapbox://wodacooper.nc_test",
+        "url": "mapbox://wodacooper.nc_26_071526",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -835,6 +835,198 @@
             "PropLuseTx":[true,""]
         }
     }
-}
+    },
+    "groceries_071526": {
+        "name": "groceries_071526",
+        "source_id": "grocery_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#FF00FF"
+        },
+        "legend": [
+            [
+                "Grocery",
+                "#FF00FF"
+            ]
+        ],
+        "hover": {
+            "Store_Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Store_Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ],
+            "Store_Street_Address": [
+                true,
+                ""
+            ]
+        }
+    },
+    "shopping_071526": {
+        "name": "shopping_071526",
+        "source_id": "shop_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#00FFFF"
+        },
+        "legend": [
+            [
+                "Shopping",
+                "#00FFFF"
+            ]
+        ],
+        "hover": {
+            "Shopping_Name": [
+                true,
+                ""
+            ],
+            "Shopping_City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Shopping_Name": [
+                true,
+                ""
+            ],
+            "Shopping_City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ],
+            "Shopping_Street_Address": [
+                true,
+                ""
+            ]
+        }
+    },
+    "medical_071526": {
+        "name": "medical_071526",
+        "source_id": "medical_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#FFAE00"
+        },
+        "legend": [
+            [
+                "Medical",
+                "#FFAE00"
+            ]
+        ],
+        "hover": {
+            "DBA Name": [
+                true,
+                ""
+            ],
+            "Name of Licensee Legal Name": [
+                true,
+                ""
+            ],
+            "Site City": [
+                true,
+                ""
+            ],
+            "County ": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "DBA Name": [
+                true,
+                ""
+            ],
+            "Name of Licensee Legal Name": [
+                true,
+                ""
+            ],
+            "Site City": [
+                true,
+                ""
+            ],
+            "County ": [
+                true,
+                ""
+            ],
+            "Site Address": [
+                true,
+                ""
+            ],
+            "Facility Contact Name": [
+                true,
+                ""
+            ],
+            "Facility Contact Number": [
+                true,
+                ""
+            ],
+            "License #": [
+                true,
+                ""
+            ]
+    }
+    }  
 }
 
