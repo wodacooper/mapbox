@@ -847,7 +847,15 @@
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": "#FF00FF"
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Groceries_071526",
+                "#FF00FF"
+            ]
         },
         "legend": [
             [
@@ -907,7 +915,15 @@
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": "#00FFFF"
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "SHopping_062626",
+                "#00FFFF"
+            ]
         },
         "legend": [
             [
@@ -967,7 +983,15 @@
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": "#FFAE00"
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Medical_062626",
+                "#FFAE00"
+            ]
         },
         "legend": [
             [
