@@ -2610,7 +2610,7 @@
     "ga_test": {
         "name": "071326 Test6 with Transit",
         "source_id": "ga_2026",
-        "url": "mapbox://wodacooper.ga_26_cut_071326",
+        "url": "mapbox://wodacooper.ga_test2",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -3628,7 +3628,7 @@
     "ga_transit": {
         "name": "Transit",
         "source_id": "ga_trans",
-        "url": "mapbox://wodacooper.ga_26_cut_071326",
+        "url": "mapbox://wodacooper.ga_test2",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
