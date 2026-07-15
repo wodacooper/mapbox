@@ -851,9 +851,8 @@
                 "match",
                 [
                     "get",
-                    "type"
+                    "Groceries_071526"
                 ],
-                "Groceries_071526",
                 "#FF00FF"
             ]
         },
@@ -919,9 +918,8 @@
                 "match",
                 [
                     "get",
-                    "type"
+                    "SHopping_062626"
                 ],
-                "SHopping_062626",
                 "#00FFFF"
             ]
         },
@@ -987,9 +985,8 @@
                 "match",
                 [
                     "get",
-                    "type"
+                    "Medical_062626"
                 ],
-                "Medical_062626",
                 "#FFAE00"
             ]
         },
