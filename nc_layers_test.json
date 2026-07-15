@@ -851,9 +851,11 @@
                 "match",
                 [
                     "get",
-                    "Groceries_071526"
+                    "type"
                 ],
-                "#FF00FF"
+                "Groceries_071526",
+                "#FF00FF",
+                "#ffffff"
             ]
         },
         "legend": [
@@ -918,9 +920,11 @@
                 "match",
                 [
                     "get",
-                    "SHopping_062626"
+                    "type"
                 ],
-                "#00FFFF"
+                "SHopping_062626",
+                "#00FFFF",
+                "#ffffff"
             ]
         },
         "legend": [
@@ -985,9 +989,11 @@
                 "match",
                 [
                     "get",
-                    "Medical_062626"
+                    "type"
                 ],
-                "#FFAE00"
+                "Medical_062626",
+                "#FFAE00",
+                "#ffffff"
             ]
         },
         "legend": [
