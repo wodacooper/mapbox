@@ -530,7 +530,7 @@
     "test": {
         "name": "2027 Test",
         "source_id": "nc_27_saucing",
-        "url": "mapbox://wodacooper.nc_26_071526",
+        "url": "mapbox://wodacooper.nc_test",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
