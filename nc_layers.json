@@ -196,6 +196,204 @@
             ]
         }
     },
+    "groceries_071526": {
+        "name": "groceries_071526",
+        "source_id": "grocery_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "perm_filters": [["==", "type", "Groceries_071526"]],
+        
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#FF00FF"
+        },
+        "legend": [
+            [
+                "Grocery",
+                "#FF00FF"
+            ]
+        ],
+        "hover": {
+            "Store_Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Store_Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ],
+            "Store_Street_Address": [
+                true,
+                ""
+            ]
+        }
+    },
+    "shopping_071526": {
+        "name": "shopping_071526",
+        "source_id": "shop_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "perm_filters": [["==", "type", "SHopping_062626"]],
+
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#00FFFF"
+        },
+        "legend": [
+            [
+                "Shopping",
+                "#00FFFF"
+            ]
+        ],
+        "hover": {
+            "Shopping_Name": [
+                true,
+                ""
+            ],
+            "Shopping_City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Shopping_Name": [
+                true,
+                ""
+            ],
+            "Shopping_City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ],
+            "Shopping_Street_Address": [
+                true,
+                ""
+            ]
+        }
+    },
+    "medical_071526": {
+        "name": "medical_071526",
+        "source_id": "medical_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "perm_filters": [["==", "type", "Medical_062626"]],
+        
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#FFAE00"
+        },
+        "legend": [
+            [
+                "Medical",
+                "#FFAE00"
+            ]
+        ],
+        "hover": {
+            "DBA Name": [
+                true,
+                ""
+            ],
+            "Name of Licensee Legal Name": [
+                true,
+                ""
+            ],
+            "Site City": [
+                true,
+                ""
+            ],
+            "County ": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "DBA Name": [
+                true,
+                ""
+            ],
+            "Name of Licensee Legal Name": [
+                true,
+                ""
+            ],
+            "Site City": [
+                true,
+                ""
+            ],
+            "County ": [
+                true,
+                ""
+            ],
+            "Site Address": [
+                true,
+                ""
+            ],
+            "Facility Contact Name": [
+                true,
+                ""
+            ],
+            "Facility Contact Number": [
+                true,
+                ""
+            ],
+            "License #": [
+                true,
+                ""
+            ]
+    }
+    },
     "cities": {
         "name": "Cities",
         "source_id": "nc_cities_21",
@@ -527,7 +725,6 @@
             ]
         }
     },
-
     "charlotte":{
         "name": "Charlotte Parcels",
         "source_id": "charlotte_source",
@@ -568,6 +765,274 @@
             "AdoptDate":[true,""],
             "PropLuseTx":[true,""]
         }
-    }
+    
+    },
+    "test": {
+        "name": "2027 Test",
+        "source_id": "nc_27_saucing",
+        "url": "mapbox://wodacooper.nc_test",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-color": [
+            "match",
+                [
+                    "get",
+                    "Bonus Point"
+                ],
+                1,
+                "#000000",
+                "#FFFFFF"
+            ],
+            "line-width": [
+                "match",
+                [
+                    "get",
+                    "Bonus Point"
+                ],
+                1,
+                4,
+                0
+            ]
+        },
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "Rank"
+                ],
+                1,
+                "#00FFFF",
+                2,
+                "#11FF00",
+                3,
+                "#FF10B7",
+                4,
+                "#FFEB3B",
+                5,
+                "#FF9800",
+                6,
+                "#8A00AD",
+                7,
+                "#FFFFFF",
+                "#000000"
+            ],
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "Rank"
+                ],
+                1,
+                0.4,
+                2,
+                0.4,
+                3,
+                0.4,
+                4,
+                0.4,
+                5,
+                0.4,
+                6,
+                0.4,
+                7,
+                0.4,
+                0
+            ]
+        },
+        "cat_filters": {
+            "County": "",
+            "Income Designation": "",
+            "Pool": ""
+        },
+        "legend": [
+            [
+                "1",
+                "#00FFFF"
+            ],
+            [
+                "2",
+                "#11FF00"
+            ],
+            [
+                "3",
+                "#FF10B7"
+            ],
+            [
+                "4",
+                "#FFEB3B"
+            ],
+            [
+                "5",
+                "#FF9800"
+            ],
+            [
+                "6",
+                "#8A00AD"
+            ],
+            [
+                "7",
+                "#FFFFFF"
+            ],
+            [
+                "DHHS/MID (Outline)",
+                "#000000"
+            ]
+        ],
+        "hover": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Pool": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Rank":[
+                true,
+                ""
+            ],
+            "Income Designation": [
+                true,
+                ""
+            ],
+            "DHHS": [
+                true,
+                ""
+            ],
+            "MID": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "County": [
+                "Alamance",
+                "Alexander",
+                "Alleghany",
+                "Anson",
+                "Ashe",
+                "Avery",
+                "Beaufort",
+                "Bertie",
+                "Bladen",
+                "Brunswick",
+                "Buncombe",
+                "Burke",
+                "Cabarrus",
+                "Caldwell",
+                "Camden",
+                "Carteret",
+                "Caswell",
+                "Catawba",
+                "Chatham",
+                "Cherokee",
+                "Chowan",
+                "Clay",
+                "Cleveland",
+                "Columbus",
+                "Craven",
+                "Cumberland",
+                "Currituck",
+                "Dare",
+                "Davidson",
+                "Davie",
+                "Duplin",
+                "Durham",
+                "Edgecombe",
+                "Forsyth",
+                "Franklin",
+                "Gaston",
+                "Gates",
+                "Graham",
+                "Granville",
+                "Greene",
+                "Guilford",
+                "Halifax",
+                "Harnett",
+                "Haywood",
+                "Henderson",
+                "Hertford",
+                "Hoke",
+                "Hyde",
+                "Iredell",
+                "Jackson",
+                "Johnston",
+                "Jones",
+                "Lee",
+                "Lenoir",
+                "Lincoln",
+                "Macon",
+                "Madison",
+                "Martin",
+                "McDowell",
+                "Mecklenburg",
+                "Mitchell",
+                "Montgomery",
+                "Moore",
+                "Nash",
+                "New Hanover",
+                "Northampton",
+                "Onslow",
+                "Orange",
+                "Pamlico",
+                "Pasquotank",
+                "Pender",
+                "Perquimans",
+                "Person",
+                "Pitt",
+                "Polk",
+                "Randolph",
+                "Richmond",
+                "Robeson",
+                "Rockingham",
+                "Rowan",
+                "Rutherford",
+                "Sampson",
+                "Scotland",
+                "Stanly",
+                "Stokes",
+                "Surry",
+                "Swain",
+                "Transylvania",
+                "Tyrrell",
+                "Union",
+                "Vance",
+                "Wake",
+                "Warren",
+                "Washington",
+                "Watauga",
+                "Wayne",
+                "Wilkes",
+                "Wilson",
+                "Yadkin",
+                "Yancey"
+            ],
+            "Income Designation": [
+                "High",
+                "Low",
+                "Moderate"
+            ],
+            "Pool": [
+                "Central",
+                "East",
+                "Metro",
+                "West"
+            ]
+        }
+    }  
 }
-
