@@ -2979,6 +2979,10 @@
             ["15", "#9e9e9e"]
         ],
         "hover": {
+            "score": [
+                true,
+                ""
+            ],
             "pool": [
                 true,
                 ""
@@ -2995,10 +2999,6 @@
                 true,
                 ""
             ],
-            "score": [
-                true,
-                ""
-            ],
             "trans_pts": [
                 true,
                 ""
@@ -3009,6 +3009,10 @@
             ]
         },
         "click": {
+            "score": [
+                true,
+                ""
+            ],
             "pool": [
                 true,
                 ""
@@ -3021,11 +3025,11 @@
                 true,
                 "City: "
             ],
-            "qct": [
+            "GEOID20": [
                 true,
                 ""
             ],
-            "score": [
+            "qct": [
                 true,
                 ""
             ],
@@ -3134,10 +3138,6 @@
                 ""
             ],
             "env_qual": [
-                true,
-                ""
-            ],
-            "GEOID20": [
                 true,
                 ""
             ]
