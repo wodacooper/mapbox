@@ -2610,7 +2610,8 @@
         "cat_filters": {
             "CLASSFP": "",
             "city": "",
-            "underserved_pts": ""
+            "underserved_pts": "",
+            "rent_burden_pts": ""
         },
         "legend": [
             [
@@ -3692,6 +3693,10 @@
                 "Yarmouth"
             ],
             "underserved_pts": [
+                "1",
+                "0"
+            ],
+            "rent_burden_pts": [
                 "1",
                 "0"
             ]
