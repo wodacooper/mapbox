@@ -1276,9 +1276,9 @@
                     "score"
                 ],
                 7,
-                "#dc143c",
-                6,
                 "#00ffff",
+                6,
+                "#dc143c",
                 5,
                 "#00ff00",
                 4,
@@ -1302,11 +1302,11 @@
         "legend": [
             [
                 "7",
-                "#dc143c"
+                "#00ffff"
             ],
             [
                 "6",
-                "#00ffff"
+                "#dc143c"
             ],
             [
                 "5",
@@ -2595,7 +2595,7 @@
     "cities": {
         "name": "Cities",
         "source_id": "places",
-        "url": "mapbox://ewright81.ia_places_24",
+        "url": "mapbox://wodacooper.ia_cities_071726",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -2622,12 +2622,36 @@
             "city": [
                 true,
                 ""
+            ],
+            "CLASSFP":[
+                true,
+                ""
+            ],
+            "rent_burden_pts":[
+                true,
+                "rent burden pts: "
+            ],
+            "underserved_pts":[
+                true,
+                "underserved pts: "
             ]
         },
         "click": {
-            "burden_pts": [
+            "city": [
                 true,
                 ""
+            ],
+            "CLASSFP":[
+                true,
+                ""
+            ],
+            "rent_burden_pts":[
+                true,
+                "rent burden pts: "
+            ],
+            "underserved_pts":[
+                true,
+                "underserved pts: "
             ]
         },
         "cat_filter_vals": {
@@ -3668,7 +3692,7 @@
                 "Yarmouth"
             ],
             "underserved_pts": [
-                "null",
+                "1",
                 "0"
             ]
         }
