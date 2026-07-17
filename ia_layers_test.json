@@ -1259,43 +1259,8 @@
             ]
         }
     },
-    "prev": {
-        "name": "4% Prev Projects",
-        "source_id": "ia_26_4p_prev",
-        "url": "mapbox://wodacooper.ia_26_4p_prev",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "visible"
-        },
-        "visible": true,
-        "circle": {
-            "circle-radius": 4,
-            "circle-stroke-width": 1,
-            "circle-stroke-color": "#000000",
-            "circle-color": "#ff0000",
-            "circle-opacity": 0.8
-        },
-        "hover":{
-            "Project Name": [true, ""],
-            "Address": [true, ""]
-        },
-        "click": {
-            "Project Name": [true, ""],
-            "Address": [true, ""],
-            "City": [true, ""],
-            "Occupancy Type": [true, ""],
-            "Total Units": [true, ""],
-            "Award Credit": [true, ""]
-        },
-        "legend": [
-            [
-            "Previous 4% Project",
-            "#ff0000"
-            ]
-        ]
-    },
     "test_score_071726": {
-        "name": "2027 Test Score",
+        "name": "2027 Test Score 071726",
         "source_id": "27score",
         "url": "mapbox://wodacooper.ia_test_071625",
         "source_layer": "hello_world",
@@ -2493,6 +2458,41 @@
                 7.0
             ]
         }
+    },
+    "prev": {
+        "name": "4% Prev Projects",
+        "source_id": "ia_26_4p_prev",
+        "url": "mapbox://wodacooper.ia_26_4p_prev",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-radius": 4,
+            "circle-stroke-width": 1,
+            "circle-stroke-color": "#000000",
+            "circle-color": "#ff0000",
+            "circle-opacity": 0.8
+        },
+        "hover":{
+            "Project Name": [true, ""],
+            "Address": [true, ""]
+        },
+        "click": {
+            "Project Name": [true, ""],
+            "Address": [true, ""],
+            "City": [true, ""],
+            "Occupancy Type": [true, ""],
+            "Total Units": [true, ""],
+            "Award Credit": [true, ""]
+        },
+        "legend": [
+            [
+            "Previous 4% Project",
+            "#ff0000"
+            ]
+        ]
     },
     "4%_score": {
         "name": "2026 4% Score",
