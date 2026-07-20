@@ -136,7 +136,7 @@
         }
     },
     "updated_amentities": {
-        "name": "2Amenities 071426",
+        "name": "Amenities 071426",
         "source_id": "sc_updated_amenities",
         "url": "mapbox://wodacooper.sc_amenities_071426",
         "source_layer": "hello_world",
@@ -901,9 +901,9 @@
         "url": "mapbox://wodacooper.sc_27",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "perm_filters":[["==","pool","Suburban"]],
         "fill": {
             "fill-color": [
@@ -1231,9 +1231,9 @@
         "url": "mapbox://wodacooper.sc_27",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "perm_filters":[["==","pool","Rural"]],
         "fill": {
             "fill-color": [
