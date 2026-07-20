@@ -381,7 +381,7 @@
            
     },
     "rur_test": {
-        "name": "Greater Minnesota Score 2026",
+        "name": "Greater Minnesota Score Test",
         "source_id": "mn_26_source",
         "url": "mapbox://wodacooper.mn_26",
         "source_layer": "hello_world",
