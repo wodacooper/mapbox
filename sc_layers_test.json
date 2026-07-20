@@ -259,6 +259,11 @@
                 "#ffffff"
             ]
         },
+
+        "cat_filters": {
+            "type": "Type"
+        },
+
         "legend": [
             [
                 "Grocery",
@@ -337,7 +342,14 @@
                 true,
                 ""
             ]
+        },
+        "cat_filter_vals": {
+            "type": [
+                "Groceries_062626",
+                "Pharmacies_071426"
+            ]
         }
+        
     },
     "cities": {
         "name": "Cities",
