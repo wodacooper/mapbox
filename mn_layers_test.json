@@ -197,9 +197,9 @@
         "url": "mapbox://wodacooper.mn_26",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "perm_filters":[["==","Metro/Rural", "Metro"]],
         "fill": {
             "fill-color": [
@@ -208,7 +208,7 @@
             "#9e9e9e",
             16,
             "#4B4C4E",
-            28,
+            18,
             "#7C3A14",
             20,
             "#0000ff",
