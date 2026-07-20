@@ -621,9 +621,9 @@
         "url": "mapbox://wodacooper.md_24",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -657,7 +657,7 @@
                 "step",
                 [
                     "get",
-                    "score_with_ccrp"
+                    "score"
                 ],
                 0,
                 17,
