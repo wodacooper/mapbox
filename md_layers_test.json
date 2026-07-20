@@ -657,7 +657,7 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "score_with_ccrp"
                 ],
                 0,
                 17,
