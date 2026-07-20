@@ -299,11 +299,16 @@
         "url": "mapbox://wodacooper.wi_test",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
                 "#9e9e9e",
                 15,
                 "#4B4C4E",
