@@ -234,7 +234,7 @@
         }
     },
     "updated_amentities": {
-        "name": "1Amenities 071426",
+        "name": "2Amenities 071426",
         "source_id": "sc_updated_amenities",
         "url": "mapbox://wodacooper.sc_amenities_071426",
         "source_layer": "hello_world",
