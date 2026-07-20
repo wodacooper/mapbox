@@ -1,64 +1,4 @@
 {
-     "qct_dda": {
-        "name": "2026 QCT/DDAs",
-        "source_id": "qct_dda_26_source",
-        "url": "mapbox://wodacooper.qct_dda_26",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "perm_filters":[["==","state", 37]],
-
-        "fill": {
-            "fill-color": [
-                    "match",
-                    ["get", "zone"],
-                    "qct_only",
-                    "#ffffff",
-                    "dda_only",
-                    "#a0a0a0",
-                    "both",
-                    "#ffa500",
-                    "#000000"
-                ],
-            "fill-opacity": 
-                [
-                    "match",
-                    ["get", "zone"],
-                    "neither",
-                    0,
-                    0.65
-                ]
-                
-        },
-        "legend": [
-            [
-                "QCT and DDA",
-                "#ffa500"
-            ],
-           [
-                "QCT",
-                "#ffffff"
-            ],
-            [
-                "DDA",
-                "#a0a0a0"
-            ]
-        ],
-        "click":{
-            "zone":[true,""],
-            "VLIL_60%":[true,""],
-            "FMR":[true,""],
-            "Rent_Limit":[true,""]
-        },
-        "hover": {
-            "zone": [
-                true,
-                ""
-            ]
-        }
-    },
     "grocery": {
         "name": "Grocery",
         "source_id": "nc_grocery_23",
@@ -95,6 +35,68 @@
             ]
         }
     },
+    "groceries_071526": {
+        "name": "groceries_071526",
+        "source_id": "grocery_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "perm_filters": [["==", "type", "Groceries_071526"]],
+        
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#FF00FF"
+        },
+        "legend": [
+            [
+                "Grocery",
+                "#FF00FF"
+            ]
+        ],
+        "hover": {
+            "Store_Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Store_Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ],
+            "Store_Street_Address": [
+                true,
+                ""
+            ]
+        }
+    },
     "shopping": {
         "name": "Shopping",
         "source_id": "nc_shopping_23",
@@ -126,6 +128,68 @@
                 ""
             ],
             "vicinity": [
+                true,
+                ""
+            ]
+        }
+    },
+    "shopping_071526": {
+        "name": "shopping_071526",
+        "source_id": "shop_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "perm_filters": [["==", "type", "SHopping_062626"]],
+
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#00FFFF"
+        },
+        "legend": [
+            [
+                "Shopping",
+                "#00FFFF"
+            ]
+        ],
+        "hover": {
+            "Shopping_Name": [
+                true,
+                ""
+            ],
+            "Shopping_City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Shopping_Name": [
+                true,
+                ""
+            ],
+            "Shopping_City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ],
+            "Shopping_Street_Address": [
                 true,
                 ""
             ]
@@ -196,6 +260,80 @@
             ]
         }
     },
+    "medical_071526": {
+        "name": "medical_071526",
+        "source_id": "medical_test",
+        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "perm_filters": [["==", "type", "Medical_062626"]],
+        
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#FFAE00"
+        },
+        "legend": [
+            [
+                "Medical",
+                "#FFAE00"
+            ]
+        ],
+        "hover": {
+            "DBA Name": [
+                true,
+                ""
+            ],
+            "Name of Licensee Legal Name": [
+                true,
+                ""
+            ],
+            "Site City": [
+                true,
+                ""
+            ],
+            "County ": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "DBA Name": [
+                true,
+                ""
+            ],
+            "Name of Licensee Legal Name": [
+                true,
+                ""
+            ],
+            "Site City": [
+                true,
+                ""
+            ],
+            "County ": [
+                true,
+                ""
+            ],
+            "Site Address": [
+                true,
+                ""
+            ],
+            "Facility Contact Name": [
+                true,
+                ""
+            ],
+            "Facility Contact Number": [
+                true,
+                ""
+            ],
+            "License #": [
+                true,
+                ""
+            ]
+    }
+    },
     "cities": {
         "name": "Cities",
         "source_id": "nc_cities_21",
@@ -258,6 +396,108 @@
                 "#34c0eb"
             ]
         ]
+    },
+    "charlotte":{
+        "name": "Charlotte Parcels",
+        "source_id": "charlotte_source",
+        "url": "mapbox://wodacooper.charlotte",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "line": {
+            "line-color": "#00000",
+            "line-width": 0.1
+        },
+        "fill": {
+            "fill-color": "#cd7ef7",
+            "fill-opacity": 0.5
+        },
+        "legend": [
+            [
+                "Charlotte Parcels",
+                "#cd7ef7"
+            ]
+        ],
+        "hover": {
+            "PID": [
+                true,
+                ""
+            ], 
+            "acerage":[true,""],
+            "Zoning":[true,""],
+            "PlanName":[true,""],
+            "PropLuseTx":[true,""]
+        },
+        "click":{
+            "PID":[true,""],
+            "acerage":[true,""],
+            "Zoning":[true,""],
+            "RezoneDate":[true,""],
+            "PlanName":[true,""],
+            "AdoptDate":[true,""],
+            "PropLuseTx":[true,""]
+        }
+    
+    },
+    "qct_dda": {
+        "name": "2026 QCT/DDAs",
+        "source_id": "qct_dda_26_source",
+        "url": "mapbox://wodacooper.qct_dda_26",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "perm_filters":[["==","state", 37]],
+
+        "fill": {
+            "fill-color": [
+                    "match",
+                    ["get", "zone"],
+                    "qct_only",
+                    "#ffffff",
+                    "dda_only",
+                    "#a0a0a0",
+                    "both",
+                    "#ffa500",
+                    "#000000"
+                ],
+            "fill-opacity": 
+                [
+                    "match",
+                    ["get", "zone"],
+                    "neither",
+                    0,
+                    0.65
+                ]
+                
+        },
+        "legend": [
+            [
+                "QCT and DDA",
+                "#ffa500"
+            ],
+           [
+                "QCT",
+                "#ffffff"
+            ],
+            [
+                "DDA",
+                "#a0a0a0"
+            ]
+        ],
+        "click":{
+            "zone":[true,""],
+            "VLIL_60%":[true,""],
+            "FMR":[true,""],
+            "Rent_Limit":[true,""]
+        },
+        "hover": {
+            "zone": [
+                true,
+                ""
+            ]
+        }
     },
     "score": {
         "name": "2026 Draft County Pool Rank",
@@ -527,255 +767,15 @@
             ]
         }
     },
-    "charlotte":{
-        "name": "Charlotte Parcels",
-        "source_id": "charlotte_source",
-        "url": "mapbox://wodacooper.charlotte",
-        "source_layer": "hello_world",
-        "layout": {},
-        "visible": false,
-        "line": {
-            "line-color": "#00000",
-            "line-width": 0.1
-        },
-        "fill": {
-            "fill-color": "#005035",
-            "fill-opacity": 0.5
-        },
-        "legend": [
-            [
-                "Charlotte Parcels",
-                "#005035"
-            ]
-        ],
-        "hover": {
-            "PID": [
-                true,
-                ""
-            ], 
-            "acerage":[true,""],
-            "Zoning":[true,""],
-            "PlanName":[true,""],
-            "PropLuseTx":[true,""]
-        },
-        "click":{
-            "PID":[true,""],
-            "acerage":[true,""],
-            "Zoning":[true,""],
-            "RezoneDate":[true,""],
-            "PlanName":[true,""],
-            "AdoptDate":[true,""],
-            "PropLuseTx":[true,""]
-        }
-    
-    },
-    "groceries_071526": {
-        "name": "groceries_071526",
-        "source_id": "grocery_test",
-        "url": "mapbox://wodacooper.nc_amenities_071526",
-        "source_layer": "hello_world",
-        "layout": {},
-        "visible": false,
-        "perm_filters": [["==", "type", "Groceries_071526"]],
-        
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#FF00FF"
-        },
-        "legend": [
-            [
-                "Grocery",
-                "#FF00FF"
-            ]
-        ],
-        "hover": {
-            "Store_Name": [
-                true,
-                ""
-            ],
-            "City": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "Store_Type": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "Store_Name": [
-                true,
-                ""
-            ],
-            "City": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "Store_Type": [
-                true,
-                ""
-            ],
-            "Store_Street_Address": [
-                true,
-                ""
-            ]
-        }
-    },
-    "shopping_071526": {
-        "name": "shopping_071526",
-        "source_id": "shop_test",
-        "url": "mapbox://wodacooper.nc_amenities_071526",
-        "source_layer": "hello_world",
-        "layout": {},
-        "visible": false,
-        "perm_filters": [["==", "type", "SHopping_062626"]],
-
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#00FFFF"
-        },
-        "legend": [
-            [
-                "Shopping",
-                "#00FFFF"
-            ]
-        ],
-        "hover": {
-            "Shopping_Name": [
-                true,
-                ""
-            ],
-            "Shopping_City": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "Store_Type": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "Shopping_Name": [
-                true,
-                ""
-            ],
-            "Shopping_City": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "Store_Type": [
-                true,
-                ""
-            ],
-            "Shopping_Street_Address": [
-                true,
-                ""
-            ]
-        }
-    },
-    "medical_071526": {
-        "name": "medical_071526",
-        "source_id": "medical_test",
-        "url": "mapbox://wodacooper.nc_amenities_071526",
-        "source_layer": "hello_world",
-        "layout": {},
-        "visible": false,
-        "perm_filters": [["==", "type", "Medical_062626"]],
-        
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#FFAE00"
-        },
-        "legend": [
-            [
-                "Medical",
-                "#FFAE00"
-            ]
-        ],
-        "hover": {
-            "DBA Name": [
-                true,
-                ""
-            ],
-            "Name of Licensee Legal Name": [
-                true,
-                ""
-            ],
-            "Site City": [
-                true,
-                ""
-            ],
-            "County ": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "DBA Name": [
-                true,
-                ""
-            ],
-            "Name of Licensee Legal Name": [
-                true,
-                ""
-            ],
-            "Site City": [
-                true,
-                ""
-            ],
-            "County ": [
-                true,
-                ""
-            ],
-            "Site Address": [
-                true,
-                ""
-            ],
-            "Facility Contact Name": [
-                true,
-                ""
-            ],
-            "Facility Contact Number": [
-                true,
-                ""
-            ],
-            "License #": [
-                true,
-                ""
-            ]
-    }
-    },
     "test": {
         "name": "2027 Test",
         "source_id": "nc_27_saucing",
         "url": "mapbox://wodacooper.nc_test",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "line": {
             "line-color": [
             "match",
@@ -806,19 +806,19 @@
                     "Rank"
                 ],
                 1,
-                "#00FFFF",
+                "#00ffff",
                 2,
-                "#11FF00",
+                "#00ff00",
                 3,
-                "#FF10B7",
+                "#ff00ff ",
                 4,
-                "#FFEB3B",
+                "#ffff00",
                 5,
-                "#FF9800",
+                "#fe8103",
                 6,
-                "#8A00AD",
+                "#ff0000",
                 7,
-                "#FFFFFF",
+                "#9e9e9e",
                 "#000000"
             ],
             "fill-opacity": [
@@ -852,31 +852,31 @@
         "legend": [
             [
                 "1",
-                "#00FFFF"
+                "#00ffff"
             ],
             [
                 "2",
-                "#11FF00"
+                "#00ff00"
             ],
             [
                 "3",
-                "#FF10B7"
+                "#ff00ff"
             ],
             [
                 "4",
-                "#FFEB3B"
+                "#ffff00"
             ],
             [
                 "5",
-                "#FF9800"
+                "#fe8103"
             ],
             [
                 "6",
-                "#8A00AD"
+                "#ff0000"
             ],
             [
                 "7",
-                "#FFFFFF"
+                "#9e9e9e"
             ],
             [
                 "DHHS/MID (Outline)",
@@ -884,6 +884,10 @@
             ]
         ],
         "hover": {
+            "Rank":[
+                true,
+                ""
+            ],
             "Pool": [
                 true,
                 ""
@@ -894,15 +898,15 @@
             ]
         },
         "click": {
+            "Rank":[
+                true,
+                ""
+            ],
             "Pool": [
                 true,
                 ""
             ],
             "County": [
-                true,
-                ""
-            ],
-            "Rank":[
                 true,
                 ""
             ],
@@ -1036,4 +1040,3 @@
         }
     }  
 }
-
