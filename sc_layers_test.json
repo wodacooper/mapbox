@@ -1,130 +1,4 @@
 {
-    "qct_dda": {
-        "name": "2026 QCT/DDAs",
-        "source_id": "qct_dda_26_source",
-        "url": "mapbox://wodacooper.qct_dda_26",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "perm_filters":[["==","state",45]],
-
-        "fill": {
-            "fill-color": [
-                    "match",
-                    ["get", "zone"],
-                    "qct_only",
-                    "#ffffff",
-                    "dda_only",
-                    "#a0a0a0",
-                    "both",
-                    "#ffa500",
-                    "#000000"
-                ],
-            "fill-opacity": 
-                [
-                    "match",
-                    ["get", "zone"],
-                    "neither",
-                    0,
-                    0.65
-                ]
-                
-        },
-        "legend": [
-            [
-                "QCT and DDA",
-                "#ffa500"
-            ],
-           [
-                "QCT",
-                "#ffffff"
-            ],
-            [
-                "DDA",
-                "#a0a0a0"
-            ]
-        ],
-        "click":{
-            "zone":[true,""],
-            "VLIL_60%":[true,""],
-            "FMR":[true,""],
-            "Rent_Limit":[true,""]
-        },
-        "hover": {
-            "zone": [
-                true,
-                ""
-            ]
-        }
-    },
-    "tracts": {
-        "name": "Census Tracts",
-        "source_id": "sc_tracts",
-        "url": "mapbox://wodacooper.sc_tracts",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 1,
-            "line-color": "#6D0000"
-        },
-        "fill": {
-            "fill-opacity": 0
-        },
-
-        "click": {
-            "NAMELSAD": [
-                true,
-                ""
-            ],
-            "GEOID":[
-                true,
-                ""
-            ]
-        },
-        "hover": {
-            "NAMELSAD": [
-                true,
-                ""
-            ],
-            "GEOID":[
-                true,
-                ""
-            ]
-        }
-    },
-    "Walmarts": {
-        "name": "Walmarts",
-        "source_id": "sc_walmarts",
-        "url": "mapbox://wodacooper.sc_walmarts",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "visible"
-        },
-        "visible": true,
-        "circle": {
-            "circle-radius": 5,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 1,
-            "circle-color": "#0071ce"
-        },
-        "legend": [
-            [
-                "Walmarts",
-                "#0071ce"
-            ]
-        ],
-        "click": {
-            "Address": [
-                true,
-                ""
-            ]
-        }
-    },
     "past_projects": {
         "name": "Past Projects 21-25",
         "source_id": "sc_past_projects",
@@ -176,6 +50,34 @@
             "Targeting": [true, "Market"],
             "NC or Rehab": [true, ""],
             "TEB, 9%, or 4%": [true, "app_type"]
+        }
+    },
+    "Walmarts": {
+        "name": "Walmarts",
+        "source_id": "sc_walmarts",
+        "url": "mapbox://wodacooper.sc_walmarts",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": "#0071ce"
+        },
+        "legend": [
+            [
+                "Walmarts",
+                "#0071ce"
+            ]
+        ],
+        "click": {
+            "Address": [
+                true,
+                ""
+            ]
         }
     },
     "amenities": {
@@ -351,6 +253,44 @@
         }
         
     },
+    "tracts": {
+        "name": "Census Tracts",
+        "source_id": "sc_tracts",
+        "url": "mapbox://wodacooper.sc_tracts",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#6D0000"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+
+        "click": {
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "GEOID":[
+                true,
+                ""
+            ]
+        },
+        "hover": {
+            "NAMELSAD": [
+                true,
+                ""
+            ],
+            "GEOID":[
+                true,
+                ""
+            ]
+        }
+    },
     "cities": {
         "name": "Cities",
         "source_id": "sc_places",
@@ -386,83 +326,64 @@
             ]
         }
     },
-    "median_income": {
-        "name": "County Median Income",
-        "source_id": "sc_county_medians_source",
-        "url": "mapbox://wodacooper.sc_county_medians",
+    "qct_dda": {
+        "name": "2026 QCT/DDAs",
+        "source_id": "qct_dda_26_source",
+        "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
         "visible": false,
+        "perm_filters":[["==","state",45]],
 
         "fill": {
             "fill-color": [
-                "step",
-                ["get", "median2025"],
-                "#ff0000",  
-                66225,
-                "#ffa500",     
-                80850,
-                "#ffff00",   
-                92700,
-                "#00ff00"      
-            ],
-            "fill-opacity": [
-                "step",
-                ["get", "median2025"],
-                0.5,
-                80850,
-                0.3
-            ]
+                    "match",
+                    ["get", "zone"],
+                    "qct_only",
+                    "#ffffff",
+                    "dda_only",
+                    "#a0a0a0",
+                    "both",
+                    "#ffa500",
+                    "#000000"
+                ],
+            "fill-opacity": 
+                [
+                    "match",
+                    ["get", "zone"],
+                    "neither",
+                    0,
+                    0.65
+                ]
+                
         },
-
         "legend": [
             [
-                "<66,225",
-                "#ff0000"
-            ],
-            [
-                "66,225-80,850",
+                "QCT and DDA",
                 "#ffa500"
             ],
-            [
-                "80,850-92,700",
-                "#ffff00"
+           [
+                "QCT",
+                "#ffffff"
             ],
             [
-                "≥92,700",
-                "#00ff00"
+                "DDA",
+                "#a0a0a0"
             ]
         ],
-
+        "click":{
+            "zone":[true,""],
+            "VLIL_60%":[true,""],
+            "FMR":[true,""],
+            "Rent_Limit":[true,""]
+        },
         "hover": {
-             "County_Name": [
+            "zone": [
                 true,
-                "County Name"
-            ],
-            "median2025":[
-                true,
-                "Median Income"
+                ""
             ]
-        },
-        "click": {
-            "County_Name": [
-                true,
-                "County Name"
-            ],
-            "median2025":[
-                true,
-                "Median Income"
-            ]
-        },
-
-        "num_filters": {
-            "median2025": "Median Income"
-        },
-
-        "num_filter_vals":{
-            "median2025":[51100,112500]
         }
     },
     "Urban": {
@@ -647,6 +568,155 @@
             ]
         }
     },
+    "urb_test": {
+        "name": "Urban Test",
+        "source_id": "urban_test",
+        "url": "mapbox://wodacooper.sc_27",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "perm_filters":[["==","pool","Urban"]],
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#9e9e9e",
+                6,
+                "#4B4C4E",
+                8,
+                "#7C3A14",
+                10,
+                "#0000ff",
+                12,
+                "#9207fc",
+                13,
+                "#ff0000",
+                14,
+                "#fe8103",
+                15,
+                "#ffff00",
+                16,
+                "#ff00ff",
+                17,
+                "#00ff00",
+                18,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                0,
+                4,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "county": "County"
+        },
+        "num_filters": {
+            "score": "Score"
+        },
+        "legend": [
+            ["18", "#00ffff"],
+            ["17", "#00ff00"],
+            ["16", "#ff00ff"],
+            ["15", "#ffff00"],
+            ["14", "#fe8103"],
+            ["13", "#ff0000"],
+            ["12", "#9207fc"],
+            ["10-11", "#0000ff"],
+            ["8-9", "#7C3A14"],
+            ["6-7", "#4B4C4E"],
+            ["4-5", "#9e9e9e"]
+        ],
+        "hover": {
+            "score": [
+                true,
+                ""
+            ],
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "score": [
+                true,
+                ""
+            ],
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "otm_pts": [
+                true,
+                "job_pts"
+            ],
+            "rural_pts": [
+                true,
+                ""
+            ],
+            "aff_pts": [
+                true,
+                ""
+            ],
+            "recent_dev": [
+                true,
+                "recent_nc"
+            ],
+            "awards_in_last_3": [
+                true,
+                ""
+            ],
+            "county_cap_last_year": [
+                true,
+                ""
+            ],
+            "income_level": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "county": [
+                "Aiken",
+                "Anderson",
+                "Beaufort",
+                "Berkeley",
+                "Charleston",
+                "Dorchester",
+                "Greenville",
+                "Horry",
+                "Lancaster",
+                "Lexington",
+                "Richland",
+                "Spartanburg",
+                "York"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                18.0
+            ]
+        }
+    },
     "Suburban": {
         "name": "Suburban 2027",
         "source_id": "score_source",
@@ -773,6 +843,151 @@
                 ""
             ],
             "score": [
+                true,
+                ""
+            ],
+            "otm_pts": [
+                true,
+                "job_pts"
+            ],
+            "rural_pts": [
+                true,
+                ""
+            ],
+            "aff_pts": [
+                true,
+                ""
+            ],
+            "recent_dev": [
+                true,
+                "recent_nc"
+            ],
+            "awards_in_last_3": [
+                true,
+                ""
+            ],
+            "income_level": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "county": [
+                "Cherokee",
+                "Chesterfield",
+                "Darlington",
+                "Florence",
+                "Georgetown",
+                "Greenwood",
+                "Kershaw",
+                "Laurens",
+                "Newberry",
+                "Oconee",
+                "Orangeburg",
+                "Pickens",
+                "Sumter"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                25.0
+            ]
+        }
+    },
+    "sub_test": {
+        "name": "Suburban Test",
+        "source_id": "suburau",
+        "url": "mapbox://wodacooper.sc_27",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "perm_filters":[["==","pool","Suburban"]],
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#9e9e9e",
+                12,
+                "#4B4C4E",
+                13,
+                "#7C3A14",
+                14,
+                "#0000ff",
+                15,
+                "#9207fc",
+                16,
+                "#ff0000",
+                17,
+                "#fe8103",
+                18,
+                "#ffff00",
+                19,
+                "#ff00ff",
+                20,
+                "#00ff00",
+                21,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                0,
+                10,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "county": "County"
+        },
+        "num_filters": {
+            "score": "Score"
+        },
+        "legend": [
+            ["21", "#00ffff"],
+            ["20", "#00ff00"],
+            ["19", "#ff00ff"],
+            ["18", "#ffff00"],
+            ["17", "#fe8103"],
+            ["16", "#ff0000"],
+            ["15", "#9207fc"],
+            ["14", "#0000ff"],
+            ["13", "#7C3A14"],
+            ["12", "#4B4C4E"],
+            ["10-11", "#9e9e9e"]
+        ],
+        "hover": {
+            "score": [
+                true,
+                ""
+            ],
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "score": [
+                true,
+                ""
+            ],
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
                 true,
                 ""
             ],
@@ -1009,8 +1224,236 @@
                 25.0
             ]
         }
+    },
+    "rur_test": {
+        "name": "Rural Test",
+        "source_id": "ruh_roh_scoob",
+        "url": "mapbox://wodacooper.sc_27",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "perm_filters":[["==","pool","Rural"]],
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#9e9e9e",
+                12,
+                "#4B4C4E",
+                14,
+                "#7C3A14",
+                16,
+                "#0000ff",
+                18,
+                "#9207fc",
+                20,
+                "#ff0000",
+                21,
+                "#fe8103",
+                22,
+                "#ffff00",
+                23,
+                "#ff00ff",
+                24,
+                "#00ff00",
+                25,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                0,
+                10,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "county": "County"
+        },
+        "num_filters": {
+            "score": "Score"
+        },
+        "legend": [
+            ["25", "#00ffff"],
+            ["24", "#00ff00"],
+            ["23", "#ff00ff"],
+            ["22", "#ffff00"],
+            ["21", "#fe8103"],
+            ["20", "#ff0000"],
+            ["18-19", "#9207fc"],
+            ["16-17", "#0000ff"],
+            ["14-15", "#7C3A14"],
+            ["12-13", "#4B4C4E"],
+            ["10-11", "#9e9e9e"]
+        ],
+        "hover": {
+            "score": [
+                true,
+                ""
+            ],
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "score": [
+                true,
+                ""
+            ],
+            "pool": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "otm_pts": [
+                true,
+                "job_pts"
+            ],
+            "rural_pts": [
+                true,
+                ""
+            ],
+            "aff_pts": [
+                true,
+                ""
+            ],
+            "recent_dev": [
+                true,
+                "recent_nc"
+            ],
+            "awards_in_last_3": [
+                true,
+                ""
+            ],
+            "income_level": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "county": [
+                "Abbeville",
+                "Allendale",
+                "Bamberg",
+                "Barnwell",
+                "Calhoun",
+                "Chester",
+                "Clarendon",
+                "Colleton",
+                "Dillon",
+                "Edgefield",
+                "Fairfield",
+                "Hampton",
+                "Jasper",
+                "Lee",
+                "McCormick",
+                "Marion",
+                "Marlboro",
+                "Saluda",
+                "Union",
+                "Williamsburg"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                25.0
+            ]
+        }
+    },
+    "median_income": {
+        "name": "County Median Income",
+        "source_id": "sc_county_medians_source",
+        "url": "mapbox://wodacooper.sc_county_medians",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+
+        "fill": {
+            "fill-color": [
+                "step",
+                ["get", "median2025"],
+                "#ff0000",  
+                66225,
+                "#ffa500",     
+                80850,
+                "#ffff00",   
+                92700,
+                "#00ff00"      
+            ],
+            "fill-opacity": [
+                "step",
+                ["get", "median2025"],
+                0.5,
+                80850,
+                0.3
+            ]
+        },
+
+        "legend": [
+            [
+                "<66,225",
+                "#ff0000"
+            ],
+            [
+                "66,225-80,850",
+                "#ffa500"
+            ],
+            [
+                "80,850-92,700",
+                "#ffff00"
+            ],
+            [
+                "≥92,700",
+                "#00ff00"
+            ]
+        ],
+
+        "hover": {
+             "County_Name": [
+                true,
+                "County Name"
+            ],
+            "median2025":[
+                true,
+                "Median Income"
+            ]
+        },
+        "click": {
+            "County_Name": [
+                true,
+                "County Name"
+            ],
+            "median2025":[
+                true,
+                "Median Income"
+            ]
+        },
+
+        "num_filters": {
+            "median2025": "Median Income"
+        },
+
+        "num_filter_vals":{
+            "median2025":[51100,112500]
+        }
     }
 }
-
-
-
