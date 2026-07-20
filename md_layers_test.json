@@ -1,0 +1,861 @@
+{
+    "house_authority": {
+        "name": "Housing Authorities",
+        "source_id": "md_has_source",
+        "url": "mapbox://wodacooper.md_has",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Low-Rent",
+                "#ff9800",
+                "#ffeb3b"
+            ]
+        },
+        "legend": [
+            [
+                "Low Rent",
+                "#ff9800"
+            ],
+            [
+                "Section 8/ Combined",
+                "#ffeb3b"
+            ]
+        ],
+        "click": {
+            "name": [
+                true,
+                ""
+            ],
+            "type": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "phone": [
+                true,
+                ""
+            ],
+            "email": [
+                true,
+                ""
+            ]
+        }
+    },
+    "transit_stops": {
+        "name": "Transit Stops",
+        "source_id": "md_stops",
+        "url": "mapbox://wodacooper.md_transit_stops",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 4,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Bus",
+                "#ff9800",
+                "Train",
+                "#ffeb3b",
+                "#999999"
+            ]
+        },
+        "legend": [
+            [
+                "Bus",
+                "#ff9800"
+            ],
+            [
+                "Train",
+                "#ffeb3b"
+            ]
+        ],
+        "click": {
+            "source": [
+                true,
+                ""
+            ],
+            "type": [
+                true,
+                ""
+            ]
+        },
+        "cat_filters": {
+            "type": "",
+            "source": ""
+        },
+        "cat_filter_vals": {
+            "type": [
+                "Bus",
+                "Train"
+            ],
+            "source": [
+                "Allegany_County",
+                "BWI_Shuttle",
+                "Calvert_County",
+                "Carroll_County",
+                "Cecil_County",
+                "Charles_County",
+                "Charm_City_Circulator",
+                "Delmarva",
+                "Frederick_County",
+                "Light_RailLink",
+                "MARC",
+                "MTA_Bus",
+                "Metro_SubwayLink",
+                "Montgomery_County",
+                "Ocean_City",
+                "Prince_Georges_County",
+                "Purple_Line",
+                "Queen_Annes_County",
+                "RTA",
+                "Shore_Transit",
+                "St_Marys_County",
+                "VRE",
+                "WMATA_Bus",
+                "WMATA_Metro",
+                "Washington_County"
+            ]
+        }
+    },
+    "eligibility": {
+        "name": "Eligibility",
+        "source_id": "md_eligibility",
+        "url": "mapbox://wodacooper.md_eligibility",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "label"
+                ],
+                "No Basis Boost",
+                "#ff0000",
+                "#000000"
+            ],
+            "fill-opacity": [
+                "match",
+                [
+                    "get",
+                    "label"
+                ],
+                "Basis_Boost",
+                0,
+                "No Basis Boost",
+                0,
+                0.8
+            ]
+        },
+        "legend": [
+            [
+                "Ineligible",
+                "#000000"
+            ]
+        ]
+    },
+    "bmore_parcels": {
+        "name": "Baltimore County Parcels",
+        "source_id": "bmore_county_owned",
+        "url": "mapbox://wodacooper.bmore_county_owned",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#cd7ef7"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+        "legend": [
+            [
+                "County Owned",
+                "#cd7ef7"
+            ]
+        ],
+        "click": {
+            "OWNER_NAME": [
+                true,
+                ""
+            ],
+            "SITE_NAME": [
+                true,
+                ""
+            ],
+            "URL": [
+                true,
+                ""
+            ]
+        }
+    },
+    "bmore_county_tracts": {
+        "name": "Baltimore County RFP",
+        "source_id": "bmore_tracts",
+        "url": "mapbox://wodacooper.bmore_tracts",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#ffffff"
+        },
+        "fill": {
+            "fill-opacity": 0.3,
+            "fill-color": "#ffffff"
+        },
+        "legend": [
+            [
+                "Bonus Point Tracts",
+                "#ffffff"
+            ]
+        ],
+        "click": {
+            "TRACTCE": [
+                true,
+                "Census Tract"
+            ]
+        }
+    },
+    "cities": {
+        "name": "Cities",
+        "source_id": "md_places",
+        "url": "mapbox://wodacooper.md_places",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 2,
+            "line-color": "#2196f3"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+        "legend": [
+            [
+                "city limits",
+                "#2196f3"
+            ]
+        ],
+        "click": {
+            "NAMELSAD": [
+                true,
+                ""
+            ]
+        },
+        "hover": {
+            "NAMELSAD": [
+                true,
+                ""
+            ]
+        }
+    },
+    "qct_dda": {
+        "name": "2026 QCT/DDAs",
+        "source_id": "qct_dda_26",
+        "url": "mapbox://wodacooper.qct_dda_26",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "perm_filters":[["==","state", 24]],
+
+        "fill": {
+            "fill-color": [
+                    "match",
+                    ["get", "zone"],
+                    "qct_only",
+                    "#ffffff",
+                    "dda_only",
+                    "#a0a0a0",
+                    "both",
+                    "#ffa500",
+                    "#000000"
+                ],
+            "fill-opacity": 
+                [
+                    "match",
+                    ["get", "zone"],
+                    "neither",
+                    0,
+                    0.65
+                ]
+                
+        },
+        "legend": [
+            [
+                "QCT and DDA",
+                "#ffa500"
+            ],
+           [
+                "QCT",
+                "#ffffff"
+            ],
+            [
+                "DDA",
+                "#a0a0a0"
+            ]
+        ],
+        "click":{
+            "zone":[true,""],
+            "VLIL_60%":[true,""],
+            "FMR":[true,""],
+            "Rent_Limit":[true,""]
+        },
+        "hover": {
+            "zone": [
+                true,
+                ""
+            ]
+        }
+        
+    },
+    "score_24": {
+        "name": "2024 Score",
+        "source_id": "score_source",
+        "url": "mapbox://wodacooper.md_24",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#404040",
+                4,
+                "#0000ff",
+                4.5,
+                "#400080",
+                5,
+                "#aa0000",
+                5.5,
+                "#984d01",
+                6,
+                "#aaaa00",
+                6.5,
+                "#aa00aa",
+                7,
+                "#00aa00",
+                8,
+                "#00aaaa",
+                16,
+                "#999999",
+                20,
+                "#0000ff",
+                20.5,
+                "#9933ff",
+                21,
+                "#ff0000",
+                21.5,
+                "#fe8103",
+                22,
+                "#ffff00",
+                22.5,
+                "#ff00ff",
+                23,
+                "#00ff00",
+                24,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score_with_ccrp"
+                ],
+                0,
+                16,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "County": ""
+        },
+        "num_filters": {
+            "score": "",
+            "score_with_ccrp": "",
+            "VLIL_4_Person_21": ""
+        },
+        "legend": [
+            [
+                "24",
+                "#00ffff"
+            ],
+            [
+                "23",
+                "#00ff00"
+            ],
+            [
+                "22.5",
+                "#ff00ff"
+            ],
+            [
+                "22",
+                "#ffff00"
+            ],
+            [
+                "21.5",
+                "#fe8103"
+            ],
+            [
+                "21",
+                "#ff0000"
+            ],
+            [
+                "20.5",
+                "#9933ff"
+            ],
+            [
+                "20",
+                "#0000ff"
+            ],
+            [
+                "16-18",
+                "#999999"
+            ],
+            [
+                "Duller = Needs CCRP",
+                "aaaaaa"
+            ]
+        ],
+        "hover": {
+            "County": [
+                true,
+                ""
+            ],
+            "Boost": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "County": [
+                true,
+                ""
+            ],
+            "dda_24": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "score_with_ccrp": [
+                true,
+                ""
+            ],
+            "coo_pts": [
+                true,
+                ""
+            ],
+            "coo_auth": [
+                true,
+                ""
+            ],
+            "pa_oz": [
+                true,
+                ""
+            ],
+            "Federal_Zone": [
+                true,
+                ""
+            ],
+            "Rural_Village": [
+                true,
+                ""
+            ],
+            "Enterprise_Zone": [
+                true,
+                ""
+            ],
+            "Sustainable_Community": [
+                true,
+                ""
+            ],
+            "Empowerment_Zone": [
+                true,
+                ""
+            ],
+            "Maple_Street": [
+                true,
+                ""
+            ],
+            "Main_Street": [
+                true,
+                ""
+            ],
+            "Opportunity_Zone": [
+                true,
+                ""
+            ],
+            "transit_pts": [
+                true,
+                ""
+            ],
+            "train_half_mile": [
+                true,
+                ""
+            ],
+            "2_bus_lines": [
+                true,
+                ""
+            ],
+            "2_bus_lines_system": [
+                true,
+                ""
+            ],
+            "rural_1_mile": [
+                true,
+                ""
+            ],
+            "coo_1_mile": [
+                true,
+                ""
+            ],
+            "ws_pts": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "VLIL_4_Person_21": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "County": [
+                "Allegany",
+                "Anne Arundel",
+                "Baltimore",
+                "Baltimore City",
+                "Calvert",
+                "Caroline",
+                "Carroll",
+                "Cecil",
+                "Charles",
+                "Dorchester",
+                "Frederick",
+                "Garrett",
+                "Harford",
+                "Howard",
+                "Kent",
+                "Montgomery",
+                "Prince George's",
+                "Queen Anne's",
+                "Somerset",
+                "St. Mary's",
+                "Talbot",
+                "Washington",
+                "Wicomico",
+                "Worcester"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                24.0
+            ],
+            "score_with_ccrp": [
+                0.0,
+                24.0
+            ],
+            "VLIL_4_Person_21": [
+                39785.0,
+                70305.0
+            ]
+        }
+    },
+    "test": {
+        "name": "2024 Score Test",
+        "source_id": "test_score",
+        "url": "mapbox://wodacooper.md_24",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#9e9e9e",
+                18,
+                "#4B4C4E",
+                19,
+                "#7C3A14",
+                20,
+                "#0000ff",
+                20.5,
+                "#9207fc",
+                21,
+                "#ff0000",
+                21.5,
+                "#fe8103",
+                22,
+                "#ffff00",
+                22.5,
+                "#ff00ff",
+                23,
+                "#00ff00",
+                24,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score_with_ccrp"
+                ],
+                0,
+                17,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "County": ""
+        },
+        "num_filters": {
+            "score": "",
+            "score_with_ccrp": "",
+            "VLIL_4_Person_21": ""
+        },
+        "legend": [
+            ["24", "#00ffff"],
+            ["23", "#00ff00"],
+            ["22.5", "#ff00ff"],
+            ["22", "#ffff00"],
+            ["21.5", "#fe8103"],
+            ["21", "#ff0000"],
+            ["20.5", "#9207fc"],
+            ["20", "#0000ff"],
+            ["19", "#7C3A14"],
+            ["18", "#4B4C4E"],
+            ["17", "#9e9e9e"]
+        ],
+        "hover": {
+            "score": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "NAMELSAD":[
+                true,
+                ""
+            ],    
+            "Boost": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "score": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "NAMELSAD":[
+                true,
+                ""
+            ],    
+            "Boost": [
+                true,
+                ""
+            ],
+            "dda_24": [
+                true,
+                ""
+            ],
+            "qct_24": [
+                true,
+                ""
+            ],
+            "score_with_ccrp": [
+                true,
+                ""
+            ],
+            "coo_pts": [
+                true,
+                ""
+            ],
+            "coo_auth": [
+                true,
+                ""
+            ],
+            "pa_oz": [
+                true,
+                ""
+            ],
+            "Federal_Zone": [
+                true,
+                ""
+            ],
+            "Rural_Village": [
+                true,
+                ""
+            ],
+            "Enterprise_Zone": [
+                true,
+                ""
+            ],
+            "Sustainable_Community": [
+                true,
+                ""
+            ],
+            "Empowerment_Zone": [
+                true,
+                ""
+            ],
+            "Maple_Street": [
+                true,
+                ""
+            ],
+            "Main_Street": [
+                true,
+                ""
+            ],
+            "Opportunity_Zone": [
+                true,
+                ""
+            ],
+            "transit_pts": [
+                true,
+                ""
+            ],
+            "train_half_mile": [
+                true,
+                ""
+            ],
+            "2_bus_lines": [
+                true,
+                ""
+            ],
+            "2_bus_lines_system": [
+                true,
+                ""
+            ],
+            "rural_1_mile": [
+                true,
+                ""
+            ],
+            "coo_1_mile": [
+                true,
+                ""
+            ],
+            "ws_pts": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "VLIL_4_Person_21": [
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "County": [
+                "Allegany",
+                "Anne Arundel",
+                "Baltimore",
+                "Baltimore City",
+                "Calvert",
+                "Caroline",
+                "Carroll",
+                "Cecil",
+                "Charles",
+                "Dorchester",
+                "Frederick",
+                "Garrett",
+                "Harford",
+                "Howard",
+                "Kent",
+                "Montgomery",
+                "Prince George's",
+                "Queen Anne's",
+                "Somerset",
+                "St. Mary's",
+                "Talbot",
+                "Washington",
+                "Wicomico",
+                "Worcester"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                24.0
+            ],
+            "score_with_ccrp": [
+                0.0,
+                24.0
+            ],
+            "VLIL_4_Person_21": [
+                39785.0,
+                70305.0
+            ]
+        }
+    }
+}
+
+
