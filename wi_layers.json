@@ -465,14 +465,14 @@
         }
     },
     "no_awards": {
-        "name": "Counties/Cities Without Awards Populations",
+        "name": "No Awards Populations",
         "source_id": "wi_no_awards_source",
         "url": "mapbox://wodacooper.wi_no_awards",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -483,7 +483,8 @@
                 "#ffffff",
                 1,
                 "#fcae1e"
-            ]
+            ],
+            "fill-opacity": 0.6
         },
         
         "legend": [
