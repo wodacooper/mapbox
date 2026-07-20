@@ -463,6 +463,76 @@
                 36.0
             ]
         }
+    },
+    "no_awards": {
+        "name": "Counties/Cities Without Awards Populations",
+        "source_id": "wi_no_awards_source",
+        "url": "mapbox://wodacooper.wi_no_awards",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "City_pop"
+                ],
+                "#ffffff",
+                1,
+                "#fcae1e"
+            ]
+        },
+        
+        "legend": [
+            [
+                "County",
+                "#ffffff"
+            ],
+            [
+                "City",
+                "#fcae1e"
+            ]
+        ],
+        "hover": {
+            "County": [
+                true,
+                "county"
+            ],
+             "City": [
+                true,
+                ""
+            ],
+            "County_pop":[
+                true,
+                ""
+            ],
+            "City_pop":[
+                true,
+                ""
+            ]
+        },
+
+        "click": {
+            "County": [
+                true,
+                "county"
+            ],
+             "City": [
+                true,
+                ""
+            ],
+            "County_pop":[
+                true,
+                ""
+            ],
+            "City_pop":[
+                true,
+                ""
+            ]
+        }
     }
 
 }
