@@ -179,180 +179,10 @@
             ]
         }
     },
-    "score": {
-        "name": "2026 Score",
-        "source_id": "wi_27_source",
-        "url": "mapbox://wodacooper.wi_27",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "fill": {
-            "fill-color": [
-                "step",
-                [
-                    "get",
-                    "score"
-                ],
-                "#ffffff",
-                14,
-                "#70534e",
-                16,
-                "#346b36",
-                18,
-                "#0000ff",
-                20,
-                "#ff0000",
-                22,
-                "#fe8103",
-                24,
-                "#ffff00",
-                26,
-                "#ff00ff",
-                28,
-                "#00ff00",
-                30,
-                "#00ffff"
-            ],
-            "fill-opacity": [
-                "step",
-                [
-                    "get",
-                    "score"
-                ],
-                0,
-                10,
-                0.6
-            ]
-        },
-        "cat_filters": {
-            "project_in_county": "Project in County",
-            "Set-Aside": "Set-Aside"
-        },
-        "num_filters": {
-            "score": "Score"
-        },
-        "legend": [
-            [
-                "30+",
-                "#00ffff"
-            ],
-            [
-                "28-30",
-                "#00ff00"
-            ],
-            [
-                "26-29",
-                "#ff00ff"
-            ],
-            [
-                "24-25",
-                "#ffff00"
-            ],
-            [
-                "22-23",
-                "#fe8103"
-            ],
-            [
-                "20-21",
-                "#ff0000"
-            ],
-            [
-                "18-19",
-                "#0000ff"
-            ],
-            [
-                "16-17",
-                "#346b36"
-            ],
-            [
-                "14-15",
-                "#70534e"
-            ],
-            [
-                "10-13",
-                "#ffffff"
-            ]
-        ],
-        "hover": {
-            "Name": [
-                true,
-                "county"
-            ],
-             "score": [
-                true,
-                ""
-            ],
-            "Set-Aside":[
-                true,
-                ""
-            ]
-        },
-
-        "click": {
-            "Name": [
-                true,
-                "county"
-            ],
-            "score": [
-                true,
-                ""
-            ],
-            "Set-Aside":[
-                true,
-                ""
-            ],
-            "job_center_pts": [
-                true,
-                ""
-            ],
-            "job_growth_pts": [
-                true,
-                ""
-            ],
-            "med_inc_pts": [
-                true,
-                ""
-            ],
-            "rent_bur_pts": [
-                true,
-                ""
-            ],
-            "SD_pts": [
-                true,
-                ""
-            ],
-            "Field5": [
-                true,
-                "SD_name"
-            ],
-            "project_in_county":[
-                true,
-                ""
-            ]
-        },
-        "cat_filter_vals": {
-            "project_in_county": [
-                "yes",
-                "no"
-            ],
-            "Set-Aside": [
-                "Metro",
-                "Non-Metro"
-            ]
-        },
-        "num_filter_vals": {
-            "score": [
-                0.0,
-                37.0
-            ]
-        }
-    },
 
     "test_w": {
         "name": "2027 Test Score With County Bonus",
-        "source_id": "wi_test_source",
+        "source_id": "wi_test_w",
         "url": "mapbox://wodacooper.wi_test",
         "source_layer": "hello_world",
         "layout": {
@@ -364,7 +194,7 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "score_w"
                 ],
                 "#ffffff",
                 23,
@@ -390,10 +220,10 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "score_w"
                 ],
                 0,
-                10,
+                21,
                 0.6
             ]
         },
@@ -402,7 +232,7 @@
             "Set-Aside": "Set-Aside"
         },
         "num_filters": {
-            "score": "Score",
+            "score_w": "Score with County Bonus",
             "aeo_score": "Area of Economic Opportunity Score"
         },
         "legend": [
@@ -456,7 +286,7 @@
                 true,
                 "county"
             ],
-             "score": [
+             "score_w": [
                 true,
                 ""
             ],
@@ -527,7 +357,7 @@
             ]
         },
         "num_filter_vals": {
-            "score": [
+            "score_w": [
                 0.0,
                 41.0
             ],
