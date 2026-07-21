@@ -261,7 +261,7 @@
     "test schools": {
         "name": "072126 Schools Test",
         "source_id": "scholastics",
-        "url": "mapbox://wodacooper.ga_schools_072126",
+        "url": "mapbox://wodacooper.ga_schools_072226",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
