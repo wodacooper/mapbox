@@ -506,10 +506,6 @@
                 true,
                 ""
             ],
-            "Largest_City_Pop": [
-                true,
-                ""
-            ], 
             "City": [
                 true,
                 "Current City"
@@ -517,7 +513,12 @@
             "City_pop":[
                 true,
                 "Current City Pop"
+            ],
+            "Largest_City_Pop": [
+                true,
+                ""
             ]
+            
         },
 
         "click": {
@@ -529,14 +530,6 @@
                 true,
                 ""
             ],
-            "Largest_City":[
-                true,
-                "Largest City in County"
-            ],
-            "Largest_City_Pop": [
-                true,
-                "Largest City Pop"
-            ], 
             "City": [
                 true,
                 "Current City"
@@ -544,6 +537,14 @@
             "City_pop":[
                 true,
                 "Current City Pop"
+            ],
+            "Largest_City":[
+                true,
+                "Largest City in County"
+            ],
+            "Largest_City_Pop": [
+                true,
+                "Largest City Pop"
             ]
         }
     }
