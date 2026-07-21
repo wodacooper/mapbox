@@ -465,7 +465,7 @@
         }
     },
     "no_awards": {
-        "name": "No Awards Populations",
+        "name": "Counties Without Recent Award",
         "source_id": "wi_no_awards_source",
         "url": "mapbox://wodacooper.wi_no_awards",
         "source_layer": "hello_world",
