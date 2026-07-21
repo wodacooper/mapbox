@@ -181,8 +181,85 @@
             ]
         }
     },
+    "schools": {
+        "name": "Schools",
+        "source_id": "ga_schools",
+        "url": "mapbox://wodacooper.ga_schools",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "school_type"
+                ],
+                "Elementary",
+                "#4caf50",
+                "Middle",
+                "#ff9800",
+                "High",
+                "#2196f3",
+                "Multiple",
+                "#e91e63",
+                "#000000"
+            ]
+        },
+        "legend": [
+            [
+                "Elementary",
+                "#4caf50"
+            ],
+            [
+                "Middle",
+                "#ff9800"
+            ],
+            [
+                "High",
+                "#2196f3"
+            ],
+            [
+                "Multiple",
+                "#e91e63"
+            ],
+            [
+                "Unknown",
+                "#000000"
+            ]
+        ],
+        "hover": {
+            "school_name": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "school_name": [
+                true,
+                ""
+            ],
+            "address": [
+                true,
+                ""
+            ],
+            "school_type": [
+                true,
+                ""
+            ],
+            "system_name": [
+                true,
+                ""
+            ]
+        }
+    },
     "test schools": {
-        "name": "Schools Test",
+        "name": "072126 Schools Test",
         "source_id": "scholastics",
         "url": "mapbox://wodacooper.ga_schools_072126",
         "source_layer": "hello_world",
@@ -262,82 +339,15 @@
                 true,
                 ""
             ]
-        }
-    },
-    "schools": {
-        "name": "Schools",
-        "source_id": "ga_schools",
-        "url": "mapbox://wodacooper.ga_schools",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
         },
-        "visible": false,
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 1,
-            "circle-color": [
-                "match",
-                [
-                    "get",
-                    "school_type"
-                ],
-                "Elementary",
-                "#4caf50",
-                "Middle",
-                "#ff9800",
-                "High",
-                "#2196f3",
-                "Multiple",
-                "#e91e63",
-                "#000000"
-            ]
+        "cat_filters": {
+            "school_type": "Grade"
         },
-        "legend": [
-            [
-                "Elementary",
-                "#4caf50"
-            ],
-            [
-                "Middle",
-                "#ff9800"
-            ],
-            [
-                "High",
-                "#2196f3"
-            ],
-            [
-                "Multiple",
-                "#e91e63"
-            ],
-            [
-                "Unknown",
-                "#000000"
-            ]
-        ],
-        "hover": {
-            "school_name": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "school_name": [
-                true,
-                ""
-            ],
-            "address": [
-                true,
-                ""
-            ],
+        "cat_filter_vals": {
             "school_type": [
-                true,
-                ""
-            ],
-            "system_name": [
-                true,
-                ""
+                "Elementary",
+                "Middle",
+                "High"
             ]
         }
     },
