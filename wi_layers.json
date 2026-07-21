@@ -350,8 +350,8 @@
         }
     },
 
-     "test": {
-        "name": "2027 Test Score",
+    "test_w": {
+        "name": "2027 Test Score With County Bonus",
         "source_id": "wi_test_source",
         "url": "mapbox://wodacooper.wi_test",
         "source_layer": "hello_world",
@@ -393,23 +393,9 @@
                     "score"
                 ],
                 0,
-                21,
+                10,
                 0.6
             ]
-        },
-        "line": {
-            "line-opacity": [
-                "match",
-                [
-                    "get",
-                    "potential>25"
-                ],
-                "yes",
-                1,
-                0
-            ],
-            "line-width": 2,
-            "line-color": "#000000"
         },
         "cat_filters": {
             "project_in_county": "Project in County",
@@ -459,6 +445,10 @@
             [
                 "21-22",
                 "#ffffff"
+            ],
+            [
+                "potential>25",
+                "#000000"
             ]
         ],
         "hover": {
@@ -473,10 +463,6 @@
             "aeo_score": [
                 true,
                 "Area of Economic Opportunity Score"
-            ],
-            "job_pts": [
-                true,
-                ""
             ],
             "Set-Aside":[
                 true,
@@ -497,7 +483,18 @@
                 true,
                 "Area of Economic Opportunity Score"
             ],
-            
+            "Set-Aside":[
+                true,
+                ""
+            ],
+            "job_center_pts": [
+                true,
+                ""
+            ],
+            "job_growth_pts": [
+                true,
+                ""
+            ],
             "med_inc_pts": [
                 true,
                 ""
@@ -510,7 +507,170 @@
                 true,
                 ""
             ],
-            "job_pts": [
+            "Field5": [
+                true,
+                "SD_name"
+            ],
+            "project_in_county":[
+                true,
+                ""
+            ]
+        },
+        "cat_filter_vals": {
+            "project_in_county": [
+                "yes",
+                "no"
+            ],
+            "Set-Aside": [
+                "Metro",
+                "Non-Metro"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                41.0
+            ],
+            "aeo_score": [
+                0.0,
+                36.0
+            ]
+        }
+    },
+    "test": {
+        "name": "2027 Test Score",
+        "source_id": "wi_test_source",
+        "url": "mapbox://wodacooper.wi_test",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                23,
+                "#70534e",
+                25,
+                "#346b36",
+                27,
+                "#0000ff",
+                29,
+                "#ff0000",
+                31,
+                "#fe8103",
+                33,
+                "#ffff00",
+                35,
+                "#ff00ff",
+                36,
+                "#00ff00",
+                37,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                0,
+                21,
+                0.6
+            ]
+        },
+        "cat_filters": {
+            "project_in_county": "Project in County",
+            "Set-Aside": "Set-Aside"
+        },
+        "num_filters": {
+            "score": "Score",
+            "aeo_score": "Area of Economic Opportunity Score"
+        },
+        "legend": [
+            [
+                "37+",
+                "#00ffff"
+            ],
+            [
+                "36",
+                "#00ff00"
+            ],
+            [
+                "35",
+                "#ff00ff"
+            ],
+            [
+                "33-34",
+                "#ffff00"
+            ],
+            [
+                "31-32",
+                "#fe8103"
+            ],
+            [
+                "29-30",
+                "#ff0000"
+            ],
+            [
+                "27-28",
+                "#0000ff"
+            ],
+            [
+                "25-26",
+                "#346b36"
+            ],
+            [
+                "23-24",
+                "#70534e"
+            ],
+            [
+                "21-22",
+                "#ffffff"
+            ],
+            [
+                "potential>25",
+                "#000000"
+            ]
+        ],
+        "hover": {
+            "Name": [
+                true,
+                "county"
+            ],
+             "score": [
+                true,
+                ""
+            ],
+            "aeo_score": [
+                true,
+                "Area of Economic Opportunity Score"
+            ],
+            "Set-Aside":[
+                true,
+                ""
+            ]
+        },
+
+        "click": {
+            "Name": [
+                true,
+                "county"
+            ],
+            "score": [
+                true,
+                ""
+            ],
+            "aeo_score": [
+                true,
+                "Area of Economic Opportunity Score"
+            ],
+            "Set-Aside":[
                 true,
                 ""
             ],
@@ -522,7 +682,15 @@
                 true,
                 ""
             ],
-            "Set-Aside":[
+            "med_inc_pts": [
+                true,
+                ""
+            ],
+            "rent_bur_pts": [
+                true,
+                ""
+            ],
+            "SD_pts": [
                 true,
                 ""
             ],
