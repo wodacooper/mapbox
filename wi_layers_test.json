@@ -63,6 +63,62 @@
             ]
         }
     },
+    "loc_grocery": {
+        "name": "Local Grocery",
+        "source_id": "wi_local_grocery",
+        "url": "mapbox://wodacooper.wi_local_grocery_stores",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-color": "#00ff00",
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2
+        },
+        "hover": {
+            "Name": [
+                true,
+                ""
+            ],
+            "Street Address": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+           "Name": [
+                true,
+                ""
+            ],
+            "Street Address": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "Zip Code": [
+                true,
+                ""
+            ]
+        }
+    },
     "qct_dda": {
         "name": "2026 QCT/DDAs",
         "source_id": "qct_dda_26_source",
