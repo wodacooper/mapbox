@@ -181,10 +181,10 @@
             ]
         }
     },
-    "schools": {
-        "name": "Schools",
-        "source_id": "ga_schools",
-        "url": "mapbox://wodacooper.ga_schools",
+    "Schools New": {
+        "name": "Updated Schools 072126",
+        "source_id": "scholastics",
+        "url": "mapbox://wodacooper.ga_schools_072226",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -206,8 +206,6 @@
                 "#ff9800",
                 "High",
                 "#2196f3",
-                "Multiple",
-                "#e91e63",
                 "#000000"
             ]
         },
@@ -223,81 +221,6 @@
             [
                 "High",
                 "#2196f3"
-            ],
-            [
-                "Multiple",
-                "#e91e63"
-            ],
-            [
-                "Unknown",
-                "#000000"
-            ]
-        ],
-        "hover": {
-            "school_name": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "school_name": [
-                true,
-                ""
-            ],
-            "address": [
-                true,
-                ""
-            ],
-            "school_type": [
-                true,
-                ""
-            ],
-            "system_name": [
-                true,
-                ""
-            ]
-        }
-    },
-    "test schools": {
-        "name": "072126 Schools Test",
-        "source_id": "scholastics",
-        "url": "mapbox://wodacooper.ga_schools_072226",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "circle": {
-            "circle-radius": 5,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 1,
-            "circle-color": [
-                "match",
-                [
-                    "get",
-                    "school_type"
-                ],
-                "Elementary",
-                "#0fff90",
-                "Middle",
-                "#ff9890",
-                "High",
-                "#c196ff",
-                "#000000"
-            ]
-        },
-        "legend": [
-            [
-                "Elementary",
-                "#0fff90"
-            ],
-            [
-                "Middle",
-                "#ff9890"
-            ],
-            [
-                "High",
-                "#c196ff"
             ]
         ],
         "hover": {
