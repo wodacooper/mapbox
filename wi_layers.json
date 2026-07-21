@@ -350,7 +350,7 @@
         }
     },
 
-    "test": {
+     "test": {
         "name": "2027 Test Score",
         "source_id": "wi_test_source",
         "url": "mapbox://wodacooper.wi_test",
@@ -396,6 +396,20 @@
                 21,
                 0.6
             ]
+        },
+        "line": {
+            "line-opacity": [
+                "match",
+                [
+                    "get",
+                    "potential>25"
+                ],
+                "yes",
+                1,
+                0
+            ],
+            "line-width": 2,
+            "line-color": "#000000"
         },
         "cat_filters": {
             "project_in_county": "Project in County",
@@ -460,6 +474,10 @@
                 true,
                 "Area of Economic Opportunity Score"
             ],
+            "job_pts": [
+                true,
+                ""
+            ],
             "Set-Aside":[
                 true,
                 ""
@@ -479,7 +497,20 @@
                 true,
                 "Area of Economic Opportunity Score"
             ],
-            "Set-Aside":[
+            
+            "med_inc_pts": [
+                true,
+                ""
+            ],
+            "rent_bur_pts": [
+                true,
+                ""
+            ],
+            "SD_pts": [
+                true,
+                ""
+            ],
+            "job_pts": [
                 true,
                 ""
             ],
@@ -491,15 +522,7 @@
                 true,
                 ""
             ],
-            "med_inc_pts": [
-                true,
-                ""
-            ],
-            "rent_bur_pts": [
-                true,
-                ""
-            ],
-            "SD_pts": [
+            "Set-Aside":[
                 true,
                 ""
             ],
