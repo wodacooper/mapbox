@@ -475,13 +475,13 @@
         "visible": false,
         "fill": {
             "fill-color": [
-                "step",
+                "match",
                 [
                     "get",
-                    "City_pop"
+                    "is_largest_city"
                 ],
                 "#ffffff",
-                1,
+                "no",
                 "#fcae1e"
             ],
             "fill-opacity": 0.6
@@ -493,7 +493,7 @@
                 "#ffffff"
             ],
             [
-                "City",
+                "Largest City in County",
                 "#fcae1e"
             ]
         ],
@@ -502,36 +502,48 @@
                 true,
                 "county"
             ],
-             "City": [
-                true,
-                ""
-            ],
             "County_pop":[
                 true,
                 ""
             ],
-            "City_pop":[
+            "Largest_City_Pop": [
                 true,
                 ""
+            ], 
+            "City": [
+                true,
+                "Current City"
+            ],
+            "City_pop":[
+                true,
+                "Current City Pop"
             ]
         },
 
         "click": {
             "County": [
                 true,
-                "county"
-            ],
-             "City": [
-                true,
                 ""
             ],
             "County_pop":[
                 true,
                 ""
             ],
+            "Largest_City":[
+                true,
+                "Largest City in County"
+            ],
+            "Largest_City_Pop": [
+                true,
+                "Largest City Pop"
+            ], 
+            "City": [
+                true,
+                "Current City"
+            ],
             "City_pop":[
                 true,
-                ""
+                "Current City Pop"
             ]
         }
     }
