@@ -181,6 +181,89 @@
             ]
         }
     },
+    "test schools": {
+        "name": "Schools Test",
+        "source_id": "scholastics",
+        "url": "mapbox://wodacooper.ga_schools_072126",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "school_type"
+                ],
+                "Elementary",
+                "#0fff90",
+                "Middle",
+                "#ff9890",
+                "High",
+                "#c196ff",
+                "#000000"
+            ]
+        },
+        "legend": [
+            [
+                "Elementary",
+                "#0fff90"
+            ],
+            [
+                "Middle",
+                "#ff9890"
+            ],
+            [
+                "High",
+                "#c196ff"
+            ]
+        ],
+        "hover": {
+            "NAME": [
+                true,
+                ""
+            ],
+            "school_type": [
+                true,
+                ""
+            ],
+            "CITY": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "NAME": [
+                true,
+                ""
+            ],
+            "school_type": [
+                true,
+                ""
+            ],
+            "CITY": [
+                true,
+                ""
+            ],
+            "STREET": [
+                true,
+                ""
+            ],
+            "NMCNTY": [
+                true,
+                ""
+            ],
+            "ZIP": [
+                true,
+                ""
+            ]
+        }
+    },
     "schools": {
         "name": "Schools",
         "source_id": "ga_schools",
@@ -191,7 +274,7 @@
         },
         "visible": false,
         "circle": {
-            "circle-radius": 5,
+            "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 1,
             "circle-color": [
@@ -253,93 +336,6 @@
                 ""
             ],
             "system_name": [
-                true,
-                ""
-            ]
-        }
-    },
-    "test schools": {
-        "name": "Schools Test",
-        "source_id": "scholastics",
-        "url": "mapbox://wodacooper.ga_schools_072126",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "circle": {
-            "circle-radius": 5,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 1,
-            "circle-color": [
-                "match",
-                [
-                    "get",
-                    "school_type"
-                ],
-                "Elementary",
-                "#4caf90",
-                "Middle",
-                "#ff9870",
-                "High",
-                "#9196ff",
-                "#000000"
-            ]
-        },
-        "legend": [
-            [
-                "Elementary",
-                "#4caf90"
-            ],
-            [
-                "Middle",
-                "#ff9870"
-            ],
-            [
-                "High",
-                "#9196ff"
-            ],
-            [
-                "Unknown",
-                "#000000"
-            ]
-        ],
-        "hover": {
-            "NAME": [
-                true,
-                ""
-            ],
-            "school_type": [
-                true,
-                ""
-            ],
-            "CITY": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "NAME": [
-                true,
-                ""
-            ],
-            "school_type": [
-                true,
-                ""
-            ],
-            "CITY": [
-                true,
-                ""
-            ],
-            "STREET": [
-                true,
-                ""
-            ],
-            "NMCNTY": [
-                true,
-                ""
-            ],
-            "ZIP": [
                 true,
                 ""
             ]
