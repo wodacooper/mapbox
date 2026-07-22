@@ -182,7 +182,7 @@
         }
     },
     "Schools New": {
-        "name": "Updated Schools 072126",
+        "name": "Schools (Updated)",
         "source_id": "scholastics",
         "url": "mapbox://wodacooper.ga_schools_072226",
         "source_layer": "hello_world",
