@@ -1,4 +1,60 @@
 {
+    "loc_grocery": {
+        "name": "Local Grocery",
+        "source_id": "wi_local_grocery",
+        "url": "mapbox://wodacooper.wi_local_grocery_stores",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-color": "#00ff00",
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2
+        },
+        "hover": {
+            "Name": [
+                true,
+                ""
+            ],
+            "Street Address": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+           "Name": [
+                true,
+                ""
+            ],
+            "Street Address": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "Zip Code": [
+                true,
+                ""
+            ]
+        }
+    },
     "qct_dda": {
         "name": "2026 QCT/DDAs",
         "source_id": "qct_dda_26_source",
@@ -60,62 +116,6 @@
         }
     },
     
-    "loc_grocery": {
-        "name": "Local Grocery",
-        "source_id": "wi_local_grocery",
-        "url": "mapbox://wodacooper.wi_local_grocery_stores",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "circle": {
-            "circle-color": "#00ff00",
-            "circle-radius": 5,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2
-        },
-        "hover": {
-            "Name": [
-                true,
-                ""
-            ],
-            "Street Address": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "City": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-           "Name": [
-                true,
-                ""
-            ],
-            "Street Address": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "City": [
-                true,
-                ""
-            ],
-            "Zip Code": [
-                true,
-                ""
-            ]
-        }
-    },
 
     "test_w": {
         "name": "2027 Test Score With County Bonus",
@@ -148,23 +148,23 @@
                     "score_w"
                 ],
                 "#ffffff",
-                27,
-                "#70534e",
-                29,
-                "#346b36",
-                31,
-                "#0000ff",
-                32,
-                "#ff0000",
                 33,
-                "#fe8103",
+                "#70534e",
                 34,
-                "#ffff00",
+                "#346b36",
                 35,
-                "#ff00ff",
+                "#0000ff",
+                36,
+                "#ff0000",
                 37,
-                "#00ff00",
+                "#fe8103",
+                38,
+                "#ffff00",
                 39,
+                "#ff00ff",
+                40,
+                "#00ff00",
+                41,
                 "#00ffff"
             ],
             "fill-opacity": [
@@ -188,43 +188,43 @@
         },
         "legend": [
             [
-                "39+",
+                "41",
                 "#00ffff"
             ],
             [
-                "37-38",
+                "40",
                 "#00ff00"
             ],
             [
-                "35-36",
+                "39",
                 "#ff00ff"
             ],
             [
-                "34",
+                "38",
                 "#ffff00"
             ],
             [
-                "33",
+                "37",
                 "#fe8103"
             ],
             [
-                "32",
+                "36",
                 "#ff0000"
             ],
             [
-                "31",
+                "35",
                 "#0000ff"
             ],
             [
-                "29-30",
+                "34",
                 "#346b36"
             ],
             [
-                "27-28",
+                "33",
                 "#70534e"
             ],
             [
-                "25-26",
+                "25-32",
                 "#ffffff"
             ],
             [
@@ -358,23 +358,23 @@
                     "score"
                 ],
                 "#ffffff",
-                16,
+                23,
                 "#70534e",
-                18,
-                "#346b36",
-                20,
-                "#0000ff",
-                22,
-                "#ff0000",
-                24,
-                "#fe8103",
-                26,
-                "#ffff00",
                 28,
-                "#ff00ff",
+                "#346b36",
                 30,
-                "#00ff00",
+                "#0000ff",
+                31,
+                "#ff0000",
                 32,
+                "#fe8103",
+                33,
+                "#ffff00",
+                34,
+                "#ff00ff",
+                35,
+                "#00ff00",
+                36,
                 "#00ffff"
             ],
             "fill-opacity": [
@@ -384,7 +384,7 @@
                     "score"
                 ],
                 0,
-                14,
+                16,
                 0.6
             ]
         },
@@ -398,43 +398,43 @@
         },
         "legend": [
             [
-                "32+",
+                "36",
                 "#00ffff"
             ],
             [
-                "30-31",
+                "35",
                 "#00ff00"
             ],
             [
-                "28-29",
+                "34",
                 "#ff00ff"
             ],
             [
-                "26-27",
+                "33",
                 "#ffff00"
             ],
             [
-                "24-25",
+                "32",
                 "#fe8103"
             ],
             [
-                "22-23",
+                "31",
                 "#ff0000"
             ],
             [
-                "20-21",
+                "30",
                 "#0000ff"
             ],
             [
-                "18-19",
+                "28-29",
                 "#346b36"
             ],
             [
-                "16-17",
+                "23-27",
                 "#70534e"
             ],
             [
-                "14-15",
+                "16-22",
                 "#ffffff"
             ],
             [
