@@ -331,18 +331,7 @@
                 true,
                 "Area of Economic Opportunity Score"
             ],
-            "Set-Aside":[
-                true,
-                ""
-            ],
-            "job_center_pts": [
-                true,
-                ""
-            ],
-            "job_growth_pts": [
-                true,
-                ""
-            ],
+            
             "med_inc_pts": [
                 true,
                 ""
@@ -352,6 +341,22 @@
                 ""
             ],
             "SD_pts": [
+                true,
+                ""
+            ],
+            "job_pts":[
+                true,
+                "Job Score"
+            ],
+            "job_center_pts": [
+                true,
+                ""
+            ],
+            "job_growth_pts": [
+                true,
+                ""
+            ],
+            "Set-Aside":[
                 true,
                 ""
             ],
@@ -536,18 +541,7 @@
                 true,
                 "Area of Economic Opportunity Score"
             ],
-            "Set-Aside":[
-                true,
-                ""
-            ],
-            "job_center_pts": [
-                true,
-                ""
-            ],
-            "job_growth_pts": [
-                true,
-                ""
-            ],
+            
             "med_inc_pts": [
                 true,
                 ""
@@ -557,6 +551,22 @@
                 ""
             ],
             "SD_pts": [
+                true,
+                ""
+            ],
+            "job_pts":[
+                true,
+                "Job Score"
+            ],
+            "job_center_pts": [
+                true,
+                ""
+            ],
+            "job_growth_pts": [
+                true,
+                ""
+            ],
+            "Set-Aside":[
                 true,
                 ""
             ],
