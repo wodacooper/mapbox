@@ -200,7 +200,7 @@
                 1,
                 0
             ],
-            "line-width": 3,
+            "line-width": 2,
             "line-color": "#000000"
         },
         "fill": {
@@ -401,7 +401,7 @@
                 1,
                 0
             ],
-            "line-width": 3,
+            "line-width": 2,
             "line-color": "#000000"
         },
         "fill": {
