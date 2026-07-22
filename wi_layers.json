@@ -308,6 +308,10 @@
                 true,
                 "Area of Economic Opportunity Score"
             ],
+            "job_pts":[
+                true,
+                "Job Score"
+            ],
             "Set-Aside":[
                 true,
                 ""
@@ -508,6 +512,10 @@
             "aeo_score": [
                 true,
                 "Area of Economic Opportunity Score"
+            ],
+            "job_pts":[
+                true,
+                "Job Score"
             ],
             "Set-Aside":[
                 true,
