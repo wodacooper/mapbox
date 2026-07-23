@@ -122,7 +122,13 @@ function setToggleAccessible(toSlider) {
   } else {
     toSlider.style.zIndex = 0;
   }
-}    
+}
+function setupResizable(){
+  const resizeEl = document.querySelector('[data-resizable]');
+  resizeEl.style.setProperty('resize', 'both');
+  resizeEl.style.setProperty('overflow','hidden');
+}
+
 </script>
 <style>
 .range_container {
@@ -225,6 +231,11 @@ const bounds_dict = {
         "geocoder_bounds":[-85.84562097556167, 30.177882355149897, -80.16568935557564, 35.267583145126984],
         "url": 'https://wodacooper.github.io/mapbox/ga_layers.json'
     },
+    "ga_test":{
+        "bounds":[[-85.43912683641372, 33.26118181948529], [-82.06632411429437, 34.456279633297356]],
+        "geocoder_bounds":[-85.84562097556167, 30.177882355149897, -80.16568935557564, 35.267583145126984],
+        "url": 'https://wodacooper.github.io/mapbox/ga_layers_test_070926.json'
+    },
     "ia":{
         "bounds":[[-96.58859136144741, 40.343619780357525], [-89.95865987289943, 43.564125073484746]],
         "geocoder_bounds":[-96.58859136144741, 40.343619780357525, -89.95865987289943, 43.564125073484746],
@@ -235,30 +246,60 @@ const bounds_dict = {
         "geocoder_bounds":[-91.63330148894498, 36.904239278804766, -86.85160877187725, 42.709289768656845],
         "url": 'https://wodacooper.github.io/mapbox/il_layers.json'
     },
+    "il_test":{
+        "bounds":[[-92.33696195567066, 39.418647809974566], [-86.21191743849026, 42.50919789328073]],
+        "geocoder_bounds":[-91.63330148894498, 36.904239278804766, -86.85160877187725, 42.709289768656845],
+        "url": 'https://wodacooper.github.io/mapbox/il_layers_test.json'
+    },
     "in":{
         "bounds":[[-88.179790, 37.727327], [-84.704993, 41.822297]],
         "geocoder_bounds":[-88.179790, 37.727327, -84.704993, 41.822297],
         "url": 'https://wodacooper.github.io/mapbox/in_layers.json'
+    },
+    "in_test":{
+        "bounds":[[-88.179790, 37.727327], [-84.704993, 41.822297]],
+        "geocoder_bounds":[-88.179790, 37.727327, -84.704993, 41.822297],
+        "url": 'https://wodacooper.github.io/mapbox/in_layers_test.json'
     },
     "ky":{
         "bounds":[[-86.29441748259278, 37.535686404222595], [-83.15232765026008, 39.35961014228036]],
         "geocoder_bounds":[-89.79389490859442, 36.41331788111147, -81.57612150095505, 39.15646674651189],
         "url": 'https://wodacooper.github.io/mapbox/ky_layers.json'
     },
+    "ky_test":{
+        "bounds":[[-86.29441748259278, 37.535686404222595], [-83.15232765026008, 39.35961014228036]],
+        "geocoder_bounds":[-89.79389490859442, 36.41331788111147, -81.57612150095505, 39.15646674651189],
+        "url": 'https://wodacooper.github.io/mapbox/ky_layers_test.json'
+    },
     "md":{
         "bounds":[[-77.40591238347997, 38.87473399727833], [-76.2231571782379, 39.43496350972831]],
         "geocoder_bounds":[-79.6603182359571, 37.7528949706738, -75.02958094809614, 39.80809971869814],
         "url": 'https://wodacooper.github.io/mapbox/md_layers.json'
+    },
+    "md_test":{
+        "bounds":[[-77.40591238347997, 38.87473399727833], [-76.2231571782379, 39.43496350972831]],
+        "geocoder_bounds":[-79.6603182359571, 37.7528949706738, -75.02958094809614, 39.80809971869814],
+        "url": 'https://wodacooper.github.io/mapbox/md_layers_test.json'
     },
     "mi":{
         "bounds":[[-86.90464804275261, 41.621276181568945], [-81.74040262067126, 44.072706594990784]],
         "geocoder_bounds":[-91.6000050692998, 41.499222990135976, -80.72354026507124, 48.508329766238695],
         "url": 'https://wodacooper.github.io/mapbox/mi_layers.json'
     },
+    "mi_test":{
+        "bounds":[[-86.90464804275261, 41.621276181568945], [-81.74040262067126, 44.072706594990784]],
+        "geocoder_bounds":[-91.6000050692998, 41.499222990135976, -80.72354026507124, 48.508329766238695],
+        "url": 'https://wodacooper.github.io/mapbox/mi_layers_test.json'
+    },
     "mn":{
         "bounds":[[-94.03085731819222, 44.59957784376794], [-92.63559365038905, 45.2896862973992]],
         "geocoder_bounds":[-97.47317460324436, 43.15312378811857, -89.30070514530094, 49.27213785125212],
         "url": 'https://wodacooper.github.io/mapbox/mn_layers.json'
+    },
+    "mn_test":{
+        "bounds":[[-94.03085731819222, 44.59957784376794], [-92.63559365038905, 45.2896862973992]],
+        "geocoder_bounds":[-97.47317460324436, 43.15312378811857, -89.30070514530094, 49.27213785125212],
+        "url": 'https://wodacooper.github.io/mapbox/mn_layers_test.json'
     },
     "nc":{
         "bounds":[[-85.06946472835623, 33.76174643768254], [-75.2145182382345, 36.62398238765238]],
@@ -270,15 +311,30 @@ const bounds_dict = {
         "geocoder_bounds":[-84.9920112412373, 38.13631316512096, -79.61938750293479, 42.666516193569436],
         "url": 'https://wodacooper.github.io/mapbox/oh_layers.json'
     },
+    "oh_test":{
+        "bounds":[[-84.83129871846774, 38.923507292003464], [-80.13127384058429, 41.82213923170013]],
+        "geocoder_bounds":[-84.9920112412373, 38.13631316512096, -79.61938750293479, 42.666516193569436],
+        "url": 'https://wodacooper.github.io/mapbox/oh_layers_test.json'
+    },
     "pa":{
         "bounds":[[-80.9001017853645, 39.573387273853], [-74.2338017386523, 42.4821662783562873]],
         "geocoder_bounds":[-80.9001017853645, 39.573387273853, -74.2338017386523, 42.4821662783562873],
         "url": 'https://wodacooper.github.io/mapbox/pa_layers.json'
     },
+    "pa_test":{
+        "bounds":[[-80.9001017853645, 39.573387273853], [-74.2338017386523, 42.4821662783562873]],
+        "geocoder_bounds":[-80.9001017853645, 39.573387273853, -74.2338017386523, 42.4821662783562873],
+        "url": 'https://wodacooper.github.io/mapbox/pa_layers_test.json'
+    },
     "sc":{
         "bounds":[[-81.99646042127142, 32.98598312860454], [-79.21571288630456, 34.52971849799379]],
         "geocoder_bounds":[-83.71394014665334, 32.07074914501098, -78.36143876212576, 35.301973670057464],
         "url": 'https://wodacooper.github.io/mapbox/sc_layers.json'
+    },
+    "sc_test":{
+        "bounds":[[-81.99646042127142, 32.98598312860454], [-79.21571288630456, 34.52971849799379]],
+        "geocoder_bounds":[-83.71394014665334, 32.07074914501098, -78.36143876212576, 35.301973670057464],
+        "url": 'https://wodacooper.github.io/mapbox/sc_layers_test.json'
     },
     "tn":{
         "bounds":[[-90.3825280445324, 34.96887740860476], [-81.6010795602466, 36.669837673931525]],
@@ -290,6 +346,11 @@ const bounds_dict = {
         "geocoder_bounds":[-107.22683640991858, 25.657179541914736, -92.39529349506144, 36.558898240440655],
         "url": 'https://wodacooper.github.io/mapbox/tx_layers.json'
     },
+    "tx_test":{
+        "bounds":[[-104.67600379049759, 29.299826272128293], [-93.48935358190582, 35.05542384021815]],
+        "geocoder_bounds":[-107.22683640991858, 25.657179541914736, -92.39529349506144, 36.558898240440655],
+        "url": 'https://wodacooper.github.io/mapbox/tx_layers_test.json'
+    },
     "va":{
         "bounds":[[-78.90103164743579, 36.619605614978745], [-75.18061674186872, 38.16481642066047]],
         "geocoder_bounds":[-83.80881301222638, 36.55604636006495, -75.53117255363946, 39.625717232985615],
@@ -300,10 +361,20 @@ const bounds_dict = {
         "geocoder_bounds":[-93.08914727732419, 42.41904924359892, -86.19111432679766, 47.426598853498625],
         "url": 'https://wodacooper.github.io/mapbox/wi_layers.json'
     },
+    "wi_test":{
+        "bounds":[[-91.81516202544215, 42.4824468835611], [-86.99871447323014, 44.7495387545328]],
+        "geocoder_bounds":[-93.08914727732419, 42.41904924359892, -86.19111432679766, 47.426598853498625],
+        "url": 'https://wodacooper.github.io/mapbox/wi_layers_test.json'
+    },
     "wv":{
         "bounds":[[-82.96804854706158, 37.08701648003831], [-77.31429927306313, 41.03426453486921]],
         "geocoder_bounds":[-82.96804854706158, 37.08701648003831, -77.31429927306313, 41.03426453486921],
         "url": 'https://wodacooper.github.io/mapbox/wv_layers.json'
+    },
+    "wv_test":{
+        "bounds":[[-82.96804854706158, 37.08701648003831], [-77.31429927306313, 41.03426453486921]],
+        "geocoder_bounds":[-82.96804854706158, 37.08701648003831, -77.31429927306313, 41.03426453486921],
+        "url": 'https://wodacooper.github.io/mapbox/wv_layers_test.json'
     },
 "qct":{
         "bounds":[[-102.3730577149232, 30.749061535513654], [-73.03945321153677, 43.16674390102708]],
@@ -496,11 +567,15 @@ const bounds_dict = {
     .legend-list { list-style-type: none; margin: 0; padding: 0px;}
     .legend-list li {padding: 0px; font-weight: normal; }
     .legend-list span { border: 1px solid #000000; float: left; width: 12px; height: 12px; margin: 2px; }
-
-    .popup-box {
-        max-width: 300px;
-        max-height: 300px;
+    
+    .popup-box .mapboxgl-popup-content {
+        width: 150px;
+        height: 300px;
+        resize: both;
         overflow-y: auto;
+
+        min-width: 150px;
+        min-height: 300px;
     }
 
     .popup-box p {
@@ -554,8 +629,8 @@ const bounds_dict = {
         width: 100px;
         background-color: white;
         padding: 10px;
-        bottom: 95px;
-        left: 20px;
+        top: 95px;
+        right: 135px;
     }
     
     .nav-fullscreen-row {
@@ -636,7 +711,7 @@ const bounds_dict = {
         padding-right: 15px;
     }
     .mapboxgl-popup-close-button{
-        position: sticky;
+        position: absolute;
         bottom: 90%;
         left: 90%;
         padding: 0%;
@@ -664,7 +739,7 @@ const bounds_dict = {
 
     .legend-box {
         padding: 0px;
-        right: 0px;
+        right: 5px;
         bottom: 24px;
 
     }
@@ -672,18 +747,30 @@ const bounds_dict = {
 </style>
 <div id="map"></div>
 <div id="layer_box"></div>
+<div id="live-length" style="
+    position:fixed;
+    display:none;
+    color:#ffffff;
+    font-size:18px;
+    font-weight:lighter;
+    text-shadow: -1.5px -1.5px 0 #000000, 1.5px -1.5px 0 #000000, -1.5px 1.5px 0 #000000, 1.5px 1.5px 0 #000000, 0 -1.5px 0 #000000, 0 1.5px 0 #000000, -1.5px 0 0 #000000, 1.5px 0 0 #000000;
+    pointer-events:none;
+    z-index:12
+">
+
+</div>
 <div id="legend_box" class = "legend-box"></div>
 <div id="popup_box" class="popup">
-    <div class="popup_content" id ="popup-caption">Radius</div>
+    <div class="popup_content" id ="popup-caption">Radius (Miles)</div>
     <input type="number" step="0.01" id="popup_content" value="1" />
     <div class="color_caption" id ="color-caption">Color</div>
     <input type="color" id="color-picker"/> 
+    
 </div>
-<div id="area_box" class="area"></div>
 <script>
     
     
-    //const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?mn'
+    //const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?wv_test'
     const query_string = window.location.search;
     
     const query_vals = query_string.split('?')
@@ -731,6 +818,7 @@ const bounds_dict = {
     var hover_layers = [];
     var click_layers = [];
     var layers;
+    var polygon_labels = {};
     
     function isMobile() {
         return window.matchMedia('(max-width: 600px)').matches;
@@ -900,7 +988,7 @@ const bounds_dict = {
             draw_circlemode.onClick = function(state, e) {
                 const feature = turf.circle([e.lngLat.lng, e.lngLat.lat], popupContent.value, {units:'miles'});
                 console.log(feature);
-                feature.properties = { color: colorPicker.value };
+                feature.properties = { color: colorPicker.value, radius:  popupContent.value};
                 const id = draw.add(feature);
                 console.log(draw.getAll());
                 this.changeMode('simple_select');
@@ -1169,6 +1257,66 @@ const bounds_dict = {
                        
             map.addControl(draw, 'top-right');
 
+            map.addSource('drawn-features', {
+            type: 'geojson',
+            data: draw.getAll()
+            });
+
+            map.addSource('label-features', {
+            type: 'geojson',
+            data: { type: 'FeatureCollection', features: [] }
+            });
+
+            map.addLayer({
+                id: 'drawn-polygons',
+                type: 'fill',
+                source: 'drawn-features',
+                filter: ['==', '$type', 'Polygon'],
+                paint: {
+                    'fill-color': [
+                        'interpolate',
+                        ['linear'],
+                        ['get', 'acres'],
+                        '#ffffff',
+                    ],
+                    'fill-opacity': 0.1
+                }
+            });
+
+            map.addLayer({
+                id: 'drawn-lines',
+                type: 'line',
+                source: 'drawn-features',
+                filter: ['==', '$type', 'LineString'],
+                paint: {
+                    'line-width': 3,
+                    'line-color': [
+                        'interpolate',
+                        ['linear'],
+                        ['get', 'length_miles'],
+                        '#ffffff',
+                    ]
+                }
+            });
+
+            map.addLayer({
+                id: 'drawn-labels',
+                type: 'symbol',
+                source: 'label-features',
+                layout: {
+                    'text-field': ['get', 'label_text'],
+                    'text-size': 16,
+                    'text-anchor': 'center',
+                    'text-offset': [0, 1],
+                    'text-rotation-alignment': 'map',
+                    'symbol-placement': 'point'
+                },
+                paint: {
+                    'text-color': '#ffffff',
+                    'text-halo-color': '#000000',
+                    'text-halo-width': 1.5
+                }
+            });
 
             const navFullscreenRow = document.createElement('div');
             navFullscreenRow.className = 'nav-fullscreen-row';
@@ -1247,7 +1395,6 @@ const bounds_dict = {
             const popup = document.getElementById('popup_box');
             const popupContent = document.getElementById('popup_content');
             const colorPicker = document.getElementById('color-picker');
-            const areaBox = document.getElementById('area_box');
             
             const delete_btn = document.getElementsByClassName('mapbox-gl-draw_trash')[0]
             delete_btn.classList.remove('mapbox-gl-draw_trash', 'mapbox-gl-draw_ctrl-draw-btn')
@@ -1258,7 +1405,11 @@ const bounds_dict = {
             //delete_btn.innerText = "X";
             trash_btn .addEventListener('click', () => {
                 draw.deleteAll();
-                document.getElementById('area_box').style.display = 'none';
+                polygon_labels = {};
+                map.getSource('label-features').setData({
+                    type: 'FeatureCollection',
+                    features: []
+                });
             });
             controls.appendChild(trash_btn);
 
@@ -1299,8 +1450,15 @@ const bounds_dict = {
                 const data = await query.json();
                 const feat=data.features[0];
                 console.log(feat)
-                feat.properties = { color: colorPicker.value };
+                feat.properties = { color: colorPicker.value,  radius: popupContent.value};
                 draw.add(feat)
+            }
+
+            function refreshDrawnSource() {
+            const source = map.getSource('drawn-features');
+            if (source) {
+                source.setData(draw.getAll());
+                }
             }
         
             
@@ -1314,7 +1472,7 @@ const bounds_dict = {
                 console.log('bing_bong')
                 console.log(feature)
             };
-            //Code for having the popup appear for each mode
+
             map.on('draw.modechange', () => {
                 const mode = draw.getMode()
                 const color_modes = ['draw_walk', 'draw_drive','draw_circle','draw_line_string','draw_point', 'draw_polygon']
@@ -1323,60 +1481,181 @@ const bounds_dict = {
                 } else {
                     popup.style.display = 'none'
                 }
+                const liveLength = document.getElementById('live-length');
+                if (mode === 'draw_line_string') {
+                    liveLength.style.display = 'block';
+                } else {
+                    liveLength.style.display = 'none';
+                }
             });
 
              //map.on('click', getIso);
             
 
             map.on('draw.create', updateArea);
-            map.on('draw.delete', updateArea);
-            map.on('draw.update', updateArea)
-        
-            //Displaying the distance and area for the line and polygon tools
-            function updateArea(e) {
-                const data = draw.getAll();
-                const answer = document.getElementById('area_box');
-                const num_features = data.features.length
-                if (num_features > 0) {
-                    const feature = data.features[num_features-1].geometry;
-                    if (feature.type == 'Polygon') {
-                        const area = turf.area(feature);
-                        const acres = Math.round(area/4046.86 * 100) / 100;
-                        const square_feet = Math.round(area*10.793);
-                        if(acres < 1000000){
-                            answer.innerHTML= `${acres} acres <br> ${square_feet.toLocaleString()} sq ft`;
-                        }else{
-                            answer.innerHTML = `${acres} acres`;
-                        }
-                        areaBox.style.display = 'block';
+            map.on('draw.delete', (e) => {
+                e.features.forEach(feature => {
+                    delete polygon_labels[feature.id];
+                });
+                map.getSource('label-features').setData({
+                    type: 'FeatureCollection',
+                    features: Object.values(polygon_labels)
+                });
+                updateArea();
+            });
+            map.on('draw.update', updateArea);
 
-                    } else if(feature.type == 'LineString')  {
-                        const length_miles = Math.round(turf.length(feature,{units:'miles'})* 100) / 100;
-                        const length_feet = Math.round(length_miles*5280);
-                        if(length_miles < 1){
-                            answer.innerHTML = `${length_miles} miles <br> ${length_feet.toLocaleString()} feet`;
-                        }
-                        else{
-                            answer.innerHTML = `${length_miles} miles`;
-                        }
-                        areaBox.style.display = 'block';
-                    }
-              
-                 }
+            map.on('draw.create', refreshDrawnSource);
+            map.on('draw.update', refreshDrawnSource);
+            map.on('draw.delete', refreshDrawnSource);
+            
+            map.on('mousemove', (e) => {
+            if (draw.getMode() !== 'draw_line_string') return;
+
+            const data = draw.getAll();
+            if (!data.features.length) return;
+
+            const feature = data.features[data.features.length - 1];
+            if (!feature || feature.geometry.type !== 'LineString') return;
+
+            const coords = [...feature.geometry.coordinates, [e.lngLat.lng, e.lngLat.lat]];
+            const tempLine = {
+                type: 'Feature',
+                geometry: {
+                    type: 'LineString',
+                    coordinates: coords
+                }
+            };
+
+            const length = turf.length(tempLine, { units: 'miles' });
+
+            const liveLength = document.getElementById('live-length');
+            
+            if (length < 0.5) {
+                const feet = Math.round(length * 5280);
+                liveLength.innerText = feet + ' ft';
+            } else {
+                liveLength.innerText = length.toFixed(2) + ' miles';
             }
             
+            liveLength.style.left = (e.originalEvent.clientX + 10) + 'px';
+            liveLength.style.top = (e.originalEvent.clientY + 10) + 'px';
+            });
+
+            let selectedFeatureId = null;
+            //let measurementPopup = null;
+            
+            function getFeatureCenter(feature) {
+            const geom = feature.geometry;
+            if (geom.type === 'Polygon') {
+                return turf.centroid(feature).geometry.coordinates;
+            }
+            if (geom.type === 'LineString') {
+                return turf.along(feature, turf.length(feature), { units: 'miles' }).geometry.coordinates;
+            }
+            return null;
+            }
+
+            map.on('draw.selectionchange', (e) => {
+            if (e.features.length > 0) {
+                selectedFeatureId = e.features[0].id;
+                updateArea();
+            } 
+            else {
+                selectedFeatureId = null;
+                }
+            });
+
+
+            function updateArea() {
+                const data = draw.getAll();
+                if (!data.features.length) return;
+
+                let feature;
+                if (selectedFeatureId) {
+                    feature = data.features.find(f => f.id === selectedFeatureId);
+                }
+                if (!feature) {
+                    feature = data.features[data.features.length - 1];
+                }
+                if (!feature) return;
+
+                const geom = feature.geometry;
+
+                if (geom.type === 'Polygon') {
+                    const area = turf.area(geom);
+                    const acres = Math.round(area / 4046.86 * 100) / 100;
+                    const square_feet = Math.round(area * 10.7639);
+                    draw.setFeatureProperty(feature.id, 'acres', acres);
+                    draw.setFeatureProperty(feature.id, 'sqft', square_feet);
+
+                    const centroid = turf.centroid(feature);
+                    let label_text;
+                    
+                    if (feature.properties.radius !== undefined) {
+                       if (feature.properties.radius == 1) {
+                            label_text = feature.properties.radius + ' mile';
+                        } else {
+                             label_text = feature.properties.radius + ' miles';
+                        }
+                    } else {
+                        label_text = acres + ' acres\n(' + square_feet + ' sq ft)';
+                    }
+                    
+                    centroid.properties = {
+                        label_text: label_text,
+                        polygon_id: feature.id
+                    };
+                    polygon_labels[feature.id] = centroid;
+                    map.getSource('label-features').setData({
+                        type: 'FeatureCollection',
+                        features: Object.values(polygon_labels)
+                    });
+
+                } else if (geom.type === 'LineString') {
+                    const length = turf.length(geom, { units: 'miles' });
+
+                    draw.setFeatureProperty(feature.id, 'length_miles', length);
+
+                    let labelText;
+                    if (length < 0.5) {
+                        const feet = Math.round(length * 5280);
+                        labelText = feet + ' ft';
+                    } else {
+                        labelText = length.toFixed(2) + ' miles';
+                    }
+                    
+                    const lastCoord = geom.coordinates[geom.coordinates.length - 1];
+                    const endPoint = turf.point(lastCoord);
+                    endPoint.properties = {
+                        label_text: labelText,
+                        line_id: feature.id,
+                        line_end: true
+                    };
+                    polygon_labels[feature.id] = endPoint;
+                    map.getSource('label-features').setData({
+                        type: 'FeatureCollection',
+                        features: Object.values(polygon_labels)
+                    });
+                }
+
+                refreshDrawnSource(); 
+            }
 
             const tooltip = new mapboxgl.Popup({anchor: 'top-left', closeOnClick: false, closeButton: false}).trackPointer()
                         
             tooltip.addTo(map)
 
-
-            
+                        
             map.on('mouseleave', hover_layers, (e) => {
                 tooltip.remove()
             });
         
             map.on('mousemove', hover_layers, (e) => {
+                if (draw.getMode() !== 'simple_select') {
+                    tooltip.remove();
+                    return;
+                }
                 let table = ['<div style="line-height: 100%">']
                 for (layer_name of hover_layers) {
                     layer = layer_name.split('@')[0];
@@ -1409,7 +1688,9 @@ const bounds_dict = {
             });
            
             map.on('click', click_layers, (e) => {
-                if (draw.getMode() !== 'simple_select') return;
+                function isInDrawMode() {
+                    return draw.getMode() !== 'simple_select';
+                }
 
                 if (!allow_click) {
                     allow_click = true;
@@ -1854,8 +2135,3 @@ const bounds_dict = {
 
 </body>
 </html>
-
-
-
-
-
