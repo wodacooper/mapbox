@@ -1,5 +1,61 @@
 {
-     "qct_dda": {
+    "build_wv": {
+        "name": "Build WV",
+        "source_id": "build_wv_source",
+        "url": "mapbox://wodacooper.build_wv",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "circle": {
+            "circle-radius": 7,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": "#7dbff5"
+        },
+        "legend": [
+            [
+                "sites",
+                "#7dbff5"
+            ]
+        ],
+        "click": {
+            "District": [
+                true,
+                ""
+            ]
+        },
+        "hover": {
+            "District": [
+                true,
+                ""
+            ]
+        }
+    },
+    "cities": {
+        "name": "Cities",
+        "source_id": "places",
+        "url": "mapbox://wodacooper.wv_places",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "line": {
+            "line-width": 2,
+            "line-color": "#000000"
+        },
+        "legend": [
+            [
+                "City Limits",
+                "#000000"
+            ]
+        ],
+        "click": {"NAMELSAD": [true, "City"]},
+        "hover": {"NAMELSAD": [true, "City"]}
+    },
+    "qct_dda": {
         "name": "2026 QCT/DDAs",
         "source_id": "qct_dda_26_source",
         "url": "mapbox://wodacooper.qct_dda_26",
@@ -58,62 +114,6 @@
                 ""
             ]
         }
-    },
-    "build_wv": {
-        "name": "Build WV",
-        "source_id": "build_wv_source",
-        "url": "mapbox://wodacooper.build_wv",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#7dbff5"
-        },
-        "legend": [
-            [
-                "sites",
-                "#7dbff5"
-            ]
-        ],
-        "click": {
-            "District": [
-                true,
-                ""
-            ]
-        },
-        "hover": {
-            "District": [
-                true,
-                ""
-            ]
-        }
-    },
-    "cities": {
-        "name": "Cities",
-        "source_id": "places",
-        "url": "mapbox://wodacooper.wv_places",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "visible"
-        },
-        "visible": true,
-        "line": {
-            "line-width": 2,
-            "line-color": "#000000"
-        },
-        "legend": [
-            [
-                "City Limits",
-                "#000000"
-            ]
-        ],
-        "click": {"NAMELSAD": [true, "City"]},
-        "hover": {"NAMELSAD": [true, "City"]}
     },
     "new_supply_2025": {
    "name": "New Supply 2025",
@@ -183,6 +183,86 @@
     },
     "click": {
         "Pool":[true,""],"County":[true,""],"QCT":[true,""],"Total New Supply Points":[true,""],"Score Note":[true,""],"Total Existing Low-Income Housing Points":[true,""],"LIHTCP Production Points":[true,""],"LIHTCP Unit Production Percent":[true,""],"Income Points":[true,""],"Median Income":[true,""],"Rent Burden Points":[true,""],"Rent Burden Percentage":[true,""],"Vacancy Points":[true,""],"Rental Vacancy Rate":[true,""],"Owner Occupied Points":[true,""],"Owner Occupied Percent":[true,""],"Overcrowded Points":[true,""],"Overcrowded Percent":[true,""],"Poverty Points":[true,""],"Poverty Rate":[true,""],"Food Stamps Points":[true,""],"Food Stamps Percent":[true,""],"Unemployment Points":[true,""],"Unemployment Rate":[true,""],"Bachelor Degree Points":[true,""],"Bachelor Degree Rate":[true,""],"Unmet GO Points":[true,""],"Unmet GO County Rank":[true,""],"Unmet GO Need":[true,""],"Unmet Senior Points":[true,""],"Unmet Senior County Rank":[true,""],"Unmet Senior Need":[true,""]
+            },
+    "cat_filter_vals": {
+        "Pool": ["Non-Rural","Rural"],
+        "QCT": ["1.0", "0.0"]
+    },
+    "num_filter_vals": {
+        "Total New Supply Points": [
+            76.0,
+            146.0
+        ]
+    }
+    },
+    "test": {
+   "name": "New Supply Standardized",
+   "source_id": "wv_test",
+   "url": "mapbox://wodacooper.wv_25",
+   "source_layer": "hello_world",
+   "layout": {
+       "visibility": "none"
+   },
+   "visible": false,
+    "fill": {
+        "fill-color": [
+            "step",
+            [
+                "get",
+                "Total New Supply Points"
+            ],
+            "#9e9e9e",
+            95,
+            "#4B4C4E",
+            100,
+            "#7C3A14",
+            105,
+            "#0000ff",
+            110,
+            "#9207fc",
+            115,
+            "#ff0000",
+            120,
+            "#fe8103",
+            125,
+            "#ffff00",
+            130,
+            "#ff00ff",
+            135,
+            "#00ff00",
+            140,
+            "#00ffff"
+        ],
+        "fill-opacity": 0.6
+    },
+    "cat_filters": {
+        "Pool": "",
+        "QCT": "QCT"
+    },
+    "num_filters": {
+        "Total New Supply Points": ""
+    },
+    "legend": [["140-146", "#00ffff"], ["135-139", "#00ff00"], ["130-134", "#ff00ff"], ["125-129", "#ffff00"], ["120-124", "#fe8103"], ["115-119", "#ff0000"], ["110-114", "#9207fc"], ["105-109", "#0000ff"], ["100-104", "#7C3A14"], ["95-99", "#4B4C4E"], ["<95", "#9e9e9e "]],
+    "hover": {
+        "Total New Supply Points": [
+            true,
+            ""
+        ],
+        "Score Note": [
+            true,
+            ""
+        ],
+        "Pool": [
+            true,
+            ""
+        ],
+        "County": [
+            true,
+            ""
+        ]
+    },
+    "click": {
+        "Total New Supply Points":[true,""],"Score Note":[true,""], "Pool":[true,""],"County":[true,""],"QCT":[true,""],"Total Existing Low-Income Housing Points":[true,""],"LIHTCP Production Points":[true,""],"LIHTCP Unit Production Percent":[true,""],"Income Points":[true,""],"Median Income":[true,""],"Rent Burden Points":[true,""],"Rent Burden Percentage":[true,""],"Vacancy Points":[true,""],"Rental Vacancy Rate":[true,""],"Owner Occupied Points":[true,""],"Owner Occupied Percent":[true,""],"Overcrowded Points":[true,""],"Overcrowded Percent":[true,""],"Poverty Points":[true,""],"Poverty Rate":[true,""],"Food Stamps Points":[true,""],"Food Stamps Percent":[true,""],"Unemployment Points":[true,""],"Unemployment Rate":[true,""],"Bachelor Degree Points":[true,""],"Bachelor Degree Rate":[true,""],"Unmet GO Points":[true,""],"Unmet GO County Rank":[true,""],"Unmet GO Need":[true,""],"Unmet Senior Points":[true,""],"Unmet Senior County Rank":[true,""],"Unmet Senior Need":[true,""]
             },
     "cat_filter_vals": {
         "Pool": ["Non-Rural","Rural"],
