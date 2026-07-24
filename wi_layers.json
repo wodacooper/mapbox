@@ -179,10 +179,10 @@
             ]
         }
     },
-    "test_w": {
-        "name": "2027 Test Score With County Bonus",
-        "source_id": "wi_test_w",
-        "url": "mapbox://wodacooper.wi_test",
+    "wi_w": {
+        "name": "2027 Score With County Bonus",
+        "source_id": "wi_27_w",
+        "url": "mapbox://wodacooper.wi_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -365,10 +365,10 @@
             ]
         }
     },
-    "test": {
-        "name": "2027 Test Score Standardized",
-        "source_id": "wi_test_source",
-        "url": "mapbox://wodacooper.wi_test",
+    "wi": {
+        "name": "2027 Score Standardized",
+        "source_id": "wi_source",
+        "url": "mapbox://wodacooper.wi_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
