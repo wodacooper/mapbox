@@ -78,6 +78,7 @@
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2
         },
+        
         "hover": {
             "type": [
                 true,
@@ -125,7 +126,13 @@
                 true,
                 ""
             ]
-        }
+        },
+        "legend": [
+            [
+            "Grocery",
+            "#00ff00"
+            ]
+        ]
     },
     "qct_dda": {
         "name": "2026 QCT/DDAs",
