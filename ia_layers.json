@@ -1210,9 +1210,9 @@
         "url": "mapbox://wodacooper.ia_26_4p",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "match",
@@ -1308,9 +1308,9 @@
         "url": "mapbox://wodacooper.ia_26",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "match",
@@ -2508,9 +2508,9 @@
         "url": "mapbox://wodacooper.ia_test_071625",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "none"
+            "visibility": "visiable"
         },
-        "visible": false,
+        "visible": true,
         "fill": {
             "fill-color": [
                 "match",
@@ -2518,17 +2518,17 @@
                     "get",
                     "score"
                 ],
-                7,
+                8,
                 "#00ffff",
-                6,
+                7,
                 "#00ff00",
-                5,
+                6,
                 "#ff00ff",
-                4,
+                5,
                 "#ffff00",
-                3,
+                4,
                 "#fe8103",
-                2,
+                3,
                 "#4B4C4E",
                 "#9e9e9e"
             ],
@@ -2544,31 +2544,31 @@
         },
         "legend": [
             [
-                "7",
+                "8",
                 "#00ffff"
             ],
             [
-                "6",
+                "7",
                 "#00ff00"
             ],
             [
-                "5",
+                "6",
                 "#ff00ff"
             ],
             [
-                "4",
+                "5",
                 "#ffff00"
             ],
             [
-                "3",
+                "4",
                 "#fe8103"
             ],
             [
-                "2",
+                "3",
                 "#4B4C4E"
             ],
             [
-                "<2",
+                "<3",
                 "#9e9e9e"
             ]
         ],
@@ -3706,7 +3706,7 @@
         "num_filter_vals": {
             "score": [
                 1.0,
-                7.0
+                8.0
             ]
         }
     }
