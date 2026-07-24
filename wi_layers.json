@@ -63,10 +63,10 @@
             ]
         }
     },
-    "loc_grocery": {
-        "name": "Local Grocery",
-        "source_id": "wi_local_grocery",
-        "url": "mapbox://wodacooper.wi_local_grocery_stores",
+    "Grocery": {
+        "name": "Full-Service Grocery",
+        "source_id": "wi_all_grocery",
+        "url": "mapbox://wodacooper.wi_all_grocery_072426",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -74,62 +74,6 @@
         "visible": false,
         "circle": {
             "circle-color": "#00ff00",
-            "circle-radius": 5,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2
-        },
-        "hover": {
-            "Name": [
-                true,
-                ""
-            ],
-            "Street Address": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "City": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-           "Name": [
-                true,
-                ""
-            ],
-            "Street Address": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "City": [
-                true,
-                ""
-            ],
-            "Zip Code": [
-                true,
-                ""
-            ]
-        }
-    },
-    "Grocery": {
-        "name": "Full-Service Grocery",
-        "source_id": "wi_all_grocery",
-        "url": "mapbox://wodacooper.wi_grocery_072426",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "circle": {
-            "circle-color": "#B47EE5",
             "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2
@@ -696,5 +640,4 @@
             ]
         }
     }
-
 }
