@@ -201,7 +201,8 @@
         },
         "num_filters": {
             "score_w": "Score with County Bonus",
-            "aeo_score": "Area of Economic Opportunity Score"
+            "aeo_score": "Area of Economic Opportunity Score",
+            "job_pts":"Job Score"
         },
         "legend": [
             ["41", "#00ffff"],
@@ -313,6 +314,10 @@
             "aeo_score": [
                 0.0,
                 36.0
+            ],
+            "job_pts":[
+                0.0,
+                16.0
             ]
         }
     },
@@ -387,7 +392,8 @@
         },
         "num_filters": {
             "score": "Score",
-            "aeo_score": "Area of Economic Opportunity Score"
+            "aeo_score": "Area of Economic Opportunity Score",
+            "job_pts":"Job Score"
         },
         "legend": [
             ["36", "#00ffff"],
@@ -505,6 +511,10 @@
             "aeo_score": [
                 0.0,
                 36.0
+            ],
+            "job_pts":[
+                0.0,
+                16.0
             ]
         }
     },
