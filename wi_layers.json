@@ -533,9 +533,17 @@
                 true,
                 ""
             ],
-            "Field5": [
+            "NAME_usd": [
                 true,
-                "SD_name"
+                "usd_name"
+            ],
+            "NAME_elsd": [
+                true,
+                "elsd_name"
+            ],
+            "NAME_scsd": [
+                true,
+                "scsd_name"
             ],
             "project_in_county":[
                 true,
