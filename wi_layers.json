@@ -445,10 +445,7 @@
                 true,
                 "Area of Economic Opportunity Score"
             ],
-            "job_pts":[
-                true,
-                "Job Score"
-            ],
+            
             "med_inc_pts": [
                 true,
                 ""
@@ -460,6 +457,10 @@
             "SD_pts": [
                 true,
                 ""
+            ],
+            "job_pts":[
+                true,
+                "Job Score"
             ],
             "job_center_pts": [
                 true,
