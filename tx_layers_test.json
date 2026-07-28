@@ -2574,9 +2574,9 @@
         }
     },
     "Test": {
-        "name": "2026 Score Test",
-        "source_id": "sandy",
-        "url": "mapbox://wodacooper.tx_26",
+        "name": "2026 Score Standardized2",
+        "source_id": "updated_score",
+        "url": "mapbox://wodacooper.tx_25_072826",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -2589,6 +2589,8 @@
                     "get",
                     "score"
                 ],
+                "#ffffff",
+                6,
                 "#9e9e9e",
                 7,
                 "#4B4C4E",
@@ -2617,7 +2619,7 @@
                     "get",
                     "score"
                 ],
-                0,
+                0.3,
                 6,
                 0.6
             ]
@@ -2649,7 +2651,8 @@
             ["9", "#0000ff"],
             ["8", "#7C3A14"],
             ["7", "#4B4C4E"],
-            ["6", "#9e9e9e"]
+            ["6", "#9e9e9e"],
+            ["<6", "#ffffff"]
         ],
         "hover": {
             "score": [
