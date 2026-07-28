@@ -2574,7 +2574,7 @@
         }
     },
     "Test": {
-        "name": "2026 Score Standardized2",
+        "name": "test2",
         "source_id": "updated_score",
         "url": "mapbox://wodacooper.tx_25_072826",
         "source_layer": "hello_world",
