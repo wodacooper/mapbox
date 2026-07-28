@@ -2574,7 +2574,7 @@
         }
     },
     "Test": {
-        "name": "test2",
+        "name": "test3",
         "source_id": "roadhouse",
         "url": "mapbox://wodacooper.tx_25_072826",
         "source_layer": "hello_world",
@@ -2626,14 +2626,12 @@
         },
         "cat_filters": {
             "potential_16":"",
-            "SB840":"",
             "pool": "",
             "Region_1": "Region",
             "Place Name": "City",
             "County_1": "County",
             "pts_oi": "Opportunity Index",
-            "Median Household Income Quartile": "",
-            "County pop<=1.8mil": "County Population is 1.8 Million or Less"
+            "Median Household Income Quartile": ""
         },
         "num_filters": {
             "score": "",
@@ -2784,7 +2782,6 @@
         },
         "cat_filter_vals": {
             "potential_16":["Yes", "No"],
-            "SB840":["Applies", "Does not Apply"],
             "pool": [
                 "None",
                 "Rural",
@@ -4926,10 +4923,6 @@
                 "2q",
                 "3q",
                 "4q"
-            ],
-            "County pop<=1.8mil": [
-                "Yes",
-                "No"
             ]
         },
         "num_filter_vals": {
