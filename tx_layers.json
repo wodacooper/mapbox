@@ -2594,8 +2594,8 @@
         }
     },
     "Test": {
-        "name": "test1",
-        "source_id": "rolling",
+        "name": "2026 Score Standardized",
+        "source_id": "standardized",
         "url": "mapbox://wodacooper.tx_26_072926",
         "source_layer": "hello_world",
         "layout": {
