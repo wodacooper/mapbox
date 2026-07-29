@@ -570,9 +570,8 @@ const bounds_dict = {
     
     .popup-box .mapboxgl-popup-content {
         width: 150px;
-        height: 300px;
-        resize: both;
         overflow-y: auto;
+        resize: both;
     }
 
     .popup-box p {
@@ -767,7 +766,7 @@ const bounds_dict = {
 <script>
     
     
-    //const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?wv_test'
+    //const query_string = 'https://wodacooper.github.io/mapbox/mapbox.html?pk.eyJ1Ijoid29kYWNvb3BlciIsImEiOiJjbThxZHpqbWUwa3EyMmlwd2I2Y3pxaHhpIn0.AXMTVNv_2fzrerGtEvAhxA?communities'
     const query_string = window.location.search;
     
     const query_vals = query_string.split('?')
@@ -1716,12 +1715,19 @@ const bounds_dict = {
                 }
                 table.push('</div>');
 
-                new mapboxgl.Popup({
-                    className: 'popup-box',
-                    anchor: 'top-left'
-                }).setLngLat(e.lngLat)
+                const popup = new mapboxgl.Popup({className: 'popup-box', anchor: 'top-left'})
+                .setLngLat(e.lngLat)
                 .setHTML(table.join(''))
                 .addTo(map);
+
+                requestAnimationFrame(() => {
+                    const content = popup.getElement().querySelector('.mapboxgl-popup-content');
+                    if (content.scrollHeight > 300) {
+                        content.style.height = '300px';
+                        content.style.overflowY = 'auto';
+                    }
+                    content.style.resize = 'both';
+                });
             });
             
             let touchPopup = null;
@@ -1759,11 +1765,11 @@ const bounds_dict = {
                 }
 
                 table.push('</div>');
-
-                touchPopup = new mapboxgl.Popup({ className: 'popup-box', anchor: 'top-left' })
-                    .setLngLat(e.lngLat)
-                    .setHTML(table.join(''))
-                    .addTo(map);
+                
+                touchPopup = new mapboxgl.Popup({className: 'popup-box', anchor: 'top-left'})
+                .setLngLat(e.lngLat)
+                .setHTML(table.join(''))
+                .addTo(map);
             }
 
             let touchStartPoint = null;
