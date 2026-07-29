@@ -44,7 +44,25 @@
                 "Pharmacy",
                 "#0000FF"
             ]
-        ]
+        ],
+        "hover":{
+            "School Name":[true,""],
+            "Pharmacy Name":[true,""],
+            "Store_Name":[true,""],
+            "query":[true,"Address"],
+            "Address":[true,""]   
+        },
+        "click":{
+            "School Name":[true,""],
+            "Pharmacy Name":[true,""],
+            "Store_Name":[true,""],
+            "query":[true,"Address"],
+            "Address":[true,""],
+            "School City":[true,""],
+            "School Zip":[true,""],
+            "City":[true,""],
+            "Zip_Code":[true,""]
+        }
     },
     "parks": {
         "name": "Parks",
