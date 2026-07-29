@@ -49,6 +49,7 @@
             "School Name":[true,""],
             "Pharmacy Name":[true,""],
             "Store_Name":[true,""],
+            "name":[true,""],
             "query":[true,"Address"],
             "Address":[true,""]   
         },
@@ -56,6 +57,7 @@
             "School Name":[true,""],
             "Pharmacy Name":[true,""],
             "Store_Name":[true,""],
+            "name":[true,""],
             "query":[true,"Address"],
             "Address":[true,""],
             "School City":[true,""],
