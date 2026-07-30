@@ -625,9 +625,9 @@
         ],
         "click":{
             "zone":[true,""],
-            "VLIL_60%":[true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""]
+            "Rent_Limit":[true,""],
+            "VLIL_60%":[true,""]
         },
         "hover": {
             "zone": [true,""],
@@ -641,11 +641,11 @@
         "num_filter_vals": {
             "FMR": [
                 452.0,
-                4700.0
+                2820.0
             ],
             "Rent_Limit": [
-                1020.0,
-                2501.0
+                1143.0,
+                1713.0
             ]
         }
 
