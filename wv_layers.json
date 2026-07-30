@@ -104,14 +104,27 @@
         ],
         "click":{
             "zone":[true,""],
-            "VLIL_60%":[true,""],
+            "FMR":[true,""],
+            "Rent_Limit":[true,""],
+            "VLIL_60%":[true,""]
+        },
+        "hover": {
+            "zone": [true,""],
             "FMR":[true,""],
             "Rent_Limit":[true,""]
         },
-        "hover": {
-            "zone": [
-                true,
-                ""
+        "num_filters": {
+            "FMR": "FMR",
+            "Rent_Limit": "Rent Limit"
+        },
+        "num_filter_vals": {
+            "FMR": [
+                580.0,
+                1610.0
+            ],
+            "Rent_Limit": [
+                1069.5,
+                2458.5
             ]
         }
     },
