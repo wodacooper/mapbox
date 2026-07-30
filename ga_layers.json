@@ -630,11 +630,25 @@
             "Rent_Limit":[true,""]
         },
         "hover": {
-            "zone": [
-                true,
-                ""
+            "zone": [true,""],
+            "FMR":[true,""],
+            "Rent_Limit":[true,""]
+        },
+        "num_filters": {
+            "FMR": "FMR",
+            "Rent_Limit": "Rent Limit"
+        },
+        "num_filter_vals": {
+            "FMR": [
+                452.0,
+                4700.0
+            ],
+            "Rent_Limit": [
+                1020.0,
+                2501.0
             ]
         }
+
     },
     "old_4% scoring": {
         "name": "4% Scoring 2025",
