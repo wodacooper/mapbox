@@ -91,6 +91,47 @@
             ]
         }
     },
+    "lous_parcels": {
+        "name": "Louisville Parcels",
+        "source_id": "ky_parcels_1",
+        "url": "mapbox://wodacooper.louisville_parcels",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1,
+            "line-color": "#ffffff"
+        },
+        "fill": {
+            "fill-opacity": 0
+        },
+        "legend": [
+            [
+                "parcels",
+                "#ffffff"
+            ]
+        ],
+        "click": {
+            "PARCELID": [
+                true,
+                ""
+            ],
+            "CLASSFP": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "SHAPEAREA": [
+                true,
+                ""
+            ]
+        }
+    },
     "qct_dda": {
         "name": "2026 QCT/DDAs",
         "source_id": "qct_dda_26",
