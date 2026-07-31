@@ -133,6 +133,48 @@
             ]
         }
     },
+    "lex_parcels": {
+        "name": "Lexington Parcels",
+        "source_id": "lex_parcels_2",
+        "url": "mapbox://wodacooper.lexington_parcels",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1.5,
+            "line-color": "#ff3333"
+        },
+        "fill": {
+            "fill-color": "#ff3333",
+            "fill-opacity": 0.2
+        },
+        "legend": [
+            [
+                "parcels",
+                "#ff3333"
+            ]
+        ],
+        "click": {
+            "PARCELID": [
+                true,
+                ""
+            ],
+            "CLASSFP": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "Acreage": [
+                true,
+                ""
+            ]
+        }
+    },
     "qct_dda": {
         "name": "2026 QCT/DDAs",
         "source_id": "qct_dda_26",
