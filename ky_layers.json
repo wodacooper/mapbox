@@ -175,6 +175,48 @@
             ]
         }
     },
+    "bg_parcels": {
+        "name": "Bowling Green Parcels",
+        "source_id": "bg_parcels_3",
+        "url": "mapbox://wodacooper.bowling_green_parcels",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1.5,
+            "line-color": "#000000"
+        },
+        "fill": {
+            "fill-color": "#000000",
+            "fill-opacity": 0.2
+        },
+        "legend": [
+            [
+                "parcels",
+                "#000000"
+            ]
+        ],
+        "click": {
+            "property_id": [
+                true,
+                ""
+            ],
+            "SiteAddress": [
+                true,
+                ""
+            ],
+            "sale_price": [
+                true,
+                ""
+            ],
+            "calc_acres": [
+                true,
+                ""
+            ]
+        }
+    },
     "qct_dda": {
         "name": "2026 QCT/DDAs",
         "source_id": "qct_dda_26",
