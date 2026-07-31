@@ -144,28 +144,28 @@
         "visible": false,
         "line": {
             "line-width": 1.5,
-            "line-color": "#ff3333"
+            "line-color": "#000000"
         },
         "fill": {
-            "fill-color": "#ff3333",
+            "fill-color": "#000000",
             "fill-opacity": 0.2
         },
         "legend": [
             [
                 "parcels",
-                "#ff3333"
+                "#000000"
             ]
         ],
         "click": {
-            "PARCELID": [
+            "PVANUM": [
                 true,
                 ""
             ],
-            "CLASSFP": [
+            "ADDRESS": [
                 true,
                 ""
             ],
-            "GEOID": [
+            "CLASS": [
                 true,
                 ""
             ],
