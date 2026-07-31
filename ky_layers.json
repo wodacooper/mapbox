@@ -94,23 +94,23 @@
     "lous_parcels": {
         "name": "Louisville Parcels",
         "source_id": "ky_parcels_1",
-        "url": "mapbox://wodacooper.louisville_parcels",
+        "url": "mapbox://wodacooper.louisville_parcels_test",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
         "visible": false,
         "line": {
-            "line-width": 1,
-            "line-color": "#ffffff"
+            "line-width": 1.5,
+            "line-color": "#000000"
         },
         "fill": {
-            "fill-opacity": 0
+            "fill-opacity": 0.2
         },
         "legend": [
             [
                 "parcels",
-                "#ffffff"
+                "#000000"
             ]
         ],
         "click": {
@@ -126,7 +126,7 @@
                 true,
                 ""
             ],
-            "SHAPEAREA": [
+            "Acreage": [
                 true,
                 ""
             ]
