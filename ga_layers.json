@@ -486,7 +486,7 @@
         "visible": false,
         "line": {
             "line-width": 1,
-            "line-color": "#ffffff"
+            "line-color": "#000000"
         },
         "fill": {
             "fill-opacity": 0
@@ -494,7 +494,7 @@
         "legend": [
             [
                 "parcels",
-                "#ffffff"
+                "#000000"
             ]
         ],
         "click": {
@@ -577,6 +577,122 @@
                 ""
             ],
             "Owner_Name": [
+                true,
+                ""
+            ]
+        }
+    },
+    "law_parcels": {
+        "name": "Lawrenceville Parcels",
+        "source_id": "ga_parcels_2",
+        "url": "mapbox://wodacooper.lawrenceville_parcels",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1.5,
+            "line-color": "#000000"
+        },
+        "fill": {
+            "fill-color": "#000000",
+            "fill-opacity": 0.2
+        },
+        "legend": [
+            [
+                "parcels",
+                "#000000"
+            ]
+        ],
+        "click": {
+            "PIN": [
+                true,
+                ""
+            ],
+            "LOCADDR": [
+                true,
+                ""
+            ],
+            "PARCELTYPE": [
+                true,
+                ""
+            ],
+            "ZONING": [
+                true,
+                ""
+            ],
+            "CALCULATEDACREAGE": [
+                true,
+                ""
+            ],
+            "LANDVAL1": [
+                true,
+                ""
+            ],
+            "TOTVAL1": [
+                true,
+                ""
+            ],
+            "OWNER1": [
+                true,
+                ""
+            ]
+        }
+    },
+    "suw_parcels": {
+        "name": "Suwanee Parcels",
+        "source_id": "ga_parcels_3",
+        "url": "mapbox://wodacooper.suwanee_parcels",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1.5,
+            "line-color": "#000000"
+        },
+        "fill": {
+            "fill-color": "#000000",
+            "fill-opacity": 0.2
+        },
+        "legend": [
+            [
+                "parcels",
+                "#000000"
+            ]
+        ],
+        "click": {
+            "PIN": [
+                true,
+                ""
+            ],
+            "LOCADDR": [
+                true,
+                ""
+            ],
+            "PARCELTYPE": [
+                true,
+                ""
+            ],
+            "ZONING": [
+                true,
+                ""
+            ],
+            "CALCULATEDACREAGE": [
+                true,
+                ""
+            ],
+            "LANDVAL1": [
+                true,
+                ""
+            ],
+            "TOTVAL1": [
+                true,
+                ""
+            ],
+            "OWNER1": [
                 true,
                 ""
             ]
