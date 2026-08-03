@@ -1,57 +1,4 @@
 {
-    "bus_stops": {
-        "name": "Georgia Bus Stops",
-        "source_id": "all_georgia_bus_stops_source",
-        "url": "mapbox://wodacooper.all_georgia_bus_stops",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "circle": {
-            "circle-radius": 5,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 1
-        },
-
-        "hover": {
-            "name": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-             "name": [
-                true,
-                ""
-            ],
-            "address": [
-                true,
-                ""
-            ],
-            "type": [
-                true,
-                ""
-            ],
-            "lat": [
-                true,
-                ""
-            ],
-            "lng": [
-                true,
-                ""
-            ],
-            "plus_code": [
-                true,
-                ""
-            ],
-            "links": [
-                true,
-                ""
-            ]
-        }
-
-    },
     "new_trus_stops": {
         "name": "Bus and Train Stops Test",
         "source_id": "all_georgia_bus__train_stops_source",
@@ -572,6 +519,64 @@
                 ""
             ],
             "landacres": [
+                true,
+                ""
+            ]
+        }
+    },
+    "cbus_parcels": {
+        "name": "Columbus Parcels",
+        "source_id": "ga_parcels_1",
+        "url": "mapbox://wodacooper.columbus_parcels",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 1.5,
+            "line-color": "#000000"
+        },
+        "fill": {
+            "fill-color": "#000000",
+            "fill-opacity": 0.2
+        },
+        "legend": [
+            [
+                "parcels",
+                "#000000"
+            ]
+        ],
+        "click": {
+            "Property_Number": [
+                true,
+                ""
+            ],
+            "Property_StreetName": [
+                true,
+                ""
+            ],
+            "Property_Class": [
+                true,
+                ""
+            ],
+            "Property_CityCode": [
+                true,
+                ""
+            ],
+            "GISAcreage": [
+                true,
+                ""
+            ],
+            "TaxPIN": [
+                true,
+                ""
+            ],
+            "Zoning": [
+                true,
+                ""
+            ],
+            "Owner_Name": [
                 true,
                 ""
             ]
@@ -3933,110 +3938,6 @@
             "trans_pts":[
                0.0,
                5.0
-            ]
-        }
-    },
-    "ga_transit": {
-        "name": "Transit Test",
-        "source_id": "ga_trans",
-        "url": "mapbox://wodacooper.ga_test2",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "fill": {
-            "fill-color": [
-                "step",
-                [
-                    "get",
-                    "trans_pts"
-                ],
-                "#346b36",
-                1,
-                "#0000ff",
-                2,
-                "#ff0000",
-                3,
-                "#ffff00",
-                4,
-                "#ff00ff",
-                4.5,
-                "#00ff00",
-                5,
-                "#00ffff"
-            ],
-        "fill-opacity": [
-            "step",
-            [
-                "get",
-                "trans_pts"
-            ],
-                0,
-                1,
-                0.6
-            ]
-        },
-        "legend": [
-            [
-                "5 Points",
-                "#00ffff"
-            ],
-            [
-                "4.5 Points",
-                "#00ff00"
-            ],
-            [
-                "4 Points",
-                "#ff00ff"
-            ],
-            [
-                "3 Points",
-                "#ffff00"
-            ],
-            [
-                "2 Points",
-                "#ff0000"
-            ],
-            [
-                "1 Point",
-                "#0000ff"
-            ]
-        ],
-        "hover": {
-            "pool": [
-                true,
-                ""
-            ],
-            "County Name": [
-                true,
-                ""
-            ],
-            "NAMELSAD_1": [
-                true,
-                "City: "
-            ],
-            "trans_pts": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "pool": [
-                true,
-                ""
-            ],
-            "County Name": [
-                true,
-                ""
-            ],
-            "NAMELSAD_1": [
-                true,
-                "City: "
-            ],
-            "trans_pts": [
-                true,
-                ""
             ]
         }
     },
