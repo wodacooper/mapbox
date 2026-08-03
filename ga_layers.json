@@ -475,21 +475,22 @@
             ]
         }
     },
-    "atl_parcels": {
-        "name": "Fulton County Parcels",
-        "source_id": "atl_parcels",
-        "url": "mapbox://wodacooper.atl_parcels",
+    "parcels": {
+        "name": "Parcels",
+        "source_id": "all_parcels",
+        "url": "mapbox://wodacooper.ga_parcels",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
         "visible": false,
         "line": {
-            "line-width": 1,
+            "line-width": 1.5,
             "line-color": "#000000"
         },
         "fill": {
-            "fill-opacity": 0
+            "fill-color": "#000000",
+            "fill-opacity": 0.2
         },
         "legend": [
             [
@@ -521,33 +522,7 @@
             "landacres": [
                 true,
                 ""
-            ]
-        }
-    },
-    "cbus_parcels": {
-        "name": "Columbus Parcels",
-        "source_id": "ga_parcels_1",
-        "url": "mapbox://wodacooper.columbus_parcels",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 1.5,
-            "line-color": "#000000"
-        },
-        "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.2
-        },
-        "legend": [
-            [
-                "parcels",
-                "#000000"
-            ]
-        ],
-        "click": {
+            ],
             "Property_Number": [
                 true,
                 ""
@@ -579,33 +554,7 @@
             "Owner_Name": [
                 true,
                 ""
-            ]
-        }
-    },
-    "law_parcels": {
-        "name": "Lawrenceville Parcels",
-        "source_id": "ga_parcels_2",
-        "url": "mapbox://wodacooper.lawrenceville_parcels",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 1.5,
-            "line-color": "#000000"
-        },
-        "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.2
-        },
-        "legend": [
-            [
-                "parcels",
-                "#000000"
-            ]
-        ],
-        "click": {
+            ],
             "PIN": [
                 true,
                 ""
@@ -638,63 +587,16 @@
                 true,
                 ""
             ]
-        }
-    },
-    "suw_parcels": {
-        "name": "Suwanee Parcels",
-        "source_id": "ga_parcels_3",
-        "url": "mapbox://wodacooper.suwanee_parcels",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
         },
-        "visible": false,
-        "line": {
-            "line-width": 1.5,
-            "line-color": "#000000"
-        },
-        "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.2
-        },
-        "legend": [
-            [
-                "parcels",
-                "#000000"
-            ]
-        ],
-        "click": {
-            "PIN": [
-                true,
-                ""
-            ],
-            "LOCADDR": [
-                true,
-                ""
-            ],
-            "PARCELTYPE": [
-                true,
-                ""
-            ],
-            "ZONING": [
-                true,
-                ""
-            ],
-            "CALCULATEDACREAGE": [
-                true,
-                ""
-            ],
-            "LANDVAL1": [
-                true,
-                ""
-            ],
-            "TOTVAL1": [
-                true,
-                ""
-            ],
-            "OWNER1": [
-                true,
-                ""
+        "cat_filters": {
+            "type": "Cities/Counties"
+            },
+        "cat_filter_vals": {
+            "type": [
+                "atl_parcels",
+                "columbus_parcels",
+                "lawrenceville_parcels",
+                "suwanee_parcels"
             ]
         }
     },
