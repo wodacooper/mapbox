@@ -91,186 +91,10 @@
             ]
         }
     },
-    "lous_parcels": {
-        "name": "Louisville Parcels",
-        "source_id": "ky_parcels_1",
-        "url": "mapbox://wodacooper.louisville_parcels_test",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 1.5,
-            "line-color": "#000000"
-        },
-        "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.2
-        },
-        "legend": [
-            [
-                "parcels",
-                "#000000"
-            ]
-        ],
-        "click": {
-            "PARCELID": [
-                true,
-                ""
-            ],
-            "CLASSFP": [
-                true,
-                ""
-            ],
-            "GEOID": [
-                true,
-                ""
-            ],
-            "Acreage": [
-                true,
-                ""
-            ]
-        }
-    },
-    "lex_parcels": {
-        "name": "Lexington Parcels",
-        "source_id": "lex_parcels_2",
-        "url": "mapbox://wodacooper.lexington_parcels",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 1.5,
-            "line-color": "#000000"
-        },
-        "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.2
-        },
-        "legend": [
-            [
-                "parcels",
-                "#000000"
-            ]
-        ],
-        "click": {
-            "PVANUM": [
-                true,
-                ""
-            ],
-            "ADDRESS": [
-                true,
-                ""
-            ],
-            "CLASS": [
-                true,
-                ""
-            ],
-            "Acreage": [
-                true,
-                ""
-            ]
-        }
-    },
-    "cov_parcels": {
-        "name": "Covington Parcels",
-        "source_id": "cov_parcels_4",
-        "url": "mapbox://wodacooper.covington_test",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 1.5,
-            "line-color": "#000000"
-        },
-        "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.2
-        },
-        "legend": [
-            [
-                "parcels",
-                "#000000"
-            ]
-        ],
-        "click": {
-            "property_id": [
-                true,
-                ""
-            ],
-            "ADDRESS": [
-                true,
-                ""
-            ],
-            "PARCEL_ZIP": [
-                true,
-                ""
-            ],
-            "OWNER_NAME": [
-                true,
-                ""
-            ],
-            "RECD_DATE": [
-                true,
-                ""
-            ],
-            "RECD_PRICE": [
-                true,
-                ""
-            ],
-            "GIS_ACRE": [
-                true,
-                ""
-            ]
-        }
-    },
-    "george_parcels": {
-        "name": "Georgetown Parcels",
-        "source_id": "george_parcels_5",
-        "url": "mapbox://wodacooper.georgetown_parcels",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 1.5,
-            "line-color": "#000000"
-        },
-        "fill": {
-            "fill-color": "#000000",
-            "fill-opacity": 0.2
-        },
-        "legend": [
-            [
-                "parcels",
-                "#000000"
-            ]
-        ],
-        "click": {
-            "GIS_MapID": [
-                true,
-                ""
-            ],
-            "FacilityID": [
-                true,
-                ""
-            ],
-            "Acres": [
-                true,
-                ""
-            ]
-        }
-    },
-    "bg_parcels": {
-        "name": "Bowling Green Parcels",
-        "source_id": "bg_parcels_3",
-        "url": "mapbox://wodacooper.bowling_green_parcels",
+    "parcels": {
+        "name": "City Parcels",
+        "source_id": "all_parcels_",
+        "url": "mapbox://wodacooper.ky_parcels",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -306,6 +130,78 @@
             "calc_acres": [
                 true,
                 ""
+            ],
+            "GIS_MapID": [
+                true,
+                ""
+            ],
+            "FacilityID": [
+                true,
+                ""
+            ],
+            "Acres": [
+                true,
+                ""
+            ],
+            "PVANUM": [
+                true,
+                ""
+            ],
+            "CLASS": [
+                true,
+                ""
+            ],
+            "PARCELID": [
+                true,
+                ""
+            ],
+            "CLASSFP": [
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ],
+            "Acreage": [
+                true,
+                ""
+            ],
+            "ADDRESS": [
+                true,
+                ""
+            ],
+            "PARCEL_ZIP": [
+                true,
+                ""
+            ],
+            "OWNER_NAME": [
+                true,
+                ""
+            ],
+            "RECD_DATE": [
+                true,
+                ""
+            ],
+            "RECD_PRICE": [
+                true,
+                ""
+            ],
+            "GIS_ACRE": [
+                true,
+                ""
+            ]
+        },
+        "cat_filters": {
+            "type": "Cities"
+            },
+        "cat_filter_vals": {
+            "type": [
+                "bowling_green_parcels",
+                "covington_parcels",
+                "georgetown_parcels",
+                "lexington_parcels",
+                "louisville_parcels"
             ]
         }
     },
@@ -1844,7 +1740,6 @@
             ]
         }
     }
-
 }
 
 
