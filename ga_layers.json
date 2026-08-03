@@ -499,10 +499,6 @@
                 true,
                 ""
             ],
-            "Acreage": [
-                true,
-                ""
-            ],
             "OWNER": [
                 true,
                 ""
@@ -512,6 +508,14 @@
                 ""
             ],
             "ZoningCode": [
+                true,
+                ""
+            ],
+            "GlobalID": [
+                true,
+                ""
+            ],
+            "Acreage": [
                 true,
                 ""
             ]
