@@ -486,7 +486,36 @@
             "OWNER1": [
                 true,
                 ""
+            ],
+            "Parcel_No": [
+                true,
+                ""
+            ],
+            "Address": [
+                true,
+                ""
+            ],
+            "Zoned": [
+                true,
+                ""
+            ],
+            "Acreage": [
+                true,
+                ""
+            ],
+            "OWNER": [
+                true,
+                ""
+            ],
+            "Tax_Number": [
+                true,
+                ""
+            ],
+            "ZoningCode": [
+                true,
+                ""
             ]
+
         },
         "cat_filters": {
             "type": "Cities"
@@ -495,8 +524,10 @@
             "type": [
                 "atlanta_parcels",
                 "columbus_parcels",
+                "lagrange_parcels",
                 "lawrenceville_parcels",
-                "suwanee_parcels"
+                "suwanee_parcels",
+                "warner_robins_parcels"
             ]
         }
     },
