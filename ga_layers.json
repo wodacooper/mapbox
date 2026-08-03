@@ -375,108 +375,8 @@
             "bf_bldg_area":[251,5900000]
         }
     },
-    "atl_tads": {
-        "name": "Atlanta TADs",
-        "source_id": "atl_tads_source",
-        "url": "mapbox://wodacooper.atl_tads",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-width": 3,
-            "line-color": [
-                "match",
-                [
-                    "get",
-                    "ZONEDESC"
-                ],
-                "Westside",
-                "#7b634b",
-                "Perry/Bolton",
-                "#f2d17e",
-                "Eastside",
-                "#4A148C",
-                "Atlantic Station",
-                "#689F38",
-                "Princeton Lakes",
-                "#f44336",
-                "Beltline",
-                "#000000",
-                "Metropolitan Pkwy",
-                "#2196f3",
-                "Stadium",
-                "#fc03e3",
-                "Hollowell / Martin Luther King",
-                "#FF9800",
-                "Campbellton",
-                "#e2e60b",
-                "#FFFFFF"
-            ]
-        },
-        "fill": {
-            "fill-opacity": 0.2,
-            "fill-color": [
-                "match",
-                [
-                    "get",
-                    "ZONEDESC"
-                ],
-                "Westside",
-                "#7b634b",
-                "Perry/Bolton",
-                "#f2d17e",
-                "Eastside",
-                "#4A148C",
-                "Atlantic Station",
-                "#689F38",
-                "Princeton Lakes",
-                "#f44336",
-                "Beltline",
-                "#000000",
-                "Metropolitan Pkwy",
-                "#2196f3",
-                "Stadium",
-                "#fc03e3",
-                "Hollowell / Martin Luther King",
-                "#FF9800",
-                "Campbellton",
-                "#e2e60b",
-                "#FFFFFF"
-            ]
-        },
-        "legend": [
-                ["Westside",
-                "#7b634b"],
-                ["Perry/Bolton",
-                "#f2d17e"],
-                ["Eastside",
-                "#4A148C"],
-                ["Atlantic Station",
-                "#689F38"],
-                ["Princeton Lakes",
-                "#f44336"],
-                ["Beltline",
-                "#000000"],
-                ["Metropolitan Pkwy",
-                "#2196f3"],
-                ["Stadium",
-                "#fc03e3"],
-                ["Hollowell / Martin Luther King",
-                "#FF9800"],
-                ["Campbellton",
-                "#e2e60b"]
-        ],
-        "hover": {
-            "ZONEDESC": [
-                true,
-                "TAD name"
-            ]
-        }
-    },
     "parcels": {
-        "name": "Parcels",
+        "name": "City/County Parcels",
         "source_id": "all_parcels",
         "url": "mapbox://wodacooper.ga_parcels",
         "source_layer": "hello_world",
@@ -597,6 +497,106 @@
                 "columbus_parcels",
                 "lawrenceville_parcels",
                 "suwanee_parcels"
+            ]
+        }
+    },
+    "atl_tads": {
+        "name": "Atlanta TADs",
+        "source_id": "atl_tads_source",
+        "url": "mapbox://wodacooper.atl_tads",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-width": 3,
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "ZONEDESC"
+                ],
+                "Westside",
+                "#7b634b",
+                "Perry/Bolton",
+                "#f2d17e",
+                "Eastside",
+                "#4A148C",
+                "Atlantic Station",
+                "#689F38",
+                "Princeton Lakes",
+                "#f44336",
+                "Beltline",
+                "#000000",
+                "Metropolitan Pkwy",
+                "#2196f3",
+                "Stadium",
+                "#fc03e3",
+                "Hollowell / Martin Luther King",
+                "#FF9800",
+                "Campbellton",
+                "#e2e60b",
+                "#FFFFFF"
+            ]
+        },
+        "fill": {
+            "fill-opacity": 0.2,
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "ZONEDESC"
+                ],
+                "Westside",
+                "#7b634b",
+                "Perry/Bolton",
+                "#f2d17e",
+                "Eastside",
+                "#4A148C",
+                "Atlantic Station",
+                "#689F38",
+                "Princeton Lakes",
+                "#f44336",
+                "Beltline",
+                "#000000",
+                "Metropolitan Pkwy",
+                "#2196f3",
+                "Stadium",
+                "#fc03e3",
+                "Hollowell / Martin Luther King",
+                "#FF9800",
+                "Campbellton",
+                "#e2e60b",
+                "#FFFFFF"
+            ]
+        },
+        "legend": [
+                ["Westside",
+                "#7b634b"],
+                ["Perry/Bolton",
+                "#f2d17e"],
+                ["Eastside",
+                "#4A148C"],
+                ["Atlantic Station",
+                "#689F38"],
+                ["Princeton Lakes",
+                "#f44336"],
+                ["Beltline",
+                "#000000"],
+                ["Metropolitan Pkwy",
+                "#2196f3"],
+                ["Stadium",
+                "#fc03e3"],
+                ["Hollowell / Martin Luther King",
+                "#FF9800"],
+                ["Campbellton",
+                "#e2e60b"]
+        ],
+        "hover": {
+            "ZONEDESC": [
+                true,
+                "TAD name"
             ]
         }
     },
