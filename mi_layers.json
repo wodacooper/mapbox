@@ -1122,6 +1122,53 @@
         }
         
     },
+    "population": {
+    "name": "Rural",
+    "source_id": "rural_35k",
+    "url": "mapbox://wodacooper.mi_rural_080426",
+    "source_layer": "hello_world",
+
+    "layout": {
+        "visibility": "none"
+    },
+    "visible": false,
+
+    "filter": [
+        "==",
+        ["get", "rural"],
+        "yes"
+    ],
+
+    "fill": {
+        "fill-color": [
+            "#23619F"
+        ],
+        "fill-opacity": [
+            0.3
+        ]
+    },
+
+    "legend": [
+        [
+            "Rural Areas",
+            "#23619F"
+        ]
+    ],
+
+    "hover": {
+        "B01003_001E_2": [
+            true,
+            "Pop: "
+        ]
+    },
+
+    "click": {
+        "B01003_001E_2": [
+            true,
+            "Pop: "
+        ]
+    }
+    },
     "median_income": {
         "name": "County Median Income",
         "source_id": "mi_county_medians_source",
