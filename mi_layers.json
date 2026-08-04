@@ -1133,15 +1133,13 @@
     },
     "visible": false,
 
-    "filter": [
-        "==",
-        ["get", "rural"],
-        "yes"
-    ],
-
     "fill": {
         "fill-color": [
-            "#23619F"
+            "match",
+            ["get", "rural"],
+            "yes",
+            "#23619F",
+            "#000000"
         ],
         "fill-opacity": [
             0.3
@@ -1156,16 +1154,32 @@
     ],
 
     "hover": {
+        "B01003_001E_1": [
+            true,
+            "Place Pop: "
+        ],
         "B01003_001E_2": [
             true,
-            "Pop: "
+            "Township Pop: "
         ]
     },
 
     "click": {
+        "B01003_001E_1": [
+            true,
+            "Place Pop: "
+        ],
         "B01003_001E_2": [
             true,
-            "Pop: "
+            "Township Pop: "
+        ],
+        "rural": [
+            true,
+            ""
+        ],
+        "urban": [
+            true,
+            ""
         ]
     }
     },
