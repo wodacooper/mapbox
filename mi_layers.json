@@ -1062,21 +1062,13 @@
                     "get",
                     "Name"
                 ],
-                "Marshall", "#FF88DF",
-                "Ann Arbor", "#FF88DF",
-                "Zeeland", "#FF88DF",
-                "Kalkaska", "#FF88DF",
-                "Lansing", "#FF88DF",
+                "Covert", "#FF88DF",
                  "#000000"
             ],
             "fill-opacity": [
                 "match",
                 ["get", "Name"],
-                "Marshall", 0.8,
-                "Ann Arbor", 0.8,
-                "Zeeland", 0.8,
-                "Kalkaska", 0.8,
-                 "Lansing", 0.8,
+                "Covert", 0.8,
                 0
             ]
         }
