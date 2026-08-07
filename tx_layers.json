@@ -219,8 +219,8 @@
     },
     "score": {
         "name": "2026 Score",
-        "source_id": "tx_26_source_fill16",
-        "url": "mapbox://wodacooper.tx_26_073026",
+        "source_id": "tx_26_source_fill",
+        "url": "mapbox://wodacooper.tx_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -2609,7 +2609,7 @@
     "Test": {
         "name": "2026 Score Standardized",
         "source_id": "standardized",
-        "url": "mapbox://wodacooper.tx_26_073026",
+        "url": "mapbox://wodacooper.tx_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
