@@ -1090,12 +1090,8 @@
                     "get",
                     "Name"
                 ],
-                "Marshall","#0077CC",
-                "Ann Arbor", "#0077CC",
-                "Zeeland", "#0077CC",
-                "Kalkaska", "#0077CC",
-                "Lansing", "#0077CC",
-                "rgba(0,0,0,0)"
+                "Covert","#0077CC",
+                "#000000"
             ],
             "line-width":2
         },
@@ -1108,7 +1104,7 @@
                 ],
                 "15-mile","#559922",
                 "25-mile","#CC8400",
-                "rgba(0,0,0,0)"
+                "000000"
             ],
             "fill-opacity":0.5
         }
