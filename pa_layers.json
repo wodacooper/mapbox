@@ -127,9 +127,9 @@
         "url": "mapbox://wodacooper.pa_25",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -319,6 +319,127 @@
                 16.0
             ],
             "Senior Score": [
+                0.0,
+                17.0
+            ]
+        }
+    },
+    "score_27": {
+        "name": "Score 2027",
+        "source_id": "pa_27",
+        "url": "mapbox://wodacooper.pa_27",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                8,
+                "#70534e",
+                9,
+                "#346b36",
+                10,
+                "#0000ff",
+                11,
+                "#9207fc",
+                12,
+                "#ff0000",
+                13,
+                "#fe8103",
+                14,
+                "#ffff00",
+                15,
+                "#ff00ff",
+                16,
+                "#00ff00",
+                17,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        
+        "cat_filters": {
+            "set_aside": ""
+        },
+        "num_filters": {
+            "score": "",
+            "gen_oc_score": "General Occupancy Score",
+            "senior_score": "Senior Score"
+        },
+        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
+        "hover": {
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME_1": [
+                true,
+                "city"
+            ],
+            "score": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "set_aside": [
+                true,
+                ""
+            ],
+            "county": [
+                true,
+                ""
+            ],
+            "NAME_1": [
+                true,
+                "city"
+            ],
+            "gen_oc_score": [
+                true,
+                "General Occupancy Score"
+            ],
+            "senior_score": [
+                true,
+                "Senior Score"
+            ],
+            "trans_pts":[
+                true,
+                ""
+            ],
+            "GEOID": [
+                true,
+                ""
+            ]
+
+        },
+        "cat_filter_vals": {
+           
+            "set_aside": [
+                "Family",
+                "Senior"
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                17.0
+            ],
+            "gen_oc_score": [
+                0.0,
+                16.0
+            ],
+            "senior_score": [
                 0.0,
                 17.0
             ]
@@ -559,6 +680,7 @@
             ]
         }
     },
+    
     "score_family_25": {
         "name": "General Occupancy Score 2025",
         "source_id": "pa_25",
