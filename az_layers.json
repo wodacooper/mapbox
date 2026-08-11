@@ -169,17 +169,17 @@
         },
         "visible": true,
         "fill": {
-            "fill-color": "#0000ff",
+            "fill-color": "#00ff00",
             "fill-opacity": 0.3
         },
         "line": {
             "line-width": 2,
-            "line-color": "#0000ff"
+            "line-color": "#00ff00"
         },
         "legend": [
             [
                 "Opportunity Zones 2.0",
-                "#0000ff"
+                "#00ff00"
             ]
         ]
     },
