@@ -423,7 +423,7 @@
         }
     },
     "gen_oc_score_27": {
-        "name": "General Occupancy Score 2027",
+        "name": "General Occupancy 2027",
         "source_id": "pa_27",
         "url": "mapbox://wodacooper.pa_27",
         "source_layer": "hello_world",
@@ -493,7 +493,7 @@
         }
     },
     "senior_score_27": {
-        "name": "Senior Score 2027",
+        "name": "Senior 2027",
         "source_id": "pa_27",
         "url": "mapbox://wodacooper.pa_27",
         "source_layer": "hello_world",
