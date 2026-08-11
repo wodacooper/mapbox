@@ -341,25 +341,11 @@
                     "score"
                 ],
                 "#ffffff",
-                8,
-                "#70534e",
-                9,
-                "#346b36",
-                10,
-                "#0000ff",
-                11,
-                "#9207fc",
-                12,
-                "#ff0000",
-                13,
-                "#fe8103",
-                14,
+                5,
                 "#ffff00",
-                15,
-                "#ff00ff",
-                16,
+                10,
                 "#00ff00",
-                17,
+                15,
                 "#00ffff"
             ],
             "fill-opacity": 0.6
@@ -373,7 +359,7 @@
             "gen_oc_score": "General Occupancy Score",
             "senior_score": "Senior Score"
         },
-        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
+        "legend": [["15", "#00ffff"], ["10", "#00ff00"], ["5", "#ffff00"], ["0", "#ffffff"]],
         "hover": {
             "set_aside": [
                 true,
@@ -442,9 +428,9 @@
         "url": "mapbox://wodacooper.pa_27",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -453,25 +439,11 @@
                     "gen_oc_score"
                 ],
                 "#ffffff",
-                8,
-                "#70534e",
-                9,
-                "#346b36",
-                10,
-                "#0000ff",
-                11,
-                "#9207fc",
-                12,
-                "#ff0000",
-                13,
-                "#fe8103",
-                14,
+                5,
                 "#ffff00",
-                15,
-                "#ff00ff",
-                16,
+                10,
                 "#00ff00",
-                17,
+                15,
                 "#00ffff"
             ],
             "fill-opacity": 0.6
@@ -480,7 +452,7 @@
         "num_filters": {
             "gen_oc_score": "General Occupancy Score"
         },
-        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
+        "legend": [["15", "#00ffff"], ["10", "#00ff00"], ["5", "#ffff00"], ["0", "#ffffff"]],
         "hover": {
 
             "NAME_1": [
@@ -526,9 +498,9 @@
         "url": "mapbox://wodacooper.pa_27",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -537,25 +509,11 @@
                     "senior_score"
                 ],
                 "#ffffff",
-                8,
-                "#70534e",
-                9,
-                "#346b36",
-                10,
-                "#0000ff",
-                11,
-                "#9207fc",
-                12,
-                "#ff0000",
-                13,
-                "#fe8103",
-                14,
+                5,
                 "#ffff00",
-                15,
-                "#ff00ff",
-                16,
+                10,
                 "#00ff00",
-                17,
+                15,
                 "#00ffff"
             ],
             "fill-opacity": 0.6
@@ -564,7 +522,7 @@
         "num_filters": {
             "senior_score": "Senior Score"
         },
-        "legend": [["17", "#00ffff"], ["16", "#00ff00"], ["15", "#ff00ff"], ["14", "#ffff00"], ["13", "#fe8103"], ["12", "#ff0000"], ["11", "#9207fc"], ["10", "#0000ff"], ["9", "#346b36"], ["8", "#70534e"], ["<8", "#ffffff"]],
+        "legend": [["15", "#00ffff"], ["10", "#00ff00"], ["5", "#ffff00"], ["0", "#ffffff"]],
         "hover": {
             "NAME_1": [
                 true,
@@ -602,7 +560,5 @@
         }
     }
 }
-
-
 
 
