@@ -440,9 +440,9 @@
                 ],
                 "#ffffff",
                 5,
-                "#ffff00",
+                "#346b36",
                 10,
-                "#00ff00",
+                "#0000ff",
                 15,
                 "#00ffff"
             ],
@@ -452,7 +452,7 @@
         "num_filters": {
             "gen_oc_score": "General Occupancy Score"
         },
-        "legend": [["15", "#00ffff"], ["10", "#00ff00"], ["5", "#ffff00"], ["0", "#ffffff"]],
+        "legend": [["15", "#00ffff"], ["10", "#0000ff"], ["5", "#346b36"], ["0", "#ffffff"]],
         "hover": {
 
             "NAME_1": [
@@ -510,9 +510,9 @@
                 ],
                 "#ffffff",
                 5,
-                "#ffff00",
+                "#346b36",
                 10,
-                "#00ff00",
+                "#0000ff",
                 15,
                 "#00ffff"
             ],
@@ -522,7 +522,7 @@
         "num_filters": {
             "senior_score": "Senior Score"
         },
-        "legend": [["15", "#00ffff"], ["10", "#00ff00"], ["5", "#ffff00"], ["0", "#ffffff"]],
+        "legend": [["15", "#00ffff"], ["10", "#0000ff"], ["5", "#346b36"], ["0", "#ffffff"]],
         "hover": {
             "NAME_1": [
                 true,
