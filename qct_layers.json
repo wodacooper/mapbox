@@ -1,8 +1,8 @@
 {
     "qct_26_predictions": {
-        "name": "2026 QCT predictions",
-        "source_id": "metro_dda_26_source",
-        "url": "mapbox://wodacooper.metro_dda_26",
+        "name": "2027 QCT predictions",
+        "source_id": "qct_27_predict_source",
+        "url": "mapbox://wodacooper.qct_27_predict",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -13,9 +13,9 @@
                 "match",
                 [
                     "get",
-                    "QCT"
+                    "prediction"
                 ],
-                "Remains a QCT",
+                "Remains QCT",
                 "#3c6bc9",
                 "No Longer QCT",
                 "#d92e41",
@@ -26,7 +26,7 @@
             "fill-opacity": [
             "match",
             ["get", "QCT"],
-            "Remains a QCT", 0.6,
+            "Remains QCT", 0.6,
             "No Longer QCT", 0.6,
             "New QCT", 0.6,
             0  
@@ -34,7 +34,7 @@
         },
         "legend": [
               [
-                  "Remains a QCT",
+                  "Remains QCT",
                   "#3c6bc9"
               ],
               [
@@ -58,9 +58,9 @@
         "url": "mapbox://wodacooper.metro_dda_26",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "legend_group": "dda_2026",
         "fill": {
             "fill-color": [
