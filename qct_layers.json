@@ -25,7 +25,7 @@
             ],
             "fill-opacity": [
             "match",
-            ["get", "QCT"],
+            ["get", "prediction"],
             "Remains QCT", 0.6,
             "No Longer QCT", 0.6,
             "New QCT", 0.6,
@@ -48,7 +48,7 @@
         ],
         "click":{
             "GEOID":[true,"Census Tract"], 
-            "QCT":[true,"QCT Prediction"]
+            "prediction":[true,"QCT Prediction"]
         }
     },
 
