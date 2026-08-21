@@ -1090,6 +1090,10 @@
             ]
         ],
         "hover": {
+            "Municipality": [
+                true,
+                ""
+            ],
             "City Designation": [
                 true,
                 ""
