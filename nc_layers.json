@@ -334,33 +334,68 @@
             ]
     }
     },
-    "cities": {
-        "name": "Cities",
-        "source_id": "nc_cities_21",
-        "url": "mapbox://wodacooper.nc_cities_21",
+    "municipalites": {
+        "name": "City Designations",
+        "source_id": "nc_designations",
+        "url": "mapbox://wodacooper.nc_designations",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
         "visible": false,
         "line": {
-            "line-color": "#FFFFFF"
+            "line-color": [
+            "match",
+                [
+                    "get",
+                    "City Designation"
+                ],
+                "Small Town",
+                "#ff0000",
+                "#FFFFFF"
+            ],
+            "line-width": 1
         },
+        
         "fill": {
-            "fill-opacity": 0.4
+            "fill-color": "#ffffff",
+            "fill-opacity": 0
         },
         "legend": [
             [
-                "City Limits",
+                "Small Town",
+                "#ff0000"
+            ],
+            [
+                "Not a Small Town",
                 "#ffffff"
             ]
         ],
         "hover": {
-            "namelsad": [
+            "Municipality": [
+                true,
+                ""
+            ],
+            "City Designation": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Municipality": [
+                true,
+                ""
+            ],
+            "City Designation": [
+                true,
+                ""
+            ],
+            "Total_Population": [
                 true,
                 ""
             ]
         }
+
     },
     "nc_raleigh_nofa": {
         "name": "Raleigh NOFA",
@@ -1051,69 +1086,6 @@
                 "West"
             ]
         }
-    },
-    "municipalites": {
-        "name": "City Designations",
-        "source_id": "nc_designations",
-        "url": "mapbox://wodacooper.nc_designations",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-color": [
-            "match",
-                [
-                    "get",
-                    "City Designation"
-                ],
-                "Small Town",
-                "#ff0000",
-                "#FFFFFF"
-            ],
-            "line-width": 1
-        },
-        
-        "fill": {
-            "fill-color": "#ffffff",
-            "fill-opacity": 0
-        },
-        "legend": [
-            [
-                "Small Town",
-                "#ff0000"
-            ],
-            [
-                "Not a Small Town",
-                "#ffffff"
-            ]
-        ],
-        "hover": {
-            "Municipality": [
-                true,
-                ""
-            ],
-            "City Designation": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "Municipality": [
-                true,
-                ""
-            ],
-            "City Designation": [
-                true,
-                ""
-            ],
-            "Total_Population": [
-                true,
-                ""
-            ]
-        }
-
     }
     
 }
