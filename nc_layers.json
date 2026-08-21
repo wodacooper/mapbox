@@ -1051,5 +1051,37 @@
                 "West"
             ]
         }
-    }  
+    },
+    "municipalites": {
+        "name": "City Designations",
+        "source_id": "nc_designations",
+        "url": "mapbox://wodacooper.nc_designations",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-color": [
+            "match",
+                [
+                    "get",
+                    "City Designation"
+                ],
+                "Small Town",
+                "#ff0000",
+                "#FFFFFF"
+            ],
+            "line-width": 0.5,
+        "legend": [
+            [
+                "Small Town",
+                "#ff0000"
+            ],
+            [
+                "Not a Small Town",
+                "#ffffff"
+            ]
+        ]
+        }
 }
