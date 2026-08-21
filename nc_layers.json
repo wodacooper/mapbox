@@ -1072,7 +1072,8 @@
                 "#ff0000",
                 "#FFFFFF"
             ],
-            "line-width": 0.5,
+            "line-width": 0.5
+        },
         "legend": [
             [
                 "Small Town",
@@ -1083,5 +1084,5 @@
                 "#ffffff"
             ]
         ]
-        }
+    }
 }
