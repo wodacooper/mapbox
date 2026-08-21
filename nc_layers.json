@@ -1074,6 +1074,11 @@
             ],
             "line-width": 1
         },
+        
+        "fill": {
+            "fill-color": "#ffffff",
+            "fill-opacity": 0
+        },
         "legend": [
             [
                 "Small Town",
@@ -1085,7 +1090,7 @@
             ]
         ],
         "hover": {
-            "Designation": [
+            "City Designation": [
                 true,
                 ""
             ]
@@ -1095,7 +1100,7 @@
                 true,
                 ""
             ],
-            "Designation": [
+            "City Designation": [
                 true,
                 ""
             ],
