@@ -1072,7 +1072,7 @@
                 "#ff0000",
                 "#FFFFFF"
             ],
-            "line-width": 0.5
+            "line-width": 1
         },
         "legend": [
             [
@@ -1083,6 +1083,28 @@
                 "Not a Small Town",
                 "#ffffff"
             ]
-        ]
+        ],
+        "hover": {
+            "Designation": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "Municipality": [
+                true,
+                ""
+            ],
+            "Designation": [
+                true,
+                ""
+            ],
+            "Total_Population": [
+                true,
+                ""
+            ]
+        }
+
     }
+    
 }
