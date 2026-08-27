@@ -1,6 +1,6 @@
 {
     "Prev Projects": {
-        "name": "Previous Projects1",
+        "name": "Previous Projects",
         "source_id": "georgia_IL_Projects_v6_source",
         "url": "mapbox://wodacooper.IL_Projects_v6",
         "source_layer": "hello_world",
@@ -3852,7 +3852,7 @@
                     "get",
                     "score"
                 ],
-                0,
+                0.2,
                 5,
                 0.6
             ]
@@ -3904,7 +3904,7 @@
                 "#9e9e9e"
             ],
             [
-                "5-9",
+                "<9",
                 "#ffffff"
             ]
         ],
