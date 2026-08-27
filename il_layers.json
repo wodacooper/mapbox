@@ -9287,9 +9287,9 @@
         "url": "mapbox://wodacooper.il_27",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
@@ -9413,8 +9413,17 @@
                 true,
                 ""
             ]
+        },
+        "num_filter_vals": {
+            "score": [
+                3,
+                18
+            ],
+            "op_zone":[
+                0,
+                2
+            ]
         }
-    
     }
 }
 
