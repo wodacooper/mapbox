@@ -9295,7 +9295,7 @@
                 "step",
                 [
                     "get",
-                    "gen_score"
+                    "score"
                 ],
                 "#ffffff",
                 9,
@@ -9323,7 +9323,7 @@
                 "step",
                 [
                     "get",
-                    "gen_score"
+                    "score"
                 ],
                 0,
                 5,
