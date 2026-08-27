@@ -9330,9 +9330,6 @@
                 0.6
             ]
         },
-        "cat_filters": {
-
-        },
         "num_filters": {
             "score": "",
             "op_zone":""
@@ -9416,10 +9413,6 @@
                 true,
                 ""
             ]
-        },
-        "cat_filter_vals": {
-            
-
         }
     
     }
