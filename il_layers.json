@@ -1,6 +1,6 @@
 {
     "Prev Projects": {
-        "name": "Previous Projects",
+        "name": "Previous Projects1",
         "source_id": "georgia_IL_Projects_v6_source",
         "url": "mapbox://wodacooper.IL_Projects_v6",
         "source_layer": "hello_world",
@@ -3805,6 +3805,147 @@
             "gen_score": [
                 2.0,
                 28.0
+            ]
+        }
+    },
+    "score_27": {
+        "name": "2027 Score Test",
+        "source_id": "il_27_source",
+        "url": "mapbox://wodacooper.il_27",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                9,
+                "#9e9e9e",
+                10,
+                "#70534e",
+                11,
+                "#346b36",
+                12,
+                "#0000ff",
+                13,
+                "#ff0000",
+                14,
+                "#fe8103",
+                15,
+                "#ffff00",
+                16,
+                "#ff00ff",
+                17,
+                "#00ff00",
+                18,
+                "#00ffff"
+            ],
+            "fill-opacity": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                0,
+                5,
+                0.6
+            ]
+        },
+        "cat_filters": {},
+        "cat_filter_vals": {},
+        "num_filters": {
+            "score": ""
+        },
+        "legend": [
+            [
+                "18",
+                "#00ffff"
+            ],
+            [
+                "17",
+                "#00ff00"
+            ],
+            [
+                "16",
+                "#ff00ff"
+            ],
+            [
+                "15",
+                "#ffff00"
+            ],
+            [
+                "14",
+                "#fe8103"
+            ],
+            [
+                "13",
+                "#ff0000"
+            ],
+            [
+                "12",
+                "#0000ff"
+            ],
+            [
+                "11",
+                "#346b36"
+            ],
+            [
+                "10",
+                "#70534e"
+            ],
+            [
+                "9",
+                "#9e9e9e"
+            ],
+            [
+                "5-9",
+                "#ffffff"
+            ]
+        ],
+        "hover": {
+            "score": [
+                true,
+                ""
+            ]
+            
+        },
+        "click": {
+            
+            "score": [
+                true,
+                ""
+            ],
+            "Total_ARI_2026_weighted": [
+                true,
+                "ARI_pts"
+            ],
+            "otm_pts": [
+                true,
+                ""
+            ],
+            "QOLI_Score": [
+                true,
+                ""
+            ],
+            "aff_score": [
+                true,
+                ""
+            ],
+            "op_zone": [
+                true,
+                ""
+            ]
+        },
+        "num_filter_vals": {
+            "score": [
+                3,
+                18
             ]
         }
     },
@@ -9280,152 +9421,6 @@
             ]
         }
        
-    },
-    "score_27": {
-        "name": "2027 Score Test",
-        "source_id": "il_27_source",
-        "url": "mapbox://wodacooper.il_27",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "fill": {
-            "fill-color": [
-                "step",
-                [
-                    "get",
-                    "score"
-                ],
-                "#ffffff",
-                9,
-                "#9e9e9e",
-                10,
-                "#70534e",
-                11,
-                "#346b36",
-                12,
-                "#0000ff",
-                13,
-                "#ff0000",
-                14,
-                "#fe8103",
-                15,
-                "#ffff00",
-                16,
-                "#ff00ff",
-                17,
-                "#00ff00",
-                18,
-                "#00ffff"
-            ],
-            "fill-opacity": [
-                "step",
-                [
-                    "get",
-                    "score"
-                ],
-                0,
-                5,
-                0.6
-            ]
-        },
-        "cat_filters": {},
-        "cat_filter_vals": {},
-        "num_filters": {
-            "score": "",
-            "op_zone":""
-        },
-        "legend": [
-            [
-                "18",
-                "#00ffff"
-            ],
-            [
-                "17",
-                "#00ff00"
-            ],
-            [
-                "16",
-                "#ff00ff"
-            ],
-            [
-                "15",
-                "#ffff00"
-            ],
-            [
-                "14",
-                "#fe8103"
-            ],
-            [
-                "13",
-                "#ff0000"
-            ],
-            [
-                "12",
-                "#0000ff"
-            ],
-            [
-                "11",
-                "#346b36"
-            ],
-            [
-                "10",
-                "#70534e"
-            ],
-            [
-                "9",
-                "#9e9e9e"
-            ],
-            [
-                "5-9",
-                "#ffffff"
-            ]
-        ],
-        "hover": {
-            "score": [
-                true,
-                ""
-            ]
-            
-        },
-        "click": {
-            
-            "score": [
-                true,
-                ""
-            ],
-            "Total_ARI_2026_weighted": [
-                true,
-                "ARI_pts"
-            ],
-            "otm_pts": [
-                true,
-                ""
-            ],
-            "QOLI_Score": [
-                true,
-                ""
-            ],
-            "aff_score": [
-                true,
-                ""
-            ],
-            "op_zone": [
-                true,
-                ""
-            ]
-        },
-        "num_filter_vals": {
-            "score": [
-                3,
-                18
-            ],
-            "op_zone":[
-                0,
-                2
-            ]
-        }
     }
 }
 
