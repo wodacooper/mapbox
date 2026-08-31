@@ -817,8 +817,8 @@
     },
     "test": {
         "name": "2027 Rank Pool Standardized",
-        "source_id": "nc_27_saucing",
-        "url": "mapbox://wodacooper.nc_test",
+        "source_id": "nc_27",
+        "url": "mapbox://wodacooper.nc_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
