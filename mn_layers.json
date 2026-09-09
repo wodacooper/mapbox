@@ -576,7 +576,7 @@
         }
     },
     "eligible_811": {
-        "name": "811 Eligible Counties1",
+        "name": "811 Eligible Counties",
         "source_id": "mn_811_source",
         "url": "mapbox://wodacooper.mn_811",
         "source_layer": "hello_world",
@@ -591,8 +591,8 @@
                     "get",
                     "811_Eligible"
                 ],
-                "#b06500",
                 "Yes",
+                "#b06500",
                 "#ffffff"
             ],
             "fill-opacity":[
@@ -601,8 +601,8 @@
                     "get",
                     "811_Eligible"
                 ],
-                0.6,
                 "Yes",
+                0.6,
                 0.0
             ]
         },
