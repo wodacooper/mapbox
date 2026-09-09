@@ -574,6 +574,73 @@
                 98.0
             ]
         }
+    },
+    "811": {
+        "name": "811 Eligible Counties",
+        "source_id": "811_source",
+        "url": "mapbox://wodacooper.mn_811",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "811_Eligible"
+                ],
+                "#b06500",
+                "Yes",
+                "#ffffff"
+            ],
+            "fill-opacity":[
+                "match",
+                [
+                    "get",
+                    "811_Eligible"
+                ],
+                0.6,
+                "Yes",
+                0.0
+            ]
+        },
+        
+        "legend": [
+            [
+                "811_Eligible",
+                "#b06500"
+            ]
+        ],
+        "hover": {
+            "NAME": [
+                true,
+                "County Name"
+            ],
+            "811_Eligible": [
+                true,
+                ""
+            ],
+            "Number of MHM Providers": [
+                true,
+                ""
+            ]
+        },
+        "NAME": {
+            "County": [
+                true,
+                "County Name"
+            ],
+            "811_Eligible": [
+                true,
+                ""
+            ],
+            "Number of MHM Providers": [
+                true,
+                ""
+            ]
+        }
     }
 }
 
