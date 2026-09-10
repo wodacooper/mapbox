@@ -327,7 +327,7 @@
     "score_27": {
         "name": "Score 2027",
         "source_id": "pa_27",
-        "url": "mapbox://wodacooper.pa_27",
+        "url": "mapbox://wodacooper.pa_27_091026",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
@@ -410,22 +410,22 @@
         "num_filter_vals": {
             "score": [
                 0.0,
-                17.0
+                15.0
             ],
             "gen_oc_score": [
                 0.0,
-                16.0
+                15.0
             ],
             "senior_score": [
                 0.0,
-                17.0
+                15.0
             ]
         }
     },
     "gen_oc_score_27": {
         "name": "General Occupancy 2027",
-        "source_id": "pa_27",
-        "url": "mapbox://wodacooper.pa_27",
+        "source_id": "pa_27_general",
+        "url": "mapbox://wodacooper.pa_27_091026",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -494,8 +494,8 @@
     },
     "senior_score_27": {
         "name": "Senior 2027",
-        "source_id": "pa_27",
-        "url": "mapbox://wodacooper.pa_27",
+        "source_id": "pa_27_senior",
+        "url": "mapbox://wodacooper.pa_27_091026",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
