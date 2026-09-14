@@ -1,8 +1,8 @@
 {
     "amenities": {
-        "name": "Amenities",
+        "name": "Amenities1",
         "source_id": "tx_amenities_source",
-        "url": "mapbox://wodacooper.tx_amenities",
+        "url": "mapbox://wodacooper.tx_amenities_091426",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -47,23 +47,27 @@
         ],
         "hover":{
             "School Name":[true,""],
-            "Pharmacy Name":[true,""],
-            "Store_Name":[true,""],
-            "name":[true,""],
-            "query":[true,"Address"],
-            "Address":[true,""]   
-        },
-        "click":{
-            "School Name":[true,""],
-            "Pharmacy Name":[true,""],
+            "PHARMACY_NAME":[true,""],
             "Store_Name":[true,""],
             "name":[true,""],
             "query":[true,"Address"],
             "Address":[true,""],
+            "ADDRESS1":[true,""]   
+        },
+        "click":{
+            "School Name":[true,""],
+            "PHARMACY_NAME":[true,""],
+            "Store_Name":[true,""],
+            "name":[true,""],
+            "query":[true,"Address"],
+            "Address":[true,""],
+            "ADDRESS1":[true,""],
             "School City":[true,""],
             "School Zip":[true,""],
             "City":[true,""],
-            "Zip_Code":[true,""]
+            "Zip_Code":[true,""],
+            "CITY":[true,""],
+            "ZIP":[true,""]
         }
     },
     "parks": {
