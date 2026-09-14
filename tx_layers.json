@@ -5208,7 +5208,7 @@
         }
     },
     "Opportunity Zones 2.0":{
-        "name": "1Opportunity Zones 2.0",
+        "name": "Opportunity Zones 2.0",
         "source_id": "tx_opp_zones_2_source",
         "url": "mapbox://wodacooper.tx_opp_zones_2",
         "source_layer": "hello_world",
