@@ -1,6 +1,6 @@
 {
     "amenities": {
-        "name": "Amenities1",
+        "name": "Amenities",
         "source_id": "tx_amenities_source",
         "url": "mapbox://wodacooper.tx_amenities_091426",
         "source_layer": "hello_world",
@@ -5205,6 +5205,30 @@
         ],
         "click":{
             "GEOID":[true,"Tract ID"]
+        }
+    },
+    "Opportunity Zones 2.0":{
+        "name": "Opportunity Zones 2.0",
+        "source_id": "tx_opp_zones_2_source",
+        "url": "mapbox://wodacooper.tx_opp_zones_2",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill":{
+            "fill-color": "#482878",
+            "fill-opacity": 0.5
+        },
+        "legend":[
+            [
+                "Opportunity Zone",
+                "#482878"
+            ]
+        ],
+        "click":{
+            "GEOID":[true,"Tract ID"],
+            "County":[true,"Tract ID"]
         }
     },
     "rrc":{
