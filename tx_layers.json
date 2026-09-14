@@ -5217,18 +5217,18 @@
         },
         "visible": false,
         "fill":{
-            "fill-color": "#482878",
+            "fill-color": "#31688E",
             "fill-opacity": 0.5
         },
         "legend":[
             [
                 "Opportunity Zone",
-                "#482878"
+                "#31688E"
             ]
         ],
         "click":{
             "GEOID":[true,"Tract ID"],
-            "County":[true,"Tract ID"]
+            "County":[true,""]
         }
     },
     "rrc":{
