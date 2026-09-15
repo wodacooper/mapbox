@@ -53,7 +53,7 @@
     },
 
     "nmdda_27_predictions": {
-        "name": "2027 Non-Metro DDA TEST",
+        "name": "2027 Non-Metro DDA Predictions",
         "source_id": "nmdda_27_predictions_source",
         "url": "mapbox://wodacooper.nmdda_pred_091526",
         "source_layer": "hello_world",
