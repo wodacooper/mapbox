@@ -50,5 +50,58 @@
             "GEOID":[true,"Census Tract"], 
             "prediction":[true,"QCT Prediction"]
         }
+    },
+
+    "nmdda_27_predictions": {
+        "name": "2027 Non-Metro DDA predictions",
+        "source_id": "nmdda_27_predictions_source",
+        "url": "mapbox://wodacooper.nmdda_pred_091526",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "Prediction"
+                ],
+                "Remains DDA",
+                "#3c6bc9",
+                "No Longer DDA",
+                "#d92e41",
+                "New DDA",
+                "#2ed950",
+                "#ffffff"
+            ],
+            "fill-opacity": [
+            "match",
+            ["get", "Prediction"],
+            "Remains DDA", 0.6,
+            "No Longer DDA", 0.6,
+            "New DDA", 0.6,
+            0  
+            ]
+        },
+        "legend": [
+              [
+                  "Remains DDA",
+                  "#3c6bc9"
+              ],
+              [
+                  "New DDA",
+                  "#2ed950"
+              ],
+              [
+                  "No Longer a DDA",
+                  "#d92e41"
+              ]
+        ],
+        "click":{
+            "areaname":[true,"County Name"], 
+            "Prediction":[true,"DDA Prediction"]
+        }
     }
 }
