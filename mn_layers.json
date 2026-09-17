@@ -603,24 +603,25 @@
                 ],
                 "Yes",
                 0.6,
-                0.0
+                0.4
             ]
         },
         
         "legend": [
             [
-                "811_Eligible",
+                "3 or More Providers",
                 "#b06500"
+            ],
+            [
+                "Less than 3 Providers",
+                "#ffffff"
             ]
+            
         ],
         "hover": {
             "NAME": [
                 true,
                 "County Name"
-            ],
-            "811_Eligible": [
-                true,
-                ""
             ],
             "Number of MHM Providers": [
                 true,
@@ -631,10 +632,6 @@
             "NAME": [
                 true,
                 "County Name"
-            ],
-            "811_Eligible": [
-                true,
-                ""
             ],
             "Number of MHM Providers": [
                 true,
