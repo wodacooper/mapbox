@@ -225,6 +225,10 @@
             "score": [
                 true,
                 ""
+            ],
+            "Family or Senior": [
+                true,
+                ""
             ]
         },
         "click": {
@@ -244,8 +248,12 @@
                 true,
                 ""
             ],
+            "Family or Senior": [
+                true,
+                ""
+            ],
             "Low Unemployment Rate": [true,""],
-            "Life Expectancy Score": [true,""],
+            "Age Restricted Score": [true,""],
             "Primary Care Score": [true,""],
             "County Underserved Unit Production Points": [true,""],
             "Population Growth Score": [true,""],
