@@ -69,7 +69,7 @@
                 "match",
                 [
                     "get",
-                    "Store_Type"
+                    "type"
                 ],
                 "Groceries_062626",
                 "#2196f3",
