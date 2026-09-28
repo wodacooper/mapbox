@@ -103,5 +103,58 @@
             "areaname":[true,"County Name"], 
             "Prediction":[true,"DDA Prediction"]
         }
+    },
+
+    "mdda_27_predictions": {
+        "name": "2027 Metro DDA Predictions",
+        "source_id": "metro_dda_pred_source",
+        "url": "mapbox://wodacooper.metro_dda_pred",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "Prediction"
+                ],
+                "Remains DDA",
+                "#3c6bc9",
+                "No Longer DDA",
+                "#d92e41",
+                "New DDA",
+                "#2ed950",
+                "#ffffff"
+            ],
+            "fill-opacity": [
+            "match",
+            ["get", "Prediction"],
+            "Remains DDA", 0.6,
+            "No Longer DDA", 0.6,
+            "New DDA", 0.6,
+            0  
+            ]
+        },
+        "legend": [
+              [
+                  "Remains DDA",
+                  "#3c6bc9"
+              ],
+              [
+                  "New DDA",
+                  "#2ed950"
+              ],
+              [
+                  "No Longer a DDA",
+                  "#d92e41"
+              ]
+        ],
+        "click":{
+            "CBSAsub":[true,"CBSAsub"], 
+            "Prediction":[true,"DDA Prediction"]
+        }
     }
 }
