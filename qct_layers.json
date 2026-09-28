@@ -154,6 +154,7 @@
         ],
         "click":{
             "CBSAsub":[true,"CBSAsub"], 
+            "ZCTA":[true,"ZCTA"],
             "Prediction":[true,"DDA Prediction"]
         }
     }
