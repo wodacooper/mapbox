@@ -1316,9 +1316,9 @@
         }
     },
     "score": {
-        "name": "2026 Score",
-        "source_id": "score",
-        "url": "mapbox://wodacooper.ia_26",
+        "name": "2027 TEST Score",
+        "source_id": "score_27",
+        "url": "mapbox://wodacooper.ia_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -1437,10 +1437,6 @@
                 ""
             ],
             "vulnerability_pts": [
-                true,
-                ""
-            ],
-            "disaster_pts": [
                 true,
                 ""
             ],
