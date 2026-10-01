@@ -106,9 +106,9 @@
     },
 
     "mdda_27_predictions": {
-        "name": "2027 Metro DDA Predictions",
-        "source_id": "metro_dda_pred_source",
-        "url": "mapbox://wodacooper.metro_dda_pred",
+        "name": "2027 DDA Predictions",
+        "source_id": "dda_pred_source",
+        "url": "mapbox://wodacooper.dda_pred",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
