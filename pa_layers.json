@@ -325,7 +325,7 @@
         }
     },
     "score_27": {
-        "name": "Score 2027_1",
+        "name": "Score 2027",
         "source_id": "pa_27",
         "url": "mapbox://wodacooper.pa_27_091026",
         "source_layer": "hello_world",
@@ -492,6 +492,81 @@
             ]
         }
     },
+    "family_pts_with_transit": {
+        "name": "General With Transit",
+        "source_id": "pa_27_general",
+        "url": "mapbox://wodacooper.pa_27_091026",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+
+        "filter": [
+            "==",
+            ["get", "set_aside"],
+            "Senior"],
+
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                5,
+                "#346b36",
+                10,
+                "#0000ff",
+                15,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        
+        "num_filters": {
+            "score": "General Occupancy Score"
+        },
+        "legend": [["15", "#00ffff"], ["10", "#0000ff"], ["5", "#346b36"], ["0", "#ffffff"]],
+        "hover": {
+            "NAME_1": [
+                true,
+                "city"
+            ],
+            "score": [
+                true,
+                "General Occupancy Score"
+            ]
+        },
+        "click": {
+
+            "NAME_1": [
+                true,
+                "city"
+            ],
+            "score": [
+                true,
+                "General Occupancy Score"
+            ],
+
+            "trans_pts":[
+                true,
+                ""
+            ],
+            "GEOID20": [
+                true,
+                ""
+            ]
+        },
+
+        "num_filter_vals": {
+            "score": [
+                0.0,
+                15.0
+            ]
+        }
+    },
     "senior_pts_27": {
         "name": "Senior 2027",
         "source_id": "pa_27_senior",
@@ -554,6 +629,79 @@
         },
         "num_filter_vals": {
             "senior_pts": [
+                0.0,
+                15.0
+            ]
+        }
+    },
+    "senior_pts_with_transit": {
+        "name": "Senior 2027",
+        "source_id": "pa_27_senior",
+        "url": "mapbox://wodacooper.pa_27_091026",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+
+        "filter": [
+            "==",
+            ["get", "set_aside"],
+            "Senior"],
+
+        "visible": false,
+        "fill": {
+            "fill-color": [
+                "step",
+                [
+                    "get",
+                    "score"
+                ],
+                "#ffffff",
+                5,
+                "#346b36",
+                10,
+                "#0000ff",
+                15,
+                "#00ffff"
+            ],
+            "fill-opacity": 0.6
+        },
+        
+        "num_filters": {
+            "score": "Senior Score"
+        },
+        "legend": [["15", "#00ffff"], ["10", "#0000ff"], ["5", "#346b36"], ["0", "#ffffff"]],
+        "hover": {
+            "NAME_1": [
+                true,
+                "city"
+            ],
+            "score": [
+                true,
+                ""
+            ]
+        },
+        "click": {
+            "NAME_1": [
+                true,
+                "city"
+            ],
+            "score": [
+                true,
+                "Senior Score"
+            ],
+            "trans_pts":[
+                true,
+                ""
+            ],
+            "GEOID20": [
+                true,
+                ""
+            ]
+
+        },
+        "num_filter_vals": {
+            "score": [
                 0.0,
                 15.0
             ]
