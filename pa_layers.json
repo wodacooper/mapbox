@@ -502,10 +502,7 @@
         },
         "visible": false,
 
-        "filter": [
-            "==",
-            ["get", "set_aside"],
-            "Senior"],
+        "perm_filter": [["==", "set_aside","Senior"]],
 
         "fill": {
             "fill-color": [
@@ -643,10 +640,7 @@
             "visibility": "none"
         },
 
-        "filter": [
-            "==",
-            ["get", "set_aside"],
-            "Senior"],
+        "perm_filters": [["==", "set_aside","Senior"]],
 
         "visible": false,
         "fill": {
