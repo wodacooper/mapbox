@@ -493,7 +493,7 @@
         }
     },
     "family_pts_with_transit": {
-        "name": "General With Transit",
+        "name": "General With Transit_1",
         "source_id": "general_transit",
         "url": "mapbox://wodacooper.pa_27_091026",
         "source_layer": "hello_world",
@@ -502,7 +502,7 @@
         },
         "visible": false,
 
-        "perm_filter": [["==", "set_aside","Senior"]],
+        "perm_filters": [["==", "set_aside","Family"]],
 
         "fill": {
             "fill-color": [
