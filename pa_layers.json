@@ -495,21 +495,19 @@
     "family_pts_with_transit": {
         "name": "General With Transit_1",
         "source_id": "general_transit",
-        "url": "mapbox://wodacooper.pa_27_091026",
+        "url": "mapbox://wodacooper.pa_27_100526",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
         "visible": false,
 
-        "perm_filters": [["==", "set_aside","Family"]],
-
         "fill": {
             "fill-color": [
                 "step",
                 [
                     "get",
-                    "score"
+                    "family_score"
                 ],
                 "#ffffff",
                 5,
@@ -523,7 +521,7 @@
         },
         
         "num_filters": {
-            "score": "General Occupancy Score"
+            "family_score": "General Occupancy Score"
         },
         "legend": [["15", "#00ffff"], ["10", "#0000ff"], ["5", "#346b36"], ["0", "#ffffff"]],
         "hover": {
@@ -531,7 +529,7 @@
                 true,
                 "city"
             ],
-            "score": [
+            "family_score": [
                 true,
                 "General Occupancy Score"
             ]
@@ -542,7 +540,7 @@
                 true,
                 "city"
             ],
-            "score": [
+            "family_score": [
                 true,
                 "General Occupancy Score"
             ],
@@ -558,7 +556,7 @@
         },
 
         "num_filter_vals": {
-            "score": [
+            "family_score": [
                 0.0,
                 15.0
             ]
@@ -634,13 +632,11 @@
     "senior_pts_with_transit": {
         "name": "Senior with transit",
         "source_id": "senior_transit",
-        "url": "mapbox://wodacooper.pa_27_091026",
+        "url": "mapbox://wodacooper.pa_27_100526",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
-
-        "perm_filters": [["==", "set_aside","Senior"]],
 
         "visible": false,
         "fill": {
@@ -648,7 +644,7 @@
                 "step",
                 [
                     "get",
-                    "score"
+                    "senior_score"
                 ],
                 "#ffffff",
                 5,
@@ -662,7 +658,7 @@
         },
         
         "num_filters": {
-            "score": "Senior Score"
+            "senior_score": "Senior Score"
         },
         "legend": [["15", "#00ffff"], ["10", "#0000ff"], ["5", "#346b36"], ["0", "#ffffff"]],
         "hover": {
@@ -670,7 +666,7 @@
                 true,
                 "city"
             ],
-            "score": [
+            "senior_score": [
                 true,
                 ""
             ]
@@ -680,7 +676,7 @@
                 true,
                 "city"
             ],
-            "score": [
+            "senior_score": [
                 true,
                 "Senior Score"
             ],
@@ -695,7 +691,7 @@
 
         },
         "num_filter_vals": {
-            "score": [
+            "senior_score": [
                 0.0,
                 15.0
             ]
