@@ -493,7 +493,7 @@
         }
     },
     "family_pts_with_transit": {
-        "name": "General With Transit_1",
+        "name": "General With Transit",
         "source_id": "general_transit",
         "url": "mapbox://wodacooper.pa_27_100526",
         "source_layer": "hello_world",
@@ -630,7 +630,7 @@
         }
     },
     "senior_pts_with_transit": {
-        "name": "Senior with transit",
+        "name": "Senior With Transit",
         "source_id": "senior_transit",
         "url": "mapbox://wodacooper.pa_27_100526",
         "source_layer": "hello_world",
