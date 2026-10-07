@@ -45,7 +45,7 @@
         }
     },
     "In-Dev": {
-        "name": "In Development 100726",
+        "name": "In Development",
         "source_id": "communities_100726_source",
         "url": "mapbox://wodacooper.communities_100726",
         "source_layer": "hello_world",
