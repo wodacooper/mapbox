@@ -75,14 +75,14 @@
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
             "State":[true, ""],
-            "Housing Units":[true, ""]
+            "Total Unit Count":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
             "State":[true, ""],
-            "Housing Units":[true,""]
+            "Total Unit Count":[true,""]
         },
         "cat_filters": {
             "State":""
@@ -142,14 +142,14 @@
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
             "State":[true, ""],
-            "Housing Units":[true, ""]
+            "Total Unit Count":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
             "State":[true, ""],
-            "Housing Units":[true,""]
+            "Total Unit Count":[true,""]
         },
         "cat_filters": {
             "State":""
@@ -199,14 +199,14 @@
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
             "State":[true, ""],
-            "Housing Units":[true, ""]
+            "Total Unit Count":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
             "State":[true, ""],
-            "Housing Units":[true,""]
+            "Total Unit Count":[true,""]
         },
         "cat_filters": {
             "State":""
