@@ -74,13 +74,41 @@
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
-            "State":[true, ""]
+            "State":[true, ""],
+            "Housing Units":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
-            "State":[true, ""]
+            "State":[true, ""],
+            "Housing Units":[true,""]
+        },
+        "cat_filters": {
+            "State":""
+        },
+        "cat_filter_vals": {
+            "State":[
+                "AZ",
+                "FL",
+                "GA",
+                "IA",
+                "IL",
+                "IN",
+                "KY",
+                "MD",
+                "MI",
+                "MN",
+                "NC",
+                "OH",
+                "PA",
+                "SC",
+                "TN",
+                "TX",
+                "VA",
+                "WI",
+                "WV"
+            ]
         }
     },
     "Under_Con": {
@@ -113,13 +141,41 @@
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
-            "State":[true, ""]
+            "State":[true, ""],
+            "Housing Units":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
-            "State":[true, ""]
+            "State":[true, ""],
+            "Housing Units":[true,""]
+        },
+        "cat_filters": {
+            "State":""
+        },
+        "cat_filter_vals": {
+            "State":[
+                "AZ",
+                "FL",
+                "GA",
+                "IA",
+                "IL",
+                "IN",
+                "KY",
+                "MD",
+                "MI",
+                "MN",
+                "NC",
+                "OH",
+                "PA",
+                "SC",
+                "TN",
+                "TX",
+                "VA",
+                "WI",
+                "WV"
+            ]
         }
     },
     "In_Op": {
@@ -142,13 +198,41 @@
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
-            "State":[true, ""]
+            "State":[true, ""],
+            "Housing Units":[true, ""]
         },
         "click":{
             "Community Name:":[true, ""],
             "Community Address":[true, ""],
             "City/Village":[true, "City"],
-            "State":[true, ""]
+            "State":[true, ""],
+            "Housing Units":[true,""]
+        },
+        "cat_filters": {
+            "State":""
+        },
+        "cat_filter_vals": {
+            "State":[
+                "AZ",
+                "FL",
+                "GA",
+                "IA",
+                "IL",
+                "IN",
+                "KY",
+                "MD",
+                "MI",
+                "MN",
+                "NC",
+                "OH",
+                "PA",
+                "SC",
+                "TN",
+                "TX",
+                "VA",
+                "WI",
+                "WV"
+            ]
         }
     }    
 }
