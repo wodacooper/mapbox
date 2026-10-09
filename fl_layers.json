@@ -1,23 +1,23 @@
 {
     "qct_dda": {
-        "name": "2027 QCT/DDAs",
-        "source_id": "qct_dda_27",
-        "url": "mapbox://wodacooper.qct_dda_27",
+        "name": "2026 QCT/DDAs",
+        "source_id": "qct_dda_26",
+        "url": "mapbox://wodacooper.qct_dda_26",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
         "visible": false,
-        "perm_filters":[["==","state","12"]],
+        "perm_filters":[["==","state",12]],
            "fill": {
             "fill-color": [
                     "match",
                     ["get", "zone"],
-                    "QCT_only",
+                    "qct_only",
                     "#ffffff",
-                    "DDA_only",
+                    "dda_only",
                     "#a0a0a0",
-                    "QCT and DDA",
+                    "both",
                     "#ffa500",
                     "#000000"
                 ],
@@ -25,7 +25,7 @@
                 [
                     "match",
                     ["get", "zone"],
-                    "Neither",
+                    "neither",
                     0,
                     0.65
                 ]
@@ -48,22 +48,27 @@
         "click":{
             "zone":[true,""],
             "FMR":[true,""],
-            "Rent Limit":[true,""],
+            "Rent_Limit":[true,""],
             "VLIL_60%":[true,""]
             
         },
         "hover": {
             "zone": [true,""],
             "FMR":[true,""],
-            "Rent Limit":[true,""]
+            "Rent_Limit":[true,""]
         },
         "num_filters": {
-            "FMR": "FMR"
+            "FMR": "FMR",
+            "Rent_Limit": "Rent Limit"
         },
         "num_filter_vals": {
             "FMR": [
-                560.0,
-                4780.0
+                549.0,
+                4700.0
+            ],
+            "Rent_Limit": [
+                1068.0,
+                1954.5
             ]
         }
     },
@@ -342,5 +347,4 @@
         }
     }
 }
-
 
