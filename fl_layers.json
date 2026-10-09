@@ -1,8 +1,8 @@
 {
     "qct_dda": {
-        "name": "2026 QCT/DDAs",
-        "source_id": "qct_dda_26",
-        "url": "mapbox://wodacooper.qct_dda_26",
+        "name": "2027 QCT/DDAs",
+        "source_id": "qct_dda_27",
+        "url": "mapbox://wodacooper.qct_dda_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
@@ -13,11 +13,11 @@
             "fill-color": [
                     "match",
                     ["get", "zone"],
-                    "qct_only",
+                    "QCT_only",
                     "#ffffff",
-                    "dda_only",
+                    "DDA_only",
                     "#a0a0a0",
-                    "both",
+                    "QCT and DDA",
                     "#ffa500",
                     "#000000"
                 ],
@@ -25,7 +25,7 @@
                 [
                     "match",
                     ["get", "zone"],
-                    "neither",
+                    "Neither",
                     0,
                     0.65
                 ]
@@ -48,27 +48,27 @@
         "click":{
             "zone":[true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""],
+            "Rent Limit":[true,""],
             "VLIL_60%":[true,""]
             
         },
         "hover": {
             "zone": [true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""]
+            "Rent Limit":[true,""]
         },
         "num_filters": {
             "FMR": "FMR",
-            "Rent_Limit": "Rent Limit"
+            "Rent Limit": "Rent Limit"
         },
         "num_filter_vals": {
             "FMR": [
-                549.0,
-                4700.0
+                560.0,
+                4780.0
             ],
             "Rent_Limit": [
-                1068.0,
-                1954.5
+                0,
+                0
             ]
         }
     },
