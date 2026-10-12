@@ -101,14 +101,18 @@
         }
     },
     "lidar": {
-        "name": "LiDAR Map2",
+        "name": "LiDAR Map3",
         "source_id": "lidar",
         "url": "mapbox://mapbox.mapbox-terrain-v2",
         "source_layer": "contour",
         "layout": {
-            "visibility": "none"
+            "visibility": "visible"
         },
-        "visible": false
+        "visible": true,
+        "line": {
+            "line-color": "#ff0000",
+            "line-width": 1
+        }
     },
     "terrain": {
         "name": "DEM Map",
