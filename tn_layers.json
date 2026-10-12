@@ -133,36 +133,43 @@
             "hillshade-accent-color": "#777777"
         }
     },
-    "terrain": {
-        "name": "Terrain Elevation",
+    "terrain_elevation": {
+        "name": "TN Elevation",
         "source_id": "terrain",
         "url": "mapbox://mapbox.mapbox-terrain-v2",
         "source_layer": "contour",
         "layout": {
             "visibility": "visible"
         },
-        "visible": true,
+        "visible": false,
         "line": {
             "line-width": 1,
             "line-color": [
                 "interpolate",
                 ["linear"],
                 ["get", "ele"],
-                0, "#0000ff",
-                500, "#00ffff",
-                1000, "#00ff00",
-                2000, "#ffff00",
-                3000, "#ff8000",
-                4000, "#ff0000"
-            ]
+
+                100, "#ff0000",
+                200, "#ff7f00",
+                300, "#ffff00",
+                400, "#7fff00",
+                500, "#00ff00",
+                600, "#00ff7f",
+                700, "#00ffff",
+                800, "#007fff",
+                900, "#0000ff",
+                1000, "#4b0082"
+                            ]
         },
         "legend": [
-            ["0 ft", "#0000ff"],
-            ["500 ft", "#00ffff"],
-            ["1000 ft", "#00ff00"],
-            ["2000 ft", "#ffff00"],
-            ["3000 ft", "#ff8000"],
-            ["4000+ ft", "#ff0000"]
+            ["0-250m", "#0b3d91"],
+            ["250-500m", "#4fa3ff"],
+            ["500-750m", "#5bc77a"],
+            ["750-1000m", "#a2d45e"],
+            ["1000-1250m", "#e5dd57"],
+            ["1250-1500m", "#e8b04f"],
+            ["1500-1750m", "#c67b3d"],
+            ["1750m+", "#ffffff"]
         ],
         "hover": {
             "ele": [true, "Elevation (m)"]
