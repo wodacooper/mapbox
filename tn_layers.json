@@ -133,21 +133,39 @@
             "hillshade-accent-color": "#777777"
         }
     },
-    "lidar-dem-test": {
-        "name": "LiDAR Terrain Test",
-        "source_id": "lidar-test",
-        "type": "raster-dem",
-        "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
+    "terrain": {
+        "name": "Terrain Elevation",
+        "source_id": "terrain",
+        "url": "mapbox://mapbox.mapbox-terrain-v2",
+        "source_layer": "contour",
         "layout": {
             "visibility": "visible"
         },
         "visible": true,
-        "paint": {
-            "hillshade-illumination-direction": 315,
-            "hillshade-exaggeration": 1,
-            "hillshade-shadow-color": "#202020",
-            "hillshade-highlight-color": "#ffffff",
-            "hillshade-accent-color": "#777777"
+        "line": {
+            "line-width": 1,
+            "line-color": [
+                "interpolate",
+                ["linear"],
+                ["get", "ele"],
+                0, "#0000ff",
+                500, "#00ffff",
+                1000, "#00ff00",
+                2000, "#ffff00",
+                3000, "#ff8000",
+                4000, "#ff0000"
+            ]
+        },
+        "legend": [
+            ["0 ft", "#0000ff"],
+            ["500 ft", "#00ffff"],
+            ["1000 ft", "#00ff00"],
+            ["2000 ft", "#ffff00"],
+            ["3000 ft", "#ff8000"],
+            ["4000+ ft", "#ff0000"]
+        ],
+        "hover": {
+            "ele": [true, "Elevation (m)"]
         }
     },
     "score": {
