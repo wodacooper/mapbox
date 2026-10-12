@@ -101,33 +101,18 @@
         }
     },
     "lidar": {
-        "name": "LiDAR Map3",
+        "name": "LiDAR Map4",
         "source_id": "lidar",
+        "type": "vector",
         "url": "mapbox://mapbox.mapbox-terrain-v2",
         "source_layer": "contour",
         "layout": {
-            "visibility": "visible"
+        "visibility": "visible"
         },
         "visible": true,
         "line": {
-            "line-color": "#ff0000",
-            "line-width": 1
-        }
-    },
-    "terrain": {
-        "name": "DEM Map",
-        "source_id": "raster",
-        "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
-        "source_layer": "hello_world",
-        "layout": {
-            "visibility": "none"
-        },
-        "visible": false,
-        "line": {
-            "line-color": "#FFFFFF"
-        },
-        "fill": {
-            "fill-opacity": 0.4
+        "line-color": "#ff0000",
+        "line-width": 1
         }
     },
     "score": {
