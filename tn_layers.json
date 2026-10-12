@@ -110,7 +110,7 @@
         },
         "visible": false,
         "line": {
-            "line-width": 1,
+            "line-width": 2,
             "line-color": [
                 "interpolate",
                 ["linear"],
