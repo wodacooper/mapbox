@@ -115,6 +115,21 @@
         "line-width": 1
         }
     },
+    "terrain_dem": {
+        "name": "Terrain DEM",
+        "source_id": "terrain_dem",
+        "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "hillshade": {
+            "hillshade-exaggeration": 0.5,
+            "hillshade-shadow-color": "#473b32",
+            "hillshade-highlight-color": "#ffffff",
+            "hillshade-illumination-direction": 315
+        }
+    },
     "score": {
         "name": "2025 Score",
         "source_id": "tn_25_source",
@@ -172,11 +187,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-
