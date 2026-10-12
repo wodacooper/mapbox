@@ -1,5 +1,5 @@
 {
-     "qct_dda": {
+    "qct_dda": {
         "name": "2026 QCT/DDAs",
         "source_id": "tn_qctdda",
         "url": "mapbox://wodacooper.tn_qctdda",
@@ -100,7 +100,39 @@
             ]
         }
     },
-     "score": {
+    "lidar": {
+        "name": "LiDAR Map",
+        "source_id": "lidar",
+        "url": "mapbox://mapbox.mapbox-terrain-v2",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-color": "#FFFFFF"
+        },
+        "fill": {
+            "fill-opacity": 0.4
+        }
+    },
+    "terrain": {
+        "name": "DEM Map",
+        "source_id": "raster",
+        "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "line": {
+            "line-color": "#FFFFFF"
+        },
+        "fill": {
+            "fill-opacity": 0.4
+        }
+    },
+    "score": {
         "name": "2025 Score",
         "source_id": "tn_25_source",
         "url": "mapbox://wodacooper.tn_25",
