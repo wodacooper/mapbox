@@ -62,7 +62,7 @@
            "icon-halo-width": 0.3
          },
     
-        "perm_filters":[["==","Status (ID/UC/IO/AC)","ID"]],
+        "perm_filters":[["==","Status (ID/UC/IO/AC/RH)","ID"]],
 
          "circle": {
             "circle-color":"#ED2939",
@@ -129,10 +129,66 @@
             "icon-halo-width": 0.3
             },
             
-        "perm_filters":[["==","Status (ID/UC/IO/AC)","UC"]],
+        "perm_filters":[["==","Status (ID/UC/IO/AC/RH)","UC"]],
 
             "circle": {
             "circle-color":"#708238",
+            "circle-radius": 13,
+            "circle-stroke-width": 4,
+            "circle-stroke-color": "#FFFFFF"
+        },
+        "hover":{
+            "Community Name:":[true, ""],
+            "Community Address":[true, ""],
+            "City/Village":[true, "City"],
+            "State":[true, ""],
+            "Total Unit Count":[true, ""]
+        },
+        "click":{
+            "Community Name:":[true, ""],
+            "Community Address":[true, ""],
+            "City/Village":[true, "City"],
+            "State":[true, ""],
+            "Total Unit Count":[true,""]
+        },
+        "cat_filters": {
+            "State":""
+        },
+        "cat_filter_vals": {
+            "State":[
+                "AZ",
+                "FL",
+                "GA",
+                "IA",
+                "IL",
+                "IN",
+                "KY",
+                "MD",
+                "MI",
+                "MN",
+                "NC",
+                "OH",
+                "PA",
+                "SC",
+                "TN",
+                "TX",
+                "VA",
+                "WI",
+                "WV"
+            ]
+        }
+    },"Rehab": {
+        "name": "Rehab",
+        "source_id": "communities_100726_source",
+        "url": "mapbox://wodacooper.communities_100726",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "visible"
+        },
+        "visible": true,
+        "perm_filters":[["==","Status (ID/UC/IO/AC/RH)","RH"]],
+        "circle": {
+            "circle-color":"#4667FA",
             "circle-radius": 13,
             "circle-stroke-width": 4,
             "circle-stroke-color": "#FFFFFF"
@@ -187,7 +243,7 @@
             "visibility": "visible"
         },
         "visible": true,
-        "perm_filters":[["==","Status (ID/UC/IO/AC)","IO"]],
+        "perm_filters":[["==","Status (ID/UC/IO/AC/RH)","IO"]],
         "circle": {
             "circle-color":"#4667FA",
             "circle-radius": 13,
