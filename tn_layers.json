@@ -101,10 +101,10 @@
         }
     },
     "lidar": {
-        "name": "LiDAR Map",
+        "name": "LiDAR Map1",
         "source_id": "lidar",
         "url": "mapbox://mapbox.mapbox-terrain-v2",
-        "source_layer": "hello_world",
+        "source_layer": "contour",
         "layout": {
             "visibility": "none"
         },
