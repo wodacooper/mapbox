@@ -188,7 +188,7 @@
         "visible": true,
         "perm_filters":[["==","Status (ID/UC/IO/AC/RH)","RH"]],
         "circle": {
-            "circle-color":"#4667FA",
+            "circle-color":"#FA9E46",
             "circle-radius": 13,
             "circle-stroke-width": 4,
             "circle-stroke-color": "#FFFFFF"
