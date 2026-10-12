@@ -100,39 +100,6 @@
             ]
         }
     },
-    "lidar": {
-        "name": "LiDAR Map4",
-        "source_id": "lidar",
-        "type": "vector",
-        "url": "mapbox://mapbox.mapbox-terrain-v2",
-        "source_layer": "contour",
-        "layout": {
-        "visibility": "visible"
-        },
-        "visible": true,
-        "line": {
-        "line-color": "#ff0000",
-        "line-width": 1
-        }
-    },
-    "lidar-dem": {
-        "name": "LiDAR Terrain DEM",
-        "source_id": "lidar-dem",
-        "type": "raster-dem",
-        "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
-        "layout": {
-            "visibility": "visible"
-        },
-        "visible": true,
-        "hillshade": {
-            "hillshade-illumination-direction": 315,
-            "hillshade-illumination-anchor": "map",
-            "hillshade-exaggeration": 0.8,
-            "hillshade-shadow-color": "#202020",
-            "hillshade-highlight-color": "#e0dfd8",
-            "hillshade-accent-color": "#777777"
-        }
-    },
     "terrain_elevation": {
         "name": "Elevation",
         "source_id": "terrain",
