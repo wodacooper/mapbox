@@ -132,7 +132,24 @@
             "hillshade-highlight-color": "#e0dfd8",
             "hillshade-accent-color": "#777777"
         }
+    },
+    "lidar-dem-test": {
+        "name": "LiDAR Terrain Test",
+        "source_id": "lidar-test",
+        "type": "raster-dem",
+        "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
+        "layout": {
+            "visibility": "visible"
         },
+        "visible": true,
+        "paint": {
+            "hillshade-illumination-direction": 315,
+            "hillshade-exaggeration": 1,
+            "hillshade-shadow-color": "#202020",
+            "hillshade-highlight-color": "#ffffff",
+            "hillshade-accent-color": "#777777"
+        }
+    },
     "score": {
         "name": "2025 Score",
         "source_id": "tn_25_source",
