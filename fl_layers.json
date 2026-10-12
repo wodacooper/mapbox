@@ -54,6 +54,7 @@
         },
         "hover": {
             "zone": [true,""],
+            "FMR":[true,""],
             "Rent Limit":[true,""]
         }
     },
