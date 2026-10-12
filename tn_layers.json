@@ -115,21 +115,24 @@
         "line-width": 1
         }
     },
-    "terrain_dem": {
-        "name": "Terrain DEM",
-        "source_id": "terrain_dem",
+    "lidar-dem": {
+        "name": "LiDAR Terrain DEM",
+        "source_id": "lidar-dem",
+        "type": "raster-dem",
         "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
         "layout": {
             "visibility": "visible"
         },
         "visible": true,
         "hillshade": {
-            "hillshade-exaggeration": 0.5,
-            "hillshade-shadow-color": "#473b32",
-            "hillshade-highlight-color": "#ffffff",
-            "hillshade-illumination-direction": 315
+            "hillshade-illumination-direction": 315,
+            "hillshade-illumination-anchor": "map",
+            "hillshade-exaggeration": 0.8,
+            "hillshade-shadow-color": "#202020",
+            "hillshade-highlight-color": "#e0dfd8",
+            "hillshade-accent-color": "#777777"
         }
-    },
+        },
     "score": {
         "name": "2025 Score",
         "source_id": "tn_25_source",
