@@ -48,8 +48,8 @@
         "click":{
             "zone":[true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""],
-            "VLIL_60%":[true,""]
+            "Rent Limit":[true,""],
+            "VLIL":[true,""]
             
         },
         "hover": {
