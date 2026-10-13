@@ -291,7 +291,7 @@
             "visibility": "none"
         },
         "visible": false,
-        "perm_filters":[["==","state","04"]],
+        "perm_filters":[["==","state","24"]],
            "fill": {
             "fill-color": [
                     "match",
