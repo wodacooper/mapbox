@@ -475,25 +475,24 @@
     
     },
     "qct_dda": {
-        "name": "2026 QCT/DDAs",
-        "source_id": "qct_dda_26_source",
-        "url": "mapbox://wodacooper.qct_dda_26",
+        "name": "2027 QCT/DDAs",
+        "source_id": "qct_dda_27",
+        "url": "mapbox://wodacooper.qct_dda_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
         },
         "visible": false,
-        "perm_filters":[["==","state", 37]],
-
-        "fill": {
+        "perm_filters":[["==","state","37"]],
+           "fill": {
             "fill-color": [
                     "match",
                     ["get", "zone"],
-                    "qct_only",
+                    "QCT_only",
                     "#ffffff",
-                    "dda_only",
+                    "DDA_only",
                     "#a0a0a0",
-                    "both",
+                    "QCT and DDA",
                     "#ffa500",
                     "#000000"
                 ],
@@ -501,7 +500,7 @@
                 [
                     "match",
                     ["get", "zone"],
-                    "neither",
+                    "Neither",
                     0,
                     0.65
                 ]
@@ -524,29 +523,18 @@
         "click":{
             "zone":[true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""],
-            "VLIL_60%":[true,""]
+            "Rent Limit":[true,""],
+            "VLIL":[true,""]
+            
         },
         "hover": {
             "zone": [true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""]
-        },
-        "num_filters": {
-            "FMR": "FMR",
-            "Rent_Limit": "Rent Limit"
-        },
-        "num_filter_vals": {
-            "FMR": [
-                610.0,
-                3050.0
-            ],
-            "Rent_Limit": [
-                1146.0,
-                1990.5
-            ]
+            "Rent Limit":[true,""]
         }
+        
     },
+
     "score": {
         "name": "2026 Draft County Pool Rank",
         "source_id": "nc_26_source",
