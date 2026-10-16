@@ -132,7 +132,7 @@
         }
     },
     "qct_dda": {
-        "name": "2026 QCT/DDAs",
+        "name": "2027 QCT/DDAs",
         "source_id": "tx_qct_dda_source",
         "url": "mapbox://wodacooper.tx_qct_dda",
         "source_layer": "hello_world",
@@ -140,17 +140,16 @@
             "visibility": "none"
         },
         "visible": false,
-        "perm_filters":[["==","state",48]],
 
         "fill": {
             "fill-color": [
                     "match",
                     ["get", "zone"],
-                    "qct_only",
+                    "QCT_only",
                     "#ffffff",
-                    "dda_only",
+                    "DDA_only",
                     "#a0a0a0",
-                    "both",
+                    "QCT and DDA",
                     "#ffa500",
                     "#000000"
                 ],
@@ -158,7 +157,7 @@
                 [
                     "match",
                     ["get", "zone"],
-                    "neither",
+                    "Neither",
                     0,
                     0.4
                 ]
@@ -170,39 +169,25 @@
                 "#ffa500"
             ],
            [
-                "QCT",
+                "QCT Only",
                 "#ffffff"
             ],
             [
-                "DDA",
+                "DDA Only",
                 "#a0a0a0"
             ]
         ],
         "click":{
             "zone":[true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""],
-            "VLIL_60%":[true,""],
+            "Rent Limit":[true,""],
+            "VLIL":[true,""],
             "SB840":[true,""]
         },
         "hover": {
             "zone": [true,""],
             "FMR":[true,""],
-            "Rent_Limit":[true,""]
-        },
-        "num_filters": {
-            "FMR": "FMR",
-            "Rent_Limit": "Rent Limit"
-        },
-        "num_filter_vals": {
-            "FMR": [
-                550.0,
-                4140.0
-            ],
-            "Rent_Limit": [
-                1191.0,
-                2159.0
-            ]
+            "Rent Limit":[true,""]
         },
         "cat_filters": {
             "County pop<=1.8mil": "County Population is 1.8 Million or Less",
