@@ -192,9 +192,12 @@
             "Rent Limit":[true,""],
             "Percent below poverty level":[true,""]
         },
+        
         "cat_filters": {
             "County pop<=1.8mil": "County Population is 1.8 Million or Less",
-            "SB840":""
+            "SB840":"",
+            "dda_27": "DDA's",
+            "qct_27": "QCT's"
         },
 
         "cat_filter_vals": {
@@ -205,6 +208,14 @@
             "SB840":[
                 "Applies",
                 "Does not Apply"
+            ],
+            "dda_27": [
+                "DDA",
+                "Not DDA"
+            ],
+            "qct_27": [
+                "QCT",
+                "Not QCT"
             ]
         }
         
