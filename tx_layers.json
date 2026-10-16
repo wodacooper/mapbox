@@ -181,13 +181,16 @@
             "zone":[true,""],
             "FMR":[true,""],
             "Rent Limit":[true,""],
+            "Percent below poverty level":[true,""],
             "VLIL":[true,""],
             "SB840":[true,""]
+            
         },
         "hover": {
             "zone": [true,""],
             "FMR":[true,""],
-            "Rent Limit":[true,""]
+            "Rent Limit":[true,""],
+            "Percent below poverty level":[true,""]
         },
         "cat_filters": {
             "County pop<=1.8mil": "County Population is 1.8 Million or Less",
