@@ -223,10 +223,7 @@
             ]
         },
         "num_filter_vals": {
-            "Percent below poverty level": [
-                0.0,
-                100.0
-            ]
+            "Percent below poverty level": []
         }
     },
     "score": {
