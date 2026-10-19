@@ -134,7 +134,7 @@
     "qct_dda": {
         "name": "2027 QCT/DDAs",
         "source_id": "tx_qct_dda_source",
-        "url": "mapbox://wodacooper.tx_qct_dda",
+        "url": "mapbox://wodacooper.tx_qct_dda_101926",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
