@@ -200,6 +200,10 @@
             "qct_27": "QCT's"
         },
 
+        "num_filters": {
+            "Percent below poverty level": ""
+        },
+
         "cat_filter_vals": {
             "County pop<=1.8mil": [
                 "Yes",
@@ -219,6 +223,12 @@
             ]
         }
         
+    },
+    "num_filter_vals": {
+            "Percent below poverty level": [
+                0.0,
+                100.0
+            ]
     },
     "score": {
         "name": "2026 Score",
