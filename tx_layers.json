@@ -221,14 +221,13 @@
                 "QCT",
                 "Not QCT"
             ]
-        }
-        
-    },
-    "num_filter_vals": {
+        },
+        "num_filter_vals": {
             "Percent below poverty level": [
                 0.0,
                 100.0
             ]
+        }
     },
     "score": {
         "name": "2026 Score",
