@@ -2499,9 +2499,9 @@
         }
     },
     "test_score_071726": {
-        "name": "2027 Test Score Standardized",
+        "name": "2027 Score Standardized",
         "source_id": "27score",
-        "url": "mapbox://wodacooper.ia_test_071625",
+        "url": "mapbox://wodacooper.ia_27",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "visible"
