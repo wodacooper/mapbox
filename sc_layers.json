@@ -832,14 +832,14 @@
         }
     },
     "Rural25": {
-        "name": "Rural 2025",
+        "name": "2025 Score",
         "source_id": "rural_25",
         "url": "mapbox://wodacooper.sc_25",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
