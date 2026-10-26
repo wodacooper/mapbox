@@ -882,9 +882,6 @@
                 0.6
             ]
         },
-        "cat_filters": {
-            "county": "County"
-        },
         "num_filters": {
             "score": "Score"
         },
@@ -952,30 +949,6 @@
             "income_level": [
                 true,
                 ""
-            ]
-        },
-        "cat_filter_vals": {
-            "county": [
-                "Abbeville",
-                "Allendale",
-                "Bamberg",
-                "Barnwell",
-                "Calhoun",
-                "Chester",
-                "Clarendon",
-                "Colleton",
-                "Dillon",
-                "Edgefield",
-                "Fairfield",
-                "Hampton",
-                "Jasper",
-                "Lee",
-                "McCormick",
-                "Marion",
-                "Marlboro",
-                "Saluda",
-                "Union",
-                "Williamsburg"
             ]
         },
         "num_filter_vals": {
