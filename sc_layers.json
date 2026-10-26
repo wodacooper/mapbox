@@ -832,7 +832,7 @@
         }
     },
     "Rural25": {
-        "name": "2025 Scores",
+        "name": "2025 Score",
         "source_id": "rural_25",
         "url": "mapbox://wodacooper.sc_25",
         "source_layer": "hello_world",
