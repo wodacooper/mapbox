@@ -89,14 +89,14 @@
         "visible": false,
         "perm_filters":[["==","STATEFP","12"]],
         "circle": {
-            "circle-radius": 6,
+            "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#ffa500"
+            "circle-stroke-width": 1,
+            "circle-color": "#CF4446"
         },
         "legend": [
             ["Railroad Crossing", 
-            "#ffa500"]
+            "#CF4446"]
         ],
         "click":{
             "total_day_trains": [true,""],

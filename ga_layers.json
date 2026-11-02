@@ -104,11 +104,11 @@
             "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 1,
-            "circle-color": "#F7D03C"
+            "circle-color": "#CF4446"
         },
         "legend": [
             ["Railroad Crossing", 
-            "#F7D03C"]
+            "#CF4446"]
         ],
         "click":{
             "total_day_trains": [true,""],
