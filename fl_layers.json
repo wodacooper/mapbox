@@ -78,6 +78,66 @@
             ]
         ]
     },
+    "railroads": {
+        "name": "Railroad Crossings",
+        "source_id": "fmr_railroad",
+        "url": "mapbox://wodacooper.railroad_crossings_110226",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "perm_filters":[["==","STATEFP","12"]],
+        "circle": {
+            "circle-radius": 6,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-color": ["#ffa500"]
+        },
+        "legend": [
+            [
+                "Railroad Crossing",
+                "#ffa500"
+            ]
+        ],
+        "click":{
+            "total_day_trains": [true,""],
+            "total_night_trains":[true,""],
+            "total_switch_trains":[true,""],
+            "total_transit_trains": [true,""],
+            "one_per_day":[true,""],
+            "bells_count": [true,""],
+            "wayside_horn_yes":[true,""],
+            "num_trains_per_week":[true,""],
+            "year_count_data":[true,""],
+            "max_timetable_speed":[true,""],
+            "typical_speed_low":[true,""],
+            "typical_speed_high":[true,""],
+            "count_main": [true,""],
+            "at_grade":[true,""],
+            "RR_under":[true,""],
+            "RR_over":[true,""],
+            "train_freight":[true,""],
+            "train_intercity_passenger":[true,""],
+            "train_commuter": [true,""],
+            "train_transit":[true,""],
+            "train_shared_use_transit":[true,""],
+            "train_tourist_other":[true,""],
+            "track_signaled_yes":[true,""],
+            "track_signaled_no":[true,""],
+            "wayside_horn_no": [true,""]
+            
+        },
+        "hover": {
+            "total_day_trains": [true,""],
+            "total_night_trains":[true,""],
+            "total_switch_trains":[true,""],
+            "total_transit_trains": [true,""],
+            "one_per_day":[true,""],
+            "bells_count": [true,""],
+            "wayside_horn_yes":[true,""]
+        }
+    },
     "recaps": {
         "name": "R/ECAPs",
         "source_id": "fl_recaps",
