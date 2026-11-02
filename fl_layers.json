@@ -92,7 +92,7 @@
             "circle-radius": 6,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": ["#ffa500"]
+            "circle-color": "#ffa500"
         },
         "legend": ["Railroad Crossing", "#ffa500"],
         "click":{
