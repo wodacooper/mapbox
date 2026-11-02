@@ -92,7 +92,7 @@
     },
     "railroads": {
         "name": "Railroad Crossings",
-        "source_id": "fmr_railroad",
+        "source_id": "fra_railroad",
         "url": "mapbox://wodacooper.railroad_crossings_110226",
         "source_layer": "hello_world",
         "layout": {
@@ -101,14 +101,14 @@
         "visible": false,
         "perm_filters":[["==","STATEFP","13"]],
         "circle": {
-            "circle-radius": 6,
+            "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#ffa500"
+            "circle-stroke-width": 1,
+            "circle-color": "#ED6925"
         },
         "legend": [
             ["Railroad Crossing", 
-            "#ffa500"]
+            "#ED6925"]
         ],
         "click":{
             "total_day_trains": [true,""],
