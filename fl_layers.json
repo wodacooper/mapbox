@@ -94,12 +94,7 @@
             "circle-stroke-width": 2,
             "circle-color": ["#ffa500"]
         },
-        "legend": [
-            [
-                "Railroad Crossing",
-                "#ffa500"
-            ]
-        ],
+        "legend": ["Railroad Crossing", "#ffa500"],
         "click":{
             "total_day_trains": [true,""],
             "total_night_trains":[true,""],
@@ -126,7 +121,7 @@
             "track_signaled_yes":[true,""],
             "track_signaled_no":[true,""],
             "wayside_horn_no": [true,""]
-            
+
         },
         "hover": {
             "total_day_trains": [true,""],
