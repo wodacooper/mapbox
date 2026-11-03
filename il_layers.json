@@ -194,9 +194,9 @@
         }
     },
     "railroads_test": {
-        "name": "Railroad Crossing Test",
+        "name": "Railroad Crossing Test1",
         "source_id": "fra_railroad_test",
-        "url": "mapbox://wodacooper.railroad_crossings_test",
+        "url": "mapbox://wodacooper.railroad_test",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
