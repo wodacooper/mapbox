@@ -136,9 +136,67 @@
         }
     },
     "railroads": {
-        "name": "Railroad Crossings1",
+        "name": "Railroad Crossings",
         "source_id": "fra_railroad",
         "url": "mapbox://wodacooper.railroad_crossings_110226",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+        "perm_filters":[["==","STATEFP","17"]],
+        "circle": {
+            "circle-radius": 5,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": "#CF4446"
+        },
+        "legend": [
+            ["Railroad Crossing", 
+            "#CF4446"]
+        ],
+        "hover": {
+            "total_day_trains": [true,""],
+            "total_night_trains":[true,""],
+            "total_switch_trains":[true,""],
+            "total_transit_trains": [true,""],
+            "one_per_day":[true,""],
+            "bells_count": [true,""],
+            "wayside_horn_yes":[true,""]
+        },
+        "click":{
+            "total_day_trains": [true,""],
+            "total_night_trains":[true,""],
+            "total_switch_trains":[true,""],
+            "total_transit_trains": [true,""],
+            "one_per_day":[true,""],
+            "bells_count": [true,""],
+            "wayside_horn_yes":[true,""],
+            "num_trains_per_week":[true,""],
+            "year_count_data":[true,""],
+            "max_timetable_speed":[true,""],
+            "typical_speed_low":[true,""],
+            "typical_speed_high":[true,""],
+            "count_main": [true,""],
+            "at_grade":[true,""],
+            "RR_under":[true,""],
+            "RR_over":[true,""],
+            "train_freight":[true,""],
+            "train_intercity_passenger":[true,""],
+            "train_commuter": [true,""],
+            "train_transit":[true,""],
+            "train_shared_use_transit":[true,""],
+            "train_tourist_other":[true,""],
+            "track_signaled_yes":[true,""],
+            "track_signaled_no":[true,""],
+            "wayside_horn_no": [true,""]
+
+        }
+    },
+    "railroads_test": {
+        "name": "Railroad Crossing Test",
+        "source_id": "fra_railroad",
+        "url": "mapbox://wodacooper.railroad_crossings_test",
         "source_layer": "hello_world",
         "layout": {
             "visibility": "none"
