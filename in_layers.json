@@ -1823,5 +1823,43 @@
                 29.5
             ]
         }
+    },
+    "regions": {
+        "name": "4% Regions",
+        "source_id": "IN_Regions",
+        "url": "mapbox://wodacooper.IN_Regions",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+           "fill": {
+            "fill-color": [
+                    "match",
+                    ["get", "Region"],
+                    "Northwest",
+                    "#00FFFF",
+                    "Northeast",
+                    "#00FF00",
+                    "Southwest",
+                    "#FDB0C0",
+                    "Southeast",
+                    "#FFB347",
+                    "Central",
+                    "#0080FE",
+                    "#000000"
+                ],
+            "fill-opacity": 0.3
+                
+        },
+        "click": {
+            "County":[true,""],
+            "Region":[true,""]
+        },
+        "hover": {
+            "County":[true,""],
+            "Region":[true,""]
+        }
     }
+        
 }
