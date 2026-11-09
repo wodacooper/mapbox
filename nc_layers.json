@@ -48,12 +48,12 @@
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": "#FF00FF"
+            "circle-color": "#e75480 "
         },
         "legend": [
             [
                 "Grocery",
-                "#FF00FF"
+                "#e75480 "
             ]
         ],
         "hover": {
@@ -146,12 +146,12 @@
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": "#00FFFF"
+            "circle-color": "#00008B"
         },
         "legend": [
             [
                 "Shopping",
-                "#00FFFF"
+                "#00008B"
             ]
         ],
         "hover": {
@@ -593,7 +593,6 @@
         }
         
     },
-
     "score": {
         "name": "2026 Draft County Pool Rank",
         "source_id": "nc_26_source",
