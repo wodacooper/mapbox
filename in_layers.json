@@ -1825,7 +1825,7 @@
         }
     },
     "regions": {
-        "name": "4% Regions1",
+        "name": "4% Regions",
         "source_id": "IN_Regions",
         "url": "mapbox://wodacooper.IN_Regions",
         "source_layer": "hello_world",
