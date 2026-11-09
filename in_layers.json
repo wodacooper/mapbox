@@ -1860,6 +1860,85 @@
             "County":[true,""],
             "Region":[true,""]
         }
+    },
+    "median_income": {
+        "name": "County Median Income",
+        "source_id": "in_medians_source",
+        "url": "mapbox://wodacooper.in_medians",
+        "source_layer": "hello_world",
+        "layout": {
+            "visibility": "none"
+        },
+        "visible": false,
+
+        "fill": {
+            "fill-color": [
+                "step",
+                ["get", "median2026"],
+                "#ff0000",  
+                82650,
+                "#ffa500",     
+                91900,
+                "#ffff00",   
+                97700,
+                "#00ff00"      
+            ],
+            "fill-opacity": [
+                "step",
+                ["get", "median2026"],
+                0.5,
+                91900,
+                0.3
+            ]
+        },
+
+        "legend": [
+            [
+                "<82,650",
+                "#ff0000"
+            ],
+            [
+                "82,650-91,900",
+                "#ffa500"
+            ],
+            [
+                "91,900-97,700",
+                "#ffff00"
+            ],
+            [
+                "≥97,700",
+                "#00ff00"
+            ]
+        ],
+
+        "hover": {
+             "County_Name": [
+                true,
+                "County Name"
+            ],
+            "median2026":[
+                true,
+                "Median Income"
+            ]
+        },
+        "click": {
+            "County_Name": [
+                true,
+                "County Name"
+            ],
+            "median2026":[
+                true,
+                "Median Income"
+            ]
+        },
+
+        "num_filters": {
+            "median2026": "Median Income"
+        },
+
+        "num_filter_vals":{
+            "median2026":[61800,110900]
+        }
     }
         
 }
