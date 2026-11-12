@@ -261,13 +261,13 @@
         }
     },
     "medical_071526": {
-        "name": "medical_071526",
+        "name": "medical_111226",
         "source_id": "medical_test",
-        "url": "mapbox://wodacooper.nc_amenities_071526",
+        "url": "mapbox://wodacooper.nc_amenities_111226",
         "source_layer": "hello_world",
         "layout": {},
         "visible": false,
-        "perm_filters": [["==", "type", "Medical_062626"]],
+        "perm_filters": [["==", "type", "Medical_111226"]],
         
         "circle": {
             "circle-radius": 7,
@@ -286,15 +286,23 @@
                 true,
                 ""
             ],
-            "Name of Licensee Legal Name": [
+            "PRIMARY ADDRESS 1": [
                 true,
                 ""
             ],
-            "Site City": [
+            "PRIMARY CITY": [
                 true,
                 ""
             ],
-            "County ": [
+            "PRIMARY COUNTY": [
+                true,
+                ""
+            ],
+            "PRIMARY ZIP": [
+                true,
+                ""
+            ],
+            "FACILITY OPERATION": [
                 true,
                 ""
             ]
@@ -304,31 +312,31 @@
                 true,
                 ""
             ],
-            "Name of Licensee Legal Name": [
+            "PRIMARY ADDRESS 1": [
                 true,
                 ""
             ],
-            "Site City": [
+            "PRIMARY CITY": [
                 true,
                 ""
             ],
-            "County ": [
+            "PRIMARY COUNTY": [
                 true,
                 ""
             ],
-            "Site Address": [
+            "PRIMARY ZIP": [
                 true,
                 ""
             ],
-            "Facility Contact Name": [
+            "FACILITY OPERATION": [
                 true,
                 ""
             ],
-            "Facility Contact Number": [
+            "PMPIC NAME": [
                 true,
                 ""
             ],
-            "License #": [
+            "FACILITY PHONE": [
                 true,
                 ""
             ]
