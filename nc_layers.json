@@ -282,7 +282,7 @@
             ]
         ],
         "hover": {
-            "DBA Name": [
+            "DBA": [
                 true,
                 ""
             ],
@@ -308,7 +308,7 @@
             ]
         },
         "click": {
-            "DBA Name": [
+            "DBA": [
                 true,
                 ""
             ],
