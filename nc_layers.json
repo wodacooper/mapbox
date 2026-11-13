@@ -1,8 +1,8 @@
 {
-    "grocery": {
-        "name": "Grocery",
-        "source_id": "nc_grocery_23",
-        "url": "mapbox://wodacooper.nc_grocery_23",
+    "primary_amenities": {
+        "name": "Primary Amenities",
+        "source_id": "nc_prime_amentities",
+        "url": "mapbox://wodacooper.nc_amenities_111326",
         "source_layer": "hello_world",
         "layout": {},
         "visible": false,
@@ -10,28 +10,158 @@
             "circle-radius": 7,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
-            "circle-color": "#FF00FF"
+            "circle-color": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "Groceries_071526",
+                "#FF00FF",
+                "Shopping_062626",
+                "#00FFFF",
+                "#FFAE00"
+            ]
+        },
+        "cat_filters": {
+            "category": ""
         },
         "legend": [
             [
                 "Grocery",
                 "#FF00FF"
+            ],
+            [
+                "Shopping",
+                "#00FFFF"
+            ],
+            [
+                "Pharmacies",
+                "#FFAE00"
             ]
         ],
         "hover": {
-            "name": [
+            "Shopping_Name": [
+                true,
+                ""
+            ],
+            "Shopping_City": [
+                true,
+                ""
+            ],
+            "Store_Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ],
+            "DBA": [
+                true,
+                ""
+            ],
+            "PRIMARY ADDRESS 1": [
+                true,
+                ""
+            ],
+            "PRIMARY CITY": [
+                true,
+                ""
+            ],
+            "PRIMARY COUNTY": [
+                true,
+                ""
+            ],
+            "PRIMARY ZIP": [
+                true,
+                ""
+            ],
+            "FACILITY OPERATION": [
+                true,
+                ""
+            ]
+            
+        },
+        "click": {
+            "Shopping_Name": [
+                true,
+                ""
+            ],
+            "Shopping_City": [
+                true,
+                ""
+            ],
+            "Shopping_Street_Address": [
+                true,
+                ""
+            ],
+            "Store_Name": [
+                true,
+                ""
+            ],
+            "City": [
+                true,
+                ""
+            ],
+            "County": [
+                true,
+                ""
+            ],
+            "Store_Type": [
+                true,
+                ""
+            ],
+            "Store_Street_Address": [
+                true,
+                ""
+            ],
+            "DBA": [
+                true,
+                ""
+            ],
+            "PRIMARY ADDRESS 1": [
+                true,
+                ""
+            ],
+            "PRIMARY CITY": [
+                true,
+                ""
+            ],
+            "PRIMARY COUNTY": [
+                true,
+                ""
+            ],
+            "PRIMARY ZIP": [
+                true,
+                ""
+            ],
+            "FACILITY OPERATION": [
+                true,
+                ""
+            ],
+            "PMPIC NAME": [
+                true,
+                ""
+            ],
+            "FACILITY PHONE": [
                 true,
                 ""
             ]
         },
-        "click": {
-            "name": [
-                true,
-                ""
-            ],
-            "vicinity": [
-                true,
-                ""
+        "cat_filter_vals": {
+            "category": [
+                "Grocery",
+                "Shopping",
+                "Pharmacy"
             ]
         }
     },
@@ -92,42 +222,6 @@
                 ""
             ],
             "Store_Street_Address": [
-                true,
-                ""
-            ]
-        }
-    },
-    "shopping": {
-        "name": "Shopping",
-        "source_id": "nc_shopping_23",
-        "url": "mapbox://wodacooper.nc_shopping_23",
-        "source_layer": "hello_world",
-        "layout": {},
-        "visible": false,
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#00FFFF"
-        },
-        "legend": [
-            [
-                "Shopping",
-                "#00FFFF"
-            ]
-        ],
-        "hover": {
-            "name": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "name": [
-                true,
-                ""
-            ],
-            "vicinity": [
                 true,
                 ""
             ]
