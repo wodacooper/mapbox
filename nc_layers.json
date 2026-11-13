@@ -7,7 +7,7 @@
         "layout": {},
         "visible": false,
         "circle": {
-            "circle-radius": 7,
+            "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
             "circle-color": [
@@ -159,282 +159,83 @@
         },
         "cat_filter_vals": {
             "category": [
-                "Grocery",
-                "Shopping",
-                "Pharmacy"
+                "Groceries_071526",
+                "Shopping_062626",
+                "Pharmacies_111226"
             ]
         }
     },
-    "groceries_071526": {
-        "name": "groceries_071526",
-        "source_id": "grocery_test",
-        "url": "mapbox://wodacooper.nc_amenities_071526",
+    "secondary_amentities": {
+        "name": "Medical",
+        "source_id": "medical_test",
+        "url": "mapbox://wodacooper.nc_medical_062626",
         "source_layer": "hello_world",
         "layout": {},
-        "visible": false,
-        "perm_filters": [["==", "type", "Groceries_071526"]],
-        
+        "visible": false,        
         "circle": {
-            "circle-radius": 7,
+            "circle-radius": 5,
             "circle-stroke-color": "#ffffff",
             "circle-stroke-width": 2,
             "circle-color": "#e75480 "
         },
         "legend": [
             [
-                "Grocery",
+                "Medical",
                 "#e75480 "
             ]
         ],
         "hover": {
-            "Store_Name": [
+            "DBA Name": [
                 true,
                 ""
             ],
-            "City": [
+            "Name of Licensee Legal Name": [
                 true,
                 ""
             ],
-            "County": [
+            "Site City": [
                 true,
                 ""
             ],
-            "Store_Type": [
+            "County ": [
                 true,
                 ""
             ]
         },
         "click": {
-            "Store_Name": [
+            "DBA Name": [
                 true,
                 ""
             ],
-            "City": [
+            "Name of Licensee Legal Name": [
                 true,
                 ""
             ],
-            "County": [
+            "Site City": [
                 true,
                 ""
             ],
-            "Store_Type": [
+            "County ": [
                 true,
                 ""
             ],
-            "Store_Street_Address": [
+            "Site Address": [
+                true,
+                ""
+            ],
+            "Facility Contact Name": [
+                true,
+                ""
+            ],
+            "Facility Contact Number": [
+                true,
+                ""
+            ],
+            "License #": [
                 true,
                 ""
             ]
         }
-    },
-    "shopping_071526": {
-        "name": "shopping_071526",
-        "source_id": "shop_test",
-        "url": "mapbox://wodacooper.nc_amenities_071526",
-        "source_layer": "hello_world",
-        "layout": {},
-        "visible": false,
-        "perm_filters": [["==", "type", "SHopping_062626"]],
-
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#00008B"
-        },
-        "legend": [
-            [
-                "Shopping",
-                "#00008B"
-            ]
-        ],
-        "hover": {
-            "Shopping_Name": [
-                true,
-                ""
-            ],
-            "Shopping_City": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "Store_Type": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "Shopping_Name": [
-                true,
-                ""
-            ],
-            "Shopping_City": [
-                true,
-                ""
-            ],
-            "County": [
-                true,
-                ""
-            ],
-            "Store_Type": [
-                true,
-                ""
-            ],
-            "Shopping_Street_Address": [
-                true,
-                ""
-            ]
-        }
-    },
-    "amenities": {
-        "name": "Secondary Amenities",
-        "source_id": "nc_secondary_amenities_23_1",
-        "url": "mapbox://wodacooper.nc_secondary_amenities_23_1",
-        "source_layer": "hello_world",
-        "layout": {},
-        "visible": false,
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": [
-                "match",
-                [
-                    "get",
-                    "category"
-                ],
-                "hospital",
-                "#FFAE00",
-                "school",
-                "#A600FF",
-                "#007951"
-            ]
-        },
-        "cat_filters": {
-            "category": ""
-        },
-        "legend": [
-            [
-                "Hospital",
-                "#FFAE00"
-            ],
-            [
-                "School",
-                "#A600FF"
-            ],
-            [
-                "Community Center",
-                "#007951"
-            ]
-        ],
-        "hover": {
-            "name": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "name": [
-                true,
-                ""
-            ],
-            "vicinity": [
-                true,
-                ""
-            ]
-        },
-        "cat_filter_vals": {
-            "category": [
-                "hospital",
-                "school",
-                "community center"
-            ]
-        }
-    },
-    "medical_071526": {
-        "name": "medical_111226",
-        "source_id": "medical_test",
-        "url": "mapbox://wodacooper.nc_amenities_111226",
-        "source_layer": "hello_world",
-        "layout": {},
-        "visible": false,
-        "perm_filters": [["==", "type", "Medical_111226"]],
-        
-        "circle": {
-            "circle-radius": 7,
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-            "circle-color": "#FFAE00"
-        },
-        "legend": [
-            [
-                "Medical",
-                "#FFAE00"
-            ]
-        ],
-        "hover": {
-            "DBA": [
-                true,
-                ""
-            ],
-            "PRIMARY ADDRESS 1": [
-                true,
-                ""
-            ],
-            "PRIMARY CITY": [
-                true,
-                ""
-            ],
-            "PRIMARY COUNTY": [
-                true,
-                ""
-            ],
-            "PRIMARY ZIP": [
-                true,
-                ""
-            ],
-            "FACILITY OPERATION": [
-                true,
-                ""
-            ]
-        },
-        "click": {
-            "DBA": [
-                true,
-                ""
-            ],
-            "PRIMARY ADDRESS 1": [
-                true,
-                ""
-            ],
-            "PRIMARY CITY": [
-                true,
-                ""
-            ],
-            "PRIMARY COUNTY": [
-                true,
-                ""
-            ],
-            "PRIMARY ZIP": [
-                true,
-                ""
-            ],
-            "FACILITY OPERATION": [
-                true,
-                ""
-            ],
-            "PMPIC NAME": [
-                true,
-                ""
-            ],
-            "FACILITY PHONE": [
-                true,
-                ""
-            ]
-    }
     },
     "railroads": {
         "name": "Railroad Crossings",
