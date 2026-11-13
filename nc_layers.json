@@ -24,7 +24,7 @@
             ]
         },
         "cat_filters": {
-            "category": ""
+            "type": ""
         },
         "legend": [
             [
@@ -158,7 +158,7 @@
             ]
         },
         "cat_filter_vals": {
-            "category": [
+            "type": [
                 "Groceries_071526",
                 "Shopping_062626",
                 "Pharmacies_111226"
