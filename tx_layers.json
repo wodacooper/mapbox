@@ -2678,14 +2678,14 @@
         }
     },
     "score_27": {
-        "name": "2027 Score",
+        "name": "2027 Score Test",
         "source_id": "tx_27_source",
         "url": "mapbox://wodacooper.tx_27",
         "source_layer": "hello_world",
         "layout": {
-            "visibility": "visible"
+            "visibility": "none"
         },
-        "visible": true,
+        "visible": false,
         "fill": {
             "fill-color": [
                 "step",
