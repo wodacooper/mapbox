@@ -394,6 +394,80 @@
             ]
         ]
     },
+    "charlotte_hlt": {
+        "name": "Charlotte HLT",
+        "source_id": "charlotte_hlt_source",
+        "url": "mapbox://wodacooper.charlotte_hlt",
+        "source_layer": "hello_world",
+        "layout": {},
+        "visible": false,
+        "circle": {
+            "circle-radius": 4,
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 1,
+            "circle-color": [
+                "step",
+                ["get", "Total"],
+                "#F5F5F5",  
+                13, "#FFF9C4",
+                15, "#FFE082", 
+                17, "#FFCA28",  
+                19, "#FFA726",  
+                21, "#F57C00", 
+                24, "#E53935",  
+                27, "#B71C1C", 
+                30, "#7F0000"
+            ]
+        },
+        "hover": {
+            "Total": [
+                true,
+                "Score"
+            ],
+            "Proximity": [
+                true,
+                ""
+            ],
+            "Access": [
+                true,
+                ""
+            ],
+            "Change": [
+                true,
+                ""
+            ],
+            "Diversity": [
+                true,
+                ""
+            ]  
+        },
+        "click": {
+            "Total": [
+                true,
+                "Score"
+            ],
+            "Proximity": [
+                true,
+                ""
+            ],
+            "Access": [
+                true,
+                ""
+            ],
+            "Change": [
+                true,
+                ""
+            ],
+            "Diversity": [
+                true,
+                ""
+            ],
+            "FullAddress": [
+                true,
+                "Address"
+            ]
+        }
+    },
     "charlotte":{
         "name": "Charlotte Parcels",
         "source_id": "charlotte_source",
